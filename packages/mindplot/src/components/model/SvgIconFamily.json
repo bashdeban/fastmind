@@ -1,0 +1,137 @@
+[
+    {
+        "id": "onoff",
+        "icons": [
+            "onoff_add",
+            "onoff_delete",
+            "onoff_status_offline",
+            "onoff_status_online"
+        ]
+    },
+    {
+        "id": "money",
+        "icons": [
+            "money_dollar",
+            "money_ruby"
+        ]
+    },
+    {
+        "id": "time",
+        "icons": [
+            "time_calendar",
+            "time_clock"
+        ]
+    },
+    {
+        "id": "chart",
+        "icons": [
+            "chart_line",
+            "chart_curve",
+            "chart_pie",
+            "chart_organisation"
+        ]
+    },
+    {
+        "id": "sign",
+        "icons": [
+            "sign_warning",
+            "sign_info",
+            "sign_help",
+            "sign_cancel"
+        ]
+    },
+    {
+        "id": "hard",
+        "icons": [
+            "hard_ipod"
+        ]
+    },
+    {
+        "id": "things",
+        "icons": [
+            "things_address_book",
+            "things_wrench",
+            "things_window-layout",
+            "things_bubbles"
+        ]
+    },
+    {
+        "id": "soft",
+        "icons": [
+            "soft_cursor",
+            "soft_database_table",
+            "soft_database",
+            "soft_feed",
+            "soft_folder_explore",
+            "soft_rss",
+            "soft_penguin"
+        ]
+    },
+    {
+        "id": "flag",
+        "icons": [
+            "flag_blue",
+            "flag_green",
+            "flag_orange",
+            "flag_pink",
+            "flag_purple",
+            "flag_yellow"
+        ]
+    },
+    {
+        "id": "social",
+        "icons": [
+            "social_facebook",
+            "social_twitter",
+            "social_redit",
+            "social_instagram",
+            "social_google-plus"
+        ]
+    },
+    {
+        "id": "meetapps",
+        "icons": [
+            "meetapps_slack",
+            "meetapps_google-meet",
+            "meetapps_whatapp",
+            "meetapps_ms-teams",
+            "meetapps_zoom",
+            "meetapps_facebook-messenger"
+        ]
+    },
+    {
+        "id": "appsgoogle",
+        "icons": [
+            "appsgoogle_youtube",
+            "appsgoogle_gmail",
+            "appsgoogle_maps"
+        ]
+    },
+    {
+        "id": "tag",
+        "icons": [
+            "tag_blue",
+            "tag_green",
+            "tag_orange",
+            "tag_red",
+            "tag_pink",
+            "tag_yellow"
+        ]
+    },
+    {
+        "id": "object",
+        "icons": [
+            "object_music"
+        ]
+    },
+    {
+        "id": "task",
+        "icons": [
+            "task_0",
+            "task_25",
+            "task_50",
+            "task_75",
+            "task_100"
+        ]
+    }
+]

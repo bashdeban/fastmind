@@ -1,0 +1,121 @@
+/*
+ *    Copyright [2007-2025] [wisemapping]
+ *
+ *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
+ *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   "powered by wisemapping" text requirement on every single page;
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the license at
+ *
+ *       https://github.com/wisemapping/wisemapping-open-source/blob/main/LICENSE.md
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+
+import { StyledNav, StyledDiv, Logo } from './styled';
+
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router';
+import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material/styles';
+
+import logo from './logo-small.svg';
+import logoWhiteText from './logo-small-white-text.svg';
+import { JSX } from '@emotion/react/jsx-runtime';
+
+interface HeaderProps {
+  type: 'only-signup' | 'only-signin' | 'none';
+}
+
+export const Header = ({ type }: HeaderProps): React.ReactElement => {
+  const theme = useTheme();
+  let signUpButton: string | JSX.Element | undefined;
+  let text: string | JSX.Element | undefined;
+  let signInButton: string | JSX.Element | undefined;
+
+  if (type === 'only-signup') {
+    text = (
+      <span className="header-area-content-span">
+        <span>
+          <FormattedMessage id="header.donthaveaccount" defaultMessage="Don't have an account ?" />
+        </span>
+      </span>
+    );
+    signUpButton = <SignUpButton className="header-area-right2" />;
+  } else if (type === 'only-signin') {
+    text = (
+      <span className="header-area-content-span">
+        <span>
+          <FormattedMessage id="header.haveaccount" defaultMessage="Already have an account?" />
+        </span>
+      </span>
+    );
+    signUpButton = <SignInButton className="header-area-right2" />;
+  } else if (type === 'none') {
+    text = '';
+    signUpButton = '';
+  } else {
+    signUpButton = <SignUpButton className="header-area-right2" />;
+    signInButton = <SignInButton className="header-area-right2" />;
+  }
+
+  return (
+    <StyledNav
+      style={{
+        background: `linear-gradient(${theme.palette.background.default}, ${theme.palette.background.default}30)`,
+      }}
+    >
+      <StyledDiv
+        style={{
+          background: theme.palette.background.default,
+        }}
+      >
+        <Logo>
+          <Link to="/c/login" className="header-logo">
+            <img src={String(theme.palette.mode === 'dark' ? logoWhiteText : logo)} alt="logo" />
+          </Link>
+        </Logo>
+        {text}
+        {signUpButton}
+        {signInButton}
+      </StyledDiv>
+    </StyledNav>
+  );
+};
+
+interface ButtonProps {
+  className?: string;
+}
+
+export const SignInButton = (props: ButtonProps): React.ReactElement => {
+  return (
+    <span className={`${props.className}`}>
+      <Button color="primary" size="medium" variant="outlined" component={Link} to="/c/login">
+        <FormattedMessage id="login.signin" defaultMessage="Sign In" />
+      </Button>
+    </span>
+  );
+};
+
+const SignUpButton = (props: ButtonProps): React.ReactElement => {
+  return (
+    <span className={`${props.className}`}>
+      <Button
+        color="primary"
+        size="medium"
+        variant="outlined"
+        component={Link}
+        to="/c/registration"
+      >
+        <FormattedMessage id="login.signup" defaultMessage="Sign Up" />
+      </Button>
+    </span>
+  );
+};
+
+export default Header;

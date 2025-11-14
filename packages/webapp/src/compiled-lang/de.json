@@ -1,0 +1,1756 @@
+{
+  "account.delete-confirm": [
+    {
+      "type": 0,
+      "value": "Konto löschen"
+    }
+  ],
+  "account.delete-confirmation-instruction": [
+    {
+      "type": 0,
+      "value": "Bitte geben Sie MEIN KONTO LÖSCHEN zur Bestätigung ein:"
+    }
+  ],
+  "account.delete-confirmation-title": [
+    {
+      "type": 0,
+      "value": "Sind Sie absolut sicher?"
+    }
+  ],
+  "account.delete-confirmation-warning": [
+    {
+      "type": 0,
+      "value": "Diese Aktion kann nicht rückgängig gemacht werden. Dies wird Ihr Konto dauerhaft löschen und alle Daten von unseren Servern entfernen."
+    }
+  ],
+  "account.delete-warning": [
+    {
+      "type": 0,
+      "value": "Denke daran, dass du keine von dir erstellte Mindmap mehr aufrufen kannst. Alle deine Informationen werden gelöscht und können nicht wiederhergestellt werden."
+    }
+  ],
+  "account.delete-warning-collaborations": [
+    {
+      "type": 0,
+      "value": "Alle geteilten Mindmaps und Zusammenarbeiten"
+    }
+  ],
+  "account.delete-warning-consequences": [
+    {
+      "type": 0,
+      "value": "Dies wird dauerhaft löschen:"
+    }
+  ],
+  "account.delete-warning-data": [
+    {
+      "type": 0,
+      "value": "Alle Ihre persönlichen Daten und Kontoinformationen"
+    }
+  ],
+  "account.delete-warning-description": [
+    {
+      "type": 0,
+      "value": "Sobald Sie Ihr Konto löschen, gibt es kein Zurück. Bitte seien Sie sicher."
+    }
+  ],
+  "account.delete-warning-history": [
+    {
+      "type": 0,
+      "value": "Alle Kontohistorie und Aktivitätsprotokolle"
+    }
+  ],
+  "account.delete-warning-mindmaps": [
+    {
+      "type": 0,
+      "value": "Alle Ihre Mindmaps und deren Inhalt"
+    }
+  ],
+  "account.delete-warning-title": [
+    {
+      "type": 0,
+      "value": "Konto löschen"
+    }
+  ],
+  "accountinfo.button": [
+    {
+      "type": 0,
+      "value": "Akzeptieren"
+    }
+  ],
+  "accountinfo.deleteaccount": [
+    {
+      "type": 0,
+      "value": "Konto löschen"
+    }
+  ],
+  "accountinfo.email": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "accountinfo.firstname": [
+    {
+      "type": 0,
+      "value": "Vorname"
+    }
+  ],
+  "accountinfo.lastname": [
+    {
+      "type": 0,
+      "value": "Nachname"
+    }
+  ],
+  "accountinfo.personal-details": [
+    {
+      "type": 0,
+      "value": "Persönliche Details"
+    }
+  ],
+  "accountinfo.title": [
+    {
+      "type": 0,
+      "value": "Kontoinformation"
+    }
+  ],
+  "action.cancel-button": [
+    {
+      "type": 0,
+      "value": "Abbrechen"
+    }
+  ],
+  "action.close-button": [
+    {
+      "type": 0,
+      "value": "Schließen"
+    }
+  ],
+  "action.delete": [
+    {
+      "type": 0,
+      "value": "Löschen"
+    }
+  ],
+  "action.delete-description": [
+    {
+      "type": 0,
+      "value": "Gelöschte Mindmaps können nicht wiederhergestellt werden. Möchtest du fortfahren?"
+    }
+  ],
+  "action.delete-title": [
+    {
+      "type": 0,
+      "value": "Löschen"
+    }
+  ],
+  "action.duplicate": [
+    {
+      "type": 0,
+      "value": "Kopieren"
+    }
+  ],
+  "action.export": [
+    {
+      "type": 0,
+      "value": "Exportieren"
+    }
+  ],
+  "action.history": [
+    {
+      "type": 0,
+      "value": "Historie"
+    }
+  ],
+  "action.history-description": [
+    {
+      "type": 0,
+      "value": "Liste der in den letzten 90 Tagen eingeführten Änderungen."
+    }
+  ],
+  "action.history-title": [
+    {
+      "type": 0,
+      "value": "Versionsverlauf"
+    }
+  ],
+  "action.import": [
+    {
+      "type": 0,
+      "value": "Importieren"
+    }
+  ],
+  "action.info": [
+    {
+      "type": 0,
+      "value": "Informationen"
+    }
+  ],
+  "action.label": [
+    {
+      "type": 0,
+      "value": "Label hinzufügen"
+    }
+  ],
+  "action.new": [
+    {
+      "type": 0,
+      "value": "Neue Mindmap"
+    }
+  ],
+  "action.open": [
+    {
+      "type": 0,
+      "value": "Öffnen"
+    }
+  ],
+  "action.print": [
+    {
+      "type": 0,
+      "value": "Drucken"
+    }
+  ],
+  "action.publish": [
+    {
+      "type": 0,
+      "value": "Veröffentlichen"
+    }
+  ],
+  "action.rename": [
+    {
+      "type": 0,
+      "value": "Umbenennen"
+    }
+  ],
+  "action.rename-description-placeholder": [
+    {
+      "type": 0,
+      "value": "Beschreibung"
+    }
+  ],
+  "action.rename-name-placeholder": [
+    {
+      "type": 0,
+      "value": "Name"
+    }
+  ],
+  "action.share": [
+    {
+      "type": 0,
+      "value": "Teilen"
+    }
+  ],
+  "admin.auth-type": [
+    {
+      "type": 0,
+      "value": "Authentifizierungstyp"
+    }
+  ],
+  "admin.change-password": [
+    {
+      "type": 0,
+      "value": "Change password"
+    }
+  ],
+  "admin.change-password-button": [
+    {
+      "type": 0,
+      "value": "Change Password"
+    }
+  ],
+  "admin.change-password-description": [
+    {
+      "type": 0,
+      "value": "Change password for user: "
+    },
+    {
+      "type": 1,
+      "value": "email"
+    }
+  ],
+  "admin.change-password-title": [
+    {
+      "type": 0,
+      "value": "Change Password"
+    }
+  ],
+  "admin.close": [
+    {
+      "type": 0,
+      "value": "Close"
+    }
+  ],
+  "admin.confirm-password": [
+    {
+      "type": 0,
+      "value": "Confirm Password"
+    }
+  ],
+  "admin.delete": [
+    {
+      "type": 0,
+      "value": "Löschen"
+    }
+  ],
+  "admin.delete-user": [
+    {
+      "type": 0,
+      "value": "Benutzer löschen"
+    }
+  ],
+  "admin.edit": [
+    {
+      "type": 0,
+      "value": "Bearbeiten"
+    }
+  ],
+  "admin.edit-user": [
+    {
+      "type": 0,
+      "value": "Benutzer bearbeiten"
+    }
+  ],
+  "admin.lock-status": [
+    {
+      "type": 0,
+      "value": "Sperrstatus"
+    }
+  ],
+  "admin.locked": [
+    {
+      "type": 0,
+      "value": "Gesperrt"
+    }
+  ],
+  "admin.new-password": [
+    {
+      "type": 0,
+      "value": "New Password"
+    }
+  ],
+  "admin.password-error-facebook": [
+    {
+      "type": 0,
+      "value": "This user is authenticated via Facebook. Password changes are not available for Facebook accounts. Please ask the user to manage their password through their Facebook account."
+    }
+  ],
+  "admin.password-error-failed": [
+    {
+      "type": 0,
+      "value": "Failed to change password"
+    }
+  ],
+  "admin.password-error-google": [
+    {
+      "type": 0,
+      "value": "This user is authenticated via Google. Password changes are not available for Google accounts. Please ask the user to manage their password through their Google account."
+    }
+  ],
+  "admin.password-error-length": [
+    {
+      "type": 0,
+      "value": "Password must be at least 6 characters"
+    }
+  ],
+  "admin.password-error-mismatch": [
+    {
+      "type": 0,
+      "value": "Passwords do not match"
+    }
+  ],
+  "admin.public": [
+    {
+      "type": 0,
+      "value": "Öffentlich"
+    }
+  ],
+  "admin.public-access": [
+    {
+      "type": 0,
+      "value": "Öffentlicher Zugriff"
+    }
+  ],
+  "admin.refresh": [
+    {
+      "type": 0,
+      "value": "Aktualisieren"
+    }
+  ],
+  "admin.status": [
+    {
+      "type": 0,
+      "value": "Status"
+    }
+  ],
+  "admin.status-active": [
+    {
+      "type": 0,
+      "value": "Aktiv"
+    }
+  ],
+  "admin.status-clean": [
+    {
+      "type": 0,
+      "value": "Sauber"
+    }
+  ],
+  "admin.status-inactive": [
+    {
+      "type": 0,
+      "value": "Inaktiv"
+    }
+  ],
+  "admin.status-suspended": [
+    {
+      "type": 0,
+      "value": "Gesperrt"
+    }
+  ],
+  "admin.suspend-user": [
+    {
+      "type": 0,
+      "value": "Benutzer sperren"
+    }
+  ],
+  "admin.suspension-reason": [
+    {
+      "type": 0,
+      "value": "Sperrgrund"
+    }
+  ],
+  "admin.suspension-status": [
+    {
+      "type": 0,
+      "value": "Sperrstatus"
+    }
+  ],
+  "admin.suspension.abuse": [
+    {
+      "type": 0,
+      "value": "Missbrauch"
+    }
+  ],
+  "admin.suspension.inactivity": [
+    {
+      "type": 0,
+      "value": "Inaktivität"
+    }
+  ],
+  "admin.suspension.manual-review": [
+    {
+      "type": 0,
+      "value": "Manuelle Überprüfung"
+    }
+  ],
+  "admin.suspension.other": [
+    {
+      "type": 0,
+      "value": "Andere"
+    }
+  ],
+  "admin.suspension.security-concern": [
+    {
+      "type": 0,
+      "value": "Sicherheitsbedenken"
+    }
+  ],
+  "admin.suspension.terms-violation": [
+    {
+      "type": 0,
+      "value": "Verstoß gegen die Bedingungen"
+    }
+  ],
+  "admin.system.db.url": [
+    {
+      "type": 0,
+      "value": "URL"
+    }
+  ],
+  "admin.system.jvm": [
+    {
+      "type": 0,
+      "value": "JVM"
+    }
+  ],
+  "admin.system.memory": [
+    {
+      "type": 0,
+      "value": "Speicher"
+    }
+  ],
+  "admin.system.refresh": [
+    {
+      "type": 0,
+      "value": "Aktualisieren"
+    }
+  ],
+  "admin.system.title": [
+    {
+      "type": 0,
+      "value": "Systeminformationen"
+    }
+  ],
+  "admin.unsuspend-user": [
+    {
+      "type": 0,
+      "value": "Benutzer entsperren"
+    }
+  ],
+  "admin.view-xml": [
+    {
+      "type": 0,
+      "value": "XML anzeigen"
+    }
+  ],
+  "changepwd.button": [
+    {
+      "type": 0,
+      "value": "Ändern"
+    }
+  ],
+  "changepwd.confirm-password": [
+    {
+      "type": 0,
+      "value": "Kennwort bestätigen"
+    }
+  ],
+  "changepwd.description": [
+    {
+      "type": 0,
+      "value": "Bitte gebe das neue Passwort für dein Konto ein."
+    }
+  ],
+  "changepwd.password": [
+    {
+      "type": 0,
+      "value": "Passwort"
+    }
+  ],
+  "changepwd.password-match": [
+    {
+      "type": 0,
+      "value": "Passwort stimmt nicht überein. Bitte versuche es erneut."
+    }
+  ],
+  "changepwd.title": [
+    {
+      "type": 0,
+      "value": "Kennwort ändern"
+    }
+  ],
+  "common.allow-email-notifications": [
+    {
+      "type": 0,
+      "value": "E-Mail-Benachrichtigungen zulassen"
+    }
+  ],
+  "common.delete": [
+    {
+      "type": 0,
+      "value": "Löschen"
+    }
+  ],
+  "common.delete-tag": [
+    {
+      "type": 0,
+      "value": "Tag löschen"
+    }
+  ],
+  "common.email": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "common.emails": [
+    {
+      "type": 0,
+      "value": "E-Mails"
+    }
+  ],
+  "common.first-name": [
+    {
+      "type": 0,
+      "value": "Vorname"
+    }
+  ],
+  "common.last-name": [
+    {
+      "type": 0,
+      "value": "Nachname"
+    }
+  ],
+  "common.loading": [
+    {
+      "type": 0,
+      "value": "Laden..."
+    }
+  ],
+  "common.locale": [
+    {
+      "type": 0,
+      "value": "Sprache"
+    }
+  ],
+  "common.login-form": [
+    {
+      "type": 0,
+      "value": "Anmeldeformular"
+    }
+  ],
+  "common.maps-list": [
+    {
+      "type": 0,
+      "value": "Kartenliste"
+    }
+  ],
+  "common.open-drawer": [
+    {
+      "type": 0,
+      "value": "Menü öffnen"
+    }
+  ],
+  "common.others": [
+    {
+      "type": 0,
+      "value": "Andere"
+    }
+  ],
+  "common.refresh": [
+    {
+      "type": 0,
+      "value": "Aktualisieren"
+    }
+  ],
+  "common.registration-form": [
+    {
+      "type": 0,
+      "value": "Registrierungsformular"
+    }
+  ],
+  "common.retry": [
+    {
+      "type": 0,
+      "value": "Wiederholen"
+    }
+  ],
+  "common.settings": [
+    {
+      "type": 0,
+      "value": "Einstellungen"
+    }
+  ],
+  "common.wait": [
+    {
+      "type": 0,
+      "value": "Bitte warten ..."
+    }
+  ],
+  "create.button": [
+    {
+      "type": 0,
+      "value": "Erstellen"
+    }
+  ],
+  "create.description": [
+    {
+      "type": 0,
+      "value": "Bitte gebe den Namen und die Beschreibung der neuen Mindmap ein."
+    }
+  ],
+  "create.title": [
+    {
+      "type": 0,
+      "value": "Erstelle eine neue Mindmap."
+    }
+  ],
+  "deletem.title": [
+    {
+      "type": 0,
+      "value": "Alle ausgewählten Mindmaps werden gelöscht"
+    }
+  ],
+  "dialog.loading": [
+    {
+      "type": 0,
+      "value": "Wird geladen ..."
+    }
+  ],
+  "duplicate.copy-prefix": [
+    {
+      "type": 0,
+      "value": "Kopie von "
+    }
+  ],
+  "duplicate.title": [
+    {
+      "type": 0,
+      "value": "Kopie"
+    }
+  ],
+  "error.generic-message": [
+    {
+      "type": 0,
+      "value": "Bitte versuche es später erneut oder wende dich an den Support, wenn das Problem weiterhin besteht."
+    }
+  ],
+  "error.generic-title": [
+    {
+      "type": 0,
+      "value": "Wir sind auf ein Problem gestoßen."
+    }
+  ],
+  "error.map-title-required": [
+    {
+      "type": 0,
+      "value": "Der Kartentitel ist erforderlich und darf nicht leer sein"
+    }
+  ],
+  "error.map-unavailable-message": [
+    {
+      "type": 0,
+      "value": "Diese Mindmap ist nicht für die öffentliche Anzeige verfügbar, da sie unsere Website-Richtlinien verletzt. Wenn Sie weitere Hilfe benötigen, kontaktieren Sie support@wisemapping.com."
+    }
+  ],
+  "error.map-unavailable-title": [
+    {
+      "type": 0,
+      "value": "Diese Mindmap ist nicht für die öffentliche Anzeige verfügbar."
+    }
+  ],
+  "error.not-found-message": [
+    {
+      "type": 0,
+      "value": "Die gesuchte Seite wurde möglicherweise entfernt, umbenannt oder ist vorübergehend nicht verfügbar."
+    }
+  ],
+  "error.not-found-title": [
+    {
+      "type": 0,
+      "value": "Wir können diese Seite nicht finden."
+    }
+  ],
+  "error.page-title": [
+    {
+      "type": 0,
+      "value": "Unerwarteter Fehler | WiseMapping"
+    }
+  ],
+  "error.permission-denied-message": [
+    {
+      "type": 0,
+      "value": "Wenn du glaubst, Zugriff haben zu müssen, wende dich bitte an deinen Administrator."
+    }
+  ],
+  "error.permission-denied-title": [
+    {
+      "type": 0,
+      "value": "Du hast keinen Zugriff auf diese Seite."
+    }
+  ],
+  "error.security-error": [
+    {
+      "type": 0,
+      "value": "Mindmap kann nicht geöffnet werden."
+    }
+  ],
+  "error.undexpected-error-msg": [
+    {
+      "type": 0,
+      "value": "Unerwarteter Fehler beim Öffnen der Mindmap. Bitte versuchen Sie es später erneut."
+    }
+  ],
+  "expired.description": [
+    {
+      "type": 0,
+      "value": "Deine aktuelle Sitzung ist abgelaufen. Bitte melde dich an und versuche es erneut."
+    }
+  ],
+  "expired.title": [
+    {
+      "type": 0,
+      "value": "Deine Sitzung ist abgelaufen"
+    }
+  ],
+  "export.desc": [
+    {
+      "type": 0,
+      "value": "Exportiere diese Mindmap im gewünschten Format und verwende sie in deinen Präsentationen oder teile sie per E-Mail"
+    }
+  ],
+  "export.document": [
+    {
+      "type": 0,
+      "value": "Mindmap-Tools: Exportiere deine Mindmap in Mindmap-Tool-Formate von Drittanbietern"
+    }
+  ],
+  "export.document-label": [
+    {
+      "type": 0,
+      "value": "Dokument: Exportiere deine Mindmap in ein eigenständiges Dokument, das du teilen kannst"
+    }
+  ],
+  "export.image": [
+    {
+      "type": 0,
+      "value": "Bild: Erhalte eine grafische Darstellung deiner Mindmap mit allen Farben und Formen."
+    }
+  ],
+  "export.img-center": [
+    {
+      "type": 0,
+      "value": "Zentrieren und zoomen um anzupassen"
+    }
+  ],
+  "export.title": [
+    {
+      "type": 0,
+      "value": "Exportieren"
+    }
+  ],
+  "export.warning": [
+    {
+      "type": 0,
+      "value": "Der Export in ein Bild (SVG, PNG, JPEG, PDF) ist nur in der Editor-Symbolleiste verfügbar."
+    }
+  ],
+  "footer.aboutus": [
+    {
+      "type": 0,
+      "value": "Über uns"
+    }
+  ],
+  "footer.contactus": [
+    {
+      "type": 0,
+      "value": "Kontaktiere uns"
+    }
+  ],
+  "footer.donations": [
+    {
+      "type": 0,
+      "value": "Spenden"
+    }
+  ],
+  "footer.faq": [
+    {
+      "type": 0,
+      "value": "FAQ"
+    }
+  ],
+  "footer.faqandhelp": [
+    {
+      "type": 0,
+      "value": "Hilfe & FAQ"
+    }
+  ],
+  "footer.feedback": [
+    {
+      "type": 0,
+      "value": "Feedback"
+    }
+  ],
+  "footer.opensource": [
+    {
+      "type": 0,
+      "value": "Open Source"
+    }
+  ],
+  "footer.others": [
+    {
+      "type": 0,
+      "value": "Andere"
+    }
+  ],
+  "footer.support": [
+    {
+      "type": 0,
+      "value": "Support"
+    }
+  ],
+  "footer.team": [
+    {
+      "type": 0,
+      "value": "Team"
+    }
+  ],
+  "footer.termsandconditions": [
+    {
+      "type": 0,
+      "value": "Allgemeine Geschäftsbedingungen"
+    }
+  ],
+  "forgot.desc": [
+    {
+      "type": 0,
+      "value": "Wir senden dir eine E-Mail, um dein Passwort zurückzusetzen."
+    }
+  ],
+  "forgot.email": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "forgot.oauth.back": [
+    {
+      "type": 0,
+      "value": "Zurück zur Anmeldung"
+    }
+  ],
+  "forgot.oauth.message": [
+    {
+      "type": 0,
+      "value": "Du benötigst kein Passwort, bitte melde dich mit Facebook oder Google an"
+    }
+  ],
+  "forgot.page-title": [
+    {
+      "type": 0,
+      "value": "Passwort vergessen | WiseMapping"
+    }
+  ],
+  "forgot.register": [
+    {
+      "type": 0,
+      "value": "Wiederherstellungslink senden"
+    }
+  ],
+  "forgot.success.desc": [
+    {
+      "type": 0,
+      "value": "Wir haben dir eine E-Mail gesendet, mit der du dein Passwort zurücksetzen kannst. Du solltest sie in den nächsten Minuten erhalten."
+    }
+  ],
+  "forgot.success.title": [
+    {
+      "type": 0,
+      "value": "Dein temporäres Passwort wurde gesendet."
+    }
+  ],
+  "forgot.title": [
+    {
+      "type": 0,
+      "value": "Setze dein Passwort zurück"
+    }
+  ],
+  "forgotsuccess.page-title": [
+    {
+      "type": 0,
+      "value": "Passwort wiederhergestellt | WiseMapping"
+    }
+  ],
+  "header.donthaveaccount": [
+    {
+      "type": 0,
+      "value": "Du hast noch kein Konto?"
+    }
+  ],
+  "header.haveaccount": [
+    {
+      "type": 0,
+      "value": "Du hast bereits ein Konto?"
+    }
+  ],
+  "help.support": [
+    {
+      "type": 0,
+      "value": "Unterstützung"
+    }
+  ],
+  "history.no-changes": [
+    {
+      "type": 0,
+      "value": "Es sind keine Änderungen verfügbar"
+    }
+  ],
+  "import.button": [
+    {
+      "type": 0,
+      "value": "Importieren"
+    }
+  ],
+  "import.description": [
+    {
+      "type": 0,
+      "value": "Du kannst Mindmaps von WiseMapping, FreeMind, Freeplane, XMind, MindManager und OPML importieren. Wähle die Datei aus, die du importieren möchtest."
+    }
+  ],
+  "import.error-file": [
+    {
+      "type": 0,
+      "value": "Import fehlgeschlagen: "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    }
+  ],
+  "import.title": [
+    {
+      "type": 0,
+      "value": "Importiere vorhandene Mindmaps"
+    }
+  ],
+  "info.basic-info": [
+    {
+      "type": 0,
+      "value": "Allgemeine Informationen"
+    }
+  ],
+  "info.button": [
+    {
+      "type": 0,
+      "value": "Akzeptieren"
+    }
+  ],
+  "info.creation-time": [
+    {
+      "type": 0,
+      "value": "Erstellungsdatum"
+    }
+  ],
+  "info.creator": [
+    {
+      "type": 0,
+      "value": "Ersteller"
+    }
+  ],
+  "info.description": [
+    {
+      "type": 0,
+      "value": "Beschreibung"
+    }
+  ],
+  "info.description-msg": [
+    {
+      "type": 0,
+      "value": "Indem du die Mindmap veröffentlichst, machst du sie für jeden im Internet sichtbar."
+    }
+  ],
+  "info.modified-time": [
+    {
+      "type": 0,
+      "value": "Zuletzt geändert am"
+    }
+  ],
+  "info.modified-tny": [
+    {
+      "type": 0,
+      "value": "Zuletzt geändert von"
+    }
+  ],
+  "info.name": [
+    {
+      "type": 0,
+      "value": "Name"
+    }
+  ],
+  "info.public-visibility": [
+    {
+      "type": 0,
+      "value": "Öffentlich sichtbar"
+    }
+  ],
+  "info.sharing": [
+    {
+      "type": 0,
+      "value": "Teilen"
+    }
+  ],
+  "info.starred": [
+    {
+      "type": 0,
+      "value": "Favoriten"
+    }
+  ],
+  "info.title": [
+    {
+      "type": 0,
+      "value": "Informationen"
+    }
+  ],
+  "label.add-button": [
+    {
+      "type": 0,
+      "value": "Label hinzufügen"
+    }
+  ],
+  "label.add-for": [
+    {
+      "type": 0,
+      "value": "Labels für Mindmap bearbeiten:"
+    }
+  ],
+  "label.add-placeholder": [
+    {
+      "type": 0,
+      "value": "Titel des Labels"
+    }
+  ],
+  "label.change-color": [
+    {
+      "type": 0,
+      "value": "Labelfarbe ändern"
+    }
+  ],
+  "label.delete-description": [
+    {
+      "type": 0,
+      "value": "Löschen des Labels, einschließlich der Zuordnungen zu allen vorhandenen Mindmaps. Möchtest du fortfahren?"
+    }
+  ],
+  "label.delete-title": [
+    {
+      "type": 0,
+      "value": "Bestätige das Löschen des Labels"
+    }
+  ],
+  "label.description": [
+    {
+      "type": 0,
+      "value": "Verwende Labels, um deine Mindmaps zu organisieren."
+    }
+  ],
+  "label.maps-count": [
+    {
+      "type": 1,
+      "value": "count"
+    },
+    {
+      "type": 0,
+      "value": " Karten"
+    }
+  ],
+  "label.title": [
+    {
+      "type": 0,
+      "value": "Label hinzufügen"
+    }
+  ],
+  "language.change": [
+    {
+      "type": 0,
+      "value": "Sprache ändern"
+    }
+  ],
+  "language.help": [
+    {
+      "type": 0,
+      "value": "Hilfe beim Übersetzen"
+    }
+  ],
+  "login.desc": [
+    {
+      "type": 0,
+      "value": "Melde dich mit deinem Konto an"
+    }
+  ],
+  "login.division": [
+    {
+      "type": 0,
+      "value": "oder"
+    }
+  ],
+  "login.email": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "login.error": [
+    {
+      "type": 0,
+      "value": "Die eingegebene E-Mail-Adresse oder das eingegebene Passwort ist ungültig."
+    }
+  ],
+  "login.facebook.button": [
+    {
+      "type": 0,
+      "value": "Mit Facebook anmelden"
+    }
+  ],
+  "login.forgotpwd": [
+    {
+      "type": 0,
+      "value": "Passwort vergessen?"
+    }
+  ],
+  "login.google.button": [
+    {
+      "type": 0,
+      "value": "Anmeldung mit Google"
+    }
+  ],
+  "login.page-title": [
+    {
+      "type": 0,
+      "value": "Anmelden | WiseMapping"
+    }
+  ],
+  "login.password": [
+    {
+      "type": 0,
+      "value": "Passwort"
+    }
+  ],
+  "login.remberme": [
+    {
+      "type": 0,
+      "value": "Angemeldet bleiben?"
+    }
+  ],
+  "login.shared-map-notice": [
+    {
+      "type": 0,
+      "value": "Eine Mindmap wurde mit Ihnen geteilt. Bitte melden Sie sich an, um darauf zuzugreifen. Noch kein Konto? Registrieren Sie sich kostenlos oder nutzen Sie Ihr Google/Facebook-Konto."
+    }
+  ],
+  "login.signin": [
+    {
+      "type": 0,
+      "value": "Anmelden"
+    }
+  ],
+  "login.signup": [
+    {
+      "type": 0,
+      "value": "Anmeldung"
+    }
+  ],
+  "login.title": [
+    {
+      "type": 0,
+      "value": "Herzlich willkommen"
+    }
+  ],
+  "map.creator": [
+    {
+      "type": 0,
+      "value": "Ersteller"
+    }
+  ],
+  "map.delete-selected": [
+    {
+      "type": 0,
+      "value": "Auswahl löschen"
+    }
+  ],
+  "map.last-update": [
+    {
+      "type": 0,
+      "value": "Letzte Änderung"
+    }
+  ],
+  "map.more-actions": [
+    {
+      "type": 0,
+      "value": "Mehr Aktionen"
+    }
+  ],
+  "map.name": [
+    {
+      "type": 0,
+      "value": "Name"
+    }
+  ],
+  "map.tooltip-add": [
+    {
+      "type": 0,
+      "value": "Label zur Auswahl hinzufügen"
+    }
+  ],
+  "maps.choose-file": [
+    {
+      "type": 0,
+      "value": "Wähle eine Datei"
+    }
+  ],
+  "maps.copilot-button": [
+    {
+      "type": 0,
+      "value": "KI-Copilot"
+    }
+  ],
+  "maps.copilot-dialog.continue": [
+    {
+      "type": 0,
+      "value": "Copilot öffnen"
+    }
+  ],
+  "maps.copilot-dialog.description": [
+    {
+      "type": 0,
+      "value": "Der KI-Copilot mit ChatGPT-Unterstützung ist ein Brainstorming-Assistent, der Ihre Eingaben in strukturierte Mindmaps verwandelt. Wir öffnen ihn in einem neuen Tab, damit Sie Ideen ausbauen, Themen entwickeln und das Beste nach WiseMapping zurückbringen können."
+    }
+  ],
+  "maps.copilot-dialog.title": [
+    {
+      "type": 0,
+      "value": "ChatGPT-gestützter Mindmap-Copilot"
+    }
+  ],
+  "maps.copilot-tooltip": [
+    {
+      "type": 0,
+      "value": "Starte eine Mindmap mit dem KI-Copiloten mit ChatGPT-Unterstützung"
+    }
+  ],
+  "maps.create-tooltip": [
+    {
+      "type": 0,
+      "value": "Erstelle eine neue Mindmap"
+    }
+  ],
+  "maps.empty-result": [
+    {
+      "type": 0,
+      "value": "Kein passender Datensatz mit den aktuellen Filterkriterien gefunden."
+    }
+  ],
+  "maps.import-desc": [
+    {
+      "type": 0,
+      "value": "Import aus anderen Tools"
+    }
+  ],
+  "maps.modified": [
+    {
+      "type": 0,
+      "value": "Geändert"
+    }
+  ],
+  "maps.modified-by": [
+    {
+      "type": 0,
+      "value": "Angepasst von"
+    }
+  ],
+  "maps.modified-by-desc": [
+    {
+      "type": 0,
+      "value": "Geändert von "
+    },
+    {
+      "type": 1,
+      "value": "by"
+    },
+    {
+      "type": 0,
+      "value": " am "
+    },
+    {
+      "type": 1,
+      "value": "on"
+    }
+  ],
+  "maps.nav-all": [
+    {
+      "type": 0,
+      "value": "Alle"
+    }
+  ],
+  "maps.nav-onwned": [
+    {
+      "type": 0,
+      "value": "Eigene"
+    }
+  ],
+  "maps.nav-public": [
+    {
+      "type": 0,
+      "value": "Freigegeben"
+    }
+  ],
+  "maps.nav-shared": [
+    {
+      "type": 0,
+      "value": "Geteilt"
+    }
+  ],
+  "maps.nav-starred": [
+    {
+      "type": 0,
+      "value": "Favoriten"
+    }
+  ],
+  "maps.page-title": [
+    {
+      "type": 0,
+      "value": "Meine Mindmaps | WiseMapping"
+    }
+  ],
+  "maps.revert": [
+    {
+      "type": 0,
+      "value": "Rückgängig machen"
+    }
+  ],
+  "maps.search-action": [
+    {
+      "type": 0,
+      "value": "Suche ..."
+    }
+  ],
+  "maps.tooltip-open": [
+    {
+      "type": 0,
+      "value": "Zum Bearbeiten öffnen"
+    }
+  ],
+  "maps.tooltip-starred": [
+    {
+      "type": 0,
+      "value": "Favoriten"
+    }
+  ],
+  "maps.untitled": [
+    {
+      "type": 0,
+      "value": "Ohne Titel"
+    }
+  ],
+  "maps.view": [
+    {
+      "type": 0,
+      "value": "Ansicht"
+    }
+  ],
+  "menu.account": [
+    {
+      "type": 0,
+      "value": "Konto"
+    }
+  ],
+  "menu.admin-console": [
+    {
+      "type": 0,
+      "value": "Admin-Konsole"
+    }
+  ],
+  "menu.change-password": [
+    {
+      "type": 0,
+      "value": "Kennwort ändern"
+    }
+  ],
+  "menu.signout": [
+    {
+      "type": 0,
+      "value": "Abmelden"
+    }
+  ],
+  "publish.button": [
+    {
+      "type": 0,
+      "value": "Akzeptieren"
+    }
+  ],
+  "publish.checkbox": [
+    {
+      "type": 0,
+      "value": "Aktiviere die öffentliche Freigabe"
+    }
+  ],
+  "publish.copied": [
+    {
+      "type": 0,
+      "value": "In die Zwischenablage kopiert!"
+    }
+  ],
+  "publish.description": [
+    {
+      "type": 0,
+      "value": "Mache deine Map öffentlich. Jeder mit dem Link kann sie ansehen."
+    }
+  ],
+  "publish.embedded": [
+    {
+      "type": 0,
+      "value": "Eingebettet"
+    }
+  ],
+  "publish.embedded-msg": [
+    {
+      "type": 0,
+      "value": "Klicke auf den Code, um ihn in die Zwischenablage zu kopieren:"
+    }
+  ],
+  "publish.public-url": [
+    {
+      "type": 0,
+      "value": "Öffentliche URL"
+    }
+  ],
+  "publish.public-url-msg": [
+    {
+      "type": 0,
+      "value": "Klicke auf den Link, um ihn in die Zwischenablage zu kopieren:"
+    }
+  ],
+  "publish.title": [
+    {
+      "type": 0,
+      "value": "Veröffentlichen"
+    }
+  ],
+  "registation.callback.error.message": [
+    {
+      "type": 0,
+      "value": "Beim Überprüfen deiner Identität ist ein Fehler aufgetreten. Du kannst es auf der Anmeldeseite erneut versuchen"
+    }
+  ],
+  "registation.success-title": [
+    {
+      "type": 0,
+      "value": "Registrierung erfolgreich | WiseMapping"
+    }
+  ],
+  "registration.callback.back": [
+    {
+      "type": 0,
+      "value": "Zurück zur Anmeldung"
+    }
+  ],
+  "registration.callback.confirm.description": [
+    {
+      "type": 0,
+      "value": "Ein Konto mit derselben E-Mail-Adresse wurde zuvor registriert. Möchtest du dein "
+    },
+    {
+      "type": 1,
+      "value": "provider"
+    },
+    {
+      "type": 0,
+      "value": "-Konto mit diesem WiseMapping-Konto verknüpfen?"
+    }
+  ],
+  "registration.callback.confirm.title": [
+    {
+      "type": 0,
+      "value": "Bestätigen"
+    }
+  ],
+  "registration.callback.sync": [
+    {
+      "type": 0,
+      "value": "Konto synchronisieren"
+    }
+  ],
+  "registration.callback.waiting.description": [
+    {
+      "type": 0,
+      "value": "Bitte warte, während wir deine Identität überprüfen"
+    }
+  ],
+  "registration.callback.waiting.title": [
+    {
+      "type": 0,
+      "value": "Fertigstellung ..."
+    }
+  ],
+  "registration.desc": [
+    {
+      "type": 0,
+      "value": "Nimm dir einen Moment Zeit. Die Anmeldung ist kostenlos."
+    }
+  ],
+  "registration.division": [
+    {
+      "type": 0,
+      "value": "oder"
+    }
+  ],
+  "registration.email": [
+    {
+      "type": 0,
+      "value": "E-Mail"
+    }
+  ],
+  "registration.error.title": [
+    {
+      "type": 0,
+      "value": "Registrierung fehlgeschlagen"
+    }
+  ],
+  "registration.facebook.button": [
+    {
+      "type": 0,
+      "value": "Mit Facebook registrieren"
+    }
+  ],
+  "registration.firstname": [
+    {
+      "type": 0,
+      "value": "Vorname"
+    }
+  ],
+  "registration.form-legend": [
+    {
+      "type": 0,
+      "value": "Kontoinformationen"
+    }
+  ],
+  "registration.google.button": [
+    {
+      "type": 0,
+      "value": "Melde dich bei Google an"
+    }
+  ],
+  "registration.lastname": [
+    {
+      "type": 0,
+      "value": "Nachname"
+    }
+  ],
+  "registration.page-title": [
+    {
+      "type": 0,
+      "value": "Registrierung | WiseMapping"
+    }
+  ],
+  "registration.password": [
+    {
+      "type": 0,
+      "value": "Passwort"
+    }
+  ],
+  "registration.register": [
+    {
+      "type": 0,
+      "value": "Registrieren"
+    }
+  ],
+  "registration.success.desc": [
+    {
+      "type": 0,
+      "value": "Klicke unten auf die Schaltfläche Anmelden und beginne mit der Erstellung von Mindmaps."
+    }
+  ],
+  "registration.termandconditions": [
+    {
+      "type": 0,
+      "value": "Kundenbedingungen: Bitte überprüfe die WiseMapping-Kontoinformationen, die du oben eingegeben hast und lese dir die Kundenbedingungen hier durch. Indem du unten auf Registrieren klickst, stimmst du den obigen Kundenbedingungen und der Datenschutzrichtlinie zu."
+    }
+  ],
+  "registration.title": [
+    {
+      "type": 0,
+      "value": "Mitglied werden"
+    }
+  ],
+  "rename.description": [
+    {
+      "type": 0,
+      "value": "Bitte gebe den Namen und die Beschreibung der Mindmap ein."
+    }
+  ],
+  "rename.title": [
+    {
+      "type": 0,
+      "value": "Umbenennen"
+    }
+  ],
+  "resetpassword.success.title": [
+    {
+      "type": 0,
+      "value": "Dein Konto wurde erfolgreich erstellt"
+    }
+  ],
+  "role.editor": [
+    {
+      "type": 0,
+      "value": "Bearbeiter"
+    }
+  ],
+  "role.owner": [
+    {
+      "type": 0,
+      "value": "Besitzer"
+    }
+  ],
+  "role.viewer": [
+    {
+      "type": 0,
+      "value": "Betrachter"
+    }
+  ],
+  "share.add-button": [
+    {
+      "type": 0,
+      "value": "Geteilt"
+    }
+  ],
+  "share.add-message": [
+    {
+      "type": 0,
+      "value": "Nachricht hinzufügen"
+    }
+  ],
+  "share.adding-button": [
+    {
+      "type": 0,
+      "value": "Wird geteilt..."
+    }
+  ],
+  "share.can-edit": [
+    {
+      "type": 0,
+      "value": "Kann bearbeiten"
+    }
+  ],
+  "share.can-view": [
+    {
+      "type": 0,
+      "value": "Kann ansehen"
+    }
+  ],
+  "share.delete": [
+    {
+      "type": 0,
+      "value": "Bearbeiter entfernen"
+    }
+  ],
+  "share.delete-description": [
+    {
+      "type": 0,
+      "value": "Füge Mitarbeiter hinzu. Sie erhalten sofortigen E-Mail-Zugriff zum gemeinsamen Bearbeiten."
+    }
+  ],
+  "share.delete-title": [
+    {
+      "type": 0,
+      "value": "Teile deine Mindmap"
+    }
+  ],
+  "share.message": [
+    {
+      "type": 0,
+      "value": "Nachricht"
+    }
+  ],
+  "theme.dark": [
+    {
+      "type": 0,
+      "value": "Dunkel"
+    }
+  ],
+  "theme.light": [
+    {
+      "type": 0,
+      "value": "Hell"
+    }
+  ],
+  "theme.toggle": [
+    {
+      "type": 0,
+      "value": "Design Wechseln"
+    }
+  ],
+  "validation.title-required": [
+    {
+      "type": 0,
+      "value": "Titel ist erforderlich"
+    }
+  ]
+}

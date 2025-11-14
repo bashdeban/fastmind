@@ -1,0 +1,863 @@
+{
+  "account.delete-warning": {
+    "defaultMessage": "作成したマインドマップは復元できません。すべての情報が削除され、復元することはできません。"
+  },
+  "accountinfo.button": {
+    "defaultMessage": "受け入れる"
+  },
+  "accountinfo.deleteaccount": {
+    "defaultMessage": "アカウントを削除"
+  },
+  "accountinfo.email": {
+    "defaultMessage": "メールアドレス"
+  },
+  "accountinfo.firstname": {
+    "defaultMessage": "名"
+  },
+  "accountinfo.lastname": {
+    "defaultMessage": "姓"
+  },
+  "accountinfo.title": {
+    "defaultMessage": "アカウント情報"
+  },
+  "action.cancel-button": {
+    "defaultMessage": "キャンセル"
+  },
+  "action.close-button": {
+    "defaultMessage": "閉じる"
+  },
+  "action.delete": {
+    "defaultMessage": "削除"
+  },
+  "action.delete-description": {
+    "defaultMessage": "削除されたマインドマップは復元できません。続行しますか？"
+  },
+  "action.delete-title": {
+    "defaultMessage": "削除"
+  },
+  "action.duplicate": {
+    "defaultMessage": "複製"
+  },
+  "action.export": {
+    "defaultMessage": "エクスポート"
+  },
+  "action.history": {
+    "defaultMessage": "履歴"
+  },
+  "action.history-description": {
+    "defaultMessage": "過去90日間の変更履歴。"
+  },
+  "action.history-title": {
+    "defaultMessage": "バージョン履歴"
+  },
+  "action.import": {
+    "defaultMessage": "インポート"
+  },
+  "action.info": {
+    "defaultMessage": "情報"
+  },
+  "action.label": {
+    "defaultMessage": "ラベルを追加"
+  },
+  "action.new": {
+    "defaultMessage": "新しいマップ"
+  },
+  "action.open": {
+    "defaultMessage": "開く"
+  },
+  "action.print": {
+    "defaultMessage": "印刷"
+  },
+  "action.publish": {
+    "defaultMessage": "公開"
+  },
+  "action.rename": {
+    "defaultMessage": "名前を変更"
+  },
+  "action.rename-description-placeholder": {
+    "defaultMessage": "説明"
+  },
+  "action.rename-name-placeholder": {
+    "defaultMessage": "名前"
+  },
+  "action.share": {
+    "defaultMessage": "共有"
+  },
+  "changepwd.button": {
+    "defaultMessage": "変更"
+  },
+  "changepwd.confirm-password": {
+    "defaultMessage": "パスワードを確認"
+  },
+  "changepwd.description": {
+    "defaultMessage": "アカウントの新しいパスワードを入力してください。"
+  },
+  "changepwd.password": {
+    "defaultMessage": "パスワード"
+  },
+  "changepwd.password-match": {
+    "defaultMessage": "パスワードが一致しません。もう一度お試しください。"
+  },
+  "changepwd.title": {
+    "defaultMessage": "パスワードを変更"
+  },
+  "common.wait": {
+    "defaultMessage": "お待ちください..."
+  },
+  "create.button": {
+    "defaultMessage": "作成"
+  },
+  "create.description": {
+    "defaultMessage": "新しいマップの名前と説明を入力してください。"
+  },
+  "create.title": {
+    "defaultMessage": "新しいマインドマップを作成"
+  },
+  "deletem.title": {
+    "defaultMessage": "選択されたすべてのマップが削除されます"
+  },
+  "duplicate.copy-prefix": {
+    "defaultMessage": "のコピー"
+  },
+  "duplicate.title": {
+    "defaultMessage": "複製"
+  },
+  "expired.description": {
+    "defaultMessage": "現在のセッションが期限切れです。ログインして再試行してください。"
+  },
+  "expired.title": {
+    "defaultMessage": "セッションが期限切れです"
+  },
+  "export.desc": {
+    "defaultMessage": "このマップを希望の形式でエクスポートし、プレゼンテーションで使用したり、メールで共有したりできます"
+  },
+  "export.document": {
+    "defaultMessage": "マインドマップツール：マインドマップをサードパーティのマインドマップツール形式でエクスポート"
+  },
+  "export.document-label": {
+    "defaultMessage": "ドキュメント：マインドマップを共有準備完了の独立したドキュメントとしてエクスポート"
+  },
+  "export.image": {
+    "defaultMessage": "画像：すべての色と形状を含むマップのグラフィック表現を取得"
+  },
+  "export.img-center": {
+    "defaultMessage": "中央揃えしてフィット"
+  },
+  "export.title": {
+    "defaultMessage": "エクスポート"
+  },
+  "export.warning": {
+    "defaultMessage": "画像（SVG、PNG、JPEG、PDF）へのエクスポートは、エディターツールバーでのみ利用可能です。"
+  },
+  "footer.aboutus": {
+    "defaultMessage": "私たちについて"
+  },
+  "footer.contactus": {
+    "defaultMessage": "お問い合わせ"
+  },
+  "footer.donations": {
+    "defaultMessage": "寄付"
+  },
+  "footer.faq": {
+    "defaultMessage": "よくある質問"
+  },
+  "footer.faqandhelp": {
+    "defaultMessage": "ヘルプとよくある質問"
+  },
+  "footer.feedback": {
+    "defaultMessage": "フィードバック"
+  },
+  "footer.opensource": {
+    "defaultMessage": "オープンソース"
+  },
+  "footer.others": {
+    "defaultMessage": "その他"
+  },
+  "footer.support": {
+    "defaultMessage": "サポート"
+  },
+  "footer.team": {
+    "defaultMessage": "チーム"
+  },
+  "footer.termsandconditions": {
+    "defaultMessage": "利用規約"
+  },
+  "forgot.desc": {
+    "defaultMessage": "パスワードをリセットするためのメールをお送りします。"
+  },
+  "forgot.email": {
+    "defaultMessage": "メールアドレス"
+  },
+  "forgot.oauth.back": {
+    "defaultMessage": "ログインに戻る"
+  },
+  "forgot.oauth.message": {
+    "defaultMessage": "パスワードは不要です。FacebookまたはGoogleでログインしてください。"
+  },
+  "forgot.page-title": {
+    "defaultMessage": "パスワードを忘れた場合 | WiseMapping"
+  },
+  "forgot.register": {
+    "defaultMessage": "復旧リンクを送信"
+  },
+  "forgot.success.desc": {
+    "defaultMessage": "パスワードをリセットできるメールをお送りしました。数分以内に受信されるはずです。"
+  },
+  "forgot.success.title": {
+    "defaultMessage": "一時パスワードが送信されました。"
+  },
+  "forgot.title": {
+    "defaultMessage": "パスワードをリセット"
+  },
+  "forgotsuccess.page-title": {
+    "defaultMessage": "パスワード復旧 | WiseMapping"
+  },
+  "header.donthaveaccount": {
+    "defaultMessage": "アカウントをお持ちでないですか？"
+  },
+  "header.haveaccount": {
+    "defaultMessage": "すでにアカウントをお持ちですか？"
+  },
+  "help.support": {
+    "defaultMessage": "サポート"
+  },
+  "history.no-changes": {
+    "defaultMessage": "利用可能な変更はありません"
+  },
+  "import.button": {
+    "defaultMessage": "作成"
+  },
+  "import.description": {
+    "defaultMessage": "WiseMappingとFreemindのマップをマップリストにインポートできます。インポートするファイルを選択してください。"
+  },
+  "import.error-file": {
+    "defaultMessage": "インポートエラー {error}"
+  },
+  "import.title": {
+    "defaultMessage": "既存のマインドマップをインポート"
+  },
+  "info.basic-info": {
+    "defaultMessage": "基本情報"
+  },
+  "info.button": {
+    "defaultMessage": "受け入れる"
+  },
+  "info.creation-time": {
+    "defaultMessage": "作成日"
+  },
+  "info.creator": {
+    "defaultMessage": "作成者"
+  },
+  "info.description": {
+    "defaultMessage": "説明"
+  },
+  "info.description-msg": {
+    "defaultMessage": "マップを公開することで、インターネット上のすべての人に表示されます。"
+  },
+  "info.modified-time": {
+    "defaultMessage": "最終更新日"
+  },
+  "info.modified-tny": {
+    "defaultMessage": "最終更新者"
+  },
+  "info.name": {
+    "defaultMessage": "名前"
+  },
+  "info.public-visibility": {
+    "defaultMessage": "公開表示"
+  },
+  "info.sharing": {
+    "defaultMessage": "共有"
+  },
+  "info.starred": {
+    "defaultMessage": "お気に入り"
+  },
+  "info.title": {
+    "defaultMessage": "情報"
+  },
+  "label.add-button": {
+    "defaultMessage": "ラベルを追加"
+  },
+  "label.add-for": {
+    "defaultMessage": "マップのラベルを編集："
+  },
+  "label.add-placeholder": {
+    "defaultMessage": "ラベルタイトル"
+  },
+  "label.change-color": {
+    "defaultMessage": "ラベルの色を変更"
+  },
+  "label.delete-description": {
+    "defaultMessage": "が削除され、既存のすべてのマップとの関連付けも含まれます。続行しますか？"
+  },
+  "label.delete-title": {
+    "defaultMessage": "ラベル削除を確認"
+  },
+  "label.description": {
+    "defaultMessage": "ラベルを使用してマップを整理します。"
+  },
+  "label.maps-count": {
+    "defaultMessage": "{count} マップ"
+  },
+  "label.title": {
+    "defaultMessage": "ラベルを追加"
+  },
+  "language.change": {
+    "defaultMessage": "言語を変更"
+  },
+  "language.help": {
+    "defaultMessage": "翻訳を支援"
+  },
+  "login.desc": {
+    "defaultMessage": "アカウントにログイン"
+  },
+  "login.division": {
+    "defaultMessage": "または"
+  },
+  "login.email": {
+    "defaultMessage": "メールアドレス"
+  },
+  "login.error": {
+    "defaultMessage": "入力されたメールアドレスまたはパスワードが無効です。"
+  },
+  "login.forgotpwd": {
+    "defaultMessage": "パスワードを忘れましたか？"
+  },
+  "login.google.button": {
+    "defaultMessage": "Googleでサインイン"
+  },
+  "login.page-title": {
+    "defaultMessage": "ログイン | WiseMapping"
+  },
+  "login.password": {
+    "defaultMessage": "パスワード"
+  },
+  "login.remberme": {
+    "defaultMessage": "ログイン状態を保持"
+  },
+  "login.signin": {
+    "defaultMessage": "サインイン"
+  },
+  "login.signup": {
+    "defaultMessage": "サインアップ"
+  },
+  "login.title": {
+    "defaultMessage": "ようこそ"
+  },
+  "login.shared-map-notice": {
+    "defaultMessage": "マインドマップが共有されました。アクセスするにはログインしてください。アカウントをお持ちでない方は、無料で登録するか、Google/Facebookアカウントをご利用ください。"
+  },
+  "map.creator": {
+    "defaultMessage": "作成者"
+  },
+  "map.delete-selected": {
+    "defaultMessage": "選択したものを削除"
+  },
+  "map.last-update": {
+    "defaultMessage": "最終更新"
+  },
+  "map.more-actions": {
+    "defaultMessage": "その他のアクション"
+  },
+  "map.name": {
+    "defaultMessage": "名前"
+  },
+  "map.tooltip-add": {
+    "defaultMessage": "選択したものにラベルを追加"
+  },
+  "maps.choose-file": {
+    "defaultMessage": "ファイルを選択"
+  },
+  "maps.copilot-button": {
+    "defaultMessage": "AIコパイロット"
+  },
+  "maps.copilot-tooltip": {
+    "defaultMessage": "AIコパイロットでマインドマップを始める"
+  },
+  "maps.copilot-dialog.title": {
+    "defaultMessage": "ChatGPT 搭載マインドマップコパイロット"
+  },
+  "maps.copilot-dialog.description": {
+    "defaultMessage": "Mind Map Copilot は、あなたのプロンプトを構造化されたマインドマップに変換する ChatGPT 搭載のブレーンストーミング支援ツールです。新しいタブで開きますので、アイデアを膨らませ、トピックを生成し、ベストな内容を WiseMapping に持ち帰ってください。"
+  },
+  "maps.untitled": {
+    "defaultMessage": "無題"
+  },
+  "maps.copilot-dialog.continue": {
+    "defaultMessage": "コパイロットを開く"
+  },
+  "maps.create-tooltip": {
+    "defaultMessage": "新しいマインドマップを作成"
+  },
+  "maps.empty-result": {
+    "defaultMessage": "現在のフィルター条件に一致するマインドマップが見つかりません。"
+  },
+  "maps.import-desc": {
+    "defaultMessage": "他のツールからインポート"
+  },
+  "maps.modified": {
+    "defaultMessage": "変更"
+  },
+  "maps.modified-by": {
+    "defaultMessage": "変更者"
+  },
+  "maps.modified-by-desc": {
+    "defaultMessage": "{on}に{by}が変更"
+  },
+  "maps.nav-all": {
+    "defaultMessage": "すべて"
+  },
+  "maps.nav-onwned": {
+    "defaultMessage": "所有"
+  },
+  "maps.nav-public": {
+    "defaultMessage": "公開"
+  },
+  "maps.nav-shared": {
+    "defaultMessage": "共有"
+  },
+  "maps.nav-starred": {
+    "defaultMessage": "お気に入り"
+  },
+  "maps.page-title": {
+    "defaultMessage": "マイマップ | WiseMapping"
+  },
+  "maps.revert": {
+    "defaultMessage": "元に戻す"
+  },
+  "maps.search-action": {
+    "defaultMessage": "検索..."
+  },
+  "maps.tooltip-open": {
+    "defaultMessage": "編集用に開く"
+  },
+  "maps.tooltip-starred": {
+    "defaultMessage": "お気に入り"
+  },
+  "maps.view": {
+    "defaultMessage": "表示"
+  },
+  "menu.account": {
+    "defaultMessage": "アカウント"
+  },
+  "menu.change-password": {
+    "defaultMessage": "パスワードを変更"
+  },
+  "menu.signout": {
+    "defaultMessage": "サインアウト"
+  },
+  "publish.button": {
+    "defaultMessage": "受け入れる"
+  },
+  "publish.checkbox": {
+    "defaultMessage": "公開共有を有効にする"
+  },
+  "publish.copied": {
+    "defaultMessage": "Copied to clipboard!"
+  },
+  "publish.description": {
+    "defaultMessage": "マップを公開することで、インターネット上のすべての人に表示されます。"
+  },
+  "publish.embedded": {
+    "defaultMessage": "埋め込み"
+  },
+  "publish.embedded-msg": {
+    "defaultMessage": "このコードスニペットをコピーして、ブログやページに埋め込みます："
+  },
+  "publish.public-url": {
+    "defaultMessage": "公開URL"
+  },
+  "publish.public-url-msg": {
+    "defaultMessage": "以下のリンクをコピーして貼り付け、同僚とマップを共有します："
+  },
+  "publish.title": {
+    "defaultMessage": "公開"
+  },
+  "registation.callback.error.message": {
+    "defaultMessage": "Googleでの身元確認中にエラーが発生しました。ログインページから再試行できます"
+  },
+  "registation.success-title": {
+    "defaultMessage": "登録成功 | WiseMapping"
+  },
+  "registration.callback.back": {
+    "defaultMessage": "ログインに戻る"
+  },
+  "registration.callback.confirm.description": {
+    "defaultMessage": "同じメールアドレスのアカウントが以前に登録されています。{provider}アカウントをそのWiseMappingアカウントにリンクしますか？"
+  },
+  "registration.callback.confirm.title": {
+    "defaultMessage": "確認"
+  },
+  "registration.callback.sync": {
+    "defaultMessage": "アカウントを同期"
+  },
+  "registration.callback.waiting.description": {
+    "defaultMessage": "身元を確認中です。お待ちください"
+  },
+  "registration.callback.waiting.title": {
+    "defaultMessage": "完了中..."
+  },
+  "registration.desc": {
+    "defaultMessage": "登録は無料で、すぐに完了します"
+  },
+  "registration.division": {
+    "defaultMessage": "または"
+  },
+  "registration.error.title": {
+    "defaultMessage": "登録失敗"
+  },
+  "registration.email": {
+    "defaultMessage": "メールアドレス"
+  },
+  "registration.firstname": {
+    "defaultMessage": "名"
+  },
+  "registration.google.button": {
+    "defaultMessage": "Googleでサインアップ"
+  },
+  "registration.lastname": {
+    "defaultMessage": "姓"
+  },
+  "registration.page-title": {
+    "defaultMessage": "登録 | WiseMapping"
+  },
+  "registration.password": {
+    "defaultMessage": "パスワード"
+  },
+  "registration.register": {
+    "defaultMessage": "登録"
+  },
+  "registration.success.desc": {
+    "defaultMessage": "下の「サインイン」ボタンをクリックして、マインドマップの作成を開始してください。"
+  },
+  "registration.termandconditions": {
+    "defaultMessage": "クライアント条件：上記で入力したWiseMappingアカウント情報を確認し、こちらでクライアント条件を確認してください。下の「登録」をクリックすることで、上記のクライアント条件とプライバシーポリシーに同意したことになります"
+  },
+  "registration.title": {
+    "defaultMessage": "メンバーになる"
+  },
+  "rename.description": {
+    "defaultMessage": "新しいマップの名前と説明を入力してください。"
+  },
+  "rename.title": {
+    "defaultMessage": "名前を変更"
+  },
+  "resetpassword.success.title": {
+    "defaultMessage": "アカウントが正常に作成されました"
+  },
+  "role.editor": {
+    "defaultMessage": "編集者"
+  },
+  "role.owner": {
+    "defaultMessage": "所有者"
+  },
+  "role.viewer": {
+    "defaultMessage": "閲覧者"
+  },
+  "share.add-button": {
+    "defaultMessage": "共有"
+  },
+  "share.adding-button": {
+    "defaultMessage": "Sharing..."
+  },
+  "share.add-message": {
+    "defaultMessage": "メッセージを追加"
+  },
+  "share.can-edit": {
+    "defaultMessage": "編集可能"
+  },
+  "share.can-view": {
+    "defaultMessage": "閲覧可能"
+  },
+  "share.delete": {
+    "defaultMessage": "共同編集者を削除"
+  },
+  "share.delete-description": {
+    "defaultMessage": "共同編集者を追加。即座にメールでアクセスが送信され、一緒に編集できます。"
+  },
+  "share.delete-title": {
+    "defaultMessage": "人と共有"
+  },
+  "share.message": {
+    "defaultMessage": "メッセージ"
+  },
+  "dialog.loading": {
+    "defaultMessage": "読み込み中..."
+  },
+  "theme.dark": {
+    "defaultMessage": "ダーク"
+  },
+  "theme.light": {
+    "defaultMessage": "ライト"
+  },
+  "theme.toggle": {
+    "defaultMessage": "テーマ切り替え"
+  },
+  "admin.delete-user": {
+    "defaultMessage": "ユーザーを削除"
+  },
+  "common.maps-list": {
+    "defaultMessage": "マップ一覧"
+  },
+  "admin.status-clean": {
+    "defaultMessage": "クリーン"
+  },
+  "common.allow-email-notifications": {
+    "defaultMessage": "メール通知を許可"
+  },
+  "admin.public": {
+    "defaultMessage": "公開"
+  },
+  "common.others": {
+    "defaultMessage": "その他"
+  },
+  "admin.view-xml": {
+    "defaultMessage": "XMLを表示"
+  },
+  "registration.facebook.button": {
+    "defaultMessage": "Facebookで登録"
+  },
+  "common.registration-form": {
+    "defaultMessage": "登録フォーム"
+  },
+  "common.first-name": {
+    "defaultMessage": "名"
+  },
+  "admin.auth-type": {
+    "defaultMessage": "認証タイプ"
+  },
+  "common.delete": {
+    "defaultMessage": "削除"
+  },
+  "admin.status": {
+    "defaultMessage": "ステータス"
+  },
+  "admin.suspend-user": {
+    "defaultMessage": "ユーザーを停止"
+  },
+  "admin.suspension-status": {
+    "defaultMessage": "停止状態"
+  },
+  "admin.edit-user": {
+    "defaultMessage": "ユーザーを編集"
+  },
+  "admin.refresh": {
+    "defaultMessage": "更新"
+  },
+  "common.login-form": {
+    "defaultMessage": "ログインフォーム"
+  },
+  "admin.lock-status": {
+    "defaultMessage": "ロック状態"
+  },
+  "common.emails": {
+    "defaultMessage": "メール"
+  },
+  "admin.suspension-reason": {
+    "defaultMessage": "停止理由"
+  },
+  "admin.suspension.abuse": {
+    "defaultMessage": "悪用"
+  },
+  "admin.suspension.terms-violation": {
+    "defaultMessage": "利用規約違反"
+  },
+  "admin.suspension.security-concern": {
+    "defaultMessage": "セキュリティ上の懸念"
+  },
+  "admin.suspension.manual-review": {
+    "defaultMessage": "手動レビュー"
+  },
+  "admin.suspension.inactivity": {
+    "defaultMessage": "非アクティブ"
+  },
+  "admin.suspension.other": {
+    "defaultMessage": "その他"
+  },
+  "admin.status-suspended": {
+    "defaultMessage": "停止中"
+  },
+  "admin.delete": {
+    "defaultMessage": "削除"
+  },
+  "common.last-name": {
+    "defaultMessage": "姓"
+  },
+  "admin.public-access": {
+    "defaultMessage": "公開アクセス"
+  },
+  "admin.status-active": {
+    "defaultMessage": "アクティブ"
+  },
+  "admin.status-inactive": {
+    "defaultMessage": "非アクティブ"
+  },
+  "common.locale": {
+    "defaultMessage": "言語"
+  },
+  "login.facebook.button": {
+    "defaultMessage": "Facebookでサインイン"
+  },
+  "common.email": {
+    "defaultMessage": "メール"
+  },
+  "admin.unsuspend-user": {
+    "defaultMessage": "ユーザーの停止を解除"
+  },
+  "common.delete-tag": {
+    "defaultMessage": "タグを削除"
+  },
+  "admin.edit": {
+    "defaultMessage": "編集"
+  },
+  "common.open-drawer": {
+    "defaultMessage": "メニューを開く"
+  },
+  "admin.locked": {
+    "defaultMessage": "ロック"
+  },
+  "common.settings": {
+    "defaultMessage": "設定"
+  },
+  "common.loading": {
+    "defaultMessage": "読み込み中..."
+  },
+  "common.retry": {
+    "defaultMessage": "再試行"
+  },
+  "admin.system.title": {
+    "defaultMessage": "システム情報"
+  },
+  "admin.system.refresh": {
+    "defaultMessage": "更新"
+  },
+  "common.refresh": {
+    "defaultMessage": "更新"
+  },
+  "admin.system.memory": {
+    "defaultMessage": "メモリ"
+  },
+  "admin.system.db.url": {
+    "defaultMessage": "URL"
+  },
+  "admin.system.jvm": {
+    "defaultMessage": "JVM"
+  },
+  "error.page-title": {
+    "defaultMessage": "予期しないエラー | WiseMapping"
+  },
+  "error.generic-title": {
+    "defaultMessage": "問題が発生しました。"
+  },
+  "error.generic-message": {
+    "defaultMessage": "後でもう一度お試しいただくか、問題が解決しない場合はサポートまでご連絡ください。"
+  },
+  "error.permission-denied-title": {
+    "defaultMessage": "このページにアクセスする権限がありません。"
+  },
+  "error.permission-denied-message": {
+    "defaultMessage": "アクセスできるはずだと思われる場合は、管理者にお問い合わせください。"
+  },
+  "error.not-found-title": {
+    "defaultMessage": "そのページが見つかりません。"
+  },
+  "error.not-found-message": {
+    "defaultMessage": "お探しのページは削除されたか、名前が変更されたか、一時的に利用できない可能性があります。"
+  },
+  "error.map-unavailable-title": {
+    "defaultMessage": "このマインドマップは公開表示には利用できません。"
+  },
+  "error.map-unavailable-message": {
+    "defaultMessage": "このマインドマップは、サイトポリシーに違反しているため、公開表示には利用できません。さらにサポートが必要な場合は、support@wisemapping.com にお問い合わせください。"
+  },
+  "error.map-title-required": {
+    "defaultMessage": "マップのタイトルは必須で、空にすることはできません"
+  },
+  "error.security-error": {
+    "defaultMessage": "マインドマップを開くことができません。"
+  },
+  "error.undexpected-error-msg": {
+    "defaultMessage": "Unexpected error opening mindmap. Please, try latter."
+  },
+  "accountinfo.personal-details": {
+    "defaultMessage": "Personal Details"
+  },
+  "account.delete-warning-title": {
+    "defaultMessage": "Delete Account"
+  },
+  "account.delete-warning-description": {
+    "defaultMessage": "Once you delete your account, there is no going back. Please be certain."
+  },
+  "account.delete-warning-consequences": {
+    "defaultMessage": "This will permanently delete:"
+  },
+  "account.delete-warning-mindmaps": {
+    "defaultMessage": "All your mindmaps and their content"
+  },
+  "account.delete-warning-data": {
+    "defaultMessage": "All your personal data and account information"
+  },
+  "account.delete-warning-collaborations": {
+    "defaultMessage": "All shared mindmaps and collaborations"
+  },
+  "account.delete-warning-history": {
+    "defaultMessage": "All account history and activity logs"
+  },
+  "account.delete-confirmation-title": {
+    "defaultMessage": "Are you absolutely sure?"
+  },
+  "account.delete-confirmation-warning": {
+    "defaultMessage": "This action cannot be undone. This will permanently delete your account and remove all data from our servers."
+  },
+  "account.delete-confirmation-instruction": {
+    "defaultMessage": "Please type DELETE MY ACCOUNT to confirm:"
+  },
+  "account.delete-confirm": {
+    "defaultMessage": "Delete Account"
+  },
+  "menu.admin-console": {
+    "defaultMessage": "Admin Console"
+  },
+  "registration.form-legend": {
+    "defaultMessage": "Account Information"
+  },
+  "admin.change-password": {
+    "defaultMessage": "Change password"
+  },
+  "admin.change-password-title": {
+    "defaultMessage": "Change Password"
+  },
+  "admin.change-password-description": {
+    "defaultMessage": "Change password for user: {email}"
+  },
+  "admin.new-password": {
+    "defaultMessage": "New Password"
+  },
+  "admin.confirm-password": {
+    "defaultMessage": "Confirm Password"
+  },
+  "admin.change-password-button": {
+    "defaultMessage": "Change Password"
+  },
+  "admin.password-error-length": {
+    "defaultMessage": "Password must be at least 6 characters"
+  },
+  "admin.password-error-mismatch": {
+    "defaultMessage": "Passwords do not match"
+  },
+  "admin.password-error-failed": {
+    "defaultMessage": "Failed to change password"
+  },
+  "admin.password-error-google": {
+    "defaultMessage": "This user is authenticated via Google. Password changes are not available for Google accounts. Please ask the user to manage their password through their Google account."
+  },
+  "admin.password-error-facebook": {
+    "defaultMessage": "This user is authenticated via Facebook. Password changes are not available for Facebook accounts. Please ask the user to manage their password through their Facebook account."
+  },
+  "admin.close": {
+    "defaultMessage": "Close"
+  },
+  "validation.title-required": {
+    "defaultMessage": "タイトルは必須です"
+  }
+}

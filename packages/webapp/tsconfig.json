@@ -1,0 +1,27 @@
+{
+  "include": [
+    "src/**/*"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "strict": false,
+    "target": "es2022",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "rootDirs": [
+      "src",
+    ],
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "jsxImportSource": "@emotion/react",
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "./node_modules","./dist"
+  ]
+}

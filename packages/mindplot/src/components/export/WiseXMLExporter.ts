@@ -1,0 +1,39 @@
+/*
+ *    Copyright [2007-2025] [wisemapping]
+ *
+ *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
+ *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   "powered by wisemapping" text requirement on every single page;
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the license at
+ *
+ *       https://github.com/wisemapping/wisemapping-open-source/blob/main/LICENSE.md
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+import { Mindmap } from '../..';
+import XMLSerializerFactory from '../persistence/XMLSerializerFactory';
+import Exporter from './Exporter';
+
+class WiseXMLExporter extends Exporter {
+  mindmap: Mindmap;
+
+  constructor(mindmap: Mindmap) {
+    super('wxml', 'application/xml');
+    this.mindmap = mindmap;
+  }
+
+  export(): Promise<string> {
+    const { mindmap } = this;
+    const serializer = XMLSerializerFactory.createFromMindmap(mindmap);
+    const document: Document = serializer.toXML(mindmap);
+
+    const xmlStr: string = new XMLSerializer().serializeToString(document);
+    return Promise.resolve(xmlStr);
+  }
+}
+export default WiseXMLExporter;

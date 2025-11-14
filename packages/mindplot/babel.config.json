@@ -1,0 +1,15 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": false,
+                "targets": {
+                    "esmodules": true
+                }
+            },
+            "@babel/preset-typescript"
+        ]
+    ],
+    "sourceType": "module"
+}

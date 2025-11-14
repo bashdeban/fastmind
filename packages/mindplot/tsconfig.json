@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "target": "es2022",
+    "allowJs": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "strictNullChecks": true,
+
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strictFunctionTypes": true,
+
+    
+    "rootDirs": [
+      "src",
+    ]
+  },
+  "include": [
+    "src/**/*", "libraries", "src/@types/**/*", "test/**/*"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./dist",
+    "storybook/**/*"
+  ]
+}

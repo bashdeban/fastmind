@@ -1,0 +1,863 @@
+{
+  "account.delete-warning": {
+    "defaultMessage": "Gardez à l'esprit que vous ne pourrez pas récupérer les cartes mentales que vous avez créées. Toutes vos informations seront supprimées et ne pourront pas être restaurées."
+  },
+  "accountinfo.button": {
+    "defaultMessage": "J'accepte"
+  },
+  "accountinfo.email": {
+    "defaultMessage": "E-mail"
+  },
+  "accountinfo.firstname": {
+    "defaultMessage": "Prénom"
+  },
+  "accountinfo.lastname": {
+    "defaultMessage": "Nom de famille"
+  },
+  "registration.page-title": {
+    "defaultMessage": "Inscription | WiseMapping"
+  },
+  "accountinfo.title": {
+    "defaultMessage": "Informations de compte"
+  },
+  "action.cancel-button": {
+    "defaultMessage": "Annuler"
+  },
+  "action.close-button": {
+    "defaultMessage": "Fermer"
+  },
+  "action.delete": {
+    "defaultMessage": "Supprimer"
+  },
+  "action.delete-description": {
+    "defaultMessage": "La carte mentale supprimée ne peut pas être récupérée. Voulez-vous continuer ?"
+  },
+  "action.delete-title": {
+    "defaultMessage": "Supprimer"
+  },
+  "action.duplicate": {
+    "defaultMessage": "Dupliquer"
+  },
+  "action.export": {
+    "defaultMessage": "Exporter"
+  },
+  "action.history": {
+    "defaultMessage": "Historique"
+  },
+  "action.history-description": {
+    "defaultMessage": "Liste des modifications introduites au cours des 90 derniers jours."
+  },
+  "action.history-title": {
+    "defaultMessage": "Historique des versions"
+  },
+  "action.import": {
+    "defaultMessage": "Importer"
+  },
+  "action.info": {
+    "defaultMessage": "Informations"
+  },
+  "action.label": {
+    "defaultMessage": "Ajouter une étiquette"
+  },
+  "action.new": {
+    "defaultMessage": "Nouvelle carte"
+  },
+  "action.open": {
+    "defaultMessage": "Ouvrir"
+  },
+  "action.print": {
+    "defaultMessage": "Imprimer"
+  },
+  "action.publish": {
+    "defaultMessage": "Publier"
+  },
+  "action.rename": {
+    "defaultMessage": "Renommer"
+  },
+  "action.rename-description-placeholder": {
+    "defaultMessage": "Description"
+  },
+  "action.rename-name-placeholder": {
+    "defaultMessage": "Nom"
+  },
+  "action.share": {
+    "defaultMessage": "Partager"
+  },
+  "changepwd.button": {
+    "defaultMessage": "Changer"
+  },
+  "changepwd.confirm-password": {
+    "defaultMessage": "Confirmez le mot de passe"
+  },
+  "changepwd.description": {
+    "defaultMessage": "Veuillez fournir le nouveau mot de passe de votre compte."
+  },
+  "changepwd.password": {
+    "defaultMessage": "Mot de passe"
+  },
+  "changepwd.password-match": {
+    "defaultMessage": "Le mot de passe ne correspond pas. Veuillez réessayer."
+  },
+  "changepwd.title": {
+    "defaultMessage": "Changer le mot de passe"
+  },
+  "common.wait": {
+    "defaultMessage": "S'il vous plaît, attendez ..."
+  },
+  "create.button": {
+    "defaultMessage": "Créer"
+  },
+  "create.description": {
+    "defaultMessage": "Veuillez remplir le nouveau nom et la description de la carte."
+  },
+  "create.title": {
+    "defaultMessage": "Créer une nouvelle carte mentale."
+  },
+  "deletem.title": {
+    "defaultMessage": "Toutes les cartes sélectionnées seront supprimées"
+  },
+  "duplicate.copy-prefix": {
+    "defaultMessage": "Copie de "
+  },
+  "duplicate.title": {
+    "defaultMessage": "Dupliquer"
+  },
+  "expired.description": {
+    "defaultMessage": "Votre session actuelle a expiré. Veuillez vous connecter et réessayer."
+  },
+  "expired.title": {
+    "defaultMessage": "Votre session a expiré"
+  },
+  "export.desc": {
+    "defaultMessage": "Exportez cette carte dans le format que vous souhaitez et commencez à l'utiliser dans vos présentations ou à partager par e-mail"
+  },
+  "export.document": {
+    "defaultMessage": "Outils Mindmap : exportez votre carte mentale dans des formats d'outils de carte mentale tiers"
+  },
+  "export.document-label": {
+    "defaultMessage": "Document : exportez votre carte mentale dans un document autonome prêt à être partagé"
+  },
+  "export.image": {
+    "defaultMessage": "Image : obtenez une représentation graphique de votre carte, y compris toutes les couleurs et toutes les formes."
+  },
+  "export.title": {
+    "defaultMessage": "Exportation"
+  },
+  "export.warning": {
+    "defaultMessage": "L'exportation vers une image (SVG,PNG,JPEG,PDF) n'est disponible que dans la barre d'outils de l'éditeur."
+  },
+  "footer.aboutus": {
+    "defaultMessage": "À propos de nous"
+  },
+  "footer.contactus": {
+    "defaultMessage": "Nous contacter"
+  },
+  "footer.faq": {
+    "defaultMessage": "FAQ."
+  },
+  "footer.faqandhelp": {
+    "defaultMessage": "Aide et FAQ"
+  },
+  "footer.feedback": {
+    "defaultMessage": "Retour"
+  },
+  "footer.opensource": {
+    "defaultMessage": "Open source"
+  },
+  "footer.others": {
+    "defaultMessage": "Autres"
+  },
+  "footer.termsandconditions": {
+    "defaultMessage": "Termes et conditions"
+  },
+  "forgot.desc": {
+    "defaultMessage": "Nous vous enverrons un e-mail pour réinitialiser votre mot de passe."
+  },
+  "forgot.email": {
+    "defaultMessage": "E-mail"
+  },
+  "forgot.page-title": {
+    "defaultMessage": "Mot de passe oublié | WiseMapping"
+  },
+  "forgot.register": {
+    "defaultMessage": "Envoyer le lien de récupération"
+  },
+  "forgot.success.desc": {
+    "defaultMessage": "Nous vous avons envoyé un e-mail qui vous permettra de réinitialiser votre mot de passe. Vous devriez le recevoir dans les prochaines minutes."
+  },
+  "forgot.success.title": {
+    "defaultMessage": "Votre mot de passe temporaire a été envoyé."
+  },
+  "forgot.title": {
+    "defaultMessage": "réinitialisez votre mot de passe"
+  },
+  "forgotsuccess.page-title": {
+    "defaultMessage": "Mot de passe récupéré | WiseMapping"
+  },
+  "header.donthaveaccount": {
+    "defaultMessage": "Vous n'avez pas de compte ?"
+  },
+  "header.haveaccount": {
+    "defaultMessage": "Vous avez déjà un compte ?"
+  },
+  "help.support": {
+    "defaultMessage": "Soutien"
+  },
+  "history.no-changes": {
+    "defaultMessage": "Il n'y a pas de modifications disponibles"
+  },
+  "import.button": {
+    "defaultMessage": "Créer"
+  },
+  "import.description": {
+    "defaultMessage": "Vous pouvez importer des cartes WiseMapping, FreeMind, Freeplane, XMind, MindManager et OPML dans votre liste de cartes. Sélectionnez le fichier que vous souhaitez importer."
+  },
+  "import.title": {
+    "defaultMessage": "Importer une carte mentale existante"
+  },
+  "import.error-file": {
+    "defaultMessage": "Échec de l'importation : {error}"
+  },
+  "info.basic-info": {
+    "defaultMessage": "Informations de base"
+  },
+  "info.button": {
+    "defaultMessage": "J'accepte"
+  },
+  "info.creation-time": {
+    "defaultMessage": "Date de création"
+  },
+  "info.creator": {
+    "defaultMessage": "Créateur"
+  },
+  "info.description": {
+    "defaultMessage": "Description"
+  },
+  "info.description-msg": {
+    "defaultMessage": "En publiant la carte, vous la rendez visible par tous sur Internet."
+  },
+  "info.modified-time": {
+    "defaultMessage": "Date de la dernière modification"
+  },
+  "info.modified-tny": {
+    "defaultMessage": "Dernière modification par"
+  },
+  "info.name": {
+    "defaultMessage": "Nom"
+  },
+  "info.public-visibility": {
+    "defaultMessage": "Visible publiquement"
+  },
+  "info.sharing": {
+    "defaultMessage": "Partage"
+  },
+  "info.starred": {
+    "defaultMessage": "Favoris"
+  },
+  "info.title": {
+    "defaultMessage": "Info"
+  },
+  "language.change": {
+    "defaultMessage": "Changer de langue"
+  },
+  "language.help": {
+    "defaultMessage": "Aide à la traduction"
+  },
+  "login.desc": {
+    "defaultMessage": "Connectez-vous à votre compte"
+  },
+  "login.email": {
+    "defaultMessage": "E-mail"
+  },
+  "login.error": {
+    "defaultMessage": "L'adresse e-mail ou le mot de passe que vous avez entré n'est pas valide."
+  },
+  "login.forgotpwd": {
+    "defaultMessage": "Mot de passe oublié ?"
+  },
+  "login.page-title": {
+    "defaultMessage": "Connexion | WiseMapping"
+  },
+  "login.password": {
+    "defaultMessage": "Mot de passe"
+  },
+  "login.remberme": {
+    "defaultMessage": "Souviens-toi de moi"
+  },
+  "login.signin": {
+    "defaultMessage": "S'identifier"
+  },
+  "login.signup": {
+    "defaultMessage": "S'inscrire"
+  },
+  "login.title": {
+    "defaultMessage": "Bienvenue"
+  },
+  "login.shared-map-notice": {
+    "defaultMessage": "Une carte mentale a été partagée avec vous. Veuillez vous connecter pour y accéder. Vous n'avez pas de compte ? Inscrivez-vous gratuitement ou utilisez votre compte Google/Facebook."
+  },
+  "map.creator": {
+    "defaultMessage": "Créateur"
+  },
+  "map.delete-selected": {
+    "defaultMessage": "Supprimer sélectionnée"
+  },
+  "map.last-update": {
+    "defaultMessage": "Dernière mise à jour"
+  },
+  "map.more-actions": {
+    "defaultMessage": "Plus d'actions"
+  },
+  "map.name": {
+    "defaultMessage": "Nom"
+  },
+  "map.tooltip-add": {
+    "defaultMessage": "Ajouter une étiquette à la sélection"
+  },
+  "maps.choose-file": {
+    "defaultMessage": "Choisissez un fichier"
+  },
+  "maps.copilot-button": {
+    "defaultMessage": "Copilote IA"
+  },
+  "maps.copilot-tooltip": {
+    "defaultMessage": "Lancer une carte mentale avec le Copilote IA"
+  },
+  "maps.copilot-dialog.title": {
+    "defaultMessage": "Copilote Mindmap propulsé par ChatGPT"
+  },
+  "maps.copilot-dialog.description": {
+    "defaultMessage": "Mind Map Copilot est un assistant de brainstorming propulsé par ChatGPT qui transforme vos requêtes en cartes mentales structurées. Nous l'ouvrirons dans un nouvel onglet pour que vous puissiez développer vos idées, générer des sujets et rapporter le meilleur dans WiseMapping."
+  },
+  "maps.untitled": {
+    "defaultMessage": "Sans titre"
+  },
+  "maps.copilot-dialog.continue": {
+    "defaultMessage": "Ouvrir le Copilote"
+  },
+  "maps.create-tooltip": {
+    "defaultMessage": "Créer une nouvelle carte mentale"
+  },
+  "maps.empty-result": {
+    "defaultMessage": "Aucun enregistrement correspondant trouvé avec les critères de filtre actuels."
+  },
+  "maps.import-desc": {
+    "defaultMessage": "Importer depuis d'autres outils"
+  },
+  "maps.modified": {
+    "defaultMessage": "Modifié"
+  },
+  "maps.modified-by": {
+    "defaultMessage": "Modifié par"
+  },
+  "maps.modified-by-desc": {
+    "defaultMessage": "Modifié par {by} sur {on}"
+  },
+  "maps.nav-all": {
+    "defaultMessage": "Tout"
+  },
+  "maps.nav-onwned": {
+    "defaultMessage": "Possédé"
+  },
+  "maps.nav-public": {
+    "defaultMessage": "Publique"
+  },
+  "maps.nav-shared": {
+    "defaultMessage": "Partagé avec moi"
+  },
+  "maps.nav-starred": {
+    "defaultMessage": "Favoris"
+  },
+  "maps.page-title": {
+    "defaultMessage": "Mes cartes | WiseMapping"
+  },
+  "maps.revert": {
+    "defaultMessage": "Revenir"
+  },
+  "maps.search-action": {
+    "defaultMessage": "Chercher ..."
+  },
+  "maps.tooltip-open": {
+    "defaultMessage": "Ouvrir pour l'édition"
+  },
+  "maps.tooltip-starred": {
+    "defaultMessage": "Favoris"
+  },
+  "maps.view": {
+    "defaultMessage": "Voir"
+  },
+  "menu.account": {
+    "defaultMessage": "Compte"
+  },
+  "menu.change-password": {
+    "defaultMessage": "Changer le mot de passe"
+  },
+  "menu.signout": {
+    "defaultMessage": "Se déconnecter"
+  },
+  "publish.button": {
+    "defaultMessage": "J'accepte"
+  },
+  "publish.checkbox": {
+    "defaultMessage": "Activer le partage public"
+  },
+  "publish.copied": {
+    "defaultMessage": "Copié dans le presse-papiers !"
+  },
+  "publish.description": {
+    "defaultMessage": "Rendez votre carte publique. Toute personne ayant le lien peut la voir."
+  },
+  "publish.embedded": {
+    "defaultMessage": "Embarqué"
+  },
+  "publish.embedded-msg": {
+    "defaultMessage": "Cliquez sur le code pour le copier dans le presse-papiers :"
+  },
+  "publish.public-url": {
+    "defaultMessage": "URL publique"
+  },
+  "publish.public-url-msg": {
+    "defaultMessage": "Cliquez sur le lien pour le copier dans le presse-papiers :"
+  },
+  "publish.title": {
+    "defaultMessage": "Publier"
+  },
+  "registation.success-title": {
+    "defaultMessage": "Inscription réussie | WiseMapping"
+  },
+  "registration.desc": {
+    "defaultMessage": "L'inscription est gratuite et ne prends qu'un instant"
+  },
+  "registration.email": {
+    "defaultMessage": "E-mail"
+  },
+  "registration.firstname": {
+    "defaultMessage": "Prénom"
+  },
+  "registration.lastname": {
+    "defaultMessage": "Nom de famille"
+  },
+  "registration.password": {
+    "defaultMessage": "Mot de passe"
+  },
+  "registration.register": {
+    "defaultMessage": "S'inscrire"
+  },
+  "registration.success.desc": {
+    "defaultMessage": "Cliquez sur le bouton \"Connexion\" ci-dessous et commencez à créer des cartes mentales."
+  },
+  "registration.termandconditions": {
+    "defaultMessage": "Conditions d'utilisation : veuillez vérifier les informations de compte WiseMapping que vous avez saisies ci-dessus et consulter les conditions d'utilisation ici. En cliquant sur \"S'inscrire\" ci-dessous, vous acceptez les conditions d'utilisation ci-dessus et la politique de confidentialité"
+  },
+  "registration.title": {
+    "defaultMessage": "Devenir membre"
+  },
+  "rename.description": {
+    "defaultMessage": "Veuillez remplir le nouveau nom et la description de la carte."
+  },
+  "rename.title": {
+    "defaultMessage": "Renommer"
+  },
+  "resetpassword.success.title": {
+    "defaultMessage": "Votre compte a été créé avec succès"
+  },
+  "role.editor": {
+    "defaultMessage": "Éditeur"
+  },
+  "role.owner": {
+    "defaultMessage": "Propriétaire"
+  },
+  "role.viewer": {
+    "defaultMessage": "Visualiseur"
+  },
+  "share.add-button": {
+    "defaultMessage": "Partager"
+  },
+  "share.adding-button": {
+    "defaultMessage": "Partage en cours..."
+  },
+  "share.add-message": {
+    "defaultMessage": "Ajouter un message"
+  },
+  "share.can-edit": {
+    "defaultMessage": "Peut éditer"
+  },
+  "share.can-view": {
+    "defaultMessage": "Peut voir"
+  },
+  "share.delete": {
+    "defaultMessage": "Supprimer un collaborateur"
+  },
+  "share.delete-description": {
+    "defaultMessage": "Ajoutez des collaborateurs. Ils recevront un accès instantané par email pour éditer ensemble."
+  },
+  "share.delete-title": {
+    "defaultMessage": "Partager avec les gens"
+  },
+  "share.message": {
+    "defaultMessage": "Message"
+  },
+  "accountinfo.deleteaccount": {
+    "defaultMessage": "Supprimer le compte"
+  },
+  "label.add-button": {
+    "defaultMessage": "Ajouter une étiquette"
+  },
+  "label.add-for": {
+    "defaultMessage": "Modification des étiquettes pour les cartes :"
+  },
+  "label.add-placeholder": {
+    "defaultMessage": "Titre de l'étiquette"
+  },
+  "label.change-color": {
+    "defaultMessage": "Changer la couleur de l'étiquette"
+  },
+  "label.delete-description": {
+    "defaultMessage": "sera supprimé, y compris ses associations à toutes les cartes existantes. Voulez-vous continuer ?"
+  },
+  "label.delete-title": {
+    "defaultMessage": "Confirmer la suppression de l'étiquette"
+  },
+  "label.description": {
+    "defaultMessage": "Utilisez des étiquettes pour organiser vos cartes."
+  },
+  "label.title": {
+    "defaultMessage": "Ajouter une étiquette"
+  },
+  "footer.donations": {
+    "defaultMessage": "Des dons"
+  },
+  "footer.support": {
+    "defaultMessage": "Service"
+  },
+  "footer.team": {
+    "defaultMessage": "Equipe"
+  },
+  "dialog.loading": {
+    "defaultMessage": "Chargement ..."
+  },
+  "registration.google.button": {
+    "defaultMessage": "S'inscrire avec Google"
+  },
+  "login.google.button": {
+    "defaultMessage": "Connectez-vous avec Google"
+  },
+  "registration.division": {
+    "defaultMessage": "ou"
+  },
+  "registration.error.title": {
+    "defaultMessage": "Échec de l'inscription"
+  },
+  "login.division": {
+    "defaultMessage": "ou"
+  },
+  "registration.callback.confirm.title": {
+    "defaultMessage": "Confirmer"
+  },
+  "registration.callback.waiting.title": {
+    "defaultMessage": "Finition ..."
+  },
+  "registration.callback.confirm.description": {
+    "defaultMessage": "Un compte avec le même e-mail a déjà été enregistré. Voulez-vous lier votre compte {provider} à ce compte WiseMapping ?"
+  },
+  "registration.callback.waiting.description": {
+    "defaultMessage": "Veuillez patienter pendant que nous validons votre identité"
+  },
+  "registation.callback.error.message": {
+    "defaultMessage": "Une erreur s'est produite lors de la validation de votre identité, vous pouvez réessayer depuis la page de connexion"
+  },
+  "registration.callback.back": {
+    "defaultMessage": "Retour connexion"
+  },
+  "registration.callback.sync": {
+    "defaultMessage": "Compte de synchronisation"
+  },
+  "forgot.oauth.message": {
+    "defaultMessage": "Vous n'avez pas besoin de mot de passe, veuillez vous connecter en utilisant Facebook ou Google"
+  },
+  "forgot.oauth.back": {
+    "defaultMessage": "Retour connexion"
+  },
+  "theme.dark": {
+    "defaultMessage": "Sombre"
+  },
+  "theme.light": {
+    "defaultMessage": "Clair"
+  },
+  "theme.toggle": {
+    "defaultMessage": "Changer le Thème"
+  },
+  "admin.delete-user": {
+    "defaultMessage": "Supprimer l'utilisateur"
+  },
+  "common.maps-list": {
+    "defaultMessage": "Liste des cartes"
+  },
+  "admin.status-clean": {
+    "defaultMessage": "Nettoyer"
+  },
+  "common.allow-email-notifications": {
+    "defaultMessage": "Autoriser les notifications par email"
+  },
+  "admin.public": {
+    "defaultMessage": "Public"
+  },
+  "common.others": {
+    "defaultMessage": "Autres"
+  },
+  "admin.view-xml": {
+    "defaultMessage": "Afficher XML"
+  },
+  "export.img-center": {
+    "defaultMessage": "Centrer et ajuster le zoom"
+  },
+  "registration.facebook.button": {
+    "defaultMessage": "S'inscrire avec Facebook"
+  },
+  "common.registration-form": {
+    "defaultMessage": "Formulaire d'inscription"
+  },
+  "common.first-name": {
+    "defaultMessage": "Prénom"
+  },
+  "admin.auth-type": {
+    "defaultMessage": "Type d'authentification"
+  },
+  "common.delete": {
+    "defaultMessage": "Supprimer"
+  },
+  "admin.status": {
+    "defaultMessage": "Statut"
+  },
+  "admin.suspend-user": {
+    "defaultMessage": "Suspendre l'utilisateur"
+  },
+  "admin.suspension-status": {
+    "defaultMessage": "Statut de suspension"
+  },
+  "admin.edit-user": {
+    "defaultMessage": "Modifier l'utilisateur"
+  },
+  "admin.refresh": {
+    "defaultMessage": "Actualiser"
+  },
+  "common.login-form": {
+    "defaultMessage": "Formulaire de connexion"
+  },
+  "admin.lock-status": {
+    "defaultMessage": "Statut de verrouillage"
+  },
+  "common.emails": {
+    "defaultMessage": "E-mails"
+  },
+  "admin.suspension-reason": {
+    "defaultMessage": "Raison de la suspension"
+  },
+  "admin.suspension.abuse": {
+    "defaultMessage": "Abus"
+  },
+  "admin.suspension.terms-violation": {
+    "defaultMessage": "Violation des conditions"
+  },
+  "admin.suspension.security-concern": {
+    "defaultMessage": "Préoccupation de sécurité"
+  },
+  "admin.suspension.manual-review": {
+    "defaultMessage": "Examen manuel"
+  },
+  "admin.suspension.inactivity": {
+    "defaultMessage": "Inactivité"
+  },
+  "admin.suspension.other": {
+    "defaultMessage": "Autre"
+  },
+  "admin.status-suspended": {
+    "defaultMessage": "Suspendu"
+  },
+  "label.maps-count": {
+    "defaultMessage": "{count} cartes"
+  },
+  "admin.delete": {
+    "defaultMessage": "Supprimer"
+  },
+  "common.last-name": {
+    "defaultMessage": "Nom"
+  },
+  "admin.public-access": {
+    "defaultMessage": "Accès public"
+  },
+  "admin.status-active": {
+    "defaultMessage": "Actif"
+  },
+  "admin.status-inactive": {
+    "defaultMessage": "Inactif"
+  },
+  "common.locale": {
+    "defaultMessage": "Langue"
+  },
+  "login.facebook.button": {
+    "defaultMessage": "Se connecter avec Facebook"
+  },
+  "common.email": {
+    "defaultMessage": "E-mail"
+  },
+  "admin.unsuspend-user": {
+    "defaultMessage": "Réactiver l'utilisateur"
+  },
+  "common.delete-tag": {
+    "defaultMessage": "Supprimer le tag"
+  },
+  "admin.edit": {
+    "defaultMessage": "Modifier"
+  },
+  "common.open-drawer": {
+    "defaultMessage": "Ouvrir le menu"
+  },
+  "admin.locked": {
+    "defaultMessage": "Verrouillé"
+  },
+  "common.settings": {
+    "defaultMessage": "Paramètres"
+  },
+  "common.loading": {
+    "defaultMessage": "Chargement..."
+  },
+  "common.retry": {
+    "defaultMessage": "Réessayer"
+  },
+  "admin.system.title": {
+    "defaultMessage": "Informations Système"
+  },
+  "admin.system.refresh": {
+    "defaultMessage": "Actualiser"
+  },
+  "common.refresh": {
+    "defaultMessage": "Actualiser"
+  },
+  "admin.system.memory": {
+    "defaultMessage": "Mémoire"
+  },
+  "admin.system.db.url": {
+    "defaultMessage": "URL"
+  },
+  "admin.system.jvm": {
+    "defaultMessage": "JVM"
+  },
+  "error.page-title": {
+    "defaultMessage": "Erreur inattendue | WiseMapping"
+  },
+  "error.generic-title": {
+    "defaultMessage": "Nous avons rencontré un problème."
+  },
+  "error.generic-message": {
+    "defaultMessage": "Veuillez réessayer plus tard ou contacter le support si le problème persiste."
+  },
+  "error.permission-denied-title": {
+    "defaultMessage": "Vous n'avez pas accès à cette page."
+  },
+  "error.permission-denied-message": {
+    "defaultMessage": "Si vous pensez devoir y avoir accès, veuillez contacter votre administrateur."
+  },
+  "error.not-found-title": {
+    "defaultMessage": "Nous ne trouvons pas cette page."
+  },
+  "error.not-found-message": {
+    "defaultMessage": "La page que vous recherchez a peut-être été supprimée, renommée ou est temporairement indisponible."
+  },
+  "error.map-unavailable-title": {
+    "defaultMessage": "Cette carte mentale n'est pas disponible pour un affichage public."
+  },
+  "error.map-unavailable-message": {
+    "defaultMessage": "Cette carte mentale n'est pas disponible pour un affichage public car elle viole nos politiques du site. Si vous avez besoin d'aide supplémentaire, contactez support@wisemapping.com."
+  },
+  "error.map-title-required": {
+    "defaultMessage": "Le titre de la carte est requis et ne peut pas être vide"
+  },
+  "error.security-error": {
+    "defaultMessage": "La carte mentale ne peut pas être ouverte."
+  },
+  "error.undexpected-error-msg": {
+    "defaultMessage": "Erreur inattendue lors de l'ouverture de la carte mentale. Veuillez réessayer plus tard."
+  },
+  "accountinfo.personal-details": {
+    "defaultMessage": "Détails Personnels"
+  },
+  "account.delete-warning-title": {
+    "defaultMessage": "Supprimer le Compte"
+  },
+  "account.delete-warning-description": {
+    "defaultMessage": "Une fois que vous supprimez votre compte, il n'y a pas de retour en arrière. Veuillez être certain."
+  },
+  "account.delete-warning-consequences": {
+    "defaultMessage": "Cela supprimera définitivement :"
+  },
+  "account.delete-warning-mindmaps": {
+    "defaultMessage": "Toutes vos cartes mentales et leur contenu"
+  },
+  "account.delete-warning-data": {
+    "defaultMessage": "Toutes vos données personnelles et informations de compte"
+  },
+  "account.delete-warning-collaborations": {
+    "defaultMessage": "Toutes les cartes mentales partagées et collaborations"
+  },
+  "account.delete-warning-history": {
+    "defaultMessage": "Tout l'historique du compte et les journaux d'activité"
+  },
+  "account.delete-confirmation-title": {
+    "defaultMessage": "Êtes-vous absolument sûr ?"
+  },
+  "account.delete-confirmation-warning": {
+    "defaultMessage": "Cette action ne peut pas être annulée. Cela supprimera définitivement votre compte et supprimera toutes les données de nos serveurs."
+  },
+  "account.delete-confirmation-instruction": {
+    "defaultMessage": "Veuillez taper SUPPRIMER MON COMPTE pour confirmer :"
+  },
+  "account.delete-confirm": {
+    "defaultMessage": "Supprimer le Compte"
+  },
+  "menu.admin-console": {
+    "defaultMessage": "Console d'Administration"
+  },
+  "registration.form-legend": {
+    "defaultMessage": "Informations du Compte"
+  },
+  "admin.change-password": {
+    "defaultMessage": "Change password"
+  },
+  "admin.change-password-title": {
+    "defaultMessage": "Change Password"
+  },
+  "admin.change-password-description": {
+    "defaultMessage": "Change password for user: {email}"
+  },
+  "admin.new-password": {
+    "defaultMessage": "New Password"
+  },
+  "admin.confirm-password": {
+    "defaultMessage": "Confirm Password"
+  },
+  "admin.change-password-button": {
+    "defaultMessage": "Change Password"
+  },
+  "admin.password-error-length": {
+    "defaultMessage": "Password must be at least 6 characters"
+  },
+  "admin.password-error-mismatch": {
+    "defaultMessage": "Passwords do not match"
+  },
+  "admin.password-error-failed": {
+    "defaultMessage": "Failed to change password"
+  },
+  "admin.password-error-google": {
+    "defaultMessage": "This user is authenticated via Google. Password changes are not available for Google accounts. Please ask the user to manage their password through their Google account."
+  },
+  "admin.password-error-facebook": {
+    "defaultMessage": "This user is authenticated via Facebook. Password changes are not available for Facebook accounts. Please ask the user to manage their password through their Facebook account."
+  },
+  "admin.close": {
+    "defaultMessage": "Close"
+  },
+  "validation.title-required": {
+    "defaultMessage": "Le titre est requis"
+  }
+}

@@ -1,0 +1,1756 @@
+{
+  "account.delete-confirm": [
+    {
+      "type": 0,
+      "value": "Delete Account"
+    }
+  ],
+  "account.delete-confirmation-instruction": [
+    {
+      "type": 0,
+      "value": "Please type DELETE MY ACCOUNT to confirm:"
+    }
+  ],
+  "account.delete-confirmation-title": [
+    {
+      "type": 0,
+      "value": "Are you absolutely sure?"
+    }
+  ],
+  "account.delete-confirmation-warning": [
+    {
+      "type": 0,
+      "value": "This action cannot be undone. This will permanently delete your account and remove all data from our servers."
+    }
+  ],
+  "account.delete-warning": [
+    {
+      "type": 0,
+      "value": "请记住，您将无法检索您添加的任何思维导图。您的所有信息将被删除且无法恢复。"
+    }
+  ],
+  "account.delete-warning-collaborations": [
+    {
+      "type": 0,
+      "value": "All shared mindmaps and collaborations"
+    }
+  ],
+  "account.delete-warning-consequences": [
+    {
+      "type": 0,
+      "value": "This will permanently delete:"
+    }
+  ],
+  "account.delete-warning-data": [
+    {
+      "type": 0,
+      "value": "All your personal data and account information"
+    }
+  ],
+  "account.delete-warning-description": [
+    {
+      "type": 0,
+      "value": "Once you delete your account, there is no going back. Please be certain."
+    }
+  ],
+  "account.delete-warning-history": [
+    {
+      "type": 0,
+      "value": "All account history and activity logs"
+    }
+  ],
+  "account.delete-warning-mindmaps": [
+    {
+      "type": 0,
+      "value": "All your mindmaps and their content"
+    }
+  ],
+  "account.delete-warning-title": [
+    {
+      "type": 0,
+      "value": "Delete Account"
+    }
+  ],
+  "accountinfo.button": [
+    {
+      "type": 0,
+      "value": "接受"
+    }
+  ],
+  "accountinfo.deleteaccount": [
+    {
+      "type": 0,
+      "value": "删除账户"
+    }
+  ],
+  "accountinfo.email": [
+    {
+      "type": 0,
+      "value": "电子邮件"
+    }
+  ],
+  "accountinfo.firstname": [
+    {
+      "type": 0,
+      "value": "名字"
+    }
+  ],
+  "accountinfo.lastname": [
+    {
+      "type": 0,
+      "value": "姓氏"
+    }
+  ],
+  "accountinfo.personal-details": [
+    {
+      "type": 0,
+      "value": "Personal Details"
+    }
+  ],
+  "accountinfo.title": [
+    {
+      "type": 0,
+      "value": "账户信息"
+    }
+  ],
+  "action.cancel-button": [
+    {
+      "type": 0,
+      "value": "取消"
+    }
+  ],
+  "action.close-button": [
+    {
+      "type": 0,
+      "value": "关闭"
+    }
+  ],
+  "action.delete": [
+    {
+      "type": 0,
+      "value": "删除"
+    }
+  ],
+  "action.delete-description": [
+    {
+      "type": 0,
+      "value": "已删除的思维导图无法恢复。您要继续吗？"
+    }
+  ],
+  "action.delete-title": [
+    {
+      "type": 0,
+      "value": "删除"
+    }
+  ],
+  "action.duplicate": [
+    {
+      "type": 0,
+      "value": "复制"
+    }
+  ],
+  "action.export": [
+    {
+      "type": 0,
+      "value": "导出"
+    }
+  ],
+  "action.history": [
+    {
+      "type": 0,
+      "value": "历史"
+    }
+  ],
+  "action.history-description": [
+    {
+      "type": 0,
+      "value": "过去90天内引入的更改列表。"
+    }
+  ],
+  "action.history-title": [
+    {
+      "type": 0,
+      "value": "版本历史"
+    }
+  ],
+  "action.import": [
+    {
+      "type": 0,
+      "value": "导入"
+    }
+  ],
+  "action.info": [
+    {
+      "type": 0,
+      "value": "信息"
+    }
+  ],
+  "action.label": [
+    {
+      "type": 0,
+      "value": "添加标签"
+    }
+  ],
+  "action.new": [
+    {
+      "type": 0,
+      "value": "新地图"
+    }
+  ],
+  "action.open": [
+    {
+      "type": 0,
+      "value": "打开"
+    }
+  ],
+  "action.print": [
+    {
+      "type": 0,
+      "value": "打印"
+    }
+  ],
+  "action.publish": [
+    {
+      "type": 0,
+      "value": "发布"
+    }
+  ],
+  "action.rename": [
+    {
+      "type": 0,
+      "value": "重命名"
+    }
+  ],
+  "action.rename-description-placeholder": [
+    {
+      "type": 0,
+      "value": "描述"
+    }
+  ],
+  "action.rename-name-placeholder": [
+    {
+      "type": 0,
+      "value": "名称"
+    }
+  ],
+  "action.share": [
+    {
+      "type": 0,
+      "value": "分享"
+    }
+  ],
+  "admin.auth-type": [
+    {
+      "type": 0,
+      "value": "认证类型"
+    }
+  ],
+  "admin.change-password": [
+    {
+      "type": 0,
+      "value": "Change password"
+    }
+  ],
+  "admin.change-password-button": [
+    {
+      "type": 0,
+      "value": "Change Password"
+    }
+  ],
+  "admin.change-password-description": [
+    {
+      "type": 0,
+      "value": "Change password for user: "
+    },
+    {
+      "type": 1,
+      "value": "email"
+    }
+  ],
+  "admin.change-password-title": [
+    {
+      "type": 0,
+      "value": "Change Password"
+    }
+  ],
+  "admin.close": [
+    {
+      "type": 0,
+      "value": "Close"
+    }
+  ],
+  "admin.confirm-password": [
+    {
+      "type": 0,
+      "value": "Confirm Password"
+    }
+  ],
+  "admin.delete": [
+    {
+      "type": 0,
+      "value": "删除"
+    }
+  ],
+  "admin.delete-user": [
+    {
+      "type": 0,
+      "value": "删除用户"
+    }
+  ],
+  "admin.edit": [
+    {
+      "type": 0,
+      "value": "编辑"
+    }
+  ],
+  "admin.edit-user": [
+    {
+      "type": 0,
+      "value": "编辑用户"
+    }
+  ],
+  "admin.lock-status": [
+    {
+      "type": 0,
+      "value": "锁定状态"
+    }
+  ],
+  "admin.locked": [
+    {
+      "type": 0,
+      "value": "已锁定"
+    }
+  ],
+  "admin.new-password": [
+    {
+      "type": 0,
+      "value": "New Password"
+    }
+  ],
+  "admin.password-error-facebook": [
+    {
+      "type": 0,
+      "value": "This user is authenticated via Facebook. Password changes are not available for Facebook accounts. Please ask the user to manage their password through their Facebook account."
+    }
+  ],
+  "admin.password-error-failed": [
+    {
+      "type": 0,
+      "value": "Failed to change password"
+    }
+  ],
+  "admin.password-error-google": [
+    {
+      "type": 0,
+      "value": "This user is authenticated via Google. Password changes are not available for Google accounts. Please ask the user to manage their password through their Google account."
+    }
+  ],
+  "admin.password-error-length": [
+    {
+      "type": 0,
+      "value": "Password must be at least 6 characters"
+    }
+  ],
+  "admin.password-error-mismatch": [
+    {
+      "type": 0,
+      "value": "Passwords do not match"
+    }
+  ],
+  "admin.public": [
+    {
+      "type": 0,
+      "value": "公开"
+    }
+  ],
+  "admin.public-access": [
+    {
+      "type": 0,
+      "value": "公开访问"
+    }
+  ],
+  "admin.refresh": [
+    {
+      "type": 0,
+      "value": "刷新"
+    }
+  ],
+  "admin.status": [
+    {
+      "type": 0,
+      "value": "状态"
+    }
+  ],
+  "admin.status-active": [
+    {
+      "type": 0,
+      "value": "活跃"
+    }
+  ],
+  "admin.status-clean": [
+    {
+      "type": 0,
+      "value": "清除"
+    }
+  ],
+  "admin.status-inactive": [
+    {
+      "type": 0,
+      "value": "不活跃"
+    }
+  ],
+  "admin.status-suspended": [
+    {
+      "type": 0,
+      "value": "已暂停"
+    }
+  ],
+  "admin.suspend-user": [
+    {
+      "type": 0,
+      "value": "暂停用户"
+    }
+  ],
+  "admin.suspension-reason": [
+    {
+      "type": 0,
+      "value": "暂停原因"
+    }
+  ],
+  "admin.suspension-status": [
+    {
+      "type": 0,
+      "value": "暂停状态"
+    }
+  ],
+  "admin.suspension.abuse": [
+    {
+      "type": 0,
+      "value": "滥用"
+    }
+  ],
+  "admin.suspension.inactivity": [
+    {
+      "type": 0,
+      "value": "不活跃"
+    }
+  ],
+  "admin.suspension.manual-review": [
+    {
+      "type": 0,
+      "value": "人工审核"
+    }
+  ],
+  "admin.suspension.other": [
+    {
+      "type": 0,
+      "value": "其他"
+    }
+  ],
+  "admin.suspension.security-concern": [
+    {
+      "type": 0,
+      "value": "安全问题"
+    }
+  ],
+  "admin.suspension.terms-violation": [
+    {
+      "type": 0,
+      "value": "违反条款"
+    }
+  ],
+  "admin.system.db.url": [
+    {
+      "type": 0,
+      "value": "URL"
+    }
+  ],
+  "admin.system.jvm": [
+    {
+      "type": 0,
+      "value": "JVM"
+    }
+  ],
+  "admin.system.memory": [
+    {
+      "type": 0,
+      "value": "内存"
+    }
+  ],
+  "admin.system.refresh": [
+    {
+      "type": 0,
+      "value": "刷新"
+    }
+  ],
+  "admin.system.title": [
+    {
+      "type": 0,
+      "value": "系统信息"
+    }
+  ],
+  "admin.unsuspend-user": [
+    {
+      "type": 0,
+      "value": "恢复用户"
+    }
+  ],
+  "admin.view-xml": [
+    {
+      "type": 0,
+      "value": "查看 XML"
+    }
+  ],
+  "changepwd.button": [
+    {
+      "type": 0,
+      "value": "更改"
+    }
+  ],
+  "changepwd.confirm-password": [
+    {
+      "type": 0,
+      "value": "确认密码"
+    }
+  ],
+  "changepwd.description": [
+    {
+      "type": 0,
+      "value": "请为您的账户提供新密码。"
+    }
+  ],
+  "changepwd.password": [
+    {
+      "type": 0,
+      "value": "密码"
+    }
+  ],
+  "changepwd.password-match": [
+    {
+      "type": 0,
+      "value": "密码不匹配。请重试。"
+    }
+  ],
+  "changepwd.title": [
+    {
+      "type": 0,
+      "value": "更改密码"
+    }
+  ],
+  "common.allow-email-notifications": [
+    {
+      "type": 0,
+      "value": "允许邮件通知"
+    }
+  ],
+  "common.delete": [
+    {
+      "type": 0,
+      "value": "删除"
+    }
+  ],
+  "common.delete-tag": [
+    {
+      "type": 0,
+      "value": "删除标签"
+    }
+  ],
+  "common.email": [
+    {
+      "type": 0,
+      "value": "电子邮件"
+    }
+  ],
+  "common.emails": [
+    {
+      "type": 0,
+      "value": "电子邮件"
+    }
+  ],
+  "common.first-name": [
+    {
+      "type": 0,
+      "value": "名"
+    }
+  ],
+  "common.last-name": [
+    {
+      "type": 0,
+      "value": "姓"
+    }
+  ],
+  "common.loading": [
+    {
+      "type": 0,
+      "value": "加载中..."
+    }
+  ],
+  "common.locale": [
+    {
+      "type": 0,
+      "value": "语言"
+    }
+  ],
+  "common.login-form": [
+    {
+      "type": 0,
+      "value": "登录表单"
+    }
+  ],
+  "common.maps-list": [
+    {
+      "type": 0,
+      "value": "地图列表"
+    }
+  ],
+  "common.open-drawer": [
+    {
+      "type": 0,
+      "value": "打开菜单"
+    }
+  ],
+  "common.others": [
+    {
+      "type": 0,
+      "value": "其他"
+    }
+  ],
+  "common.refresh": [
+    {
+      "type": 0,
+      "value": "刷新"
+    }
+  ],
+  "common.registration-form": [
+    {
+      "type": 0,
+      "value": "注册表单"
+    }
+  ],
+  "common.retry": [
+    {
+      "type": 0,
+      "value": "重试"
+    }
+  ],
+  "common.settings": [
+    {
+      "type": 0,
+      "value": "设置"
+    }
+  ],
+  "common.wait": [
+    {
+      "type": 0,
+      "value": "请稍候..."
+    }
+  ],
+  "create.button": [
+    {
+      "type": 0,
+      "value": "创建"
+    }
+  ],
+  "create.description": [
+    {
+      "type": 0,
+      "value": "请填写新地图名称和描述。"
+    }
+  ],
+  "create.title": [
+    {
+      "type": 0,
+      "value": "创建新的思维导图"
+    }
+  ],
+  "deletem.title": [
+    {
+      "type": 0,
+      "value": "所有选定的地图将被删除"
+    }
+  ],
+  "dialog.loading": [
+    {
+      "type": 0,
+      "value": "加载中..."
+    }
+  ],
+  "duplicate.copy-prefix": [
+    {
+      "type": 0,
+      "value": "的副本"
+    }
+  ],
+  "duplicate.title": [
+    {
+      "type": 0,
+      "value": "复制"
+    }
+  ],
+  "error.generic-message": [
+    {
+      "type": 0,
+      "value": "请稍后再试，若问题仍然存在，请联系技术支持。"
+    }
+  ],
+  "error.generic-title": [
+    {
+      "type": 0,
+      "value": "我们遇到了一个问题。"
+    }
+  ],
+  "error.map-title-required": [
+    {
+      "type": 0,
+      "value": "地图标题是必需的，不能为空"
+    }
+  ],
+  "error.map-unavailable-message": [
+    {
+      "type": 0,
+      "value": "此思维导图不提供公开显示，因为它违反了我们的网站政策。如果您需要进一步协助，请联系 support@wisemapping.com。"
+    }
+  ],
+  "error.map-unavailable-title": [
+    {
+      "type": 0,
+      "value": "此思维导图不提供公开显示。"
+    }
+  ],
+  "error.not-found-message": [
+    {
+      "type": 0,
+      "value": "您要访问的页面可能已被删除、重命名，或暂时不可用。"
+    }
+  ],
+  "error.not-found-title": [
+    {
+      "type": 0,
+      "value": "我们找不到该页面。"
+    }
+  ],
+  "error.page-title": [
+    {
+      "type": 0,
+      "value": "意外错误 | WiseMapping"
+    }
+  ],
+  "error.permission-denied-message": [
+    {
+      "type": 0,
+      "value": "如果您认为自己应该拥有访问权限，请联系管理员。"
+    }
+  ],
+  "error.permission-denied-title": [
+    {
+      "type": 0,
+      "value": "您没有访问此页面的权限。"
+    }
+  ],
+  "error.security-error": [
+    {
+      "type": 0,
+      "value": "Mindmap cannot be opened."
+    }
+  ],
+  "error.undexpected-error-msg": [
+    {
+      "type": 0,
+      "value": "Unexpected error opening mindmap. Please, try latter."
+    }
+  ],
+  "expired.description": [
+    {
+      "type": 0,
+      "value": "您当前的会话已过期。请登录并重试。"
+    }
+  ],
+  "expired.title": [
+    {
+      "type": 0,
+      "value": "您的会话已过期"
+    }
+  ],
+  "export.desc": [
+    {
+      "type": 0,
+      "value": "以您想要的格式导出此地图，并在演示文稿中开始使用或通过电子邮件分享"
+    }
+  ],
+  "export.document": [
+    {
+      "type": 0,
+      "value": "思维导图工具：以第三方思维导图工具格式导出您的思维导图"
+    }
+  ],
+  "export.document-label": [
+    {
+      "type": 0,
+      "value": "文档：将您的思维导图导出为可分享的自包含文档"
+    }
+  ],
+  "export.image": [
+    {
+      "type": 0,
+      "value": "图像：获取包含所有颜色和形状的地图图形表示。"
+    }
+  ],
+  "export.img-center": [
+    {
+      "type": 0,
+      "value": "居中并适合缩放"
+    }
+  ],
+  "export.title": [
+    {
+      "type": 0,
+      "value": "导出"
+    }
+  ],
+  "export.warning": [
+    {
+      "type": 0,
+      "value": "导出为图像（SVG、PNG、JPEG、PDF）仅在编辑器工具栏中可用。"
+    }
+  ],
+  "footer.aboutus": [
+    {
+      "type": 0,
+      "value": "关于我们"
+    }
+  ],
+  "footer.contactus": [
+    {
+      "type": 0,
+      "value": "联系我们"
+    }
+  ],
+  "footer.donations": [
+    {
+      "type": 0,
+      "value": "捐赠"
+    }
+  ],
+  "footer.faq": [
+    {
+      "type": 0,
+      "value": "常见问题"
+    }
+  ],
+  "footer.faqandhelp": [
+    {
+      "type": 0,
+      "value": "帮助和常见问题"
+    }
+  ],
+  "footer.feedback": [
+    {
+      "type": 0,
+      "value": "反馈"
+    }
+  ],
+  "footer.opensource": [
+    {
+      "type": 0,
+      "value": "开源"
+    }
+  ],
+  "footer.others": [
+    {
+      "type": 0,
+      "value": "其他"
+    }
+  ],
+  "footer.support": [
+    {
+      "type": 0,
+      "value": "支持"
+    }
+  ],
+  "footer.team": [
+    {
+      "type": 0,
+      "value": "我们的团队"
+    }
+  ],
+  "footer.termsandconditions": [
+    {
+      "type": 0,
+      "value": "条款和条件"
+    }
+  ],
+  "forgot.desc": [
+    {
+      "type": 0,
+      "value": "我们将向您发送一封电子邮件来重置您的密码。"
+    }
+  ],
+  "forgot.email": [
+    {
+      "type": 0,
+      "value": "电子邮件"
+    }
+  ],
+  "forgot.oauth.back": [
+    {
+      "type": 0,
+      "value": "返回登录"
+    }
+  ],
+  "forgot.oauth.message": [
+    {
+      "type": 0,
+      "value": "您不需要密码，请使用Facebook或Google登录。"
+    }
+  ],
+  "forgot.page-title": [
+    {
+      "type": 0,
+      "value": "忘记密码 | WiseMapping"
+    }
+  ],
+  "forgot.register": [
+    {
+      "type": 0,
+      "value": "发送恢复链接"
+    }
+  ],
+  "forgot.success.desc": [
+    {
+      "type": 0,
+      "value": "我们已向您发送一封电子邮件，允许您重置密码。您应该在接下来的几分钟内收到它。"
+    }
+  ],
+  "forgot.success.title": [
+    {
+      "type": 0,
+      "value": "您的临时密码已发送。"
+    }
+  ],
+  "forgot.title": [
+    {
+      "type": 0,
+      "value": "重置您的密码"
+    }
+  ],
+  "forgotsuccess.page-title": [
+    {
+      "type": 0,
+      "value": "密码已恢复 | WiseMapping"
+    }
+  ],
+  "header.donthaveaccount": [
+    {
+      "type": 0,
+      "value": "没有账户？"
+    }
+  ],
+  "header.haveaccount": [
+    {
+      "type": 0,
+      "value": "已有账户？"
+    }
+  ],
+  "help.support": [
+    {
+      "type": 0,
+      "value": "支持"
+    }
+  ],
+  "history.no-changes": [
+    {
+      "type": 0,
+      "value": "没有可用的更改"
+    }
+  ],
+  "import.button": [
+    {
+      "type": 0,
+      "value": "创建"
+    }
+  ],
+  "import.description": [
+    {
+      "type": 0,
+      "value": "您可以将WiseMapping、FreeMind、Freeplane、XMind、MindManager和OPML地图导入到您的地图列表中。选择您要导入的文件。"
+    }
+  ],
+  "import.error-file": [
+    {
+      "type": 0,
+      "value": "导入错误 "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    }
+  ],
+  "import.title": [
+    {
+      "type": 0,
+      "value": "导入现有思维导图"
+    }
+  ],
+  "info.basic-info": [
+    {
+      "type": 0,
+      "value": "基本信息"
+    }
+  ],
+  "info.button": [
+    {
+      "type": 0,
+      "value": "接受"
+    }
+  ],
+  "info.creation-time": [
+    {
+      "type": 0,
+      "value": "创建日期"
+    }
+  ],
+  "info.creator": [
+    {
+      "type": 0,
+      "value": "创建者"
+    }
+  ],
+  "info.description": [
+    {
+      "type": 0,
+      "value": "描述"
+    }
+  ],
+  "info.description-msg": [
+    {
+      "type": 0,
+      "value": "通过发布地图，您使其对互联网上的每个人都可见。"
+    }
+  ],
+  "info.modified-time": [
+    {
+      "type": 0,
+      "value": "最后修改日期"
+    }
+  ],
+  "info.modified-tny": [
+    {
+      "type": 0,
+      "value": "最后修改者"
+    }
+  ],
+  "info.name": [
+    {
+      "type": 0,
+      "value": "名称"
+    }
+  ],
+  "info.public-visibility": [
+    {
+      "type": 0,
+      "value": "公开可见"
+    }
+  ],
+  "info.sharing": [
+    {
+      "type": 0,
+      "value": "分享"
+    }
+  ],
+  "info.starred": [
+    {
+      "type": 0,
+      "value": "收藏"
+    }
+  ],
+  "info.title": [
+    {
+      "type": 0,
+      "value": "信息"
+    }
+  ],
+  "label.add-button": [
+    {
+      "type": 0,
+      "value": "添加标签"
+    }
+  ],
+  "label.add-for": [
+    {
+      "type": 0,
+      "value": "编辑标签"
+    }
+  ],
+  "label.add-placeholder": [
+    {
+      "type": 0,
+      "value": "标签标题"
+    }
+  ],
+  "label.change-color": [
+    {
+      "type": 0,
+      "value": "更改标签颜色"
+    }
+  ],
+  "label.delete-description": [
+    {
+      "type": 0,
+      "value": "将被删除，包括与所有现有地图的关联。您要继续吗？"
+    }
+  ],
+  "label.delete-title": [
+    {
+      "type": 0,
+      "value": "确认标签删除"
+    }
+  ],
+  "label.description": [
+    {
+      "type": 0,
+      "value": "使用标签来组织您的地图。"
+    }
+  ],
+  "label.maps-count": [
+    {
+      "type": 1,
+      "value": "count"
+    },
+    {
+      "type": 0,
+      "value": " 个地图"
+    }
+  ],
+  "label.title": [
+    {
+      "type": 0,
+      "value": "添加标签"
+    }
+  ],
+  "language.change": [
+    {
+      "type": 0,
+      "value": "更改语言"
+    }
+  ],
+  "language.help": [
+    {
+      "type": 0,
+      "value": "帮助翻译"
+    }
+  ],
+  "login.desc": [
+    {
+      "type": 0,
+      "value": "登录您的账户"
+    }
+  ],
+  "login.division": [
+    {
+      "type": 0,
+      "value": "或"
+    }
+  ],
+  "login.email": [
+    {
+      "type": 0,
+      "value": "电子邮件"
+    }
+  ],
+  "login.error": [
+    {
+      "type": 0,
+      "value": "您输入的电子邮件地址或密码无效。"
+    }
+  ],
+  "login.facebook.button": [
+    {
+      "type": 0,
+      "value": "使用 Facebook 登录"
+    }
+  ],
+  "login.forgotpwd": [
+    {
+      "type": 0,
+      "value": "忘记密码？"
+    }
+  ],
+  "login.google.button": [
+    {
+      "type": 0,
+      "value": "使用Google登录"
+    }
+  ],
+  "login.page-title": [
+    {
+      "type": 0,
+      "value": "登录 | WiseMapping"
+    }
+  ],
+  "login.password": [
+    {
+      "type": 0,
+      "value": "密码"
+    }
+  ],
+  "login.remberme": [
+    {
+      "type": 0,
+      "value": "记住我"
+    }
+  ],
+  "login.shared-map-notice": [
+    {
+      "type": 0,
+      "value": "有人与您分享了一张思维导图。请登录以访问。还没有账户？免费注册或使用您的Google/Facebook账户。"
+    }
+  ],
+  "login.signin": [
+    {
+      "type": 0,
+      "value": "登录"
+    }
+  ],
+  "login.signup": [
+    {
+      "type": 0,
+      "value": "注册"
+    }
+  ],
+  "login.title": [
+    {
+      "type": 0,
+      "value": "欢迎"
+    }
+  ],
+  "map.creator": [
+    {
+      "type": 0,
+      "value": "创建者"
+    }
+  ],
+  "map.delete-selected": [
+    {
+      "type": 0,
+      "value": "删除选定项"
+    }
+  ],
+  "map.last-update": [
+    {
+      "type": 0,
+      "value": "最后更新"
+    }
+  ],
+  "map.more-actions": [
+    {
+      "type": 0,
+      "value": "更多操作"
+    }
+  ],
+  "map.name": [
+    {
+      "type": 0,
+      "value": "名称"
+    }
+  ],
+  "map.tooltip-add": [
+    {
+      "type": 0,
+      "value": "向选定项添加标签"
+    }
+  ],
+  "maps.choose-file": [
+    {
+      "type": 0,
+      "value": "选择文件"
+    }
+  ],
+  "maps.copilot-button": [
+    {
+      "type": 0,
+      "value": "AI 副驾驶"
+    }
+  ],
+  "maps.copilot-dialog.continue": [
+    {
+      "type": 0,
+      "value": "打开副驾驶"
+    }
+  ],
+  "maps.copilot-dialog.description": [
+    {
+      "type": 0,
+      "value": "Mind Map Copilot 是由 ChatGPT 驱动的头脑风暴助手，可将你的提示转换成结构化的思维导图。我们会在新标签页中打开它，方便你扩展想法、生成主题，并把最好的成果带回 WiseMapping。"
+    }
+  ],
+  "maps.copilot-dialog.title": [
+    {
+      "type": 0,
+      "value": "ChatGPT 驱动的思维导图副驾驶"
+    }
+  ],
+  "maps.copilot-tooltip": [
+    {
+      "type": 0,
+      "value": "用 AI 副驾驶开启新的思维导图"
+    }
+  ],
+  "maps.create-tooltip": [
+    {
+      "type": 0,
+      "value": "创建新的思维导图"
+    }
+  ],
+  "maps.empty-result": [
+    {
+      "type": 0,
+      "value": "使用当前过滤条件未找到匹配的思维导图。"
+    }
+  ],
+  "maps.import-desc": [
+    {
+      "type": 0,
+      "value": "从其他工具导入"
+    }
+  ],
+  "maps.modified": [
+    {
+      "type": 0,
+      "value": "已修改"
+    }
+  ],
+  "maps.modified-by": [
+    {
+      "type": 0,
+      "value": "修改者"
+    }
+  ],
+  "maps.modified-by-desc": [
+    {
+      "type": 1,
+      "value": "by"
+    },
+    {
+      "type": 0,
+      "value": " 于 "
+    },
+    {
+      "type": 1,
+      "value": "on"
+    },
+    {
+      "type": 0,
+      "value": " 修改"
+    }
+  ],
+  "maps.nav-all": [
+    {
+      "type": 0,
+      "value": "全部"
+    }
+  ],
+  "maps.nav-onwned": [
+    {
+      "type": 0,
+      "value": "拥有的"
+    }
+  ],
+  "maps.nav-public": [
+    {
+      "type": 0,
+      "value": "公开"
+    }
+  ],
+  "maps.nav-shared": [
+    {
+      "type": 0,
+      "value": "与我分享"
+    }
+  ],
+  "maps.nav-starred": [
+    {
+      "type": 0,
+      "value": "收藏"
+    }
+  ],
+  "maps.page-title": [
+    {
+      "type": 0,
+      "value": "我的地图 | WiseMapping"
+    }
+  ],
+  "maps.revert": [
+    {
+      "type": 0,
+      "value": "还原"
+    }
+  ],
+  "maps.search-action": [
+    {
+      "type": 0,
+      "value": "搜索..."
+    }
+  ],
+  "maps.tooltip-open": [
+    {
+      "type": 0,
+      "value": "打开编辑"
+    }
+  ],
+  "maps.tooltip-starred": [
+    {
+      "type": 0,
+      "value": "收藏"
+    }
+  ],
+  "maps.untitled": [
+    {
+      "type": 0,
+      "value": "无标题"
+    }
+  ],
+  "maps.view": [
+    {
+      "type": 0,
+      "value": "查看"
+    }
+  ],
+  "menu.account": [
+    {
+      "type": 0,
+      "value": "账户"
+    }
+  ],
+  "menu.admin-console": [
+    {
+      "type": 0,
+      "value": "Admin Console"
+    }
+  ],
+  "menu.change-password": [
+    {
+      "type": 0,
+      "value": "更改密码"
+    }
+  ],
+  "menu.signout": [
+    {
+      "type": 0,
+      "value": "退出"
+    }
+  ],
+  "publish.button": [
+    {
+      "type": 0,
+      "value": "接受"
+    }
+  ],
+  "publish.checkbox": [
+    {
+      "type": 0,
+      "value": "启用公开分享"
+    }
+  ],
+  "publish.copied": [
+    {
+      "type": 0,
+      "value": "Copied to clipboard!"
+    }
+  ],
+  "publish.description": [
+    {
+      "type": 0,
+      "value": "通过发布地图，您使其对互联网上的每个人都可见。"
+    }
+  ],
+  "publish.embedded": [
+    {
+      "type": 0,
+      "value": "嵌入"
+    }
+  ],
+  "publish.embedded-msg": [
+    {
+      "type": 0,
+      "value": "复制此代码片段以嵌入到您的博客或页面中："
+    }
+  ],
+  "publish.public-url": [
+    {
+      "type": 0,
+      "value": "公开URL"
+    }
+  ],
+  "publish.public-url-msg": [
+    {
+      "type": 0,
+      "value": "复制并粘贴下面的链接与同事分享您的地图："
+    }
+  ],
+  "publish.title": [
+    {
+      "type": 0,
+      "value": "发布"
+    }
+  ],
+  "registation.callback.error.message": [
+    {
+      "type": 0,
+      "value": "使用Google验证您的身份时发生错误，您可以从登录页面重试"
+    }
+  ],
+  "registation.success-title": [
+    {
+      "type": 0,
+      "value": "注册成功 | WiseMapping"
+    }
+  ],
+  "registration.callback.back": [
+    {
+      "type": 0,
+      "value": "返回登录"
+    }
+  ],
+  "registration.callback.confirm.description": [
+    {
+      "type": 0,
+      "value": "之前已注册了相同电子邮件的账户。您想将您的"
+    },
+    {
+      "type": 1,
+      "value": "provider"
+    },
+    {
+      "type": 0,
+      "value": "账户链接到该WiseMapping账户吗？"
+    }
+  ],
+  "registration.callback.confirm.title": [
+    {
+      "type": 0,
+      "value": "确认"
+    }
+  ],
+  "registration.callback.sync": [
+    {
+      "type": 0,
+      "value": "同步账户"
+    }
+  ],
+  "registration.callback.waiting.description": [
+    {
+      "type": 0,
+      "value": "请稍候，我们正在验证您的身份"
+    }
+  ],
+  "registration.callback.waiting.title": [
+    {
+      "type": 0,
+      "value": "完成中..."
+    }
+  ],
+  "registration.desc": [
+    {
+      "type": 0,
+      "value": "注册免费且只需片刻"
+    }
+  ],
+  "registration.division": [
+    {
+      "type": 0,
+      "value": "或"
+    }
+  ],
+  "registration.email": [
+    {
+      "type": 0,
+      "value": "电子邮件"
+    }
+  ],
+  "registration.error.title": [
+    {
+      "type": 0,
+      "value": "注册失败"
+    }
+  ],
+  "registration.facebook.button": [
+    {
+      "type": 0,
+      "value": "使用 Facebook 注册"
+    }
+  ],
+  "registration.firstname": [
+    {
+      "type": 0,
+      "value": "名字"
+    }
+  ],
+  "registration.form-legend": [
+    {
+      "type": 0,
+      "value": "Account Information"
+    }
+  ],
+  "registration.google.button": [
+    {
+      "type": 0,
+      "value": "使用Google注册"
+    }
+  ],
+  "registration.lastname": [
+    {
+      "type": 0,
+      "value": "姓氏"
+    }
+  ],
+  "registration.page-title": [
+    {
+      "type": 0,
+      "value": "注册 | WiseMapping"
+    }
+  ],
+  "registration.password": [
+    {
+      "type": 0,
+      "value": "密码"
+    }
+  ],
+  "registration.register": [
+    {
+      "type": 0,
+      "value": "注册"
+    }
+  ],
+  "registration.success.desc": [
+    {
+      "type": 0,
+      "value": "点击下面的'登录'按钮开始创建思维导图。"
+    }
+  ],
+  "registration.termandconditions": [
+    {
+      "type": 0,
+      "value": "客户条款：请检查您在上面输入的WiseMapping账户信息，并在此处查看客户条款。点击下面的'注册'即表示您同意上述客户条款和隐私政策"
+    }
+  ],
+  "registration.title": [
+    {
+      "type": 0,
+      "value": "成为会员"
+    }
+  ],
+  "rename.description": [
+    {
+      "type": 0,
+      "value": "请填写新地图名称和描述。"
+    }
+  ],
+  "rename.title": [
+    {
+      "type": 0,
+      "value": "重命名"
+    }
+  ],
+  "resetpassword.success.title": [
+    {
+      "type": 0,
+      "value": "您的账户已成功创建"
+    }
+  ],
+  "role.editor": [
+    {
+      "type": 0,
+      "value": "编辑者"
+    }
+  ],
+  "role.owner": [
+    {
+      "type": 0,
+      "value": "所有者"
+    }
+  ],
+  "role.viewer": [
+    {
+      "type": 0,
+      "value": "查看者"
+    }
+  ],
+  "share.add-button": [
+    {
+      "type": 0,
+      "value": "分享"
+    }
+  ],
+  "share.add-message": [
+    {
+      "type": 0,
+      "value": "添加消息"
+    }
+  ],
+  "share.adding-button": [
+    {
+      "type": 0,
+      "value": "Sharing..."
+    }
+  ],
+  "share.can-edit": [
+    {
+      "type": 0,
+      "value": "可以编辑"
+    }
+  ],
+  "share.can-view": [
+    {
+      "type": 0,
+      "value": "可以查看"
+    }
+  ],
+  "share.delete": [
+    {
+      "type": 0,
+      "value": "删除协作者"
+    }
+  ],
+  "share.delete-description": [
+    {
+      "type": 0,
+      "value": "添加协作者。他们将立即通过电子邮件获得编辑权限。"
+    }
+  ],
+  "share.delete-title": [
+    {
+      "type": 0,
+      "value": "与人们分享"
+    }
+  ],
+  "share.message": [
+    {
+      "type": 0,
+      "value": "消息"
+    }
+  ],
+  "theme.dark": [
+    {
+      "type": 0,
+      "value": "深色"
+    }
+  ],
+  "theme.light": [
+    {
+      "type": 0,
+      "value": "浅色"
+    }
+  ],
+  "theme.toggle": [
+    {
+      "type": 0,
+      "value": "切换主题"
+    }
+  ],
+  "validation.title-required": [
+    {
+      "type": 0,
+      "value": "标题是必需的"
+    }
+  ]
+}

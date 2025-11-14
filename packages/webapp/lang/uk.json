@@ -1,0 +1,863 @@
+{
+  "account.delete-warning": {
+    "defaultMessage": "Майте на увазі, що ви не зможете відновити жодну карту розуму, яку ви додали. Вся ваша інформація буде видалена і не може бути відновлена."
+  },
+  "accountinfo.button": {
+    "defaultMessage": "Прийняти"
+  },
+  "accountinfo.deleteaccount": {
+    "defaultMessage": "Видалити акаунт"
+  },
+  "accountinfo.email": {
+    "defaultMessage": "Електронна пошта"
+  },
+  "accountinfo.firstname": {
+    "defaultMessage": "Ім'я"
+  },
+  "accountinfo.lastname": {
+    "defaultMessage": "Прізвище"
+  },
+  "accountinfo.title": {
+    "defaultMessage": "Інформація про акаунт"
+  },
+  "action.cancel-button": {
+    "defaultMessage": "Скасувати"
+  },
+  "action.close-button": {
+    "defaultMessage": "Закрити"
+  },
+  "action.delete": {
+    "defaultMessage": "Видалити"
+  },
+  "action.delete-description": {
+    "defaultMessage": "Видалену карту розуму неможливо відновити. Чи хочете продовжити?"
+  },
+  "action.delete-title": {
+    "defaultMessage": "Видалити"
+  },
+  "action.duplicate": {
+    "defaultMessage": "Дублювати"
+  },
+  "action.export": {
+    "defaultMessage": "Експорт"
+  },
+  "action.history": {
+    "defaultMessage": "Історія"
+  },
+  "action.history-description": {
+    "defaultMessage": "Список змін, внесених за останні 90 днів."
+  },
+  "action.history-title": {
+    "defaultMessage": "Історія версій"
+  },
+  "action.import": {
+    "defaultMessage": "Імпорт"
+  },
+  "action.info": {
+    "defaultMessage": "Інформація"
+  },
+  "action.label": {
+    "defaultMessage": "Додати мітку"
+  },
+  "action.new": {
+    "defaultMessage": "Нова карта"
+  },
+  "action.open": {
+    "defaultMessage": "Відкрити"
+  },
+  "action.print": {
+    "defaultMessage": "Друк"
+  },
+  "action.publish": {
+    "defaultMessage": "Опублікувати"
+  },
+  "action.rename": {
+    "defaultMessage": "Перейменувати"
+  },
+  "action.rename-description-placeholder": {
+    "defaultMessage": "Опис"
+  },
+  "action.rename-name-placeholder": {
+    "defaultMessage": "Назва"
+  },
+  "action.share": {
+    "defaultMessage": "Поділитися"
+  },
+  "changepwd.button": {
+    "defaultMessage": "Змінити"
+  },
+  "changepwd.confirm-password": {
+    "defaultMessage": "Підтвердити пароль"
+  },
+  "changepwd.description": {
+    "defaultMessage": "Будь ласка, вкажіть новий пароль для вашого акаунту."
+  },
+  "changepwd.password": {
+    "defaultMessage": "Пароль"
+  },
+  "changepwd.password-match": {
+    "defaultMessage": "Паролі не співпадають. Будь ласка, спробуйте ще раз."
+  },
+  "changepwd.title": {
+    "defaultMessage": "Змінити пароль"
+  },
+  "common.wait": {
+    "defaultMessage": "Будь ласка, зачекайте..."
+  },
+  "create.button": {
+    "defaultMessage": "Створити"
+  },
+  "create.description": {
+    "defaultMessage": "Будь ласка, заповніть назву та опис нової карти."
+  },
+  "create.title": {
+    "defaultMessage": "Створити нову карту розуму"
+  },
+  "deletem.title": {
+    "defaultMessage": "Всі вибрані карти будуть видалені"
+  },
+  "dialog.loading": {
+    "defaultMessage": "Завантаження..."
+  },
+  "duplicate.copy-prefix": {
+    "defaultMessage": "Копія "
+  },
+  "duplicate.title": {
+    "defaultMessage": "Дублювати"
+  },
+  "expired.description": {
+    "defaultMessage": "Ваша поточна сесія закінчилася. Будь ласка, увійдіть в систему і спробуйте ще раз."
+  },
+  "expired.title": {
+    "defaultMessage": "Ваша сесія закінчилася"
+  },
+  "export.desc": {
+    "defaultMessage": "Експортуйте цю карту в потрібному форматі та почніть використовувати її у ваших презентаціях або ділитися електронною поштою"
+  },
+  "export.document": {
+    "defaultMessage": "Інструменти карт розуму: Експортуйте вашу карту розуму в формати сторонніх інструментів карт розуму"
+  },
+  "export.document-label": {
+    "defaultMessage": "Документ: Експортуйте вашу карту розуму в автономний документ, готовий для обміну"
+  },
+  "export.image": {
+    "defaultMessage": "Зображення: Отримайте графічне представлення вашої карти, включаючи всі кольори та форми."
+  },
+  "export.img-center": {
+    "defaultMessage": "Центрувати та масштабувати під розмір"
+  },
+  "export.title": {
+    "defaultMessage": "Експорт"
+  },
+  "export.warning": {
+    "defaultMessage": "Експорт в зображення (SVG,PNG,JPEG,PDF) доступний тільки в панелі інструментів редактора."
+  },
+  "footer.aboutus": {
+    "defaultMessage": "Про нас"
+  },
+  "footer.contactus": {
+    "defaultMessage": "Зв'язатися з нами"
+  },
+  "footer.donations": {
+    "defaultMessage": "Пожертви"
+  },
+  "footer.faq": {
+    "defaultMessage": "Часті питання"
+  },
+  "footer.faqandhelp": {
+    "defaultMessage": "Допомога та FAQ"
+  },
+  "footer.feedback": {
+    "defaultMessage": "Відгуки"
+  },
+  "footer.opensource": {
+    "defaultMessage": "Відкритий код"
+  },
+  "footer.others": {
+    "defaultMessage": "Інше"
+  },
+  "footer.support": {
+    "defaultMessage": "Підтримка"
+  },
+  "footer.team": {
+    "defaultMessage": "Наша команда"
+  },
+  "footer.termsandconditions": {
+    "defaultMessage": "Умови використання"
+  },
+  "forgot.desc": {
+    "defaultMessage": "Ми надішлемо вам електронний лист для скидання пароля."
+  },
+  "forgot.email": {
+    "defaultMessage": "Електронна пошта"
+  },
+  "forgot.oauth.back": {
+    "defaultMessage": "Повернутися до входу"
+  },
+  "forgot.oauth.message": {
+    "defaultMessage": "Вам не потрібен пароль, будь ласка, увійдіть через Facebook або Google."
+  },
+  "forgot.page-title": {
+    "defaultMessage": "Забули пароль | WiseMapping"
+  },
+  "forgot.register": {
+    "defaultMessage": "Надіслати посилання для відновлення"
+  },
+  "forgot.success.desc": {
+    "defaultMessage": "Ми надіслали вам електронний лист, який дозволить скинути ваш пароль. Ви повинні отримати його в найближчі хвилини."
+  },
+  "forgot.success.title": {
+    "defaultMessage": "Ваш тимчасовий пароль було надіслано."
+  },
+  "forgot.title": {
+    "defaultMessage": "Скинути ваш пароль"
+  },
+  "forgotsuccess.page-title": {
+    "defaultMessage": "Пароль відновлено | WiseMapping"
+  },
+  "header.donthaveaccount": {
+    "defaultMessage": "Немає акаунту?"
+  },
+  "header.haveaccount": {
+    "defaultMessage": "Вже є акаунт?"
+  },
+  "help.support": {
+    "defaultMessage": "Підтримка"
+  },
+  "history.no-changes": {
+    "defaultMessage": "Немає доступних змін"
+  },
+  "import.button": {
+    "defaultMessage": "Створити"
+  },
+  "import.description": {
+    "defaultMessage": "Ви можете імпортувати карти WiseMapping, FreeMind, Freeplane, XMind, MindManager та OPML до вашого списку карт. Виберіть файл, який хочете імпортувати."
+  },
+  "import.error-file": {
+    "defaultMessage": "Помилка імпорту {error}"
+  },
+  "import.title": {
+    "defaultMessage": "Імпорт існуючої карти розуму"
+  },
+  "info.basic-info": {
+    "defaultMessage": "Основна інформація"
+  },
+  "info.button": {
+    "defaultMessage": "Прийняти"
+  },
+  "info.creation-time": {
+    "defaultMessage": "Дата створення"
+  },
+  "info.creator": {
+    "defaultMessage": "Створювач"
+  },
+  "info.description": {
+    "defaultMessage": "Опис"
+  },
+  "info.description-msg": {
+    "defaultMessage": "Опублікувавши карту, ви робите її видимою для всіх в Інтернеті."
+  },
+  "info.modified-time": {
+    "defaultMessage": "Дата останньої зміни"
+  },
+  "info.modified-tny": {
+    "defaultMessage": "Остання зміна"
+  },
+  "info.name": {
+    "defaultMessage": "Назва"
+  },
+  "info.public-visibility": {
+    "defaultMessage": "Публічно видима"
+  },
+  "info.sharing": {
+    "defaultMessage": "Спільне використання"
+  },
+  "info.starred": {
+    "defaultMessage": "Відмічена"
+  },
+  "info.title": {
+    "defaultMessage": "Інформація"
+  },
+  "label.add-button": {
+    "defaultMessage": "Додати мітку"
+  },
+  "label.add-for": {
+    "defaultMessage": "Редагування міток для"
+  },
+  "label.add-placeholder": {
+    "defaultMessage": "Назва мітки"
+  },
+  "label.change-color": {
+    "defaultMessage": "Змінити колір мітки"
+  },
+  "label.delete-description": {
+    "defaultMessage": "буде видалена, включаючи її асоціації з усіма існуючими картами. Чи хочете продовжити?"
+  },
+  "label.delete-title": {
+    "defaultMessage": "Підтвердити видалення мітки"
+  },
+  "label.description": {
+    "defaultMessage": "Використовуйте мітки для організації ваших карт."
+  },
+  "label.maps-count": {
+    "defaultMessage": "{count} карт"
+  },
+  "label.title": {
+    "defaultMessage": "Додати мітку"
+  },
+  "language.change": {
+    "defaultMessage": "Змінити мову"
+  },
+  "language.help": {
+    "defaultMessage": "Допомогти з перекладом"
+  },
+  "login.desc": {
+    "defaultMessage": "Увійдіть у ваш акаунт"
+  },
+  "login.division": {
+    "defaultMessage": "або"
+  },
+  "login.email": {
+    "defaultMessage": "Електронна пошта"
+  },
+  "login.error": {
+    "defaultMessage": "Введена адреса електронної пошти або пароль недійсні."
+  },
+  "login.forgotpwd": {
+    "defaultMessage": "Забули пароль?"
+  },
+  "login.google.button": {
+    "defaultMessage": "Увійти через Google"
+  },
+  "login.facebook.button": {
+    "defaultMessage": "Увійти через Facebook"
+  },
+  "login.page-title": {
+    "defaultMessage": "Вхід | WiseMapping"
+  },
+  "login.password": {
+    "defaultMessage": "Пароль"
+  },
+  "login.remberme": {
+    "defaultMessage": "Запам'ятати мене"
+  },
+  "login.signin": {
+    "defaultMessage": "Увійти"
+  },
+  "login.signup": {
+    "defaultMessage": "Зареєструватися"
+  },
+  "login.title": {
+    "defaultMessage": "Ласкаво просимо"
+  },
+  "login.shared-map-notice": {
+    "defaultMessage": "З вами поділилися ментальною картою. Будь ласка, увійдіть, щоб отримати доступ. Немає облікового запису? Зареєструйтеся безкоштовно або використовуйте свій обліковий запис Google/Facebook."
+  },
+  "map.creator": {
+    "defaultMessage": "Створювач"
+  },
+  "map.delete-selected": {
+    "defaultMessage": "Видалити вибрані"
+  },
+  "map.last-update": {
+    "defaultMessage": "Останнє оновлення"
+  },
+  "map.more-actions": {
+    "defaultMessage": "Більше дій"
+  },
+  "map.name": {
+    "defaultMessage": "Назва"
+  },
+  "map.tooltip-add": {
+    "defaultMessage": "Додати мітку до вибраного"
+  },
+  "maps.choose-file": {
+    "defaultMessage": "Виберіть файл"
+  },
+  "maps.copilot-button": {
+    "defaultMessage": "ШІ Копілот"
+  },
+  "maps.copilot-tooltip": {
+    "defaultMessage": "Запустіть ментальну карту з ШІ Копілотом"
+  },
+  "maps.copilot-dialog.title": {
+    "defaultMessage": "Копілот майндмапів на базі ChatGPT"
+  },
+  "maps.copilot-dialog.description": {
+    "defaultMessage": "Mind Map Copilot — це помічник для брейнштормінгу на базі ChatGPT, який перетворює ваші підказки на структуровані ментальні карти. Ми відкриємо його в новій вкладці, щоб ви могли розширювати ідеї, генерувати теми та повернути найкраще до WiseMapping."
+  },
+  "maps.untitled": {
+    "defaultMessage": "Без назви"
+  },
+  "maps.copilot-dialog.continue": {
+    "defaultMessage": "Відкрити Копілот"
+  },
+  "maps.create-tooltip": {
+    "defaultMessage": "Створити нову карту розуму"
+  },
+  "maps.empty-result": {
+    "defaultMessage": "Не знайдено карт розуму, що відповідають поточним критеріям фільтрації."
+  },
+  "maps.import-desc": {
+    "defaultMessage": "Імпорт з інших інструментів"
+  },
+  "maps.modified": {
+    "defaultMessage": "Змінено"
+  },
+  "maps.modified-by": {
+    "defaultMessage": "Змінено"
+  },
+  "maps.modified-by-desc": {
+    "defaultMessage": "Змінено {by} {on}"
+  },
+  "maps.nav-all": {
+    "defaultMessage": "Всі"
+  },
+  "maps.nav-onwned": {
+    "defaultMessage": "Мої"
+  },
+  "maps.nav-public": {
+    "defaultMessage": "Публічні"
+  },
+  "maps.nav-shared": {
+    "defaultMessage": "Спільні зі мною"
+  },
+  "maps.nav-starred": {
+    "defaultMessage": "Відмічені"
+  },
+  "maps.page-title": {
+    "defaultMessage": "Мої карти | WiseMapping"
+  },
+  "maps.revert": {
+    "defaultMessage": "Повернути"
+  },
+  "maps.search-action": {
+    "defaultMessage": "Пошук..."
+  },
+  "maps.tooltip-open": {
+    "defaultMessage": "Відкрити для редагування"
+  },
+  "maps.tooltip-starred": {
+    "defaultMessage": "Відмічена"
+  },
+  "maps.view": {
+    "defaultMessage": "Переглянути"
+  },
+  "menu.account": {
+    "defaultMessage": "Акаунт"
+  },
+  "menu.change-password": {
+    "defaultMessage": "Змінити пароль"
+  },
+  "menu.signout": {
+    "defaultMessage": "Вийти"
+  },
+  "publish.button": {
+    "defaultMessage": "Прийняти"
+  },
+  "publish.checkbox": {
+    "defaultMessage": "Увімкнути публічне спільне використання"
+  },
+  "publish.copied": {
+    "defaultMessage": "Copied to clipboard!"
+  },
+  "publish.description": {
+    "defaultMessage": "Опублікувавши карту, ви робите її видимою для всіх в Інтернеті."
+  },
+  "publish.embedded": {
+    "defaultMessage": "Вбудована"
+  },
+  "publish.embedded-msg": {
+    "defaultMessage": "Скопіюйте цей фрагмент коду для вбудовування у ваш блог або сторінку:"
+  },
+  "publish.public-url": {
+    "defaultMessage": "Публічне посилання"
+  },
+  "publish.public-url-msg": {
+    "defaultMessage": "Скопіюйте та вставте посилання нижче, щоб поділитися вашою картою з колегами:"
+  },
+  "publish.title": {
+    "defaultMessage": "Опублікувати"
+  },
+  "registation.callback.error.message": {
+    "defaultMessage": "Сталася помилка при підтвердженні вашої особистості через Google, ви можете спробувати ще раз зі сторінки входу"
+  },
+  "registation.success-title": {
+    "defaultMessage": "Успішна реєстрація | WiseMapping"
+  },
+  "registration.callback.back": {
+    "defaultMessage": "Повернутися до входу"
+  },
+  "registration.callback.confirm.description": {
+    "defaultMessage": "Акаунт з такою ж електронною поштою був раніше зареєстрований. Чи хочете прив'язати ваш {provider} акаунт до того акаунту WiseMapping?"
+  },
+  "registration.callback.confirm.title": {
+    "defaultMessage": "Підтвердити"
+  },
+  "registration.callback.sync": {
+    "defaultMessage": "Синхронізувати акаунт"
+  },
+  "registration.callback.waiting.description": {
+    "defaultMessage": "Будь ласка, зачекайте, поки ми підтверджуємо вашу особистість"
+  },
+  "registration.callback.waiting.title": {
+    "defaultMessage": "Завершення..."
+  },
+  "registration.desc": {
+    "defaultMessage": "Реєстрація безкоштовна і займає лише кілька хвилин"
+  },
+  "registration.division": {
+    "defaultMessage": "або"
+  },
+  "registration.error.title": {
+    "defaultMessage": "Реєстрація не вдалася"
+  },
+  "registration.email": {
+    "defaultMessage": "Електронна пошта"
+  },
+  "registration.firstname": {
+    "defaultMessage": "Ім'я"
+  },
+  "registration.google.button": {
+    "defaultMessage": "Зареєструватися через Google"
+  },
+  "registration.facebook.button": {
+    "defaultMessage": "Зареєструватися через Facebook"
+  },
+  "registration.lastname": {
+    "defaultMessage": "Прізвище"
+  },
+  "registration.page-title": {
+    "defaultMessage": "Реєстрація | WiseMapping"
+  },
+  "registration.password": {
+    "defaultMessage": "Пароль"
+  },
+  "registration.register": {
+    "defaultMessage": "Зареєструватися"
+  },
+  "registration.success.desc": {
+    "defaultMessage": "Натисніть кнопку 'Увійти' нижче і почніть створювати карти розуму."
+  },
+  "registration.termandconditions": {
+    "defaultMessage": "Умови клієнта: Будь ласка, перевірте інформацію про акаунт WiseMapping, яку ви ввели вище, і перегляньте Умови клієнта тут. Натиснувши 'Зареєструватися' нижче, ви погоджуєтеся з Умовами клієнта вище та Політикою конфіденційності"
+  },
+  "registration.title": {
+    "defaultMessage": "Стати учасником"
+  },
+  "rename.description": {
+    "defaultMessage": "Будь ласка, заповніть нову назву та опис карти."
+  },
+  "rename.title": {
+    "defaultMessage": "Перейменувати"
+  },
+  "resetpassword.success.title": {
+    "defaultMessage": "Ваш акаунт було успішно створено"
+  },
+  "role.editor": {
+    "defaultMessage": "Редактор"
+  },
+  "role.owner": {
+    "defaultMessage": "Власник"
+  },
+  "role.viewer": {
+    "defaultMessage": "Переглядач"
+  },
+  "share.add-button": {
+    "defaultMessage": "Поділитися"
+  },
+  "share.adding-button": {
+    "defaultMessage": "Sharing..."
+  },
+  "share.add-message": {
+    "defaultMessage": "Додати повідомлення"
+  },
+  "share.can-edit": {
+    "defaultMessage": "Може редагувати"
+  },
+  "share.can-view": {
+    "defaultMessage": "Може переглядати"
+  },
+  "share.delete": {
+    "defaultMessage": "Видалити співробітника"
+  },
+  "share.delete-description": {
+    "defaultMessage": "Додайте співавторів. Вони отримають миттєвий доступ по email для спільного редагування."
+  },
+  "share.delete-title": {
+    "defaultMessage": "Поділитися з людьми"
+  },
+  "share.message": {
+    "defaultMessage": "Повідомлення"
+  },
+  "theme.dark": {
+    "defaultMessage": "Темна"
+  },
+  "theme.light": {
+    "defaultMessage": "Світла"
+  },
+  "theme.toggle": {
+    "defaultMessage": "Перемкнути тему"
+  },
+  "admin.delete-user": {
+    "defaultMessage": "Видалити користувача"
+  },
+  "common.maps-list": {
+    "defaultMessage": "Список карт"
+  },
+  "admin.status-clean": {
+    "defaultMessage": "Очистити"
+  },
+  "common.allow-email-notifications": {
+    "defaultMessage": "Дозволити сповіщення email"
+  },
+  "admin.public": {
+    "defaultMessage": "Публічний"
+  },
+  "common.others": {
+    "defaultMessage": "Інші"
+  },
+  "admin.view-xml": {
+    "defaultMessage": "Переглянути XML"
+  },
+  "common.registration-form": {
+    "defaultMessage": "Форма реєстрації"
+  },
+  "common.first-name": {
+    "defaultMessage": "Ім'я"
+  },
+  "admin.auth-type": {
+    "defaultMessage": "Тип авторизації"
+  },
+  "common.delete": {
+    "defaultMessage": "Видалити"
+  },
+  "admin.status": {
+    "defaultMessage": "Статус"
+  },
+  "admin.suspend-user": {
+    "defaultMessage": "Призупинити користувача"
+  },
+  "admin.suspension-status": {
+    "defaultMessage": "Статус призупинення"
+  },
+  "admin.edit-user": {
+    "defaultMessage": "Редагувати користувача"
+  },
+  "admin.refresh": {
+    "defaultMessage": "Оновити"
+  },
+  "common.login-form": {
+    "defaultMessage": "Форма входу"
+  },
+  "admin.lock-status": {
+    "defaultMessage": "Статус блокування"
+  },
+  "common.emails": {
+    "defaultMessage": "Електронні листи"
+  },
+  "admin.suspension-reason": {
+    "defaultMessage": "Причина призупинення"
+  },
+  "admin.suspension.abuse": {
+    "defaultMessage": "Зловживання"
+  },
+  "admin.suspension.terms-violation": {
+    "defaultMessage": "Порушення умов"
+  },
+  "admin.suspension.security-concern": {
+    "defaultMessage": "Проблема безпеки"
+  },
+  "admin.suspension.manual-review": {
+    "defaultMessage": "Ручна перевірка"
+  },
+  "admin.suspension.inactivity": {
+    "defaultMessage": "Неактивність"
+  },
+  "admin.suspension.other": {
+    "defaultMessage": "Інше"
+  },
+  "admin.status-suspended": {
+    "defaultMessage": "Призупинено"
+  },
+  "admin.delete": {
+    "defaultMessage": "Видалити"
+  },
+  "common.last-name": {
+    "defaultMessage": "Прізвище"
+  },
+  "admin.public-access": {
+    "defaultMessage": "Публічний доступ"
+  },
+  "admin.status-active": {
+    "defaultMessage": "Активний"
+  },
+  "admin.status-inactive": {
+    "defaultMessage": "Неактивний"
+  },
+  "common.locale": {
+    "defaultMessage": "Мова"
+  },
+  "common.email": {
+    "defaultMessage": "Email"
+  },
+  "admin.unsuspend-user": {
+    "defaultMessage": "Відновити користувача"
+  },
+  "common.delete-tag": {
+    "defaultMessage": "Видалити тег"
+  },
+  "admin.edit": {
+    "defaultMessage": "Редагувати"
+  },
+  "common.open-drawer": {
+    "defaultMessage": "Відкрити меню"
+  },
+  "admin.locked": {
+    "defaultMessage": "Заблоковано"
+  },
+  "common.settings": {
+    "defaultMessage": "Налаштування"
+  },
+  "common.loading": {
+    "defaultMessage": "Завантаження..."
+  },
+  "common.retry": {
+    "defaultMessage": "Повторити"
+  },
+  "admin.system.title": {
+    "defaultMessage": "Системна інформація"
+  },
+  "admin.system.refresh": {
+    "defaultMessage": "Оновити"
+  },
+  "common.refresh": {
+    "defaultMessage": "Оновити"
+  },
+  "admin.system.memory": {
+    "defaultMessage": "Пам'ять"
+  },
+  "admin.system.db.url": {
+    "defaultMessage": "URL"
+  },
+  "admin.system.jvm": {
+    "defaultMessage": "JVM"
+  },
+  "error.page-title": {
+    "defaultMessage": "Неочікувана Помилка | WiseMapping"
+  },
+  "error.generic-title": {
+    "defaultMessage": "Ми зіткнулися з проблемою."
+  },
+  "error.generic-message": {
+    "defaultMessage": "Спробуйте пізніше або зверніться до служби підтримки, якщо проблема не зникає."
+  },
+  "error.permission-denied-title": {
+    "defaultMessage": "У вас немає доступу до цієї сторінки."
+  },
+  "error.permission-denied-message": {
+    "defaultMessage": "Якщо вважаєте, що маєте мати доступ, зверніться до свого адміністратора."
+  },
+  "error.not-found-title": {
+    "defaultMessage": "Нам не вдалося знайти цю сторінку."
+  },
+  "error.not-found-message": {
+    "defaultMessage": "Можливо, сторінку було видалено, перейменовано або вона тимчасово недоступна."
+  },
+  "error.map-unavailable-title": {
+    "defaultMessage": "Ця майнд-карта недоступна для публічного перегляду."
+  },
+  "error.map-unavailable-message": {
+    "defaultMessage": "Ця майнд-карта недоступна для публічного перегляду, оскільки порушує політику нашого сайту. Якщо вам потрібна додаткова допомога, зверніться до support@wisemapping.com."
+  },
+  "error.map-title-required": {
+    "defaultMessage": "Назва карти обов'язкова і не може бути порожньою"
+  },
+  "error.security-error": {
+    "defaultMessage": "Mindmap cannot be opened."
+  },
+  "error.undexpected-error-msg": {
+    "defaultMessage": "Unexpected error opening mindmap. Please, try latter."
+  },
+  "accountinfo.personal-details": {
+    "defaultMessage": "Personal Details"
+  },
+  "account.delete-warning-title": {
+    "defaultMessage": "Delete Account"
+  },
+  "account.delete-warning-description": {
+    "defaultMessage": "Once you delete your account, there is no going back. Please be certain."
+  },
+  "account.delete-warning-consequences": {
+    "defaultMessage": "This will permanently delete:"
+  },
+  "account.delete-warning-mindmaps": {
+    "defaultMessage": "All your mindmaps and their content"
+  },
+  "account.delete-warning-data": {
+    "defaultMessage": "All your personal data and account information"
+  },
+  "account.delete-warning-collaborations": {
+    "defaultMessage": "All shared mindmaps and collaborations"
+  },
+  "account.delete-warning-history": {
+    "defaultMessage": "All account history and activity logs"
+  },
+  "account.delete-confirmation-title": {
+    "defaultMessage": "Are you absolutely sure?"
+  },
+  "account.delete-confirmation-warning": {
+    "defaultMessage": "This action cannot be undone. This will permanently delete your account and remove all data from our servers."
+  },
+  "account.delete-confirmation-instruction": {
+    "defaultMessage": "Please type DELETE MY ACCOUNT to confirm:"
+  },
+  "account.delete-confirm": {
+    "defaultMessage": "Delete Account"
+  },
+  "menu.admin-console": {
+    "defaultMessage": "Admin Console"
+  },
+  "registration.form-legend": {
+    "defaultMessage": "Account Information"
+  },
+  "admin.change-password": {
+    "defaultMessage": "Change password"
+  },
+  "admin.change-password-title": {
+    "defaultMessage": "Change Password"
+  },
+  "admin.change-password-description": {
+    "defaultMessage": "Change password for user: {email}"
+  },
+  "admin.new-password": {
+    "defaultMessage": "New Password"
+  },
+  "admin.confirm-password": {
+    "defaultMessage": "Confirm Password"
+  },
+  "admin.change-password-button": {
+    "defaultMessage": "Change Password"
+  },
+  "admin.password-error-length": {
+    "defaultMessage": "Password must be at least 6 characters"
+  },
+  "admin.password-error-mismatch": {
+    "defaultMessage": "Passwords do not match"
+  },
+  "admin.password-error-failed": {
+    "defaultMessage": "Failed to change password"
+  },
+  "admin.password-error-google": {
+    "defaultMessage": "This user is authenticated via Google. Password changes are not available for Google accounts. Please ask the user to manage their password through their Google account."
+  },
+  "admin.password-error-facebook": {
+    "defaultMessage": "This user is authenticated via Facebook. Password changes are not available for Facebook accounts. Please ask the user to manage their password through their Facebook account."
+  },
+  "admin.close": {
+    "defaultMessage": "Close"
+  },
+  "validation.title-required": {
+    "defaultMessage": "Назва обов'язкова"
+  }
+}

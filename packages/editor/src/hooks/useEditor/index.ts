@@ -1,0 +1,114 @@
+/*
+ *    Copyright [2007-2025] [wisemapping]
+ *
+ *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
+ *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   "powered by wisemapping" text requirement on every single page;
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the license at
+ *
+ *       https://github.com/wisemapping/wisemapping-open-source/blob/main/LICENSE.md
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+import {
+  DesignerKeyboard,
+  EditorRenderMode,
+  PersistenceManager,
+  WidgetBuilder,
+} from '@wisemapping/mindplot';
+import { useState, useRef, useEffect, useMemo } from 'react';
+import Capability from '../../classes/action/capability';
+import MapInfo from '../../classes/model/map-info';
+import Model from '../../classes/model/editor';
+import { logCriticalError } from '../../utils/error-logger';
+import DefaultWidgetBuilder from '../../classes/default-widget-manager';
+import BootstrapPersistenceManager from '../../classes/persistence/BootstrapPersistenceManager';
+
+export type EditorOptions = {
+  mode: EditorRenderMode;
+  locale: string;
+  zoom?: number;
+  enableKeyboardEvents: boolean;
+  enableAppBar?: boolean;
+  saveOnLoad?: boolean;
+  hideCreatorInfo?: boolean; // Hide creator info pane in embedded/public view
+  initialThemeVariant?: 'light' | 'dark'; // Set initial theme variant via query parameter
+  bootstrapXML?: string; // Bootstrap XML to use instead of fetching from server
+};
+
+type UseEditorProps = {
+  mapInfo: MapInfo;
+  options: EditorOptions;
+  persistenceManager: PersistenceManager;
+};
+
+export interface EditorConfiguration {
+  model?: Model;
+  mindplotRef: React.MutableRefObject<unknown>;
+  mapInfo: MapInfo;
+  capability: Capability;
+  options: EditorOptions;
+}
+
+export const useEditor = ({
+  mapInfo,
+  options,
+  persistenceManager,
+}: UseEditorProps): EditorConfiguration => {
+  // We create model inside useEditor hook to instantiate everything outside Editor Component
+  const [model, setModel] = useState<Model | undefined>();
+
+  // useEditor hook creates mindplotRef
+  const mindplotRef = useRef(null);
+
+  // This is required to redraw in case of changes in the canvas...
+  const [, setCanvasUpdate] = useState<number>();
+  const widgetBuilderRef = useRef<WidgetBuilder>(new DefaultWidgetBuilder());
+
+  // Memoize capability to avoid recreating on every render
+  // Since options and mapInfo are required props, capability will always be defined
+  const capability = useMemo(() => {
+    return new Capability(options.mode, mapInfo.isLocked());
+  }, [options.mode, mapInfo]);
+
+  // Wrap persistence manager with BootstrapPersistenceManager if bootstrapXML is provided
+  // BootstrapPersistenceManager requires XML to be mandatory
+  const effectivePersistenceManager = useMemo(() => {
+    if (options.bootstrapXML) {
+      // bootstrapXML is guaranteed to be defined here due to the if check
+      return new BootstrapPersistenceManager(persistenceManager, options.bootstrapXML);
+    }
+    return persistenceManager;
+  }, [persistenceManager, options.bootstrapXML]);
+
+  useEffect(() => {
+    if (!model && options && mindplotRef.current && capability) {
+      const model = new Model(mindplotRef.current);
+      model
+        .loadMindmap(mapInfo.getId(), effectivePersistenceManager, widgetBuilderRef.current)
+        .then(() => {
+          setCanvasUpdate(Date.now());
+          model.registerEvents(setCanvasUpdate, capability, widgetBuilderRef.current);
+        })
+        .catch((e) => {
+          logCriticalError(`Unexpected error loading mindmap with id ${mapInfo.getId()}`, e);
+        });
+      setModel(model);
+    }
+  }, [mindplotRef, options, mapInfo, effectivePersistenceManager, capability]);
+
+  useEffect(() => {
+    if (options?.enableKeyboardEvents) {
+      DesignerKeyboard.resume();
+    } else {
+      DesignerKeyboard.pause();
+    }
+  }, [options?.enableKeyboardEvents]);
+
+  return { model, mindplotRef, mapInfo, capability, options };
+};

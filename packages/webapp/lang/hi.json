@@ -1,0 +1,863 @@
+{
+  "account.delete-warning": {
+    "defaultMessage": "ध्यान रखें कि आप जो भी माइंडमैप जोड़े हैं, उन्हें पुनर्प्राप्त नहीं कर सकेंगे। आपकी सभी जानकारी हटा दी जाएगी और इसे पुनर्स्थापित नहीं किया जा सकता।"
+  },
+  "accountinfo.button": {
+    "defaultMessage": "स्वीकार करें"
+  },
+  "accountinfo.deleteaccount": {
+    "defaultMessage": "खाता हटाएं"
+  },
+  "accountinfo.email": {
+    "defaultMessage": "ईमेल"
+  },
+  "accountinfo.firstname": {
+    "defaultMessage": "पहला नाम"
+  },
+  "accountinfo.lastname": {
+    "defaultMessage": "अंतिम नाम"
+  },
+  "accountinfo.title": {
+    "defaultMessage": "खाता जानकारी"
+  },
+  "action.cancel-button": {
+    "defaultMessage": "रद्द करें"
+  },
+  "action.close-button": {
+    "defaultMessage": "बंद करें"
+  },
+  "action.delete": {
+    "defaultMessage": "हटाएं"
+  },
+  "action.delete-description": {
+    "defaultMessage": "हटाए गए माइंडमैप को पुनर्प्राप्त नहीं किया जा सकता। क्या आप जारी रखना चाहते हैं?"
+  },
+  "action.delete-title": {
+    "defaultMessage": "हटाएं"
+  },
+  "action.duplicate": {
+    "defaultMessage": "डुप्लिकेट"
+  },
+  "action.export": {
+    "defaultMessage": "निर्यात"
+  },
+  "action.history": {
+    "defaultMessage": "इतिहास"
+  },
+  "action.history-description": {
+    "defaultMessage": "पिछले 90 दिनों में किए गए परिवर्तनों की सूची।"
+  },
+  "action.history-title": {
+    "defaultMessage": "संस्करण इतिहास"
+  },
+  "action.import": {
+    "defaultMessage": "आयात"
+  },
+  "action.info": {
+    "defaultMessage": "जानकारी"
+  },
+  "action.label": {
+    "defaultMessage": "लेबल जोड़ें"
+  },
+  "action.new": {
+    "defaultMessage": "नया मानचित्र"
+  },
+  "action.open": {
+    "defaultMessage": "खोलें"
+  },
+  "action.print": {
+    "defaultMessage": "प्रिंट"
+  },
+  "action.publish": {
+    "defaultMessage": "प्रकाशित करें"
+  },
+  "action.rename": {
+    "defaultMessage": "नाम बदलें"
+  },
+  "action.rename-description-placeholder": {
+    "defaultMessage": "विवरण"
+  },
+  "action.rename-name-placeholder": {
+    "defaultMessage": "नाम"
+  },
+  "action.share": {
+    "defaultMessage": "साझा करें"
+  },
+  "changepwd.button": {
+    "defaultMessage": "बदलें"
+  },
+  "changepwd.confirm-password": {
+    "defaultMessage": "पासवर्ड की पुष्टि करें"
+  },
+  "changepwd.description": {
+    "defaultMessage": "कृपया अपने खाते के लिए नया पासवर्ड प्रदान करें।"
+  },
+  "changepwd.password": {
+    "defaultMessage": "पासवर्ड"
+  },
+  "changepwd.password-match": {
+    "defaultMessage": "पासवर्ड मेल नहीं खाते। कृपया फिर से कोशिश करें।"
+  },
+  "changepwd.title": {
+    "defaultMessage": "पासवर्ड बदलें"
+  },
+  "common.wait": {
+    "defaultMessage": "कृपया प्रतीक्षा करें..."
+  },
+  "create.button": {
+    "defaultMessage": "बनाएं"
+  },
+  "create.description": {
+    "defaultMessage": "कृपया नया मानचित्र नाम और विवरण भरें।"
+  },
+  "create.title": {
+    "defaultMessage": "एक नया माइंडमैप बनाएं"
+  },
+  "deletem.title": {
+    "defaultMessage": "सभी चयनित मानचित्र हटा दिए जाएंगे"
+  },
+  "dialog.loading": {
+    "defaultMessage": "लोड हो रहा है..."
+  },
+  "duplicate.copy-prefix": {
+    "defaultMessage": "की प्रतिलिपि "
+  },
+  "duplicate.title": {
+    "defaultMessage": "डुप्लिकेट"
+  },
+  "expired.description": {
+    "defaultMessage": "आपका वर्तमान सत्र समाप्त हो गया है। कृपया साइन इन करें और फिर से कोशिश करें।"
+  },
+  "expired.title": {
+    "defaultMessage": "आपका सत्र समाप्त हो गया है"
+  },
+  "export.desc": {
+    "defaultMessage": "इस मानचित्र को उस प्रारूप में निर्यात करें जो आप चाहते हैं और इसे अपनी प्रस्तुतियों में उपयोग करना शुरू करें या ईमेल द्वारा साझा करें"
+  },
+  "export.document": {
+    "defaultMessage": "माइंडमैप टूल्स: अपने माइंडमैप को तृतीय-पक्ष माइंडमैप टूल प्रारूपों में निर्यात करें"
+  },
+  "export.document-label": {
+    "defaultMessage": "दस्तावेज़: अपने माइंडमैप को एक स्व-निहित दस्तावेज़ में निर्यात करें जो साझा करने के लिए तैयार हो"
+  },
+  "export.image": {
+    "defaultMessage": "छवि: सभी रंगों और आकृतियों सहित अपने मानचित्र का ग्राफिक प्रतिनिधित्व प्राप्त करें।"
+  },
+  "export.img-center": {
+    "defaultMessage": "केंद्र और फिट करने के लिए ज़ूम करें"
+  },
+  "export.title": {
+    "defaultMessage": "निर्यात"
+  },
+  "export.warning": {
+    "defaultMessage": "छवि (SVG,PNG,JPEG,PDF) में निर्यात केवल संपादक टूलबार में उपलब्ध है।"
+  },
+  "footer.aboutus": {
+    "defaultMessage": "हमारे बारे में"
+  },
+  "footer.contactus": {
+    "defaultMessage": "हमसे संपर्क करें"
+  },
+  "footer.donations": {
+    "defaultMessage": "दान"
+  },
+  "footer.faq": {
+    "defaultMessage": "अक्सर पूछे जाने वाले प्रश्न"
+  },
+  "footer.faqandhelp": {
+    "defaultMessage": "सहायता और अक्सर पूछे जाने वाले प्रश्न"
+  },
+  "footer.feedback": {
+    "defaultMessage": "प्रतिक्रिया"
+  },
+  "footer.opensource": {
+    "defaultMessage": "ओपन सोर्स"
+  },
+  "footer.others": {
+    "defaultMessage": "अन्य"
+  },
+  "footer.support": {
+    "defaultMessage": "सहायता"
+  },
+  "footer.team": {
+    "defaultMessage": "हमारी टीम"
+  },
+  "footer.termsandconditions": {
+    "defaultMessage": "नियम और शर्तें"
+  },
+  "forgot.desc": {
+    "defaultMessage": "हम आपको आपका पासवर्ड रीसेट करने के लिए एक ईमेल भेजेंगे।"
+  },
+  "forgot.email": {
+    "defaultMessage": "ईमेल"
+  },
+  "forgot.oauth.back": {
+    "defaultMessage": "लॉगिन पर वापस जाएं"
+  },
+  "forgot.oauth.message": {
+    "defaultMessage": "आपको पासवर्ड की आवश्यकता नहीं है, कृपया Facebook या Google का उपयोग करके लॉगिन करें।"
+  },
+  "forgot.page-title": {
+    "defaultMessage": "पासवर्ड भूल गए | WiseMapping"
+  },
+  "forgot.register": {
+    "defaultMessage": "पुनर्प्राप्ति लिंक भेजें"
+  },
+  "forgot.success.desc": {
+    "defaultMessage": "हमने आपको एक ईमेल भेजा है जो आपको अपना पासवर्ड रीसेट करने की अनुमति देगा। आपको इसे अगले कुछ मिनटों में प्राप्त होना चाहिए।"
+  },
+  "forgot.success.title": {
+    "defaultMessage": "आपका अस्थायी पासवर्ड भेज दिया गया है।"
+  },
+  "forgot.title": {
+    "defaultMessage": "अपना पासवर्ड रीसेट करें"
+  },
+  "forgotsuccess.page-title": {
+    "defaultMessage": "पासवर्ड पुनर्प्राप्त | WiseMapping"
+  },
+  "header.donthaveaccount": {
+    "defaultMessage": "खाता नहीं है?"
+  },
+  "header.haveaccount": {
+    "defaultMessage": "पहले से खाता है?"
+  },
+  "help.support": {
+    "defaultMessage": "सहायता"
+  },
+  "history.no-changes": {
+    "defaultMessage": "कोई परिवर्तन उपलब्ध नहीं है"
+  },
+  "import.button": {
+    "defaultMessage": "बनाएं"
+  },
+  "import.description": {
+    "defaultMessage": "आप WiseMapping, FreeMind, Freeplane, XMind, MindManager और OPML मानचित्रों को अपनी मानचित्र सूची में आयात कर सकते हैं। उस फ़ाइल का चयन करें जिसे आप आयात करना चाहते हैं।"
+  },
+  "import.error-file": {
+    "defaultMessage": "आयात त्रुटि {error}"
+  },
+  "import.title": {
+    "defaultMessage": "मौजूदा माइंडमैप आयात करें"
+  },
+  "info.basic-info": {
+    "defaultMessage": "मूल जानकारी"
+  },
+  "info.button": {
+    "defaultMessage": "स्वीकार करें"
+  },
+  "info.creation-time": {
+    "defaultMessage": "निर्माण तिथि"
+  },
+  "info.creator": {
+    "defaultMessage": "निर्माता"
+  },
+  "info.description": {
+    "defaultMessage": "विवरण"
+  },
+  "info.description-msg": {
+    "defaultMessage": "मानचित्र प्रकाशित करके आप इसे इंटरनेट पर सभी के लिए दृश्यमान बनाते हैं।"
+  },
+  "info.modified-time": {
+    "defaultMessage": "अंतिम संशोधन तिथि"
+  },
+  "info.modified-tny": {
+    "defaultMessage": "अंतिम संशोधन द्वारा"
+  },
+  "info.name": {
+    "defaultMessage": "नाम"
+  },
+  "info.public-visibility": {
+    "defaultMessage": "सार्वजनिक रूप से दृश्यमान"
+  },
+  "info.sharing": {
+    "defaultMessage": "साझाकरण"
+  },
+  "info.starred": {
+    "defaultMessage": "पसंदीदा"
+  },
+  "info.title": {
+    "defaultMessage": "जानकारी"
+  },
+  "label.add-button": {
+    "defaultMessage": "लेबल जोड़ें"
+  },
+  "label.add-for": {
+    "defaultMessage": "के लिए लेबल संपादित करना"
+  },
+  "label.add-placeholder": {
+    "defaultMessage": "लेबल शीर्षक"
+  },
+  "label.change-color": {
+    "defaultMessage": "लेबल रंग बदलें"
+  },
+  "label.delete-description": {
+    "defaultMessage": "हटा दिया जाएगा, सभी मौजूदा मानचित्रों के साथ इसके संघों सहित। क्या आप जारी रखना चाहते हैं?"
+  },
+  "label.delete-title": {
+    "defaultMessage": "लेबल हटाने की पुष्टि करें"
+  },
+  "label.description": {
+    "defaultMessage": "अपने मानचित्रों को व्यवस्थित करने के लिए लेबल का उपयोग करें।"
+  },
+  "label.maps-count": {
+    "defaultMessage": "{count} मानचित्र"
+  },
+  "label.title": {
+    "defaultMessage": "एक लेबल जोड़ें"
+  },
+  "language.change": {
+    "defaultMessage": "भाषा बदलें"
+  },
+  "language.help": {
+    "defaultMessage": "अनुवाद में सहायता करें"
+  },
+  "login.desc": {
+    "defaultMessage": "अपने खाते में लॉग इन करें"
+  },
+  "login.division": {
+    "defaultMessage": "या"
+  },
+  "login.email": {
+    "defaultMessage": "ईमेल"
+  },
+  "login.error": {
+    "defaultMessage": "आपके द्वारा दर्ज किया गया ईमेल पता या पासवर्ड मान्य नहीं है।"
+  },
+  "login.forgotpwd": {
+    "defaultMessage": "पासवर्ड भूल गए?"
+  },
+  "login.google.button": {
+    "defaultMessage": "Google के साथ साइन इन करें"
+  },
+  "login.page-title": {
+    "defaultMessage": "लॉगिन | WiseMapping"
+  },
+  "login.password": {
+    "defaultMessage": "पासवर्ड"
+  },
+  "login.remberme": {
+    "defaultMessage": "मुझे याद रखें"
+  },
+  "login.signin": {
+    "defaultMessage": "साइन इन करें"
+  },
+  "login.signup": {
+    "defaultMessage": "साइन अप करें"
+  },
+  "login.title": {
+    "defaultMessage": "स्वागत है"
+  },
+  "login.shared-map-notice": {
+    "defaultMessage": "एक माइंड मैप आपके साथ साझा किया गया है। कृपया इसे एक्सेस करने के लिए लॉग इन करें। खाता नहीं है? मुफ़्त में साइन अप करें या अपना Google/Facebook खाता उपयोग करें।"
+  },
+  "map.creator": {
+    "defaultMessage": "निर्माता"
+  },
+  "map.delete-selected": {
+    "defaultMessage": "चयनित हटाएं"
+  },
+  "map.last-update": {
+    "defaultMessage": "अंतिम अपडेट"
+  },
+  "map.more-actions": {
+    "defaultMessage": "अधिक क्रियाएं"
+  },
+  "map.name": {
+    "defaultMessage": "नाम"
+  },
+  "map.tooltip-add": {
+    "defaultMessage": "चयनित में लेबल जोड़ें"
+  },
+  "maps.choose-file": {
+    "defaultMessage": "एक फ़ाइल चुनें"
+  },
+  "maps.copilot-button": {
+    "defaultMessage": "एआई को-पायलट"
+  },
+  "maps.copilot-tooltip": {
+    "defaultMessage": "एआई को-पायलट के साथ माइंडमैप शुरू करें"
+  },
+  "maps.copilot-dialog.title": {
+    "defaultMessage": "ChatGPT-संचालित माइंडमैप को-पायलट"
+  },
+  "maps.copilot-dialog.description": {
+    "defaultMessage": "Mind Map Copilot एक ChatGPT संचालित ब्रेनस्टॉर्मिंग सहायक है जो आपके संकेतों को संरचित माइंडमैप में बदल देता है। हम इसे नए टैब में खोलेंगे ताकि आप विचारों का विस्तार कर सकें, विषय तैयार कर सकें और सर्वश्रेष्ठ को वापस WiseMapping में ला सकें।"
+  },
+  "maps.untitled": {
+    "defaultMessage": "शीर्षकहीन"
+  },
+  "maps.copilot-dialog.continue": {
+    "defaultMessage": "को-पायलट खोलें"
+  },
+  "maps.create-tooltip": {
+    "defaultMessage": "एक नया माइंडमैप बनाएं"
+  },
+  "maps.empty-result": {
+    "defaultMessage": "वर्तमान फ़िल्टर मानदंड के साथ कोई मिलता-जुलता माइंडमैप नहीं मिला।"
+  },
+  "maps.import-desc": {
+    "defaultMessage": "अन्य टूल्स से आयात करें"
+  },
+  "maps.modified": {
+    "defaultMessage": "संशोधित"
+  },
+  "maps.modified-by": {
+    "defaultMessage": "द्वारा संशोधित"
+  },
+  "maps.modified-by-desc": {
+    "defaultMessage": "{by} द्वारा {on} पर संशोधित"
+  },
+  "maps.nav-all": {
+    "defaultMessage": "सभी"
+  },
+  "maps.nav-onwned": {
+    "defaultMessage": "स्वामित्व"
+  },
+  "maps.nav-public": {
+    "defaultMessage": "सार्वजनिक"
+  },
+  "maps.nav-shared": {
+    "defaultMessage": "मेरे साथ साझा"
+  },
+  "maps.nav-starred": {
+    "defaultMessage": "पसंदीदा"
+  },
+  "maps.page-title": {
+    "defaultMessage": "मेरे मानचित्र | WiseMapping"
+  },
+  "maps.revert": {
+    "defaultMessage": "पूर्ववत करें"
+  },
+  "maps.search-action": {
+    "defaultMessage": "खोजें..."
+  },
+  "maps.tooltip-open": {
+    "defaultMessage": "संपादन के लिए खोलें"
+  },
+  "maps.tooltip-starred": {
+    "defaultMessage": "पसंदीदा"
+  },
+  "maps.view": {
+    "defaultMessage": "देखें"
+  },
+  "menu.account": {
+    "defaultMessage": "खाता"
+  },
+  "menu.change-password": {
+    "defaultMessage": "पासवर्ड बदलें"
+  },
+  "menu.signout": {
+    "defaultMessage": "साइन आउट करें"
+  },
+  "publish.button": {
+    "defaultMessage": "स्वीकार करें"
+  },
+  "publish.checkbox": {
+    "defaultMessage": "सार्वजनिक साझाकरण सक्षम करें"
+  },
+  "publish.copied": {
+    "defaultMessage": "Copied to clipboard!"
+  },
+  "publish.description": {
+    "defaultMessage": "मानचित्र प्रकाशित करके आप इसे इंटरनेट पर सभी के लिए दृश्यमान बनाते हैं।"
+  },
+  "publish.embedded": {
+    "defaultMessage": "एम्बेडेड"
+  },
+  "publish.embedded-msg": {
+    "defaultMessage": "अपने ब्लॉग या पेज में एम्बेड करने के लिए इस कोड स्निपेट को कॉपी करें:"
+  },
+  "publish.public-url": {
+    "defaultMessage": "सार्वजनिक URL"
+  },
+  "publish.public-url-msg": {
+    "defaultMessage": "अपने सहयोगियों के साथ अपना मानचित्र साझा करने के लिए नीचे दिए गए लिंक को कॉपी और पेस्ट करें:"
+  },
+  "publish.title": {
+    "defaultMessage": "प्रकाशित करें"
+  },
+  "registation.callback.error.message": {
+    "defaultMessage": "Google के साथ आपकी पहचान सत्यापित करते समय एक त्रुटि हुई, आप लॉगिन पेज से फिर से कोशिश कर सकते हैं"
+  },
+  "registation.success-title": {
+    "defaultMessage": "पंजीकरण सफल | WiseMapping"
+  },
+  "registration.callback.back": {
+    "defaultMessage": "लॉगिन पर वापस जाएं"
+  },
+  "registration.callback.confirm.description": {
+    "defaultMessage": "उसी ईमेल के साथ एक खाता पहले पंजीकृत था। क्या आप अपने {provider} खाते को उस WiseMapping खाते से लिंक करना चाहते हैं?"
+  },
+  "registration.callback.confirm.title": {
+    "defaultMessage": "पुष्टि करें"
+  },
+  "registration.callback.sync": {
+    "defaultMessage": "खाता सिंक करें"
+  },
+  "registration.callback.waiting.description": {
+    "defaultMessage": "कृपया प्रतीक्षा करें जब तक हम आपकी पहचान सत्यापित करते हैं"
+  },
+  "registration.callback.waiting.title": {
+    "defaultMessage": "समाप्त हो रहा है..."
+  },
+  "registration.desc": {
+    "defaultMessage": "साइन अप करना मुफ्त है और बस एक पल लगता है"
+  },
+  "registration.division": {
+    "defaultMessage": "या"
+  },
+  "registration.error.title": {
+    "defaultMessage": "पंजीकरण विफल"
+  },
+  "registration.email": {
+    "defaultMessage": "ईमेल"
+  },
+  "registration.firstname": {
+    "defaultMessage": "पहला नाम"
+  },
+  "registration.google.button": {
+    "defaultMessage": "Google के साथ साइन अप करें"
+  },
+  "registration.lastname": {
+    "defaultMessage": "अंतिम नाम"
+  },
+  "registration.page-title": {
+    "defaultMessage": "पंजीकरण | WiseMapping"
+  },
+  "registration.password": {
+    "defaultMessage": "पासवर्ड"
+  },
+  "registration.register": {
+    "defaultMessage": "पंजीकरण करें"
+  },
+  "registration.success.desc": {
+    "defaultMessage": "नीचे 'साइन इन' बटन पर क्लिक करें और माइंड मैप बनाना शुरू करें।"
+  },
+  "registration.termandconditions": {
+    "defaultMessage": "क्लाइंट की शर्तें: कृपया ऊपर दर्ज की गई WiseMapping खाता जानकारी की जांच करें, और यहां क्लाइंट की शर्तों की समीक्षा करें। नीचे 'पंजीकरण' पर क्लिक करके आप ऊपर की क्लाइंट शर्तों और गोपनीयता नीति से सहमत हो रहे हैं"
+  },
+  "registration.title": {
+    "defaultMessage": "सदस्य बनें"
+  },
+  "rename.description": {
+    "defaultMessage": "कृपया नया मानचित्र नाम और विवरण भरें।"
+  },
+  "rename.title": {
+    "defaultMessage": "नाम बदलें"
+  },
+  "resetpassword.success.title": {
+    "defaultMessage": "आपका खाता सफलतापूर्वक बनाया गया है"
+  },
+  "role.editor": {
+    "defaultMessage": "संपादक"
+  },
+  "role.owner": {
+    "defaultMessage": "स्वामी"
+  },
+  "role.viewer": {
+    "defaultMessage": "दर्शक"
+  },
+  "share.add-button": {
+    "defaultMessage": "साझा करें"
+  },
+  "share.adding-button": {
+    "defaultMessage": "Sharing..."
+  },
+  "share.add-message": {
+    "defaultMessage": "संदेश जोड़ें"
+  },
+  "share.can-edit": {
+    "defaultMessage": "संपादित कर सकते हैं"
+  },
+  "share.can-view": {
+    "defaultMessage": "देख सकते हैं"
+  },
+  "share.delete": {
+    "defaultMessage": "सहयोगी हटाएं"
+  },
+  "share.delete-description": {
+    "defaultMessage": "सहयोगी जोड़ें। उन्हें एक साथ संपादन के लिए तुरंत ईमेल एक्सेस मिलेगा।"
+  },
+  "share.delete-title": {
+    "defaultMessage": "लोगों के साथ साझा करें"
+  },
+  "share.message": {
+    "defaultMessage": "संदेश"
+  },
+  "theme.dark": {
+    "defaultMessage": "डार्क"
+  },
+  "theme.light": {
+    "defaultMessage": "लाइट"
+  },
+  "theme.toggle": {
+    "defaultMessage": "थीम बदलें"
+  },
+  "admin.delete-user": {
+    "defaultMessage": "उपयोगकर्ता हटाएं"
+  },
+  "common.maps-list": {
+    "defaultMessage": "मानचित्र सूची"
+  },
+  "admin.status-clean": {
+    "defaultMessage": "साफ"
+  },
+  "common.allow-email-notifications": {
+    "defaultMessage": "ईमेल सूचनाएं की अनुमति दें"
+  },
+  "admin.public": {
+    "defaultMessage": "सार्वजनिक"
+  },
+  "common.others": {
+    "defaultMessage": "अन्य"
+  },
+  "admin.view-xml": {
+    "defaultMessage": "XML देखें"
+  },
+  "registration.facebook.button": {
+    "defaultMessage": "Facebook से साइन अप करें"
+  },
+  "common.registration-form": {
+    "defaultMessage": "पंजीकरण फॉर्म"
+  },
+  "common.first-name": {
+    "defaultMessage": "पहला नाम"
+  },
+  "admin.auth-type": {
+    "defaultMessage": "प्रमाणीकरण प्रकार"
+  },
+  "common.delete": {
+    "defaultMessage": "हटाएं"
+  },
+  "admin.status": {
+    "defaultMessage": "स्थिति"
+  },
+  "admin.suspend-user": {
+    "defaultMessage": "उपयोगकर्ता निलंबित करें"
+  },
+  "admin.suspension-status": {
+    "defaultMessage": "निलंबन स्थिति"
+  },
+  "admin.edit-user": {
+    "defaultMessage": "उपयोगकर्ता संपादित करें"
+  },
+  "admin.refresh": {
+    "defaultMessage": "ताज़ा करें"
+  },
+  "common.login-form": {
+    "defaultMessage": "लॉगिन फॉर्म"
+  },
+  "admin.lock-status": {
+    "defaultMessage": "लॉक स्थिति"
+  },
+  "common.emails": {
+    "defaultMessage": "ईमेल"
+  },
+  "admin.suspension-reason": {
+    "defaultMessage": "निलंबन कारण"
+  },
+  "admin.suspension.abuse": {
+    "defaultMessage": "दुरुपयोग"
+  },
+  "admin.suspension.terms-violation": {
+    "defaultMessage": "नियमों का उल्लंघन"
+  },
+  "admin.suspension.security-concern": {
+    "defaultMessage": "सुरक्षा चिंता"
+  },
+  "admin.suspension.manual-review": {
+    "defaultMessage": "मैनुअल समीक्षा"
+  },
+  "admin.suspension.inactivity": {
+    "defaultMessage": "निष्क्रियता"
+  },
+  "admin.suspension.other": {
+    "defaultMessage": "अन्य"
+  },
+  "admin.status-suspended": {
+    "defaultMessage": "निलंबित"
+  },
+  "admin.delete": {
+    "defaultMessage": "हटाएं"
+  },
+  "common.last-name": {
+    "defaultMessage": "अंतिम नाम"
+  },
+  "admin.public-access": {
+    "defaultMessage": "सार्वजनिक पहुंच"
+  },
+  "admin.status-active": {
+    "defaultMessage": "सक्रिय"
+  },
+  "admin.status-inactive": {
+    "defaultMessage": "निष्क्रिय"
+  },
+  "common.locale": {
+    "defaultMessage": "भाषा"
+  },
+  "login.facebook.button": {
+    "defaultMessage": "Facebook से साइन इन करें"
+  },
+  "common.email": {
+    "defaultMessage": "ईमेल"
+  },
+  "admin.unsuspend-user": {
+    "defaultMessage": "उपयोगकर्ता को पुनः सक्रिय करें"
+  },
+  "common.delete-tag": {
+    "defaultMessage": "टैग हटाएं"
+  },
+  "admin.edit": {
+    "defaultMessage": "संपादित करें"
+  },
+  "common.open-drawer": {
+    "defaultMessage": "मेनू खोलें"
+  },
+  "admin.locked": {
+    "defaultMessage": "लॉक"
+  },
+  "common.settings": {
+    "defaultMessage": "सेटिंग्स"
+  },
+  "common.loading": {
+    "defaultMessage": "लोड हो रहा है..."
+  },
+  "common.retry": {
+    "defaultMessage": "पुनः प्रयास करें"
+  },
+  "admin.system.title": {
+    "defaultMessage": "सिस्टम जानकारी"
+  },
+  "admin.system.refresh": {
+    "defaultMessage": "ताज़ा करें"
+  },
+  "common.refresh": {
+    "defaultMessage": "ताज़ा करें"
+  },
+  "admin.system.memory": {
+    "defaultMessage": "मेमोरी"
+  },
+  "admin.system.db.url": {
+    "defaultMessage": "URL"
+  },
+  "admin.system.jvm": {
+    "defaultMessage": "JVM"
+  },
+  "error.page-title": {
+    "defaultMessage": "अनपेक्षित त्रुटि | WiseMapping"
+  },
+  "error.generic-title": {
+    "defaultMessage": "हमें एक समस्या का सामना करना पड़ा।"
+  },
+  "error.generic-message": {
+    "defaultMessage": "कृपया बाद में फिर से प्रयास करें या समस्या बनी रहने पर सहायता से संपर्क करें।"
+  },
+  "error.permission-denied-title": {
+    "defaultMessage": "आपके पास इस पृष्ठ तक पहुँच नहीं है।"
+  },
+  "error.permission-denied-message": {
+    "defaultMessage": "यदि आपको लगता है कि आपको पहुँच मिलनी चाहिए, तो कृपया अपने व्यवस्थापक से संपर्क करें।"
+  },
+  "error.not-found-title": {
+    "defaultMessage": "हमें वह पृष्ठ नहीं मिला।"
+  },
+  "error.not-found-message": {
+    "defaultMessage": "जिस पृष्ठ की आप तलाश कर रहे हैं वह हटाया गया हो सकता है, उसका नाम बदल दिया गया हो सकता है, या वह अस्थायी रूप से उपलब्ध न हो।"
+  },
+  "error.map-unavailable-title": {
+    "defaultMessage": "यह माइंडमैप सार्वजनिक प्रदर्शन के लिए उपलब्ध नहीं है।"
+  },
+  "error.map-unavailable-message": {
+    "defaultMessage": "यह माइंडमैप सार्वजनिक प्रदर्शन के लिए उपलब्ध नहीं है क्योंकि यह हमारी साइट नीतियों का उल्लंघन करता है। यदि आपको आगे सहायता की आवश्यकता है, तो support@wisemapping.com से संपर्क करें।"
+  },
+  "error.map-title-required": {
+    "defaultMessage": "मानचित्र शीर्षक आवश्यक है और खाली नहीं हो सकता"
+  },
+  "error.security-error": {
+    "defaultMessage": "Mindmap cannot be opened."
+  },
+  "error.undexpected-error-msg": {
+    "defaultMessage": "Unexpected error opening mindmap. Please, try latter."
+  },
+  "accountinfo.personal-details": {
+    "defaultMessage": "Personal Details"
+  },
+  "account.delete-warning-title": {
+    "defaultMessage": "Delete Account"
+  },
+  "account.delete-warning-description": {
+    "defaultMessage": "Once you delete your account, there is no going back. Please be certain."
+  },
+  "account.delete-warning-consequences": {
+    "defaultMessage": "This will permanently delete:"
+  },
+  "account.delete-warning-mindmaps": {
+    "defaultMessage": "All your mindmaps and their content"
+  },
+  "account.delete-warning-data": {
+    "defaultMessage": "All your personal data and account information"
+  },
+  "account.delete-warning-collaborations": {
+    "defaultMessage": "All shared mindmaps and collaborations"
+  },
+  "account.delete-warning-history": {
+    "defaultMessage": "All account history and activity logs"
+  },
+  "account.delete-confirmation-title": {
+    "defaultMessage": "Are you absolutely sure?"
+  },
+  "account.delete-confirmation-warning": {
+    "defaultMessage": "This action cannot be undone. This will permanently delete your account and remove all data from our servers."
+  },
+  "account.delete-confirmation-instruction": {
+    "defaultMessage": "Please type DELETE MY ACCOUNT to confirm:"
+  },
+  "account.delete-confirm": {
+    "defaultMessage": "Delete Account"
+  },
+  "menu.admin-console": {
+    "defaultMessage": "Admin Console"
+  },
+  "registration.form-legend": {
+    "defaultMessage": "Account Information"
+  },
+  "admin.change-password": {
+    "defaultMessage": "Change password"
+  },
+  "admin.change-password-title": {
+    "defaultMessage": "Change Password"
+  },
+  "admin.change-password-description": {
+    "defaultMessage": "Change password for user: {email}"
+  },
+  "admin.new-password": {
+    "defaultMessage": "New Password"
+  },
+  "admin.confirm-password": {
+    "defaultMessage": "Confirm Password"
+  },
+  "admin.change-password-button": {
+    "defaultMessage": "Change Password"
+  },
+  "admin.password-error-length": {
+    "defaultMessage": "Password must be at least 6 characters"
+  },
+  "admin.password-error-mismatch": {
+    "defaultMessage": "Passwords do not match"
+  },
+  "admin.password-error-failed": {
+    "defaultMessage": "Failed to change password"
+  },
+  "admin.password-error-google": {
+    "defaultMessage": "This user is authenticated via Google. Password changes are not available for Google accounts. Please ask the user to manage their password through their Google account."
+  },
+  "admin.password-error-facebook": {
+    "defaultMessage": "This user is authenticated via Facebook. Password changes are not available for Facebook accounts. Please ask the user to manage their password through their Facebook account."
+  },
+  "admin.close": {
+    "defaultMessage": "Close"
+  },
+  "validation.title-required": {
+    "defaultMessage": "शीर्षक आवश्यक है"
+  }
+}

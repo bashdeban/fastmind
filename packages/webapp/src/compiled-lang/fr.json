@@ -1,0 +1,1756 @@
+{
+  "account.delete-confirm": [
+    {
+      "type": 0,
+      "value": "Supprimer le Compte"
+    }
+  ],
+  "account.delete-confirmation-instruction": [
+    {
+      "type": 0,
+      "value": "Veuillez taper SUPPRIMER MON COMPTE pour confirmer :"
+    }
+  ],
+  "account.delete-confirmation-title": [
+    {
+      "type": 0,
+      "value": "Êtes-vous absolument sûr ?"
+    }
+  ],
+  "account.delete-confirmation-warning": [
+    {
+      "type": 0,
+      "value": "Cette action ne peut pas être annulée. Cela supprimera définitivement votre compte et supprimera toutes les données de nos serveurs."
+    }
+  ],
+  "account.delete-warning": [
+    {
+      "type": 0,
+      "value": "Gardez à l'esprit que vous ne pourrez pas récupérer les cartes mentales que vous avez créées. Toutes vos informations seront supprimées et ne pourront pas être restaurées."
+    }
+  ],
+  "account.delete-warning-collaborations": [
+    {
+      "type": 0,
+      "value": "Toutes les cartes mentales partagées et collaborations"
+    }
+  ],
+  "account.delete-warning-consequences": [
+    {
+      "type": 0,
+      "value": "Cela supprimera définitivement :"
+    }
+  ],
+  "account.delete-warning-data": [
+    {
+      "type": 0,
+      "value": "Toutes vos données personnelles et informations de compte"
+    }
+  ],
+  "account.delete-warning-description": [
+    {
+      "type": 0,
+      "value": "Une fois que vous supprimez votre compte, il n'y a pas de retour en arrière. Veuillez être certain."
+    }
+  ],
+  "account.delete-warning-history": [
+    {
+      "type": 0,
+      "value": "Tout l'historique du compte et les journaux d'activité"
+    }
+  ],
+  "account.delete-warning-mindmaps": [
+    {
+      "type": 0,
+      "value": "Toutes vos cartes mentales et leur contenu"
+    }
+  ],
+  "account.delete-warning-title": [
+    {
+      "type": 0,
+      "value": "Supprimer le Compte"
+    }
+  ],
+  "accountinfo.button": [
+    {
+      "type": 0,
+      "value": "J'accepte"
+    }
+  ],
+  "accountinfo.deleteaccount": [
+    {
+      "type": 0,
+      "value": "Supprimer le compte"
+    }
+  ],
+  "accountinfo.email": [
+    {
+      "type": 0,
+      "value": "E-mail"
+    }
+  ],
+  "accountinfo.firstname": [
+    {
+      "type": 0,
+      "value": "Prénom"
+    }
+  ],
+  "accountinfo.lastname": [
+    {
+      "type": 0,
+      "value": "Nom de famille"
+    }
+  ],
+  "accountinfo.personal-details": [
+    {
+      "type": 0,
+      "value": "Détails Personnels"
+    }
+  ],
+  "accountinfo.title": [
+    {
+      "type": 0,
+      "value": "Informations de compte"
+    }
+  ],
+  "action.cancel-button": [
+    {
+      "type": 0,
+      "value": "Annuler"
+    }
+  ],
+  "action.close-button": [
+    {
+      "type": 0,
+      "value": "Fermer"
+    }
+  ],
+  "action.delete": [
+    {
+      "type": 0,
+      "value": "Supprimer"
+    }
+  ],
+  "action.delete-description": [
+    {
+      "type": 0,
+      "value": "La carte mentale supprimée ne peut pas être récupérée. Voulez-vous continuer ?"
+    }
+  ],
+  "action.delete-title": [
+    {
+      "type": 0,
+      "value": "Supprimer"
+    }
+  ],
+  "action.duplicate": [
+    {
+      "type": 0,
+      "value": "Dupliquer"
+    }
+  ],
+  "action.export": [
+    {
+      "type": 0,
+      "value": "Exporter"
+    }
+  ],
+  "action.history": [
+    {
+      "type": 0,
+      "value": "Historique"
+    }
+  ],
+  "action.history-description": [
+    {
+      "type": 0,
+      "value": "Liste des modifications introduites au cours des 90 derniers jours."
+    }
+  ],
+  "action.history-title": [
+    {
+      "type": 0,
+      "value": "Historique des versions"
+    }
+  ],
+  "action.import": [
+    {
+      "type": 0,
+      "value": "Importer"
+    }
+  ],
+  "action.info": [
+    {
+      "type": 0,
+      "value": "Informations"
+    }
+  ],
+  "action.label": [
+    {
+      "type": 0,
+      "value": "Ajouter une étiquette"
+    }
+  ],
+  "action.new": [
+    {
+      "type": 0,
+      "value": "Nouvelle carte"
+    }
+  ],
+  "action.open": [
+    {
+      "type": 0,
+      "value": "Ouvrir"
+    }
+  ],
+  "action.print": [
+    {
+      "type": 0,
+      "value": "Imprimer"
+    }
+  ],
+  "action.publish": [
+    {
+      "type": 0,
+      "value": "Publier"
+    }
+  ],
+  "action.rename": [
+    {
+      "type": 0,
+      "value": "Renommer"
+    }
+  ],
+  "action.rename-description-placeholder": [
+    {
+      "type": 0,
+      "value": "Description"
+    }
+  ],
+  "action.rename-name-placeholder": [
+    {
+      "type": 0,
+      "value": "Nom"
+    }
+  ],
+  "action.share": [
+    {
+      "type": 0,
+      "value": "Partager"
+    }
+  ],
+  "admin.auth-type": [
+    {
+      "type": 0,
+      "value": "Type d'authentification"
+    }
+  ],
+  "admin.change-password": [
+    {
+      "type": 0,
+      "value": "Change password"
+    }
+  ],
+  "admin.change-password-button": [
+    {
+      "type": 0,
+      "value": "Change Password"
+    }
+  ],
+  "admin.change-password-description": [
+    {
+      "type": 0,
+      "value": "Change password for user: "
+    },
+    {
+      "type": 1,
+      "value": "email"
+    }
+  ],
+  "admin.change-password-title": [
+    {
+      "type": 0,
+      "value": "Change Password"
+    }
+  ],
+  "admin.close": [
+    {
+      "type": 0,
+      "value": "Close"
+    }
+  ],
+  "admin.confirm-password": [
+    {
+      "type": 0,
+      "value": "Confirm Password"
+    }
+  ],
+  "admin.delete": [
+    {
+      "type": 0,
+      "value": "Supprimer"
+    }
+  ],
+  "admin.delete-user": [
+    {
+      "type": 0,
+      "value": "Supprimer l'utilisateur"
+    }
+  ],
+  "admin.edit": [
+    {
+      "type": 0,
+      "value": "Modifier"
+    }
+  ],
+  "admin.edit-user": [
+    {
+      "type": 0,
+      "value": "Modifier l'utilisateur"
+    }
+  ],
+  "admin.lock-status": [
+    {
+      "type": 0,
+      "value": "Statut de verrouillage"
+    }
+  ],
+  "admin.locked": [
+    {
+      "type": 0,
+      "value": "Verrouillé"
+    }
+  ],
+  "admin.new-password": [
+    {
+      "type": 0,
+      "value": "New Password"
+    }
+  ],
+  "admin.password-error-facebook": [
+    {
+      "type": 0,
+      "value": "This user is authenticated via Facebook. Password changes are not available for Facebook accounts. Please ask the user to manage their password through their Facebook account."
+    }
+  ],
+  "admin.password-error-failed": [
+    {
+      "type": 0,
+      "value": "Failed to change password"
+    }
+  ],
+  "admin.password-error-google": [
+    {
+      "type": 0,
+      "value": "This user is authenticated via Google. Password changes are not available for Google accounts. Please ask the user to manage their password through their Google account."
+    }
+  ],
+  "admin.password-error-length": [
+    {
+      "type": 0,
+      "value": "Password must be at least 6 characters"
+    }
+  ],
+  "admin.password-error-mismatch": [
+    {
+      "type": 0,
+      "value": "Passwords do not match"
+    }
+  ],
+  "admin.public": [
+    {
+      "type": 0,
+      "value": "Public"
+    }
+  ],
+  "admin.public-access": [
+    {
+      "type": 0,
+      "value": "Accès public"
+    }
+  ],
+  "admin.refresh": [
+    {
+      "type": 0,
+      "value": "Actualiser"
+    }
+  ],
+  "admin.status": [
+    {
+      "type": 0,
+      "value": "Statut"
+    }
+  ],
+  "admin.status-active": [
+    {
+      "type": 0,
+      "value": "Actif"
+    }
+  ],
+  "admin.status-clean": [
+    {
+      "type": 0,
+      "value": "Nettoyer"
+    }
+  ],
+  "admin.status-inactive": [
+    {
+      "type": 0,
+      "value": "Inactif"
+    }
+  ],
+  "admin.status-suspended": [
+    {
+      "type": 0,
+      "value": "Suspendu"
+    }
+  ],
+  "admin.suspend-user": [
+    {
+      "type": 0,
+      "value": "Suspendre l'utilisateur"
+    }
+  ],
+  "admin.suspension-reason": [
+    {
+      "type": 0,
+      "value": "Raison de la suspension"
+    }
+  ],
+  "admin.suspension-status": [
+    {
+      "type": 0,
+      "value": "Statut de suspension"
+    }
+  ],
+  "admin.suspension.abuse": [
+    {
+      "type": 0,
+      "value": "Abus"
+    }
+  ],
+  "admin.suspension.inactivity": [
+    {
+      "type": 0,
+      "value": "Inactivité"
+    }
+  ],
+  "admin.suspension.manual-review": [
+    {
+      "type": 0,
+      "value": "Examen manuel"
+    }
+  ],
+  "admin.suspension.other": [
+    {
+      "type": 0,
+      "value": "Autre"
+    }
+  ],
+  "admin.suspension.security-concern": [
+    {
+      "type": 0,
+      "value": "Préoccupation de sécurité"
+    }
+  ],
+  "admin.suspension.terms-violation": [
+    {
+      "type": 0,
+      "value": "Violation des conditions"
+    }
+  ],
+  "admin.system.db.url": [
+    {
+      "type": 0,
+      "value": "URL"
+    }
+  ],
+  "admin.system.jvm": [
+    {
+      "type": 0,
+      "value": "JVM"
+    }
+  ],
+  "admin.system.memory": [
+    {
+      "type": 0,
+      "value": "Mémoire"
+    }
+  ],
+  "admin.system.refresh": [
+    {
+      "type": 0,
+      "value": "Actualiser"
+    }
+  ],
+  "admin.system.title": [
+    {
+      "type": 0,
+      "value": "Informations Système"
+    }
+  ],
+  "admin.unsuspend-user": [
+    {
+      "type": 0,
+      "value": "Réactiver l'utilisateur"
+    }
+  ],
+  "admin.view-xml": [
+    {
+      "type": 0,
+      "value": "Afficher XML"
+    }
+  ],
+  "changepwd.button": [
+    {
+      "type": 0,
+      "value": "Changer"
+    }
+  ],
+  "changepwd.confirm-password": [
+    {
+      "type": 0,
+      "value": "Confirmez le mot de passe"
+    }
+  ],
+  "changepwd.description": [
+    {
+      "type": 0,
+      "value": "Veuillez fournir le nouveau mot de passe de votre compte."
+    }
+  ],
+  "changepwd.password": [
+    {
+      "type": 0,
+      "value": "Mot de passe"
+    }
+  ],
+  "changepwd.password-match": [
+    {
+      "type": 0,
+      "value": "Le mot de passe ne correspond pas. Veuillez réessayer."
+    }
+  ],
+  "changepwd.title": [
+    {
+      "type": 0,
+      "value": "Changer le mot de passe"
+    }
+  ],
+  "common.allow-email-notifications": [
+    {
+      "type": 0,
+      "value": "Autoriser les notifications par email"
+    }
+  ],
+  "common.delete": [
+    {
+      "type": 0,
+      "value": "Supprimer"
+    }
+  ],
+  "common.delete-tag": [
+    {
+      "type": 0,
+      "value": "Supprimer le tag"
+    }
+  ],
+  "common.email": [
+    {
+      "type": 0,
+      "value": "E-mail"
+    }
+  ],
+  "common.emails": [
+    {
+      "type": 0,
+      "value": "E-mails"
+    }
+  ],
+  "common.first-name": [
+    {
+      "type": 0,
+      "value": "Prénom"
+    }
+  ],
+  "common.last-name": [
+    {
+      "type": 0,
+      "value": "Nom"
+    }
+  ],
+  "common.loading": [
+    {
+      "type": 0,
+      "value": "Chargement..."
+    }
+  ],
+  "common.locale": [
+    {
+      "type": 0,
+      "value": "Langue"
+    }
+  ],
+  "common.login-form": [
+    {
+      "type": 0,
+      "value": "Formulaire de connexion"
+    }
+  ],
+  "common.maps-list": [
+    {
+      "type": 0,
+      "value": "Liste des cartes"
+    }
+  ],
+  "common.open-drawer": [
+    {
+      "type": 0,
+      "value": "Ouvrir le menu"
+    }
+  ],
+  "common.others": [
+    {
+      "type": 0,
+      "value": "Autres"
+    }
+  ],
+  "common.refresh": [
+    {
+      "type": 0,
+      "value": "Actualiser"
+    }
+  ],
+  "common.registration-form": [
+    {
+      "type": 0,
+      "value": "Formulaire d'inscription"
+    }
+  ],
+  "common.retry": [
+    {
+      "type": 0,
+      "value": "Réessayer"
+    }
+  ],
+  "common.settings": [
+    {
+      "type": 0,
+      "value": "Paramètres"
+    }
+  ],
+  "common.wait": [
+    {
+      "type": 0,
+      "value": "S'il vous plaît, attendez ..."
+    }
+  ],
+  "create.button": [
+    {
+      "type": 0,
+      "value": "Créer"
+    }
+  ],
+  "create.description": [
+    {
+      "type": 0,
+      "value": "Veuillez remplir le nouveau nom et la description de la carte."
+    }
+  ],
+  "create.title": [
+    {
+      "type": 0,
+      "value": "Créer une nouvelle carte mentale."
+    }
+  ],
+  "deletem.title": [
+    {
+      "type": 0,
+      "value": "Toutes les cartes sélectionnées seront supprimées"
+    }
+  ],
+  "dialog.loading": [
+    {
+      "type": 0,
+      "value": "Chargement ..."
+    }
+  ],
+  "duplicate.copy-prefix": [
+    {
+      "type": 0,
+      "value": "Copie de "
+    }
+  ],
+  "duplicate.title": [
+    {
+      "type": 0,
+      "value": "Dupliquer"
+    }
+  ],
+  "error.generic-message": [
+    {
+      "type": 0,
+      "value": "Veuillez réessayer plus tard ou contacter le support si le problème persiste."
+    }
+  ],
+  "error.generic-title": [
+    {
+      "type": 0,
+      "value": "Nous avons rencontré un problème."
+    }
+  ],
+  "error.map-title-required": [
+    {
+      "type": 0,
+      "value": "Le titre de la carte est requis et ne peut pas être vide"
+    }
+  ],
+  "error.map-unavailable-message": [
+    {
+      "type": 0,
+      "value": "Cette carte mentale n'est pas disponible pour un affichage public car elle viole nos politiques du site. Si vous avez besoin d'aide supplémentaire, contactez support@wisemapping.com."
+    }
+  ],
+  "error.map-unavailable-title": [
+    {
+      "type": 0,
+      "value": "Cette carte mentale n'est pas disponible pour un affichage public."
+    }
+  ],
+  "error.not-found-message": [
+    {
+      "type": 0,
+      "value": "La page que vous recherchez a peut-être été supprimée, renommée ou est temporairement indisponible."
+    }
+  ],
+  "error.not-found-title": [
+    {
+      "type": 0,
+      "value": "Nous ne trouvons pas cette page."
+    }
+  ],
+  "error.page-title": [
+    {
+      "type": 0,
+      "value": "Erreur inattendue | WiseMapping"
+    }
+  ],
+  "error.permission-denied-message": [
+    {
+      "type": 0,
+      "value": "Si vous pensez devoir y avoir accès, veuillez contacter votre administrateur."
+    }
+  ],
+  "error.permission-denied-title": [
+    {
+      "type": 0,
+      "value": "Vous n'avez pas accès à cette page."
+    }
+  ],
+  "error.security-error": [
+    {
+      "type": 0,
+      "value": "La carte mentale ne peut pas être ouverte."
+    }
+  ],
+  "error.undexpected-error-msg": [
+    {
+      "type": 0,
+      "value": "Erreur inattendue lors de l'ouverture de la carte mentale. Veuillez réessayer plus tard."
+    }
+  ],
+  "expired.description": [
+    {
+      "type": 0,
+      "value": "Votre session actuelle a expiré. Veuillez vous connecter et réessayer."
+    }
+  ],
+  "expired.title": [
+    {
+      "type": 0,
+      "value": "Votre session a expiré"
+    }
+  ],
+  "export.desc": [
+    {
+      "type": 0,
+      "value": "Exportez cette carte dans le format que vous souhaitez et commencez à l'utiliser dans vos présentations ou à partager par e-mail"
+    }
+  ],
+  "export.document": [
+    {
+      "type": 0,
+      "value": "Outils Mindmap : exportez votre carte mentale dans des formats d'outils de carte mentale tiers"
+    }
+  ],
+  "export.document-label": [
+    {
+      "type": 0,
+      "value": "Document : exportez votre carte mentale dans un document autonome prêt à être partagé"
+    }
+  ],
+  "export.image": [
+    {
+      "type": 0,
+      "value": "Image : obtenez une représentation graphique de votre carte, y compris toutes les couleurs et toutes les formes."
+    }
+  ],
+  "export.img-center": [
+    {
+      "type": 0,
+      "value": "Centrer et ajuster le zoom"
+    }
+  ],
+  "export.title": [
+    {
+      "type": 0,
+      "value": "Exportation"
+    }
+  ],
+  "export.warning": [
+    {
+      "type": 0,
+      "value": "L'exportation vers une image (SVG,PNG,JPEG,PDF) n'est disponible que dans la barre d'outils de l'éditeur."
+    }
+  ],
+  "footer.aboutus": [
+    {
+      "type": 0,
+      "value": "À propos de nous"
+    }
+  ],
+  "footer.contactus": [
+    {
+      "type": 0,
+      "value": "Nous contacter"
+    }
+  ],
+  "footer.donations": [
+    {
+      "type": 0,
+      "value": "Des dons"
+    }
+  ],
+  "footer.faq": [
+    {
+      "type": 0,
+      "value": "FAQ."
+    }
+  ],
+  "footer.faqandhelp": [
+    {
+      "type": 0,
+      "value": "Aide et FAQ"
+    }
+  ],
+  "footer.feedback": [
+    {
+      "type": 0,
+      "value": "Retour"
+    }
+  ],
+  "footer.opensource": [
+    {
+      "type": 0,
+      "value": "Open source"
+    }
+  ],
+  "footer.others": [
+    {
+      "type": 0,
+      "value": "Autres"
+    }
+  ],
+  "footer.support": [
+    {
+      "type": 0,
+      "value": "Service"
+    }
+  ],
+  "footer.team": [
+    {
+      "type": 0,
+      "value": "Equipe"
+    }
+  ],
+  "footer.termsandconditions": [
+    {
+      "type": 0,
+      "value": "Termes et conditions"
+    }
+  ],
+  "forgot.desc": [
+    {
+      "type": 0,
+      "value": "Nous vous enverrons un e-mail pour réinitialiser votre mot de passe."
+    }
+  ],
+  "forgot.email": [
+    {
+      "type": 0,
+      "value": "E-mail"
+    }
+  ],
+  "forgot.oauth.back": [
+    {
+      "type": 0,
+      "value": "Retour connexion"
+    }
+  ],
+  "forgot.oauth.message": [
+    {
+      "type": 0,
+      "value": "Vous n'avez pas besoin de mot de passe, veuillez vous connecter en utilisant Facebook ou Google"
+    }
+  ],
+  "forgot.page-title": [
+    {
+      "type": 0,
+      "value": "Mot de passe oublié | WiseMapping"
+    }
+  ],
+  "forgot.register": [
+    {
+      "type": 0,
+      "value": "Envoyer le lien de récupération"
+    }
+  ],
+  "forgot.success.desc": [
+    {
+      "type": 0,
+      "value": "Nous vous avons envoyé un e-mail qui vous permettra de réinitialiser votre mot de passe. Vous devriez le recevoir dans les prochaines minutes."
+    }
+  ],
+  "forgot.success.title": [
+    {
+      "type": 0,
+      "value": "Votre mot de passe temporaire a été envoyé."
+    }
+  ],
+  "forgot.title": [
+    {
+      "type": 0,
+      "value": "réinitialisez votre mot de passe"
+    }
+  ],
+  "forgotsuccess.page-title": [
+    {
+      "type": 0,
+      "value": "Mot de passe récupéré | WiseMapping"
+    }
+  ],
+  "header.donthaveaccount": [
+    {
+      "type": 0,
+      "value": "Vous n'avez pas de compte ?"
+    }
+  ],
+  "header.haveaccount": [
+    {
+      "type": 0,
+      "value": "Vous avez déjà un compte ?"
+    }
+  ],
+  "help.support": [
+    {
+      "type": 0,
+      "value": "Soutien"
+    }
+  ],
+  "history.no-changes": [
+    {
+      "type": 0,
+      "value": "Il n'y a pas de modifications disponibles"
+    }
+  ],
+  "import.button": [
+    {
+      "type": 0,
+      "value": "Créer"
+    }
+  ],
+  "import.description": [
+    {
+      "type": 0,
+      "value": "Vous pouvez importer des cartes WiseMapping, FreeMind, Freeplane, XMind, MindManager et OPML dans votre liste de cartes. Sélectionnez le fichier que vous souhaitez importer."
+    }
+  ],
+  "import.error-file": [
+    {
+      "type": 0,
+      "value": "Échec de l'importation : "
+    },
+    {
+      "type": 1,
+      "value": "error"
+    }
+  ],
+  "import.title": [
+    {
+      "type": 0,
+      "value": "Importer une carte mentale existante"
+    }
+  ],
+  "info.basic-info": [
+    {
+      "type": 0,
+      "value": "Informations de base"
+    }
+  ],
+  "info.button": [
+    {
+      "type": 0,
+      "value": "J'accepte"
+    }
+  ],
+  "info.creation-time": [
+    {
+      "type": 0,
+      "value": "Date de création"
+    }
+  ],
+  "info.creator": [
+    {
+      "type": 0,
+      "value": "Créateur"
+    }
+  ],
+  "info.description": [
+    {
+      "type": 0,
+      "value": "Description"
+    }
+  ],
+  "info.description-msg": [
+    {
+      "type": 0,
+      "value": "En publiant la carte, vous la rendez visible par tous sur Internet."
+    }
+  ],
+  "info.modified-time": [
+    {
+      "type": 0,
+      "value": "Date de la dernière modification"
+    }
+  ],
+  "info.modified-tny": [
+    {
+      "type": 0,
+      "value": "Dernière modification par"
+    }
+  ],
+  "info.name": [
+    {
+      "type": 0,
+      "value": "Nom"
+    }
+  ],
+  "info.public-visibility": [
+    {
+      "type": 0,
+      "value": "Visible publiquement"
+    }
+  ],
+  "info.sharing": [
+    {
+      "type": 0,
+      "value": "Partage"
+    }
+  ],
+  "info.starred": [
+    {
+      "type": 0,
+      "value": "Favoris"
+    }
+  ],
+  "info.title": [
+    {
+      "type": 0,
+      "value": "Info"
+    }
+  ],
+  "label.add-button": [
+    {
+      "type": 0,
+      "value": "Ajouter une étiquette"
+    }
+  ],
+  "label.add-for": [
+    {
+      "type": 0,
+      "value": "Modification des étiquettes pour les cartes :"
+    }
+  ],
+  "label.add-placeholder": [
+    {
+      "type": 0,
+      "value": "Titre de l'étiquette"
+    }
+  ],
+  "label.change-color": [
+    {
+      "type": 0,
+      "value": "Changer la couleur de l'étiquette"
+    }
+  ],
+  "label.delete-description": [
+    {
+      "type": 0,
+      "value": "sera supprimé, y compris ses associations à toutes les cartes existantes. Voulez-vous continuer ?"
+    }
+  ],
+  "label.delete-title": [
+    {
+      "type": 0,
+      "value": "Confirmer la suppression de l'étiquette"
+    }
+  ],
+  "label.description": [
+    {
+      "type": 0,
+      "value": "Utilisez des étiquettes pour organiser vos cartes."
+    }
+  ],
+  "label.maps-count": [
+    {
+      "type": 1,
+      "value": "count"
+    },
+    {
+      "type": 0,
+      "value": " cartes"
+    }
+  ],
+  "label.title": [
+    {
+      "type": 0,
+      "value": "Ajouter une étiquette"
+    }
+  ],
+  "language.change": [
+    {
+      "type": 0,
+      "value": "Changer de langue"
+    }
+  ],
+  "language.help": [
+    {
+      "type": 0,
+      "value": "Aide à la traduction"
+    }
+  ],
+  "login.desc": [
+    {
+      "type": 0,
+      "value": "Connectez-vous à votre compte"
+    }
+  ],
+  "login.division": [
+    {
+      "type": 0,
+      "value": "ou"
+    }
+  ],
+  "login.email": [
+    {
+      "type": 0,
+      "value": "E-mail"
+    }
+  ],
+  "login.error": [
+    {
+      "type": 0,
+      "value": "L'adresse e-mail ou le mot de passe que vous avez entré n'est pas valide."
+    }
+  ],
+  "login.facebook.button": [
+    {
+      "type": 0,
+      "value": "Se connecter avec Facebook"
+    }
+  ],
+  "login.forgotpwd": [
+    {
+      "type": 0,
+      "value": "Mot de passe oublié ?"
+    }
+  ],
+  "login.google.button": [
+    {
+      "type": 0,
+      "value": "Connectez-vous avec Google"
+    }
+  ],
+  "login.page-title": [
+    {
+      "type": 0,
+      "value": "Connexion | WiseMapping"
+    }
+  ],
+  "login.password": [
+    {
+      "type": 0,
+      "value": "Mot de passe"
+    }
+  ],
+  "login.remberme": [
+    {
+      "type": 0,
+      "value": "Souviens-toi de moi"
+    }
+  ],
+  "login.shared-map-notice": [
+    {
+      "type": 0,
+      "value": "Une carte mentale a été partagée avec vous. Veuillez vous connecter pour y accéder. Vous n'avez pas de compte ? Inscrivez-vous gratuitement ou utilisez votre compte Google/Facebook."
+    }
+  ],
+  "login.signin": [
+    {
+      "type": 0,
+      "value": "S'identifier"
+    }
+  ],
+  "login.signup": [
+    {
+      "type": 0,
+      "value": "S'inscrire"
+    }
+  ],
+  "login.title": [
+    {
+      "type": 0,
+      "value": "Bienvenue"
+    }
+  ],
+  "map.creator": [
+    {
+      "type": 0,
+      "value": "Créateur"
+    }
+  ],
+  "map.delete-selected": [
+    {
+      "type": 0,
+      "value": "Supprimer sélectionnée"
+    }
+  ],
+  "map.last-update": [
+    {
+      "type": 0,
+      "value": "Dernière mise à jour"
+    }
+  ],
+  "map.more-actions": [
+    {
+      "type": 0,
+      "value": "Plus d'actions"
+    }
+  ],
+  "map.name": [
+    {
+      "type": 0,
+      "value": "Nom"
+    }
+  ],
+  "map.tooltip-add": [
+    {
+      "type": 0,
+      "value": "Ajouter une étiquette à la sélection"
+    }
+  ],
+  "maps.choose-file": [
+    {
+      "type": 0,
+      "value": "Choisissez un fichier"
+    }
+  ],
+  "maps.copilot-button": [
+    {
+      "type": 0,
+      "value": "Copilote IA"
+    }
+  ],
+  "maps.copilot-dialog.continue": [
+    {
+      "type": 0,
+      "value": "Ouvrir le Copilote"
+    }
+  ],
+  "maps.copilot-dialog.description": [
+    {
+      "type": 0,
+      "value": "Mind Map Copilot est un assistant de brainstorming propulsé par ChatGPT qui transforme vos requêtes en cartes mentales structurées. Nous l'ouvrirons dans un nouvel onglet pour que vous puissiez développer vos idées, générer des sujets et rapporter le meilleur dans WiseMapping."
+    }
+  ],
+  "maps.copilot-dialog.title": [
+    {
+      "type": 0,
+      "value": "Copilote Mindmap propulsé par ChatGPT"
+    }
+  ],
+  "maps.copilot-tooltip": [
+    {
+      "type": 0,
+      "value": "Lancer une carte mentale avec le Copilote IA"
+    }
+  ],
+  "maps.create-tooltip": [
+    {
+      "type": 0,
+      "value": "Créer une nouvelle carte mentale"
+    }
+  ],
+  "maps.empty-result": [
+    {
+      "type": 0,
+      "value": "Aucun enregistrement correspondant trouvé avec les critères de filtre actuels."
+    }
+  ],
+  "maps.import-desc": [
+    {
+      "type": 0,
+      "value": "Importer depuis d'autres outils"
+    }
+  ],
+  "maps.modified": [
+    {
+      "type": 0,
+      "value": "Modifié"
+    }
+  ],
+  "maps.modified-by": [
+    {
+      "type": 0,
+      "value": "Modifié par"
+    }
+  ],
+  "maps.modified-by-desc": [
+    {
+      "type": 0,
+      "value": "Modifié par "
+    },
+    {
+      "type": 1,
+      "value": "by"
+    },
+    {
+      "type": 0,
+      "value": " sur "
+    },
+    {
+      "type": 1,
+      "value": "on"
+    }
+  ],
+  "maps.nav-all": [
+    {
+      "type": 0,
+      "value": "Tout"
+    }
+  ],
+  "maps.nav-onwned": [
+    {
+      "type": 0,
+      "value": "Possédé"
+    }
+  ],
+  "maps.nav-public": [
+    {
+      "type": 0,
+      "value": "Publique"
+    }
+  ],
+  "maps.nav-shared": [
+    {
+      "type": 0,
+      "value": "Partagé avec moi"
+    }
+  ],
+  "maps.nav-starred": [
+    {
+      "type": 0,
+      "value": "Favoris"
+    }
+  ],
+  "maps.page-title": [
+    {
+      "type": 0,
+      "value": "Mes cartes | WiseMapping"
+    }
+  ],
+  "maps.revert": [
+    {
+      "type": 0,
+      "value": "Revenir"
+    }
+  ],
+  "maps.search-action": [
+    {
+      "type": 0,
+      "value": "Chercher ..."
+    }
+  ],
+  "maps.tooltip-open": [
+    {
+      "type": 0,
+      "value": "Ouvrir pour l'édition"
+    }
+  ],
+  "maps.tooltip-starred": [
+    {
+      "type": 0,
+      "value": "Favoris"
+    }
+  ],
+  "maps.untitled": [
+    {
+      "type": 0,
+      "value": "Sans titre"
+    }
+  ],
+  "maps.view": [
+    {
+      "type": 0,
+      "value": "Voir"
+    }
+  ],
+  "menu.account": [
+    {
+      "type": 0,
+      "value": "Compte"
+    }
+  ],
+  "menu.admin-console": [
+    {
+      "type": 0,
+      "value": "Console d'Administration"
+    }
+  ],
+  "menu.change-password": [
+    {
+      "type": 0,
+      "value": "Changer le mot de passe"
+    }
+  ],
+  "menu.signout": [
+    {
+      "type": 0,
+      "value": "Se déconnecter"
+    }
+  ],
+  "publish.button": [
+    {
+      "type": 0,
+      "value": "J'accepte"
+    }
+  ],
+  "publish.checkbox": [
+    {
+      "type": 0,
+      "value": "Activer le partage public"
+    }
+  ],
+  "publish.copied": [
+    {
+      "type": 0,
+      "value": "Copié dans le presse-papiers !"
+    }
+  ],
+  "publish.description": [
+    {
+      "type": 0,
+      "value": "Rendez votre carte publique. Toute personne ayant le lien peut la voir."
+    }
+  ],
+  "publish.embedded": [
+    {
+      "type": 0,
+      "value": "Embarqué"
+    }
+  ],
+  "publish.embedded-msg": [
+    {
+      "type": 0,
+      "value": "Cliquez sur le code pour le copier dans le presse-papiers :"
+    }
+  ],
+  "publish.public-url": [
+    {
+      "type": 0,
+      "value": "URL publique"
+    }
+  ],
+  "publish.public-url-msg": [
+    {
+      "type": 0,
+      "value": "Cliquez sur le lien pour le copier dans le presse-papiers :"
+    }
+  ],
+  "publish.title": [
+    {
+      "type": 0,
+      "value": "Publier"
+    }
+  ],
+  "registation.callback.error.message": [
+    {
+      "type": 0,
+      "value": "Une erreur s'est produite lors de la validation de votre identité, vous pouvez réessayer depuis la page de connexion"
+    }
+  ],
+  "registation.success-title": [
+    {
+      "type": 0,
+      "value": "Inscription réussie | WiseMapping"
+    }
+  ],
+  "registration.callback.back": [
+    {
+      "type": 0,
+      "value": "Retour connexion"
+    }
+  ],
+  "registration.callback.confirm.description": [
+    {
+      "type": 0,
+      "value": "Un compte avec le même e-mail a déjà été enregistré. Voulez-vous lier votre compte "
+    },
+    {
+      "type": 1,
+      "value": "provider"
+    },
+    {
+      "type": 0,
+      "value": " à ce compte WiseMapping ?"
+    }
+  ],
+  "registration.callback.confirm.title": [
+    {
+      "type": 0,
+      "value": "Confirmer"
+    }
+  ],
+  "registration.callback.sync": [
+    {
+      "type": 0,
+      "value": "Compte de synchronisation"
+    }
+  ],
+  "registration.callback.waiting.description": [
+    {
+      "type": 0,
+      "value": "Veuillez patienter pendant que nous validons votre identité"
+    }
+  ],
+  "registration.callback.waiting.title": [
+    {
+      "type": 0,
+      "value": "Finition ..."
+    }
+  ],
+  "registration.desc": [
+    {
+      "type": 0,
+      "value": "L'inscription est gratuite et ne prends qu'un instant"
+    }
+  ],
+  "registration.division": [
+    {
+      "type": 0,
+      "value": "ou"
+    }
+  ],
+  "registration.email": [
+    {
+      "type": 0,
+      "value": "E-mail"
+    }
+  ],
+  "registration.error.title": [
+    {
+      "type": 0,
+      "value": "Échec de l'inscription"
+    }
+  ],
+  "registration.facebook.button": [
+    {
+      "type": 0,
+      "value": "S'inscrire avec Facebook"
+    }
+  ],
+  "registration.firstname": [
+    {
+      "type": 0,
+      "value": "Prénom"
+    }
+  ],
+  "registration.form-legend": [
+    {
+      "type": 0,
+      "value": "Informations du Compte"
+    }
+  ],
+  "registration.google.button": [
+    {
+      "type": 0,
+      "value": "S'inscrire avec Google"
+    }
+  ],
+  "registration.lastname": [
+    {
+      "type": 0,
+      "value": "Nom de famille"
+    }
+  ],
+  "registration.page-title": [
+    {
+      "type": 0,
+      "value": "Inscription | WiseMapping"
+    }
+  ],
+  "registration.password": [
+    {
+      "type": 0,
+      "value": "Mot de passe"
+    }
+  ],
+  "registration.register": [
+    {
+      "type": 0,
+      "value": "S'inscrire"
+    }
+  ],
+  "registration.success.desc": [
+    {
+      "type": 0,
+      "value": "Cliquez sur le bouton \"Connexion\" ci-dessous et commencez à créer des cartes mentales."
+    }
+  ],
+  "registration.termandconditions": [
+    {
+      "type": 0,
+      "value": "Conditions d'utilisation : veuillez vérifier les informations de compte WiseMapping que vous avez saisies ci-dessus et consulter les conditions d'utilisation ici. En cliquant sur \"S'inscrire\" ci-dessous, vous acceptez les conditions d'utilisation ci-dessus et la politique de confidentialité"
+    }
+  ],
+  "registration.title": [
+    {
+      "type": 0,
+      "value": "Devenir membre"
+    }
+  ],
+  "rename.description": [
+    {
+      "type": 0,
+      "value": "Veuillez remplir le nouveau nom et la description de la carte."
+    }
+  ],
+  "rename.title": [
+    {
+      "type": 0,
+      "value": "Renommer"
+    }
+  ],
+  "resetpassword.success.title": [
+    {
+      "type": 0,
+      "value": "Votre compte a été créé avec succès"
+    }
+  ],
+  "role.editor": [
+    {
+      "type": 0,
+      "value": "Éditeur"
+    }
+  ],
+  "role.owner": [
+    {
+      "type": 0,
+      "value": "Propriétaire"
+    }
+  ],
+  "role.viewer": [
+    {
+      "type": 0,
+      "value": "Visualiseur"
+    }
+  ],
+  "share.add-button": [
+    {
+      "type": 0,
+      "value": "Partager"
+    }
+  ],
+  "share.add-message": [
+    {
+      "type": 0,
+      "value": "Ajouter un message"
+    }
+  ],
+  "share.adding-button": [
+    {
+      "type": 0,
+      "value": "Partage en cours..."
+    }
+  ],
+  "share.can-edit": [
+    {
+      "type": 0,
+      "value": "Peut éditer"
+    }
+  ],
+  "share.can-view": [
+    {
+      "type": 0,
+      "value": "Peut voir"
+    }
+  ],
+  "share.delete": [
+    {
+      "type": 0,
+      "value": "Supprimer un collaborateur"
+    }
+  ],
+  "share.delete-description": [
+    {
+      "type": 0,
+      "value": "Ajoutez des collaborateurs. Ils recevront un accès instantané par email pour éditer ensemble."
+    }
+  ],
+  "share.delete-title": [
+    {
+      "type": 0,
+      "value": "Partager avec les gens"
+    }
+  ],
+  "share.message": [
+    {
+      "type": 0,
+      "value": "Message"
+    }
+  ],
+  "theme.dark": [
+    {
+      "type": 0,
+      "value": "Sombre"
+    }
+  ],
+  "theme.light": [
+    {
+      "type": 0,
+      "value": "Clair"
+    }
+  ],
+  "theme.toggle": [
+    {
+      "type": 0,
+      "value": "Changer le Thème"
+    }
+  ],
+  "validation.title-required": [
+    {
+      "type": 0,
+      "value": "Le titre est requis"
+    }
+  ]
+}
