@@ -26,7 +26,7 @@ interface SitemapGeneratorProps {
   }>;
 }
 
-const SitemapGenerator: React.FC<SitemapGeneratorProps> = ({ publicMaps = [] }) => {
+const SitemapGenerator: React.FC<SitemapGeneratorProps> = () => {
   const baseUrl = 'https://www.wisemapping.com';
   const currentDate = new Date().toISOString().split('T')[0];
 
@@ -64,8 +64,6 @@ const SitemapGenerator: React.FC<SitemapGeneratorProps> = ({ publicMaps = [] }) 
       sitemap += `    <priority>${page.priority}</priority>\n`;
       sitemap += '  </url>\n';
     });
-
-    // Add public maps
 
     sitemap += '</urlset>';
     return sitemap;
