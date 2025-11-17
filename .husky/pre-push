@@ -26,23 +26,19 @@ echo "Using yarn at: $YARN_CMD"
 LANG_CHANGED_FILES=$(git diff --name-only @{push} 2>/dev/null || git diff --name-only origin/develop...HEAD 2>/dev/null || git diff --name-only HEAD~1)
 
 EDITOR_LANG_CHANGED=false
-WEBAPP_LANG_CHANGED=false
 
 while IFS= read -r file; do
   if [[ $file == packages/editor/lang/* ]]; then
     EDITOR_LANG_CHANGED=true
-  elif [[ $file == packages/webapp/lang/* ]]; then
-    WEBAPP_LANG_CHANGED=true
   fi
 done <<< "$LANG_CHANGED_FILES"
 
 # Only compile i18n if language files changed
-if [ "$EDITOR_LANG_CHANGED" = true ] || [ "$WEBAPP_LANG_CHANGED" = true ]; then
+if [ "$EDITOR_LANG_CHANGED" = true ]; then
   echo "🔍 Checking for uncommitted changes in language files..."
   
   PACKAGES_TO_CHECK=""
   [ "$EDITOR_LANG_CHANGED" = true ] && PACKAGES_TO_CHECK="$PACKAGES_TO_CHECK packages/editor/lang/"
-  [ "$WEBAPP_LANG_CHANGED" = true ] && PACKAGES_TO_CHECK="$PACKAGES_TO_CHECK packages/webapp/lang/"
   
   if ! git diff --quiet HEAD -- $PACKAGES_TO_CHECK; then
     echo "❌ ERROR: Uncommitted changes detected in language files!"
@@ -55,11 +51,6 @@ if [ "$EDITOR_LANG_CHANGED" = true ] || [ "$WEBAPP_LANG_CHANGED" = true ]; then
   if [ "$EDITOR_LANG_CHANGED" = true ]; then
     echo "   Compiling editor i18n..."
     cd packages/editor && "$YARN_CMD" i18n:compile && cd ../..
-  fi
-  
-  if [ "$WEBAPP_LANG_CHANGED" = true ]; then
-    echo "   Compiling webapp i18n..."
-    cd packages/webapp && "$YARN_CMD" i18n:compile && cd ../..
   fi
 
   # Check if compilation created any new files or modified existing ones
@@ -106,14 +97,9 @@ add_transitive_deps() {
     "web2d")
       mark_affected "mindplot"
       mark_affected "editor"
-      mark_affected "webapp"
       ;;
     "mindplot")
       mark_affected "editor"
-      mark_affected "webapp"
-      ;;
-    "editor")
-      mark_affected "webapp"
       ;;
   esac
 }
@@ -129,14 +115,11 @@ while IFS= read -r file; do
   elif [[ $file == packages/editor/* ]]; then
     mark_affected "editor"
     add_transitive_deps "editor"
-  elif [[ $file == packages/webapp/* ]]; then
-    mark_affected "webapp"
   elif [[ $file == package.json ]] || [[ $file == yarn.lock ]] || [[ $file == webpack.common.js ]] || [[ $file == eslint.config.mjs ]]; then
-    # Root-level changes affect all packages
+    # Root-level changes affect remaining packages
     mark_affected "web2d"
     mark_affected "mindplot"
     mark_affected "editor"
-    mark_affected "webapp"
     break
   fi
 done <<< "$CHANGED_FILES"

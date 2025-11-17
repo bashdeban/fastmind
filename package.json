@@ -40,10 +40,6 @@
       "cd packages/editor && eslint --fix",
       "prettier --write"
     ],
-    "packages/webapp/src/**/*.{ts,tsx}": [
-      "cd packages/webapp && eslint --fix",
-      "prettier --write"
-    ],
     "packages/web2d/src/**/*.{ts,tsx}": [
       "cd packages/web2d && eslint --fix",
       "prettier --write"

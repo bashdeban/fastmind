@@ -1,94 +1,213 @@
-# WiseMapping Frond End
+# WiseMapping Frontend
 
-WiseMapping Front End constitutes an integral component of the MindMap Open Source Project, which commenced its journey in 2010. However, until 2021, substantial architectural updates were sparse. In 2021, a pivotal initiative was undertaken to instigate significant transformations, aimed at revitalizing both the visual aesthetics and underlying technological framework of the project.
+**An open-source, web-based mind mapping tool providing real-time collaborative visualization for individuals and teams.**
 
-Within this repository, WiseMapping Front End encapsulates all user interface-related elements, comprising three principal modules:
+## Project Overview
 
-- Web2D: A lightweight abstraction layer over SVG, facilitating chart rendering with elegance and efficiency.
-- Mindplot: Comprising pure vanilla ES6 classes, this module assumes responsibility for rendering mind maps and facilitating seamless editing functionalities.
-- Editor: REACT component wrapper on mindplot
-- Webapp: A REACT application that serves as the cornerstone of the entire mind map editing experience, orchestrating a fluid and intuitive user interaction paradigm.
+WiseMapping Frontend is a comprehensive mind mapping platform that began in 2010 and underwent significant architectural revitalization in 2021. This repository contains all user interface-related elements for the WiseMapping ecosystem.
 
-For those interested in delving deeper into the implementation details, the corresponding backend repository can be accessed at https://github.com/wisemapping/wisemapping-open-source.
+### Core Modules
 
-## Getting started
+- **@wisemapping/web2d**: A lightweight SVG abstraction layer for elegant and efficient chart rendering
+- **@wisemapping/mindplot**: Pure vanilla ES6 canvas engine for rendering mind maps and editing functionalities
+- **@wisemapping/editor**: React component wrapper providing modern UI components and state management
+- **@wisemapping/webapp**: Complete React application serving as the cornerstone of the mind map editing experience
 
-Make sure you have NodeJs installed (version compatible with `package.json` engine), and yarn installed (`npm i -g yarn`).
+For backend implementation details, visit: [WiseMapping Backend](https://github.com/wisemapping/wisemapping-open-source)
 
-```sh
+## 🚀 Quick Start
+
+### Prerequisites
+
+- **Node.js**: >=18.0.0 (check package.json engines)
+- **Yarn**: Modern version (`npm i -g yarn`)
+- **Git**: For version control
+
+### Setup
+
+```bash
+# Use correct Node.js version
 nvm use
+
+# Install all dependencies
 yarn install
+
+# Required environment variable
 export NODE_OPTIONS=--openssl-legacy-provider
 ```
 
-Please refer to each package's Readme.md for anything specific to the package.
+## 📦 Package Structure
 
-If you want to contribute, please check out [CONTRIBUTING.md](./CONTRIBUTING.md).
+This is a **Lerna monorepo** with three main packages. Each package can be developed and tested independently:
 
-## Useful scripts
+```
+wisemapping/
+├── packages/
+│   ├── web2d/           # SVG rendering abstraction layer
+│   ├── mindplot/        # Core mind map canvas engine
+│   └── editor/          # React component wrapper
+├── memory-bank/         # Project documentation
+└── .clinerules/         # Development guidelines
+```
 
-Each package might provide the following scripts. You can run these for all packages by running it from the root folder. Alternatively you can run it for a specific package by passing the `--scope` option.
+## 🛠️ Available Scripts
 
-### build
+### Available from root directory (runs across all packages):
 
-> Production builds
+| Script | Description |
+|--------|-------------|
+| `yarn build` | Production builds for all packages |
+| `yarn test` | Run all unit and integration tests |
+| `yarn test:unit` | Run unit tests only |
+| `yarn test:integration` | Run Cypress integration tests |
+| `yarn lint` | Run ESLint checks |
+| `yarn lint:fix` | Auto-fix ESLint issues |
+| `yarn clean` | Remove all build artifacts and caches |
 
-`yarn build`
+### Package-specific scripts:
 
-## playground
+```bash
+# Development servers (run from individual package directories)
+yarn playground              # Start development server with examples
+yarn storybook              # Start Storybook for component development
 
-> start a devServer with some browsable examples
+# Testing (run from individual package directories)
+yarn test:unit              # Unit tests for specific package
+yarn cy:open               # Open Cypress test runner
+yarn cy:run                # Run Cypress tests headlessly
 
-`yarn playground --scope @wisemapping/web2d`
-`yarn playground --scope @wisemapping/mindplot`
+# Quality checks (run from individual package directories)
+yarn lint                   # Lint specific package
+yarn lint:fix              # Auto-fix linting issues in package
+```
 
-## test
+## 🧪 Testing & Quality Assurance
 
-> run all the tests
+### Test Infrastructure
 
-`yarn test`
+The project maintains **high quality standards** with comprehensive testing:
 
-> run only integration tests
+- **Unit Tests**: Jest with TypeScript support (`yarn test:unit`)
+- **Integration Tests**: Cypress with visual regression testing
+- **Visual Testing**: Automated screenshot comparisons to prevent UI regressions
+- **Bundle Analysis**: Monitor bundle sizes with `ANALYZE=true`
 
-`yarn test:integration`
+### Running Tests
 
-> run only unit tests
+```bash
+# Run all tests
+yarn test
 
-`yarn test:unit`
+# Unit tests only
+yarn test:unit
 
-**Note:** Integration tests now use **dynamic port allocation** to prevent port conflicts. The test infrastructure will automatically:
+# Integration tests (will automatically handle port conflicts)
+yarn test:integration
+```
 
-- Kill any processes blocking the preferred test ports
-- Find available ports if needed
-- Configure both dev servers and Cypress to use the allocated ports
+**Note**: Integration tests use **dynamic port allocation** to prevent conflicts. The test infrastructure automatically:
+- Detects and resolves port conflicts
+- Finds available ports if needed
+- Configures dev servers and Cypress accordingly
 
-See [TESTING_PORT_ALLOCATION.md](./TESTING_PORT_ALLOCATION.md) for detailed information.
+### Visual Regression Testing
 
-## Image Snapshot Testing
+We use [cypress-image-snapshot](https://www.npmjs.com/package/cypress-image-snapshot) for snapshot testing. This is a cost-effective way to identify behavior changes based on page screenshots.
 
-We use [cypress-image-snapshot](https://www.npmjs.com/package/cypress-image-snapshot) for snapshot testing. This is a relatively cheap way of identifying behavior changes based on page screenshots. See [visual testing docs](https://docs.cypress.io/guides/tooling/visual-testing) for more information.
+**Key workflows:**
 
-When a test that contains a `matchImageSnapshot` call is run, it compares the snapshot to the corresponding one in the `snapshots` directory. If Any change is detected, the test will fail, and the diff can be found in the `cypress/snapshots/*/__diff_output__` folder. If the change is intentional, we should "accept" those changes by updating the snapshot and include it in the commit.
+1. **Run snapshot tests locally:**
+```bash
+# Standard test run
+yarn test:integration
 
-There is a [caveat](https://github.com/jaredpalmer/cypress-image-snapshot/issues/98) where colors, fonts or ui may differ depending on the host machine running the tests.
+# Update snapshots if changes are intentional
+yarn cy:run --env updateSnapshots=true
+```
 
-A workaround for this is to run the tests using docker. Make sure you have docker and docker-compose installed.
+2. **Run snapshot tests in Docker** (for consistent rendering):
+```bash
+# Run tests
+yarn test:integration
 
-Run snapshot tests: `docker-compose -f docker-compose.snapshots.yml up`  
-If anything changed, and the change was intentional, update the snapshots and then commit the new images to source control.  
-Update snapshots: `docker-compose -f docker-compose.snapshots.update.yml up`
+# If snapshots need updating and changes are intentional:
+docker-compose -f docker-compose.snapshots.update.yml up
+```
 
-# Members
+**Important**: If you need to update snapshots, review the changes in the `__diff_output__` folders first to ensure changes are intentional, then commit the updated snapshots.
 
-## Founder
+## 🎨 Development Guidelines
 
-- Paulo Veiga <pveiga@wisemapping.com>
+### Code Quality Standards
 
-## Past Individual Contributors
+This project enforces **strict code quality standards**:
 
-- Ezequiel Bergamaschi <ezequielbergamaschi@gmail.com>
+1. **TypeScript**: Strict mode with zero `any` types allowed
+2. **Material-UI**: Tree-shakeable imports only (500KB+ impact if violated)
+3. **ESLint**: Zero tolerance for linting errors
+4. **Testing**: Comprehensive tests required for new features
+5. **File Organization**: Component directory pattern enforced
 
-## License
+See **`.clinerules/.project-consistency-keeper2.md`** for comprehensive development guidelines and technical documentation.
 
-The source code is Licensed under the WiseMapping Open License, Version 1.0 (the “License”);
-You may obtain a copy of the License at: [https://github.com/wisemapping/wisemapping-open-source/blob/develop/LICENSE.md](https://github.com/wisemapping/wisemapping-open-source/blob/develop/LICENSE.md)
+### Quick Reference
+
+**✅ Correct Material-UI imports:**
+```typescript
+import Button from '@mui/material/Button';
+import SearchIcon from '@mui/icons-material/Search';
+```
+
+**❌ Incorrect Material-UI imports:**
+```typescript
+import { Button, Box } from '@mui/material';  // Pre-push hook will reject
+import { Search } from '@mui/icons-material'; // Pre-push hook will reject
+```
+
+## 📚 Documentation
+
+### Project Documentation
+
+Comprehensive documentation is maintained in the `memory-bank/` directory:
+
+- **[projectbrief.md](./memory-bank/projectbrief.md)** - Project overview and requirements
+- **[systemPatterns.md](./memory-bank/systemPatterns.md)** - Architectural patterns and design decisions
+- **[techContext.md](./memory-bank/techContext.md)** - Technology stack and development setup
+- **[progress.md](./memory-bank/progress.md)** - Implementation status and roadmap
+- **[activeContext.md](./memory-bank/activeContext.md)** - Current development focus
+
+### Package-Specific Documentation
+
+Each package contains detailed documentation:
+
+```bash
+cd packages/web2d && cat README.md
+cd packages/mindplot && cat README.md
+cd packages/editor && cat README.md
+```
+
+## 👥 Contributing
+
+We welcome contributions! Please see **[CONTRIBUTING.md](./CONTRIBUTING.md)** for detailed guidelines.
+
+## 📄 License
+
+This project is **open source** under the **WiseMapping Public License, Version 1.0** (Apache 2.0 based).
+
+[View Full License](https://github.com/wisemapping/wisemapping-open-source/blob/develop/LICENSE.md)
+
+## 👨‍💻 Team
+
+### Founder
+- **Paulo Veiga** <pveiga@wisemapping.com>
+
+### Contributors
+- **Ezequiel Bergamaschi** <ezequielbergamaschi@gmail.com>
+
+## 🙏 Acknowledgments
+
+This project began in 2010 and has been continuously improved by the open-source community. Special thanks to all contributors who have helped maintain and enhance WiseMapping over the years.
+
+---
+
+**Project Status**: 🟢 Active Development | **Version**: 6.0.1 | **Last Updated**: January 2025

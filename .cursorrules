@@ -1,4 +1,4 @@
-# WiseMapping Frontend Rules
+# Rules
 
 ## 1. Material UI Imports (CRITICAL - 500KB+ Bundle Impact)
 
