@@ -1,0 +1,75 @@
+{
+  "name": "@wisemapping/editor-standalone",
+  "version": "1.0.0",
+  "description": "Standalone WiseMapping Editor for browser-based deployment and testing",
+  "main": "dist-standalone/editor-standalone.js",
+  "types": "dist-standalone/index.d.ts",
+  "files": [
+    "dist-standalone/*"
+  ],
+  "scripts": {
+    "build:standalone": "webpack --config webpack.standalone.js --mode production",
+    "serve:standalone": "webpack serve --config webpack.dev.standalone.js --mode development",
+    "build:watch": "webpack --config webpack.standalone.js --mode production --watch",
+    "clean": "rimraf dist-standalone",
+    "dev": "concurrently \"npm run build:watch\" \"npm run serve:standalone\"",
+    "test": "jest",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@wisemapping/editor": "workspace:*",
+    "@wisemapping/mindplot": "workspace:*",
+    "@wisemapping/web2d": "workspace:*",
+    "react-ga4": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "concurrently": "^9.1.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.38.0",
+    "html-webpack-plugin": "^5.6.4",
+    "jest": "^30.2.0",
+    "rimraf": "^6.0.1",
+    "style-loader": "^4.0.0",
+    "ts-jest": "^29.4.5",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "WiseMapping Public License 1.0",
+  "author": {
+    "name": "WiseMapping Team",
+    "email": "team@wisemapping.com"
+  },
+  "keywords": [
+    "wisemapping",
+    "mindmapping",
+    "editor",
+    "standalone",
+    "react",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wisemapping/wisemapping-frontend",
+    "directory": "packages/editor-standalone"
+  },
+  "bugs": {
+    "url": "https://github.com/wisemapping/wisemapping-frontend/issues"
+  },
+  "homepage": "https://www.wisemapping.com"
+}

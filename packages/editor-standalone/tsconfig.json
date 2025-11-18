@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist-standalone",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationDir": "./dist-standalone",
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ES2020",
+    "skipDefaultLibCheck": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "dist-standalone",
+    "node_modules",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ]
+}
