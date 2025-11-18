@@ -93,7 +93,6 @@
 | web2d | ✅ | ✅ | ✅ | 95% | 🟢 Production Ready |
 | mindplot | ✅ | ✅ | ✅ | 90% | 🟢 Production Ready |
 | editor | ✅ | ✅ | ✅ | 90% | 🟢 Production Ready |
-| webapp | ✅ | ✅ | ✅ | 85% | 🟢 Production Ready |
 
 ## What Remains to Build
 
