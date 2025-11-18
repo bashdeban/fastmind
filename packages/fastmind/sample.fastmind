@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="tango">
+    <topic central="true" text="FastMind Mind Map" id="1">
+        <topic position="200,-100" text="Feature 1" id="2">
+            <topic position="300,-150" text="Sub-feature 1.1" id="3"/>
+            <topic position="300,-50" text="Sub-feature 1.2" id="4"/>
+        </topic>
+        <topic position="200,100" text="Feature 2" id="5">
+            <topic position="300,50" text="Sub-feature 2.1" id="6"/>
+            <topic position="300,150" text="Sub-feature 2.2" id="7"/>
+        </topic>
+    </topic>
+</map>

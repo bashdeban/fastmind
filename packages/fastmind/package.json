@@ -1,0 +1,83 @@
+{
+  "name": "@wisemapping/fastmind",
+  "version": "1.0.0",
+  "description": "VS Code Extension integration for WiseMapping Editor",
+  "main": "dist/extension.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build:extension": "webpack --config webpack.extension.js --mode production",
+    "build:watch": "webpack --config webpack.extension.js --mode production --watch",
+    "clean": "rimraf dist",
+    "dev": "concurrently \"npm run build:watch\"",
+    "test": "jest",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.75.0",
+    "concurrently": "^9.1.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "eslint": "^9.38.0",
+    "jest": "^30.2.0",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.4.5",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-merge": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "vscode": "^1.106.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCustomEditor:fastmind.editor"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "fastmind.editor",
+        "displayName": "WiseMapping FastMind Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.fastmind"
+          }
+        ],
+        "priority": "default"
+      }
+    ]
+  },
+  "capabilities": {
+    "virtualWorkspaces": true
+  },
+  "license": "WiseMapping Public License 1.0",
+  "author": {
+    "name": "WiseMapping Team",
+    "email": "team@wisemapping.com"
+  },
+  "keywords": [
+    "wisemapping",
+    "mindmapping",
+    "vscode",
+    "extension",
+    "editor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wisemapping/wisemapping-frontend",
+    "directory": "packages/fastmind"
+  },
+  "bugs": {
+    "url": "https://github.com/wisemapping/wisemapping-frontend/issues"
+  },
+  "homepage": "https://www.wisemapping.com"
+}

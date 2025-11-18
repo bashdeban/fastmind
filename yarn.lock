@@ -5135,6 +5135,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^22.0.0":
+  version: 22.19.1
+  resolution: "@types/node@npm:22.19.1"
+  dependencies:
+    undici-types: ~6.21.0
+  checksum: 62b72e26a51659e654cfd6791f296a95ebc4b1deb1fa97f7a5cea4032434d1b4f14021f6e52eb9ea0cc1d1a7ab90567797a25c3865e3ea3d2caf6b3ea0ac4c4d
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.4
   resolution: "@types/normalize-package-data@npm:2.4.4"
@@ -5326,6 +5335,13 @@ __metadata:
   version: 2.0.7
   resolution: "@types/trusted-types@npm:2.0.7"
   checksum: 8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
+  languageName: node
+  linkType: hard
+
+"@types/vscode@npm:^1.75.0":
+  version: 1.106.1
+  resolution: "@types/vscode@npm:1.106.1"
+  checksum: 72e565223a415df1714fd8a44a69beb7921cd1c68e3f59acc4b43687ab169939be80ce4ec321ccb45e60f6f0d4d94a83a0ddd89e6a6925a68556c30f0f3b8daa
   languageName: node
   linkType: hard
 
@@ -6059,6 +6075,27 @@ __metadata:
   peerDependencies:
     react: ^19.0.0
     react-dom: ^19.0.0
+  languageName: unknown
+  linkType: soft
+
+"@wisemapping/fastmind@workspace:packages/fastmind":
+  version: 0.0.0-use.local
+  resolution: "@wisemapping/fastmind@workspace:packages/fastmind"
+  dependencies:
+    "@types/jest": ^30.0.0
+    "@types/node": ^22.0.0
+    "@types/vscode": ^1.75.0
+    concurrently: ^9.1.0
+    copy-webpack-plugin: ^13.0.1
+    eslint: ^9.38.0
+    jest: ^30.2.0
+    rimraf: ^6.0.1
+    ts-jest: ^29.4.5
+    ts-loader: ^9.5.4
+    typescript: ^5.9.3
+    webpack: ^5.102.1
+    webpack-cli: ^6.0.1
+    webpack-merge: ^6.0.1
   languageName: unknown
   linkType: soft
 
@@ -18710,6 +18747,13 @@ __metadata:
     has-symbols: ^1.1.0
     which-boxed-primitive: ^1.1.1
   checksum: 729f13b84a5bfa3fead1d8139cee5c38514e63a8d6a437819a473e241ba87eeb593646568621c7fc7f133db300ef18d65d1a5a60dc9c7beb9000364d93c581df
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 46331c7d6016bf85b3e8f20c159d62f5ae471aba1eb3dc52fff35a0259d58dcc7d592d4cc4f00c5f9243fa738a11cfa48bd20203040d4a9e6bc25e807fab7ab3
   languageName: node
   linkType: hard
 
