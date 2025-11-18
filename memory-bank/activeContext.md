@@ -2,9 +2,16 @@
 
 ## Current Work Focus
 
-### Immediately Focused Package: `@wisemapping/editor`
+### Immediately Focused Package: `@wisemapping/fastmind`
 
-The **Editor Package** is the current primary focus for development and improvement. This is the React component wrapper layer that bridges the low-level mindplot canvas engine with the high-level webapp application.
+The **FastMind VS Code Extension** is the current primary focus for development. This package implements VS Code's CustomTextEditorProvider to enable editing `.fastmind` files directly within VS Code using the WiseMapping editor.
+
+**Current Status**: ✅ Stage 1 Complete - Basic display functionality working
+**Next**: Stage 2 - Data interaction and synchronization implementation
+
+### Secondary Focus: `@wisemapping/editor`
+
+The **Editor Package** remains important as the React component wrapper layer that bridges the low-level mindplot canvas engine with the high-level webapp application. The FastMind extension uses the editor-standalone build of this package.
 
 ## Recently Implemented Changes
 
