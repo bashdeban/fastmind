@@ -243,3 +243,190 @@
 **更新时间**: 2025-01-18  
 **负责人**: Cline AI Assistant  
 **状态**: 规划完成，待实施确认
+
+
+## 独立版本的两种运行模式
+
+### 1. 开发模式（需要服务器）
+```bash
+yarn serve:standalone
+# → 启动 webpack-dev-server
+# → 访问 http://localhost:8082/index.html
+```
+
+**为什么开发时需要服务器？**
+- **热重载**: 代码修改后自动刷新页面
+- **模块解析**: 动态加载 ES modules 和依赖
+- **Source Maps**: 调试时映射到源码
+- **CORS 处理**: 解决跨域问题
+- **API 代理**: 如果需要后端服务
+
+### 2. 生产模式（不需要服务器）
+```bash
+yarn build:standalone
+# → 生成 packages/editor-standalone/dist-standalone/
+
+# 然后可以直接：
+# 1. 双击打开 dist-standalone/index.html
+# 2. 或者用任何静态文件服务器
+# 3. 或者打包到应用中
+```
+
+## 构建产物的运行方式
+
+### 完全独立运行
+```html
+<!-- dist-standalone/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="editor-standalone.css">
+</head>
+<body>
+    <div id="root"></div>
+    <!-- 所有依赖都打包在这个文件里 -->
+    <script src="editor-standalone.js"></script>
+</body>
+</html>
+```
+
+### 多种部署方式
+```bash
+# 1. 直接双击 HTML 文件
+open packages/editor-standalone/dist-standalone/index.html
+
+# 2. 用简单 HTTP 服务器
+cd packages/editor-standalone/dist-standalone
+python -m http.server 8080
+# 或者
+npx serve .
+
+# 3. 集成到其他应用
+# 直接复制整个 dist-standalone/ 目录
+```
+
+## Webpack 配置差异
+
+### 开发服务器配置
+```javascript
+// packages/editor-standalone/webpack.dev.standalone.js
+module.exports = {
+  mode: 'development',
+  devtool: 'eval-cheap-module-source-map',
+  devServer: {
+    port: 8082,
+    hot: true,
+    liveReload: true,
+    static: {
+      directory: path.join(__dirname, 'dist-standalone'),
+    },
+  },
+  // 开发时不打包所有依赖，使用动态导入
+  externals: {}, // 或者部分 externals
+};
+```
+
+### 生产构建配置
+```javascript
+// packages/editor-standalone/webpack.standalone.js
+module.exports = {
+  mode: 'production',
+  output: {
+    path: path.resolve(__dirname, 'dist-standalone'),
+    filename: 'editor-standalone.js',
+    library: { type: 'umd' }, // 可以作为全局库使用
+  },
+  // 打包所有依赖，零外部依赖
+  externals: {},
+  optimization: {
+    minimize: true,
+    splitChunks: false, // 单文件打包
+  },
+};
+```
+
+## 使用场景对比
+
+### 开发场景
+```bash
+# 开发时 - 需要服务器
+yarn serve:standalone
+# ✅ 热重载
+# ✅ 快速调试
+# ✅ 开发工具支持
+
+# 构建测试
+yarn build:standalone
+# ✅ 验证构建结果
+# ✅ 测试独立运行
+```
+
+### 生产场景
+```bash
+# 生产部署 - 不需要服务器
+yarn build:standalone
+
+# 然后可以：
+# 1. 直接运行 HTML
+# 2. 集成到 VS Code Extension
+# 3. 嵌入到其他应用
+# 4. 部署到 CDN
+```
+
+## 具体的文件独立性
+
+### 构建后的文件结构
+```
+dist-standalone/
+├── index.html              # 包含所有引用的完整 HTML
+├── editor-standalone.js    # 包含所有 JS 依赖的 bundle
+├── editor-standalone.css   # 包含所有样式的 bundle
+└── assets/                 # 静态资源
+    ├── images/
+    └── samples/
+```
+
+### 零依赖运行
+```javascript
+// editor-standalone.js 包含了：
+// - React 代码
+// - @wisemapping/editor 组件
+// - @wisemapping/mindplot 引擎
+// - @wisemapping/web2d 渲染层
+// - Material-UI 组件
+// - 所有第三方库
+
+// 外部只需要：
+// 1. 一个现代浏览器
+// 2. 一个 HTML 容器
+// 3. 可选的网络连接（如果加载外部资源）
+```
+
+## 验证方式
+
+### 开发验证
+```bash
+# 1. 启动开发服务器
+yarn serve:standalone
+
+# 2. 访问测试
+open http://localhost:8082
+
+# 3. 修改代码，自动刷新
+```
+
+### 生产验证
+```bash
+# 1. 构建
+yarn build:standalone
+
+# 2. 独立测试（零服务器）
+open packages/editor-standalone/dist-standalone/index.html
+
+# 3. 或者用简单服务器测试
+cd packages/editor-standalone/dist-standalone && npx serve .
+```
+
+**总结**：
+- **开发时**：需要 webpack-dev-server 支持热重载和调试
+- **生产时**：完全独立，不需要任何服务器，可以直接运行 HTML 文件

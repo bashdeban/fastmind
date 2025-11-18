@@ -243,3 +243,209 @@
 **更新时间**: 2025-01-18  
 **负责人**: Cline AI Assistant  
 **状态**: 规划完成，待实施确认
+
+
+## 功能需求分析
+
+### 核心功能
+1. **文件关联**: `.fastmind` 后缀文件激活 Extension
+2. **文件格式**: 与 `welcome.wxml` 一致的 XML 格式
+3. **默认内容**: 新建空文件时使用 `welcome.wxml` 格式的默认数据
+4. **双向同步**: 文件 ↔ Extension 数据实时同步
+
+### VS Code Extension API 匹配分析
+
+根据官方文档，您的需求完美匹配 **CustomTextEditorProvider**：
+
+#### ✅ 推荐使用 CustomTextEditorProvider
+- `.fastmind` 是 **文本格式**（XML），适合 `CustomTextEditorProvider`
+- VS Code 自动处理 TextDocument，简化实现
+- 支持标准的保存、撤销/重做操作
+
+#### ✅ Activation Events 支持
+```json
+"activationEvents": [
+  "onCustomEditor:fastmind.editor"
+]
+```
+
+#### ✅ Custom Editors 贡献点
+```json
+"contributes": {
+  "customEditors": [
+    {
+      "viewType": "fastmind.editor",
+      "displayName": "WiseMapping Editor",
+      "selector": [
+        {
+          "filenamePattern": "*.fastmind"
+        }
+      ],
+      "priority": "default"
+    }
+  ]
+}
+```
+
+## 修正后的架构设计
+
+### 包结构调整
+```
+packages/
+├── editor/                    # 核心组件库
+├── fastmind/                  # VS Code Extension 集成包
+│   ├── src/
+│   │   ├── FastmindExtension.ts    # Extension 主入口
+│   │   ├── FastmindEditorProvider.ts # CustomTextEditorProvider 实现
+│   │   ├── storage/              # VS Code 文件系统适配
+│   │   └── types.ts             # Extension 类型定义
+│   ├── dist/                   # 构建输出（给 Extension 使用）
+│   └── webpack.extension.js       # Extension 构建配置
+└── editor-standalone/         # 独立版本（保持原计划）
+```
+
+### 核心实现策略
+
+#### 1. FastmindEditorProvider 实现
+```typescript
+export class FastmindEditorProvider implements CustomTextEditorProvider {
+  resolveCustomTextEditor(
+    document: TextDocument,
+    webviewPanel: WebviewPanel,
+    token: CancellationToken
+  ): void | Thenable<void> {
+    // 使用 @wisemapping/editor 组件渲染 webview
+    webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
+  }
+
+  private getHtmlForWebview(webview: Webview) {
+    // 加载 fastmind 构建产物的 JS/CSS
+    return `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <link rel="stylesheet" href="${webview.asWebviewUri(distPath}/fastmind.css">
+        <script src="${webview.asWebviewUri(distPath)/fastmind.js"></script>
+      </head>
+      <body>
+        <div id="root"></div>
+        <script>
+          // 初始化 editor，传入 document 内容
+          window.WiseMappingFastMind.loadXml('${this.escapeHtml(document.getText())}');
+        </script>
+      </body>
+      </html>
+    `;
+  }
+}
+```
+
+#### 2. 双向数据同步
+```typescript
+// Webview → VS Code
+window.vscode.postMessage({
+  type: 'updateContent',
+  content: editor.getXml()
+});
+
+// VS Code → Webview  
+vscode.workspace.onDidChangeTextDocument(event => {
+  if (event.document.uri.scheme === 'file' && event.document.uri.fsPath.endsWith('.fastmind')) {
+    this.webviewPanel?.webview.postMessage({
+      type: 'contentChanged',
+      content: event.document.getText()
+    });
+  }
+});
+```
+
+#### 3. 默认内容处理
+```typescript
+// 检查文件是否为空，如果为空则使用默认内容
+private async ensureDefaultContent(document: TextDocument): Promise<void> {
+  if (document.getText().trim() === '') {
+    const defaultContent = await this.getDefaultContent();
+    const edit = new WorkspaceEdit();
+    edit.replace(document.uri, new Range(0, 0, document.lineCount, 0), defaultContent);
+    await vscode.workspace.applyEdit(edit);
+  }
+}
+
+private async getDefaultContent(): Promise<string> {
+  // 从 packages/editor/test/playground/map-render/samples/welcome.wxml 读取
+  const defaultPath = path.join(__dirname, '../../editor/test/playground/map-render/samples/welcome.wxml');
+  return fs.readFileSync(defaultPath, 'utf8');
+}
+```
+
+### 构建和集成流程
+
+#### 1. Fastmind 包构建
+```bash
+# packages/fastmind/build.js
+const path = require('path');
+const fs = require('fs');
+
+// 复制 editor-standalone 构建产物到 fastmind/dist
+function copyStandaloneBuild() {
+  const source = path.join(__dirname, '../editor-standalone/dist-standalone');
+  const target = path.join(__dirname, 'dist');
+  
+  // 复制构建产物
+  fs.copySync(source, target, { recursive: true });
+}
+```
+
+#### 2. Extension 包结构（外部）
+```
+vscode-wisemapping-extension/
+├── src/
+│   └── extension.ts          # 使用 @wisemapping/fastmind
+├── resources/                # 从 packages/fastmind/dist 复制
+│   └── fastmind/
+│       ├── fastmind.js
+│       ├── fastmind.css
+│       └── assets/
+└── package.json
+```
+
+### 开发工作流
+
+#### 统一修改同步
+```bash
+# 1. 修改 @wisemapping/editor
+# 2. 重新构建所有变体
+yarn build:all
+# → editor-standalone 更新
+# → fastmind 构建产物更新
+# → Extension 可以立即使用新版本
+```
+
+#### 测试验证
+```bash
+# 1. 测试独立版本
+yarn serve:standalone
+# → 访问 http://localhost:8082
+
+# 2. 测试 Extension
+cd vscode-wisemapping-extension
+yarn dev
+# → 打开 .fastmind 文件测试
+```
+
+## 关键优势
+
+### ✅ 完全符合 VS Code Extension 规范
+- 使用官方推荐的 `CustomTextEditorProvider`
+- 支持标准的文本编辑操作
+- 正确的激活事件和贡献点配置
+
+### ✅ 文件格式兼容
+- 直接使用现有的 WXML 格式
+- 默认内容与 playground 保持一致
+- 双向数据同步实时更新
+
+### ✅ 开发效率
+- 一次修改，多处同步更新
+- 独立测试验证
+- 标准的 Extension 开发流程
