@@ -61,8 +61,35 @@ packages/fastmind/
 ### Extension 无法加载
 1. 确保已运行 `yarn build:extension`
 2. 检查 `dist/package.json` 是否存在
-3. 验证 VS Code 版本 >= 1.85.0
-4. 检查 `engines.vscode` 格式是否正确（应为具体版本号，如 "1.85.0"）
+3. 验证 VS Code 版本 >= 1.106.0
+4. 检查 `engines.vscode` 格式是否正确（应为 `^1.106.0`）
+
+### IDE 模块导入错误提示
+如果 VS Code IDE 显示 `Cannot find module './FastmindEditorProvider'` 错误：
+
+1. **重启 VS Code TypeScript 语言服务**：
+   - 按 `Cmd+Shift+P` (macOS) 或 `Ctrl+Shift+P` (Windows/Linux)
+   - 输入 `TypeScript: Restart TS Server`
+   - 选择并执行
+
+2. **清除 VS Code 缓存**：
+   - 关闭 VS Code
+   - 删除 `.vscode/` 目录下的缓存文件
+   - 重新打开 VS Code
+
+3. **验证文件结构**：
+   ```bash
+   cd packages/fastmind/src
+   ls -la FastmindEditorProvider.ts  # 确认文件存在
+   ```
+
+4. **检查 TypeScript 编译**：
+   ```bash
+   cd packages/fastmind
+   npx tsc --noEmit  # 应该无错误输出
+   ```
+
+**注意**：即使 IDE 显示错误提示，只要 `npx tsc --noEmit` 无错误且 `yarn build:extension` 成功，Extension 就能正常运行。
 
 ### 编辑器显示异常
 1. 检查 `dist/assets/` 目录是否存在

@@ -2,13 +2,8 @@
  * Types for VS Code Extension integration
  */
 
-export interface FastmindEditorProvider {
-  resolveCustomTextEditor(
-    document: any,
-    webviewPanel: any,
-    token: any
-  ): void | Promise<void>;
-}
+// Note: FastmindEditorProvider class is defined in FastmindEditorProvider.ts
+// This interface was removed to avoid naming conflicts
 
 export interface WebviewMessage {
   type: string;

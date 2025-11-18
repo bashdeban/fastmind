@@ -1,6 +1,4 @@
 import * as vscode from 'vscode';
-import * as path from 'path';
-import { WebviewMessage } from './types';
 
 export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
   public static readonly viewType = 'fastmind.editor';
@@ -56,9 +54,6 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       </html>`;
   }
 
-  private _getUri(webview: vscode.Webview, ...pathSegments: string[]): vscode.Uri {
-    return webview.asWebviewUri(vscode.Uri.joinPath(this._extensionUri, ...pathSegments));
-  }
 }
 
 function getNonce(): string {
