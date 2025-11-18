@@ -23,73 +23,84 @@
 └── playground (测试环境)
 ```
 
-## 开发任务分解
+## 开发任务分解（分阶段实施）
 
-### Phase 1: 基础设施搭建
+### 阶段一：基础显示实现（预计 1-2 天）
 
-#### 1.1 创建 fastmind 包结构
+**目标**：让 fastmind extension 能够成功加载并显示 editor-standalone，暂时不考虑数据同步。
+
+#### 1.1 创建 fastmind 包基础结构
 - [ ] 创建 `packages/fastmind/package.json`
-  - 配置依赖：`@wisemapping/editor`、`@vscode/extension-api`
-  - 配置构建脚本：`build:extension`、`dev:extension`
+  - 配置依赖：`@vscode/extension-api`
+  - 配置构建脚本：`build:extension`
   - 配置激活事件：`onCustomEditor:fastmind.editor`
+  - 配置贡献点：`customEditors`
 
 - [ ] 创建 `packages/fastmind/tsconfig.json`
   - 继承项目根配置
   - 配置编译输出到 `dist/`
 
-- [ ] 创建 `packages/fastmind/webpack.extension.js`
-  - 构建配置：将 fastmind 打包到 `dist/`
-  - 集成 editor-standalone 构建产物
-  - 支持开发和生产模式
-
-#### 1.2 创建 editor-standalone 包结构
-- [ ] 创建 `packages/editor-standalone/package.json`
-  - 配置依赖：`@wisemapping/editor`
-  - 配置构建脚本：`build:standalone`、`serve:standalone`
-  - 配置输出：`dist-standalone/`
-
-- [ ] 创建 `packages/editor-standalone/tsconfig.json`
-  - 继承项目根配置
-
-- [ ] 创建 `packages/editor-standalone/webpack.standalone.js`
-  - 独立构建配置
-  - 输出：`dist-standalone/index.html`、`editor-standalone.js`、`editor-standalone.css`
-  - 包含所有依赖的 UMD bundle
-
-### Phase 2: 核心 Extension 实现
-
-#### 2.1 CustomTextEditorProvider 实现
-- [ ] 创建 `packages/fastmind/src/FastmindEditorProvider.ts`
-  - 实现 `CustomTextEditorProvider` 接口
-  - `resolveCustomTextEditor`: 渲染 webview
-  - `getHtmlForWebview`: 生成 HTML 内容
-
+#### 1.2 实现最基础的 CustomTextEditorProvider
 - [ ] 创建 `packages/fastmind/src/FastmindExtension.ts`
   - Extension 主入口
   - 注册 `CustomTextEditorProvider`
-  - 配置 activation 事件
+
+- [ ] 创建 `packages/fastmind/src/FastmindEditorProvider.ts`
+  - 实现 `CustomTextEditorProvider` 接口
+  - `resolveCustomTextEditor`: 渲染 webview
+  - `getHtmlForWebview`: 生成 HTML 内容（加载 editor-standalone）
 
 - [ ] 创建 `packages/fastmind/src/types.ts`
   - Extension 相关类型定义
-  - Webview 消息类型
-  - 编辑器配置接口
 
-#### 2.2 Webview 集成
-- [ ] 实现 Webview HTML 模板
-  - 加载 fastmind.js 和 fastmind.css
-  - 初始化编辑器实例
-  - 传入文档内容
+#### 1.3 集成 editor-standalone 构建产物
+- [ ] 创建 `packages/fastmind/webpack.extension.js`
+  - 构建 Extension 代码到 `dist/`
+  - 复制 editor-standalone 产物到 `dist/`
 
-- [ ] 实现 Webview 消息处理
-  - 接收编辑器更新消息
-  - 发送文档变更通知
-  - 错误处理和日志
+- [ ] 配置构建脚本
+  - 实现复制 editor-standalone 构建产物到 fastmind/dist
+  - 生成完整的 Extension 资源
 
-### Phase 3: 数据同步实现
+#### 1.4 基础测试验证
+- [ ] 创建基础 Extension package.json 配置（外部 Extension）
+- [ ] 测试：打开 .fastmind 文件能看到编辑器界面
+- [ ] 验证：editor-standalone 默认数据显示正常
 
-#### 3.1 双向数据同步
+**注意**：此阶段**不需要修改 editor-standalone**，直接使用现有构建产物和 LocalStorageManager 的默认数据。
+
+### 阶段二：数据交互实现（预计 2-3 天）
+
+**目标**：实现完整的双向数据同步和文件操作功能。
+
+#### 2.1 editor-standalone 接口扩展
+- [ ] 在 editor-standalone 中添加 Extension 接口
+  ```typescript
+  window.WiseMappingEditorStandalone.loadXml = (xmlContent: string) => void;
+  window.WiseMappingEditorStandalone.getXml = () => string;
+  window.WiseMappingEditorStandalone.onContentChange = (callback: Function) => void;
+  ```
+
+- [ ] 修改初始化逻辑
+  - 支持按需调用（非自动启动）
+  - 增加 Extension 模式检测
+
+- [ ] 优化资源路径处理
+  - 支持相对路径和 webview URI
+
+#### 2.2 实现 XML 内容加载
+- [ ] 在 FastmindEditorProvider 中实现文档内容传递
+  - 读取 TextDocument 的 XML 内容
+  - 通过 webview 传递给 editor-standalone
+
+- [ ] 实现 editor-standalone 接收和渲染 XML
+  - 调用 `loadXml()` 方法
+  - 替换默认的 LocalStorageManager 数据
+
+#### 2.3 实现双向数据同步
 - [ ] 实现 Webview → VS Code 同步
   - 监听编辑器内容变更
+  - 通过 `onContentChange()` 回调获取 XML
   - 发送 `updateContent` 消息到 Extension
   - 触发 `WorkspaceEdit` 更新 TextDocument
 
@@ -97,13 +108,14 @@
   - 监听 `onDidChangeTextDocument` 事件
   - 过滤 `.fastmind` 文件变更
   - 发送 `contentChanged` 消息到 Webview
+  - 调用 `loadXml()` 更新编辑器
 
 - [ ] 处理同步冲突
   - 防止循环更新
   - 实现防抖机制
   - 错误恢复策略
 
-#### 3.2 默认内容处理
+#### 2.4 默认内容处理
 - [ ] 实现空文件检测
   - 在 `resolveCustomTextEditor` 中检查文档内容
   - 调用 `ensureDefaultContent` 方法
@@ -113,58 +125,47 @@
   - 适配为新文件格式
   - 应用初始编辑器配置
 
-### Phase 4: 构建集成
+#### 2.5 完整功能测试
+- [ ] 测试新建 .fastmind 文件
+  - 自动填充默认内容
+  - 编辑操作正常
 
-#### 4.1 构建流程
-- [ ] 实现 fastmind 构建脚本
-  - 构建 Extension 代码到 `dist/`
-  - 复制 editor-standalone 产物到 `dist/`
-  - 生成完整的 Extension 资源
+- [ ] 测试现有 .fastmind 文件
+  - 正确加载和显示
+  - 编辑和保存功能
 
-- [ ] 实现 editor-standalone 构建脚本
-  - 构建 React 应用到 UMD bundle
-  - 处理静态资源复制
-  - 生成可独立运行的 HTML
+- [ ] 测试双向同步
+  - 编辑器修改 → 文件更新
+  - 文件外部修改 → 编辑器更新
 
-#### 4.2 资源管理
-- [ ] 复制静态资源
-  - 从 playground 复制 `images/` 到 `editor-standalone/src/assets/`
-  - 复制 `samples/` 目录
+### 阶段三：优化和完善（预计 1-2 天）
+
+#### 3.1 资源管理优化
+- [ ] 处理静态资源复制
+  - 从 playground 复制 `images/` 到 `fastmind/dist/assets/`
   - 更新资源引用路径
 
-- [ ] 处理样式和主题
-  - 集成 Material-UI 样式
+- [ ] 样式和主题适配
   - 支持 VS Code 主题适配
-  - 响应式设计
+  - 响应式设计优化
 
-### Phase 5: 测试和验证
-
-#### 5.1 功能测试
+#### 3.2 测试和验证
 - [ ] 单元测试
   - FastmindEditorProvider 测试
   - 数据同步逻辑测试
-  - 默认内容处理测试
 
 - [ ] 集成测试
   - Extension 激活测试
-  - `.fastmind` 文件编辑测试
-  - 双向同步验证
+  - 完整编辑流程测试
 
-- [ ] 独立版本测试
-  - 浏览器兼容性测试
-  - 功能完整性验证
-  - 性能测试
-
-#### 5.2 开发工作流验证
-- [ ] 统一构建流程
-  - `yarn build:all` 构建所有变体
+- [ ] 开发工作流验证
+  - 统一构建流程：`yarn build:all`
   - 验证同步更新机制
-  - 测试热重载功能
 
-- [ ] 开发服务器测试
-  - Extension 开发模式
-  - Standalone 开发服务器
-  - 并行开发支持
+#### 3.3 文档和发布准备
+- [ ] 完善 README 和使用文档
+- [ ] 配置发布脚本
+- [ ] 最终验收测试
 
 ## 技术要点
 
