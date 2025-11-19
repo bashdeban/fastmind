@@ -48,4 +48,4 @@ wisemapping-frontend.code-workspace
 
 packages/**/.yalc/
 packages/**/yalc.lock
-temp/resources/VS Code Extension Developments API/*
+temp/resources/*
