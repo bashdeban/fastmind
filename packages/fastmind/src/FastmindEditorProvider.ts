@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { Utils } from 'vscode-uri'; // 确保使用了这个或使用 path 模块
 
 export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
   public static readonly viewType = 'fastmind.editor';
@@ -17,10 +18,16 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     webviewPanel: vscode.WebviewPanel,
     _token: vscode.CancellationToken
   ): void | Promise<void> {
+    // 1. 获取文档所在的目录
+    const documentDir = Utils.dirname(document.uri);
+
     // Setup initial content for the webview
     webviewPanel.webview.options = {
       enableScripts: true,
-      localResourceRoots: [this._extensionUri],
+      localResourceRoots: [
+        this._extensionUri, // 允许访问插件资源 (js/css)
+        documentDir         // 允许访问当前打开文件所在的目录
+      ],
     };
 
     webviewPanel.webview.html = this._getHtmlForWebview(webviewPanel.webview, document);
@@ -50,7 +57,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
             new vscode.Range(0, 0, document.lineCount, 0),
             message.text
           );
-          
+
           const success = await vscode.workspace.applyEdit(edit);
           console.log('✅ [FastMind VS Code] Document update result:', {
             success,
@@ -86,12 +93,12 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
 
     // Use a nonce to whitelist which scripts are run
     const nonce = getNonce();
-    
+
     const fileName = document.fileName;
-    
+
     // 生成地图 ID
     const mapId = fileName.split('/').pop()?.replace(/\.fastmind$/, '') || 'default';
-    
+
     // 方案A：纯 resourceUrl 方式 - 指向用户实际打开的文件
     const resourceUrl = webview.asWebviewUri(document.uri).toString();
 
@@ -109,7 +116,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self' ${webview.cspSource} https://fonts.googleapis.com; font-src 'self' ${webview.cspSource} https://fonts.gstatic.com; img-src 'self' data: ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource}; connect-src 'self' ${webview.cspSource};">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self' ${webview.cspSource} https://fonts.googleapis.com; font-src 'self' ${webview.cspSource} https://fonts.gstatic.com; img-src 'self' data: ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource}; connect-src 'self' ${webview.cspSource} https:;">
         <title>FastMind Editor</title>
       </head>
       <body>
