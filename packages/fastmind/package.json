@@ -42,9 +42,6 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCustomEditor:fastmind.editor"
-  ],
   "contributes": {
     "customEditors": [
       {
