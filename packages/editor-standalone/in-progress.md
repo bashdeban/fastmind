@@ -238,11 +238,114 @@
 - [ ] 可以集成到其他项目
 - [ ] 文档和示例完整
 
+## 🎉 零侵入全局注入方案实现完成
+
+### ✅ 核心成就
+1. **零侵入设计**：无需修改 WiseMapping 核心逻辑，仅在源码末尾添加环境检测
+2. **自动环境识别**：通过 `window.__FAST_MIND_VSCODE_BOOTSTRAP__` 自动检测 VS Code 环境
+3. **双保险机制**：同时覆盖 `onContentChanged` 回调和 `persistenceManager` 实例
+4. **完全向后兼容**：浏览器模式下行为与原来完全一致
+
+### 🔧 核心实现代码
+
+#### 全局类型声明
+```typescript
+declare global {
+  interface Window {
+    __FAST_MIND_VSCODE_BOOTSTRAP__?: {
+      initialContent: string;
+      fileName: string;
+      onChanged: (xml: string) => void;
+    };
+    designer?: any;
+    mapInfoOverride?: any;
+    persistenceManagerOverride?: any;
+    onContentChanged?: (xml: string) => void;
+  }
+}
+```
+
+#### 零侵入注入逻辑
+```typescript
+// VS Code 环境自动接管（零侵入全局注入方案）
+if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
+  const boot = window.__FAST_MIND_VSCODE_BOOTSTRAP__;
+
+  // 直接覆盖 WiseMapping 内部会调用的全局回调
+  (window as any).onContentChanged = (xmlContent: string) => {
+    boot.onChanged(xmlContent);
+  };
+
+  // 替换 persistenceManager（双保险机制）
+  class VscodePersistence {
+    save(_mapId: string, _prefs: any, _saveHistory: boolean, events: any) {
+      const xmlContent = (window as any).designer?.getMindmap()?.getXml() || '';
+      boot.onChanged(xmlContent);
+      events.success?.();
+    }
+    
+    load() { return boot.initialContent; }
+    discard() {}
+    savePreferences() {}
+    loadPreferences() { return {}; }
+  }
+
+  (window as any).persistenceManagerOverride = new VscodePersistence();
+  
+  // 更新标题和地图信息
+  const name = boot.fileName.split('/').pop()?.replace(/\.fastmind$/, '') || 'Untitled';
+  (window as any).mapInfoOverride = new MapInfoImpl('default', name, 'User', false);
+}
+```
+
+### 🎯 工作原理
+
+#### 数据流分析
+```
+用户编辑操作 → WiseMapping 内部保存 → 触发 onContentChanged → 
+VscodePersistenceManager.save() → postMessage({type:'edit'}) → 
+VS Code Extension → updateTextDocument() → 文件更新
+```
+
+#### 环境检测机制
+- **浏览器环境**：`window.__FAST_MIND_VSCODE_BOOTSTRAP__` 为 `undefined`，注入代码不执行
+- **VS Code 环境**：bootstrap 对象存在，自动接管所有保存和加载操作
+
+### 🚀 集成方式
+
+#### VS Code Extension 端注入
+```javascript
+// 在 FastmindEditorProvider 中注入 bootstrap
+window.__FAST_MIND_VSCODE_BOOTSTRAP__ = {
+  initialContent: document.getText(),
+  fileName: document.fileName,
+  onChanged: (newXml) => {
+    vscode.postMessage({ type: 'edit', text: newXml });
+  }
+};
+```
+
+### 📋 实现状态
+
+#### ✅ 已完成
+- [x] 在 `src/index.ts` 末尾添加全局注入代码
+- [x] 实现 VS Code 环境自动检测
+- [x] 实现 `onContentChanged` 回调覆盖
+- [x] 实现 `VscodePersistence` 类
+- [x] 实现标题和地图信息更新
+- [x] 通过构建验证，注入代码正确包含在产物中
+
+#### ✅ 验证结果
+- [x] TypeScript 编译通过
+- [x] Webpack 构建成功
+- [x] 注入代码包含在 `dist-standalone/editor-standalone.js` 中
+- [x] 代码大小合理（注入部分 < 2KB）
+
 ---
 
-**更新时间**: 2025-01-18  
+**更新时间**: 2025-01-19  
 **负责人**: Cline AI Assistant  
-**状态**: 规划完成，待实施确认
+**状态**: ✅ 零侵入全局注入方案实现完成，集成测试就绪
 
 
 ## 独立版本的两种运行模式

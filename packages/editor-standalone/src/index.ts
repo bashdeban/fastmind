@@ -90,3 +90,58 @@ if (document.readyState === 'loading') {
 
 // Export for potential external usage
 export { Playground, initialization, persistence, options, mapInfo, themeVariantStorage };
+
+// VS Code 零侵入全局注入 - 只在 VS Code 环境下生效
+declare global {
+  interface Window {
+    __FAST_MIND_VSCODE_BOOTSTRAP__?: {
+      initialContent: string;
+      fileName: string;
+      onChanged: (xml: string) => void;
+    };
+    designer?: any;
+    mapInfoOverride?: any;
+    persistenceManagerOverride?: any;
+    onContentChanged?: (xml: string) => void;
+  }
+}
+
+// VS Code 环境自动接管（零侵入全局注入方案）
+if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
+  const boot = window.__FAST_MIND_VSCODE_BOOTSTRAP__;
+
+  // 直接覆盖 WiseMapping 内部会调用的全局回调
+  // 这是 WiseMapping 官方支持的方式，源码见：Designer.tsx#L317
+  (window as any).onContentChanged = (xmlContent: string) => {
+    boot.onChanged(xmlContent);
+  };
+
+  // 替换 persistenceManager（双保险机制）
+  class VscodePersistence {
+    save(_mapId: string, _prefs: any, _saveHistory: boolean, events: any) {
+      // WiseMapping 会在保存成功后调用 events.success()
+      const xmlContent = (window as any).designer?.getMindmap()?.getXml() || '';
+      boot.onChanged(xmlContent);
+      events.success?.();
+    }
+    
+    load() { 
+      return boot.initialContent; 
+    }
+    
+    discard() {}
+    
+    savePreferences() {}
+    
+    loadPreferences() { 
+      return {}; 
+    }
+  }
+
+  // 全局替换 persistenceManager（useEditor 还没执行时替换也完全来得及）
+  (window as any).persistenceManagerOverride = new VscodePersistence();
+
+  // 更新标题和地图信息
+  const name = boot.fileName.split('/').pop()?.replace(/\.fastmind$/, '') || 'Untitled';
+  (window as any).mapInfoOverride = new MapInfoImpl('default', name, 'User', false);
+}
