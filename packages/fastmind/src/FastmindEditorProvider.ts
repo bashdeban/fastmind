@@ -87,28 +87,20 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     // Use a nonce to whitelist which scripts are run
     const nonce = getNonce();
     
-    // 获取文档内容，转义特殊字符
-    const initialContent = document.getText()
-      .replace(/\\/g, '\\\\')
-      .replace(/`/g, '\\`')
-      .replace(/'/g, "\\'");
-      
     const fileName = document.fileName;
     
-    // 生成 VS Code 资源 URL 和 mapId
+    // 生成地图 ID
     const mapId = fileName.split('/').pop()?.replace(/\.fastmind$/, '') || 'default';
-    const resourceUrl = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, 'resources', '{id}.xml')
-    ).toString();
+    
+    // 方案A：纯 resourceUrl 方式 - 指向用户实际打开的文件
+    const resourceUrl = webview.asWebviewUri(document.uri).toString();
 
-    console.log('🔧 [FastMind VS Code] Generating Bootstrap parameters:', {
+    console.log('🔧 [FastMind VS Code] Generating parameters (Pure resourceUrl approach):', {
       fileName,
       mapId,
       resourceUrl,
-      hasContent: !!initialContent,
-      contentLength: initialContent?.length || 0,
+      documentUri: document.uri.toString(),
       scriptUri: scriptUri.toString(),
-      extensionUri: this._extensionUri.toString(),
       timestamp: new Date().toISOString()
     });
 
@@ -124,25 +116,24 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
         <div id="root"></div>
         <div id="loading">Loading FastMind Editor...</div>
         
-        <!-- VS Code Bootstrap 脚本 -->
+        <!-- VS Code Bootstrap 脚本 (简化版 - 纯 resourceUrl 方式) -->
         <script nonce="${nonce}">
           const vscode = acquireVsCodeApi();
 
-          console.log('🔧 [FastMind VS Code] Bootstrap script executing:', {
+          console.log('🔧 [FastMind VS Code] Bootstrap (Pure resourceUrl approach):', {
             fileName: "${fileName}",
             mapId: "${mapId}",
             resourceUrl: "${resourceUrl}",
-            contentLength: \`${initialContent}\`.length,
             timestamp: new Date().toISOString()
           });
 
+          // 简化的 Bootstrap - 只保存必要的信息
           window.__FAST_MIND_VSCODE_BOOTSTRAP__ = {
-            initialContent: \`${initialContent}\`,
             fileName: "${fileName}",
-            resourceUrl: "${resourceUrl}",  // 新增：VS Code 资源 URL
-            mapId: "${mapId}",             // 新增：地图 ID
+            resourceUrl: "${resourceUrl}",
+            mapId: "${mapId}",
             onChanged: (newXml) => {
-              console.log('📤 [FastMind VS Code] onChanged triggered:', {
+              console.log('📤 [FastMind VS Code] Content changed:', {
                 xmlLength: newXml?.length || 0,
                 timestamp: new Date().toISOString()
               });
@@ -150,13 +141,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
             }
           };
 
-          // 兼容 WiseMapping 可能在很早就读取 persistenceManager 的情况
-          Object.defineProperty(window, 'persistenceManagerOverride', {
-            get() { return this._override; },
-            set(v) { this._override = v; }
-          });
-
-          console.log('✅ [FastMind VS Code] Bootstrap setup completed');
+          console.log('✅ [FastMind VS Code] Bootstrap completed (Pure resourceUrl approach)');
         </script>
         
         <!-- WiseMapping Editor 脚本 -->

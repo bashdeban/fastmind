@@ -35,20 +35,18 @@ const initialization = (designer: Designer) => {
 let fileUrl = 'samples/{id}.wxml';
 let mapId = 'default';
 
-// VS Code 环境下使用注入的参数
+// VS Code 环境下使用注入的参数（方案A：纯 resourceUrl 方式）
 if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
   const boot = window.__FAST_MIND_VSCODE_BOOTSTRAP__;
   fileUrl = boot.resourceUrl || fileUrl;
   mapId = boot.mapId || mapId;
   
-  console.log('📥 [FastMind Editor] Bootstrap parameters received:', {
+  console.log('📥 [FastMind Editor] Bootstrap parameters (Pure resourceUrl approach):', {
     resourceUrl: boot.resourceUrl,
-    mapId: boot.mapId,
+    originalMapId: boot.mapId,
     fileName: boot.fileName,
-    hasInitialContent: !!boot.initialContent,
-    initialContentLength: boot.initialContent?.length || 0,
-    fallbackFileUrl: fileUrl,
-    fallbackMapId: mapId
+    fileUrl: fileUrl,
+    finalMapId: mapId
   });
 }
 
@@ -125,15 +123,14 @@ if (document.readyState === 'loading') {
 // Export for potential external usage
 export { Playground, initialization, persistence, options, mapInfo, themeVariantStorage };
 
-// VS Code 零侵入全局注入 - 只在 VS Code 环境下生效
+// VS Code 零侵入全局注入 - 方案A：纯 resourceUrl 方式
 declare global {
   interface Window {
     __FAST_MIND_VSCODE_BOOTSTRAP__?: {
-      initialContent: string;
       fileName: string;
       onChanged: (xml: string) => void;
-      resourceUrl?: string;  // 新增：VS Code 资源 URL
-      mapId?: string;       // 新增：地图 ID
+      resourceUrl?: string;  // VS Code 资源 URL
+      mapId?: string;       // 地图 ID
     };
     designer?: any;
     mapInfoOverride?: any;
@@ -142,13 +139,12 @@ declare global {
   }
 }
 
-// VS Code 环境自动接管（零侵入全局注入方案）
+// VS Code 环境自动接管（方案A：纯 resourceUrl 方式）
 if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
   const boot = window.__FAST_MIND_VSCODE_BOOTSTRAP__;
   
-  console.log('🚀 [FastMind VS Code] Bootstrap detected:', {
+  console.log('🚀 [FastMind VS Code] Bootstrap detected (Pure resourceUrl approach):', {
     fileName: boot.fileName,
-    initialContentLength: boot.initialContent?.length || 0,
     hasOnChanged: typeof boot.onChanged === 'function'
   });
 
@@ -163,7 +159,7 @@ if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
     boot.onChanged(xmlContent);
   };
 
-  // 替换 persistenceManager（双保险机制）
+  // 替换 persistenceManager（简化版 - 不需要 load() 逻辑）
   class VscodePersistence {
     save(_mapId: string, _prefs: any, _saveHistory: boolean, events: any) {
       // WiseMapping 会在保存成功后调用 events.success()
@@ -179,13 +175,10 @@ if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
       events.success?.();
     }
     
+    // LocalStorageManager 会通过 resourceUrl 自动加载内容，load() 不需要特殊处理
     load() { 
-      console.log('📥 [FastMind VS Code] VscodePersistence.load() called:', {
-        contentLength: boot.initialContent?.length || 0,
-        contentPreview: boot.initialContent?.substring(0, 100) + '...',
-        timestamp: new Date().toISOString()
-      });
-      return boot.initialContent; 
+      console.log('📥 [FastMind VS Code] VscodePersistence.load() called (delegated to LocalStorageManager)');
+      return undefined; // 让 LocalStorageManager 通过 resourceUrl 处理
     }
     
     discard() {
@@ -202,7 +195,7 @@ if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
     }
   }
 
-  // 全局替换 persistenceManager（useEditor 还没执行时替换也完全来得及）
+  // 全局替换 persistenceManager
   (window as any).persistenceManagerOverride = new VscodePersistence();
 
   // 更新标题和地图信息
@@ -215,5 +208,5 @@ if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
   
   (window as any).mapInfoOverride = new MapInfoImpl('default', name, 'User', false);
   
-  console.log('✅ [FastMind VS Code] Bootstrap setup completed');
+  console.log('✅ [FastMind VS Code] Bootstrap setup completed (Pure resourceUrl approach)');
 }
