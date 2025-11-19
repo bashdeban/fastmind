@@ -31,7 +31,34 @@ const initialization = (designer: Designer) => {
   });
 };
 
-const persistence = new LocalStorageManager('samples/{id}.wxml', false, undefined, false);
+// 默认配置（浏览器环境）
+let fileUrl = 'samples/{id}.wxml';
+let mapId = 'default';
+
+// VS Code 环境下使用注入的参数
+if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
+  const boot = window.__FAST_MIND_VSCODE_BOOTSTRAP__;
+  fileUrl = boot.resourceUrl || fileUrl;
+  mapId = boot.mapId || mapId;
+  
+  console.log('📥 [FastMind Editor] Bootstrap parameters received:', {
+    resourceUrl: boot.resourceUrl,
+    mapId: boot.mapId,
+    fileName: boot.fileName,
+    hasInitialContent: !!boot.initialContent,
+    initialContentLength: boot.initialContent?.length || 0,
+    fallbackFileUrl: fileUrl,
+    fallbackMapId: mapId
+  });
+}
+
+console.log('⚙️ [FastMind Editor] Creating LocalStorageManager with parameters:', {
+  fileUrl,
+  mapId,
+  constructor: 'LocalStorageManager(fileUrl, false, undefined, false)'
+});
+
+const persistence = new LocalStorageManager(fileUrl, false, undefined, false);
 
 const options: EditorOptions = {
   mode: 'edition-owner',
@@ -41,7 +68,14 @@ const options: EditorOptions = {
   saveOnLoad: false,
 };
 
-const mapInfo = new MapInfoImpl('default', 'New Mind Map', 'User', false);
+console.log('🏷️ [FastMind Editor] Creating MapInfoImpl with parameters:', {
+  mapId,
+  title: 'New Mind Map',
+  creator: 'User',
+  isLocked: false
+});
+
+const mapInfo = new MapInfoImpl(mapId, 'New Mind Map', 'User', false);
 const themeVariantStorage = createMockThemeVariantStorage();
 
 const Playground = () => {
@@ -98,6 +132,8 @@ declare global {
       initialContent: string;
       fileName: string;
       onChanged: (xml: string) => void;
+      resourceUrl?: string;  // 新增：VS Code 资源 URL
+      mapId?: string;       // 新增：地图 ID
     };
     designer?: any;
     mapInfoOverride?: any;
@@ -109,10 +145,21 @@ declare global {
 // VS Code 环境自动接管（零侵入全局注入方案）
 if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
   const boot = window.__FAST_MIND_VSCODE_BOOTSTRAP__;
+  
+  console.log('🚀 [FastMind VS Code] Bootstrap detected:', {
+    fileName: boot.fileName,
+    initialContentLength: boot.initialContent?.length || 0,
+    hasOnChanged: typeof boot.onChanged === 'function'
+  });
 
   // 直接覆盖 WiseMapping 内部会调用的全局回调
   // 这是 WiseMapping 官方支持的方式，源码见：Designer.tsx#L317
   (window as any).onContentChanged = (xmlContent: string) => {
+    console.log('📤 [FastMind VS Code] onContentChanged triggered:', {
+      xmlLength: xmlContent?.length || 0,
+      xmlPreview: xmlContent?.substring(0, 100) + '...',
+      timestamp: new Date().toISOString()
+    });
     boot.onChanged(xmlContent);
   };
 
@@ -121,19 +168,36 @@ if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
     save(_mapId: string, _prefs: any, _saveHistory: boolean, events: any) {
       // WiseMapping 会在保存成功后调用 events.success()
       const xmlContent = (window as any).designer?.getMindmap()?.getXml() || '';
+      console.log('💾 [FastMind VS Code] VscodePersistence.save() called:', {
+        mapId: _mapId,
+        xmlLength: xmlContent?.length || 0,
+        xmlPreview: xmlContent?.substring(0, 100) + '...',
+        timestamp: new Date().toISOString()
+      });
+      
       boot.onChanged(xmlContent);
       events.success?.();
     }
     
     load() { 
+      console.log('📥 [FastMind VS Code] VscodePersistence.load() called:', {
+        contentLength: boot.initialContent?.length || 0,
+        contentPreview: boot.initialContent?.substring(0, 100) + '...',
+        timestamp: new Date().toISOString()
+      });
       return boot.initialContent; 
     }
     
-    discard() {}
+    discard() {
+      console.log('🗑️ [FastMind VS Code] VscodePersistence.discard() called');
+    }
     
-    savePreferences() {}
+    savePreferences() {
+      console.log('⚙️ [FastMind VS Code] VscodePersistence.savePreferences() called');
+    }
     
     loadPreferences() { 
+      console.log('📋 [FastMind VS Code] VscodePersistence.loadPreferences() called');
       return {}; 
     }
   }
@@ -143,5 +207,13 @@ if (window.__FAST_MIND_VSCODE_BOOTSTRAP__) {
 
   // 更新标题和地图信息
   const name = boot.fileName.split('/').pop()?.replace(/\.fastmind$/, '') || 'Untitled';
+  console.log('🏷️ [FastMind VS Code] MapInfo override:', {
+    originalId: 'default',
+    newId: name,
+    fileName: boot.fileName
+  });
+  
   (window as any).mapInfoOverride = new MapInfoImpl('default', name, 'User', false);
+  
+  console.log('✅ [FastMind VS Code] Bootstrap setup completed');
 }

@@ -28,15 +28,34 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     // 监听来自 webview 的消息
     webviewPanel.webview.onDidReceiveMessage(
       async (message) => {
+        console.log('📨 [FastMind VS Code] Received message from webview:', {
+          type: message.type,
+          hasText: !!message.text,
+          textLength: message.text?.length || 0,
+          timestamp: new Date().toISOString()
+        });
+
         if (message.type === 'edit' && message.text) {
           // 更新文档内容
+          console.log('📝 [FastMind VS Code] Updating document:', {
+            uri: document.uri.toString(),
+            currentLength: document.getText().length,
+            newLength: message.text.length,
+            timestamp: new Date().toISOString()
+          });
+
           const edit = new vscode.WorkspaceEdit();
           edit.replace(
             document.uri,
             new vscode.Range(0, 0, document.lineCount, 0),
             message.text
           );
-          await vscode.workspace.applyEdit(edit);
+          
+          const success = await vscode.workspace.applyEdit(edit);
+          console.log('✅ [FastMind VS Code] Document update result:', {
+            success,
+            timestamp: new Date().toISOString()
+          });
         }
       },
       undefined,
@@ -75,13 +94,30 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       .replace(/'/g, "\\'");
       
     const fileName = document.fileName;
+    
+    // 生成 VS Code 资源 URL 和 mapId
+    const mapId = fileName.split('/').pop()?.replace(/\.fastmind$/, '') || 'default';
+    const resourceUrl = webview.asWebviewUri(
+      vscode.Uri.joinPath(this._extensionUri, 'resources', '{id}.xml')
+    ).toString();
+
+    console.log('🔧 [FastMind VS Code] Generating Bootstrap parameters:', {
+      fileName,
+      mapId,
+      resourceUrl,
+      hasContent: !!initialContent,
+      contentLength: initialContent?.length || 0,
+      scriptUri: scriptUri.toString(),
+      extensionUri: this._extensionUri.toString(),
+      timestamp: new Date().toISOString()
+    });
 
     return `<!DOCTYPE html>
       <html lang="en">
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource};">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self' ${webview.cspSource} https://fonts.googleapis.com; font-src 'self' ${webview.cspSource} https://fonts.gstatic.com; img-src 'self' data: ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource}; connect-src 'self' ${webview.cspSource};">
         <title>FastMind Editor</title>
       </head>
       <body>
@@ -92,10 +128,24 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
         <script nonce="${nonce}">
           const vscode = acquireVsCodeApi();
 
+          console.log('🔧 [FastMind VS Code] Bootstrap script executing:', {
+            fileName: "${fileName}",
+            mapId: "${mapId}",
+            resourceUrl: "${resourceUrl}",
+            contentLength: \`${initialContent}\`.length,
+            timestamp: new Date().toISOString()
+          });
+
           window.__FAST_MIND_VSCODE_BOOTSTRAP__ = {
             initialContent: \`${initialContent}\`,
             fileName: "${fileName}",
+            resourceUrl: "${resourceUrl}",  // 新增：VS Code 资源 URL
+            mapId: "${mapId}",             // 新增：地图 ID
             onChanged: (newXml) => {
+              console.log('📤 [FastMind VS Code] onChanged triggered:', {
+                xmlLength: newXml?.length || 0,
+                timestamp: new Date().toISOString()
+              });
               vscode.postMessage({ type: 'edit', text: newXml });
             }
           };
@@ -105,6 +155,8 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
             get() { return this._override; },
             set(v) { this._override = v; }
           });
+
+          console.log('✅ [FastMind VS Code] Bootstrap setup completed');
         </script>
         
         <!-- WiseMapping Editor 脚本 -->
