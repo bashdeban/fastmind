@@ -9,10 +9,15 @@ interface SaveStatus {
 }
 
 interface WebviewMessage {
-  type: 'edit' | 'saveStatus' | 'error' | 'ready' | 'contentChanged';
+  type: 'edit' | 'saveStatus' | 'error' | 'ready' | 'contentChanged' | 'forceSave' | 'configUpdate';
   text?: string;
   status?: SaveStatus;
   error?: string;
+  config?: {
+    autoSaveDelay: number;
+    autoSaveOnFocusChange: boolean;
+    autoSaveOnWindowChange: boolean;
+  };
   timestamp?: number;
 }
 
@@ -33,6 +38,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
   public resolveCustomTextEditor(
     document: vscode.TextDocument,
     webviewPanel: vscode.WebviewPanel,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _token: vscode.CancellationToken
   ): void | Promise<void> {
     // 1. 获取文档所在的目录
@@ -69,7 +75,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
                 await this.handleDocumentEdit(document, webviewPanel, message.text);
               }
               break;
-            case 'ready':
+            case 'ready': {
               // Editor 准备就绪，发送初始内容
               const initialContent = document.getText();
               webviewPanel.webview.postMessage({
@@ -78,6 +84,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
                 timestamp: Date.now()
               });
               break;
+            }
             case 'error':
               await this.handleError(webviewPanel, message.error || 'Unknown error');
               break;
@@ -121,6 +128,9 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     });
 
     this._context.subscriptions.push(changeDocumentSubscription);
+
+    // 添加webview关闭处理
+    this.addWebviewCloseHandler(document, webviewPanel);
   }
 
   /**
@@ -201,6 +211,70 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
   private async handleError(webviewPanel: vscode.WebviewPanel, errorMessage: string): Promise<void> {
     console.error('❌ [FastMind VS Code] Error from editor:', errorMessage);
     vscode.window.showErrorMessage(`FastMind Error: ${errorMessage}`);
+  }
+
+
+  /**
+   * Add webview close handler for save confirmation
+   */
+  private addWebviewCloseHandler(
+    document: vscode.TextDocument,
+    webviewPanel: vscode.WebviewPanel
+  ): void {
+    webviewPanel.onDidDispose(async () => {
+      console.log('🔒 [FastMind] Webview closing, checking for unsaved changes');
+      
+      const docKey = document.uri.toString();
+      const currentContent = document.getText();
+      const knownContent = this.lastKnownContent.get(docKey);
+      
+      if (currentContent !== knownContent) {
+        // There are unsaved changes
+        const result = await vscode.window.showWarningMessage(
+          'FastMind 文件有未保存的更改，是否保存？',
+          { modal: true },
+          '保存', '不保存', '取消'
+        );
+        
+        if (result === '保存') {
+          // Force save before closing
+          try {
+            await this.handleDocumentEdit(document, webviewPanel, currentContent);
+            console.log('✅ [FastMind] Saved successfully before closing');
+          } catch (error) {
+            console.error('❌ [FastMind] Failed to save before closing:', error);
+            vscode.window.showErrorMessage(`保存失败: ${error instanceof Error ? error.message : 'Unknown error'}`);
+          }
+        } else if (result === '取消') {
+          // Prevent close by reopening (this is a bit of a hack)
+          vscode.commands.executeCommand('vscode.openWith', document.uri, 'fastmind.editor');
+        }
+      } else {
+        console.log('✅ [FastMind] No unsaved changes, closing cleanly');
+      }
+    });
+
+    // Also handle visibility change (when user switches tabs)
+    webviewPanel.onDidChangeViewState(async () => {
+      if (!webviewPanel.visible) {
+        // Panel became invisible (user switched tabs)
+        console.log('🔄 [FastMind] Panel became invisible, checking for save');
+        
+        const docKey = document.uri.toString();
+        const currentContent = document.getText();
+        const knownContent = this.lastKnownContent.get(docKey);
+        
+        if (currentContent !== knownContent) {
+          // Auto-save when switching away
+          try {
+            await this.handleDocumentEdit(document, webviewPanel, currentContent);
+            console.log('✅ [FastMind] Auto-saved on tab switch');
+          } catch (error) {
+            console.error('❌ [FastMind] Failed to auto-save on tab switch:', error);
+          }
+        }
+      }
+    });
   }
 
   /**

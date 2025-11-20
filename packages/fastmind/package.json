@@ -7,6 +7,7 @@
     "dist/*"
   ],
   "scripts": {
+    "build": "webpack --config webpack.extension.js --mode production",
     "build:extension": "webpack --config webpack.extension.js --mode production",
     "build:watch": "webpack --config webpack.extension.js --mode production --watch",
     "clean": "rimraf dist",
@@ -20,9 +21,12 @@
     "vscode-uri": "^3.0.8"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^22.0.0",
     "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
     "concurrently": "^9.1.0",
     "copy-webpack-plugin": "^13.0.1",
     "eslint": "^9.38.0",
@@ -54,7 +58,34 @@
         ],
         "priority": "default"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "FastMind",
+      "properties": {
+        "autoSave.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable auto-save for FastMind documents"
+        },
+        "autoSave.delay": {
+          "type": "number",
+          "default": 1000,
+          "minimum": 100,
+          "maximum": 10000,
+          "description": "Auto-save delay in milliseconds"
+        },
+        "autoSave.onFocusChange": {
+          "type": "boolean",
+          "default": false,
+          "description": "Auto-save when focus changes"
+        },
+        "autoSave.onWindowChange": {
+          "type": "boolean",
+          "default": false,
+          "description": "Auto-save when window changes"
+        }
+      }
+    }
   },
   "capabilities": {
     "virtualWorkspaces": true

@@ -8,6 +8,7 @@
     "dist-standalone/*"
   ],
   "scripts": {
+    "build": "webpack --config webpack.standalone.js --mode production",
     "build:standalone": "webpack --config webpack.standalone.js --mode production",
     "serve:standalone": "webpack serve --config webpack.dev.standalone.js --mode development",
     "build:watch": "webpack --config webpack.standalone.js --mode production --watch",

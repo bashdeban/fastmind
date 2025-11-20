@@ -19,6 +19,7 @@ export default [
         document: "readonly",
         setTimeout: "readonly",
         clearTimeout: "readonly",
+        localStorage: "readonly",
         NodeJS: "readonly",
       },
     },
