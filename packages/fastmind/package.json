@@ -43,13 +43,24 @@
     "node": ">=18.0.0",
     "vscode": "^1.106.0"
   },
+  "activationEvents": [
+    "onLanguage:fastmind",
+    "onCustomEditor:fastmind.viewer"
+  ],
   "categories": [
     "Other"
   ],
   "contributes": {
+    "languages": [
+      {
+        "id": "fastmind",
+        "extensions": [ ".fastmind" ],
+        "aliases": [ "FastMind" ]
+      }
+    ],
     "customEditors": [
       {
-        "viewType": "fastmind.editor",
+        "viewType": "fastmind.viewer",
         "displayName": "WiseMapping FastMind Editor",
         "selector": [
           {

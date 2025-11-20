@@ -22,7 +22,7 @@ interface WebviewMessage {
 }
 
 export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
-  public static readonly viewType = 'fastmind.editor';
+  public static readonly viewType = 'fastmind.viewer';
 
   private readonly _extensionUri: vscode.Uri;
   private saveStatus = new Map<string, SaveStatus>();
@@ -42,6 +42,19 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _token: vscode.CancellationToken
   ): void | Promise<void> {
+    // 记录当前激活的编辑器（单例）
+    const singleton = (global as unknown as { fastmindSingleton?: import('./types').FastMindSingleton }).fastmindSingleton;
+    if (singleton) {
+      singleton.setActiveEditor(webviewPanel);
+    }
+
+    // 面板关闭时清理单例
+    webviewPanel.onDidDispose(() => {
+      if (singleton && singleton.getActiveEditor() === webviewPanel) {
+        singleton.setActiveEditor(undefined);
+      }
+    }, null, this._context.subscriptions);
+
     // 1. 获取文档所在的目录
     const documentDir = Utils.dirname(document.uri);
 
@@ -258,7 +271,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
           }
         } else if (result === '取消') {
           // Prevent close by reopening (this is a bit of a hack)
-          vscode.commands.executeCommand('vscode.openWith', document.uri, 'fastmind.editor');
+          vscode.commands.executeCommand('vscode.openWith', document.uri, 'fastmind.viewer');
         }
       } else {
         console.log('✅ [FastMind] No unsaved changes, closing cleanly');

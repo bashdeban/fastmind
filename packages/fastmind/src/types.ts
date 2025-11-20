@@ -10,10 +10,15 @@ export interface SaveStatus {
 }
 
 export interface WebviewMessage {
-  type: 'edit' | 'saveStatus' | 'error' | 'ready' | 'contentChanged';
+  type: 'edit' | 'saveStatus' | 'error' | 'ready' | 'contentChanged' | 'forceSave' | 'configUpdate';
   text?: string;
   status?: SaveStatus;
   error?: string;
+  config?: {
+    autoSaveDelay: number;
+    autoSaveOnFocusChange: boolean;
+    autoSaveOnWindowChange: boolean;
+  };
   timestamp?: number;
 }
 
@@ -35,4 +40,10 @@ export interface VSCodeBootstrapConfig {
   mapId: string;
   onChanged: (xml: string) => void;
   onSaveStatus?: (status: SaveStatus) => void;
+}
+
+// Singleton interface for global state management
+export interface FastMindSingleton {
+  getActiveEditor: () => import('vscode').WebviewPanel | undefined;
+  setActiveEditor: (editor: import('vscode').WebviewPanel | undefined) => void;
 }
