@@ -1,10 +1,27 @@
 import * as vscode from 'vscode';
 import { Utils } from 'vscode-uri'; // 确保使用了这个或使用 path 模块
 
+interface SaveStatus {
+  isSaving: boolean;
+  success?: boolean;
+  error?: string;
+  lastSaved?: Date;
+}
+
+interface WebviewMessage {
+  type: 'edit' | 'saveStatus' | 'error' | 'ready' | 'contentChanged';
+  text?: string;
+  status?: SaveStatus;
+  error?: string;
+  timestamp?: number;
+}
+
 export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
   public static readonly viewType = 'fastmind.editor';
 
   private readonly _extensionUri: vscode.Uri;
+  private saveStatus = new Map<string, SaveStatus>();
+  private lastKnownContent = new Map<string, string>();
 
   constructor(private readonly _context: vscode.ExtensionContext) {
     this._extensionUri = _context.extensionUri;
@@ -32,9 +49,12 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
 
     webviewPanel.webview.html = this._getHtmlForWebview(webviewPanel.webview, document);
 
+    // 保存初始内容
+    this.lastKnownContent.set(document.uri.toString(), document.getText());
+
     // 监听来自 webview 的消息
     webviewPanel.webview.onDidReceiveMessage(
-      async (message) => {
+      async (message: WebviewMessage) => {
         console.log('📨 [FastMind VS Code] Received message from webview:', {
           type: message.type,
           hasText: !!message.text,
@@ -42,26 +62,32 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
           timestamp: new Date().toISOString()
         });
 
-        if (message.type === 'edit' && message.text) {
-          // 更新文档内容
-          console.log('📝 [FastMind VS Code] Updating document:', {
-            uri: document.uri.toString(),
-            currentLength: document.getText().length,
-            newLength: message.text.length,
-            timestamp: new Date().toISOString()
-          });
-
-          const edit = new vscode.WorkspaceEdit();
-          edit.replace(
-            document.uri,
-            new vscode.Range(0, 0, document.lineCount, 0),
-            message.text
-          );
-
-          const success = await vscode.workspace.applyEdit(edit);
-          console.log('✅ [FastMind VS Code] Document update result:', {
-            success,
-            timestamp: new Date().toISOString()
+        try {
+          switch (message.type) {
+            case 'edit':
+              if (message.text) {
+                await this.handleDocumentEdit(document, webviewPanel, message.text);
+              }
+              break;
+            case 'ready':
+              // Editor 准备就绪，发送初始内容
+              const initialContent = document.getText();
+              webviewPanel.webview.postMessage({
+                type: 'contentChanged',
+                text: initialContent,
+                timestamp: Date.now()
+              });
+              break;
+            case 'error':
+              await this.handleError(webviewPanel, message.error || 'Unknown error');
+              break;
+          }
+        } catch (error) {
+          console.error('❌ [FastMind VS Code] Message handling failed:', error);
+          this.notifySaveStatus(webviewPanel, {
+            isSaving: false,
+            success: false,
+            error: error instanceof Error ? error.message : 'Unknown error'
           });
         }
       },
@@ -72,14 +98,132 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     // 监听文档变更（外部修改时同步到编辑器）
     const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument((e) => {
       if (e.document === document) {
-        webviewPanel.webview.postMessage({
-          type: 'contentChanged',
-          text: e.document.getText()
-        });
+        const newContent = e.document.getText();
+        const docKey = document.uri.toString();
+        
+        // 避免循环更新
+        if (newContent !== this.lastKnownContent.get(docKey)) {
+          console.log('📝 [FastMind VS Code] External document change detected:', {
+            uri: document.uri.toString(),
+            contentLength: newContent.length,
+            timestamp: new Date().toISOString()
+          });
+
+          webviewPanel.webview.postMessage({
+            type: 'contentChanged',
+            text: newContent,
+            timestamp: Date.now()
+          });
+          
+          this.lastKnownContent.set(docKey, newContent);
+        }
       }
     });
 
     this._context.subscriptions.push(changeDocumentSubscription);
+  }
+
+  /**
+   * Handle document edit from editor
+   */
+  private async handleDocumentEdit(
+    document: vscode.TextDocument, 
+    webviewPanel: vscode.WebviewPanel, 
+    newContent: string
+  ): Promise<void> {
+    const maxRetries = 3;
+    let attempt = 0;
+    
+    this.notifySaveStatus(webviewPanel, {
+      isSaving: true
+    });
+
+    console.log('📝 [FastMind VS Code] Updating document:', {
+      uri: document.uri.toString(),
+      currentLength: document.getText().length,
+      newLength: newContent.length,
+      timestamp: new Date().toISOString()
+    });
+
+    while (attempt < maxRetries) {
+      try {
+        const edit = new vscode.WorkspaceEdit();
+        edit.replace(
+          document.uri,
+          new vscode.Range(0, 0, document.lineCount, 0),
+          newContent
+        );
+
+        const success = await vscode.workspace.applyEdit(edit);
+        if (success) {
+          // 保存文档
+          await document.save();
+          
+          // 更新已知内容
+          this.lastKnownContent.set(document.uri.toString(), newContent);
+          
+          this.notifySaveStatus(webviewPanel, {
+            isSaving: false,
+            success: true,
+            lastSaved: new Date()
+          });
+
+          console.log('✅ [FastMind VS Code] Document update result:', {
+            success,
+            timestamp: new Date().toISOString()
+          });
+          return;
+        } else {
+          throw new Error('Failed to apply workspace edit');
+        }
+      } catch (error) {
+        attempt++;
+        console.error(`❌ [FastMind VS Code] Save attempt ${attempt} failed:`, error);
+        
+        if (attempt >= maxRetries) {
+          this.notifySaveStatus(webviewPanel, {
+            isSaving: false,
+            success: false,
+            error: error instanceof Error ? error.message : 'Unknown save error'
+          });
+          throw error;
+        }
+        
+        // 重试延迟
+        await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+      }
+    }
+  }
+
+  /**
+   * Handle error from editor
+   */
+  private async handleError(webviewPanel: vscode.WebviewPanel, errorMessage: string): Promise<void> {
+    console.error('❌ [FastMind VS Code] Error from editor:', errorMessage);
+    vscode.window.showErrorMessage(`FastMind Error: ${errorMessage}`);
+  }
+
+  /**
+   * Notify save status to editor
+   */
+  private notifySaveStatus(webviewPanel: vscode.WebviewPanel, status: SaveStatus): void {
+    const key = webviewPanel.viewType;
+    this.saveStatus.set(key, status);
+    
+    // 发送状态到 webview
+    webviewPanel.webview.postMessage({
+      type: 'saveStatus',
+      status
+    });
+    
+    // 更新 VS Code 状态栏
+    if (status.error) {
+      vscode.window.showErrorMessage(`FastMind 保存失败: ${status.error}`);
+    } else if (status.success) {
+      vscode.window.setStatusBarMessage(`✓ FastMind 已保存`, 3000);
+    } else if (status.isSaving) {
+      vscode.window.setStatusBarMessage(`💾 FastMind 保存中...`);
+    }
   }
 
   /**
@@ -99,13 +243,18 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     // 生成地图 ID
     const mapId = fileName.split('/').pop()?.replace(/\.fastmind$/, '') || 'default';
 
+    // 获取当前文档内容作为初始内容
+    const initialContent = document.getText();
+
     // 方案A：纯 resourceUrl 方式 - 指向用户实际打开的文件
     const resourceUrl = webview.asWebviewUri(document.uri).toString();
 
-    console.log('🔧 [FastMind VS Code] Generating parameters (Pure resourceUrl approach):', {
+    console.log('🔧 [FastMind VS Code] Generating parameters with initial content:', {
       fileName,
       mapId,
       resourceUrl,
+      hasInitialContent: !!initialContent,
+      contentLength: initialContent.length,
       documentUri: document.uri.toString(),
       scriptUri: scriptUri.toString(),
       timestamp: new Date().toISOString()
@@ -123,18 +272,23 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
         <div id="root"></div>
         <div id="loading">Loading FastMind Editor...</div>
         
-        <!-- VS Code Bootstrap 脚本 (简化版 - 纯 resourceUrl 方式) -->
+        <!-- VS Code Bootstrap 脚本 (增强版 - 包含初始内容) -->
         <script nonce="${nonce}">
           const vscode = acquireVsCodeApi();
 
-          console.log('🔧 [FastMind VS Code] Bootstrap (Pure resourceUrl approach):', {
+          console.log('🔧 [FastMind VS Code] Bootstrap with initial content:', {
             fileName: "${fileName}",
             mapId: "${mapId}",
             resourceUrl: "${resourceUrl}",
+            hasInitialContent: ${!!initialContent},
+            contentLength: ${initialContent.length},
             timestamp: new Date().toISOString()
           });
 
-          // 简化的 Bootstrap - 只保存必要的信息
+          // 注入初始内容
+          window.__INITIAL_DOCUMENT_CONTENT__ = \`${initialContent.replace(/`/g, '\\`')}\`;
+
+          // 增强的 Bootstrap 配置
           window.__FAST_MIND_VSCODE_BOOTSTRAP__ = {
             fileName: "${fileName}",
             resourceUrl: "${resourceUrl}",
@@ -144,11 +298,49 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
                 xmlLength: newXml?.length || 0,
                 timestamp: new Date().toISOString()
               });
-              vscode.postMessage({ type: 'edit', text: newXml });
+              vscode.postMessage({ 
+                type: 'edit', 
+                text: newXml,
+                timestamp: Date.now()
+              });
+            },
+            onSaveStatus: (status) => {
+              console.log('📊 [FastMind VS Code] Save status:', status);
+              // VS Code 状态栏由 Extension 端处理
             }
           };
 
-          console.log('✅ [FastMind VS Code] Bootstrap completed (Pure resourceUrl approach)');
+          // 监听来自 Extension 的消息
+          window.addEventListener('message', (event) => {
+            const message = event.data;
+            console.log('📥 [FastMind VS Code] Received message from Extension:', {
+              type: message.type,
+              timestamp: new Date().toISOString()
+            });
+
+            switch (message.type) {
+              case 'contentChanged':
+                if (window.onExternalContentChanged) {
+                  window.onExternalContentChanged(message.text);
+                }
+                break;
+              case 'saveStatus':
+                if (window.onSaveStatusChanged) {
+                  window.onSaveStatusChanged(message.status);
+                }
+                break;
+            }
+          });
+
+          // 通知 Extension 编辑器已准备就绪
+          setTimeout(() => {
+            vscode.postMessage({ 
+              type: 'ready',
+              timestamp: Date.now()
+            });
+          }, 100);
+
+          console.log('✅ [FastMind VS Code] Bootstrap completed with enhanced communication');
         </script>
         
         <!-- WiseMapping Editor 脚本 -->

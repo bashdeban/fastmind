@@ -2,13 +2,19 @@
  * Types for VS Code Extension integration
  */
 
-// Note: FastmindEditorProvider class is defined in FastmindEditorProvider.ts
-// This interface was removed to avoid naming conflicts
+export interface SaveStatus {
+  isSaving: boolean;
+  success?: boolean;
+  error?: string;
+  lastSaved?: Date;
+}
 
 export interface WebviewMessage {
-  type: string;
-  content?: string;
-  data?: any;
+  type: 'edit' | 'saveStatus' | 'error' | 'ready' | 'contentChanged';
+  text?: string;
+  status?: SaveStatus;
+  error?: string;
+  timestamp?: number;
 }
 
 export interface EditorState {
@@ -21,4 +27,12 @@ export interface ExtensionConfig {
   displayName: string;
   selector: string[];
   priority: string;
+}
+
+export interface VSCodeBootstrapConfig {
+  fileName: string;
+  resourceUrl: string;
+  mapId: string;
+  onChanged: (xml: string) => void;
+  onSaveStatus?: (status: SaveStatus) => void;
 }
