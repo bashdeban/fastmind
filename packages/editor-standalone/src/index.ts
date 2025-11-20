@@ -126,12 +126,12 @@ if (document.readyState === 'loading') {
 }
 
 // Export for potential external usage
-export { 
-  Playground, 
-  initialization, 
-  persistence, 
-  options, 
-  mapInfo, 
+export {
+  Playground,
+  initialization,
+  persistence,
+  options,
+  mapInfo,
   themeVariantStorage
 };
 

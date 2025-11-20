@@ -27,6 +27,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
   private readonly _extensionUri: vscode.Uri;
   private saveStatus = new Map<string, SaveStatus>();
   private lastKnownContent = new Map<string, string>();
+  private isSelfInducedChange = new Map<string, boolean>();
 
   constructor(private readonly _context: vscode.ExtensionContext) {
     this._extensionUri = _context.extensionUri;
@@ -108,6 +109,13 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
         const newContent = e.document.getText();
         const docKey = document.uri.toString();
         
+        // 检查是否是自己触发的变更
+        if (this.isSelfInducedChange.get(docKey)) {
+          console.log('🔄 [FastMind VS Code] Ignoring self-induced document change');
+          this.isSelfInducedChange.set(docKey, false);
+          return;
+        }
+        
         // 避免循环更新
         if (newContent !== this.lastKnownContent.get(docKey)) {
           console.log('📝 [FastMind VS Code] External document change detected:', {
@@ -166,6 +174,9 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
 
         const success = await vscode.workspace.applyEdit(edit);
         if (success) {
+          // 标记为自身触发的变更
+          this.isSelfInducedChange.set(document.uri.toString(), true);
+          
           // 保存文档
           await document.save();
           
