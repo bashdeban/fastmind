@@ -41,7 +41,8 @@
 - **Linting**: Zero ESLint errors after recent cleanup
 - **Unit Tests**: Comprehensive test suite with 90%+ coverage
 
-### ✅ FastMind VS Code Extension (v6.0.1)
+### 🔄 FastMind VS Code Extension (v6.0.1) - Stage 1 Complete, Stage 2 In Progress
+#### ✅ Stage 1: Foundation (Complete)
 - **VS Code Integration**: CustomTextEditorProvider implementation complete
 - **File Association**: `.fastmind` files properly associated with extension
 - **Editor Display**: WiseMapping editor successfully loads in VS Code webview
@@ -52,6 +53,13 @@
 - **Resource Management**: Editor-standalone assets properly bundled and referenced
 - **Documentation**: Comprehensive development and testing guide established
 - **Error Resolution**: TypeScript module import issues resolved
+
+#### 🔧 Stage 2: Data Exchange (In Progress - Critical Priority)
+- **Current Issue**: Save functionality failing - events not properly captured
+- **Root Cause**: LocalStorageManager + global override approach unreliable
+- **Solution**: VSCodePersistenceManager implementation planned
+- **Status**: Development tasks documented, ready for implementation
+- **Target**: Reliable bidirectional data sync between editor and extension
 
 ### ✅ Webapp Package (v6.0.1)
 - **Authentication**: JWT-based auth system operational
@@ -113,7 +121,17 @@
 
 ### High Priority
 
-#### 1. **Advanced Collaboration Features**
+#### 1. **FastMind VS Code Extension - Data Exchange Refactoring (P0)**
+- [ ] Implement VSCodePersistenceManager to replace LocalStorageManager approach
+- [ ] Add reliable postMessage communication between editor and extension
+- [ ] Implement auto-save mechanism with debouncing
+- [ ] Add save status feedback and error handling
+- [ ] Test end-to-end save functionality
+- [ ] Verify mapId handling from filename
+- [ ] Remove legacy global override logic
+- [ ] Performance validation and optimization
+
+#### 2. **Advanced Collaboration Features**
 - [ ] Real-time cursor tracking with multiple users
 - [ ] User presence indicators (who's online)
 - [ ] Collaborative selection highlighting
@@ -121,7 +139,7 @@
 - [ ] Comment system for topics
 - [ ] Activity feed showing recent changes
 
-#### 2. **Editor Enhancements**
+#### 3. **Editor Enhancements**
 - [ ] Template system (business, education, personal)
 - [ ] Advanced styling options (gradients, shadows)
 - [ ] Topic icons and custom shapes library
@@ -129,7 +147,7 @@
 - [ ] Presentation mode
 - [ ] Advanced export options (powerpoint, word)
 
-#### 3. **Performance at Scale**
+#### 4. **Performance at Scale**
 - [ ] Topic virtualization for 1000+ topics
 - [ ] Canvas tiling optimization
 - [ ] WebGL acceleration research and implementation
@@ -138,7 +156,7 @@
 
 ### Medium Priority
 
-#### 4. **User Experience Improvements**
+#### 5. **User Experience Improvements**
 - [ ] Interactive onboarding tutorial
 - [ ] Enhanced keyboard accessibility
 - [ ] Screen reader optimization (ARIA improvements)
@@ -146,7 +164,7 @@
 - [ ] Drag and drop from external sources
 - [ ] Undo/redo visual indicators
 
-#### 5. **Integration and API**
+#### 6. **Integration and API**
 - [ ] REST API documentation
 - [ ] WebSocket API for real-time features
 - [ ] Plugin system architecture
@@ -154,7 +172,7 @@
 - [ ] Mobile app companion
 - [ ] Desktop app (Electron)
 
-#### 6. **Developer Experience**
+#### 7. **Developer Experience**
 - [ ] Plugin SDK and documentation
 - [ ] Component extension examples
 - [ ] Custom theme creation guide
@@ -164,14 +182,14 @@
 
 ### Low Priority / Future Ideas
 
-#### 7. **AI-Assisted Features**
+#### 8. **AI-Assisted Features**
 - [ ] Smart topic suggestions
 - [ ] Auto-layout algorithms
 - [ ] Machine learning for mind map optimization
 - [ ] Natural language to mind map conversion
 - [ ] Smart categorization
 
-#### 8. **Enterprise Features**
+#### 9. **Enterprise Features**
 - [ ] Advanced permissions system
 - [ ] Organization management
 - [ ] Audit logging
@@ -179,7 +197,7 @@
 - [ ] Data export compliance tools
 - [ ] Admin dashboard
 
-#### 9. **Content Ecosystem**
+#### 10. **Content Ecosystem**
 - [ ] Template marketplace
 - [ ] Community gallery
 - [ ] Version history improvements
