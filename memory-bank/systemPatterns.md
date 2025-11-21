@@ -4,32 +4,41 @@
 
 ### Monorepo Structure
 
-The project uses a Yarn/Lerna monorepo with four interconnected packages:
+The project uses a Yarn/Lerna monorepo with interconnected packages:
 
 ```
 wisemapping-front-end/
 ├── packages/
-│   ├── editor/          # React component library wrapper
-│   ├── mindplot/        # Core mind mapping canvas engine  
-│   ├── web2d/           # 2D rendering foundation (SVG abstraction)
-│   └── webapp/          # Complete web application
-├── memory-bank/         # Project documentation
-└── scripts/             # Build and utility scripts
+│   ├── editor/              # React component library wrapper
+│   ├── mindplot/            # Core mind mapping canvas engine  
+│   ├── web2d/               # 2D rendering foundation (SVG abstraction)
+│   ├── fastmind/            # VS Code Extension for .fastmind files
+│   └── editor-standalone/   # Standalone build for VS Code integration
+├── memory-bank/             # Project documentation
+└── scripts/                 # Build and utility scripts
 ```
+
+**Package Status Evolution**:
+- **webapp**: Deprecated and removed (Q4 2025)
+- **fastmind**: Added as primary focus (Q4 2025)
+- **editor-standalone**: Added for VS Code integration (Q4 2025)
 
 ### Dependency Hierarchy
 
-The packages follow a strict dependency hierarchy:
+The packages follow a complex dependency hierarchy supporting multiple targets:
 
 ```
-webapp → editor → mindplot → web2d
+Web Application (deprecated): webapp → editor → mindplot → web2d
+VS Code Extension: fastmind → editor-standalone → editor → mindplot → web2d
+Standalone Integration: editor-standalone → editor → mindplot → web2d
 ```
 
 **Dependency Flow**:
 - **@wisemapping/web2d**: Foundation 2D rendering (zero external dependencies)
 - **@wisemapping/mindplot**: Canvas engine consuming web2d APIs
 - **@wisemapping/editor**: React components wrapping mindplot functionality
-- **@wisemapping/webapp**: Full application consuming editor components
+- **@wisemapping/editor-standalone**: Standalone build of editor for VS Code webview
+- **@wisemapping/fastmind**: VS Code Extension consuming editor-standalone
 
 ## Core Design Patterns
 
@@ -198,6 +207,115 @@ interface MindMapRepository {
 // Implementation handles API calls, caching, etc.
 class ApiMindMapRepository implements MindMapRepository {
   // ... implementation
+}
+```
+
+### 9. **VS Code Extension Architecture**
+
+**CustomTextEditorProvider Pattern**:
+```typescript
+// FastMind Extension - Custom Editor Provider
+export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
+  async resolveCustomTextEditor(
+    document: vscode.TextDocument,
+    webviewPanel: vscode.WebviewPanel,
+    token: vscode.CancellationToken
+  ): Promise<void> {
+    // Setup webview communication
+    this.setupWebviewCommunication(webviewPanel, document);
+    
+    // Load initial content
+    const initialContent = document.getText();
+    webviewPanel.webview.postMessage({
+      type: 'contentChanged',
+      text: initialContent
+    });
+  }
+}
+```
+
+**Bidirectional Communication Pattern**:
+```typescript
+// Extension → Editor (webview.postMessage)
+webviewPanel.webview.postMessage({
+  type: 'saveStatus',
+  isSaving: false,
+  success: true,
+  lastSaved: new Date()
+});
+
+// Editor → Extension (acquireVsCodeApi().postMessage)
+vscode.postMessage({
+  type: 'edit',
+  text: newXmlContent
+});
+
+// Extension handles messages
+webviewPanel.webview.onDidReceiveMessage(async (message: WebviewMessage) => {
+  switch (message.type) {
+    case 'edit': 
+      await this.handleDocumentEdit(document, webviewPanel, message.text);
+      break;
+    case 'ready':
+      // Handle editor ready state
+      break;
+  }
+});
+```
+
+**VS Code Persistence Manager Pattern**:
+```typescript
+// Standalone editor persistence for VS Code integration
+export class VSCodePersistenceManager extends PersistenceManager {
+  constructor(private readonly onDocumentChange: (xmlContent: string) => void) {
+    super();
+  }
+
+  saveMapXml(mapId: string, mapDoc: Document): void {
+    const xmlContent = new XMLSerializer().serializeToString(mapDoc);
+    // Trigger save in extension via callback
+    this.onDocumentChange(xmlContent);
+  }
+
+  loadMapDom(mapId: string): Promise<Document> {
+    // Load from extension-injected content or default
+    const initialContent = window.__INITIAL_DOCUMENT_CONTENT__ || this.getDefaultMapXml();
+    const parser = new DOMParser();
+    return Promise.resolve(parser.parseFromString(initialContent, 'text/xml'));
+  }
+}
+```
+
+**Error Handling and Retry Pattern**:
+```typescript
+private async handleDocumentEdit(
+  document: vscode.TextDocument, 
+  webviewPanel: vscode.WebviewPanel, 
+  newContent: string
+): Promise<void> {
+  const maxRetries = 3;
+  let attempt = 0;
+  
+  while (attempt < maxRetries) {
+    try {
+      const edit = new vscode.WorkspaceEdit();
+      edit.replace(document.uri, new vscode.Range(0, 0, document.lineCount, 0), newContent);
+      const success = await vscode.workspace.applyEdit(edit);
+      
+      if (success) {
+        await document.save();
+        this.notifySaveStatus(webviewPanel, {isSaving: false, success: true});
+        return;
+      }
+    } catch (error) {
+      attempt++;
+      if (attempt >= maxRetries) {
+        this.notifySaveStatus(webviewPanel, {isSaving: false, success: false, error: error.message});
+        throw error;
+      }
+      await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+    }
+  }
 }
 ```
 
