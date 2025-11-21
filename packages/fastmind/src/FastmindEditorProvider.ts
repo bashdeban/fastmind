@@ -365,6 +365,47 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self' ${webview.cspSource} https://fonts.googleapis.com; font-src 'self' ${webview.cspSource} https://fonts.gstatic.com; img-src 'self' data: ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource}; connect-src 'self' ${webview.cspSource} https:;">
         <title>FastMind Editor</title>
+        <style>
+          html, body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+          }
+          #root {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+          }
+          .wise-editor {
+            height: 100vh !important;
+            width: 100vw !important;
+          }
+          mindplot-component {
+            height: 100vh !important;
+            width: 100vw !important;
+            display: block;
+          }
+          #mindplot-canvas {
+            height: 100vh !important;
+            width: 100vw !important;
+          }
+          #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 9999;
+          }
+        </style>
       </head>
       <body>
         <div id="root"></div>
