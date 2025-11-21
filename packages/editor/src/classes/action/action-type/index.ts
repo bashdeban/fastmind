@@ -35,6 +35,7 @@ type ActionType =
   | 'theme'
   | 'layout'
   | 'rename'
-  | 'outline-view';
+  | 'outline-view'
+  | 'back-to-maps';
 
 export default ActionType;

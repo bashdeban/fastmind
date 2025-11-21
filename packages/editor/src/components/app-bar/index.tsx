@@ -291,6 +291,7 @@ const AppBar = ({
           window.location.href = '/c/maps/';
         }
       },
+      visible: !capability.isHidden('back-to-maps'),
     },
     {
       render: () => (
