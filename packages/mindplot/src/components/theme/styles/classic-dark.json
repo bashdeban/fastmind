@@ -1,6 +1,28 @@
 {
+  "MainTopic": {
+    "backgroundColor": [
+      "#1E40AF",
+      "#1E3A8A",
+      "#3730A3",
+      "#581C87",
+      "#7C2D12",
+      "#92400E",
+      "#A16207",
+      "#365314",
+      "#0F766E",
+      "#155E75"
+    ],
+    "fontWeight": "bold",
+    "fontColor": "#ffffff"
+  },
+  "SubTopic": {
+    "fontColor": "#ffffff"
+  },
+  "IsolatedTopic": {
+    "fontColor": "#ffffff"
+  },
   "Canvas": {
-    "backgroundColor": "#696969",
+    "backgroundColor": "#0e0e0e",
     "showGrid": false
   }
 }
