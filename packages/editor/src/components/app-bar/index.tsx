@@ -48,11 +48,13 @@ import MapInfo from '../../classes/model/map-info';
 import { useIntl } from 'react-intl';
 import ThemeEditor from '../action-widget/pane/theme-editor';
 import LayoutSelector from '../action-widget/pane/layout-selector';
+import LlmTest from '../action-widget/pane/llm-test';
 import NodePropertyValueModelBuilder from '../../classes/model/node-property-builder';
 import TextField from '@mui/material/TextField';
 import { $notify } from '@wisemapping/mindplot';
 import { useTheme } from '../../contexts/ThemeContext';
 import { trackAppBarAction } from '../../utils/analytics';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 interface AppBarProps {
   model: Editor | undefined;
@@ -526,6 +528,19 @@ const AppBar = ({
         trackAppBarAction('theme_toggle');
         toggleMode();
       },
+    },
+    {
+      icon: <SettingsIcon />,
+      tooltip: intl.formatMessage({
+        id: 'appbar.tooltip-settings',
+        defaultMessage: 'Settings',
+      }),
+      options: [
+        {
+          render: () => <LlmTest />,
+        },
+      ],
+      visible: !capability.isHidden('settings'),
     },
     {
       render: () => (

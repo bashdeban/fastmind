@@ -54,8 +54,12 @@
     "languages": [
       {
         "id": "fastmind",
-        "extensions": [ ".fastmind" ],
-        "aliases": [ "FastMind" ]
+        "extensions": [
+          ".fastmind"
+        ],
+        "aliases": [
+          "FastMind"
+        ]
       }
     ],
     "customEditors": [

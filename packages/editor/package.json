@@ -39,6 +39,7 @@
     "@mui/material": "^7.3.4",
     "@wisemapping/mindplot": "workspace:*",
     "emoji-picker-react": "^4.14.2",
+    "langchain": "^1.0.6",
     "react-color": "^2.19.3",
     "react-intl": "^7.1.14",
     "react-loader-spinner": "^7.0.3",

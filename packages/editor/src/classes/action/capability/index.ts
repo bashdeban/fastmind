@@ -340,5 +340,20 @@ const ActionConfigByRenderMode: Record<ActionType, CapabilitySupport> = {
       hidden: ['edition-owner'],
     },
   },
+  settings: {
+    desktop: {
+      hidden: ['viewonly-public', 'viewonly-private', 'edition-viewer'],
+    },
+    mobile: {
+      hidden: [
+        'viewonly-public',
+        'viewonly-private',
+        'showcase',
+        'edition-viewer',
+        'edition-editor',
+        'edition-owner',
+      ],
+    },
+  },
 };
 export default Capability;
