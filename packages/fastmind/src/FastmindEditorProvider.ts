@@ -121,14 +121,14 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       if (e.document === document) {
         const newContent = e.document.getText();
         const docKey = document.uri.toString();
-        
+
         // 检查是否是自己触发的变更
         if (this.isSelfInducedChange.get(docKey)) {
           console.log('🔄 [FastMind VS Code] Ignoring self-induced document change');
           this.isSelfInducedChange.set(docKey, false);
           return;
         }
-        
+
         // 避免循环更新
         if (newContent !== this.lastKnownContent.get(docKey)) {
           console.log('📝 [FastMind VS Code] External document change detected:', {
@@ -142,7 +142,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
             text: newContent,
             timestamp: Date.now()
           });
-          
+
           this.lastKnownContent.set(docKey, newContent);
         }
       }
@@ -158,13 +158,13 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
    * Handle document edit from editor
    */
   private async handleDocumentEdit(
-    document: vscode.TextDocument, 
-    webviewPanel: vscode.WebviewPanel, 
+    document: vscode.TextDocument,
+    webviewPanel: vscode.WebviewPanel,
     newContent: string
   ): Promise<void> {
     const maxRetries = 3;
     let attempt = 0;
-    
+
     this.notifySaveStatus(webviewPanel, {
       isSaving: true
     });
@@ -189,13 +189,13 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
         if (success) {
           // 标记为自身触发的变更
           this.isSelfInducedChange.set(document.uri.toString(), true);
-          
+
           // 保存文档
           await document.save();
-          
+
           // 更新已知内容
           this.lastKnownContent.set(document.uri.toString(), newContent);
-          
+
           this.notifySaveStatus(webviewPanel, {
             isSaving: false,
             success: true,
@@ -213,7 +213,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       } catch (error) {
         attempt++;
         console.error(`❌ [FastMind VS Code] Save attempt ${attempt} failed:`, error);
-        
+
         if (attempt >= maxRetries) {
           this.notifySaveStatus(webviewPanel, {
             isSaving: false,
@@ -222,7 +222,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
           });
           throw error;
         }
-        
+
         // 重试延迟
         await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
       }
@@ -247,11 +247,11 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
   ): void {
     webviewPanel.onDidDispose(async () => {
       console.log('🔒 [FastMind] Webview closing, checking for unsaved changes');
-      
+
       const docKey = document.uri.toString();
       const currentContent = document.getText();
       const knownContent = this.lastKnownContent.get(docKey);
-      
+
       if (currentContent !== knownContent) {
         // There are unsaved changes
         const result = await vscode.window.showWarningMessage(
@@ -259,7 +259,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
           { modal: true },
           '保存', '不保存', '取消'
         );
-        
+
         if (result === '保存') {
           // Force save before closing
           try {
@@ -283,11 +283,11 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       if (!webviewPanel.visible) {
         // Panel became invisible (user switched tabs)
         console.log('🔄 [FastMind] Panel became invisible, checking for save');
-        
+
         const docKey = document.uri.toString();
         const currentContent = document.getText();
         const knownContent = this.lastKnownContent.get(docKey);
-        
+
         if (currentContent !== knownContent) {
           // Auto-save when switching away
           try {
@@ -307,13 +307,13 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
   private notifySaveStatus(webviewPanel: vscode.WebviewPanel, status: SaveStatus): void {
     const key = webviewPanel.viewType;
     this.saveStatus.set(key, status);
-    
+
     // 发送状态到 webview
     webviewPanel.webview.postMessage({
       type: 'saveStatus',
       status
     });
-    
+
     // 更新 VS Code 状态栏
     if (status.error) {
       vscode.window.showErrorMessage(`FastMind 保存失败: ${status.error}`);
@@ -363,7 +363,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self' ${webview.cspSource} https://fonts.googleapis.com; font-src 'self' ${webview.cspSource} https://fonts.gstatic.com; img-src 'self' data: ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource}; connect-src 'self' ${webview.cspSource} https:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self' ${webview.cspSource} https://fonts.googleapis.com; font-src 'self' ${webview.cspSource} https://fonts.gstatic.com; img-src 'self' data: ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource}; connect-src 'self' ${webview.cspSource} https: http://localhost:* http://127.0.0.1:*;">
         <title>FastMind Editor</title>
         <style>
           html, body {
