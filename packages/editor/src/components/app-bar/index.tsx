@@ -537,7 +537,7 @@ const AppBar = ({
       }),
       options: [
         {
-          render: () => <LlmTest />,
+          render: (closeModal) => <LlmTest closeModal={closeModal} />,
         },
       ],
       visible: !capability.isHidden('settings'),
