@@ -10,6 +10,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
+import { LLMService, DEFAULT_LLM_CONFIG } from '../../../../services/llm';
 
 interface LlmTestProps {
   closeModal?: () => void;
@@ -20,13 +21,16 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
   const [result, setResult] = useState<string>('');
   const [error, setError] = useState<string>('');
 
-  // Configuration state
-  const [apiUrl, setApiUrl] = useState('https://open.bigmodel.cn/api/paas/v4/chat/completions');
-  const [modelName, setModelName] = useState('glm-4.5-air');
-  const [apiKey, setApiKey] = useState('b8237c13fdd94187a2248bbb86c50251.HTJcOFe52F7EYU3S');
+  // LLM Service instance
+  const [llmService] = useState(() => new LLMService());
+
+  // Configuration state - use defaults from service
+  const [apiUrl, setApiUrl] = useState(DEFAULT_LLM_CONFIG.apiUrl);
+  const [modelName, setModelName] = useState(DEFAULT_LLM_CONFIG.modelName);
+  const [apiKey, setApiKey] = useState(DEFAULT_LLM_CONFIG.apiKey);
   const [prompt, setPrompt] = useState('Hello, please introduce yourself briefly and tell me what you can do.');
-  const [temperature, setTemperature] = useState(0.7);
-  const [maxTokens, setMaxTokens] = useState(150);
+  const [temperature, setTemperature] = useState(DEFAULT_LLM_CONFIG.temperature);
+  const [maxTokens, setMaxTokens] = useState(DEFAULT_LLM_CONFIG.maxTokens);
 
   const testLangChainConnection = async (): Promise<void> => {
     setIsLoading(true);
@@ -36,12 +40,18 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
     try {
       console.log('🚀 Starting LLM connection test...');
 
-      console.log('📋 Configuration:', {
+      // Update service configuration with current form values
+      const config = {
         apiUrl,
         modelName,
-        prompt,
+        apiKey,
         temperature,
         maxTokens,
+      };
+
+      console.log('📋 Configuration:', {
+        ...config,
+        prompt,
         timestamp: new Date().toISOString()
       });
 
@@ -50,39 +60,15 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
 
       const startTime = Date.now();
 
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: modelName,
-          messages: [
-            {
-              role: 'user',
-              content: prompt,
-            },
-          ],
-          temperature,
-          max_tokens: maxTokens,
-        }),
-      });
+      // Use the LLM service instead of direct fetch
+      const content = await llmService.generateResponseWithConfig(prompt, config);
 
       const endTime = Date.now();
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-
       console.log('✅ Response received successfully!');
       console.log('⏱️ Response time:', `${endTime - startTime}ms`);
-      console.log('🤖 LLM Response:', data.choices[0]?.message?.content);
-      console.log('📊 Usage metadata:', data.usage);
+      console.log('🤖 LLM Response:', content);
 
-      const content = data.choices[0]?.message?.content || 'No response content';
       setResult(content);
       console.log('🎉 Test completed successfully!');
 
