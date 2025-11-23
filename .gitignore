@@ -48,4 +48,4 @@ wisemapping-frontend.code-workspace
 
 packages/**/.yalc/
 packages/**/yalc.lock
-temp/resources/*
+temp/*

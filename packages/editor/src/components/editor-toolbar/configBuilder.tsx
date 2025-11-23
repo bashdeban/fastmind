@@ -37,10 +37,12 @@ import TopicFontEditor from '../action-widget/pane/topic-font-editor';
 import RelationshipStyleEditor from '../action-widget/pane/relationship-style-editor';
 import RelationshipStyleIcon from '../icons/RelationshipStyleIcon';
 import TopicIconEditor from '../action-widget/pane/topic-icon-editor';
+import AITopicGenerator from '../action-widget/pane/ai-topic-generator';
 import Editor from '../../classes/model/editor';
 import { IntlShape } from 'react-intl';
 import { trackRelationshipAction, trackEditorPanelAction } from '../../utils/analytics';
 import CanvasStyleEditor, { CanvasStyle } from '../action-widget/pane/canvas-style-editor';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
 const keyTooltip = (msg: string, key: string): string => {
   const isMac = window.navigator.platform.toUpperCase().indexOf('MAC') >= 0;
@@ -305,6 +307,44 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
     disabled: () => model.getDesigner().getModel().filterSelectedTopics().length === 0,
   };
 
+  /**
+   * AI topic generator
+   */
+  const aiTopicGeneratorConfiguration: ActionConfig = {
+    icon: <AutoAwesomeIcon />,
+    tooltip: intl.formatMessage({
+      id: 'editor-panel.tooltip-ai-topic-generator',
+      defaultMessage: 'AI Topic Generator',
+    }),
+    options: [
+      {
+        tooltip: intl.formatMessage({
+          id: 'editor-panel.ai-topic-generator-title',
+          defaultMessage: 'AI Topic Generator',
+        }),
+        render: (closeModal) => {
+          trackEditorPanelAction('open_ai_topic_generator');
+          const selectedTopics = model.getDesigner().getModel().filterSelectedTopics();
+          const selectedTopic = selectedTopics.length > 0 ? selectedTopics[0] : null;
+          
+          if (!selectedTopic) {
+            return <div />;
+          }
+
+          return (
+            <AITopicGenerator
+              closeModal={closeModal}
+              selectedTopicText={selectedTopic.getText() || ''}
+              parentTopicId={selectedTopic.getId()}
+              designer={model.getDesigner()}
+            />
+          );
+        },
+      },
+    ],
+    disabled: () => model.getDesigner().getModel().filterSelectedTopics().length === 0,
+  };
+
   return [
     addNodeToolbarConfiguration,
     deleteNodeToolbarConfiguration,
@@ -316,6 +356,7 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
     editLinkUrlConfiguration,
     addRelationConfiguration,
     relationshipStyleConfiguration,
+    aiTopicGeneratorConfiguration,
     editCanvasStyleConfiguration,
   ];
 }
