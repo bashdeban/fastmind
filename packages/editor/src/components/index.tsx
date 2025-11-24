@@ -39,6 +39,7 @@ import { EditorThemeProvider, useTheme } from '../contexts/ThemeContext';
 import { createEditorTheme } from '../theme';
 import { ThemeVariantStorage } from '../types/ThemeVariantStorage';
 import EditorLoadingSkeleton from './editor-loading-skeleton';
+import LLMProgressNotification from './llm-progress-notification';
 
 const EMBED_READY_ATTRIBUTE = 'data-wisemapping-embed-loaded';
 
@@ -189,6 +190,8 @@ const EditorContent = ({
             capability={capability}
             message={mapInfo.isLocked() ? mapInfo.getLockedMessage() : ''}
           />
+
+          <LLMProgressNotification />
 
           {!model?.isMapLoadded() && <EditorLoadingSkeleton />}
         </IntlProvider>

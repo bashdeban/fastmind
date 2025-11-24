@@ -19,6 +19,7 @@ import { llmProgressManager } from '../components/llm-progress-notification/mana
 import { LLMService } from './llm/LLMService';
 import NodeModel from '@wisemapping/mindplot/src/components/model/NodeModel';
 import Designer from '@wisemapping/mindplot/src/components/Designer';
+import { Topic } from '@wisemapping/mindplot';
 
 export interface GeneratedTopic {
   text: string;
@@ -108,6 +109,44 @@ class AITopicGeneratorService {
     }
 
     return topicModels;
+  }
+
+  /**
+   * Simplified method: Generate and add topics directly to mindmap
+   */
+  async generateAndAddTopicsDirectly(
+    parentTopic: Topic,
+    designer: Designer,
+    options: Partial<AITopicGeneratorOptions> = {}
+  ): Promise<void> {
+    const defaultOptions: AITopicGeneratorOptions = {
+      count: 5,
+      customPrompt: options.customPrompt
+    };
+
+    try {
+      // Generate topics (automatically shows progress notification)
+      const generatedTopics = await this.generateTopics(
+        parentTopic.getText(),
+        defaultOptions
+      );
+
+      // Create NodeModel instances
+      const topicModels = this.createTopicModels(
+        generatedTopics,
+        designer,
+        parentTopic.getId()
+      );
+
+      // Add each topic to the mindmap using the correct method
+      topicModels.forEach(model => {
+        designer.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
+      });
+
+    } catch (error) {
+      console.error('AI主题生成失败:', error);
+      throw error;
+    }
   }
 
   /**

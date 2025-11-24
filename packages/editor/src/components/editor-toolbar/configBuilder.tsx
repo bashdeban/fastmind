@@ -37,12 +37,12 @@ import TopicFontEditor from '../action-widget/pane/topic-font-editor';
 import RelationshipStyleEditor from '../action-widget/pane/relationship-style-editor';
 import RelationshipStyleIcon from '../icons/RelationshipStyleIcon';
 import TopicIconEditor from '../action-widget/pane/topic-icon-editor';
-import AITopicGenerator from '../action-widget/pane/ai-topic-generator';
 import Editor from '../../classes/model/editor';
 import { IntlShape } from 'react-intl';
 import { trackRelationshipAction, trackEditorPanelAction } from '../../utils/analytics';
 import CanvasStyleEditor, { CanvasStyle } from '../action-widget/pane/canvas-style-editor';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import { aiTopicGeneratorService } from '../../services/ai-topic-generator';
 
 const keyTooltip = (msg: string, key: string): string => {
   const isMac = window.navigator.platform.toUpperCase().indexOf('MAC') >= 0;
@@ -308,7 +308,7 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
   };
 
   /**
-   * AI topic generator
+   * AI topic generator - Direct generation without dialog
    */
   const aiTopicGeneratorConfiguration: ActionConfig = {
     icon: <AutoAwesomeIcon />,
@@ -316,32 +316,22 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
       id: 'editor-panel.tooltip-ai-topic-generator',
       defaultMessage: 'AI Topic Generator',
     }),
-    options: [
-      {
-        tooltip: intl.formatMessage({
-          id: 'editor-panel.ai-topic-generator-title',
-          defaultMessage: 'AI Topic Generator',
-        }),
-        render: (closeModal) => {
-          trackEditorPanelAction('open_ai_topic_generator');
-          const selectedTopics = model.getDesigner().getModel().filterSelectedTopics();
-          const selectedTopic = selectedTopics.length > 0 ? selectedTopics[0] : null;
-          
-          if (!selectedTopic) {
-            return <div />;
-          }
-
-          return (
-            <AITopicGenerator
-              closeModal={closeModal}
-              selectedTopicText={selectedTopic.getText() || ''}
-              parentTopicId={selectedTopic.getId()}
-              designer={model.getDesigner()}
-            />
-          );
-        },
-      },
-    ],
+    onClick: () => {
+      trackEditorPanelAction('ai_topic_generator_direct');
+      const selectedTopics = model.getDesigner().getModel().filterSelectedTopics();
+      
+      if (selectedTopics.length === 1) {
+        const selectedTopic = selectedTopics[0];
+        
+        // Directly call the simplified AI generation method
+        aiTopicGeneratorService.generateAndAddTopicsDirectly(
+          selectedTopic,
+          model.getDesigner()
+        ).catch(error => {
+          console.error('AI主题生成失败:', error);
+        });
+      }
+    },
     disabled: () => model.getDesigner().getModel().filterSelectedTopics().length === 0,
   };
 
