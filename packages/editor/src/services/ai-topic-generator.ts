@@ -46,7 +46,7 @@ class AITopicGeneratorService {
   ): Promise<GeneratedTopic[]> {
     const taskId = llmProgressManager.createTask({
       title: 'AI 生成主题',
-      description: `正在基于"${parentTopic}"生成 ${options.count} 个相关主题...`,
+      description: `正在基于"${parentTopic}"生成相关主题...`,
     });
 
     try {
@@ -121,7 +121,7 @@ class AITopicGeneratorService {
     const path: string[] = [];
     let current: Topic | null = topic;
     let depth = 0;
-    
+
     while (current && depth < maxDepth) {
       const text = current.getText();
       if (text && text.trim().length > 0) {
@@ -130,7 +130,7 @@ class AITopicGeneratorService {
       current = current.getParent();
       depth++;
     }
-    
+
     return path.filter(text => text && text.trim().length > 0);
   }
 
@@ -142,10 +142,10 @@ class AITopicGeneratorService {
     options: AITopicGeneratorOptions,
   ): Promise<GeneratedTopic[]> {
     const currentTopic = topicPath[topicPath.length - 1];
-    
+
     const taskId = llmProgressManager.createTask({
       title: 'AI 生成主题',
-      description: `正在基于"${currentTopic}"和上下文路径生成 ${options.count} 个相关主题...`,
+      description: `正在基于"${currentTopic}"和上下文路径生成相关主题...`,
     });
 
     try {
@@ -185,20 +185,18 @@ class AITopicGeneratorService {
   private buildEnhancedPrompt(topicPath: string[], options: AITopicGeneratorOptions): string {
     const currentTopic = topicPath[topicPath.length - 1];
     const parentPath = topicPath.slice(0, -1);
-    
+
     // Build context hierarchy
-    const contextPath = parentPath.length > 0 
+    const contextPath = parentPath.length > 0
       ? `Context hierarchy: ${parentPath.join(' → ')}\n`
       : '';
-    
-    const enhancedPrompt = `${contextPath}Based on the topic "${currentTopic}" and its context above, generate ${options.count} related subtopics as a JSON array.
+
+    const enhancedPrompt = `${contextPath}Based on the topic "${currentTopic}" and its context above, generate 3 to ${options.count} related subtopics as a JSON array.
 
 Considerations:
-- The subtopics should be relevant to "${currentTopic}"
-- Take into account the broader context provided by parent topics
-- Each subtopic should be a meaningful expansion or different aspect
-- Maintain consistency with the hierarchy context
+- Subtopics must be concise and brief; use words whenever possible instead of short sentences.
 - Write in the same language as the topics
+- The number of subtopics is determined flexibly based on relevance and value
 
 Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
 
@@ -218,14 +216,14 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
     options: Partial<AITopicGeneratorOptions> = {}
   ): Promise<void> {
     const defaultOptions: AITopicGeneratorOptions = {
-      count: 5,
+      count: 8,
       customPrompt: options.customPrompt
     };
 
     try {
       // Collect parent topic texts for enhanced context
       const topicPath = this.collectParentTopicTexts(parentTopic);
-      
+
       // Generate topics with enhanced context (automatically shows progress notification)
       const generatedTopics = await this.generateTopicsWithContext(
         topicPath,
@@ -296,7 +294,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
     } catch (error) {
       console.error('Failed to parse LLM response:', error);
       console.error('Response content:', response);
-      
+
       // Fallback: try to extract bullet points or numbered items
       return this.extractTopicsFromText(response);
     }
@@ -307,7 +305,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
    */
   private extractTopicsFromText(text: string): GeneratedTopic[] {
     const topics: GeneratedTopic[] = [];
-    
+
     // Try different patterns
     const patterns = [
       /^\d+\.\s*(.+)$/gm,  // 1. Topic
@@ -334,7 +332,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
       const lines = text.split('\n')
         .map(line => line.trim())
         .filter(line => line.length > 0 && !line.startsWith('```') && !line.startsWith('JSON'));
-      
+
       lines.slice(0, 8).forEach(line => {
         // eslint-disable-next-line no-useless-escape
         const cleanLine = line.replace(/^[\d.\-*•\[\]{},"'']+\s*/, '').trim();
