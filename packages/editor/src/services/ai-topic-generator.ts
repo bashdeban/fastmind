@@ -39,45 +39,14 @@ class AITopicGeneratorService {
 
   /**
    * Generate topics based on a parent topic using LLM
+   * @deprecated Use generateTopicsWithContext for better context-aware generation
    */
   async generateTopics(
     parentTopic: string,
     options: AITopicGeneratorOptions,
   ): Promise<GeneratedTopic[]> {
-    const taskId = llmProgressManager.createTask({
-      title: 'AI 生成主题',
-      description: `正在基于"${parentTopic}"生成相关主题...`,
-    });
-
-    try {
-      // Start progress
-      llmProgressManager.updateTaskProgress(taskId, 10);
-
-      // Build the prompt
-      const prompt = this.buildPrompt(parentTopic, options);
-      llmProgressManager.updateTaskProgress(taskId, 30);
-
-      // Generate response from LLM
-      const response = await this.llmService.generateResponse(prompt);
-      llmProgressManager.updateTaskProgress(taskId, 70);
-
-      // Parse the response
-      const topics = this.parseResponse(response);
-      llmProgressManager.updateTaskProgress(taskId, 90);
-
-      // Validate and limit topics
-      const validTopics = topics
-        .filter(topic => topic.text && topic.text.trim().length > 0)
-        .slice(0, options.count);
-
-      llmProgressManager.completeTask(taskId, true);
-      return validTopics;
-
-    } catch (error) {
-      console.error('AI topic generation failed:', error);
-      llmProgressManager.completeTask(taskId, false);
-      throw error;
-    }
+    // Delegate to the enhanced context-aware method with single topic path
+    return this.generateTopicsWithContext([parentTopic], options);
   }
 
   /**
@@ -248,25 +217,6 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
     }
   }
 
-  /**
-   * Build the prompt for LLM topic generation
-   */
-  private buildPrompt(parentTopic: string, options: AITopicGeneratorOptions): string {
-    const basePrompt = `Based on the topic "${parentTopic}", generate ${options.count} related subtopics as a JSON array.
-Each subtopic should be:
-- Concise and clear
-- Directly relevant to the main topic
-- A meaningful expansion or different aspect
-- Written in the same language as the main topic
-
-Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
-
-    if (options.customPrompt && options.customPrompt.trim()) {
-      return `${basePrompt}\n\nAdditional context: ${options.customPrompt.trim()}`;
-    }
-
-    return basePrompt;
-  }
 
   /**
    * Parse LLM response into topic array

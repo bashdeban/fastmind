@@ -96,7 +96,7 @@ describe('AITopicGeneratorService', () => {
 
       expect(prompt).toContain('Context hierarchy: Root → Parent');
       expect(prompt).toContain('Based on the topic "Child"');
-      expect(prompt).toContain('generate 5 related subtopics');
+      expect(prompt).toContain('generate 3 to 5 related subtopics');
     });
 
     it('should handle single topic without hierarchy', () => {
@@ -109,7 +109,7 @@ describe('AITopicGeneratorService', () => {
 
       expect(prompt).not.toContain('Context hierarchy:');
       expect(prompt).toContain('Based on the topic "Single Topic"');
-      expect(prompt).toContain('generate 3 related subtopics');
+      expect(prompt).toContain('generate 3 to 3 related subtopics');
     });
 
     it('should include custom prompt when provided', () => {
