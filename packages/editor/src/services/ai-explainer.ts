@@ -163,59 +163,6 @@ class AIExplainerService {
 
     let analysis = response.trim();
 
-    // Remove any JSON formatting or code blocks if present
-    analysis = analysis.replace(/^```[\s\S]*?```\s*$/gm, '');
-    analysis = analysis.replace(/^[\s\S]*?\{[\s\S]*?\}[\s\S]*$/gm, '');
-    analysis = analysis.replace(/^["'[\]]+\s*|["'[\]]+\s*$/g, '');
-
-    // Extract content from JSON if present
-    const jsonMatch = analysis.match(/\{[\s\S]*"analysis"[\s\S]*"[\s\S]*\}/);
-    if (jsonMatch) {
-      try {
-        const jsonData = JSON.parse(jsonMatch[0]);
-        if (jsonData.analysis) {
-          analysis = jsonData.analysis;
-        }
-      } catch {
-        // If JSON parsing fails, continue with original content
-      }
-    }
-
-    // Remove common prefixes that might appear in LLM responses
-    analysis = analysis.replace(/^(分析结果|Analysis|结果|Result)[:：]?\s*/i, '');
-    analysis = analysis.replace(/^(主题分析|Topic Analysis)[:：]?\s*/i, '');
-
-    // Clean up excessive whitespace
-    analysis = analysis.replace(/\n\s*\n\s*\n/g, '\n\n'); // Reduce multiple empty lines
-    analysis = analysis.replace(/[ \t]+/g, ' '); // Normalize spaces
-
-    // Ensure proper formatting
-    if (!analysis.match(/^\d+\./)) {
-      // If it doesn't start with numbered list, add basic structure
-      const sections = analysis.split('\n\n').filter(section => section.trim().length > 0);
-      if (sections.length > 1) {
-        analysis = sections.map((section, index) => {
-          const cleanSection = section.trim();
-          if (/^\d+[.)]/.test(cleanSection)) {
-            return cleanSection;
-          }
-          return `${index + 1}. ${cleanSection}`;
-        }).join('\n\n');
-      } else {
-        // Single section, split by lines
-        const lines = analysis.split('\n').filter(line => line.trim().length > 0);
-        if (lines.length > 1) {
-          analysis = lines.map((line, index) => {
-            const cleanLine = line.trim();
-            if (/^\d+[.)]/.test(cleanLine)) {
-              return cleanLine;
-            }
-            return `${index + 1}. ${cleanLine}`;
-          }).join('\n\n');
-        }
-      }
-    }
-
     // Apply length limit if specified
     if (maxLength && analysis.length > maxLength) {
       // Try to cut at a natural break point
