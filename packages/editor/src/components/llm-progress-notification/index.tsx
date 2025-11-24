@@ -90,8 +90,8 @@ const LLMProgressNotification: React.FC = () => {
     <Box
       sx={{
         position: 'fixed',
-        top: 20,
-        right: 20,
+        bottom: 20,
+        left: 20,
         zIndex: 9999,
         display: 'flex',
         flexDirection: 'column',

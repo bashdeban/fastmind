@@ -42,7 +42,7 @@ import { IntlShape } from 'react-intl';
 import { trackRelationshipAction, trackEditorPanelAction } from '../../utils/analytics';
 import CanvasStyleEditor, { CanvasStyle } from '../action-widget/pane/canvas-style-editor';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
-import PsychologyIcon from '@mui/icons-material/Psychology';
+import SmartToyIcon from '@mui/icons-material/SmartToy';
 import { aiTopicGeneratorService } from '../../services/ai-topic-generator';
 import { aiExplainerService } from '../../services/ai-explainer';
 
@@ -313,7 +313,7 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
    * AI topic generator - Direct generation without dialog
    */
   const aiTopicGeneratorConfiguration: ActionConfig = {
-    icon: <AutoAwesomeIcon />,
+    icon: <SmartToyIcon />,
     tooltip: intl.formatMessage({
       id: 'editor-panel.tooltip-ai-topic-generator',
       defaultMessage: 'AI Topic Generator',
@@ -341,7 +341,7 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
    * AI explainer - Generate comprehensive topic analysis
    */
   const aiExplainerConfiguration: ActionConfig = {
-    icon: <PsychologyIcon />,
+    icon: <AutoAwesomeIcon />,
     tooltip: intl.formatMessage({
       id: 'editor-panel.tooltip-ai-explainer',
       defaultMessage: 'AI Explainer',
@@ -366,6 +366,8 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
   };
 
   return [
+    aiTopicGeneratorConfiguration,
+    aiExplainerConfiguration,
     addNodeToolbarConfiguration,
     deleteNodeToolbarConfiguration,
     styleConfiguration,
@@ -376,8 +378,6 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
     editLinkUrlConfiguration,
     addRelationConfiguration,
     relationshipStyleConfiguration,
-    aiTopicGeneratorConfiguration,
-    aiExplainerConfiguration,
     editCanvasStyleConfiguration,
   ];
 }
