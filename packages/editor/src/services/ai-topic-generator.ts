@@ -112,6 +112,104 @@ class AITopicGeneratorService {
   }
 
   /**
+   * Collect all parent topic texts from the selected topic to the root
+   * @param topic The selected topic
+   * @param maxDepth Maximum traversal depth to prevent infinite loops
+   * @returns Array of topic texts from root to selected topic
+   */
+  private collectParentTopicTexts(topic: Topic, maxDepth: number = 10): string[] {
+    const path: string[] = [];
+    let current: Topic | null = topic;
+    let depth = 0;
+    
+    while (current && depth < maxDepth) {
+      const text = current.getText();
+      if (text && text.trim().length > 0) {
+        path.unshift(text.trim()); // Add to beginning to maintain root-to-leaf order
+      }
+      current = current.getParent();
+      depth++;
+    }
+    
+    return path.filter(text => text && text.trim().length > 0);
+  }
+
+  /**
+   * Generate topics based on topic path with enhanced context
+   */
+  async generateTopicsWithContext(
+    topicPath: string[],
+    options: AITopicGeneratorOptions,
+  ): Promise<GeneratedTopic[]> {
+    const currentTopic = topicPath[topicPath.length - 1];
+    
+    const taskId = llmProgressManager.createTask({
+      title: 'AI 生成主题',
+      description: `正在基于"${currentTopic}"和上下文路径生成 ${options.count} 个相关主题...`,
+    });
+
+    try {
+      // Start progress
+      llmProgressManager.updateTaskProgress(taskId, 10);
+
+      // Build enhanced prompt with context
+      const prompt = this.buildEnhancedPrompt(topicPath, options);
+      llmProgressManager.updateTaskProgress(taskId, 30);
+
+      // Generate response from LLM
+      const response = await this.llmService.generateResponse(prompt);
+      llmProgressManager.updateTaskProgress(taskId, 70);
+
+      // Parse the response
+      const topics = this.parseResponse(response);
+      llmProgressManager.updateTaskProgress(taskId, 90);
+
+      // Validate and limit topics
+      const validTopics = topics
+        .filter(topic => topic.text && topic.text.trim().length > 0)
+        .slice(0, options.count);
+
+      llmProgressManager.completeTask(taskId, true);
+      return validTopics;
+
+    } catch (error) {
+      console.error('AI topic generation with context failed:', error);
+      llmProgressManager.completeTask(taskId, false);
+      throw error;
+    }
+  }
+
+  /**
+   * Build enhanced prompt with topic hierarchy context
+   */
+  private buildEnhancedPrompt(topicPath: string[], options: AITopicGeneratorOptions): string {
+    const currentTopic = topicPath[topicPath.length - 1];
+    const parentPath = topicPath.slice(0, -1);
+    
+    // Build context hierarchy
+    const contextPath = parentPath.length > 0 
+      ? `Context hierarchy: ${parentPath.join(' → ')}\n`
+      : '';
+    
+    const enhancedPrompt = `${contextPath}Based on the topic "${currentTopic}" and its context above, generate ${options.count} related subtopics as a JSON array.
+
+Considerations:
+- The subtopics should be relevant to "${currentTopic}"
+- Take into account the broader context provided by parent topics
+- Each subtopic should be a meaningful expansion or different aspect
+- Maintain consistency with the hierarchy context
+- Write in the same language as the topics
+
+Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
+
+    if (options.customPrompt && options.customPrompt.trim()) {
+      return `${enhancedPrompt}\n\nAdditional context: ${options.customPrompt.trim()}`;
+    }
+
+    return enhancedPrompt;
+  }
+
+  /**
    * Simplified method: Generate and add topics directly to mindmap
    */
   async generateAndAddTopicsDirectly(
@@ -125,9 +223,12 @@ class AITopicGeneratorService {
     };
 
     try {
-      // Generate topics (automatically shows progress notification)
-      const generatedTopics = await this.generateTopics(
-        parentTopic.getText(),
+      // Collect parent topic texts for enhanced context
+      const topicPath = this.collectParentTopicTexts(parentTopic);
+      
+      // Generate topics with enhanced context (automatically shows progress notification)
+      const generatedTopics = await this.generateTopicsWithContext(
+        topicPath,
         defaultOptions
       );
 
