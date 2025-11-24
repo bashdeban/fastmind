@@ -766,5 +766,11 @@
   },
   "topic-font-editor.reset-to-default": {
     "defaultMessage": "Reset to Default"
+  },
+  "editor-panel.tooltip-ai-topic-generator": {
+    "defaultMessage": "AI Topic Generator"
+  },
+  "editor-panel.tooltip-ai-explainer": {
+    "defaultMessage": "AI Explainer"
   }
 }

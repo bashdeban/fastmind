@@ -724,5 +724,11 @@
   },
   "topic-font-editor.reset-to-default": {
     "defaultMessage": "Reset to Default"
+  },
+  "editor-panel.tooltip-ai-topic-generator": {
+    "defaultMessage": "AI主题生成器"
+  },
+  "editor-panel.tooltip-ai-explainer": {
+    "defaultMessage": "AI解释器"
   }
 }

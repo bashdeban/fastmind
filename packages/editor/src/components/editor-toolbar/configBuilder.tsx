@@ -42,7 +42,9 @@ import { IntlShape } from 'react-intl';
 import { trackRelationshipAction, trackEditorPanelAction } from '../../utils/analytics';
 import CanvasStyleEditor, { CanvasStyle } from '../action-widget/pane/canvas-style-editor';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import PsychologyIcon from '@mui/icons-material/Psychology';
 import { aiTopicGeneratorService } from '../../services/ai-topic-generator';
+import { aiExplainerService } from '../../services/ai-explainer';
 
 const keyTooltip = (msg: string, key: string): string => {
   const isMac = window.navigator.platform.toUpperCase().indexOf('MAC') >= 0;
@@ -335,6 +337,34 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
     disabled: () => model.getDesigner().getModel().filterSelectedTopics().length === 0,
   };
 
+  /**
+   * AI explainer - Generate comprehensive topic analysis
+   */
+  const aiExplainerConfiguration: ActionConfig = {
+    icon: <PsychologyIcon />,
+    tooltip: intl.formatMessage({
+      id: 'editor-panel.tooltip-ai-explainer',
+      defaultMessage: 'AI Explainer',
+    }),
+    onClick: () => {
+      trackEditorPanelAction('ai_explainer_direct');
+      const selectedTopics = model.getDesigner().getModel().filterSelectedTopics();
+      
+      if (selectedTopics.length === 1) {
+        const selectedTopic = selectedTopics[0];
+        
+        // Call the AI explainer service to generate and store analysis
+        aiExplainerService.generateAndStoreAnalysis(
+          selectedTopic,
+          model.getDesigner()
+        ).catch(error => {
+          console.error('AI解释器分析失败:', error);
+        });
+      }
+    },
+    disabled: () => model.getDesigner().getModel().filterSelectedTopics().length === 0,
+  };
+
   return [
     addNodeToolbarConfiguration,
     deleteNodeToolbarConfiguration,
@@ -347,6 +377,7 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
     addRelationConfiguration,
     relationshipStyleConfiguration,
     aiTopicGeneratorConfiguration,
+    aiExplainerConfiguration,
     editCanvasStyleConfiguration,
   ];
 }
