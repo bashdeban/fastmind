@@ -210,6 +210,125 @@ class ApiMindMapRepository implements MindMapRepository {
 }
 ```
 
+### 9. **AI Service Pattern with Event-Driven Progress**
+
+**Singleton AI Service Pattern**:
+```typescript
+// AI Topic Generator Service
+class AITopicGeneratorService {
+  private static instance: AITopicGeneratorService;
+  private llmService: LLMService;
+  private llmProgressManager: LLMProgressManager;
+
+  static getInstance(): AITopicGeneratorService {
+    if (!this.instance) {
+      this.instance = new AITopicGeneratorService();
+    }
+    return this.instance;
+  }
+
+  async generateAndAddTopicsDirectly(parentTopic: Topic, designer: Designer): Promise<void> {
+    const taskId = this.llmProgressManager.createTask({
+      title: 'AI 生成主题',
+      description: `正在基于"${parentTopic.getText()}"生成相关主题...`
+    });
+
+    try {
+      const prompt = `请为主题"${parentTopic.getText()}"生成5-8个相关的子主题，返回JSON数组格式，每个主题包含text字段。`;
+      const topics = await this.llmService.generateResponse(prompt);
+      
+      const topicModels = this.createTopicModels(topics, designer, parentTopic.getId());
+      
+      topicModels.forEach(model => {
+        designer.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
+      });
+      
+      this.llmProgressManager.completeTask(taskId, true);
+    } catch (error) {
+      this.llmProgressManager.completeTask(taskId, false);
+      throw error;
+    }
+  }
+}
+```
+
+**Global Progress Notification System**:
+```typescript
+// Progress Manager for AI Operations
+class LLMProgressManager {
+  private tasks = new Map<string, ProgressTask>();
+  private listeners: ProgressListener[] = [];
+
+  createTask(config: ProgressTaskConfig): string {
+    const taskId = generateId();
+    const task: ProgressTask = {
+      id: taskId,
+      status: 'in-progress',
+      ...config,
+      startTime: Date.now()
+    };
+    
+    this.tasks.set(taskId, task);
+    this.notifyProgress('start', task);
+    return taskId;
+  }
+
+  completeTask(taskId: string, success: boolean): void {
+    const task = this.tasks.get(taskId);
+    if (task) {
+      task.status = success ? 'completed' : 'failed';
+      task.endTime = Date.now();
+      this.notifyProgress('complete', task);
+      this.tasks.delete(taskId);
+    }
+  }
+
+  private notifyProgress(type: 'start' | 'complete', task: ProgressTask): void {
+    const event = new CustomEvent('llm-progress', {
+      detail: { type, task }
+    });
+    window.dispatchEvent(event);
+  }
+}
+```
+
+**Progress Notification Component Pattern**:
+```typescript
+// React Component for AI Progress Notifications
+const LLMProgressNotification: React.FC = () => {
+  const [tasks, setTasks] = useState<ProgressTask[]>([]);
+
+  useEffect(() => {
+    const handleProgress = (event: CustomEvent) => {
+      const { type, task } = event.detail;
+      
+      setTasks(prev => {
+        if (type === 'start') {
+          return [...prev, task];
+        } else if (type === 'complete') {
+          return prev.filter(t => t.id !== task.id);
+        }
+        return prev;
+      });
+    };
+
+    window.addEventListener('llm-progress', handleProgress as EventListener);
+    return () => window.removeEventListener('llm-progress', handleProgress as EventListener);
+  }, []);
+
+  return (
+    <Box className="llm-progress-container">
+      {tasks.map(task => (
+        <Alert key={task.id} severity="info" icon={<CircularProgress size={16} />}>
+          <Typography variant="body2">{task.title}</Typography>
+          <Typography variant="caption">{task.description}</Typography>
+        </Alert>
+      ))}
+    </Box>
+  );
+};
+```
+
 ### 9. **VS Code Extension Architecture**
 
 **CustomTextEditorProvider Pattern**:

@@ -34,6 +34,7 @@ WiseMapping Front End addresses the need for a modern, open-source, web-based mi
 ### Key User Interactions
 
 - **Topic Creation**: Click to add main topic, right-click or use toolbar to add child topics
+- **AI-Assisted Topic Generation**: Select a topic, click AI button to automatically generate 5-8 related subtopics using LLM
 - **Drag & Drop**: Rearrange topics by dragging
 - **Connection Drawing**: Create relationships between topics with visual connectors
 - **Styling**: Change colors, fonts, shapes, and icons for topics

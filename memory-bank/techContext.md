@@ -16,6 +16,14 @@
 - **Commands**: VS Code command palette integration
 - **Type Definitions**: @types/vscode ^1.85.0
 
+### AI Integration Technologies
+- **LLMService**: Custom service for Large Language Model integration
+- **AI Topic Generation**: LLM-powered topic generation via LLMService.generateResponse()
+- **Progress Notifications**: Event-driven progress system using CustomEvent API
+- **Smart Positioning**: Layout manager integration for automatic topic placement
+- **Error Handling**: Comprehensive error management for AI service failures
+- **Type Safety**: Full TypeScript integration for AI service responses
+
 ### Frontend Framework
 - **React**: ^19.0.0 (peer dependency for editor packages)
 - **Renderer**: React 19 automatic JSX runtime

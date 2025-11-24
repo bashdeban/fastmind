@@ -31,14 +31,15 @@ This repository contains all user interface-related elements, comprising the fol
 ## Key Requirements
 
 - **Function**: Real-time collaborative mind mapping with intuitive UX across web and VS Code environments
+- **AI-Enhanced Features**: Intelligent topic generation using LLM integration for improved productivity
 - **Target**: 
   - VS Code Extension for `.fastmind` file editing (primary focus)
   - Web-based application for individual and team use (secondary)
   - Standalone editor integration for external tools
 - **Distribution**: Open source under WiseMapping Public License
 - **Performance**: Efficient rendering and bundle optimization critical
-- **Ui/UX**: Modern, intuitive, and accessible design
-- **Integration**: Seamless VS Code extension experience with bidirectional communication
+- **Ui/UX**: Modern, intuitive, and accessible design with AI-powered assistance
+- **Integration**: Seamless VS Code extension experience with bidirectional communication and AI services
 
 ## Success Metrics
 
