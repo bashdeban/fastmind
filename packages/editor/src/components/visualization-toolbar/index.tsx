@@ -78,10 +78,6 @@ export function buildVisualizationToolbarConfig(
     defaultMessage: 'Zoom Out',
   });
 
-  // Check if we're in public or embedded view
-  const isPublicOrEmbedded =
-    capability.mode === 'viewonly-public' || capability.mode === 'viewonly-private';
-
   const nodesCollapsed = areNodesCollapsed(model);
 
   return [
@@ -137,6 +133,93 @@ export function buildVisualizationToolbarConfig(
         model.getDesigner().zoomIn();
       },
       disabled: () => !model?.isMapLoadded(),
+    },
+    // Separator between theme/layout/settings and outline view
+    undefined as ActionConfig | undefined,
+    {
+      icon: <TocOutlinedIcon />,
+      tooltip: formatTooltip(
+        intl.formatMessage({
+          id: 'visualization-toolbar.tooltip-outline-view',
+          defaultMessage: 'Outline View',
+        }),
+        'O',
+      ),
+      ariaLabel: intl.formatMessage({
+        id: 'visualization-toolbar.tooltip-outline-view',
+        defaultMessage: 'Outline View',
+      }),
+      onClick: () => trackEditorInteraction('outline_view'),
+      options: [
+        {
+          render: (closeModal) => (
+            <OutlineViewDialog
+              open={true}
+              onClose={closeModal}
+              mindmap={model.getDesigner()?.getMindmap()}
+            />
+          ),
+        },
+      ],
+      disabled: () => !model?.isMapLoadded(),
+    },
+    // Separator between outline view and expand/collapse controls
+    undefined as ActionConfig | undefined,
+    {
+      icon: nodesCollapsed ? <UnfoldMoreIcon /> : <UnfoldLessIcon />,
+      tooltip: formatTooltip(
+        nodesCollapsed
+          ? intl.formatMessage({
+            id: 'visualization-toolbar.tooltip-expand-all',
+            defaultMessage: 'Expand All Nodes',
+          })
+          : intl.formatMessage({
+            id: 'visualization-toolbar.tooltip-collapse-all',
+            defaultMessage: 'Collapse All Nodes',
+          }),
+        'Shift+E',
+      ),
+      ariaLabel: nodesCollapsed
+        ? intl.formatMessage({
+          id: 'visualization-toolbar.tooltip-expand-all',
+          defaultMessage: 'Expand All Nodes',
+        })
+        : intl.formatMessage({
+          id: 'visualization-toolbar.tooltip-collapse-all',
+          defaultMessage: 'Collapse All Nodes',
+        }),
+      onClick: () => {
+        if (nodesCollapsed) {
+          trackEditorInteraction('expand_all_nodes');
+          model.getDesigner().expandAllNodes();
+          const maxDepth = model.getDesigner().getMindmap().getMaxDepth();
+          setExpandLevel(maxDepth);
+        } else {
+          trackEditorInteraction('collapse_all_nodes');
+          model.getDesigner().collapseAllNodes();
+          setExpandLevel(0); // Reset to collapsed
+        }
+      },
+      disabled: () => !model?.isMapLoadded(),
+    },
+    buildExpandByLevelConfig(model, intl, currentExpandLevel, setExpandLevel, () =>
+      trackEditorInteraction('expand_by_level'),
+    ),
+    // Separator between expand controls and keyboard shortcuts
+    undefined as ActionConfig | undefined,
+    {
+      icon: <KeyboardOutlined />,
+      tooltip: intl.formatMessage({
+        id: 'visualization-toolbar.tooltip-keyboard',
+        defaultMessage: 'Keyboard Shortcuts',
+      }),
+      visible: !capability.isHidden('keyboard-shortcuts'),
+      onClick: () => trackEditorInteraction('keyboard_shortcuts'),
+      options: [
+        {
+          render: (closeModal) => <KeyboardShorcutsHelp closeModal={closeModal} />,
+        },
+      ],
     },
     // Separator between zoom controls and undo/redo buttons
     undefined as ActionConfig | undefined,
@@ -250,6 +333,63 @@ export function buildVisualizationToolbarConfig(
       visible: !capability.isHidden('layout'),
       disabled: () => !model?.isMapLoadded(),
     },
+    // Layout selector - only for showcase mode
+    ...(capability.mode === 'showcase'
+      ? [
+        {
+          icon: <AccountTreeIcon />,
+          tooltip: intl.formatMessage({
+            id: 'visualization-toolbar.tooltip-layout',
+            defaultMessage: 'Change Layout',
+          }),
+          onClick: () => trackEditorInteraction('layout_selector'),
+          options: [
+            {
+              render: (closeModal: () => void) => {
+                const modelBuilder = new NodePropertyValueModelBuilder(model.getDesigner());
+                return (
+                  <LayoutSelector
+                    closeModal={closeModal}
+                    layoutModel={modelBuilder.getLayoutModel()}
+                    model={model}
+                  />
+                );
+              },
+            },
+          ],
+          disabled: () => !model?.isMapLoadded(),
+        } as ActionConfig,
+      ]
+      : []),
+    // Theme toggle - for all views that support it
+    ...(toggleTheme
+      ? [
+        {
+          icon: themeMode === 'light' ? <Brightness4 /> : <Brightness7 />,
+          tooltip: intl.formatMessage(
+            themeMode === 'light'
+              ? {
+                id: 'visualization-toolbar.tooltip-switch-to-dark',
+                defaultMessage: 'Switch to dark mode',
+              }
+              : {
+                id: 'visualization-toolbar.tooltip-switch-to-light',
+                defaultMessage: 'Switch to light mode',
+              },
+          ),
+          ariaLabel: intl.formatMessage({
+            id: 'visualization-toolbar.tooltip-theme-toggle',
+            defaultMessage: 'Toggle theme',
+          }),
+          onClick: () => {
+            trackEditorInteraction('theme_toggle');
+            toggleTheme();
+          },
+        } as ActionConfig,
+      ]
+      : []),
+    // Separator before theme toggle - only if theme toggle will be shown
+    ...(toggleTheme ? [undefined as ActionConfig | undefined] : []),
     {
       icon: <SettingsIcon />,
       tooltip: intl.formatMessage({
@@ -263,150 +403,6 @@ export function buildVisualizationToolbarConfig(
       ],
       visible: !capability.isHidden('settings'),
     },
-    // Separator between theme/layout/settings and outline view
-    undefined as ActionConfig | undefined,
-    {
-      icon: <TocOutlinedIcon />,
-      tooltip: formatTooltip(
-        intl.formatMessage({
-          id: 'visualization-toolbar.tooltip-outline-view',
-          defaultMessage: 'Outline View',
-        }),
-        'O',
-      ),
-      ariaLabel: intl.formatMessage({
-        id: 'visualization-toolbar.tooltip-outline-view',
-        defaultMessage: 'Outline View',
-      }),
-      onClick: () => trackEditorInteraction('outline_view'),
-      options: [
-        {
-          render: (closeModal) => (
-            <OutlineViewDialog
-              open={true}
-              onClose={closeModal}
-              mindmap={model.getDesigner()?.getMindmap()}
-            />
-          ),
-        },
-      ],
-      disabled: () => !model?.isMapLoadded(),
-    },
-    // Separator between outline view and expand/collapse controls
-    undefined as ActionConfig | undefined,
-    {
-      icon: nodesCollapsed ? <UnfoldMoreIcon /> : <UnfoldLessIcon />,
-      tooltip: formatTooltip(
-        nodesCollapsed
-          ? intl.formatMessage({
-              id: 'visualization-toolbar.tooltip-expand-all',
-              defaultMessage: 'Expand All Nodes',
-            })
-          : intl.formatMessage({
-              id: 'visualization-toolbar.tooltip-collapse-all',
-              defaultMessage: 'Collapse All Nodes',
-            }),
-        'Shift+E',
-      ),
-      ariaLabel: nodesCollapsed
-        ? intl.formatMessage({
-            id: 'visualization-toolbar.tooltip-expand-all',
-            defaultMessage: 'Expand All Nodes',
-          })
-        : intl.formatMessage({
-            id: 'visualization-toolbar.tooltip-collapse-all',
-            defaultMessage: 'Collapse All Nodes',
-          }),
-      onClick: () => {
-        if (nodesCollapsed) {
-          trackEditorInteraction('expand_all_nodes');
-          model.getDesigner().expandAllNodes();
-          const maxDepth = model.getDesigner().getMindmap().getMaxDepth();
-          setExpandLevel(maxDepth);
-        } else {
-          trackEditorInteraction('collapse_all_nodes');
-          model.getDesigner().collapseAllNodes();
-          setExpandLevel(0); // Reset to collapsed
-        }
-      },
-      disabled: () => !model?.isMapLoadded(),
-    },
-    buildExpandByLevelConfig(model, intl, currentExpandLevel, setExpandLevel, () =>
-      trackEditorInteraction('expand_by_level'),
-    ),
-    // Separator between expand controls and keyboard shortcuts
-    undefined as ActionConfig | undefined,
-    {
-      icon: <KeyboardOutlined />,
-      tooltip: intl.formatMessage({
-        id: 'visualization-toolbar.tooltip-keyboard',
-        defaultMessage: 'Keyboard Shortcuts',
-      }),
-      visible: !capability.isHidden('keyboard-shortcuts'),
-      onClick: () => trackEditorInteraction('keyboard_shortcuts'),
-      options: [
-        {
-          render: (closeModal) => <KeyboardShorcutsHelp closeModal={closeModal} />,
-        },
-      ],
-    },
-    // Layout selector - only for showcase mode
-    ...(capability.mode === 'showcase'
-      ? [
-          {
-            icon: <AccountTreeIcon />,
-            tooltip: intl.formatMessage({
-              id: 'visualization-toolbar.tooltip-layout',
-              defaultMessage: 'Change Layout',
-            }),
-            onClick: () => trackEditorInteraction('layout_selector'),
-            options: [
-              {
-                render: (closeModal: () => void) => {
-                  const modelBuilder = new NodePropertyValueModelBuilder(model.getDesigner());
-                  return (
-                    <LayoutSelector
-                      closeModal={closeModal}
-                      layoutModel={modelBuilder.getLayoutModel()}
-                      model={model}
-                    />
-                  );
-                },
-              },
-            ],
-            disabled: () => !model?.isMapLoadded(),
-          } as ActionConfig,
-        ]
-      : []),
-    // Separator before theme toggle - only if theme toggle will be shown
-    ...(isPublicOrEmbedded && toggleTheme ? [undefined as ActionConfig | undefined] : []),
-    // Theme toggle - only for public and embedded views
-    ...(isPublicOrEmbedded && toggleTheme
-      ? [
-          {
-            icon: themeMode === 'light' ? <Brightness4 /> : <Brightness7 />,
-            tooltip: intl.formatMessage(
-              themeMode === 'light'
-                ? {
-                    id: 'visualization-toolbar.tooltip-switch-to-dark',
-                    defaultMessage: 'Switch to dark mode',
-                  }
-                : {
-                    id: 'visualization-toolbar.tooltip-switch-to-light',
-                    defaultMessage: 'Switch to light mode',
-                  },
-            ),
-            ariaLabel: intl.formatMessage({
-              id: 'visualization-toolbar.tooltip-theme-toggle',
-              defaultMessage: 'Toggle theme',
-            }),
-            onClick: () => {
-              trackEditorInteraction('theme_toggle');
-              toggleTheme();
-            },
-          } as ActionConfig,
-        ]
-      : []),
   ];
 }
 
