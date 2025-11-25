@@ -775,5 +775,35 @@
   },
   "editor-panel.tooltip-ai-explainer": {
     "defaultMessage": "AI Explainer"
+  },
+  "information-dialog.title": {
+    "defaultMessage": "Information"
+  },
+  "information-dialog.fastmind-description": {
+    "defaultMessage": "FastMind is a VS Code extension based on WiseMapping that provides powerful mind mapping capabilities for developers. It integrates AI-powered topic generation, real-time collaboration, multiple layout options, and other advanced features to help developers better organize and visualize their ideas."
+  },
+  "information-dialog.features-title": {
+    "defaultMessage": "Key Features:"
+  },
+  "information-dialog.feature-ai": {
+    "defaultMessage": "AI-driven topic generation"
+  },
+  "information-dialog.feature-api-integration": {
+    "defaultMessage": "OpenAI API compatible model integration"
+  },
+  "information-dialog.feature-deduplication": {
+    "defaultMessage": "AI-generated content intelligent deduplication"
+  },
+  "information-dialog.feature-vscode-integration": {
+    "defaultMessage": "VS Code native file system integration"
+  },
+  "information-dialog.powered-by": {
+    "defaultMessage": "Powered by"
+  },
+  "information-dialog.close": {
+    "defaultMessage": "Close"
+  },
+  "visualization-toolbar.tooltip-info": {
+    "defaultMessage": "Information"
   }
 }

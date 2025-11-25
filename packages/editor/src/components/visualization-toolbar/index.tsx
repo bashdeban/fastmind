@@ -24,6 +24,7 @@ import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
 import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
 import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import Typography from '@mui/material/Typography';
 import React, { ReactElement, useState, useEffect, useMemo } from 'react';
 import { IntlShape, useIntl } from 'react-intl';
@@ -36,6 +37,7 @@ import OutlineViewDialog from '../action-widget/pane/outline-view-dialog';
 import LayoutSelector from '../action-widget/pane/layout-selector';
 import ThemeEditor from '../action-widget/pane/theme-editor';
 import SettingsDialog from '../action-widget/pane/settings-dialog';
+import InformationDialog from '../action-widget/pane/information-dialog';
 import NodePropertyValueModelBuilder from '../../classes/model/node-property-builder';
 import Toolbar from '../toolbar';
 import UndoAndRedo from '../action-widget/button/undo-and-redo';
@@ -218,6 +220,21 @@ export function buildVisualizationToolbarConfig(
       options: [
         {
           render: (closeModal) => <KeyboardShorcutsHelp closeModal={closeModal} />,
+        },
+      ],
+    },
+    // Information button
+    {
+      icon: <InfoOutlinedIcon />,
+      tooltip: intl.formatMessage({
+        id: 'visualization-toolbar.tooltip-info',
+        defaultMessage: 'Information',
+      }),
+      visible: !capability.isHidden('info'),
+      onClick: () => trackEditorInteraction('information'),
+      options: [
+        {
+          render: (closeModal) => <InformationDialog open={true} onClose={closeModal} />,
         },
       ],
     },

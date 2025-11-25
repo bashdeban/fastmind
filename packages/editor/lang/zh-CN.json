@@ -733,5 +733,35 @@
   },
   "editor-panel.tooltip-ai-explainer": {
     "defaultMessage": "AI解释器"
+  },
+  "information-dialog.title": {
+    "defaultMessage": "信息"
+  },
+  "information-dialog.fastmind-description": {
+    "defaultMessage": "FastMind 是一个基于 WiseMapping 的 VS Code 扩展，为开发者提供强大的思维导图编辑功能。它集成了 AI 主题生成、实时协作、多种布局选项等先进功能，帮助开发者更好地组织和可视化他们的想法。"
+  },
+  "information-dialog.features-title": {
+    "defaultMessage": "主要功能："
+  },
+  "information-dialog.feature-ai": {
+    "defaultMessage": "AI驱动的主题生成"
+  },
+  "information-dialog.feature-api-integration": {
+    "defaultMessage": "兼容OpenAI API规范的模型接入"
+  },
+  "information-dialog.feature-deduplication": {
+    "defaultMessage": "AI生成内容智能去重"
+  },
+  "information-dialog.feature-vscode-integration": {
+    "defaultMessage": "VS Code原生文件系统集成"
+  },
+  "information-dialog.powered-by": {
+    "defaultMessage": "Powered by"
+  },
+  "information-dialog.close": {
+    "defaultMessage": "关闭"
+  },
+  "visualization-toolbar.tooltip-info": {
+    "defaultMessage": "信息"
   }
 }
