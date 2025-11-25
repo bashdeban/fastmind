@@ -410,6 +410,9 @@
   "zoom-panel.tooltip-outline-view": {
     "defaultMessage": "大纲视图"
   },
+  "visualization-toolbar.tooltip-save": {
+    "defaultMessage": "保存"
+  },
   "editor-panel.tooltip-add-topic-image": {
     "defaultMessage": "添加主题图像"
   },

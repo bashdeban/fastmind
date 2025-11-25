@@ -50,6 +50,9 @@
   "appbar.tooltip-outline-view": {
     "defaultMessage": "Outline View"
   },
+  "visualization-toolbar.tooltip-save": {
+    "defaultMessage": "Save"
+  },
   "appbar.tooltip-change-layout": {
     "defaultMessage": "Change Layout"
   },

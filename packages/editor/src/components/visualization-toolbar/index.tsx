@@ -19,6 +19,7 @@ import KeyboardOutlined from '@mui/icons-material/KeyboardOutlined';
 import Brightness4 from '@mui/icons-material/Brightness4';
 import Brightness7 from '@mui/icons-material/Brightness7';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
 import Typography from '@mui/material/Typography';
 import React, { ReactElement, useState, useEffect, useMemo } from 'react';
 import { IntlShape, useIntl } from 'react-intl';
@@ -130,7 +131,31 @@ export function buildVisualizationToolbarConfig(
       },
       disabled: () => !model?.isMapLoadded(),
     },
-    // Separator between zoom controls and outline view
+    // Separator between zoom controls and save button
+    undefined as ActionConfig | undefined,
+    {
+      icon: <SaveOutlinedIcon />,
+      tooltip: formatTooltip(
+        intl.formatMessage({
+          id: 'visualization-toolbar.tooltip-save',
+          defaultMessage: 'Save',
+        }),
+        'S',
+      ),
+      ariaLabel: intl.formatMessage({
+        id: 'visualization-toolbar.tooltip-save',
+        defaultMessage: 'Save',
+      }),
+      onClick: () => {
+        trackEditorInteraction('save');
+        model.save(true).catch((error) => {
+          console.error('Save failed from visualization toolbar:', error);
+        });
+      },
+      visible: !capability.isHidden('save'),
+      disabled: () => !model?.isMapLoadded(),
+    },
+    // Separator between save button and outline view
     undefined as ActionConfig | undefined,
     {
       icon: <TocOutlinedIcon />,
@@ -318,6 +343,13 @@ const VisualizationToolbar = ({ model, capability }: VisualizationToolbarProps):
           event.preventDefault();
           trackEditorInteraction('outline_view_keyboard');
           // Outline view will be handled by the toolbar button click
+          break;
+        case 's':
+          event.preventDefault();
+          model.save(true).catch((error) => {
+            console.error('Save failed from keyboard shortcut:', error);
+          });
+          trackEditorInteraction('save_keyboard');
           break;
         case 'e':
           event.preventDefault();
