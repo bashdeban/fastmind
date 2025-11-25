@@ -2,7 +2,9 @@
 
 ## Why This Project Exists
 
-WiseMapping Front End addresses the need for a modern, open-source, web-based mind mapping solution that provides professional-grade functionality without the licensing constraints of commercial alternatives. The project exists to democratize mind mapping technology, making it accessible to individuals, educators, and teams worldwide.
+WiseMapping Front End addresses the need for a modern, open-source mind mapping solution that provides professional-grade functionality without the licensing constraints of commercial alternatives. The project exists to democratize mind mapping technology, making it accessible to individuals, educators, and teams worldwide.
+
+**Strategic Evolution (Q4 2024)**: The project has strategically pivoted from a web-based application to a **VS Code Extension-focused approach** with **AI-powered capabilities**, recognizing the growing need for developer-centric mind mapping tools integrated into modern workflows.
 
 ### Core Problems Solved
 

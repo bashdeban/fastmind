@@ -210,11 +210,11 @@ class ApiMindMapRepository implements MindMapRepository {
 }
 ```
 
-### 9. **AI Service Pattern with Event-Driven Progress**
+### 9. **AI Service Pattern with Event-Driven Progress (Refactored)**
 
-**Singleton AI Service Pattern**:
+**Refactored Singleton AI Service Pattern**:
 ```typescript
-// AI Topic Generator Service
+// AI Topic Generator Service - Unified Implementation
 class AITopicGeneratorService {
   private static instance: AITopicGeneratorService;
   private llmService: LLMService;
@@ -227,27 +227,65 @@ class AITopicGeneratorService {
     return this.instance;
   }
 
-  async generateAndAddTopicsDirectly(parentTopic: Topic, designer: Designer): Promise<void> {
+  // Backward compatibility wrapper
+  async generateTopics(parentTopic: string, options: AITopicGeneratorOptions): Promise<TopicModel[]> {
+    return this.generateTopicsWithContext([parentTopic], options);
+  }
+
+  // Unified core implementation with context-aware generation
+  async generateTopicsWithContext(topicPath: string[], options: AITopicGeneratorOptions): Promise<TopicModel[]> {
     const taskId = this.llmProgressManager.createTask({
       title: 'AI 生成主题',
-      description: `正在基于"${parentTopic.getText()}"生成相关主题...`
+      description: `正在基于主题路径"${topicPath.join(' → ')}"生成相关主题...`
     });
 
     try {
-      const prompt = `请为主题"${parentTopic.getText()}"生成5-8个相关的子主题，返回JSON数组格式，每个主题包含text字段。`;
+      // Enhanced context-aware prompt
+      const prompt = this.buildEnhancedPrompt(topicPath, options);
       const topics = await this.llmService.generateResponse(prompt);
       
-      const topicModels = this.createTopicModels(topics, designer, parentTopic.getId());
-      
-      topicModels.forEach(model => {
-        designer.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
-      });
+      // Deduplication and validation
+      const validatedTopics = this.validateAndDeduplicateTopics(topics, topicPath);
       
       this.llmProgressManager.completeTask(taskId, true);
+      return validatedTopics;
     } catch (error) {
       this.llmProgressManager.completeTask(taskId, false);
       throw error;
     }
+  }
+
+  // Enhanced prompt building with context
+  private buildEnhancedPrompt(topicPath: string[], options: AITopicGeneratorOptions): string {
+    const contextPath = topicPath.join(' → ');
+    const customPrompt = options.customPrompt || '';
+    
+    return `基于以下主题路径生成5-8个相关子主题：
+路径：${contextPath}
+要求：${customPrompt || '生成相关的子主题，覆盖不同的角度和层面'}
+返回格式：JSON数组，每个主题包含text字段`;
+  }
+
+  // Child topics deduplication
+  private validateAndDeduplicateTopics(topics: any[], topicPath: string[]): TopicModel[] {
+    // Implementation prevents redundant content generation
+    return topics
+      .filter(topic => topic && typeof topic.text === 'string')
+      .filter((topic, index, arr) => arr.findIndex(t => t.text === topic.text) === index)
+      .map(topic => this.createTopicModel(topic.text));
+  }
+
+  // Direct integration method for one-click workflow
+  async generateAndAddTopicsDirectly(parentTopic: Topic, designer: Designer): Promise<void> {
+    const topicPath = this.buildTopicPath(parentTopic);
+    const topicModels = await this.generateTopicsWithContext(topicPath, {});
+    
+    // Smart positioning using layout manager
+    const positionedTopics = this.positionTopics(topicModels, parentTopic, designer);
+    
+    positionedTopics.forEach(model => {
+      designer.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
+    });
   }
 }
 ```
