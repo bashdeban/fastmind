@@ -1,4 +1,5 @@
 import { LLMConfig } from './types';
+import { $notify } from '@wisemapping/mindplot';
 
 const STORAGE_KEY = 'llm-config';
 
@@ -13,6 +14,20 @@ export const DEFAULT_LLM_CONFIG: LLMConfig = {
 
 export class LLMConfigManager {
     /**
+     * 检查配置是否有效
+     */
+    static isConfigValid(config: LLMConfig): boolean {
+        return !!(config.apiUrl && config.modelName && config.apiKey);
+    }
+
+    /**
+     * 显示配置错误通知
+     */
+    private static showConfigErrorNotification(): void {
+        $notify('请先配置模型API');
+    }
+
+    /**
      * 获取保存的配置，如果没有则返回默认配置
      */
     static getConfig(): LLMConfig {
@@ -21,7 +36,17 @@ export class LLMConfigManager {
             if (stored) {
                 const parsedConfig = JSON.parse(stored);
                 // 合并默认配置和存储的配置，确保所有字段都存在
-                return { ...DEFAULT_LLM_CONFIG, ...parsedConfig };
+                const mergedConfig = { ...DEFAULT_LLM_CONFIG, ...parsedConfig };
+
+                // 检查配置是否有效
+                if (!this.isConfigValid(mergedConfig)) {
+                    this.showConfigErrorNotification();
+                }
+
+                return mergedConfig;
+            } else {
+                // 这里报错：没有配置模型API
+                this.showConfigErrorNotification();
             }
         } catch (error) {
             console.warn('Failed to load LLM config from localStorage:', error);
@@ -59,5 +84,17 @@ export class LLMConfigManager {
     static mergeConfig(config?: Partial<LLMConfig>): LLMConfig {
         const baseConfig = this.getConfig();
         return config ? { ...baseConfig, ...config } : baseConfig;
+    }
+
+    /**
+     * 检查当前配置是否有效，如果不有效则显示通知
+     */
+    static validateAndNotify(): boolean {
+        const config = this.getConfig();
+        if (!this.isConfigValid(config)) {
+            this.showConfigErrorNotification();
+            return false;
+        }
+        return true;
     }
 }
