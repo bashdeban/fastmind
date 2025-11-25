@@ -1,0 +1,177 @@
+/*
+ *    Copyright [2007-2025] [wisemapping]
+ *
+ *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
+ *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   "powered by wisemapping" text requirement on every single page;
+ *   you may not use this file except in compliance with the License.
+ *   You may obtain a copy of the license at
+ *
+ *       https://github.com/wisemapping/wisemapping-open-source/blob/main/LICENSE.md
+ *
+ *   Unless required by applicable law or agreed to in writing, software
+ *   distributed under the License is distributed on an "AS IS" BASIS,
+ *   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *   See the License for the specific language governing permissions and
+ *   limitations under the License.
+ */
+
+import React, { useState } from 'react';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ManageIcon from '@mui/icons-material/ManageAccounts';
+import ModelApiManagement from '../model-api-management';
+import {
+  StyledDialogContent,
+  CloseButton,
+} from './styled';
+
+interface SettingsDialogProps {
+  open: boolean;
+  onClose: () => void;
+}
+
+const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElement => {
+  const [showModelApiManagement, setShowModelApiManagement] = useState(false);
+  
+  // Mock current configuration
+  const [currentModel] = useState('GPT-4');
+  const [topicGeneratorPrompt, setTopicGeneratorPrompt] = useState(
+    'Generate creative and relevant topics for a mind map about {topic}. Provide 5-8 diverse subtopics that cover different aspects of the main topic.'
+  );
+  const [explainerPrompt, setExplainerPrompt] = useState(
+    'Explain the concept "{topic}" in a clear and concise way. Use simple language that anyone can understand, and provide relevant examples.'
+  );
+
+  const handleManageApi = () => {
+    setShowModelApiManagement(true);
+  };
+
+  const handleModelApiManagementClose = () => {
+    setShowModelApiManagement(false);
+  };
+
+  const handleSave = () => {
+    // TODO: Implement save functionality
+    console.log('Save settings:', {
+      model: currentModel,
+      topicGeneratorPrompt,
+      explainerPrompt,
+    });
+    onClose();
+  };
+
+  const handleCancel = () => {
+    // TODO: Reset to original values
+    onClose();
+  };
+
+  return (
+    <>
+      <Dialog
+        open={open}
+        onClose={onClose}
+        maxWidth="sm"
+        fullWidth
+        PaperProps={{
+          sx: {
+            minHeight: '350px',
+            border: '2px solid #ffa800',
+            boxShadow: 'none',
+          },
+        }}
+      >
+        <DialogTitle>
+          Settings
+          <CloseButton onClick={onClose} size="small">
+            <SettingsIcon />
+          </CloseButton>
+        </DialogTitle>
+        
+        <StyledDialogContent>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 3, lineHeight: 1.4 }}>
+            Configure AI model settings and customize prompts for topic generation and concept explanation.
+          </Typography>
+          
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {/* LLM Configuration */}
+            <Box>
+              <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
+                Current Model: {currentModel}
+              </Typography>
+              <Button
+                variant="outlined"
+                startIcon={<ManageIcon />}
+                onClick={handleManageApi}
+                size="small"
+                fullWidth
+              >
+                Model API Management
+              </Button>
+            </Box>
+
+            {/* AI Prompts */}
+            <Box>
+              <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
+                AI Topic Generator Prompt
+              </Typography>
+              <TextField
+                fullWidth
+                multiline
+                rows={3}
+                variant="outlined"
+                value={topicGeneratorPrompt}
+                onChange={(e) => setTopicGeneratorPrompt(e.target.value)}
+                placeholder="Enter custom prompt for topic generation..."
+                size="small"
+                sx={{ mb: 2 }}
+              />
+            </Box>
+
+            <Box>
+              <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
+                AI Explainer Prompt
+              </Typography>
+              <TextField
+                fullWidth
+                multiline
+                rows={3}
+                variant="outlined"
+                value={explainerPrompt}
+                onChange={(e) => setExplainerPrompt(e.target.value)}
+                placeholder="Enter custom prompt for concept explanation..."
+                size="small"
+                sx={{ mb: 2 }}
+              />
+            </Box>
+          </Box>
+        </StyledDialogContent>
+        <DialogActions>
+          <Button onClick={handleCancel}>
+            Cancel
+          </Button>
+          <Button 
+            variant="contained" 
+            onClick={handleSave}
+          >
+            Save
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      {/* Model API Management Dialog */}
+      <ModelApiManagement
+        open={showModelApiManagement}
+        onClose={handleModelApiManagementClose}
+      />
+    </>
+  );
+};
+
+export default SettingsDialog;
