@@ -24,6 +24,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
 import ManageIcon from '@mui/icons-material/ManageAccounts';
 import ModelApiManagement from '../model-api-management';
 import { LLMConfigManager } from '../../../../services/llm/config';
@@ -48,6 +50,7 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
   const [explainerPrompt, setExplainerPrompt] = useState(
     ''
   );
+  const [deduplicationEnabled, setDeduplicationEnabled] = useState(false);
 
   // 加载当前配置
   useEffect(() => {
@@ -55,10 +58,11 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
       const config = LLMConfigManager.getConfig();
       setCurrentConfig(config);
 
-      // 加载自定义提示词
+      // 加载自定义提示词和去重设置
       const settingsConfig = SettingsManager.getConfig();
       setTopicGeneratorPrompt(settingsConfig.topicGeneratorPrompt || '');
       setExplainerPrompt(settingsConfig.explainerPrompt || '');
+      setDeduplicationEnabled(settingsConfig.deduplicationEnabled || false);
     }
   }, [open]);
 
@@ -74,8 +78,8 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
   };
 
   const handleSave = () => {
-    // 保存自定义提示词到localStorage
-    SettingsManager.savePrompts(topicGeneratorPrompt, explainerPrompt);
+    // 保存自定义提示词和去重设置到localStorage
+    SettingsManager.savePrompts(topicGeneratorPrompt, explainerPrompt, deduplicationEnabled);
     onClose();
   };
 
@@ -84,6 +88,7 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
     const settingsConfig = SettingsManager.getConfig();
     setTopicGeneratorPrompt(settingsConfig.topicGeneratorPrompt || '');
     setExplainerPrompt(settingsConfig.explainerPrompt || '');
+    setDeduplicationEnabled(settingsConfig.deduplicationEnabled || false);
     onClose();
   };
 
@@ -130,9 +135,29 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
 
             {/* AI Prompts */}
             <Box>
-              <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
-                AI Topic Generator with User-Defined Prompts
-              </Typography>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                <Typography variant="subtitle2" sx={{ fontWeight: 'bold' }}>
+                  AI Topic Generator with User-Defined Prompts
+                </Typography>
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={deduplicationEnabled}
+                      onChange={(e) => setDeduplicationEnabled(e.target.checked)}
+                      size="small"
+                    />
+                  }
+                  label="Deduplication"
+                  labelPlacement="start"
+                  sx={{ 
+                    ml: 0,
+                    '& .MuiFormControlLabel-label': {
+                      fontSize: '0.875rem', // subtitle2 size
+                      fontWeight: 'bold'
+                    }
+                  }}
+                />
+              </Box>
               <TextField
                 fullWidth
                 multiline
@@ -145,7 +170,6 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
                 sx={{ mb: 2 }}
               />
             </Box>
-
             <Box>
               <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
                 AI Explainer with User-Defined Prompts

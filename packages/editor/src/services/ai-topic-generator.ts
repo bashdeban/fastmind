@@ -18,6 +18,7 @@
 import { llmProgressManager } from '../components/llm-progress-notification/manager';
 import { LLMService } from './llm/LLMService';
 import { LLMConfigManager } from './llm/config';
+import { SettingsManager } from './settings/config';
 import NodeModel from '@wisemapping/mindplot/src/components/model/NodeModel';
 import Designer from '@wisemapping/mindplot/src/components/Designer';
 import { Topic } from '@wisemapping/mindplot';
@@ -99,11 +100,37 @@ class AITopicGeneratorService {
   }
 
   /**
+   * Collect all child topic texts from the selected topic
+   * @param topic The selected topic
+   * @returns Array of child topic texts
+   */
+  private collectChildTopicTexts(topic: Topic): string[] {
+    const childTopics: string[] = [];
+
+    try {
+      const children = topic.getChildren();
+      if (children && children.length > 0) {
+        children.forEach(child => {
+          const text = child.getText();
+          if (text && text.trim().length > 0) {
+            childTopics.push(text.trim());
+          }
+        });
+      }
+    } catch (error) {
+      console.warn('Failed to collect child topics:', error);
+    }
+
+    return childTopics;
+  }
+
+  /**
    * Generate topics based on topic path with enhanced context
    */
   async generateTopicsWithContext(
     topicPath: string[],
     options: AITopicGeneratorOptions,
+    parentTopic?: Topic,
   ): Promise<GeneratedTopic[]> {
     const currentTopic = topicPath[topicPath.length - 1];
 
@@ -117,7 +144,7 @@ class AITopicGeneratorService {
       llmProgressManager.updateTaskProgress(taskId, 10);
 
       // Build enhanced prompt with context
-      const prompt = this.buildEnhancedPrompt(topicPath, options);
+      const prompt = this.buildEnhancedPrompt(topicPath, options, parentTopic);
       llmProgressManager.updateTaskProgress(taskId, 30);
 
       // Generate response from LLM using current configuration
@@ -147,7 +174,7 @@ class AITopicGeneratorService {
   /**
    * Build enhanced prompt with topic hierarchy context
    */
-  private buildEnhancedPrompt(topicPath: string[], options: AITopicGeneratorOptions): string {
+  private buildEnhancedPrompt(topicPath: string[], options: AITopicGeneratorOptions, parentTopic?: Topic): string {
     const currentTopic = topicPath[topicPath.length - 1];
     const parentPath = topicPath.slice(0, -1);
 
@@ -156,12 +183,23 @@ class AITopicGeneratorService {
       ? `Context hierarchy: ${parentPath.join(' → ')}\n`
       : '';
 
+    // Add existing child topics for deduplication if parentTopic is provided
+    let existingTopicsText = '';
+    if (parentTopic) {
+      const existingChildTopics = this.collectChildTopicTexts(parentTopic);
+      if (existingChildTopics.length > 0) {
+        existingTopicsText = `\nExisting subtopics to avoid duplication: ${existingChildTopics.join(', ')}\n`;
+      }
+    }
+
     const enhancedPrompt = `${contextPath}Based on the topic "${currentTopic}" and its context above, generate 3 to ${options.count} related subtopics as a JSON array.
 
 Considerations:
 - Subtopics must be concise and brief; use words whenever possible instead of short sentences.
 - Write in the same language as the topics
 - The number of subtopics is determined flexibly based on relevance and value
+- Avoid duplicating any existing subtopics mentioned above
+${existingTopicsText}
 
 Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
 
@@ -180,9 +218,13 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
     designer: Designer,
     options: Partial<AITopicGeneratorOptions> = {}
   ): Promise<void> {
+    // Get custom prompt and deduplication setting from localStorage
+    const customPrompt = SettingsManager.getTopicGeneratorPrompt();
+    const deduplicationEnabled = SettingsManager.getDeduplicationEnabled();
+
     const defaultOptions: AITopicGeneratorOptions = {
       count: 8,
-      customPrompt: options.customPrompt
+      customPrompt: customPrompt || options.customPrompt
     };
 
     try {
@@ -192,7 +234,8 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
       // Generate topics with enhanced context (automatically shows progress notification)
       const generatedTopics = await this.generateTopicsWithContext(
         topicPath,
-        defaultOptions
+        defaultOptions,
+        deduplicationEnabled ? parentTopic : undefined
       );
 
       // Create NodeModel instances

@@ -19,14 +19,16 @@
 export interface SettingsConfig {
   topicGeneratorPrompt?: string;
   explainerPrompt?: string;
+  deduplicationEnabled?: boolean;
 }
 
-const STORAGE_KEY = 'wisemapping-settings';
+const STORAGE_KEY = 'fastmind-settings';
 
 // 默认配置
 export const DEFAULT_SETTINGS_CONFIG: SettingsConfig = {
   topicGeneratorPrompt: '',
   explainerPrompt: '',
+  deduplicationEnabled: false,
 };
 
 export class SettingsManager {
@@ -77,15 +79,34 @@ export class SettingsManager {
   }
 
   /**
-   * 保存自定义提示词
+   * 获取去重开关状态
+   */
+  static getDeduplicationEnabled(): boolean {
+    const config = this.getConfig();
+    return config.deduplicationEnabled || false;
+  }
+
+  /**
+   * 保存自定义提示词和去重设置
    */
   static savePrompts(
     topicGeneratorPrompt?: string,
-    explainerPrompt?: string
+    explainerPrompt?: string,
+    deduplicationEnabled?: boolean
   ): void {
     this.saveConfig({
       topicGeneratorPrompt,
       explainerPrompt,
+      deduplicationEnabled,
+    });
+  }
+
+  /**
+   * 单独保存去重设置
+   */
+  static saveDeduplicationEnabled(deduplicationEnabled: boolean): void {
+    this.saveConfig({
+      deduplicationEnabled,
     });
   }
 

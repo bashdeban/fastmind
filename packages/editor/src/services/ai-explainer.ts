@@ -18,6 +18,7 @@
 import { llmProgressManager } from '../components/llm-progress-notification/manager';
 import { LLMService } from './llm/LLMService';
 import { LLMConfigManager } from './llm/config';
+import { SettingsManager } from './settings/config';
 import Designer from '@wisemapping/mindplot/src/components/Designer';
 import { Topic } from '@wisemapping/mindplot';
 
@@ -35,9 +36,12 @@ class AIExplainerService {
     designer: Designer,
     options: Partial<AIExplainerOptions> = {}
   ): Promise<void> {
+    // Get custom prompt from localStorage
+    const customPrompt = SettingsManager.getExplainerPrompt();
+
     const defaultOptions: AIExplainerOptions = {
       maxLength: 2000,
-      customPrompt: options.customPrompt
+      customPrompt: customPrompt || options.customPrompt
     };
 
     try {

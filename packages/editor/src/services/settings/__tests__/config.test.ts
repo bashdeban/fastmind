@@ -73,6 +73,7 @@ describe('SettingsManager', () => {
       expect(config).toEqual({
         topicGeneratorPrompt: '',
         explainerPrompt: '',
+        deduplicationEnabled: false,
       });
     });
 
@@ -86,7 +87,9 @@ describe('SettingsManager', () => {
 
       const config = SettingsManager.getConfig();
 
-      expect(config).toEqual(testConfig);
+      expect(config.topicGeneratorPrompt).toBe(testConfig.topicGeneratorPrompt);
+      expect(config.explainerPrompt).toBe(testConfig.explainerPrompt);
+      expect(config.deduplicationEnabled).toBe(false); // Default value
     });
 
     it('should return partial config with defaults', () => {
@@ -132,6 +135,74 @@ describe('SettingsManager', () => {
       const prompt = SettingsManager.getExplainerPrompt();
 
       expect(prompt).toBe('');
+    });
+  });
+
+  describe('saveDeduplicationEnabled', () => {
+    it('should save deduplication setting to localStorage', () => {
+      SettingsManager.saveDeduplicationEnabled(true);
+
+      const savedConfig = JSON.parse(localStorageMock.getItem('wisemapping-settings') || '{}');
+      expect(savedConfig.deduplicationEnabled).toBe(true);
+    });
+
+    it('should save false deduplication setting', () => {
+      SettingsManager.saveDeduplicationEnabled(false);
+
+      const savedConfig = JSON.parse(localStorageMock.getItem('wisemapping-settings') || '{}');
+      expect(savedConfig.deduplicationEnabled).toBe(false);
+    });
+  });
+
+  describe('getDeduplicationEnabled', () => {
+    it('should return true when deduplication is enabled', () => {
+      SettingsManager.saveDeduplicationEnabled(true);
+
+      const deduplication = SettingsManager.getDeduplicationEnabled();
+
+      expect(deduplication).toBe(true);
+    });
+
+    it('should return false when deduplication is disabled', () => {
+      SettingsManager.saveDeduplicationEnabled(false);
+
+      const deduplication = SettingsManager.getDeduplicationEnabled();
+
+      expect(deduplication).toBe(false);
+    });
+
+    it('should return false when no deduplication setting saved', () => {
+      const deduplication = SettingsManager.getDeduplicationEnabled();
+
+      expect(deduplication).toBe(false);
+    });
+  });
+
+  describe('getConfig with deduplication', () => {
+    it('should return config with deduplication enabled', () => {
+      const testConfig = {
+        topicGeneratorPrompt: 'Test topic prompt',
+        explainerPrompt: 'Test explainer prompt',
+        deduplicationEnabled: true,
+      };
+
+      localStorageMock.setItem('wisemapping-settings', JSON.stringify(testConfig));
+
+      const config = SettingsManager.getConfig();
+
+      expect(config).toEqual(testConfig);
+    });
+
+    it('should return default deduplication setting when not saved', () => {
+      const partialConfig = {
+        topicGeneratorPrompt: 'Only topic prompt',
+      };
+
+      localStorageMock.setItem('wisemapping-settings', JSON.stringify(partialConfig));
+
+      const config = SettingsManager.getConfig();
+
+      expect(config.deduplicationEnabled).toBe(false);
     });
   });
 });
