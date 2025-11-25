@@ -45,6 +45,7 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import { aiTopicGeneratorService } from '../../services/ai-topic-generator';
 import { aiExplainerService } from '../../services/ai-explainer';
+import { SettingsManager } from '../../services/settings/config';
 
 const keyTooltip = (msg: string, key: string): string => {
   const isMac = window.navigator.platform.toUpperCase().indexOf('MAC') >= 0;
@@ -325,10 +326,14 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
       if (selectedTopics.length === 1) {
         const selectedTopic = selectedTopics[0];
         
-        // Directly call the simplified AI generation method
+        // Get global custom prompt
+        const globalCustomPrompt = SettingsManager.getTopicGeneratorPrompt();
+        
+        // Directly call the simplified AI generation method with custom prompt
         aiTopicGeneratorService.generateAndAddTopicsDirectly(
           selectedTopic,
-          model.getDesigner()
+          model.getDesigner(),
+          { customPrompt: globalCustomPrompt }
         ).catch(error => {
           console.error('AI主题生成失败:', error);
         });
@@ -354,9 +359,13 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
         const selectedTopic = selectedTopics[0];
         
         // Call the AI explainer service to generate and store analysis
+        // Get global custom prompt
+        const globalCustomPrompt = SettingsManager.getExplainerPrompt();
+        
         aiExplainerService.generateAndStoreAnalysis(
           selectedTopic,
-          model.getDesigner()
+          model.getDesigner(),
+          { customPrompt: globalCustomPrompt }
         ).catch(error => {
           console.error('AI解释器分析失败:', error);
         });

@@ -35,6 +35,7 @@ import {
 } from '@mui/icons-material';
 import IconButton from '@mui/material/IconButton';
 import { aiTopicGeneratorService, type AITopicGeneratorOptions } from '../../../../services/ai-topic-generator';
+import { SettingsManager } from '../../../../services/settings/config';
 import type { AITopicGeneratorProps } from './types';
 
 const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
@@ -65,7 +66,18 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
     setGeneratedTopics([]);
 
     try {
-      const topics = await aiTopicGeneratorService.generateTopics(selectedTopicText, options);
+      // 获取全局自定义提示词
+      const globalCustomPrompt = SettingsManager.getTopicGeneratorPrompt();
+      
+      // 合并全局提示词和本地自定义提示词
+      const mergedOptions: AITopicGeneratorOptions = {
+        ...options,
+        customPrompt: globalCustomPrompt && options.customPrompt 
+          ? `${globalCustomPrompt}\n\n${options.customPrompt}`
+          : globalCustomPrompt || options.customPrompt
+      };
+      
+      const topics = await aiTopicGeneratorService.generateTopics(selectedTopicText, mergedOptions);
       setGeneratedTopics(topics.map(topic => topic.text));
     } catch (err) {
       setError(err instanceof Error ? err.message : '生成主题时发生错误');

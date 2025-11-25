@@ -27,6 +27,7 @@ import Box from '@mui/material/Box';
 import ManageIcon from '@mui/icons-material/ManageAccounts';
 import ModelApiManagement from '../model-api-management';
 import { LLMConfigManager } from '../../../../services/llm/config';
+import { SettingsManager } from '../../../../services/settings/config';
 import type { LLMConfig } from '../../../../services/llm/types';
 import {
   StyledDialogContent,
@@ -53,6 +54,11 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
     if (open) {
       const config = LLMConfigManager.getConfig();
       setCurrentConfig(config);
+
+      // 加载自定义提示词
+      const settingsConfig = SettingsManager.getConfig();
+      setTopicGeneratorPrompt(settingsConfig.topicGeneratorPrompt || '');
+      setExplainerPrompt(settingsConfig.explainerPrompt || '');
     }
   }, [open]);
 
@@ -68,17 +74,16 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
   };
 
   const handleSave = () => {
-    // TODO: Implement save functionality
-    console.log('Save settings:', {
-      model: currentConfig?.modelName || 'No model configured',
-      topicGeneratorPrompt,
-      explainerPrompt,
-    });
+    // 保存自定义提示词到localStorage
+    SettingsManager.savePrompts(topicGeneratorPrompt, explainerPrompt);
     onClose();
   };
 
   const handleCancel = () => {
-    // TODO: Reset to original values
+    // 重置为原始值
+    const settingsConfig = SettingsManager.getConfig();
+    setTopicGeneratorPrompt(settingsConfig.topicGeneratorPrompt || '');
+    setExplainerPrompt(settingsConfig.explainerPrompt || '');
     onClose();
   };
 
@@ -126,12 +131,12 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
             {/* AI Prompts */}
             <Box>
               <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
-                AI Topic Generator Prompt
+                AI Topic Generator with User-Defined Prompts
               </Typography>
               <TextField
                 fullWidth
                 multiline
-                rows={3}
+                rows={2}
                 variant="outlined"
                 value={topicGeneratorPrompt}
                 onChange={(e) => setTopicGeneratorPrompt(e.target.value)}
@@ -143,12 +148,12 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
 
             <Box>
               <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
-                AI Explainer Prompt
+                AI Explainer with User-Defined Prompts
               </Typography>
               <TextField
                 fullWidth
                 multiline
-                rows={3}
+                rows={2}
                 variant="outlined"
                 value={explainerPrompt}
                 onChange={(e) => setExplainerPrompt(e.target.value)}
