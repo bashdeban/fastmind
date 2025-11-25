@@ -23,7 +23,7 @@ import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import AddIcon from '@mui/icons-material/Add';
-import SettingsIcon from '@mui/icons-material/Settings';
+import CloseIcon from '@mui/icons-material/Close';
 import CloudIcon from '@mui/icons-material/Cloud';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
@@ -119,10 +119,10 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
         <DialogTitle>
           Model API Management
           <CloseButton onClick={onClose} size="small">
-            <SettingsIcon />
+            <CloseIcon />
           </CloseButton>
         </DialogTitle>
-        
+
         <StyledDialogContent>
           <Container>
             <HeaderSection>
@@ -154,8 +154,8 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                         </Box>
                         <SwitchButtonContainer>
                           {isActive ? (
-                            <StatusChip 
-                              label="active" 
+                            <StatusChip
+                              label="active"
                               status="active"
                               size="small"
                             />
@@ -203,11 +203,6 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                   Add Configuration
                 </Button>
               </LeftButtons>
-              <RightButtons>
-                <Button onClick={onClose}>
-                  Close
-                </Button>
-              </RightButtons>
             </ActionButtonsContainer>
           </Container>
         </StyledDialogContent>

@@ -100,8 +100,8 @@ export const ModelUrlText = styled(Box)(({ theme }) => ({
 }));
 
 export const StatusChip = styled(Chip)<{ status: 'active' | 'inactive' }>(({ theme, status }) => ({
-  backgroundColor: status === 'active' 
-    ? theme.palette.success.main 
+  backgroundColor: status === 'active'
+    ? theme.palette.success.main
     : theme.palette.grey[500],
   color: theme.palette.common.white,
   fontSize: '0.75rem',
@@ -112,7 +112,6 @@ export const ActionButtonsContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   padding: theme.spacing(2),
-  borderTop: `1px solid ${theme.palette.divider}`,
   backgroundColor: theme.palette.background.paper,
 }));
 

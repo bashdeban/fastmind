@@ -27,6 +27,9 @@ export const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
   padding: '26px',
   position: 'relative',
   backgroundColor: theme.palette.background.paper,
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
 }));
 
 export const CloseButton = styled(IconButton)({
@@ -52,6 +55,8 @@ export const StyledDialogPaper = styled(Paper)(({ theme }) => ({
 }));
 
 export const FormContainer = styled(Box)(({ theme }) => ({
+  flex: 1,
+  overflowY: 'auto',
   display: 'flex',
   flexDirection: 'column',
   height: '100%',
@@ -59,16 +64,13 @@ export const FormContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const ConfigurationSection = styled(Box)(({ theme }) => ({
-  flex: 1,
-  overflowY: 'auto',
+
   padding: theme.spacing(1),
 }));
 
 export const ResultSection = styled(Box)(({ theme }) => ({
-  flex: 1,
-  overflowY: 'auto',
   padding: theme.spacing(1),
-  borderTop: `1px solid ${theme.palette.divider}`,
+  minHeight: 0,
 }));
 
 export const ActionButtonContainer = styled(Box)(({ theme }) => ({
@@ -83,7 +85,7 @@ export const ResponseBox = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.grey[50],
   borderRadius: theme.shape.borderRadius,
   fontFamily: 'monospace',
-  fontSize: '0.875rem',
+  fontSize: '0.675rem',
   maxHeight: '400px',
   overflow: 'auto',
   whiteSpace: 'pre-wrap',

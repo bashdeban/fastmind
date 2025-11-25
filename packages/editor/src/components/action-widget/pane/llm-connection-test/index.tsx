@@ -38,7 +38,6 @@ import {
   FormContainer,
   ConfigurationSection,
   ResultSection,
-  ActionButtonContainer,
   ResponseBox,
 } from './styled';
 
@@ -60,13 +59,17 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
   const [apiUrl, setApiUrl] = useState(DEFAULT_LLM_CONFIG.apiUrl);
   const [modelName, setModelName] = useState(DEFAULT_LLM_CONFIG.modelName);
   const [apiKey, setApiKey] = useState(DEFAULT_LLM_CONFIG.apiKey);
-  const [prompt, setPrompt] = useState('Hello, please introduce yourself briefly and tell me what you can do.');
+  const [prompt, setPrompt] = useState('Hello, please introduce yourself briefly.');
   const [temperature, setTemperature] = useState(DEFAULT_LLM_CONFIG.temperature);
   const [maxTokens, setMaxTokens] = useState(DEFAULT_LLM_CONFIG.maxTokens);
 
   // Update form when dialog opens or initialConfig changes
   useEffect(() => {
     if (open) {
+      // Clear results and errors when dialog opens
+      setResult('');
+      setError('');
+      
       if (initialConfig) {
         setApiUrl(initialConfig.apiUrl);
         setModelName(initialConfig.modelName);
@@ -146,12 +149,12 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
 
       // 只保存到配置列表中（自动去重），不保存为当前配置
       LLMConfigListManager.saveToList(config);
-      
+
       console.log('✅ Configuration saved to list successfully:', modelName);
-      
+
       // 关闭对话框并返回 Model API Management
       handleClose();
-      
+
     } catch (error) {
       console.error('❌ Failed to save configuration:', error);
       setError('Failed to save configuration: ' + (error instanceof Error ? error.message : 'Unknown error'));
@@ -177,7 +180,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
           <CloseIcon />
         </CloseButton>
       </DialogTitle>
-      
+
       <StyledDialogContent>
         <FormContainer>
           <ConfigurationSection>
@@ -250,32 +253,6 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
               </Box>
             </Paper>
           </ConfigurationSection>
-
-          <ActionButtonContainer>
-            <Button
-              variant="contained"
-              onClick={testLangChainConnection}
-              disabled={isLoading}
-              sx={{ mr: 2 }}
-            >
-              {isLoading ? (
-                <>
-                  <CircularProgress size={20} sx={{ mr: 1 }} />
-                  Testing...
-                </>
-              ) : (
-                'Test LLM Connection'
-              )}
-            </Button>
-            <Button
-              variant="outlined"
-              onClick={handleSaveConfig}
-              disabled={isLoading}
-            >
-              Save Configuration
-            </Button>
-          </ActionButtonContainer>
-
           <ResultSection>
             {error && (
               <Alert severity="error" sx={{ mb: 2 }}>
@@ -293,17 +270,32 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
                 </ResponseBox>
               </Box>
             )}
-
-            <Typography variant="caption" color="text.secondary">
-              Open browser console for detailed logs
-            </Typography>
           </ResultSection>
         </FormContainer>
       </StyledDialogContent>
 
       <DialogActions>
-        <Button onClick={handleClose}>
-          Close
+        <Button
+          variant="contained"
+          onClick={testLangChainConnection}
+          disabled={isLoading}
+          sx={{ mr: 2 }}
+        >
+          {isLoading ? (
+            <>
+              <CircularProgress size={20} sx={{ mr: 1 }} />
+              Testing...
+            </>
+          ) : (
+            'Test LLM Connection'
+          )}
+        </Button>
+        <Button
+          variant="outlined"
+          onClick={handleSaveConfig}
+          disabled={isLoading}
+        >
+          Save Configuration
         </Button>
       </DialogActions>
     </Dialog>
