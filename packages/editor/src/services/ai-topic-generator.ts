@@ -166,7 +166,7 @@ Considerations:
 Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
 
     if (options.customPrompt && options.customPrompt.trim()) {
-      return `${enhancedPrompt}\n\nAdditional context: ${options.customPrompt.trim()}`;
+      return `${enhancedPrompt}\n\nAdditional considerations: ${options.customPrompt.trim()}`;
     }
 
     return enhancedPrompt;

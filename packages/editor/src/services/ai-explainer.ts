@@ -142,7 +142,7 @@ class AIExplainerService {
 - Write in the same language as the topics`;
 
     if (options.customPrompt && options.customPrompt.trim()) {
-      return `${enhancedPrompt}\n\nAdditional requirements:${options.customPrompt.trim()}`;
+      return `${enhancedPrompt}\n\nAdditional considerations:${options.customPrompt.trim()}`;
     }
 
     return enhancedPrompt;

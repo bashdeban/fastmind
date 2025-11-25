@@ -40,12 +40,12 @@ interface SettingsDialogProps {
 const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElement => {
   const [showModelApiManagement, setShowModelApiManagement] = useState(false);
   const [currentConfig, setCurrentConfig] = useState<LLMConfig | null>(null);
-  
+
   const [topicGeneratorPrompt, setTopicGeneratorPrompt] = useState(
-    'Generate creative and relevant topics for a mind map about {topic}. Provide 5-8 diverse subtopics that cover different aspects of the main topic.'
+    ''
   );
   const [explainerPrompt, setExplainerPrompt] = useState(
-    'Explain the concept "{topic}" in a clear and concise way. Use simple language that anyone can understand, and provide relevant examples.'
+    ''
   );
 
   // 加载当前配置
@@ -100,12 +100,12 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
         <DialogTitle>
           Settings
         </DialogTitle>
-        
+
         <StyledDialogContent>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 3, lineHeight: 1.4 }}>
             Configure AI model settings and customize prompts for topic generation and concept explanation.
           </Typography>
-          
+
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             {/* LLM Configuration */}
             <Box>
@@ -163,8 +163,8 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
           <Button onClick={handleCancel}>
             Cancel
           </Button>
-          <Button 
-            variant="contained" 
+          <Button
+            variant="contained"
             onClick={handleSave}
           >
             Save
