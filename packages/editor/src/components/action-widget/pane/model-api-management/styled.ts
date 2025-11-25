@@ -25,6 +25,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 // Reuse styles from outline-view-dialog
 export const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
@@ -45,10 +46,10 @@ export const CloseButton = styled(IconButton)({
 });
 
 export const StyledDialogPaper = styled(Paper)(({ theme }) => ({
-  margin: '12.5vh 12.5vw',
+  margin: '12.5vh 25vw',
   height: '75vh',
-  width: '75vw',
-  maxWidth: 'none',
+  width: '50vw',
+  maxWidth: '600px',
   maxHeight: 'none',
   borderRadius: '12px',
   overflow: 'hidden',
@@ -142,4 +143,18 @@ export const EmptyStateIcon = styled(Box)(({ theme }) => ({
 
 export const EmptyStateText = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(1),
+}));
+
+export const SwitchButtonContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: theme.spacing(0.5),
+}));
+
+export const SwitchModelButton = styled(Button)(({ theme }) => ({
+  fontSize: '0.75rem',
+  padding: theme.spacing(0.5, 1),
+  minWidth: '120px',
+  height: '28px',
 }));

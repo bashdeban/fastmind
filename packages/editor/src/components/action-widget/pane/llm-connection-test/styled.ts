@@ -41,8 +41,8 @@ export const CloseButton = styled(IconButton)({
 });
 
 export const StyledDialogPaper = styled(Paper)(({ theme }) => ({
-  margin: '12.5vh 12.5vw',
-  height: '75vh',
+  margin: '8vh 12.5vw',
+  height: '85vh',
   width: '75vw',
   maxWidth: 'none',
   maxHeight: 'none',
@@ -79,13 +79,15 @@ export const ActionButtonContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const ResponseBox = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(2),
+  padding: theme.spacing(3),
   backgroundColor: theme.palette.grey[50],
   borderRadius: theme.shape.borderRadius,
   fontFamily: 'monospace',
   fontSize: '0.875rem',
-  maxHeight: '200px',
+  maxHeight: '400px',
   overflow: 'auto',
   whiteSpace: 'pre-wrap',
   wordBreak: 'break-word',
+  border: `1px solid ${theme.palette.divider}`,
+  boxShadow: theme.shadows[1],
 }));

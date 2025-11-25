@@ -44,6 +44,8 @@ import {
   EmptyStateContainer,
   EmptyStateIcon,
   EmptyStateText,
+  SwitchButtonContainer,
+  SwitchModelButton,
 } from './styled';
 
 // Mock data for API configurations
@@ -85,6 +87,11 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
     setShowLlmTest(false);
   };
 
+  const handleSwitchModel = (modelId: string) => {
+    console.log('Switching to model:', modelId);
+    // TODO: Implement model switching logic
+  };
+
 
   return (
     <>
@@ -106,9 +113,6 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
             <HeaderSection>
               <Typography variant="h6" gutterBottom>
                 LLM API Configurations
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Manage your configured language model APIs
               </Typography>
             </HeaderSection>
 
@@ -137,11 +141,20 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                           {config.url}
                         </ModelUrlText>
                       </Box>
-                      <StatusChip 
-                        label={config.status} 
-                        status={config.status}
-                        size="small"
-                      />
+                      <SwitchButtonContainer>
+                        <StatusChip 
+                          label={config.status} 
+                          status={config.status}
+                          size="small"
+                        />
+                        <SwitchModelButton
+                          variant="outlined"
+                          size="small"
+                          onClick={() => handleSwitchModel(config.id)}
+                        >
+                          Switch to this model
+                        </SwitchModelButton>
+                      </SwitchButtonContainer>
                     </StyledListItem>
                   ))}
                 </StyledList>
