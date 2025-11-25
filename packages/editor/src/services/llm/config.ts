@@ -1,12 +1,12 @@
 import { LLMConfig } from './types';
 
-const STORAGE_KEY = 'wisemapping-llm-config';
+const STORAGE_KEY = 'llm-config';
 
 // 默认配置 - 从现有LLM测试组件提取
 export const DEFAULT_LLM_CONFIG: LLMConfig = {
-    apiUrl: 'https://generativelanguage.googleapis.com/v1beta/openai/chat/completions',
-    modelName: 'gemini-2.5-flash',
-    apiKey: 'AIzaSyAvUCRHMOQJIuQoTyda9UTki4Rv4adeu7w',
+    apiUrl: '',
+    modelName: '',
+    apiKey: '',
     temperature: 0.7,
     maxTokens: 3000,
 };

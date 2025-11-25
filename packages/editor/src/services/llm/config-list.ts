@@ -18,7 +18,7 @@
 
 import { LLMConfig } from './types';
 
-const CONFIG_LIST_STORAGE_KEY = 'wisemapping-llm-config-list';
+const CONFIG_LIST_STORAGE_KEY = 'llm-config-list';
 
 export class LLMConfigListManager {
   /**
@@ -45,14 +45,14 @@ export class LLMConfigListManager {
   static saveToList(config: LLMConfig): void {
     try {
       const currentList = this.getConfigList();
-      
+
       // 查找是否已存在相同 modelName 的配置
       const existingIndex = currentList.findIndex(
         (item) => item.modelName === config.modelName
       );
 
       let updatedList: LLMConfig[];
-      
+
       if (existingIndex !== -1) {
         // 如果存在，替换现有配置
         updatedList = [...currentList];
@@ -77,7 +77,7 @@ export class LLMConfigListManager {
     try {
       const currentList = this.getConfigList();
       const updatedList = currentList.filter((item) => item.modelName !== modelName);
-      
+
       localStorage.setItem(CONFIG_LIST_STORAGE_KEY, JSON.stringify(updatedList));
       console.log('🗑️ Config removed from list:', modelName);
     } catch (error) {
