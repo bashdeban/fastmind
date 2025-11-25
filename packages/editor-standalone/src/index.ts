@@ -71,6 +71,7 @@ const options: EditorOptions = {
   locale: 'en',
   enableKeyboardEvents: true,
   enableAppBar: false,
+  hideCreatorInfo: true,
   saveOnLoad: false, // Don't save on load in VS Code
 };
 
