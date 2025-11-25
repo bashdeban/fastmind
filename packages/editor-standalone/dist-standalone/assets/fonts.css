@@ -1,0 +1,46 @@
+/* Material Icons Font - Local Loading with Lazy Loading */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/MaterialIcons-Regular.woff2') format('woff2');
+  font-display: swap; /* Enable font swap for better performance */
+}
+
+/* Material Icons Base Styles */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Font loading states */
+.material-icons:not(.font-loaded) {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.material-icons.font-loaded {
+  opacity: 1;
+}
+
+/* Fallback for when font fails to load */
+.material-icons.font-failed {
+  font-family: monospace;
+  font-size: 16px;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 2px 4px;
+}

@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>WiseMapping Editor Standalone</title><style>body, html {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>WiseMapping Editor Standalone</title><link rel="stylesheet" href="./assets/fonts.css"><style>body, html {
             margin: 0;
             padding: 0;
             width: 100%;
@@ -45,7 +45,74 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
-        }</style></head><body><div class="loading" id="loading"><div class="loading-spinner"></div><div class="loading-text">Loading WiseMapping Editor...</div></div><div id="root"></div><script>// Hide loading indicator when React app mounts
+        }</style></head><body><div class="loading" id="loading"><div class="loading-spinner"></div><div class="loading-text">Loading WiseMapping Editor...</div></div><div id="root"></div><script>// Font lazy loading with error handling
+        (function() {
+            let fontLoadTimeout;
+            
+            // Function to mark font as loaded
+            function markFontLoaded() {
+                clearTimeout(fontLoadTimeout);
+                const icons = document.querySelectorAll('.material-icons');
+                icons.forEach(icon => {
+                    icon.classList.add('font-loaded');
+                });
+            }
+            
+            // Function to handle font load failure
+            function markFontFailed() {
+                const icons = document.querySelectorAll('.material-icons');
+                icons.forEach(icon => {
+                    icon.classList.add('font-failed');
+                });
+            }
+            
+            // Check if font is already loaded
+            function checkFontLoaded() {
+                const testElement = document.createElement('span');
+                testElement.style.position = 'absolute';
+                testElement.style.visibility = 'hidden';
+                testElement.style.fontSize = '48px';
+                testElement.className = 'material-icons';
+                testElement.innerHTML = 'favorite';
+                document.body.appendChild(testElement);
+                
+                const isLoaded = testElement.offsetWidth > 0 && testElement.offsetHeight > 0;
+                document.body.removeChild(testElement);
+                
+                return isLoaded;
+            }
+            
+            // Initialize font loading detection
+            function initFontLoading() {
+                // Set timeout for font loading (3 seconds)
+                fontLoadTimeout = setTimeout(() => {
+                    if (!checkFontLoaded()) {
+                        console.warn('Material Icons font failed to load, using fallback');
+                        markFontFailed();
+                    }
+                }, 3000);
+                
+                // Check font load status periodically
+                const checkInterval = setInterval(() => {
+                    if (checkFontLoaded()) {
+                        clearInterval(checkInterval);
+                        markFontLoaded();
+                    }
+                }, 100);
+                
+                // Cleanup after 5 seconds max
+                setTimeout(() => {
+                    clearInterval(checkInterval);
+                }, 5000);
+            }
+            
+            // Start font loading detection when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initFontLoading);
+            } else {
+                initFontLoading();
+            }
+        })();</script><script>// Hide loading indicator when React app mounts
         window.addEventListener('load', function() {
             setTimeout(function() {
                 const loading = document.getElementById('loading');

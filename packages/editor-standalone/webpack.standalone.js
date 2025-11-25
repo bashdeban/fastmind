@@ -25,6 +25,18 @@ const standaloneConfig = {
   },
   // Don't externalize any dependencies - bundle everything for standalone use
   externals: {},
+  // Handle font files as assets
+  module: {
+    rules: [
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[name][ext]',
+        },
+      },
+    ],
+  },
   // Optimize for production
   optimization: {
     minimize: true,
@@ -47,12 +59,22 @@ const standaloneConfig = {
         useShortDoctype: true,
       },
     }),
-    // Copy only images, exclude samples to avoid CORS issues
+    // Copy images, fonts, and CSS
     new CopyPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, './src/assets/images'),
           to: path.resolve(__dirname, 'dist-standalone/assets/images'),
+          noErrorOnMissing: true,
+        },
+        {
+          from: path.resolve(__dirname, './src/assets/fonts'),
+          to: path.resolve(__dirname, 'dist-standalone/assets/fonts'),
+          noErrorOnMissing: true,
+        },
+        {
+          from: path.resolve(__dirname, './src/assets/fonts.css'),
+          to: path.resolve(__dirname, 'dist-standalone/assets/fonts.css'),
           noErrorOnMissing: true,
         },
       ],
