@@ -188,7 +188,7 @@ class AITopicGeneratorService {
     if (parentTopic) {
       const existingChildTopics = this.collectChildTopicTexts(parentTopic);
       if (existingChildTopics.length > 0) {
-        existingTopicsText = `\nExisting subtopics to avoid duplication: ${existingChildTopics.join(', ')}\n`;
+        existingTopicsText = `- Avoid duplicating any existing subtopics mentioned \nExisting subtopics to avoid duplication: ${existingChildTopics.join(', ')}`;
       }
     }
 
@@ -198,7 +198,6 @@ Considerations:
 - Subtopics must be concise and brief; use words whenever possible instead of short sentences.
 - Write in the same language as the topics
 - The number of subtopics is determined flexibly based on relevance and value
-- Avoid duplicating any existing subtopics mentioned above
 ${existingTopicsText}
 
 Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
