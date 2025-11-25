@@ -16,7 +16,7 @@
  *   limitations under the License.
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -25,7 +25,13 @@ import DialogTitle from '@mui/material/DialogTitle';
 import AddIcon from '@mui/icons-material/Add';
 import SettingsIcon from '@mui/icons-material/Settings';
 import CloudIcon from '@mui/icons-material/Cloud';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
 import LlmConnectionTest from '../llm-connection-test';
+import { LLMConfigListManager } from '../../../../services/llm/config-list';
+import { LLMConfigManager } from '../../../../services/llm/config';
+import type { LLMConfig } from '../../../../services/llm/types';
 import {
   StyledDialogContent,
   CloseButton,
@@ -36,7 +42,6 @@ import {
   StyledList,
   StyledListItem,
   ModelNameText,
-  ModelUrlText,
   StatusChip,
   ActionButtonsContainer,
   LeftButtons,
@@ -46,29 +51,8 @@ import {
   EmptyStateText,
   SwitchButtonContainer,
   SwitchModelButton,
+  UpdateModelButton,
 } from './styled';
-
-// Mock data for API configurations
-const mockApiConfigs = [
-  {
-    id: '1',
-    name: 'GPT-4',
-    url: 'https://api.openai.com/v1/chat/completions',
-    status: 'active' as const,
-  },
-  {
-    id: '2',
-    name: 'Claude-3',
-    url: 'https://api.anthropic.com/v1/messages',
-    status: 'active' as const,
-  },
-  {
-    id: '3',
-    name: 'Local LLM',
-    url: 'http://localhost:11434/api/generate',
-    status: 'inactive' as const,
-  },
-];
 
 interface ModelApiManagementProps {
   open: boolean;
@@ -77,21 +61,52 @@ interface ModelApiManagementProps {
 
 const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.ReactElement => {
   const [showLlmTest, setShowLlmTest] = useState(false);
-  const [apiConfigs] = useState(mockApiConfigs);
+  const [configList, setConfigList] = useState<LLMConfig[]>([]);
+  const [initialConfig, setInitialConfig] = useState<LLMConfig | undefined>(undefined);
+  const [currentConfig, setCurrentConfig] = useState<LLMConfig | null>(null);
+
+  // 加载配置列表和当前配置
+  useEffect(() => {
+    const configs = LLMConfigListManager.getConfigList();
+    const current = LLMConfigManager.getConfig();
+    setConfigList(configs);
+    setCurrentConfig(current);
+  }, [open]);
 
   const handleAddConfig = () => {
+    setInitialConfig(undefined); // 新建配置时不需要初始值
     setShowLlmTest(true);
   };
 
   const handleLlmTestClose = () => {
     setShowLlmTest(false);
+    // 刷新配置列表和当前配置
+    const configs = LLMConfigListManager.getConfigList();
+    const current = LLMConfigManager.getConfig();
+    setConfigList(configs);
+    setCurrentConfig(current);
   };
 
-  const handleSwitchModel = (modelId: string) => {
-    console.log('Switching to model:', modelId);
-    // TODO: Implement model switching logic
+  const handleSwitchModel = (config: LLMConfig) => {
+    // 直接保存为当前配置
+    LLMConfigManager.saveConfig(config);
+    // 更新当前配置状态
+    setCurrentConfig(config);
   };
 
+  const handleUpdateConfig = (config: LLMConfig) => {
+    setInitialConfig(config);
+    setShowLlmTest(true);
+  };
+
+  const handleDeleteConfig = (modelName: string) => {
+    LLMConfigListManager.removeFromList(modelName);
+    // 刷新配置列表和当前配置
+    const configs = LLMConfigListManager.getConfigList();
+    const current = LLMConfigManager.getConfig();
+    setConfigList(configs);
+    setCurrentConfig(current);
+  };
 
   return (
     <>
@@ -111,13 +126,10 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
         <StyledDialogContent>
           <Container>
             <HeaderSection>
-              <Typography variant="h6" gutterBottom>
-                LLM API Configurations
-              </Typography>
             </HeaderSection>
 
             <ListContainer>
-              {apiConfigs.length === 0 ? (
+              {configList.length === 0 ? (
                 <EmptyStateContainer>
                   <EmptyStateIcon>
                     <CloudIcon />
@@ -131,32 +143,52 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                 </EmptyStateContainer>
               ) : (
                 <StyledList>
-                  {apiConfigs.map((config) => (
-                    <StyledListItem key={config.id}>
-                      <Box sx={{ flex: 1 }}>
-                        <ModelNameText>
-                          {config.name}
-                        </ModelNameText>
-                        <ModelUrlText>
-                          {config.url}
-                        </ModelUrlText>
-                      </Box>
-                      <SwitchButtonContainer>
-                        <StatusChip 
-                          label={config.status} 
-                          status={config.status}
-                          size="small"
-                        />
-                        <SwitchModelButton
-                          variant="outlined"
-                          size="small"
-                          onClick={() => handleSwitchModel(config.id)}
-                        >
-                          Switch to this model
-                        </SwitchModelButton>
-                      </SwitchButtonContainer>
-                    </StyledListItem>
-                  ))}
+                  {configList.map((config) => {
+                    const isActive = currentConfig?.modelName?.trim() === config.modelName?.trim();
+                    return (
+                      <StyledListItem key={config.modelName}>
+                        <Box sx={{ flex: 1 }}>
+                          <ModelNameText>
+                            {config.modelName}
+                          </ModelNameText>
+                        </Box>
+                        <SwitchButtonContainer>
+                          {isActive ? (
+                            <StatusChip 
+                              label="active" 
+                              status="active"
+                              size="small"
+                            />
+                          ) : (
+                            <>
+                              <SwitchModelButton
+                                variant="outlined"
+                                size="small"
+                                onClick={() => handleSwitchModel(config)}
+                              >
+                                Switch
+                              </SwitchModelButton>
+                              <UpdateModelButton
+                                variant="outlined"
+                                size="small"
+                                onClick={() => handleUpdateConfig(config)}
+                                startIcon={<EditIcon sx={{ fontSize: '14px' }} />}
+                              >
+                                Update
+                              </UpdateModelButton>
+                              <IconButton
+                                size="small"
+                                onClick={() => handleDeleteConfig(config.modelName)}
+                                sx={{ ml: 1 }}
+                              >
+                                <DeleteIcon fontSize="small" />
+                              </IconButton>
+                            </>
+                          )}
+                        </SwitchButtonContainer>
+                      </StyledListItem>
+                    );
+                  })}
                 </StyledList>
               )}
             </ListContainer>
@@ -185,6 +217,7 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
       <LlmConnectionTest
         open={showLlmTest}
         onClose={handleLlmTestClose}
+        initialConfig={initialConfig}
       />
     </>
   );

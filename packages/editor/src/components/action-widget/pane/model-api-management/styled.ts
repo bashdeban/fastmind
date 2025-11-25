@@ -147,7 +147,7 @@ export const EmptyStateText = styled(Typography)(({ theme }) => ({
 
 export const SwitchButtonContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   alignItems: 'center',
   gap: theme.spacing(0.5),
 }));
@@ -155,6 +155,19 @@ export const SwitchButtonContainer = styled(Box)(({ theme }) => ({
 export const SwitchModelButton = styled(Button)(({ theme }) => ({
   fontSize: '0.75rem',
   padding: theme.spacing(0.5, 1),
-  minWidth: '120px',
+  minWidth: '80px',
   height: '28px',
+}));
+
+export const UpdateModelButton = styled(Button)(({ theme }) => ({
+  fontSize: '0.75rem',
+  padding: theme.spacing(0.5, 1),
+  minWidth: '80px',
+  height: '28px',
+  borderColor: theme.palette.warning.main,
+  color: theme.palette.warning.main,
+  '&:hover': {
+    borderColor: theme.palette.warning.dark,
+    backgroundColor: theme.palette.warning.light,
+  },
 }));

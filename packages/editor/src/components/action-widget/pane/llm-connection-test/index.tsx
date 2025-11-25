@@ -16,7 +16,7 @@
  *   limitations under the License.
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -29,6 +29,8 @@ import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import CloseIcon from '@mui/icons-material/Close';
 import { LLMService, DEFAULT_LLM_CONFIG } from '../../../../services/llm';
+import { LLMConfigListManager } from '../../../../services/llm/config-list';
+import type { LLMConfig } from '../../../../services/llm/types';
 import {
   StyledDialogContent,
   CloseButton,
@@ -43,9 +45,10 @@ import {
 interface LlmConnectionTestProps {
   open: boolean;
   onClose: () => void;
+  initialConfig?: LLMConfig;
 }
 
-const LlmConnectionTest = ({ open, onClose }: LlmConnectionTestProps): React.ReactElement => {
+const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestProps): React.ReactElement => {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -53,13 +56,33 @@ const LlmConnectionTest = ({ open, onClose }: LlmConnectionTestProps): React.Rea
   // LLM Service instance
   const [llmService] = useState(() => new LLMService());
 
-  // Configuration state - use defaults from service
+  // Configuration state - initialize with default values
   const [apiUrl, setApiUrl] = useState(DEFAULT_LLM_CONFIG.apiUrl);
   const [modelName, setModelName] = useState(DEFAULT_LLM_CONFIG.modelName);
   const [apiKey, setApiKey] = useState(DEFAULT_LLM_CONFIG.apiKey);
   const [prompt, setPrompt] = useState('Hello, please introduce yourself briefly and tell me what you can do.');
   const [temperature, setTemperature] = useState(DEFAULT_LLM_CONFIG.temperature);
   const [maxTokens, setMaxTokens] = useState(DEFAULT_LLM_CONFIG.maxTokens);
+
+  // Update form when dialog opens or initialConfig changes
+  useEffect(() => {
+    if (open) {
+      if (initialConfig) {
+        setApiUrl(initialConfig.apiUrl);
+        setModelName(initialConfig.modelName);
+        setApiKey(initialConfig.apiKey);
+        setTemperature(initialConfig.temperature);
+        setMaxTokens(initialConfig.maxTokens);
+      } else {
+        // Reset to default values when adding new configuration
+        setApiUrl(DEFAULT_LLM_CONFIG.apiUrl);
+        setModelName(DEFAULT_LLM_CONFIG.modelName);
+        setApiKey(DEFAULT_LLM_CONFIG.apiKey);
+        setTemperature(DEFAULT_LLM_CONFIG.temperature);
+        setMaxTokens(DEFAULT_LLM_CONFIG.maxTokens);
+      }
+    }
+  }, [open, initialConfig]);
 
   const testLangChainConnection = async (): Promise<void> => {
     setIsLoading(true);
@@ -108,6 +131,30 @@ const LlmConnectionTest = ({ open, onClose }: LlmConnectionTestProps): React.Rea
       setError(`Connection failed: ${errorMessage}`);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const handleSaveConfig = async (): Promise<void> => {
+    try {
+      const config = {
+        apiUrl,
+        modelName,
+        apiKey,
+        temperature,
+        maxTokens,
+      };
+
+      // 只保存到配置列表中（自动去重），不保存为当前配置
+      LLMConfigListManager.saveToList(config);
+      
+      console.log('✅ Configuration saved to list successfully:', modelName);
+      
+      // 关闭对话框并返回 Model API Management
+      handleClose();
+      
+    } catch (error) {
+      console.error('❌ Failed to save configuration:', error);
+      setError('Failed to save configuration: ' + (error instanceof Error ? error.message : 'Unknown error'));
     }
   };
 
@@ -209,8 +256,7 @@ const LlmConnectionTest = ({ open, onClose }: LlmConnectionTestProps): React.Rea
               variant="contained"
               onClick={testLangChainConnection}
               disabled={isLoading}
-              fullWidth
-              sx={{ maxWidth: '400px' }}
+              sx={{ mr: 2 }}
             >
               {isLoading ? (
                 <>
@@ -220,6 +266,13 @@ const LlmConnectionTest = ({ open, onClose }: LlmConnectionTestProps): React.Rea
               ) : (
                 'Test LLM Connection'
               )}
+            </Button>
+            <Button
+              variant="outlined"
+              onClick={handleSaveConfig}
+              disabled={isLoading}
+            >
+              Save Configuration
             </Button>
           </ActionButtonContainer>
 

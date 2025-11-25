@@ -16,7 +16,7 @@
  *   limitations under the License.
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
@@ -24,12 +24,12 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import SettingsIcon from '@mui/icons-material/Settings';
 import ManageIcon from '@mui/icons-material/ManageAccounts';
 import ModelApiManagement from '../model-api-management';
+import { LLMConfigManager } from '../../../../services/llm/config';
+import type { LLMConfig } from '../../../../services/llm/types';
 import {
   StyledDialogContent,
-  CloseButton,
 } from './styled';
 
 interface SettingsDialogProps {
@@ -39,9 +39,8 @@ interface SettingsDialogProps {
 
 const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElement => {
   const [showModelApiManagement, setShowModelApiManagement] = useState(false);
+  const [currentConfig, setCurrentConfig] = useState<LLMConfig | null>(null);
   
-  // Mock current configuration
-  const [currentModel] = useState('GPT-4');
   const [topicGeneratorPrompt, setTopicGeneratorPrompt] = useState(
     'Generate creative and relevant topics for a mind map about {topic}. Provide 5-8 diverse subtopics that cover different aspects of the main topic.'
   );
@@ -49,18 +48,29 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
     'Explain the concept "{topic}" in a clear and concise way. Use simple language that anyone can understand, and provide relevant examples.'
   );
 
+  // 加载当前配置
+  useEffect(() => {
+    if (open) {
+      const config = LLMConfigManager.getConfig();
+      setCurrentConfig(config);
+    }
+  }, [open]);
+
   const handleManageApi = () => {
     setShowModelApiManagement(true);
   };
 
   const handleModelApiManagementClose = () => {
     setShowModelApiManagement(false);
+    // 重新加载当前配置
+    const config = LLMConfigManager.getConfig();
+    setCurrentConfig(config);
   };
 
   const handleSave = () => {
     // TODO: Implement save functionality
     console.log('Save settings:', {
-      model: currentModel,
+      model: currentConfig?.modelName || 'No model configured',
       topicGeneratorPrompt,
       explainerPrompt,
     });
@@ -89,9 +99,6 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
       >
         <DialogTitle>
           Settings
-          <CloseButton onClick={onClose} size="small">
-            <SettingsIcon />
-          </CloseButton>
         </DialogTitle>
         
         <StyledDialogContent>
@@ -103,7 +110,7 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
             {/* LLM Configuration */}
             <Box>
               <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
-                Current Model: {currentModel}
+                Current Model: {currentConfig?.modelName || 'No model configured'}
               </Typography>
               <Button
                 variant="outlined"

@@ -17,6 +17,7 @@
  */
 import { llmProgressManager } from '../components/llm-progress-notification/manager';
 import { LLMService } from './llm/LLMService';
+import { LLMConfigManager } from './llm/config';
 import Designer from '@wisemapping/mindplot/src/components/Designer';
 import { Topic } from '@wisemapping/mindplot';
 
@@ -26,12 +27,6 @@ export interface AIExplainerOptions {
 }
 
 class AIExplainerService {
-  private llmService: LLMService;
-
-  constructor() {
-    this.llmService = new LLMService();
-  }
-
   /**
    * Generate comprehensive topic analysis and store it in the topic's note
    */
@@ -83,8 +78,9 @@ class AIExplainerService {
       const prompt = this.buildAnalysisPrompt(topicPath, options);
       llmProgressManager.updateTaskProgress(taskId, 30);
 
-      // Generate response from LLM
-      const response = await this.llmService.generateResponse(prompt);
+      // Generate response from LLM using current configuration
+      const llmService = new LLMService(LLMConfigManager.getConfig());
+      const response = await llmService.generateResponse(prompt);
       llmProgressManager.updateTaskProgress(taskId, 70);
 
       // Process and validate the response
@@ -139,7 +135,7 @@ class AIExplainerService {
     const enhancedPrompt = `${contextPath}Based on the topic "${currentTopic}" and its context above,
     Write a well-structured Markdown explanation that meets the following requirements (within 1000 characters):
 
-- Start with a concise summary paragraph that clearly conveys the topic’s definition, scope, and importance within 30 seconds of reading.
+- Start with a concise summary paragraph that clearly conveys the topic's definition, scope, and importance within 30 seconds of reading.
 - Provide a clear and professional explanation suitable for readers with basic domain knowledge
 - List key concepts/components in a systematic manner. 
 - Ensure logical flow and clean organization.

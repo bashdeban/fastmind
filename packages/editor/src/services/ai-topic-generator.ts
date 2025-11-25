@@ -17,6 +17,7 @@
  */
 import { llmProgressManager } from '../components/llm-progress-notification/manager';
 import { LLMService } from './llm/LLMService';
+import { LLMConfigManager } from './llm/config';
 import NodeModel from '@wisemapping/mindplot/src/components/model/NodeModel';
 import Designer from '@wisemapping/mindplot/src/components/Designer';
 import { Topic } from '@wisemapping/mindplot';
@@ -31,12 +32,6 @@ export interface AITopicGeneratorOptions {
 }
 
 class AITopicGeneratorService {
-  private llmService: LLMService;
-
-  constructor() {
-    this.llmService = new LLMService();
-  }
-
   /**
    * Generate topics based on a parent topic using LLM
    * @deprecated Use generateTopicsWithContext for better context-aware generation
@@ -125,8 +120,9 @@ class AITopicGeneratorService {
       const prompt = this.buildEnhancedPrompt(topicPath, options);
       llmProgressManager.updateTaskProgress(taskId, 30);
 
-      // Generate response from LLM
-      const response = await this.llmService.generateResponse(prompt);
+      // Generate response from LLM using current configuration
+      const llmService = new LLMService(LLMConfigManager.getConfig());
+      const response = await llmService.generateResponse(prompt);
       llmProgressManager.updateTaskProgress(taskId, 70);
 
       // Parse the response
