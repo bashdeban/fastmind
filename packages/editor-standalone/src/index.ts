@@ -70,7 +70,7 @@ const options: EditorOptions = {
   mode: 'edition-owner',
   locale: 'en',
   enableKeyboardEvents: true,
-  enableAppBar: true,
+  enableAppBar: false,
   saveOnLoad: false, // Don't save on load in VS Code
 };
 

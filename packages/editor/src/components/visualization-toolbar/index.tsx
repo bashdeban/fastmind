@@ -20,6 +20,10 @@ import Brightness4 from '@mui/icons-material/Brightness4';
 import Brightness7 from '@mui/icons-material/Brightness7';
 import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import SaveOutlinedIcon from '@mui/icons-material/SaveOutlined';
+import UndoOutlinedIcon from '@mui/icons-material/UndoOutlined';
+import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
+import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
+import SettingsIcon from '@mui/icons-material/Settings';
 import Typography from '@mui/material/Typography';
 import React, { ReactElement, useState, useEffect, useMemo } from 'react';
 import { IntlShape, useIntl } from 'react-intl';
@@ -30,8 +34,11 @@ import Model from '../../classes/model/editor';
 import KeyboardShorcutsHelp from '../action-widget/pane/keyboard-shortcut-help';
 import OutlineViewDialog from '../action-widget/pane/outline-view-dialog';
 import LayoutSelector from '../action-widget/pane/layout-selector';
+import ThemeEditor from '../action-widget/pane/theme-editor';
+import SettingsDialog from '../action-widget/pane/settings-dialog';
 import NodePropertyValueModelBuilder from '../../classes/model/node-property-builder';
 import Toolbar from '../toolbar';
+import UndoAndRedo from '../action-widget/button/undo-and-redo';
 import ZoomOutOutlinedIcon from '@mui/icons-material/ZoomOutOutlined';
 import ZoomInOutlinedIcon from '@mui/icons-material/ZoomInOutlined';
 import CenterFocusStrongOutlinedIcon from '@mui/icons-material/CenterFocusStrongOutlined';
@@ -131,7 +138,51 @@ export function buildVisualizationToolbarConfig(
       },
       disabled: () => !model?.isMapLoadded(),
     },
-    // Separator between zoom controls and save button
+    // Separator between zoom controls and undo/redo buttons
+    undefined as ActionConfig | undefined,
+    {
+      render: () => (
+        <UndoAndRedo
+          configuration={{
+            icon: <UndoOutlinedIcon />,
+            tooltip: formatTooltip(
+              intl.formatMessage({ id: 'appbar.tooltip-undo', defaultMessage: 'Undo' }),
+              'Z',
+            ),
+            onClick: () => {
+              trackEditorInteraction('undo');
+              model.getDesigner().undo();
+            },
+          }}
+          disabledCondition={(event) => event.undoSteps > 0}
+          model={model}
+        />
+      ),
+      visible: !capability.isHidden('undo-changes'),
+      disabled: () => !model?.isMapLoadded(),
+    },
+    {
+      render: () => (
+        <UndoAndRedo
+          configuration={{
+            icon: <RedoOutlinedIcon />,
+            tooltip: formatTooltip(
+              intl.formatMessage({ id: 'appbar.tooltip-redo', defaultMessage: 'Redo' }),
+              'Shift + Z',
+            ),
+            onClick: () => {
+              trackEditorInteraction('redo');
+              model.getDesigner().redo();
+            },
+          }}
+          disabledCondition={(event) => event.redoSteps > 0}
+          model={model}
+        />
+      ),
+      visible: !capability.isHidden('redo-changes'),
+      disabled: () => !model?.isMapLoadded(),
+    },
+    // Separator between undo/redo and save button
     undefined as ActionConfig | undefined,
     {
       icon: <SaveOutlinedIcon />,
@@ -155,7 +206,64 @@ export function buildVisualizationToolbarConfig(
       visible: !capability.isHidden('save'),
       disabled: () => !model?.isMapLoadded(),
     },
-    // Separator between save button and outline view
+    // Separator between save button and theme button
+    undefined as ActionConfig | undefined,
+    {
+      icon: <PaletteOutlinedIcon />,
+      tooltip: intl.formatMessage({ id: 'appbar.tooltip-theme', defaultMessage: 'Theme' }),
+      options: [
+        {
+          render: (closeModal) => {
+            if (model) {
+              const modelBuilder = new NodePropertyValueModelBuilder(model.getDesigner());
+              return (
+                <ThemeEditor closeModal={closeModal} themeModel={modelBuilder.getThemeModel()} />
+              );
+            }
+            return <div>Theme Editor not available</div>;
+          },
+        },
+      ],
+      visible: !capability.isHidden('theme'),
+      disabled: () => !model?.isMapLoadded(),
+    },
+    {
+      icon: <AccountTreeIcon />,
+      tooltip: intl.formatMessage({ id: 'appbar.tooltip-change-layout', defaultMessage: 'Layout' }),
+      options: [
+        {
+          render: (closeModal) => {
+            if (model) {
+              const modelBuilder = new NodePropertyValueModelBuilder(model.getDesigner());
+              return (
+                <LayoutSelector
+                  closeModal={closeModal}
+                  layoutModel={modelBuilder.getLayoutModel()}
+                  model={model}
+                />
+              );
+            }
+            return <div>Layout Selector not available</div>;
+          },
+        },
+      ],
+      visible: !capability.isHidden('layout'),
+      disabled: () => !model?.isMapLoadded(),
+    },
+    {
+      icon: <SettingsIcon />,
+      tooltip: intl.formatMessage({
+        id: 'appbar.tooltip-settings',
+        defaultMessage: 'Settings',
+      }),
+      options: [
+        {
+          render: (closeModal) => <SettingsDialog open={true} onClose={closeModal} />,
+        },
+      ],
+      visible: !capability.isHidden('settings'),
+    },
+    // Separator between theme/layout/settings and outline view
     undefined as ActionConfig | undefined,
     {
       icon: <TocOutlinedIcon />,
@@ -350,6 +458,18 @@ const VisualizationToolbar = ({ model, capability }: VisualizationToolbarProps):
             console.error('Save failed from keyboard shortcut:', error);
           });
           trackEditorInteraction('save_keyboard');
+          break;
+        case 'z':
+          event.preventDefault();
+          if (event.shiftKey) {
+            // Redo
+            model.getDesigner().redo();
+            trackEditorInteraction('redo_keyboard');
+          } else {
+            // Undo
+            model.getDesigner().undo();
+            trackEditorInteraction('undo_keyboard');
+          }
           break;
         case 'e':
           event.preventDefault();
