@@ -24,6 +24,7 @@ import ActionDispatcher from './ActionDispatcher';
 import EventDispatcher from './EventDispatcher';
 import LayoutEventBus from './layout/LayoutEventBus';
 import Topic from './Topic';
+import TextOperationManager from './util/TextOperationManager';
 
 type EditorEventType = 'input';
 
@@ -87,13 +88,62 @@ class EditorComponent extends EventDispatcher<EditorEventType> {
   private registerEvents(containerElem: HTMLElement): void {
     const textareaElem = this.getTextareaElem();
     EventManager.bind(textareaElem, 'keydown', (event: Event) => {
-      switch ((event as KeyboardEvent).code) {
+      const keyboardEvent = event as KeyboardEvent;
+      
+      // Check for text operation shortcuts and handle them with custom implementation
+      if (keyboardEvent.ctrlKey || keyboardEvent.metaKey) {
+        switch (keyboardEvent.key.toLowerCase()) {
+          case 'c':
+            // Handle custom copy
+            if (TextOperationManager.performCopy()) {
+              event.preventDefault();
+              event.stopPropagation();
+              return;
+            }
+            break;
+          case 'v':
+            // Handle custom paste
+            if (TextOperationManager.performPaste()) {
+              event.preventDefault();
+              event.stopPropagation();
+              // Update the topic text and resize after paste
+              const newText = this.getTextAreaText();
+              this._topic.setText(newText);
+              this.resize(newText);
+              this.fireEvent('input', [event, newText]);
+              return;
+            }
+            break;
+          case 'a':
+            // Handle custom select all
+            if (TextOperationManager.performSelectAll()) {
+              event.preventDefault();
+              event.stopPropagation();
+              return;
+            }
+            break;
+          case 'x':
+            // Handle custom cut
+            if (TextOperationManager.performCut()) {
+              event.preventDefault();
+              event.stopPropagation();
+              // Update the topic text and resize after cut
+              const newText = this.getTextAreaText();
+              this._topic.setText(newText);
+              this.resize(newText);
+              this.fireEvent('input', [event, newText]);
+              return;
+            }
+            break;
+        }
+      }
+      
+      switch (keyboardEvent.code) {
         case 'Escape':
           // Revert to previous text ...
           this.close(false);
           break;
         case 'Enter': {
-          const keyboardEvent = event as KeyboardEvent;
           if (keyboardEvent.metaKey || keyboardEvent.ctrlKey) {
             keyboardEvent.preventDefault();
 

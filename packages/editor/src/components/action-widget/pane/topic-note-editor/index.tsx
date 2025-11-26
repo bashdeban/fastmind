@@ -16,10 +16,11 @@
  *   limitations under the License.
  */
 import Box from '@mui/material/Box';
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useState, useEffect, useRef } from 'react';
 import NodeProperty from '../../../../classes/model/node-property';
 import Input from '../../input';
 import SaveAndDelete from '../save-and-delete';
+import TextOperationManager from '../../../../../../mindplot/src/components/util/TextOperationManager';
 
 type TexttNodeEditorProps = {
   closeModal: () => void;
@@ -32,6 +33,7 @@ type TexttNodeEditorProps = {
 const TopicNoteEditor = ({ closeModal, noteModel }: TexttNodeEditorProps): ReactElement => {
   const value = noteModel.getValue();
   const [note, setNote] = useState(value);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const submitHandler = () => {
     closeModal();
@@ -40,9 +42,74 @@ const TopicNoteEditor = ({ closeModal, noteModel }: TexttNodeEditorProps): React
     }
   };
 
+  // Handle keyboard events for custom text operations
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Check for text operation shortcuts and handle them with custom implementation
+      if (event.ctrlKey || event.metaKey) {
+        switch (event.key.toLowerCase()) {
+          case 'c':
+            // Handle custom copy
+            if (TextOperationManager.performCopy()) {
+              event.preventDefault();
+              event.stopPropagation();
+              return;
+            }
+            break;
+          case 'v':
+            // Handle custom paste
+            if (TextOperationManager.performPaste()) {
+              event.preventDefault();
+              event.stopPropagation();
+              // Update the note state after paste
+              setTimeout(() => {
+                if (inputRef.current) {
+                  setNote(inputRef.current.value);
+                }
+              }, 0);
+              return;
+            }
+            break;
+          case 'a':
+            // Handle custom select all
+            if (TextOperationManager.performSelectAll()) {
+              event.preventDefault();
+              event.stopPropagation();
+              return;
+            }
+            break;
+          case 'x':
+            // Handle custom cut
+            if (TextOperationManager.performCut()) {
+              event.preventDefault();
+              event.stopPropagation();
+              // Update the note state after cut
+              setTimeout(() => {
+                if (inputRef.current) {
+                  setNote(inputRef.current.value);
+                }
+              }, 0);
+              return;
+            }
+            break;
+        }
+      }
+    };
+
+    const inputElement = inputRef.current;
+    if (inputElement) {
+      inputElement.addEventListener('keydown', handleKeyDown);
+      
+      return () => {
+        inputElement.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+  }, [note]);
+
   return (
     <Box sx={{ px: 2, pb: 2, width: '300px' }}>
       <Input
+        inputRef={inputRef}
         autoFocus
         multiline
         variant="outlined"

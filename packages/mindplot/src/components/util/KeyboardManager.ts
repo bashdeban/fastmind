@@ -20,13 +20,15 @@
  * Keyboard shortcut manager to replace jQuery hotkeys plugin
  * Handles complex key combinations and cross-browser compatibility
  */
+import TextOperationManager from './TextOperationManager';
+
 class KeyboardManager {
   private static shortcuts: Map<string, () => void> = new Map();
 
   private static initialized = false;
 
   /**
-   * Initialize the keyboard manager
+   * Initialize keyboard manager
    */
   private static init(): void {
     if (this.initialized) return;
@@ -66,13 +68,44 @@ class KeyboardManager {
    * Handle keydown events
    */
   private static handleKeyDown(event: KeyboardEvent): void {
-    // Skip keyboard shortcuts if user is typing in an input field or contentEditable element
+    const pressedShortcut = this.getEventShortcut(event);
+    const callback = this.shortcuts.get(pressedShortcut);
+
+    // Special handling for text operation shortcuts
+    if (this.isTextOperationShortcut(pressedShortcut)) {
+      // Check if we should handle text operations with our custom implementation
+      if (TextOperationManager.isInTextEditingContext()) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        console.log(`[KeyboardManager] Handling custom text operation for: ${pressedShortcut}`);
+        
+        // Execute custom text operation
+        let operationHandled = false;
+        switch (pressedShortcut) {
+          case 'ctrl+c':
+            operationHandled = TextOperationManager.performCopy();
+            break;
+          case 'ctrl+v':
+            operationHandled = TextOperationManager.performPaste();
+            break;
+          case 'ctrl+a':
+            operationHandled = TextOperationManager.performSelectAll();
+            break;
+        }
+        
+        if (!operationHandled) {
+          console.warn(`[KeyboardManager] Failed to handle text operation: ${pressedShortcut}`);
+        }
+        
+        return;
+      }
+    }
+
+    // Skip other keyboard shortcuts if user is typing in an input field or contentEditable element
     if (this.isTypingInInputField()) {
       return;
     }
-
-    const pressedShortcut = this.getEventShortcut(event);
-    const callback = this.shortcuts.get(pressedShortcut);
 
     if (callback) {
       event.preventDefault();
@@ -82,7 +115,7 @@ class KeyboardManager {
   }
 
   /**
-   * Check if the user is currently typing in an input field or contentEditable element
+   * Check if user is currently typing in an input field or contentEditable element
    */
   private static isTypingInInputField(): boolean {
     const { activeElement } = document;
@@ -220,6 +253,14 @@ class KeyboardManager {
    */
   static clearAll(): void {
     this.shortcuts.clear();
+  }
+
+  /**
+   * Check if a shortcut is a text operation shortcut (copy/paste/select all)
+   */
+  private static isTextOperationShortcut(shortcut: string): boolean {
+    const textOperations = ['ctrl+c', 'ctrl+v', 'ctrl+a'];
+    return textOperations.includes(shortcut);
   }
 
   /**
