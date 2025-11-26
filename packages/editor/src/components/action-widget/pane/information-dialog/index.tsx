@@ -64,7 +64,7 @@ const InformationDialog = ({ open, onClose }: InformationDialogProps): React.Rea
         <Typography variant="body2" paragraph sx={{ lineHeight: 1.6 }}>
           {intl.formatMessage({
             id: 'information-dialog.fastmind-description',
-            defaultMessage: 'FastMind 是一个基于 WiseMapping 的 VS Code 扩展，为开发者提供强大的思维导图编辑功能。它集成了 AI 主题生成、实时协作、多种布局选项等先进功能，帮助开发者更好地组织和可视化他们的想法。',
+            defaultMessage: 'FastMind is a VS Code extension based on WiseMapping that provides powerful mind mapping capabilities for developers. It integrates AI-driven topic generation, OpenAI API compatible model integration, AI-generated content intelligent deduplication, VS Code native file system integration, and other advanced features to help developers better organize and visualize their ideas.',
           })}
         </Typography>
 
@@ -72,32 +72,32 @@ const InformationDialog = ({ open, onClose }: InformationDialogProps): React.Rea
         <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold' }}>
           {intl.formatMessage({
             id: 'information-dialog.features-title',
-            defaultMessage: '主要功能：',
+            defaultMessage: 'Key Features:',
           })}
         </Typography>
         <Box component="ul" sx={{ pl: 2, mb: 2 }}>
           <Typography component="li" variant="body2" sx={{ mb: 1 }}>
             {intl.formatMessage({
               id: 'information-dialog.feature-ai',
-              defaultMessage: 'AI 驱动的主题生成',
+              defaultMessage: 'AI-driven topic generation',
             })}
           </Typography>
           <Typography component="li" variant="body2" sx={{ mb: 1 }}>
             {intl.formatMessage({
               id: 'information-dialog.feature-api-integration',
-              defaultMessage: '兼容OpenAI API规范的模型接入',
+              defaultMessage: 'OpenAI API compatible model integration',
             })}
           </Typography>
           <Typography component="li" variant="body2" sx={{ mb: 1 }}>
             {intl.formatMessage({
               id: 'information-dialog.feature-deduplication',
-              defaultMessage: 'AI生成内容智能去重',
+              defaultMessage: 'AI-generated content intelligent deduplication',
             })}
           </Typography>
           <Typography component="li" variant="body2" sx={{ mb: 1 }}>
             {intl.formatMessage({
               id: 'information-dialog.feature-vscode-integration',
-              defaultMessage: 'VS Code原生文件系统集成',
+              defaultMessage: 'VS Code native file system integration',
             })}
           </Typography>
         </Box>

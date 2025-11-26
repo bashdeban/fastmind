@@ -69,7 +69,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
       // Clear results and errors when dialog opens
       setResult('');
       setError('');
-      
+
       if (initialConfig) {
         setApiUrl(initialConfig.apiUrl);
         setModelName(initialConfig.modelName);
@@ -227,7 +227,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
                   fullWidth
                   size="small"
                   multiline
-                  rows={3}
+                  rows={2}
                   placeholder="Enter your test prompt here..."
                 />
                 <Box sx={{ display: 'flex', gap: 2 }}>
@@ -252,6 +252,30 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
                 </Box>
               </Box>
             </Paper>
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, p: 1 }}>
+              <Button
+                variant="contained"
+                onClick={testLangChainConnection}
+                disabled={isLoading}
+                sx={{ mr: 2 }}
+              >
+                {isLoading ? (
+                  <>
+                    <CircularProgress size={20} sx={{ mr: 1 }} />
+                    Testing...
+                  </>
+                ) : (
+                  'Test LLM Connection'
+                )}
+              </Button>
+              <Button
+                variant="outlined"
+                onClick={handleSaveConfig}
+                disabled={isLoading}
+              >
+                Save Configuration
+              </Button>
+            </Box>
           </ConfigurationSection>
           <ResultSection>
             {error && (
@@ -262,7 +286,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
 
             {result && (
               <Box>
-                <Typography variant="subtitle2" gutterBottom>
+                <Typography variant="body2" gutterBottom>
                   Response:
                 </Typography>
                 <ResponseBox>
@@ -275,28 +299,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
       </StyledDialogContent>
 
       <DialogActions>
-        <Button
-          variant="contained"
-          onClick={testLangChainConnection}
-          disabled={isLoading}
-          sx={{ mr: 2 }}
-        >
-          {isLoading ? (
-            <>
-              <CircularProgress size={20} sx={{ mr: 1 }} />
-              Testing...
-            </>
-          ) : (
-            'Test LLM Connection'
-          )}
-        </Button>
-        <Button
-          variant="outlined"
-          onClick={handleSaveConfig}
-          disabled={isLoading}
-        >
-          Save Configuration
-        </Button>
+
       </DialogActions>
     </Dialog>
   );

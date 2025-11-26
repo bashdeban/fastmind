@@ -63,7 +63,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
       setExportSuccess(
         intl.formatMessage({
           id: 'export.dialog.clipboard-success',
-          defaultMessage: '内容已复制到剪贴板！',
+          defaultMessage: 'Content copied to clipboard!',
         })
       );
       // Don't close dialog to show success message
@@ -74,7 +74,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
           ? error.message 
           : intl.formatMessage({
               id: 'export.dialog.error-generic',
-              defaultMessage: '导出失败，请稍后重试。',
+              defaultMessage: 'Export failed, please try again later.',
             })
       );
     } finally {
@@ -106,7 +106,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
       <DialogTitle>
         {intl.formatMessage({
           id: 'export.dialog.title',
-          defaultMessage: '导出思维导图',
+          defaultMessage: 'Export Mindmap',
         })}
       </DialogTitle>
 
@@ -144,7 +144,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
         >
           {intl.formatMessage({
             id: 'export.dialog.cancel',
-            defaultMessage: '取消',
+            defaultMessage: 'Cancel',
           })}
         </Button>
         
@@ -157,11 +157,11 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
           {isExporting
             ? intl.formatMessage({
                 id: 'export.dialog.exporting',
-                defaultMessage: '导出中...',
+                defaultMessage: 'Exporting...',
               })
             : intl.formatMessage({
                 id: 'export.dialog.export',
-                defaultMessage: '导出',
+                defaultMessage: 'Export',
               })
           }
         </Button>

@@ -19,6 +19,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { useIntl } from 'react-intl';
 import { ExportFormat, ExportFormatInfo } from './types';
 
 interface ExportFormatSelectorProps {
@@ -26,40 +27,50 @@ interface ExportFormatSelectorProps {
   onFormatChange: (format: ExportFormat) => void;
 }
 
-export const EXPORT_FORMATS: ExportFormatInfo[] = [
-  {
-    id: 'svg',
-    name: 'SVG',
-    description: 'Scalable Vector Graphics - 矢量图形，可无限缩放，文件小',
-    extension: 'svg',
-    category: 'image',
-    recommended: true,
-  },
-  {
-    id: 'wxml',
-    name: 'WiseMapping XML',
-    description: 'WiseMapping 原生格式 - 保留所有编辑功能，可重新导入编辑',
-    extension: 'wxml',
-    category: 'text',
-    recommended: true,
-  },
-  {
-    id: 'md',
-    name: 'Markdown',
-    description: 'Markdown 格式 - 适合文档编写和版本控制，支持 GitHub 等平台',
-    extension: 'md',
-    category: 'text',
-  },
-];
-
 const ExportFormatSelector: React.FC<ExportFormatSelectorProps> = ({
   selectedFormat,
   onFormatChange,
 }) => {
+  const intl = useIntl();
+
+  const exportFormats: ExportFormatInfo[] = [
+    {
+      id: 'svg',
+      name: 'SVG',
+      description: intl.formatMessage({
+        id: 'export.format.svg.description',
+        defaultMessage: 'Scalable Vector Graphics - Vector graphics, infinitely scalable, small file size',
+      }),
+      extension: 'svg',
+      category: 'image',
+      recommended: true,
+    },
+    {
+      id: 'wxml',
+      name: 'WiseMapping XML',
+      description: intl.formatMessage({
+        id: 'export.format.wxml.description',
+        defaultMessage: 'WiseMapping XML - Native format, retains all editing features, can be re-imported for editing',
+      }),
+      extension: 'wxml',
+      category: 'text',
+      recommended: true,
+    },
+    {
+      id: 'md',
+      name: 'Markdown',
+      description: intl.formatMessage({
+        id: 'export.format.md.description',
+        defaultMessage: 'Markdown format - Suitable for document writing and version control, supports GitHub and other platforms',
+      }),
+      extension: 'md',
+      category: 'text',
+    },
+  ];
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-      {EXPORT_FORMATS.map((format) => (
+      {exportFormats.map((format) => (
         <Card
           key={format.id}
           sx={{
@@ -97,7 +108,10 @@ const ExportFormatSelector: React.FC<ExportFormatSelectorProps> = ({
                     ml: 1,
                   }}
                 >
-                  推荐
+                  {intl.formatMessage({
+                    id: 'export.format.recommended',
+                    defaultMessage: 'Recommended',
+                  })}
                 </Typography>
               )}
             </Typography>
