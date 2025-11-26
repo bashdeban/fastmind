@@ -47,11 +47,15 @@ import CenterFocusStrongOutlinedIcon from '@mui/icons-material/CenterFocusStrong
 import UnfoldLessIcon from '@mui/icons-material/UnfoldLess';
 import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import TocOutlinedIcon from '@mui/icons-material/TocOutlined';
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import Box from '@mui/material/Box';
 import { trackEditorInteraction } from '../../utils/analytics';
-import { handleExpandByLevel, buildExpandByLevelConfig } from './expand-by-level-icon';
+import { buildExpandByLevelConfig } from './expand-by-level-icon';
 import { formatTooltip } from './utils';
 import { useTheme } from '../../contexts/ThemeContext';
+import ExportDialog from '../action-widget/pane/export-dialog';
+import { ExportOptions } from '../action-widget/pane/export-dialog/types';
+import { createExportService } from '../../services/export-service';
 
 // Helper function to check if any nodes are currently collapsed
 const areNodesCollapsed = (model: Editor): boolean => {
@@ -306,7 +310,54 @@ export function buildVisualizationToolbarConfig(
       visible: !capability.isHidden('save'),
       disabled: () => !model?.isMapLoadded(),
     },
-    // Separator between save button and theme button
+    // Export button
+    {
+      icon: <FileDownloadIcon />,
+      tooltip: formatTooltip(
+        intl.formatMessage({
+          id: 'visualization-toolbar.tooltip-export',
+          defaultMessage: 'Export',
+        }),
+        'E',
+      ),
+      ariaLabel: intl.formatMessage({
+        id: 'visualization-toolbar.tooltip-export',
+        defaultMessage: 'Export',
+      }),
+      onClick: () => trackEditorInteraction('export'),
+      options: [
+        {
+          render: (closeModal) => {
+            if (model) {
+              const exportService = createExportService(model.getDesigner());
+              const mindmapTitle = model.getDesigner()?.getMindmap()?.getId() || 'mindmap';
+              
+              const handleExport = async (options: ExportOptions) => {
+                try {
+                  await exportService.export(options);
+                } catch (error) {
+                  console.error('Export failed:', error);
+                  throw error;
+                }
+              };
+
+              return (
+                <ExportDialog
+                  open={true}
+                  onClose={closeModal}
+                  onExport={handleExport}
+                  mindmapTitle={mindmapTitle}
+                />
+              );
+            }
+            return <div>Export not available</div>;
+          },
+        },
+      ],
+      visible: !capability.isHidden('export'),
+      disabled: () => !model?.isMapLoadded(),
+    },
+    // Separator between export button and theme button
     undefined as ActionConfig | undefined,
     {
       icon: <PaletteOutlinedIcon />,
@@ -499,9 +550,8 @@ const VisualizationToolbar = ({ model, capability }: VisualizationToolbarProps):
               trackEditorInteraction('collapse_all_keyboard');
             }
           } else {
-            // Expand by level
-            handleExpandByLevel(model, expandLevel, setExpandLevel);
-            trackEditorInteraction('expand_by_level_keyboard');
+            // Export functionality would be handled by toolbar button
+            trackEditorInteraction('export_keyboard');
           }
           break;
       }

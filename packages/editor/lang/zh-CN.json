@@ -763,5 +763,95 @@
   },
   "visualization-toolbar.tooltip-info": {
     "defaultMessage": "信息"
+  },
+  "visualization-toolbar.tooltip-export": {
+    "defaultMessage": "导出"
+  },
+  "export.dialog.title": {
+    "defaultMessage": "导出思维导图"
+  },
+  "export.dialog.select-format": {
+    "defaultMessage": "选择导出格式"
+  },
+  "export.dialog.image-formats": {
+    "defaultMessage": "图像格式"
+  },
+  "export.dialog.text-formats": {
+    "defaultMessage": "文本/数据格式"
+  },
+  "export.dialog.filename-label": {
+    "defaultMessage": "文件名"
+  },
+  "export.dialog.export-button": {
+    "defaultMessage": "导出"
+  },
+  "export.dialog.cancel-button": {
+    "defaultMessage": "取消"
+  },
+  "export.dialog.success-message": {
+    "defaultMessage": "导出成功！"
+  },
+  "export.dialog.error-title": {
+    "defaultMessage": "导出失败"
+  },
+  "export.dialog.exporting": {
+    "defaultMessage": "正在导出..."
+  },
+  "export.dialog.options": {
+    "defaultMessage": "导出选项"
+  },
+  "export.dialog.filename": {
+    "defaultMessage": "文件名"
+  },
+  "export.dialog.filename-placeholder": {
+    "defaultMessage": "mindmap"
+  },
+  "export.dialog.scale": {
+    "defaultMessage": "缩放比例"
+  },
+  "export.dialog.quality": {
+    "defaultMessage": "图片质量"
+  },
+  "export.dialog.include-watermark": {
+    "defaultMessage": "包含水印"
+  },
+  "export.dialog.copy-to-clipboard": {
+    "defaultMessage": "复制到剪贴板"
+  },
+  "export.dialog.clipboard-note": {
+    "defaultMessage": "直接复制 PNG 图片到剪贴板，可以粘贴到其他应用程序中。不会下载文件。"
+  },
+  "export.dialog.clipboard-not-supported": {
+    "defaultMessage": "剪贴板功能在此浏览器中不受支持。请使用下载功能或升级到最新版本的现代浏览器。"
+  },
+  "export.dialog.note-svg": {
+    "defaultMessage": "SVG 格式保持矢量质量，可以无限放大而不失真，适合打印和高质量展示。"
+  },
+  "export.dialog.note-jpg": {
+    "defaultMessage": "JPG 格式文件较小，适合分享和存储，但不支持透明背景。"
+  },
+  "export.dialog.note-pdf": {
+    "defaultMessage": "PDF 格式适合打印和正式文档分享，保持高质量输出。"
+  },
+  "export.dialog.note-wxml": {
+    "defaultMessage": "WiseMapping 原生格式，保留所有编辑功能，可以重新导入编辑。"
+  },
+  "export.dialog.note-txt": {
+    "defaultMessage": "纯文本格式仅包含文本内容，兼容性最好，适合简单记录。"
+  },
+  "export.dialog.note-md": {
+    "defaultMessage": "Markdown 格式适合技术文档编写，支持 GitHub 等平台直接预览。"
+  },
+  "export.dialog.note-mm": {
+    "defaultMessage": "FreeMind 格式，可以在 FreeMind 和其他兼容的思维导图工具中打开。"
+  },
+  "export.dialog.note-mmx": {
+    "defaultMessage": "Freeplane 格式，功能更强大的思维导图工具格式，支持更多高级特性。"
+  },
+  "export.dialog.clipboard-success": {
+    "defaultMessage": "图片已复制到剪贴板！"
+  },
+  "export.dialog.clipboard-error": {
+    "defaultMessage": "复制到剪贴板失败"
   }
 }

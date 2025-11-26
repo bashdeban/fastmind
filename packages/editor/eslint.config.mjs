@@ -73,6 +73,7 @@ export default defineConfig([globalIgnores(["**/dist/**/*"]), {
         "@typescript-eslint/no-unused-vars": "error",
         "react-hooks/rules-of-hooks": "off",
         "react-hooks/exhaustive-deps": "off",
+        "react/prop-types": "off", // Disabled for TypeScript projects
 
         "no-restricted-imports": ["error", {
             patterns: ["@mui/*/*/*", "!@mui/material/test-utils/*"],
