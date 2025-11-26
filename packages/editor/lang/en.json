@@ -5,6 +5,9 @@
   "action.delete": {
     "defaultMessage": "Delete"
   },
+  "action.cancel": {
+    "defaultMessage": "Cancel"
+  },
   "appbar.back-to-map-list": {
     "defaultMessage": "Back to maps list"
   },
@@ -183,7 +186,7 @@
     "defaultMessage": "Limited mindmap edition capabilities are supported in Mobile devices. Use Desktop browser for full editor capabilities."
   },
   "editor.try-welcome": {
-    "defaultMessage": "This edition space showcases some of the mindmap editor capabilities!"
+    "defaultMessage": "This edition space showcases some of mindmap editor capabilities!"
   },
   "editor.try-welcome-description": {
     "defaultMessage": "Sign Up to start creating, sharing and publishing unlimited number of mindmaps for free."
@@ -192,7 +195,7 @@
     "defaultMessage": "Sign Up to start creating, sharing and publishing unlimited number of mindmaps for free. Limited mindmap edition capabilties are supported in Mobile devices. Use Desktop browser for full editor capabilies."
   },
   "editor.try-welcome-mobile": {
-    "defaultMessage": "This edition space showcases some of the mindmap editor capabilities!"
+    "defaultMessage": "This edition space showcases some of mindmap editor capabilities!"
   },
   "icon-picker.show-images": {
     "defaultMessage": "Show images"
@@ -654,7 +657,7 @@
     "defaultMessage": "Multi-segment line with smooth corners - Best for structured layouts and clear paths"
   },
   "icon-collection.connection.default-tooltip": {
-    "defaultMessage": "Default - Connection style will be automatically selected based on the theme"
+    "defaultMessage": "Default - Connection style will be automatically selected based on theme"
   },
   "icon-picker.emojis": {
     "defaultMessage": "Emojis"
@@ -693,7 +696,7 @@
     "defaultMessage": "Cancel"
   },
   "theme-editor.description": {
-    "defaultMessage": "A theme defines the visual style of your mind map, including colors, fonts, and overall appearance. Choose a theme that best fits your content and audience."
+    "defaultMessage": "A theme defines visual style of your mind map, including colors, fonts, and overall appearance. Choose a theme that best fits your content and audience."
   },
   "theme-editor.title": {
     "defaultMessage": "Choose Theme"
@@ -747,7 +750,7 @@
     "defaultMessage": "Background Style"
   },
   "canvas-style.pattern-default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+    "defaultMessage": "Default - All styles will be automatically selected based on theme"
   },
   "icon-collection.shape.default": {
     "defaultMessage": "Default"
@@ -759,7 +762,7 @@
     "defaultMessage": "Default"
   },
   "icon-collection.default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+    "defaultMessage": "Default - All styles will be automatically selected based on theme"
   },
   "unified-styling.shape-type": {
     "defaultMessage": "Shape Type"
@@ -805,5 +808,86 @@
   },
   "visualization-toolbar.tooltip-info": {
     "defaultMessage": "Information"
+  },
+  "llm-notification.status.completed": {
+    "defaultMessage": "Completed"
+  },
+  "llm-notification.status.error": {
+    "defaultMessage": "Failed"
+  },
+  "ai-topic-generator.title": {
+    "defaultMessage": "AI Topic Generator"
+  },
+  "ai-topic-generator.description": {
+    "defaultMessage": "Generate related subtopics based on <strong>{topicText}</strong>"
+  },
+  "ai-topic-generator.count-label": {
+    "defaultMessage": "Number of topics to generate: {count}"
+  },
+  "ai-topic-generator.custom-prompt-label": {
+    "defaultMessage": "Custom Prompt (Optional)"
+  },
+  "ai-topic-generator.custom-prompt-placeholder": {
+    "defaultMessage": "e.g.: Focus on technical implementation aspects"
+  },
+  "ai-topic-generator.custom-prompt-helper": {
+    "defaultMessage": "Provide additional context or requirements for AI generation"
+  },
+  "ai-topic-generator.generating": {
+    "defaultMessage": "Generating topics, please wait..."
+  },
+  "ai-topic-generator.preview-title": {
+    "defaultMessage": "Generated topics preview:"
+  },
+  "ai-topic-generator.cancel": {
+    "defaultMessage": "Cancel"
+  },
+  "ai-topic-generator.generate": {
+    "defaultMessage": "Generate Topics"
+  },
+  "ai-topic-generator.generating-button": {
+    "defaultMessage": "Generating..."
+  },
+  "ai-topic-generator.regenerate": {
+    "defaultMessage": "Regenerate"
+  },
+  "ai-topic-generator.add-to-mindmap": {
+    "defaultMessage": "Add to Mindmap"
+  },
+  "ai-topic-generator.error-generate": {
+    "defaultMessage": "Error occurred while generating topics"
+  },
+  "ai-topic-generator.error-add": {
+    "defaultMessage": "Error occurred while adding topics"
+  },
+  "settings.title": {
+    "defaultMessage": "Settings"
+  },
+  "settings.description": {
+    "defaultMessage": "Configure AI model settings and customize prompts for topic generation and concept explanation."
+  },
+  "settings.current-model": {
+    "defaultMessage": "Current Model: {modelName}"
+  },
+  "settings.no-model": {
+    "defaultMessage": "No model configured"
+  },
+  "settings.model-api-management": {
+    "defaultMessage": "Model API Management"
+  },
+  "settings.ai-topic-generator-title": {
+    "defaultMessage": "AI Topic Generator with User-Defined Prompts"
+  },
+  "settings.deduplication": {
+    "defaultMessage": "Deduplication"
+  },
+  "settings.topic-generator-placeholder": {
+    "defaultMessage": "Enter custom prompt for topic generation..."
+  },
+  "settings.ai-explainer-title": {
+    "defaultMessage": "AI Explainer with User-Defined Prompts"
+  },
+  "settings.explainer-placeholder": {
+    "defaultMessage": "Enter custom prompt for concept explanation..."
   }
 }

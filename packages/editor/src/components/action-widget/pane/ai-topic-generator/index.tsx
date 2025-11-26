@@ -2,7 +2,7 @@
  *    Copyright [2007-2025] [wisemapping]
  *
  *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
- *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   It is basically Apache License, Version 2.0 (the "License") plus the
  *   "powered by wisemapping" text requirement on every single page;
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the license at
@@ -36,6 +36,7 @@ import {
 import IconButton from '@mui/material/IconButton';
 import { aiTopicGeneratorService, type AITopicGeneratorOptions } from '../../../../services/ai-topic-generator';
 import { SettingsManager } from '../../../../services/settings/config';
+import { useIntl } from 'react-intl';
 import type { AITopicGeneratorProps } from './types';
 
 const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
@@ -44,6 +45,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
   parentTopicId,
   designer,
 }) => {
+  const intl = useIntl();
   const [options, setOptions] = useState<AITopicGeneratorOptions>({
     count: 5,
     customPrompt: '',
@@ -80,7 +82,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
       const topics = await aiTopicGeneratorService.generateTopics(selectedTopicText, mergedOptions);
       setGeneratedTopics(topics.map(topic => topic.text));
     } catch (err) {
-      setError(err instanceof Error ? err.message : '生成主题时发生错误');
+      setError(err instanceof Error ? err.message : intl.formatMessage({ id: 'ai-topic-generator.error-generate', defaultMessage: 'Error occurred while generating topics' }));
     } finally {
       setIsGenerating(false);
     }
@@ -97,7 +99,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
         parentTopicId,
       );
 
-      // Add topics to the mindmap one by one using action dispatcher
+      // Add topics to mindmap one by one using action dispatcher
       for (const topicModel of topicModels) {
         designer.getActionDispatcher().addTopics([topicModel], [parentTopicId]);
       }
@@ -105,7 +107,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
       // Close modal after successful addition
       closeModal();
     } catch (err) {
-      setError(err instanceof Error ? err.message : '添加主题时发生错误');
+      setError(err instanceof Error ? err.message : intl.formatMessage({ id: 'ai-topic-generator.error-add', defaultMessage: 'Error occurred while adding topics' }));
     }
   };
 
@@ -117,7 +119,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
     <Dialog open maxWidth="md" fullWidth onClose={closeModal}>
       <DialogTitle sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
         <AIIcon color="primary" />
-        AI 主题生成器
+        {intl.formatMessage({ id: 'ai-topic-generator.title', defaultMessage: 'AI Topic Generator' })}
         <IconButton
           aria-label="close"
           onClick={closeModal}
@@ -130,13 +132,19 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
       <DialogContent dividers>
         <Box sx={{ mb: 3 }}>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-            基于主题 <strong>{selectedTopicText}</strong> 生成相关子主题
+            {intl.formatMessage(
+              { id: 'ai-topic-generator.description', defaultMessage: 'Generate related subtopics based on <strong>{topicText}</strong>' },
+              { topicText: selectedTopicText }
+            )}
           </Typography>
 
           {/* Topic Count Slider */}
           <Box sx={{ mb: 3 }}>
             <Typography variant="subtitle2" gutterBottom>
-              生成主题数量: {options.count}
+              {intl.formatMessage(
+                { id: 'ai-topic-generator.count-label', defaultMessage: 'Number of topics to generate: {count}' },
+                { count: options.count }
+              )}
             </Typography>
             <Slider
               value={options.count}
@@ -156,15 +164,15 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
           {/* Custom Prompt */}
           <Box sx={{ mb: 3 }}>
             <TextField
-              label="自定义提示 (可选)"
+              label={intl.formatMessage({ id: 'ai-topic-generator.custom-prompt-label', defaultMessage: 'Custom Prompt (Optional)' })}
               multiline
               rows={3}
               fullWidth
-              placeholder="例如：重点关注技术实现方面"
+              placeholder={intl.formatMessage({ id: 'ai-topic-generator.custom-prompt-placeholder', defaultMessage: 'e.g.: Focus on technical implementation aspects' })}
               value={options.customPrompt}
               onChange={handleCustomPromptChange}
               disabled={isGenerating}
-              helperText="为AI生成提供额外的上下文或要求"
+              helperText={intl.formatMessage({ id: 'ai-topic-generator.custom-prompt-helper', defaultMessage: 'Provide additional context or requirements for AI generation' })}
             />
           </Box>
         </Box>
@@ -181,7 +189,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
             <CircularProgress size={20} />
             <Typography variant="body2" color="text.secondary">
-              正在生成主题，请稍候...
+              {intl.formatMessage({ id: 'ai-topic-generator.generating', defaultMessage: 'Generating topics, please wait...' })}
             </Typography>
           </Box>
         )}
@@ -190,7 +198,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
         {generatedTopics.length > 0 && !isGenerating && (
           <Box>
             <Typography variant="subtitle2" gutterBottom>
-              生成的主题预览:
+              {intl.formatMessage({ id: 'ai-topic-generator.preview-title', defaultMessage: 'Generated topics preview:' })}
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               {generatedTopics.map((topic, index) => (
@@ -218,7 +226,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
         {generatedTopics.length === 0 ? (
           <>
             <Button onClick={closeModal} disabled={isGenerating}>
-              取消
+              {intl.formatMessage({ id: 'ai-topic-generator.cancel', defaultMessage: 'Cancel' })}
             </Button>
             <Button
               onClick={generateTopics}
@@ -226,16 +234,19 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
               disabled={isGenerating}
               startIcon={isGenerating ? <CircularProgress size={16} /> : <AIIcon />}
             >
-              {isGenerating ? '生成中...' : '生成主题'}
+              {intl.formatMessage({ 
+                id: isGenerating ? 'ai-topic-generator.generating-button' : 'ai-topic-generator.generate', 
+                defaultMessage: isGenerating ? 'Generating...' : 'Generate Topics' 
+              })}
             </Button>
           </>
         ) : (
           <>
             <Button onClick={regenerateTopics} disabled={isGenerating}>
-              重新生成
+              {intl.formatMessage({ id: 'ai-topic-generator.regenerate', defaultMessage: 'Regenerate' })}
             </Button>
             <Button onClick={closeModal} disabled={isGenerating}>
-              取消
+              {intl.formatMessage({ id: 'ai-topic-generator.cancel', defaultMessage: 'Cancel' })}
             </Button>
             <Button
               onClick={addTopicsToMap}
@@ -243,7 +254,7 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
               disabled={isGenerating}
               startIcon={<AIIcon />}
             >
-              添加到思维导图
+              {intl.formatMessage({ id: 'ai-topic-generator.add-to-mindmap', defaultMessage: 'Add to Mindmap' })}
             </Button>
           </>
         )}

@@ -2,7 +2,7 @@
  *    Copyright [2007-2025] [wisemapping]
  *
  *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
- *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   It is basically Apache License, Version 2.0 (the "License") plus the
  *   "powered by wisemapping" text requirement on every single page;
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the license at
@@ -27,6 +27,7 @@ import Box from '@mui/material/Box';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import ManageIcon from '@mui/icons-material/ManageAccounts';
+import { useIntl } from 'react-intl';
 import ModelApiManagement from '../model-api-management';
 import { LLMConfigManager } from '../../../../services/llm/config';
 import { SettingsManager } from '../../../../services/settings/config';
@@ -41,6 +42,7 @@ interface SettingsDialogProps {
 }
 
 const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElement => {
+  const intl = useIntl();
   const [showModelApiManagement, setShowModelApiManagement] = useState(false);
   const [currentConfig, setCurrentConfig] = useState<LLMConfig | null>(null);
 
@@ -108,19 +110,25 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
         }}
       >
         <DialogTitle>
-          Settings
+          {intl.formatMessage({ id: 'settings.title', defaultMessage: 'Settings' })}
         </DialogTitle>
 
         <StyledDialogContent>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 3, lineHeight: 1.4 }}>
-            Configure AI model settings and customize prompts for topic generation and concept explanation.
+            {intl.formatMessage({ 
+              id: 'settings.description', 
+              defaultMessage: 'Configure AI model settings and customize prompts for topic generation and concept explanation.' 
+            })}
           </Typography>
 
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             {/* LLM Configuration */}
             <Box>
               <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
-                Current Model: {currentConfig?.modelName || 'No model configured'}
+                {intl.formatMessage({ 
+                  id: 'settings.current-model', 
+                  defaultMessage: 'Current Model: {modelName}' 
+                }, { modelName: currentConfig?.modelName || intl.formatMessage({ id: 'settings.no-model', defaultMessage: 'No model configured' }) })}
               </Typography>
               <Button
                 variant="outlined"
@@ -129,7 +137,7 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
                 size="small"
                 fullWidth
               >
-                Model API Management
+                {intl.formatMessage({ id: 'settings.model-api-management', defaultMessage: 'Model API Management' })}
               </Button>
             </Box>
 
@@ -137,7 +145,7 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
             <Box>
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
                 <Typography variant="subtitle2" sx={{ fontWeight: 'bold' }}>
-                  AI Topic Generator with User-Defined Prompts
+                  {intl.formatMessage({ id: 'settings.ai-topic-generator-title', defaultMessage: 'AI Topic Generator with User-Defined Prompts' })}
                 </Typography>
                 <FormControlLabel
                   control={
@@ -147,7 +155,7 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
                       size="small"
                     />
                   }
-                  label="Deduplication"
+                  label={intl.formatMessage({ id: 'settings.deduplication', defaultMessage: 'Deduplication' })}
                   labelPlacement="start"
                   sx={{ 
                     ml: 0,
@@ -165,14 +173,14 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
                 variant="outlined"
                 value={topicGeneratorPrompt}
                 onChange={(e) => setTopicGeneratorPrompt(e.target.value)}
-                placeholder="Enter custom prompt for topic generation..."
+                placeholder={intl.formatMessage({ id: 'settings.topic-generator-placeholder', defaultMessage: 'Enter custom prompt for topic generation...' })}
                 size="small"
                 sx={{ mb: 2 }}
               />
             </Box>
             <Box>
               <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
-                AI Explainer with User-Defined Prompts
+                {intl.formatMessage({ id: 'settings.ai-explainer-title', defaultMessage: 'AI Explainer with User-Defined Prompts' })}
               </Typography>
               <TextField
                 fullWidth
@@ -181,7 +189,7 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
                 variant="outlined"
                 value={explainerPrompt}
                 onChange={(e) => setExplainerPrompt(e.target.value)}
-                placeholder="Enter custom prompt for concept explanation..."
+                placeholder={intl.formatMessage({ id: 'settings.explainer-placeholder', defaultMessage: 'Enter custom prompt for concept explanation...' })}
                 size="small"
                 sx={{ mb: 2 }}
               />
@@ -190,13 +198,13 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
         </StyledDialogContent>
         <DialogActions>
           <Button onClick={handleCancel}>
-            Cancel
+            {intl.formatMessage({ id: 'action.cancel', defaultMessage: 'Cancel' })}
           </Button>
           <Button
             variant="contained"
             onClick={handleSave}
           >
-            Save
+            {intl.formatMessage({ id: 'action.accept', defaultMessage: 'Accept' })}
           </Button>
         </DialogActions>
       </Dialog>

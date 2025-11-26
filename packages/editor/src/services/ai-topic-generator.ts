@@ -135,8 +135,8 @@ class AITopicGeneratorService {
     const currentTopic = topicPath[topicPath.length - 1];
 
     const taskId = llmProgressManager.createTask({
-      title: 'AI 生成主题',
-      description: `正在基于"${currentTopic}"和上下文路径生成相关主题...`,
+      title: 'AI generate topics',
+      description: `Generating relevant topics based on "${currentTopic}" and the context path...`,
     });
 
     try {
@@ -250,7 +250,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
       });
 
     } catch (error) {
-      console.error('AI主题生成失败:', error);
+      console.error('AI generation failed:', error);
       throw error;
     }
   }

@@ -2,7 +2,7 @@
  *    Copyright [2007-2025] [wisemapping]
  *
  *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
- *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   It is basically Apache License, Version 2.0 (the "License") plus the
  *   "powered by wisemapping" text requirement on every single page;
  *   you may not use this copy of the license at
  *
@@ -24,11 +24,7 @@ interface ExportOptionsProps {
   onOptionsChange: (options: ExportOptions) => void;
 }
 
-const ExportOptions: React.FC<ExportOptionsProps> = ({
-  format,
-  options,
-  onOptionsChange,
-}) => {
+const ExportOptions: React.FC<ExportOptionsProps> = () => {
   return (
     <Box>
       {/* No export options needed - simplified interface */}

@@ -55,7 +55,7 @@ class AIExplainerService {
       this.storeAnalysisToNote(topic, analysis);
 
     } catch (error) {
-      console.error('AI解释器分析失败:', error);
+      console.error('AI Explainer analysis failed.:', error);
       throw error;
     }
   }
@@ -70,8 +70,8 @@ class AIExplainerService {
     const currentTopic = topicPath[topicPath.length - 1];
 
     const taskId = llmProgressManager.createTask({
-      title: 'AI解释器',
-      description: `正在分析主题"${currentTopic}"...`,
+      title: '${{AI Explainer}}',
+      description: `${{Analyzing topic}} "${currentTopic}"...`,
     });
 
     try {
@@ -95,7 +95,7 @@ class AIExplainerService {
       return analysis;
 
     } catch (error) {
-      console.error('AI analysis generation failed:', error);
+      console.error('${{AI analysis generation failed:}}', error);
       llmProgressManager.completeTask(taskId, false);
       throw error;
     }
@@ -158,7 +158,7 @@ class AIExplainerService {
   private processAnalysisResponse(response: string, maxLength?: number): string {
     // Clean up the response
     if (!response || typeof response !== 'string') {
-      throw new Error('Invalid response from LLM service');
+      throw new Error('${{Invalid response from LLM service}}');
     }
 
     let analysis = response.trim();
@@ -194,8 +194,8 @@ class AIExplainerService {
       // Set the analysis as the topic's note
       topic.setNoteValue(analysis);
     } catch (error) {
-      console.error('Failed to store analysis to topic note:', error);
-      throw new Error('无法将分析结果存储到主题注释中');
+      console.error('${{Failed to store analysis to topic note}}:', error);
+      throw new Error('${{Unable to store analysis results in topic annotations.}}');
     }
   }
 }

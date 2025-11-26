@@ -24,10 +24,12 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
+import { useIntl } from 'react-intl';
 import { llmProgressManager, type LLMTask } from './manager';
 
 const LLMProgressNotification: React.FC = () => {
   const [tasks, setTasks] = useState<LLMTask[]>([]);
+  const intl = useIntl();
 
   useEffect(() => {
     const unsubscribe = llmProgressManager.subscribe(() => {
@@ -79,6 +81,17 @@ const LLMProgressNotification: React.FC = () => {
         return 'primary.main';
       default:
         return 'text.secondary';
+    }
+  };
+
+  const getStatusText = (status: LLMTask['status']) => {
+    switch (status) {
+      case 'completed':
+        return intl.formatMessage({ id: 'llm-notification.status.completed' });
+      case 'error':
+        return intl.formatMessage({ id: 'llm-notification.status.error' });
+      default:
+        return '';
     }
   };
 
@@ -165,15 +178,9 @@ const LLMProgressNotification: React.FC = () => {
               </Box>
             )}
 
-            {task.status === 'completed' && (
-              <Typography variant="caption" color="success.main">
-                已完成
-              </Typography>
-            )}
-
-            {task.status === 'error' && (
-              <Typography variant="caption" color="error.main">
-                失败
+            {(task.status === 'completed' || task.status === 'error') && (
+              <Typography variant="caption" color={getTaskColor(task)}>
+                {getStatusText(task.status)}
               </Typography>
             )}
           </Box>
