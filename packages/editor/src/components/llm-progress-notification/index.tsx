@@ -2,7 +2,7 @@
  *    Copyright [2007-2025] [wisemapping]
  *
  *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
- *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   It is basically Apache License, Version 2.0 (the "License") plus the
  *   "powered by wisemapping" text requirement on every single page;
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the license at
@@ -87,9 +87,9 @@ const LLMProgressNotification: React.FC = () => {
   const getStatusText = (status: LLMTask['status']) => {
     switch (status) {
       case 'completed':
-        return intl.formatMessage({ id: 'llm-notification.status.completed' });
+        return intl.formatMessage({ id: 'llm-notification.status.completed', defaultMessage: 'Completed' });
       case 'error':
-        return intl.formatMessage({ id: 'llm-notification.status.error' });
+        return intl.formatMessage({ id: 'llm-notification.status.error', defaultMessage: 'Failed' });
       default:
         return '';
     }

@@ -889,5 +889,146 @@
   },
   "settings.explainer-placeholder": {
     "defaultMessage": "Enter custom prompt for concept explanation..."
+  },
+  "export.dialog.title": {
+    "defaultMessage": "Export"
+  },
+  "export.format.svg": {
+    "defaultMessage": "SVG"
+  },
+  "export.format.png": {
+    "defaultMessage": "PNG"
+  },
+  "export.format.jpg": {
+    "defaultMessage": "JPG"
+  },
+  "export.format.pdf": {
+    "defaultMessage": "PDF"
+  },
+  "export.format.txt": {
+    "defaultMessage": "TXT"
+  },
+  "export.format.mmap": {
+    "defaultMessage": "MMAP"
+  },
+  "export.format.wisemapping": {
+    "defaultMessage": "WISEMAPPING"
+  },
+  "export.format.svg.description": {
+    "defaultMessage": "Scalable Vector Graphics - Best for high-quality images and printing"
+  },
+  "export.format.png.description": {
+    "defaultMessage": "Portable Network Graphics - Good for web use and presentations"
+  },
+  "export.format.jpg.description": {
+    "defaultMessage": "JPEG Format - Compressed image suitable for photos and complex graphics"
+  },
+  "export.format.pdf.description": {
+    "defaultMessage": "Portable Document Format - Universal document format"
+  },
+  "export.format.txt.description": {
+    "defaultMessage": "Plain Text Format - Simple text representation"
+  },
+  "export.format.mmap.description": {
+    "defaultMessage": "FreeMind Format - Compatible with FreeMind mind mapping software"
+  },
+  "export.format.wisemapping.description": {
+    "defaultMessage": "WiseMapping Format - Native format with full features support"
+  },
+  "export.options.title": {
+    "defaultMessage": "Export Options"
+  },
+  "export.options.group.title": {
+    "defaultMessage": "Groups"
+  },
+  "export.options.group.description": {
+    "defaultMessage": "Include group information in exported file"
+  },
+  "export.options.svg.title": {
+    "defaultMessage": "SVG Options"
+  },
+  "export.options.svg.description": {
+    "defaultMessage": "Configure SVG export settings"
+  },
+  "export.options.png.title": {
+    "defaultMessage": "PNG Options"
+  },
+  "export.options.png.description": {
+    "defaultMessage": "Configure PNG export settings"
+  },
+  "export.options.jpg.title": {
+    "defaultMessage": "JPG Options"
+  },
+  "export.options.jpg.description": {
+    "defaultMessage": "Configure JPG export settings"
+  },
+  "export.options.zoom.title": {
+    "defaultMessage": "Zoom"
+  },
+  "export.options.zoom.description": {
+    "defaultMessage": "Export at current zoom level"
+  },
+  "export.options.fit.title": {
+    "defaultMessage": "Fit to Page"
+  },
+  "export.options.fit.description": {
+    "defaultMessage": "Automatically scale to fit page size"
+  },
+  "export.options.size.title": {
+    "defaultMessage": "Size"
+  },
+  "export.options.size.description": {
+    "defaultMessage": "Export with custom dimensions"
+  },
+  "export.options.width": {
+    "defaultMessage": "Width"
+  },
+  "export.options.height": {
+    "defaultMessage": "Height"
+  },
+  "export.options.width.placeholder": {
+    "defaultMessage": "Enter width in pixels"
+  },
+  "export.options.height.placeholder": {
+    "defaultMessage": "Enter height in pixels"
+  },
+  "export.button.cancel": {
+    "defaultMessage": "Cancel"
+  },
+  "export.button.export": {
+    "defaultMessage": "Export"
+  },
+  "ai-topic-generator.button.generate": {
+    "defaultMessage": "Generate"
+  },
+  "ai-topic-generator.generating": {
+    "defaultMessage": "Generating..."
+  },
+  "settings.api-key": {
+    "defaultMessage": "API Key"
+  },
+  "settings.api-key-placeholder": {
+    "defaultMessage": "Enter your API key"
+  },
+  "settings.api-key-description": {
+    "defaultMessage": "Your API key will be stored locally and used for AI model requests"
+  },
+  "settings.test-connection": {
+    "defaultMessage": "Test Connection"
+  },
+  "settings.testing-connection": {
+    "defaultMessage": "Testing connection..."
+  },
+  "settings.connection-success": {
+    "defaultMessage": "Connection successful!"
+  },
+  "settings.connection-failed": {
+    "defaultMessage": "Connection failed. Please check your API key and try again."
+  },
+  "settings.save": {
+    "defaultMessage": "Save"
+  },
+  "settings.cancel": {
+    "defaultMessage": "Cancel"
   }
 }

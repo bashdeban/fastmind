@@ -5,6 +5,9 @@
   "action.delete": {
     "defaultMessage": "删除"
   },
+  "action.cancel": {
+    "defaultMessage": "取消"
+  },
   "appbar.back-to-map-list": {
     "defaultMessage": "返回地图列表"
   },
@@ -180,7 +183,7 @@
     "defaultMessage": "主题样式"
   },
   "editor.edit-description-mobile": {
-    "defaultMessage": "移动设备支持有限的思维导图编辑功能。请使用桌面浏览器获得完整编辑器功能。"
+    "defaultMessage": "移动设备支持有限的思维导图编辑功能。请使用桌面浏览器获得完整的编辑器功能。"
   },
   "editor.try-welcome": {
     "defaultMessage": "此编辑空间展示了思维导图编辑器的一些功能！"
@@ -189,7 +192,7 @@
     "defaultMessage": "注册即可开始创建、分享和发布无限数量的思维导图，完全免费。"
   },
   "editor.try-welcome-description-mobile": {
-    "defaultMessage": "注册即可开始创建、分享和发布无限数量的思维导图，完全免费。移动设备支持有限的思维导图编辑功能，请使用桌面浏览器获得完整编辑功能。"
+    "defaultMessage": "注册即可开始创建、分享和发布无限数量的思维导图，完全免费。移动设备支持有限的思维导图编辑功能，请使用桌面浏览器获得完整功能。"
   },
   "editor.try-welcome-mobile": {
     "defaultMessage": "此编辑空间展示了思维导图编辑器的一些功能！"
@@ -222,10 +225,10 @@
     "defaultMessage": "取消文本更改"
   },
   "shortcut-help-pane.change-font-bold": {
-    "defaultMessage": "更改文本为粗体"
+    "defaultMessage": "将文本更改为粗体"
   },
   "shortcut-help-pane.change-font-italic": {
-    "defaultMessage": "更改文本为斜体"
+    "defaultMessage": "将文本更改为斜体"
   },
   "shortcut-help-pane.collapse-children": {
     "defaultMessage": "折叠子主题"
@@ -261,7 +264,7 @@
     "defaultMessage": "覆盖主题文本"
   },
   "shortcut-help-pane.overwrite-edit-topic-key": {
-    "defaultMessage": "在选定的主题上输入"
+    "defaultMessage": "在选定的主题上键入"
   },
   "shortcut-help-pane.redo": {
     "defaultMessage": "重做编辑"
@@ -294,7 +297,7 @@
     "defaultMessage": "缩小"
   },
   "zoom-panel.tooltip-zoom-to-fit": {
-    "defaultMessage": "适合屏幕"
+    "defaultMessage": "适应页面"
   },
   "zoom-panel.tooltip-collapse-all": {
     "defaultMessage": "折叠所有节点"
@@ -477,7 +480,7 @@
     "defaultMessage": "分隔符"
   },
   "editor-panel.tooltip-connection-style-arc": {
-    "defaultMessage": "弧线"
+    "defaultMessage": "弧形"
   },
   "editor-panel.tooltip-relationship-arrow-end": {
     "defaultMessage": "结束箭头"
@@ -504,7 +507,7 @@
     "defaultMessage": "关系样式"
   },
   "editor-panel.tooltip-unified-styling": {
-    "defaultMessage": "样式主题和连接"
+    "defaultMessage": "样式化主题和连接"
   },
   "color-picker.color": {
     "defaultMessage": "颜色"
@@ -630,22 +633,22 @@
     "defaultMessage": "手绘风格与戏剧性曲线 - 适合创意和表达性思维导图"
   },
   "icon-collection.connection.arc": {
-    "defaultMessage": "弧线"
+    "defaultMessage": "弧形"
   },
   "icon-collection.connection.arc-tooltip": {
-    "defaultMessage": "圆弧连接 - 适合径向布局和有机流程"
+    "defaultMessage": "圆弧连接 - 适合径向布局和有机流动"
   },
   "icon-collection.connection.thin-curved": {
     "defaultMessage": "细曲线"
   },
   "icon-collection.connection.thin-curved-tooltip": {
-    "defaultMessage": "细曲线与优雅贝塞尔曲线 - 适合详细或密集思维导图"
+    "defaultMessage": "细曲线与优雅贝塞尔曲线 - 适合详细或密集的思维导图"
   },
   "icon-collection.connection.simple-polyline": {
     "defaultMessage": "简单折线"
   },
   "icon-collection.connection.simple-polyline-tooltip": {
-    "defaultMessage": "直接直线连接 - 简洁和极简风格的简单关系"
+    "defaultMessage": "直接直线连接 - 简洁简约风格，适合简单关系"
   },
   "icon-collection.connection.curved-polyline": {
     "defaultMessage": "曲线折线"
@@ -669,7 +672,7 @@
     "defaultMessage": "剩余 {remaining}"
   },
   "note.character.limit.warning": {
-    "defaultMessage": "(接近限制)"
+    "defaultMessage": "（接近限制）"
   },
   "ocean": {
     "defaultMessage": "海洋"
@@ -699,7 +702,7 @@
     "defaultMessage": "选择主题"
   },
   "theme.classic.description": {
-    "defaultMessage": "简洁专业的设计，带有蓝色强调。适合商务演示和正式文档。"
+    "defaultMessage": "简洁专业的设计，带有蓝色强调色。适合商务演示和正式文档。"
   },
   "theme.classic.name": {
     "defaultMessage": "经典"
@@ -717,13 +720,13 @@
     "defaultMessage": "机器人"
   },
   "theme.summer.description": {
-    "defaultMessage": "明亮充满活力的橙色主题。适合创意项目和充满活力的演示。"
+    "defaultMessage": "明亮活泼的橙色主题。适合创意项目和充满活力的演示。"
   },
   "theme.summer.name": {
     "defaultMessage": "夏日"
   },
   "theme.sunrise.description": {
-    "defaultMessage": "日出主题，具有明暗模式变体。增强的颜色和对比度，提高可读性。"
+    "defaultMessage": "日出主题，具有明暗模式变体。增强的颜色和对比度，提供更好的可读性。"
   },
   "theme.sunrise.name": {
     "defaultMessage": "日出"
@@ -819,22 +822,22 @@
     "defaultMessage": "基于 <strong>{topicText}</strong> 生成相关子主题"
   },
   "ai-topic-generator.count-label": {
-    "defaultMessage": "生成主题数量: {count}"
+    "defaultMessage": "生成主题数量：{count}"
   },
   "ai-topic-generator.custom-prompt-label": {
-    "defaultMessage": "自定义提示 (可选)"
+    "defaultMessage": "自定义提示（可选）"
   },
   "ai-topic-generator.custom-prompt-placeholder": {
-    "defaultMessage": "例如：重点关注技术实现方面"
+    "defaultMessage": "例如：专注于技术实现方面"
   },
   "ai-topic-generator.custom-prompt-helper": {
-    "defaultMessage": "为AI生成提供额外的上下文或要求"
+    "defaultMessage": "为 AI 生成提供额外上下文或要求"
   },
   "ai-topic-generator.generating": {
     "defaultMessage": "正在生成主题，请稍候..."
   },
   "ai-topic-generator.preview-title": {
-    "defaultMessage": "生成的主题预览:"
+    "defaultMessage": "生成主题预览："
   },
   "ai-topic-generator.cancel": {
     "defaultMessage": "取消"
@@ -856,5 +859,176 @@
   },
   "ai-topic-generator.error-add": {
     "defaultMessage": "添加主题时发生错误"
+  },
+  "settings.title": {
+    "defaultMessage": "设置"
+  },
+  "settings.description": {
+    "defaultMessage": "配置 AI 模型设置并自定义主题生成和概念解释的提示词。"
+  },
+  "settings.current-model": {
+    "defaultMessage": "当前模型：{modelName}"
+  },
+  "settings.no-model": {
+    "defaultMessage": "未配置模型"
+  },
+  "settings.model-api-management": {
+    "defaultMessage": "模型 API 管理"
+  },
+  "settings.ai-topic-generator-title": {
+    "defaultMessage": "AI 主题生成器（用户自定义提示词）"
+  },
+  "settings.deduplication": {
+    "defaultMessage": "去重"
+  },
+  "settings.topic-generator-placeholder": {
+    "defaultMessage": "输入主题生成的自定义提示词..."
+  },
+  "settings.ai-explainer-title": {
+    "defaultMessage": "AI 解释器（用户自定义提示词）"
+  },
+  "settings.explainer-placeholder": {
+    "defaultMessage": "输入概念解释的自定义提示词..."
+  },
+  "export.dialog.title": {
+    "defaultMessage": "导出"
+  },
+  "export.format.svg": {
+    "defaultMessage": "SVG"
+  },
+  "export.format.png": {
+    "defaultMessage": "PNG"
+  },
+  "export.format.jpg": {
+    "defaultMessage": "JPG"
+  },
+  "export.format.pdf": {
+    "defaultMessage": "PDF"
+  },
+  "export.format.txt": {
+    "defaultMessage": "TXT"
+  },
+  "export.format.mmap": {
+    "defaultMessage": "MMAP"
+  },
+  "export.format.wisemapping": {
+    "defaultMessage": "WISEMAPPING"
+  },
+  "export.format.svg.description": {
+    "defaultMessage": "可缩放矢量图形 - 最适合高质量图像和打印"
+  },
+  "export.format.png.description": {
+    "defaultMessage": "便携式网络图形 - 适合网页使用和演示"
+  },
+  "export.format.jpg.description": {
+    "defaultMessage": "JPEG 格式 - 适合照片和复杂图形的压缩图像"
+  },
+  "export.format.pdf.description": {
+    "defaultMessage": "便携式文档格式 - 通用文档格式"
+  },
+  "export.format.txt.description": {
+    "defaultMessage": "纯文本格式 - 简单的文本表示"
+  },
+  "export.format.mmap.description": {
+    "defaultMessage": "FreeMind 格式 - 与 FreeMind 思维导图软件兼容"
+  },
+  "export.format.wisemapping.description": {
+    "defaultMessage": "WiseMapping 格式 - 具有完整功能支持的原生格式"
+  },
+  "export.options.title": {
+    "defaultMessage": "导出选项"
+  },
+  "export.options.group.title": {
+    "defaultMessage": "分组"
+  },
+  "export.options.group.description": {
+    "defaultMessage": "在导出文件中包含分组信息"
+  },
+  "export.options.svg.title": {
+    "defaultMessage": "SVG 选项"
+  },
+  "export.options.svg.description": {
+    "defaultMessage": "配置 SVG 导出设置"
+  },
+  "export.options.png.title": {
+    "defaultMessage": "PNG 选项"
+  },
+  "export.options.png.description": {
+    "defaultMessage": "配置 PNG 导出设置"
+  },
+  "export.options.jpg.title": {
+    "defaultMessage": "JPG 选项"
+  },
+  "export.options.jpg.description": {
+    "defaultMessage": "配置 JPG 导出设置"
+  },
+  "export.options.zoom.title": {
+    "defaultMessage": "缩放"
+  },
+  "export.options.zoom.description": {
+    "defaultMessage": "以当前缩放级别导出"
+  },
+  "export.options.fit.title": {
+    "defaultMessage": "适应页面"
+  },
+  "export.options.fit.description": {
+    "defaultMessage": "自动缩放以适应页面大小"
+  },
+  "export.options.size.title": {
+    "defaultMessage": "尺寸"
+  },
+  "export.options.size.description": {
+    "defaultMessage": "使用自定义尺寸导出"
+  },
+  "export.options.width": {
+    "defaultMessage": "宽度"
+  },
+  "export.options.height": {
+    "defaultMessage": "高度"
+  },
+  "export.options.width.placeholder": {
+    "defaultMessage": "输入宽度（像素）"
+  },
+  "export.options.height.placeholder": {
+    "defaultMessage": "输入高度（像素）"
+  },
+  "export.button.cancel": {
+    "defaultMessage": "取消"
+  },
+  "export.button.export": {
+    "defaultMessage": "导出"
+  },
+  "ai-topic-generator.button.generate": {
+    "defaultMessage": "生成"
+  },
+  "ai-topic-generator.generating": {
+    "defaultMessage": "生成中..."
+  },
+  "settings.api-key": {
+    "defaultMessage": "API 密钥"
+  },
+  "settings.api-key-placeholder": {
+    "defaultMessage": "输入您的 API 密钥"
+  },
+  "settings.api-key-description": {
+    "defaultMessage": "您的 API 密钥将本地存储并用于 AI 模型请求"
+  },
+  "settings.test-connection": {
+    "defaultMessage": "测试连接"
+  },
+  "settings.testing-connection": {
+    "defaultMessage": "测试连接中..."
+  },
+  "settings.connection-success": {
+    "defaultMessage": "连接成功！"
+  },
+  "settings.connection-failed": {
+    "defaultMessage": "连接失败。请检查您的 API 密钥并重试。"
+  },
+  "settings.save": {
+    "defaultMessage": "保存"
+  },
+  "settings.cancel": {
+    "defaultMessage": "取消"
   }
 }
