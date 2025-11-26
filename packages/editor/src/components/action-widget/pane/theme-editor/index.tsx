@@ -136,9 +136,14 @@ const ThemeEditor = (props: {
               key={themeOption.id}
               sx={{
                 cursor: 'pointer',
-                border: theme === themeOption.id ? '2px solid #1976d2' : '1px solid #e0e0e0',
+                border: theme === themeOption.id ? '1px solid #1976d2' : '1px solid #e0e0e0',
+                outline: theme === themeOption.id ? '1px solid #1976d2' : 'none',
+                outlineOffset: '-1px',
+                boxShadow: theme === themeOption.id ? 2 : 0,
                 '&:hover': {
-                  border: '2px solid #1976d2',
+                  border: '1px solid #1976d2',
+                  outline: '1px solid #1976d2',
+                  outlineOffset: '-1px',
                   boxShadow: 2,
                 },
               }}

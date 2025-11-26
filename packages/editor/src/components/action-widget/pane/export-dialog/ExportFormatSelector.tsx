@@ -19,7 +19,6 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import { useIntl } from 'react-intl';
 import { ExportFormat, ExportFormatInfo } from './types';
 
 interface ExportFormatSelectorProps {
@@ -57,7 +56,6 @@ const ExportFormatSelector: React.FC<ExportFormatSelectorProps> = ({
   selectedFormat,
   onFormatChange,
 }) => {
-  const intl = useIntl();
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
@@ -66,9 +64,14 @@ const ExportFormatSelector: React.FC<ExportFormatSelectorProps> = ({
           key={format.id}
           sx={{
             cursor: 'pointer',
-            border: selectedFormat === format.id ? '2px solid #1976d2' : '1px solid #e0e0e0',
+            border: selectedFormat === format.id ? '1px solid #1976d2' : '1px solid #e0e0e0',
+            outline: selectedFormat === format.id ? '1px solid #1976d2' : 'none',
+            outlineOffset: '-1px',
+            boxShadow: selectedFormat === format.id ? 2 : 0,
             '&:hover': {
-              border: '2px solid #1976d2',
+              border: '1px solid #1976d2',
+              outline: '1px solid #1976d2',
+              outlineOffset: '-1px',
               boxShadow: 2,
             },
           }}

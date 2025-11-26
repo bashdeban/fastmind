@@ -160,10 +160,14 @@ const LayoutSelector = ({ closeModal, layoutModel, model }: LayoutSelectorProps)
               key={layoutOption.id}
               sx={{
                 cursor: 'pointer',
-                border:
-                  selectedLayout === layoutOption.id ? '2px solid #1976d2' : '1px solid #e0e0e0',
+                border: selectedLayout === layoutOption.id ? '1px solid #1976d2' : '1px solid #e0e0e0',
+                outline: selectedLayout === layoutOption.id ? '1px solid #1976d2' : 'none',
+                outlineOffset: '-1px',
+                boxShadow: selectedLayout === layoutOption.id ? 2 : 0,
                 '&:hover': {
-                  border: '2px solid #1976d2',
+                  border: '1px solid #1976d2',
+                  outline: '1px solid #1976d2',
+                  outlineOffset: '-1px',
                   boxShadow: 2,
                 },
               }}
