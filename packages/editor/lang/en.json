@@ -1001,9 +1001,6 @@
   "ai-topic-generator.button.generate": {
     "defaultMessage": "Generate"
   },
-  "ai-topic-generator.generating": {
-    "defaultMessage": "Generating..."
-  },
   "settings.api-key": {
     "defaultMessage": "API Key"
   },

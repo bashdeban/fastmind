@@ -1001,9 +1001,6 @@
   "ai-topic-generator.button.generate": {
     "defaultMessage": "生成"
   },
-  "ai-topic-generator.generating": {
-    "defaultMessage": "生成中..."
-  },
   "settings.api-key": {
     "defaultMessage": "API 密钥"
   },
