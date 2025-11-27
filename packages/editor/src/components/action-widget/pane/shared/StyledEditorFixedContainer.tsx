@@ -15,23 +15,25 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-import React from 'react';
-import TopicLinkEditor from '../../components/action-widget/pane/topic-link-editor';
-import TopicNoteEditor from '../../components/action-widget/pane/topic-note-editor';
-import NodeProperty from '../model/node-property';
 
-const linkContent = (
-  linkModel: NodeProperty<string>,
-  closeModal: () => void,
-): React.ReactElement => {
-  return <TopicLinkEditor closeModal={closeModal} urlModel={linkModel}></TopicLinkEditor>;
-};
+import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
 
-const noteContent = (
-  noteModel: NodeProperty<string | undefined>,
-  closeModal: () => void,
-): React.ReactElement => {
-  return <TopicNoteEditor closeModal={closeModal} noteModel={noteModel} />;
-};
-
-export { linkContent, noteContent };
+/**
+ * Fixed height styled container for editor dialog boxes (specifically for EditorBar)
+ * Provides consistent styling with fixed height to prevent adaptive container issues
+ * Used specifically for EditorBar add note functionality
+ */
+export const StyledEditorFixedContainer = styled(Box)(({ theme }) => ({
+  padding: theme.spacing(1),
+  width: 'clamp(220px, 85vw, 280px)',
+  height: '380px', // Fixed height for EditorBar add note
+  overflow: 'hidden',
+  backgroundColor: theme.palette.background.paper,
+  borderRadius: '8px',
+  border: '1px solid',
+  borderColor: theme.palette.divider,
+  position: 'relative',
+  display: 'flex',
+  flexDirection: 'column',
+}));

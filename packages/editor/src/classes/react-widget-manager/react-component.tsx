@@ -18,6 +18,7 @@
 import React from 'react';
 import TopicLinkEditor from '../../components/action-widget/pane/topic-link-editor';
 import TopicNoteEditor from '../../components/action-widget/pane/topic-note-editor';
+import TopicNotePreview from '../../components/action-widget/pane/topic-note-preview';
 import NodeProperty from '../model/node-property';
 
 const linkContent = (
@@ -34,4 +35,12 @@ const noteContent = (
   return <TopicNoteEditor closeModal={closeModal} noteModel={noteModel} />;
 };
 
-export { linkContent, noteContent };
+const notePreviewContent = (
+  noteModel: NodeProperty<string | undefined>,
+  closeModal: () => void,
+  onEdit: () => void,
+): React.ReactElement => {
+  return <TopicNotePreview closeModal={closeModal} onEdit={onEdit} noteModel={noteModel} />;
+};
+
+export { linkContent, noteContent, notePreviewContent };

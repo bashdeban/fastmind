@@ -5147,6 +5147,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/marked@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@types/marked@npm:6.0.0"
+  dependencies:
+    marked: "*"
+  checksum: ad4cd5a405604b27efb4d3979b05869f3069529d1f5b2a38039de7c96e57270f03e7580efe327ca1c136ec22a355d0a7d8578346bd2af8397fdd6bb76ca1b084
+  languageName: node
+  linkType: hard
+
 "@types/mdx@npm:^2.0.0":
   version: 2.0.13
   resolution: "@types/mdx@npm:2.0.13"
@@ -6253,6 +6262,7 @@ __metadata:
     "@testing-library/react": ^16.3.0
     "@types/cypress-image-snapshot": ^3.1.9
     "@types/jest": ^30.0.0
+    "@types/marked": ^6.0.0
     "@wisemapping/mindplot": "workspace:*"
     babel-jest: ^30.2.0
     babel-polyfill: ^6.26.0
@@ -6267,6 +6277,7 @@ __metadata:
     jest-environment-jsdom: ^30.2.0
     jest-transform-stub: ^2.0.0
     langchain: ^1.0.6
+    markdown-to-jsx: ^9.1.2
     react: ^19.2.0
     react-color: ^2.19.3
     react-dom: ^19.2.0
@@ -14142,6 +14153,27 @@ __metadata:
   version: 0.1.0
   resolution: "map-stream@npm:0.1.0"
   checksum: 38abbe4eb883888031e6b2fc0630bc583c99396be16b8ace5794b937b682a8a081f03e8b15bfd4914d1bc88318f0e9ac73ba3512ae65955cd449f63256ddb31d
+  languageName: node
+  linkType: hard
+
+"markdown-to-jsx@npm:^9.1.2":
+  version: 9.1.2
+  resolution: "markdown-to-jsx@npm:9.1.2"
+  peerDependencies:
+    react: ">= 16.0.0"
+  peerDependenciesMeta:
+    react:
+      optional: true
+  checksum: 6b5419bc819c8d16996b4ed117d87c3551aaa563fc1d25788a1c270c9ace612f5ad25c18c54ed12107361eb77a0cac366e1bfbff227c36ec4a9d630d4e1a994b
+  languageName: node
+  linkType: hard
+
+"marked@npm:*":
+  version: 17.0.1
+  resolution: "marked@npm:17.0.1"
+  bin:
+    marked: bin/marked.js
+  checksum: c8387a3a1e0b4aa547b73f62eb946ee473861a62205f0a0e977276bda02738bf07de10bcc17fcf97a44fa017bce7b78d85290f0b478c1a8a4cc47054ac202f4e
   languageName: node
   linkType: hard
 

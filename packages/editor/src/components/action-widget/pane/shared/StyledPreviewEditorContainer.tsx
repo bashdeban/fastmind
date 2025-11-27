@@ -15,23 +15,27 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
-import React from 'react';
-import TopicLinkEditor from '../../components/action-widget/pane/topic-link-editor';
-import TopicNoteEditor from '../../components/action-widget/pane/topic-note-editor';
-import NodeProperty from '../model/node-property';
 
-const linkContent = (
-  linkModel: NodeProperty<string>,
-  closeModal: () => void,
-): React.ReactElement => {
-  return <TopicLinkEditor closeModal={closeModal} urlModel={linkModel}></TopicLinkEditor>;
-};
+import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
 
-const noteContent = (
-  noteModel: NodeProperty<string | undefined>,
-  closeModal: () => void,
-): React.ReactElement => {
-  return <TopicNoteEditor closeModal={closeModal} noteModel={noteModel} />;
-};
-
-export { linkContent, noteContent };
+/**
+ * Styled container for preview mode editor dialog
+ * Same dimensions as StyledPreviewContainer for consistent user experience
+ * Used when editing from preview mode, not from Add Note
+ */
+export const StyledPreviewEditorContainer = styled(Box)(({ theme }) => ({
+    padding: theme.spacing(2),
+    width: 'clamp(600px, 85vw, 1000px)',
+    height: 'clamp(500px, 75vh, 800px)',
+    maxHeight: '90vh',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
+    borderRadius: '12px',
+    border: '1px solid',
+    borderColor: theme.palette.divider,
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    boxShadow: theme.shadows[8],
+}));

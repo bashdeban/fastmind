@@ -30,7 +30,7 @@ import TextureIcon from '@mui/icons-material/Texture';
 import ActionConfig from '../../classes/action/action-config';
 import NodePropertyValueModelBuilder from '../../classes/model/node-property-builder';
 import TopicLinkEditor from '../action-widget/pane/topic-link-editor';
-import RichTextNoteEditor from '../action-widget/pane/rich-text-note-editor';
+import TopicNoteEditor from '../action-widget/pane/topic-note-editor';
 import TopicImagePicker from '../action-widget/pane/topic-image-picker';
 import TopicStyleEditor from '../action-widget/pane/topic-style-editor';
 import TopicFontEditor from '../action-widget/pane/topic-font-editor';
@@ -224,7 +224,7 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
         render: (closeModal) => {
           trackEditorPanelAction('open_note_editor');
           return (
-            <RichTextNoteEditor closeModal={closeModal} noteModel={modelBuilder.getNoteModel()} />
+            <TopicNoteEditor closeModal={closeModal} noteModel={modelBuilder.getNoteModel()} isFromEditorBar={true} />
           );
         },
       },

@@ -24,6 +24,8 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import { WidgetBuilder, WidgetEventType } from '@wisemapping/mindplot';
 import { Topic } from '@wisemapping/mindplot';
+import { TopicNoteDialog } from '../topic-note-dialog';
+import NodeProperty from '../../classes/model/node-property';
 
 type WidgetPopoverProps = {
   widgetManager: WidgetBuilder;
@@ -34,11 +36,27 @@ export const WidgetPopover = ({ widgetManager }: WidgetPopoverProps): React.Reac
   const [panelTitle, setPanelTitle] = useState<string | undefined>(undefined);
   const [achorElem, setAnchorElem] = useState<Element | undefined>(undefined);
   const [editorComponent, setEditorComponent] = useState<React.ReactElement | undefined>(undefined);
+  
+  // State for Topic Note Dialog
+  const [isNoteDialogOpen, setIsNoteDialogOpen] = useState(false);
+  const [noteDialogMode, setNoteDialogMode] = useState<'preview' | 'edit'>('preview');
+  const [currentNoteModel, setCurrentNoteModel] = useState<NodeProperty<string | undefined> | undefined>(undefined);
 
   const closeEditor = () => {
     setEvent('none');
     setAnchorElem(undefined);
   };
+
+  const closeNoteDialog = () => {
+    setIsNoteDialogOpen(false);
+    setNoteDialogMode('preview');
+    setCurrentNoteModel(undefined);
+  };
+
+  const handleNoteEdit = () => {
+    setNoteDialogMode('edit');
+  };
+
   const handleWidgetEvent = useCallback(
     (newEvent: WidgetEventType, topic?: Topic) => {
       setEvent(newEvent);
@@ -48,8 +66,18 @@ export const WidgetPopover = ({ widgetManager }: WidgetPopoverProps): React.Reac
 
       switch (newEvent) {
         case 'note': {
-          title = 'editor-panel.note-panel-title';
-          component = widgetManager.buidEditorForNote(topic!);
+          // Use Topic Note Dialog instead of popover
+          if (topic) {
+            const noteValue = topic.getNoteValue();
+            const noteModel = {
+              getValue: () => noteValue,
+              setValue: (value: string | undefined) => topic.setNoteValue(value),
+            } as NodeProperty<string | undefined>;
+            
+            setCurrentNoteModel(noteModel);
+            setNoteDialogMode('preview');
+            setIsNoteDialogOpen(true);
+          }
           break;
         }
         case 'link':
@@ -80,7 +108,7 @@ export const WidgetPopover = ({ widgetManager }: WidgetPopoverProps): React.Reac
   const isOpen = event != 'none';
   return (
     <>
-      {isOpen && (
+      {isOpen && event !== 'note' && (
         <Popover
           id="popover"
           open={isOpen}
@@ -133,6 +161,16 @@ export const WidgetPopover = ({ widgetManager }: WidgetPopoverProps): React.Reac
           </Box>
           {editorComponent}
         </Popover>
+      )}
+      
+      {currentNoteModel && (
+        <TopicNoteDialog
+          isOpen={isNoteDialogOpen}
+          mode={noteDialogMode}
+          noteModel={currentNoteModel}
+          onClose={closeNoteDialog}
+          onEdit={handleNoteEdit}
+        />
       )}
     </>
   );
