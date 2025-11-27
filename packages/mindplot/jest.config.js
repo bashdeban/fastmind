@@ -7,6 +7,9 @@ const config = {
     '^.+\\.(ts)?$': 'ts-jest',
     '^.+\\.(js)$': 'babel-jest',
   },
+  moduleNameMapper: {
+    '\\.(svg)$': '<rootDir>/__mocks__/svgMock.js',
+  },
 };
 
 module.exports = config;

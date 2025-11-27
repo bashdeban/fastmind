@@ -17,11 +17,13 @@
  */
 import { $assert } from './util/assert';
 import NotesImage from '../../assets/icons/notes.svg';
+import NotesDarkImage from '../../assets/icons/notes-dark.svg';
 import Topic from './Topic';
 import NoteModel from './model/NoteModel';
 import FeatureModel from './model/FeatureModel';
 import ImageIcon from './ImageIcon';
 import ActionDispatcher from './ActionDispatcher';
+import { ThemeVariant } from './theme/Theme';
 
 class NoteIcon extends ImageIcon {
   private _noteModel: NoteModel;
@@ -33,7 +35,7 @@ class NoteIcon extends ImageIcon {
   constructor(topic: Topic, noteModel: NoteModel, readOnly: boolean) {
     $assert(topic, 'topic can not be null');
 
-    super(NoteIcon.IMAGE_URL);
+    super(NoteIcon.getImageUrlForTheme(topic.getThemeVariant()));
     this._noteModel = noteModel;
     this._topic = topic;
     this._readOnly = readOnly;
@@ -75,6 +77,21 @@ class NoteIcon extends ImageIcon {
     const actionDispatcher = ActionDispatcher.getInstance();
     const featureId = this._noteModel.getId();
     actionDispatcher.removeFeatureFromTopic(this._topic.getId(), featureId);
+  }
+
+  /**
+   * Update the icon based on the current theme variant
+   */
+  updateTheme(): void {
+    const newImageUrl = NoteIcon.getImageUrlForTheme(this._topic.getThemeVariant());
+    this.getImageElement().setHref(newImageUrl);
+  }
+
+  /**
+   * Get the appropriate icon URL based on theme variant
+   */
+  static getImageUrlForTheme(variant: ThemeVariant): string {
+    return variant === 'dark' ? NotesDarkImage : NotesImage;
   }
 
   static IMAGE_URL = NotesImage;

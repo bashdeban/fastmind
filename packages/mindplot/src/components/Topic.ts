@@ -1398,9 +1398,36 @@ abstract class Topic extends NodeGraph {
       const bgColor = this.getBackgroundColor(variant);
       innerShape.setFill(bgColor);
 
+      // Update icon themes to ensure NoteIcon and other theme-aware icons update their appearance
+      this._updateIconThemes(variant);
+
       if ((redrawChildren || shapeChanged || connectionChanged) && !this.areChildrenShrunken()) {
         this.getChildren().forEach((t) => t.redraw(variant, true));
       }
+    }
+  }
+
+  /**
+   * Update themes for all icons in this topic
+   * This ensures icons like NoteIcon update their appearance when theme changes
+   */
+  private _updateIconThemes(_variant: ThemeVariant): void {
+    const iconGroup = this.getIconGroup();
+    if (iconGroup) {
+      // Access the private _icons array through type assertion to update theme-aware icons
+      const iconGroupAny = iconGroup as unknown;
+      const iconsGroup = iconGroupAny as { _icons: Icon[] };
+      const icons = iconsGroup._icons;
+
+      icons.forEach((icon) => {
+        // Check if this icon supports theme updates
+        if ('updateTheme' in icon) {
+          const themeAwareIcon = icon as { updateTheme(): void };
+          if (typeof themeAwareIcon.updateTheme === 'function') {
+            themeAwareIcon.updateTheme();
+          }
+        }
+      });
     }
   }
 
