@@ -30,7 +30,6 @@ import { FormattedMessage, useIntl } from 'react-intl';
 import NodeProperty from '../../../../classes/model/node-property';
 import SaveAndDelete from '../save-and-delete';
 import EmojiPicker, { EmojiClickData, EmojiStyle, Theme } from 'emoji-picker-react';
-import TextOperationManager from '../../../../../../mindplot/src/components/util/TextOperationManager';
 
 type RichTextNoteEditorProps = {
   closeModal: () => void;
@@ -218,52 +217,6 @@ const RichTextNoteEditor = ({ closeModal, noteModel }: RichTextNoteEditorProps):
     };
 
     const handleEditorKeyDown = (event: KeyboardEvent) => {
-      // Check for text operation shortcuts and handle them with custom implementation
-      if (event.ctrlKey || event.metaKey) {
-        switch (event.key.toLowerCase()) {
-          case 'c':
-            // Handle custom copy
-            if (TextOperationManager.performCopy()) {
-              event.preventDefault();
-              event.stopPropagation();
-              return;
-            }
-            break;
-          case 'v':
-            // Handle custom paste
-            if (TextOperationManager.performPaste()) {
-              event.preventDefault();
-              event.stopPropagation();
-              // Update content after paste
-              setTimeout(() => {
-                handleContentChange();
-              }, 0);
-              return;
-            }
-            break;
-          case 'a':
-            // Handle custom select all
-            if (TextOperationManager.performSelectAll()) {
-              event.preventDefault();
-              event.stopPropagation();
-              return;
-            }
-            break;
-          case 'x':
-            // Handle custom cut
-            if (TextOperationManager.performCut()) {
-              event.preventDefault();
-              event.stopPropagation();
-              // Update content after cut
-              setTimeout(() => {
-                handleContentChange();
-              }, 0);
-              return;
-            }
-            break;
-        }
-      }
-      
       // Stop propagation to prevent main editor from intercepting keystrokes
       event.stopPropagation();
     };
@@ -298,7 +251,7 @@ const RichTextNoteEditor = ({ closeModal, noteModel }: RichTextNoteEditorProps):
         editor.removeEventListener('keypress', handleEditorKeyPress);
       }
     };
-  }, [handleContentChange]);
+  }, []);
 
   return (
     <Box
