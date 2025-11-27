@@ -74,12 +74,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
       retryAttempts: options.retryAttempts ?? 3,
     };
 
-    console.log('🚀 [VSCodePersistenceManager] Initialized:', {
-      mapId,
-      options: this.options,
-      hasSaveStatusCallback: !!onSaveStatus
-    });
-
     // Setup VS Code message listeners
     this.setupVSCodeMessageListeners();
   }
@@ -97,16 +91,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
     // Convert XML Document to string
     const xmlContent = new XMLSerializer().serializeToString(mapXml);
     
-    console.log('💾 [VSCodePersistenceManager] saveMapXml called:', {
-      mapId,
-      xmlLength: xmlContent.length,
-      xmlPreview: xmlContent.substring(0, 100) + '...',
-      hasPref: !!_pref,
-      hasSaveHistory: !!_saveHistory,
-      hasEvents: !!events,
-      timestamp: new Date().toISOString()
-    });
-
     if (this.options.autoSave) {
       this.triggerAutoSave(xmlContent);
     } else {
@@ -121,17 +105,8 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Load map DOM from initial content or default template
    */
   async loadMapDom(mapId: string): Promise<Document> {
-    console.log('📂 [VSCodePersistenceManager] loadMapDom called:', { mapId });
-    
     // Get initial content from global variable or use default
     const initialContent = this.getInitialDocumentContent();
-    
-    console.log('📄 [VSCodePersistenceManager] Loading content:', {
-      mapId,
-      hasContent: !!initialContent,
-      contentLength: initialContent?.length || 0,
-      contentPreview: initialContent?.substring(0, 100) + '...'
-    });
     
     const parser = new DOMParser();
     const document = parser.parseFromString(initialContent, 'text/xml');
@@ -143,7 +118,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Discard changes - VS Code extension handles this
    */
   discardChanges(_mapId: string): void {
-    console.log('🗑️ [VSCodePersistenceManager] discardChanges called:', { mapId: _mapId });
     // VS Code environment typically handles this at the extension level
     // Clear any pending saves
     this.clearAutoSave();
@@ -153,7 +127,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Unlock map - VS Code extension handles this
    */
   unlockMap(_mapId: string): void {
-    console.log('🔓 [VSCodePersistenceManager] unlockMap called:', { mapId: _mapId });
     // VS Code environment typically handles this at the extension level
   }
 
@@ -164,7 +137,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
     if (this.isSaving) {
       // If currently saving, add to queue
       this.saveQueue.push(() => this.executeSave(xmlContent));
-      console.log('⏳ [VSCodePersistenceManager] Save queued, currently saving');
       return;
     }
 
@@ -183,11 +155,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
     this.saveTimer = setTimeout(() => {
       this.executeSave(xmlContent);
     }, this.options.debounceMs);
-
-    console.log('⏰ [VSCodePersistenceManager] Auto-save scheduled:', {
-      debounceMs: this.options.debounceMs,
-      xmlLength: xmlContent.length
-    });
   }
 
   /**
@@ -198,10 +165,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
     onError?: (_error: unknown) => void;
   }): Promise<void> {
     if (!this.pendingChanges || this.isSaving) {
-      console.log('⏭️ [VSCodePersistenceManager] Save skipped:', {
-        pendingChanges: this.pendingChanges,
-        isSaving: this.isSaving
-      });
       return;
     }
 
@@ -218,12 +181,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
     });
 
     try {
-      console.log('💾 [VSCodePersistenceManager] Executing save:', {
-        xmlLength: xmlContent.length,
-        xmlPreview: xmlContent.substring(0, 100) + '...',
-        timestamp: new Date().toISOString()
-      });
-
       // Store the content for loop detection
       this.lastSavedContent = xmlContent;
 
@@ -239,8 +196,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
         lastSaved: new Date(),
         success: true
       });
-
-      console.log('✅ [VSCodePersistenceManager] Save completed successfully');
 
       // Process queue
       this.processSaveQueue();
@@ -261,7 +216,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
       // Retry logic
       if (this.retryCount < this.options.retryAttempts) {
         this.retryCount++;
-        console.log(`🔄 [VSCodePersistenceManager] Retrying save (${this.retryCount}/${this.options.retryAttempts})`);
         setTimeout(() => this.executeSave(xmlContent, events), 2000 * this.retryCount);
       } else {
         console.error('❌ [VSCodePersistenceManager] Max retry attempts reached');
@@ -279,7 +233,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
     if (this.saveQueue.length > 0) {
       const nextSave = this.saveQueue.pop();
       if (nextSave) {
-        console.log('📋 [VSCodePersistenceManager] Processing queued save');
         setTimeout(() => nextSave(), 100); // Small delay to avoid excessive frequency
       }
     }
@@ -338,7 +291,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Force immediate save
    */
   forceSave(xmlContent: string): Promise<void> {
-    console.log('🚨 [VSCodePersistenceManager] Force save requested');
     this.clearAutoSave();
     return new Promise((resolve, reject) => {
       this.executeSave(xmlContent, {
@@ -367,11 +319,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
     window.addEventListener('message', (event) => {
       const message = event.data;
       
-      console.log('📥 [VSCodePersistenceManager] Received VS Code message:', {
-        type: message.type,
-        timestamp: new Date().toISOString()
-      });
-
       switch (message.type) {
         case 'forceSave':
           this.handleForceSave();
@@ -385,8 +332,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
         case 'contentChanged':
           this.handleContentChanged(message.text);
           break;
-        default:
-          console.log('⚠️ [VSCodePersistenceManager] Unknown message type:', message.type);
       }
     });
   }
@@ -395,8 +340,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Handle force save request from VS Code
    */
   private handleForceSave(): void {
-    console.log('🚨 [VSCodePersistenceManager] Force save request from VS Code');
-    
     // Get current content from the editor if possible
     // This is a simplified approach - in a real implementation,
     // you might need to get the current XML from the editor
@@ -413,7 +356,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Handle save status from VS Code extension
    */
   private handleSaveStatus(status: SaveStatus): void {
-    console.log('📊 [VSCodePersistenceManager] Received save status:', status);
     // Update local status if needed
     this.updateSaveStatus(status);
   }
@@ -422,26 +364,13 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Handle content change from VS Code extension
    */
   private handleContentChanged(content?: string): void {
-    console.log('📥 [VSCodePersistenceManager] Received contentChanged from VS Code:', {
-      hasContent: !!content,
-      contentLength: content?.length || 0,
-      timestamp: new Date().toISOString()
-    });
-
     // Check if this is a self-induced change (same as last saved content)
     if (content && this.lastSavedContent && content === this.lastSavedContent) {
-      console.log('🔄 [VSCodePersistenceManager] Ignoring self-induced content change');
       return;
     }
 
     // Handle genuine external content change
     if (content) {
-      console.log('🔄 [VSCodePersistenceManager] Loading external content change');
-      // For external content changes, we need to notify the editor to reload
-      // This is a simplified approach - in a full implementation, 
-      // we would need to trigger a reload in the mindmap editor
-      console.log('📝 [VSCodePersistenceManager] External content detected, reload may be needed');
-      
       // Clear any pending saves since this is an external change
       this.clearAutoSave();
     }
@@ -455,12 +384,9 @@ export class VSCodePersistenceManager extends PersistenceManager {
     autoSaveOnFocusChange: boolean;
     autoSaveOnWindowChange: boolean;
   }): void {
-    console.log('⚙️ [VSCodePersistenceManager] Config update from VS Code:', config);
-    
     // Update debounce delay
     if (config.autoSaveDelay !== this.options.debounceMs) {
       this.options.debounceMs = config.autoSaveDelay;
-      console.log('📝 [VSCodePersistenceManager] Updated debounce delay to:', config.autoSaveDelay);
     }
 
     // Note: autoSaveOnFocusChange and autoSaveOnWindowChange would require
@@ -475,7 +401,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
     // This is a simplified approach - in a real implementation,
     // you would get the current XML content from the active editor
     // For now, we'll return null and let the extension handle it
-    console.log('📄 [VSCodePersistenceManager] Getting current editor content');
     return null;
   }
 
@@ -483,7 +408,6 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Cleanup resources
    */
   destroy(): void {
-    console.log('🧹 [VSCodePersistenceManager] Cleaning up resources');
     this.clearAutoSave();
     this.isSaving = false;
     this.saveQueue = [];

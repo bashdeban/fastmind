@@ -39,13 +39,6 @@ if (!bootstrap) {
   throw new Error('VS Code bootstrap configuration not found. This editor requires VS Code environment.');
 }
 
-console.log('🚀 [FastMind Editor] Starting VS Code initialization:', {
-  fileName: bootstrap.fileName,
-  mapId: bootstrap.mapId,
-  hasOnChanged: typeof bootstrap.onChanged === 'function',
-  hasOnSaveStatus: typeof bootstrap.onSaveStatus === 'function'
-});
-
 // Create VS Code-specific persistence manager
 const persistence = new VSCodePersistenceManager(
   bootstrap.mapId,
@@ -74,8 +67,6 @@ const options: EditorOptions = {
   hideCreatorInfo: true,
   saveOnLoad: false, // Don't save on load in VS Code
 };
-
-console.log('✅ [FastMind Editor] VS Code persistence initialized');
 
 const themeVariantStorage = createMockThemeVariantStorage();
 

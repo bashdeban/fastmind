@@ -128,7 +128,7 @@ class Editor {
           component.save(false).catch((error) => {
             console.error('Autosave failed:', error);
           });
-        }, 15000);
+        }, 3000);
 
         // Trigger autosave on model updates
         designer.addEvent('modelUpdate', debouncedAutoSave);
