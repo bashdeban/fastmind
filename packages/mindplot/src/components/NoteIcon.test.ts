@@ -22,7 +22,7 @@ import NoteModel from './model/NoteModel';
 
 describe('NoteIcon', () => {
   let noteIcon: NoteIcon;
-  let mockTopic: any;
+  let mockTopic: { getThemeVariant: () => ThemeVariant };
   let mockNoteModel: NoteModel;
 
   beforeEach(() => {
@@ -51,7 +51,7 @@ describe('NoteIcon', () => {
     it('should update icon when theme changes from light to dark', () => {
       // Mock the topic to return dark theme
       mockTopic.getThemeVariant = () => 'dark' as ThemeVariant;
-      
+
       // Call updateTheme method
       noteIcon.updateTheme();
 

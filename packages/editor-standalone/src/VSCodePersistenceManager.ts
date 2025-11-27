@@ -82,7 +82,7 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Save map XML content to VS Code extension
    */
   saveMapXml(
-    mapId: string, 
+    _mapId: string, 
     mapXml: Document, 
     _pref?: string, 
     _saveHistory?: boolean, 
@@ -104,7 +104,7 @@ export class VSCodePersistenceManager extends PersistenceManager {
   /**
    * Load map DOM from initial content or default template
    */
-  async loadMapDom(mapId: string): Promise<Document> {
+  async loadMapDom(_mapId: string): Promise<Document> {
     // Get initial content from global variable or use default
     const initialContent = this.getInitialDocumentContent();
     
