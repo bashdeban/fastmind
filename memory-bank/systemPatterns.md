@@ -210,11 +210,11 @@ class ApiMindMapRepository implements MindMapRepository {
 }
 ```
 
-### 9. **AI Service Pattern with Event-Driven Progress (Refactored)**
+### 9. **AI Service Pattern with Event-Driven Progress (Production Ready)**
 
-**Refactored Singleton AI Service Pattern**:
+**Production-Ready AI Service Architecture**:
 ```typescript
-// AI Topic Generator Service - Unified Implementation
+// AI Topic Generator Service - Production Implementation
 class AITopicGeneratorService {
   private static instance: AITopicGeneratorService;
   private llmService: LLMService;
@@ -286,6 +286,19 @@ class AITopicGeneratorService {
     positionedTopics.forEach(model => {
       designer.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
     });
+  }
+
+  // Production-ready error handling with fallback
+  private async handleAIFailure(error: Error, taskId: string): Promise<TopicModel[]> {
+    this.llmProgressManager.completeTask(taskId, false);
+    
+    // Fallback to default topics or retry logic
+    if (this.isRetryableError(error)) {
+      return this.retryWithBackoff(taskId);
+    }
+    
+    // Return user-friendly fallback topics
+    return this.generateFallbackTopics();
   }
 }
 ```
