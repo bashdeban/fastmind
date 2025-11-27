@@ -93,24 +93,12 @@ class DesignerKeyboard extends Keyboard {
       designer.redo();
     });
 
-    this.addShortcut(['ctrl+c', 'meta+c'], () => {
-      designer.copyToClipboard();
-    });
-
     this.addShortcut(['ctrl+l', 'meta+l'], () => {
       designer.addLink();
     });
 
     this.addShortcut(['ctrl+k', 'meta+k'], () => {
       designer.addNote();
-    });
-
-    this.addShortcut(['ctrl+v', 'meta+v'], () => {
-      designer.pasteClipboard();
-    });
-
-    this.addShortcut(['ctrl+a', 'meta+a'], () => {
-      designer.selectAll();
     });
 
     this.addShortcut(['ctrl+b', 'meta+b'], () => {

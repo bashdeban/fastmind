@@ -252,24 +252,6 @@ const KeyboardShorcutsHelp = ({ closeModal }: KeyboardShorcutsHelpProps): ReactE
             <TableRow hover>
               <TableCell>
                 <FormattedMessage
-                  id="shortcut-help-pane.copy-and-text"
-                  defaultMessage="Copy and paste topics/Copy mindmap image to clipboard."
-                />
-              </TableCell>
-              <TableCell
-                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
-              >
-                Ctrl + C / Ctrl + V
-              </TableCell>
-              <TableCell
-                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
-              >
-                ⌘ + C / ⌘ + V
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormattedMessage
                   id="shortcut-help-pane.drag-disconnect"
                   defaultMessage="Disconnect topic"
                 />
@@ -378,24 +360,6 @@ const KeyboardShorcutsHelp = ({ closeModal }: KeyboardShorcutsHelpProps): ReactE
                 sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
               >
                 ⌘ + Shift + Z
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormattedMessage
-                  id="shortcut-help-pane.select-all-topics"
-                  defaultMessage="Select all topics"
-                />
-              </TableCell>
-              <TableCell
-                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
-              >
-                Ctrl + A
-              </TableCell>
-              <TableCell
-                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
-              >
-                ⌘ + A
               </TableCell>
             </TableRow>
             <TableRow hover>
