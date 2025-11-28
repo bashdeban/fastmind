@@ -1,0 +1,77 @@
+# Exclude all parent directories
+../
+../../
+
+# Exclude node_modules
+node_modules/
+**/node_modules/
+
+# Exclude source files from other packages
+packages/editor/
+packages/mindplot/
+packages/web2d/
+
+# Exclude build artifacts from other packages
+packages/editor-standalone/dist-standalone/
+packages/*/dist/
+packages/*/build/
+
+# Exclude config files
+**/.eslint*
+**/.prettier*
+**/tsconfig.json
+**/webpack.*
+**/jest.config.*
+**/cypress.*
+
+# Exclude development files
+.git/
+.gitignore
+.DS_Store
+*.log
+*.tgz
+*.tar.gz
+
+# Exclude test files
+**/test/
+**/__tests__/
+**/*.test.*
+**/*.spec.*
+
+# Exclude documentation
+**/*.md
+!README.md
+
+# Exclude root config files
+.yarnrc.yml
+lerna.json
+eslint.config.mjs
+jsconfig.json
+.prettierignore
+
+# Exclude memory bank and scripts
+memory-bank/
+scripts/
+
+# Exclude unnecessary assets
+**/assets/
+**/images/
+**/storybook/
+
+# Exclude coverage and cache
+**/coverage/
+.cache/
+.parcel-cache/
+**/.tsbuildinfo
+
+# Exclude IDE files
+.vscode/
+*.swp
+*.swo
+*~
+
+# Exclude OS files
+Thumbs.db
+
+# Exclude source maps to reduce size
+**/*.map

@@ -31,12 +31,6 @@ const extensionConfig = {
             ignore: ['**/index.html'], // We'll use our own template
           },
         },
-        // Copy extension package.json for VS Code
-        {
-          from: path.resolve(__dirname, 'dist/package.json'),
-          to: path.resolve(__dirname, 'dist/package.json'),
-          noErrorOnMissing: true,
-        },
       ],
     }),
   ],

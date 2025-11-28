@@ -1,11 +1,13 @@
 {
-  "name": "@wisemapping/fastmind",
-  "version": "1.0.0",
-  "description": "VS Code Extension integration for WiseMapping Editor",
+  "name": "fastmind",
+  "version": "0.1.0",
+  "description": "Fastmind is an open-source VS Code extension that integrates AI-driven mind mapping into your workflow, using large language models to generate context-aware subtopics and improve ideation directly inside the IDE.",
+  "publisher": "bashdeban",
   "main": "dist/extension.js",
-  "files": [
-    "dist/*"
-  ],
+  "icon": "fastmind.png",
+  "markdown": "github",
+  "preview": true,
+  "qna": "marketplace",
   "scripts": {
     "build": "webpack --config webpack.extension.js --mode production",
     "build:extension": "webpack --config webpack.extension.js --mode production",
@@ -15,7 +17,10 @@
     "test": "jest",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/*.{ts,tsx} --fix",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "package": "vsce package",
+    "package:preview": "vsce package --out fastmind.vsix",
+    "publish": "vsce publish"
   },
   "dependencies": {
     "vscode-uri": "^3.0.8"
@@ -27,6 +32,7 @@
     "@types/vscode": "^1.75.0",
     "@typescript-eslint/eslint-plugin": "^8.47.0",
     "@typescript-eslint/parser": "^8.47.0",
+    "@vscode/vsce": "^3.7.1",
     "concurrently": "^9.1.0",
     "copy-webpack-plugin": "^13.0.1",
     "eslint": "^9.38.0",
@@ -48,7 +54,9 @@
     "onCustomEditor:fastmind.viewer"
   ],
   "categories": [
-    "Other"
+    "Visualization",
+    "Other",
+    "Education"
   ],
   "contributes": {
     "languages": [
@@ -107,23 +115,23 @@
   },
   "license": "WiseMapping Public License 1.0",
   "author": {
-    "name": "WiseMapping Team",
-    "email": "team@wisemapping.com"
+    "name": "bashdeban",
+    "email": "bashdeban@gmail.com"
   },
   "keywords": [
     "wisemapping",
     "mindmapping",
+    "fastmind",
     "vscode",
     "extension",
     "editor"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wisemapping/wisemapping-frontend",
-    "directory": "packages/fastmind"
+    "url": "https://github.com/bashdeban/fastmind"
   },
   "bugs": {
-    "url": "https://github.com/wisemapping/wisemapping-frontend/issues"
+    "url": "https://github.com/bashdeban/fastmind/issues"
   },
-  "homepage": "https://www.wisemapping.com"
+  "homepage": "https://github.com/bashdeban/fastmind"
 }
