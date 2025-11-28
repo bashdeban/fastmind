@@ -120,10 +120,19 @@ const TopicIconEditor = ({ closeModal, iconModel }: TopicIconEditorProps): React
         {tabValue === 0 && (
           <Box
             sx={{
-              width: 'clamp(240px, 85vw, 320px)',
+              width: '100%',
+              maxWidth: '460px',
               height: 'clamp(280px, 50vh, 350px)',
               overflow: 'hidden',
               backgroundColor: 'background.paper',
+              '& .EmojiPickerReact': {
+                border: 'none !important',
+                boxShadow: 'none !important',
+              },
+              '& div[class*="EmojiPickerReact"]': {
+                border: 'none !important',
+                boxShadow: 'none !important',
+              },
             }}
           >
             <EmojiPicker
@@ -142,9 +151,10 @@ const TopicIconEditor = ({ closeModal, iconModel }: TopicIconEditorProps): React
         {tabValue === 1 && (
           <Box
             sx={{
-              width: 'clamp(240px, 85vw, 320px)',
+              width: '100%',
+              maxWidth: '460px',
               height: 'clamp(280px, 50vh, 350px)',
-              overflow: 'hidden',
+              overflow: 'auto',
               backgroundColor: 'background.paper',
             }}
           >

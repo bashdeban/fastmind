@@ -67,6 +67,14 @@ const IconPicker = ({ triggerClose, iconModel }: IconPickerProp): ReactElement =
             width: 'clamp(240px, 85vw, 320px)',
             height: 'clamp(280px, 50vh, 350px)',
             overflow: 'hidden',
+            '& .EmojiPickerReact': {
+              border: 'none !important',
+              boxShadow: 'none !important',
+            },
+            '& div[class*="EmojiPickerReact"]': {
+              border: 'none !important',
+              boxShadow: 'none !important',
+            },
           }}
         >
           <EmojiPicker

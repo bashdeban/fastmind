@@ -28,9 +28,18 @@ type IconImageTab = {
 };
 const IconImageTab = ({ iconModel }: IconImageTab): ReactElement => {
   return (
-    <Box sx={{ width: '450px' }}>
+    <Box 
+      sx={{ 
+        width: '100%',
+        padding: '8px',
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '4px',
+        alignItems: 'flex-start'
+      }}
+    >
       {iconGroups.map((family, i) => (
-        <span key={i}>
+        <Box key={i} sx={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginBottom: '8px' }}>
           {family.icons.map((icon: string) => (
             <SvgIcon
               key={icon}
@@ -45,7 +54,7 @@ const IconImageTab = ({ iconModel }: IconImageTab): ReactElement => {
               }}
             />
           ))}
-        </span>
+        </Box>
       ))}
     </Box>
   );

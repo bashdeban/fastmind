@@ -153,6 +153,14 @@ const TopicImagePicker = ({
               height: 'clamp(280px, 50vh, 350px)',
               overflow: 'hidden',
               backgroundColor: 'background.paper',
+              '& .EmojiPickerReact': {
+                border: 'none !important',
+                boxShadow: 'none !important',
+              },
+              '& div[class*="EmojiPickerReact"]': {
+                border: 'none !important',
+                boxShadow: 'none !important',
+              },
             }}
           >
             <EmojiPicker

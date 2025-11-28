@@ -26,8 +26,9 @@ import { styled } from '@mui/material/styles';
  */
 export const StyledEditorFixedContainer = styled(Box)(({ theme }) => ({
   padding: theme.spacing(1),
-  width: 'clamp(220px, 85vw, 280px)',
-  height: '380px', // Fixed height for EditorBar add note
+  width: 'clamp(220px, 85vw, 480px)',
+  height: '380px',
+  maxHeight: '90vh',
   overflow: 'hidden',
   backgroundColor: theme.palette.background.paper,
   borderRadius: '8px',
