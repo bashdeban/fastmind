@@ -774,8 +774,7 @@ const ImageIconTab: React.FC<ImageIconTabProps> = ({ iconModel, emojiModel }) =>
                 onClick={() => handleIconSelect(iconName)}
                 size="small"
               >
-                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-                {React.createElement(iconMapping.component as React.ComponentType<any>, {
+                {React.createElement(iconMapping.component as React.ComponentType<React.SVGProps<SVGSVGElement>>, {
                   style: { fontSize: 18 },
                 })}
               </StyledIconButton>
@@ -787,15 +786,21 @@ const ImageIconTab: React.FC<ImageIconTabProps> = ({ iconModel, emojiModel }) =>
   );
 
   return (
-    <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+    <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', width: '100%' }}>
       {/* Search Bar */}
-      <Box sx={{ px: 2, pt: 2, pb: 1.5 }}>
+      <Box sx={{ px: 2, pt: 2, pb: 1.5, width: '100%' }}>
         <TextField
           fullWidth
           size="small"
           placeholder="Search icons..."
           value={searchQuery}
           onChange={handleSearchChange}
+          sx={{
+            '& .MuiInputBase-root': {
+              width: '100%',
+              boxSizing: 'border-box',
+            },
+          }}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">

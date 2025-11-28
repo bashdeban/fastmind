@@ -131,12 +131,13 @@ const TopicImagePicker = ({
           display: 'flex',
           flexDirection: 'column',
           backgroundColor: 'background.paper',
+          width: '100%',
         }}
       >
         {tabValue === 0 && (
           <Box
             sx={{
-              width: 'clamp(240px, 85vw, 320px)',
+              width: '100%',
               height: 'clamp(280px, 50vh, 350px)',
               overflow: 'hidden',
               backgroundColor: 'background.paper',
@@ -148,7 +149,7 @@ const TopicImagePicker = ({
         {tabValue === 1 && (
           <Box
             sx={{
-              width: 'clamp(240px, 85vw, 320px)',
+              width: '100%',
               height: 'clamp(280px, 50vh, 350px)',
               overflow: 'hidden',
               backgroundColor: 'background.paper',
