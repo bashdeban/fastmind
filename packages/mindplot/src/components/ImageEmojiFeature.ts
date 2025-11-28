@@ -49,17 +49,20 @@ class ImageEmojiFeature {
 
   setEmojiChar(emojiChar: string | undefined): void {
     const model = this._topic.getModel();
-    model.setImageEmojiChar(emojiChar);
 
-    // If removing emoji, properly clean up the visual elements
-    if (!emojiChar && this._emojiText) {
-      // Remove emoji text from DOM
+    // Always clean up existing emoji text before setting new one
+    if (this._emojiText) {
       const group = this._topic.get2DElement();
-      group.removeChild(this._emojiText);
+      try {
+        group.removeChild(this._emojiText);
+      } catch (e) {
+        // Element might already be removed or not in group
+        console.warn('Error removing emoji text:', e);
+      }
       this._emojiText = undefined;
-    } else {
-      this._emojiText = undefined; // Clear to force rebuild
     }
+
+    model.setImageEmojiChar(emojiChar);
 
     this._emojiRemoveTip = undefined; // Clear remove tip
     this._topic.redraw(this._topic.getThemeVariant(), false);
