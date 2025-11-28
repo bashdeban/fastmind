@@ -115,6 +115,30 @@ class EditorComponent extends EventDispatcher<EditorEventType> {
           }
           break;
         }
+        case 'KeyC': {
+          const keyboardEvent = event as KeyboardEvent;
+          if (keyboardEvent.ctrlKey || keyboardEvent.metaKey) {
+            keyboardEvent.preventDefault();
+            this.handleCopy();
+          }
+          break;
+        }
+        case 'KeyX': {
+          const keyboardEvent = event as KeyboardEvent;
+          if (keyboardEvent.ctrlKey || keyboardEvent.metaKey) {
+            keyboardEvent.preventDefault();
+            this.handleCut();
+          }
+          break;
+        }
+        case 'KeyV': {
+          const keyboardEvent = event as KeyboardEvent;
+          if (keyboardEvent.ctrlKey || keyboardEvent.metaKey) {
+            keyboardEvent.preventDefault();
+            this.handlePaste();
+          }
+          break;
+        }
         default:
           // No actions...
           break;
@@ -272,6 +296,58 @@ class EditorComponent extends EventDispatcher<EditorEventType> {
 
   private getTextareaElem(): HTMLTextAreaElement {
     return DOMUtils.find(this._containerElem, 'textarea')[0] as HTMLTextAreaElement;
+  }
+
+  private handleCopy(): void {
+    const textareaElem = this.getTextareaElem();
+    const selectionStart = textareaElem.selectionStart ?? 0;
+    const selectionEnd = textareaElem.selectionEnd ?? selectionStart;
+    const selectedText = this.getTextAreaText().substring(selectionStart, selectionEnd);
+
+    if (selectedText) {
+      navigator.clipboard.writeText(selectedText);
+    }
+  }
+
+  private handleCut(): void {
+    const textareaElem = this.getTextareaElem();
+    const selectionStart = textareaElem.selectionStart ?? 0;
+    const selectionEnd = textareaElem.selectionEnd ?? selectionStart;
+    const text = this.getTextAreaText();
+    const selectedText = text.substring(selectionStart, selectionEnd);
+
+    if (selectedText) {
+      navigator.clipboard.writeText(selectedText);
+      const newText = text.substring(0, selectionStart) + text.substring(selectionEnd);
+      this.setText(newText);
+
+      // 设置光标位置
+      textareaElem.focus();
+      textareaElem.setSelectionRange(selectionStart, selectionStart);
+    }
+  }
+
+  private async handlePaste(): Promise<void> {
+    try {
+      const clipboardText = await navigator.clipboard.readText();
+      if (clipboardText) {
+        const textareaElem = this.getTextareaElem();
+        const selectionStart = textareaElem.selectionStart ?? 0;
+        const selectionEnd = textareaElem.selectionEnd ?? selectionStart;
+        const text = this.getTextAreaText();
+
+        const newText = text.substring(0, selectionStart) + clipboardText + text.substring(selectionEnd);
+        this.setText(newText);
+
+        // 设置光标位置
+        const newCursorPosition = selectionStart + clipboardText.length;
+        textareaElem.focus();
+        textareaElem.setSelectionRange(newCursorPosition, newCursorPosition);
+      }
+    } catch {
+      // 如果剪贴板访问失败，fallback 到默认行为
+      console.warn('Clipboard access failed, falling back to default behavior');
+    }
   }
 
   private positionCursor(textareaElem: HTMLTextAreaElement, selectText: boolean) {
