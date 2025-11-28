@@ -46,7 +46,7 @@ class LLMProgressManager {
 
     this.tasks.set(taskId, task);
     this.notifyListeners();
-    
+
     return taskId;
   }
 
@@ -77,7 +77,7 @@ class LLMProgressManager {
       // Auto-remove completed tasks after 3 seconds
       setTimeout(() => {
         this.removeTask(taskId);
-      }, 3000);
+      }, 1000);
     }
   }
 
