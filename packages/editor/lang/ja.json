@@ -2,8 +2,53 @@
   "action.accept": {
     "defaultMessage": "受け入れる"
   },
+  "action.cancel": {
+    "defaultMessage": "キャンセル"
+  },
   "action.delete": {
     "defaultMessage": "削除"
+  },
+  "ai-explainer.error-analyze": {
+    "defaultMessage": "AI説明の分析に失敗しました："
+  },
+  "ai-topic-generator.add-to-mindmap": {
+    "defaultMessage": "マインドマップに追加"
+  },
+  "ai-topic-generator.cancel": {
+    "defaultMessage": "キャンセル"
+  },
+  "ai-topic-generator.count-label": {
+    "defaultMessage": "生成するトピック数：{count}"
+  },
+  "ai-topic-generator.custom-prompt-helper": {
+    "defaultMessage": "AI生成のための追加のコンテキストや要件を提供"
+  },
+  "ai-topic-generator.custom-prompt-label": {
+    "defaultMessage": "カスタムプロンプト（オプション）"
+  },
+  "ai-topic-generator.custom-prompt-placeholder": {
+    "defaultMessage": "例：技術実装の側面に焦点を当てる"
+  },
+  "ai-topic-generator.description": {
+    "defaultMessage": "<strong>{topicText}</strong>に基づいて関連サブトピックを生成"
+  },
+  "ai-topic-generator.error-add": {
+    "defaultMessage": "トピックの追加中にエラーが発生しました"
+  },
+  "ai-topic-generator.error-generate": {
+    "defaultMessage": "AIトピック生成失敗："
+  },
+  "ai-topic-generator.generating": {
+    "defaultMessage": "トピックを生成中です。お待ちください..."
+  },
+  "ai-topic-generator.preview-title": {
+    "defaultMessage": "生成されたトピックのプレビュー："
+  },
+  "ai-topic-generator.regenerate": {
+    "defaultMessage": "再生成"
+  },
+  "ai-topic-generator.title": {
+    "defaultMessage": "AIトピック生成器"
   },
   "appbar.back-to-map-list": {
     "defaultMessage": "マップリストに戻る"
@@ -11,8 +56,20 @@
   "appbar.button-signup": {
     "defaultMessage": "サインアップ"
   },
+  "appbar.error-saving-title": {
+    "defaultMessage": "タイトルの保存エラー："
+  },
+  "appbar.logo-aria-label": {
+    "defaultMessage": "WiseMapping"
+  },
   "appbar.shared-button": {
     "defaultMessage": "共有"
+  },
+  "appbar.title-renamed": {
+    "defaultMessage": "マインドマップがリネームされました"
+  },
+  "appbar.tooltip-change-layout": {
+    "defaultMessage": "レイアウト"
   },
   "appbar.tooltip-export": {
     "defaultMessage": "エクスポート"
@@ -32,8 +89,14 @@
   "appbar.tooltip-redo": {
     "defaultMessage": "やり直し"
   },
+  "appbar.tooltip-rename": {
+    "defaultMessage": "リネーム"
+  },
   "appbar.tooltip-save": {
     "defaultMessage": "保存"
+  },
+  "appbar.tooltip-settings": {
+    "defaultMessage": "設定"
   },
   "appbar.tooltip-shared": {
     "defaultMessage": "コラボレーション用に共有"
@@ -44,32 +107,80 @@
   "appbar.tooltip-starred": {
     "defaultMessage": "お気に入り"
   },
+  "appbar.tooltip-theme": {
+    "defaultMessage": "テーマ"
+  },
+  "appbar.tooltip-theme-toggle": {
+    "defaultMessage": "テーマの切り替え"
+  },
   "appbar.tooltip-undo": {
     "defaultMessage": "元に戻す"
   },
-  "outline.empty": {
-    "defaultMessage": "表示するコンテンツがありません"
+  "canvas-style.background-color": {
+    "defaultMessage": "背景色"
   },
-  "outline.expand": {
-    "defaultMessage": "展開"
+  "canvas-style.background-style": {
+    "defaultMessage": "背景スタイル"
   },
-  "outline.collapse": {
-    "defaultMessage": "折りたたむ"
+  "canvas-style.grid-color": {
+    "defaultMessage": "グリッド色"
   },
-  "outline.has-note": {
-    "defaultMessage": "ノートがあります"
+  "canvas-style.grid-size-l": {
+    "defaultMessage": "大"
   },
-  "outline.link": {
-    "defaultMessage": "リンク"
+  "canvas-style.grid-size-m": {
+    "defaultMessage": "中"
   },
-  "outline.note": {
-    "defaultMessage": "ノート"
+  "canvas-style.grid-size-s": {
+    "defaultMessage": "小"
   },
-  "editor-panel.icon-title": {
-    "defaultMessage": "アイコン"
+  "canvas-style.grid-size-xl": {
+    "defaultMessage": "特大"
   },
-  "editor-panel.link-panel-title": {
-    "defaultMessage": "リンク"
+  "canvas-style.grid-size-xs": {
+    "defaultMessage": "特小"
+  },
+  "canvas-style.grid-style": {
+    "defaultMessage": "グリッドサイズ"
+  },
+  "canvas-style.pattern-default-tooltip": {
+    "defaultMessage": "デフォルト - すべてのスタイルはテーマに基づいて自動的に選択されます"
+  },
+  "canvas-style.pattern-dots": {
+    "defaultMessage": "ドット"
+  },
+  "canvas-style.pattern-grid": {
+    "defaultMessage": "グリッド"
+  },
+  "canvas-style.pattern-solid": {
+    "defaultMessage": "ソリッド"
+  },
+  "canvas-style.tab-color": {
+    "defaultMessage": "色"
+  },
+  "canvas-style.tab-grid": {
+    "defaultMessage": "グリッド色"
+  },
+  "color-picker.color": {
+    "defaultMessage": "色"
+  },
+  "color-picker.default-color": {
+    "defaultMessage": "デフォルト色"
+  },
+  "common.close": {
+    "defaultMessage": "閉じる"
+  },
+  "creator-info-pane.creator": {
+    "defaultMessage": "作成者"
+  },
+  "creator-info-pane.description": {
+    "defaultMessage": "説明"
+  },
+  "editor-panel.font-family-default": {
+    "defaultMessage": "デフォルト"
+  },
+  "editor-panel.font-family-mixed": {
+    "defaultMessage": "混合"
   },
   "editor-panel.note-panel-title": {
     "defaultMessage": "ノート"
@@ -89,77 +200,29 @@
   "editor-panel.tooltip-add-topic": {
     "defaultMessage": "トピックを追加"
   },
-  "editor-panel.tooltip-connection-color": {
-    "defaultMessage": "色"
+  "editor-panel.tooltip-add-topic-image": {
+    "defaultMessage": "トピック画像を追加"
   },
-  "editor-panel.tooltip-connection-color-default": {
-    "defaultMessage": "デフォルト色"
+  "editor-panel.tooltip-ai-explainer": {
+    "defaultMessage": "AI説明ツール"
   },
-  "editor-panel.tooltip-connection-style": {
-    "defaultMessage": "接続スタイル"
+  "editor-panel.tooltip-ai-topic-generator": {
+    "defaultMessage": "AIトピック生成器"
   },
-  "editor-panel.tooltip-connection-style-curved-thick": {
-    "defaultMessage": "太い曲線"
-  },
-  "editor-panel.tooltip-connection-style-curved-thin": {
-    "defaultMessage": "細い曲線"
-  },
-  "editor-panel.tooltip-connection-style-polyline": {
-    "defaultMessage": "シンプルなポリライン"
-  },
-  "editor-panel.tooltip-connection-style-polyline-curved": {
-    "defaultMessage": "曲線ポリライン"
+  "editor-panel.tooltip-canvas-style": {
+    "defaultMessage": "背景"
   },
   "editor-panel.tooltip-delete-topic": {
     "defaultMessage": "トピックを削除"
   },
-  "editor-panel.tooltip-topic-border-color": {
-    "defaultMessage": "境界線の色"
-  },
-  "editor-panel.tooltip-topic-border-color-default": {
-    "defaultMessage": "デフォルト境界線色"
-  },
-  "editor-panel.tooltip-topic-fill-color": {
-    "defaultMessage": "塗りつぶし色"
-  },
-  "editor-panel.tooltip-topic-fill-color-default": {
-    "defaultMessage": "デフォルト塗りつぶし色"
-  },
-  "editor-panel.tooltip-topic-font-bigger": {
-    "defaultMessage": "大きく"
-  },
-  "editor-panel.tooltip-topic-font-bold": {
-    "defaultMessage": "太字"
-  },
-  "editor-panel.tooltip-topic-font-color": {
-    "defaultMessage": "色"
-  },
-  "editor-panel.tooltip-topic-font-color-default": {
-    "defaultMessage": "デフォルト色"
-  },
-  "editor-panel.tooltip-topic-font-italic": {
-    "defaultMessage": "斜体"
-  },
-  "editor-panel.tooltip-topic-font-smaller": {
-    "defaultMessage": "小さく"
+  "editor-panel.tooltip-relationship-style": {
+    "defaultMessage": "関係スタイル"
   },
   "editor-panel.tooltip-topic-font-style": {
     "defaultMessage": "フォントスタイル"
   },
-  "editor-panel.tooltip-topic-share-ellipse": {
-    "defaultMessage": "楕円形"
-  },
-  "editor-panel.tooltip-topic-share-line": {
-    "defaultMessage": "線形"
-  },
-  "editor-panel.tooltip-topic-share-rectangle": {
-    "defaultMessage": "矩形"
-  },
-  "editor-panel.tooltip-topic-share-rounded": {
-    "defaultMessage": "角丸形"
-  },
-  "editor-panel.tooltip-topic-style": {
-    "defaultMessage": "トピックスタイル"
+  "editor-panel.tooltip-unified-styling": {
+    "defaultMessage": "トピックと接続のスタイル"
   },
   "editor.edit-description-mobile": {
     "defaultMessage": "モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。完全なエディター機能にはデスクトップブラウザを使用してください。"
@@ -176,14 +239,275 @@
   "editor.try-welcome-mobile": {
     "defaultMessage": "この編集スペースでは、マインドマップエディターの機能の一部をご紹介しています！"
   },
+  "emoji-picker.search-placeholder": {
+    "defaultMessage": "絵文字を検索..."
+  },
+  "export.dialog.cancel": {
+    "defaultMessage": "キャンセル"
+  },
+  "export.dialog.clipboard-success": {
+    "defaultMessage": "内容がクリップボードにコピーされました！"
+  },
+  "export.dialog.error-generic": {
+    "defaultMessage": "エクスポートに失敗しました。後でもう一度お試しください。"
+  },
+  "export.dialog.export": {
+    "defaultMessage": "エクスポート"
+  },
+  "export.dialog.exporting": {
+    "defaultMessage": "エクスポート中..."
+  },
+  "export.dialog.title": {
+    "defaultMessage": "マインドマップをエクスポート"
+  },
+  "export.format.md.description": {
+    "defaultMessage": "Markdown形式 - ドキュメント作成とバージョン管理に適しており、GitHubなどのプラットフォームをサポート"
+  },
+  "export.format.recommended": {
+    "defaultMessage": "推奨"
+  },
+  "export.format.svg.description": {
+    "defaultMessage": "スケーラブルベクターグラフィックス - ベクターグラフィック、無限にスケーラブル、ファイルサイズが小さい"
+  },
+  "export.format.wxml.description": {
+    "defaultMessage": "WiseMapping XML - ネイティブ形式、すべての編集機能を保持、再インポートして編集可能"
+  },
+  "icon-collection.border.dashed": {
+    "defaultMessage": "破線"
+  },
+  "icon-collection.border.default": {
+    "defaultMessage": "デフォルト"
+  },
+  "icon-collection.border.dotted": {
+    "defaultMessage": "点線"
+  },
+  "icon-collection.border.solid": {
+    "defaultMessage": "実線"
+  },
+  "icon-collection.connection.arc": {
+    "defaultMessage": "アーク"
+  },
+  "icon-collection.connection.arc-tooltip": {
+    "defaultMessage": "円弧接続 - 放射状レイアウトと有機的な流れに最適"
+  },
+  "icon-collection.connection.curved-polyline": {
+    "defaultMessage": "曲線ポリライン"
+  },
+  "icon-collection.connection.curved-polyline-tooltip": {
+    "defaultMessage": "滑らかなコーナーを持つ多セグメントライン - 構造化されたレイアウトと明確なパスに最適"
+  },
+  "icon-collection.connection.default": {
+    "defaultMessage": "デフォルト"
+  },
+  "icon-collection.connection.default-tooltip": {
+    "defaultMessage": "デフォルト - 接続スタイルはテーマに基づいて自動的に選択されます"
+  },
+  "icon-collection.connection.organic-curved": {
+    "defaultMessage": "有機曲線"
+  },
+  "icon-collection.connection.organic-curved-tooltip": {
+    "defaultMessage": "劇的な曲線を持つ手描きスタイル - 創造的で表現力豊かなマインドマップに最適"
+  },
+  "icon-collection.connection.simple-polyline": {
+    "defaultMessage": "シンプルなポリライン"
+  },
+  "icon-collection.connection.simple-polyline-tooltip": {
+    "defaultMessage": "直接直線接続 - シンプルな関係のためのクリーンでミニマリストスタイル"
+  },
+  "icon-collection.connection.thick-curved": {
+    "defaultMessage": "太い曲線"
+  },
+  "icon-collection.connection.thick-curved-tooltip": {
+    "defaultMessage": "滑らかなベジェ曲線を持つ太い曲線 - メインブランチを強調するのに最適"
+  },
+  "icon-collection.connection.thin-curved": {
+    "defaultMessage": "細い曲線"
+  },
+  "icon-collection.connection.thin-curved-tooltip": {
+    "defaultMessage": "エレガントなベジェ曲線を持つ細い曲線 - 詳細または密集したマインドマップに最適"
+  },
+  "icon-collection.default-tooltip": {
+    "defaultMessage": "デフォルト - すべてのスタイルはテーマに基づいて自動的に選択されます"
+  },
+  "icon-collection.shape.default": {
+    "defaultMessage": "デフォルト"
+  },
+  "icon-collection.shape.ellipse": {
+    "defaultMessage": "楕円"
+  },
+  "icon-collection.shape.line": {
+    "defaultMessage": "ライン"
+  },
+  "icon-collection.shape.none": {
+    "defaultMessage": "なし"
+  },
+  "icon-collection.shape.none-tooltip": {
+    "defaultMessage": "なし - 可視的な形状背景なし"
+  },
+  "icon-collection.shape.rectangle": {
+    "defaultMessage": "矩形"
+  },
+  "icon-collection.shape.rounded": {
+    "defaultMessage": "角丸"
+  },
+  "icon-picker.emojis": {
+    "defaultMessage": "絵文字"
+  },
+  "icon-picker.icons": {
+    "defaultMessage": "アイコンギャラリー"
+  },
   "icon-picker.show-images": {
     "defaultMessage": "画像を表示"
+  },
+  "information-dialog.close": {
+    "defaultMessage": "閉じる"
+  },
+  "information-dialog.fastmind-description": {
+    "defaultMessage": "FastMindはWiseMappingベースのVS Code拡張機能で、開発者向けの強力なマインドマップ機能を提供します。AI駆動のトピック生成、OpenAI API互換モデル統合、AI生成コンテンツのインテリジェント重複排除、VS Codeネイティブファイルシステム統合、その他高度な機能を統合し、開発者がアイデアをより良く整理・視覚化できるように支援します。"
+  },
+  "information-dialog.fastmind-title": {
+    "defaultMessage": "FastMind VS Code拡張機能"
+  },
+  "information-dialog.feature-ai": {
+    "defaultMessage": "AI駆動のトピック生成"
+  },
+  "information-dialog.feature-api-integration": {
+    "defaultMessage": "OpenAI API互換モデル統合"
+  },
+  "information-dialog.feature-deduplication": {
+    "defaultMessage": "AI生成コンテンツのインテリジェント重複排除"
+  },
+  "information-dialog.feature-vscode-integration": {
+    "defaultMessage": "VS Codeネイティブファイルシステム統合"
+  },
+  "information-dialog.features-title": {
+    "defaultMessage": "主な機能："
+  },
+  "information-dialog.powered-by": {
+    "defaultMessage": "技術提供"
+  },
+  "information-dialog.title": {
+    "defaultMessage": "情報"
+  },
+  "layout-selector.accept": {
+    "defaultMessage": "受け入れる"
+  },
+  "layout-selector.cancel": {
+    "defaultMessage": "キャンセル"
+  },
+  "layout-selector.description": {
+    "defaultMessage": "レイアウトは、マインドマップ内のトピックの整理と接続方法を定義します。コンテンツ構造に最適なレイアウトを選択してください。"
+  },
+  "layout-selector.title": {
+    "defaultMessage": "レイアウトを選択"
+  },
+  "layout.mindmap.description": {
+    "defaultMessage": "水平レイアウトで、両側にバランスの取れたブランチ。従来のマインドマッピングとブレインストーミングに最適。"
+  },
+  "layout.mindmap.name": {
+    "defaultMessage": "マインドマップ"
+  },
+  "layout.tree.description": {
+    "defaultMessage": "上から下へ流れる垂直階層。組織図や階層構造に最適。"
+  },
+  "layout.tree.name": {
+    "defaultMessage": "ツリー"
   },
   "link.help_text": {
     "defaultMessage": "アドレスが無効です"
   },
   "link.placeholder": {
     "defaultMessage": "https://www.example.com"
+  },
+  "llm-connection-test.console-logs": {
+    "defaultMessage": "詳細ログはブラウザコンソールを開いてください"
+  },
+  "llm-connection-test.close": {
+    "defaultMessage": "閉じる"
+  },
+  "outline.collapse": {
+    "defaultMessage": "折りたたむ"
+  },
+  "outline.empty": {
+    "defaultMessage": "表示するコンテンツがありません"
+  },
+  "outline.expand": {
+    "defaultMessage": "展開"
+  },
+  "outline.has-note": {
+    "defaultMessage": "ノートがあります"
+  },
+  "outline.link": {
+    "defaultMessage": "リンク"
+  },
+  "outline.note": {
+    "defaultMessage": "ノート"
+  },
+  "relationship-style-editor.color": {
+    "defaultMessage": "関係の色"
+  },
+  "relationship-style-editor.dashed-line": {
+    "defaultMessage": "破線"
+  },
+  "relationship-style-editor.dashed-line-tooltip": {
+    "defaultMessage": "破線スタイル"
+  },
+  "relationship-style-editor.dotted-line": {
+    "defaultMessage": "点線"
+  },
+  "relationship-style-editor.dotted-line-tooltip": {
+    "defaultMessage": "点線スタイル"
+  },
+  "relationship-style-editor.end-arrow": {
+    "defaultMessage": "終了矢印"
+  },
+  "relationship-style-editor.end-arrow-tooltip": {
+    "defaultMessage": "終了矢印を切り替え"
+  },
+  "relationship-style-editor.line-arrows": {
+    "defaultMessage": "線のスタイルと矢印"
+  },
+  "relationship-style-editor.solid-line": {
+    "defaultMessage": "実線"
+  },
+  "relationship-style-editor.solid-line-tooltip": {
+    "defaultMessage": "実線スタイル"
+  },
+  "relationship-style-editor.start-arrow": {
+    "defaultMessage": "開始矢印"
+  },
+  "relationship-style-editor.start-arrow-tooltip": {
+    "defaultMessage": "開始矢印を切り替え"
+  },
+  "settings.ai-explainer-title": {
+    "defaultMessage": "AI説明ツール（ユーザー定義プロンプト）"
+  },
+  "settings.ai-topic-generator-title": {
+    "defaultMessage": "AIトピック生成器（ユーザー定義プロンプト）"
+  },
+  "settings.current-model": {
+    "defaultMessage": "現在のモデル：{modelName}"
+  },
+  "settings.deduplication": {
+    "defaultMessage": "重複排除"
+  },
+  "settings.description": {
+    "defaultMessage": "AIモデル設定を構成し、トピック生成と概念説明のためのプロンプトをカスタマイズします。"
+  },
+  "settings.explainer-placeholder": {
+    "defaultMessage": "概念説明のためのカスタムプロンプトを入力..."
+  },
+  "settings.model-api-management": {
+    "defaultMessage": "モデルAPI管理"
+  },
+  "settings.no-model": {
+    "defaultMessage": "モデルが設定されていません"
+  },
+  "settings.title": {
+    "defaultMessage": "設定"
+  },
+  "settings.topic-generator-placeholder": {
+    "defaultMessage": "トピック生成のためのカスタムプロンプトを入力..."
   },
   "shortcut-help-pane.action": {
     "defaultMessage": "アクション"
@@ -212,9 +536,6 @@
   "shortcut-help-pane.collapse-children": {
     "defaultMessage": "子要素を折りたたむ"
   },
-  "shortcut-help-pane.copy-and-text": {
-    "defaultMessage": "トピックをコピー＆ペースト/マインドマップ画像をクリップボードにコピー。"
-  },
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "トピックを削除"
   },
@@ -233,11 +554,20 @@
   "shortcut-help-pane.edit-topic-key": {
     "defaultMessage": "F2またはダブルクリック"
   },
+  "shortcut-help-pane.expand-by-level": {
+    "defaultMessage": "レベルでトピックを展開"
+  },
+  "shortcut-help-pane.expand-collapse-all": {
+    "defaultMessage": "すべてのトピックを展開/折りたたむ"
+  },
   "shortcut-help-pane.navigation": {
     "defaultMessage": "ナビゲーション"
   },
   "shortcut-help-pane.navigation-keys": {
     "defaultMessage": "矢印キー"
+  },
+  "shortcut-help-pane.outline-view": {
+    "defaultMessage": "アウトラインビューを開く"
   },
   "shortcut-help-pane.overwrite-edit-topic": {
     "defaultMessage": "トピックテキストを上書き"
@@ -263,383 +593,14 @@
   "shortcut-help-pane.undo": {
     "defaultMessage": "編集を元に戻す"
   },
-  "zoom-panel.tooltip-keyboard": {
-    "defaultMessage": "キーボードショートカット"
-  },
-  "zoom-panel.tooltip-zoom-in": {
+  "shortcut-help-pane.zoom-in": {
     "defaultMessage": "ズームイン"
   },
-  "zoom-panel.tooltip-zoom-out": {
+  "shortcut-help-pane.zoom-out": {
     "defaultMessage": "ズームアウト"
   },
-  "zoom-panel.tooltip-zoom-to-fit": {
-    "defaultMessage": "フィット"
-  },
-  "creator-info-pane.description": {
-    "defaultMessage": "説明"
-  },
-  "creator-info-pane.creator": {
-    "defaultMessage": "作成者"
-  },
-  "theme.dark": {
-    "defaultMessage": "ダーク"
-  },
-  "theme.light": {
-    "defaultMessage": "ライト"
-  },
-  "theme.toggle": {
-    "defaultMessage": "テーマ切り替え"
-  },
-  "rich-text-editor.insert-link": {
-    "defaultMessage": "リンクを挿入"
-  },
-  "rich-text-editor.insert-icon": {
-    "defaultMessage": "アイコンを挿入"
-  },
-  "rich-text-editor.bold": {
-    "defaultMessage": "太字"
-  },
-  "rich-text-editor.italic": {
-    "defaultMessage": "斜体"
-  },
-  "rich-text-editor.underline": {
-    "defaultMessage": "下線"
-  },
-  "rich-text-editor.strikethrough": {
-    "defaultMessage": "取り消し線"
-  },
-  "rich-text-editor.bullet-list": {
-    "defaultMessage": "箇条書きリスト"
-  },
-  "rich-text-editor.numbered-list": {
-    "defaultMessage": "番号付きリスト"
-  },
-  "image-icon-tab.icon-found": {
-    "defaultMessage": "アイコンが見つかりました"
-  },
-  "image-icon-tab.icons-found": {
-    "defaultMessage": "アイコンが見つかりました"
-  },
-  "image-icon-tab.icons": {
-    "defaultMessage": "アイコン"
-  },
-  "common.close": {
-    "defaultMessage": "閉じる"
-  },
-  "canvas-style.apply": {
-    "defaultMessage": "適用"
-  },
-  "canvas-style.background-color": {
-    "defaultMessage": "背景色"
-  },
-  "canvas-style.background-pattern": {
-    "defaultMessage": "背景パターン"
-  },
-  "canvas-style.colors": {
-    "defaultMessage": "色"
-  },
-  "canvas-style.grid-color": {
-    "defaultMessage": "グリッド色"
-  },
-  "canvas-style.grid-size-l": {
-    "defaultMessage": "大"
-  },
-  "canvas-style.grid-size-m": {
-    "defaultMessage": "中"
-  },
-  "canvas-style.grid-size-s": {
-    "defaultMessage": "小"
-  },
-  "canvas-style.grid-size-xl": {
-    "defaultMessage": "極大"
-  },
-  "canvas-style.grid-size-xs": {
-    "defaultMessage": "極小"
-  },
-  "canvas-style.grid-style": {
-    "defaultMessage": "グリッドスタイル"
-  },
-  "canvas-style.pattern-dots": {
-    "defaultMessage": "ドット"
-  },
-  "canvas-style.pattern-grid": {
-    "defaultMessage": "グリッドライン"
-  },
-  "canvas-style.pattern-none": {
-    "defaultMessage": "なし"
-  },
-  "canvas-style.pattern-solid": {
-    "defaultMessage": "ソリッドカラー"
-  },
-  "canvas-style.preview": {
-    "defaultMessage": "プレビュー"
-  },
-  "canvas-style.reset": {
-    "defaultMessage": "リセット"
-  },
-  "canvas-style.title": {
-    "defaultMessage": "背景"
-  },
-  "editor-panel.canvas-style-title": {
-    "defaultMessage": "背景"
-  },
-  "editor-panel.font-family-default": {
-    "defaultMessage": "デフォルト"
-  },
-  "editor-panel.font-family-mixed": {
-    "defaultMessage": "混合"
-  },
-  "editor-panel.theme-title": {
-    "defaultMessage": "テーマ"
-  },
-  "editor-panel.tooltip-canvas-style": {
-    "defaultMessage": "背景"
-  },
-  "editor-panel.tooltip-theme": {
-    "defaultMessage": "テーマ"
-  },
-  "emoji-picker.search-placeholder": {
-    "defaultMessage": "絵文字を検索..."
-  },
-  "zoom-panel.tooltip-collapse-all": {
-    "defaultMessage": "すべてのノードを折りたたむ"
-  },
-  "zoom-panel.tooltip-expand-all": {
-    "defaultMessage": "すべてのノードを展開"
-  },
-  "zoom-panel.tooltip-outline-view": {
-    "defaultMessage": "アウトラインビュー"
-  },
-  "editor-panel.tooltip-add-topic-image": {
-    "defaultMessage": "トピック画像を追加"
-  },
-  "editor-panel.topic-image-title": {
-    "defaultMessage": "トピック画像"
-  },
-  "app-bar-title": {
-    "defaultMessage": "マインドマップエディター"
-  },
-  "appbar.error-saving-title": {
-    "defaultMessage": "保存エラー"
-  },
-  "appbar.logo-aria-label": {
-    "defaultMessage": "WiseMappingロゴ"
-  },
-  "appbar.theme-title": {
-    "defaultMessage": "テーマ"
-  },
-  "appbar.title-renamed": {
-    "defaultMessage": "マインドマップがリネームされました"
-  },
-  "appbar.tooltip-rename": {
-    "defaultMessage": "リネーム"
-  },
-  "appbar.tooltip-theme": {
-    "defaultMessage": "テーマ"
-  },
-  "classic": {
-    "defaultMessage": "クラシック"
-  },
-  "demo-simple-select": {
-    "defaultMessage": "選択"
-  },
-  "divider": {
-    "defaultMessage": "区切り"
-  },
-  "editor-panel.tooltip-connection-style-arc": {
-    "defaultMessage": "アーク"
-  },
-  "editor-panel.tooltip-relationship-arrow-end": {
-    "defaultMessage": "終了矢印"
-  },
-  "editor-panel.tooltip-relationship-arrow-start": {
-    "defaultMessage": "開始矢印"
-  },
-  "editor-panel.tooltip-relationship-color": {
-    "defaultMessage": "色"
-  },
-  "editor-panel.tooltip-relationship-color-default": {
-    "defaultMessage": "デフォルト色"
-  },
-  "editor-panel.tooltip-relationship-stroke-dashed": {
-    "defaultMessage": "破線"
-  },
-  "editor-panel.tooltip-relationship-stroke-dotted": {
-    "defaultMessage": "点線"
-  },
-  "editor-panel.tooltip-relationship-stroke-solid": {
-    "defaultMessage": "実線"
-  },
-  "editor-panel.tooltip-relationship-style": {
-    "defaultMessage": "関係スタイル"
-  },
-  "editor-panel.tooltip-unified-styling": {
-    "defaultMessage": "トピックと接続のスタイル"
-  },
-  "color-picker.color": {
-    "defaultMessage": "Color"
-  },
-  "color-picker.default-color": {
-    "defaultMessage": "Default color"
-  },
-  "relationship-style-editor.color": {
-    "defaultMessage": "関係の色"
-  },
-  "relationship-style-editor.line-arrows": {
-    "defaultMessage": "線のスタイルと矢印"
-  },
-  "relationship-style-editor.solid-line": {
-    "defaultMessage": "Solid Line"
-  },
-  "relationship-style-editor.solid-line-tooltip": {
-    "defaultMessage": "Solid line style"
-  },
-  "relationship-style-editor.dashed-line": {
-    "defaultMessage": "Dashed Line"
-  },
-  "relationship-style-editor.dashed-line-tooltip": {
-    "defaultMessage": "Dashed line style"
-  },
-  "relationship-style-editor.dotted-line": {
-    "defaultMessage": "Dotted Line"
-  },
-  "relationship-style-editor.dotted-line-tooltip": {
-    "defaultMessage": "Dotted line style"
-  },
-  "relationship-style-editor.end-arrow": {
-    "defaultMessage": "End Arrow"
-  },
-  "relationship-style-editor.end-arrow-tooltip": {
-    "defaultMessage": "Toggle end arrow"
-  },
-  "relationship-style-editor.start-arrow": {
-    "defaultMessage": "Start Arrow"
-  },
-  "relationship-style-editor.start-arrow-tooltip": {
-    "defaultMessage": "Toggle start arrow"
-  },
-  "topic-font-editor.font-color": {
-    "defaultMessage": "フォントの色"
-  },
-  "topic-font-editor.font-family": {
-    "defaultMessage": "フォントファミリー"
-  },
-  "topic-font-editor.font-size-style": {
-    "defaultMessage": "フォントサイズとスタイル"
-  },
-  "topic-font-editor.increase-size": {
-    "defaultMessage": "Bigger"
-  },
-  "topic-font-editor.increase-size-tooltip": {
-    "defaultMessage": "Increase font size"
-  },
-  "topic-font-editor.decrease-size": {
-    "defaultMessage": "Smaller"
-  },
-  "topic-font-editor.decrease-size-tooltip": {
-    "defaultMessage": "Decrease font size"
-  },
-  "topic-font-editor.bold": {
-    "defaultMessage": "Bold"
-  },
-  "topic-font-editor.bold-tooltip": {
-    "defaultMessage": "Toggle bold"
-  },
-  "topic-font-editor.italic": {
-    "defaultMessage": "Italic"
-  },
-  "topic-font-editor.italic-tooltip": {
-    "defaultMessage": "Toggle italic"
-  },
-  "topic-font-editor.active": {
-    "defaultMessage": "active"
-  },
-  "editor-panel.tooltip-topic-share-none": {
-    "defaultMessage": "形状なし"
-  },
-  "headerNotifier": {
-    "defaultMessage": "ヘッダー通知"
-  },
-  "icon-collection.shape.none": {
-    "defaultMessage": "None"
-  },
-  "icon-collection.shape.none-tooltip": {
-    "defaultMessage": "None - No visible shape background"
-  },
-  "icon-collection.shape.line": {
-    "defaultMessage": "Line"
-  },
-  "icon-collection.shape.rectangle": {
-    "defaultMessage": "Rectangle"
-  },
-  "icon-collection.shape.rounded": {
-    "defaultMessage": "Rounded"
-  },
-  "icon-collection.shape.ellipse": {
-    "defaultMessage": "Ellipse"
-  },
-  "icon-collection.border.solid": {
-    "defaultMessage": "Solid"
-  },
-  "icon-collection.border.dashed": {
-    "defaultMessage": "Dashed"
-  },
-  "icon-collection.border.dotted": {
-    "defaultMessage": "Dotted"
-  },
-  "icon-collection.connection.thick-curved": {
-    "defaultMessage": "Thick Curved"
-  },
-  "icon-collection.connection.arc": {
-    "defaultMessage": "Arc"
-  },
-  "icon-collection.connection.organic-curved": {
-    "defaultMessage": "有機曲線"
-  },
-  "icon-collection.connection.organic-curved-tooltip": {
-    "defaultMessage": "手描きスタイルで劇的な曲線 - 創造的で表現力豊かなマインドマップに最適"
-  },
-  "icon-collection.connection.thin-curved": {
-    "defaultMessage": "Thin Curved"
-  },
-  "icon-collection.connection.simple-polyline": {
-    "defaultMessage": "Simple Polyline"
-  },
-  "icon-collection.connection.simple-polyline-tooltip": {
-    "defaultMessage": "Direct straight line connection - Clean and minimalist style for simple relationships"
-  },
-  "icon-collection.connection.curved-polyline": {
-    "defaultMessage": "Curved Polyline"
-  },
-  "icon-picker.emojis": {
-    "defaultMessage": "絵文字"
-  },
-  "icon-picker.icons": {
-    "defaultMessage": "アイコンギャラリー"
-  },
-  "mindmap-comp": {
-    "defaultMessage": "マインドマップコンポーネント"
-  },
-  "note.character.count": {
-    "defaultMessage": "{remaining} 残り"
-  },
-  "note.character.limit.warning": {
-    "defaultMessage": "(制限に近づいています)"
-  },
-  "ocean": {
-    "defaultMessage": "オーシャン"
-  },
-  "popover": {
-    "defaultMessage": "ポップオーバー"
-  },
-  "prism": {
-    "defaultMessage": "プリズム"
-  },
-  "robot": {
-    "defaultMessage": "ロボット"
-  },
-  "sunrise": {
-    "defaultMessage": "日の出"
+  "shortcut-help-pane.zoom-to-fit": {
+    "defaultMessage": "フィット表示"
   },
   "theme-editor.accept": {
     "defaultMessage": "テーマを適用"
@@ -654,34 +615,40 @@
     "defaultMessage": "テーマを選択"
   },
   "theme.classic.description": {
-    "defaultMessage": "Clean and professional design with blue accents. Perfect for business presentations and formal documents."
+    "defaultMessage": "青いアクセントを持つクリーンでプロフェッショナルなデザイン。ビジネスプレゼンテーションとフォーマルドキュメントに最適。"
   },
   "theme.classic.name": {
     "defaultMessage": "クラシック"
   },
+  "theme.dark": {
+    "defaultMessage": "ダーク"
+  },
+  "theme.light": {
+    "defaultMessage": "ライト"
+  },
   "theme.ocean.description": {
-    "defaultMessage": "Ocean-inspired blue theme with light/dark variants. Calm and professional colors perfect for business and creative projects."
+    "defaultMessage": "明暗バリアントを持つ海洋インスパイアの青テーマ。ビジネスとクリエイティブプロジェクトに最適な穏やかでプロフェッショナルな色。"
   },
   "theme.ocean.name": {
     "defaultMessage": "オーシャン"
   },
   "theme.robot.description": {
-    "defaultMessage": "Tech-inspired green theme. Perfect for technical documentation and futuristic presentations."
+    "defaultMessage": "テクノロジーインスパイアの緑テーマ。技術ドキュメントと未来的プレゼンテーションに最適。"
   },
   "theme.robot.name": {
     "defaultMessage": "ロボット"
   },
   "theme.summer.description": {
-    "defaultMessage": "Bright and vibrant orange theme. Great for creative projects and energetic presentations."
+    "defaultMessage": "明るく活気のあるオレンジテーマ。クリエイティブプロジェクトとエネルギッシュなプレゼンテーションに最適。"
   },
   "theme.summer.name": {
     "defaultMessage": "サマー"
   },
   "theme.sunrise.description": {
-    "defaultMessage": "Sunrise theme with light/dark mode variants. Enhanced colors and contrast for better readability."
+    "defaultMessage": "明暗モードバリアントを持つサンライズテーマ。より良い可読性のための強化された色とコントラスト。"
   },
   "theme.sunrise.name": {
-    "defaultMessage": "日の出"
+    "defaultMessage": "サンライズ"
   },
   "theme.switch-to-dark": {
     "defaultMessage": "ダークモードに切り替え"
@@ -689,43 +656,136 @@
   "theme.switch-to-light": {
     "defaultMessage": "ライトモードに切り替え"
   },
-  "title-input": {
-    "defaultMessage": "タイトル入力"
+  "topic-font-editor.active": {
+    "defaultMessage": "アクティブ"
   },
-  "canvas-style.tab-color": {
-    "defaultMessage": "Color"
+  "topic-font-editor.bold": {
+    "defaultMessage": "太字"
   },
-  "canvas-style.tab-grid": {
-    "defaultMessage": "Grid Color"
+  "topic-font-editor.bold-tooltip": {
+    "defaultMessage": "太字を切り替え"
   },
-  "canvas-style.background-style": {
-    "defaultMessage": "Background Style"
+  "topic-font-editor.decrease-size": {
+    "defaultMessage": "小さく"
   },
-  "canvas-style.pattern-default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+  "topic-font-editor.decrease-size-tooltip": {
+    "defaultMessage": "フォントサイズを小さく"
   },
-  "icon-collection.shape.default": {
-    "defaultMessage": "Default"
+  "topic-font-editor.font-color": {
+    "defaultMessage": "フォントの色"
   },
-  "icon-collection.border.default": {
-    "defaultMessage": "Default"
+  "topic-font-editor.font-family": {
+    "defaultMessage": "フォントファミリー"
   },
-  "icon-collection.connection.default": {
-    "defaultMessage": "Default"
+  "topic-font-editor.font-size-style": {
+    "defaultMessage": "フォントサイズとスタイル"
   },
-  "icon-collection.default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+  "topic-font-editor.increase-size": {
+    "defaultMessage": "大きく"
   },
-  "unified-styling.shape-type": {
-    "defaultMessage": "Shape Type"
+  "topic-font-editor.increase-size-tooltip": {
+    "defaultMessage": "フォントサイズを大きく"
   },
-  "unified-styling.background-color": {
-    "defaultMessage": "Background Color"
+  "topic-font-editor.italic": {
+    "defaultMessage": "斜体"
+  },
+  "topic-font-editor.italic-tooltip": {
+    "defaultMessage": "斜体を切り替え"
   },
   "topic-font-editor.reset-to-default": {
-    "defaultMessage": "Reset to Default"
+    "defaultMessage": "デフォルトにリセット"
   },
-  "llm.config.error.api-not-configured": {
-    "defaultMessage": "まずモデルAPIを設定してください！"
+  "topic-note-editor.add-note": {
+    "defaultMessage": "ノートを追加"
+  },
+  "topic-note-editor.edit-note": {
+    "defaultMessage": "ノートを編集"
+  },
+  "unified-styling.background-color": {
+    "defaultMessage": "背景色"
+  },
+  "unified-styling.border-color": {
+    "defaultMessage": "境界線の色"
+  },
+  "unified-styling.border-style": {
+    "defaultMessage": "境界線スタイル"
+  },
+  "unified-styling.connection-style": {
+    "defaultMessage": "接続スタイル"
+  },
+  "unified-styling.connector-style": {
+    "defaultMessage": "コネクタスタイル"
+  },
+  "unified-styling.shape-type": {
+    "defaultMessage": "形状タイプ"
+  },
+  "unified-styling.tab.border": {
+    "defaultMessage": "境界線"
+  },
+  "unified-styling.tab.connector": {
+    "defaultMessage": "コネクタ"
+  },
+  "unified-styling.tab.shape": {
+    "defaultMessage": "形状"
+  },
+  "visualization-toolbar.tooltip-collapse-all": {
+    "defaultMessage": "すべてのノードを折りたたむ"
+  },
+  "visualization-toolbar.tooltip-expand-all": {
+    "defaultMessage": "すべてのノードを展開"
+  },
+  "visualization-toolbar.tooltip-expand-level": {
+    "defaultMessage": "レベルで展開"
+  },
+  "visualization-toolbar.tooltip-export": {
+    "defaultMessage": "エクスポート"
+  },
+  "visualization-toolbar.tooltip-info": {
+    "defaultMessage": "情報"
+  },
+  "visualization-toolbar.tooltip-keyboard": {
+    "defaultMessage": "キーボードショートカット"
+  },
+  "visualization-toolbar.tooltip-layout": {
+    "defaultMessage": "レイアウトを変更"
+  },
+  "visualization-toolbar.tooltip-outline-view": {
+    "defaultMessage": "アウトラインビュー"
+  },
+  "visualization-toolbar.tooltip-save": {
+    "defaultMessage": "保存"
+  },
+  "visualization-toolbar.tooltip-theme-toggle": {
+    "defaultMessage": "テーマの切り替え"
+  },
+  "visualization-toolbar.tooltip-zoom-in": {
+    "defaultMessage": "ズームイン"
+  },
+  "visualization-toolbar.tooltip-zoom-out": {
+    "defaultMessage": "ズームアウト"
+  },
+  "visualization-toolbar.tooltip-zoom-to-fit": {
+    "defaultMessage": "フィット"
+  },
+  "model-api-management.title": {
+    "defaultMessage": "モデル API 管理"
+  },
+  "model-api-management.no-configurations": {
+    "defaultMessage": "API 設定なし"
+  },
+  "model-api-management.empty-description": {
+    "defaultMessage": "最初の LLM API 設定を追加して開始"
+  },
+  "model-api-management.active": {
+    "defaultMessage": "アクティブ"
+  },
+  "model-api-management.switch": {
+    "defaultMessage": "切り替え"
+  },
+  "model-api-management.update": {
+    "defaultMessage": "更新"
+  },
+  "model-api-management.add-configuration": {
+    "defaultMessage": "設定を追加"
   }
 }

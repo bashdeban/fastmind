@@ -5,16 +5,114 @@
       "value": "Accept"
     }
   ],
+  "action.cancel": [
+    {
+      "type": 0,
+      "value": "Cancel"
+    }
+  ],
   "action.delete": [
     {
       "type": 0,
       "value": "Delete"
     }
   ],
-  "app-bar-title": [
+  "ai-explainer.error-analyze": [
     {
       "type": 0,
-      "value": "Mindmap Editor"
+      "value": "AI explainer analysis failed:"
+    }
+  ],
+  "ai-topic-generator.add-to-mindmap": [
+    {
+      "type": 0,
+      "value": "Add to Mindmap"
+    }
+  ],
+  "ai-topic-generator.cancel": [
+    {
+      "type": 0,
+      "value": "Cancel"
+    }
+  ],
+  "ai-topic-generator.count-label": [
+    {
+      "type": 0,
+      "value": "Number of topics to generate: "
+    },
+    {
+      "type": 1,
+      "value": "count"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-helper": [
+    {
+      "type": 0,
+      "value": "Provide additional context or requirements for AI generation"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-label": [
+    {
+      "type": 0,
+      "value": "Custom Prompt (Optional)"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-placeholder": [
+    {
+      "type": 0,
+      "value": "e.g.: Focus on technical implementation aspects"
+    }
+  ],
+  "ai-topic-generator.description": [
+    {
+      "type": 0,
+      "value": "Generate related subtopics based on "
+    },
+    {
+      "children": [
+        {
+          "type": 1,
+          "value": "topicText"
+        }
+      ],
+      "type": 8,
+      "value": "strong"
+    }
+  ],
+  "ai-topic-generator.error-add": [
+    {
+      "type": 0,
+      "value": "Error occurred while adding topics"
+    }
+  ],
+  "ai-topic-generator.error-generate": [
+    {
+      "type": 0,
+      "value": "Error occurred while generating topics"
+    }
+  ],
+  "ai-topic-generator.generating": [
+    {
+      "type": 0,
+      "value": "Generating topics, please wait..."
+    }
+  ],
+  "ai-topic-generator.preview-title": [
+    {
+      "type": 0,
+      "value": "Generated topics preview:"
+    }
+  ],
+  "ai-topic-generator.regenerate": [
+    {
+      "type": 0,
+      "value": "Regenerate"
+    }
+  ],
+  "ai-topic-generator.title": [
+    {
+      "type": 0,
+      "value": "AI Topic Generator"
     }
   ],
   "appbar.back-to-map-list": [
@@ -32,13 +130,13 @@
   "appbar.error-saving-title": [
     {
       "type": 0,
-      "value": "Error saving"
+      "value": "Error saving title:"
     }
   ],
   "appbar.logo-aria-label": [
     {
       "type": 0,
-      "value": "WiseMapping Logo"
+      "value": "WiseMapping"
     }
   ],
   "appbar.shared-button": [
@@ -47,22 +145,16 @@
       "value": "Share"
     }
   ],
-  "appbar.theme-title": [
-    {
-      "type": 0,
-      "value": "Theme"
-    }
-  ],
   "appbar.title-renamed": [
     {
       "type": 0,
-      "value": "Mindmap renamed"
+      "value": "Mind map has been renamed"
     }
   ],
   "appbar.tooltip-change-layout": [
     {
       "type": 0,
-      "value": "Change Layout"
+      "value": "Layout"
     }
   ],
   "appbar.tooltip-export": [
@@ -81,12 +173,6 @@
     {
       "type": 0,
       "value": "Information"
-    }
-  ],
-  "appbar.tooltip-outline-view": [
-    {
-      "type": 0,
-      "value": "Outline View"
     }
   ],
   "appbar.tooltip-print": [
@@ -119,6 +205,12 @@
       "value": "Save"
     }
   ],
+  "appbar.tooltip-settings": [
+    {
+      "type": 0,
+      "value": "Settings"
+    }
+  ],
   "appbar.tooltip-shared": [
     {
       "type": 0,
@@ -143,16 +235,16 @@
       "value": "Theme"
     }
   ],
+  "appbar.tooltip-theme-toggle": [
+    {
+      "type": 0,
+      "value": "Toggle Theme"
+    }
+  ],
   "appbar.tooltip-undo": [
     {
       "type": 0,
       "value": "Undo"
-    }
-  ],
-  "canvas-style.apply": [
-    {
-      "type": 0,
-      "value": "Apply"
     }
   ],
   "canvas-style.background-color": [
@@ -161,22 +253,10 @@
       "value": "Background Color"
     }
   ],
-  "canvas-style.background-pattern": [
-    {
-      "type": 0,
-      "value": "Background Pattern"
-    }
-  ],
   "canvas-style.background-style": [
     {
       "type": 0,
       "value": "Background Style"
-    }
-  ],
-  "canvas-style.colors": [
-    {
-      "type": 0,
-      "value": "Colors"
     }
   ],
   "canvas-style.grid-color": [
@@ -218,7 +298,7 @@
   "canvas-style.grid-style": [
     {
       "type": 0,
-      "value": "Grid Style"
+      "value": "Grid Size"
     }
   ],
   "canvas-style.pattern-default-tooltip": [
@@ -236,31 +316,13 @@
   "canvas-style.pattern-grid": [
     {
       "type": 0,
-      "value": "Grid Lines"
-    }
-  ],
-  "canvas-style.pattern-none": [
-    {
-      "type": 0,
-      "value": "None"
+      "value": "Grid"
     }
   ],
   "canvas-style.pattern-solid": [
     {
       "type": 0,
-      "value": "Solid Color"
-    }
-  ],
-  "canvas-style.preview": [
-    {
-      "type": 0,
-      "value": "Preview"
-    }
-  ],
-  "canvas-style.reset": [
-    {
-      "type": 0,
-      "value": "Reset"
+      "value": "Solid"
     }
   ],
   "canvas-style.tab-color": [
@@ -273,18 +335,6 @@
     {
       "type": 0,
       "value": "Grid Color"
-    }
-  ],
-  "canvas-style.title": [
-    {
-      "type": 0,
-      "value": "Background"
-    }
-  ],
-  "classic": [
-    {
-      "type": 0,
-      "value": "Classic"
     }
   ],
   "color-picker.color": [
@@ -317,24 +367,6 @@
       "value": "Description"
     }
   ],
-  "demo-simple-select": [
-    {
-      "type": 0,
-      "value": "Select"
-    }
-  ],
-  "divider": [
-    {
-      "type": 0,
-      "value": "Divider"
-    }
-  ],
-  "editor-panel.canvas-style-title": [
-    {
-      "type": 0,
-      "value": "Background"
-    }
-  ],
   "editor-panel.font-family-default": [
     {
       "type": 0,
@@ -347,28 +379,10 @@
       "value": "Mixed"
     }
   ],
-  "editor-panel.icon-title": [
-    {
-      "type": 0,
-      "value": "Icon"
-    }
-  ],
-  "editor-panel.link-panel-title": [
-    {
-      "type": 0,
-      "value": "Link"
-    }
-  ],
   "editor-panel.note-panel-title": [
     {
       "type": 0,
       "value": "Note"
-    }
-  ],
-  "editor-panel.theme-title": [
-    {
-      "type": 0,
-      "value": "Theme"
     }
   ],
   "editor-panel.tooltip-add-icon": [
@@ -407,64 +421,22 @@
       "value": "Add Topic Image"
     }
   ],
+  "editor-panel.tooltip-ai-explainer": [
+    {
+      "type": 0,
+      "value": "AI Explainer"
+    }
+  ],
+  "editor-panel.tooltip-ai-topic-generator": [
+    {
+      "type": 0,
+      "value": "AI Topic Generator"
+    }
+  ],
   "editor-panel.tooltip-canvas-style": [
     {
       "type": 0,
       "value": "Background"
-    }
-  ],
-  "editor-panel.tooltip-change-layout": [
-    {
-      "type": 0,
-      "value": "Change Layout"
-    }
-  ],
-  "editor-panel.tooltip-connection-color": [
-    {
-      "type": 0,
-      "value": "Color"
-    }
-  ],
-  "editor-panel.tooltip-connection-color-default": [
-    {
-      "type": 0,
-      "value": "Default color"
-    }
-  ],
-  "editor-panel.tooltip-connection-style": [
-    {
-      "type": 0,
-      "value": "Connection Style"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-arc": [
-    {
-      "type": 0,
-      "value": "Arc"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-curved-thick": [
-    {
-      "type": 0,
-      "value": "Thick Curved"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-curved-thin": [
-    {
-      "type": 0,
-      "value": "Thin Curved"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-polyline": [
-    {
-      "type": 0,
-      "value": "Simple Polyline"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-polyline-curved": [
-    {
-      "type": 0,
-      "value": "Curved Polyline"
     }
   ],
   "editor-panel.tooltip-delete-topic": [
@@ -473,124 +445,10 @@
       "value": "Delete Topic"
     }
   ],
-  "editor-panel.tooltip-outline-view": [
-    {
-      "type": 0,
-      "value": "Outline View"
-    }
-  ],
-  "editor-panel.tooltip-relationship-arrow-end": [
-    {
-      "type": 0,
-      "value": "End Arrow"
-    }
-  ],
-  "editor-panel.tooltip-relationship-arrow-start": [
-    {
-      "type": 0,
-      "value": "Start Arrow"
-    }
-  ],
-  "editor-panel.tooltip-relationship-color": [
-    {
-      "type": 0,
-      "value": "Color"
-    }
-  ],
-  "editor-panel.tooltip-relationship-color-default": [
-    {
-      "type": 0,
-      "value": "Default color"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-dashed": [
-    {
-      "type": 0,
-      "value": "Dashed Line"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-dotted": [
-    {
-      "type": 0,
-      "value": "Dotted Line"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-solid": [
-    {
-      "type": 0,
-      "value": "Solid Line"
-    }
-  ],
   "editor-panel.tooltip-relationship-style": [
     {
       "type": 0,
       "value": "Relationship Style"
-    }
-  ],
-  "editor-panel.tooltip-theme": [
-    {
-      "type": 0,
-      "value": "Theme"
-    }
-  ],
-  "editor-panel.tooltip-topic-border-color": [
-    {
-      "type": 0,
-      "value": "Border color"
-    }
-  ],
-  "editor-panel.tooltip-topic-border-color-default": [
-    {
-      "type": 0,
-      "value": "Default border color"
-    }
-  ],
-  "editor-panel.tooltip-topic-fill-color": [
-    {
-      "type": 0,
-      "value": "Fill color"
-    }
-  ],
-  "editor-panel.tooltip-topic-fill-color-default": [
-    {
-      "type": 0,
-      "value": "Default fill color"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-bigger": [
-    {
-      "type": 0,
-      "value": "Bigger"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-bold": [
-    {
-      "type": 0,
-      "value": "Bold"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-color": [
-    {
-      "type": 0,
-      "value": "Color"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-color-default": [
-    {
-      "type": 0,
-      "value": "Default color"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-italic": [
-    {
-      "type": 0,
-      "value": "Italic"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-smaller": [
-    {
-      "type": 0,
-      "value": "Smaller"
     }
   ],
   "editor-panel.tooltip-topic-font-style": [
@@ -599,52 +457,10 @@
       "value": "Font Style"
     }
   ],
-  "editor-panel.tooltip-topic-share-ellipse": [
-    {
-      "type": 0,
-      "value": "Ellipse shape"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-line": [
-    {
-      "type": 0,
-      "value": "Line shape"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-none": [
-    {
-      "type": 0,
-      "value": "None shape"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-rectangle": [
-    {
-      "type": 0,
-      "value": "Rectangle shape"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-rounded": [
-    {
-      "type": 0,
-      "value": "Rounded shape"
-    }
-  ],
-  "editor-panel.tooltip-topic-style": [
-    {
-      "type": 0,
-      "value": "Topic Style"
-    }
-  ],
   "editor-panel.tooltip-unified-styling": [
     {
       "type": 0,
       "value": "Style Topic & Connections"
-    }
-  ],
-  "editor-panel.topic-image-title": [
-    {
-      "type": 0,
-      "value": "Topic Image"
     }
   ],
   "editor.edit-description-mobile": [
@@ -683,10 +499,64 @@
       "value": "Search emojis..."
     }
   ],
-  "headerNotifier": [
+  "export.dialog.cancel": [
     {
       "type": 0,
-      "value": "Header Notifier"
+      "value": "Cancel"
+    }
+  ],
+  "export.dialog.clipboard-success": [
+    {
+      "type": 0,
+      "value": "Content copied to clipboard!"
+    }
+  ],
+  "export.dialog.error-generic": [
+    {
+      "type": 0,
+      "value": "Export failed, please try again later."
+    }
+  ],
+  "export.dialog.export": [
+    {
+      "type": 0,
+      "value": "Export"
+    }
+  ],
+  "export.dialog.exporting": [
+    {
+      "type": 0,
+      "value": "Exporting..."
+    }
+  ],
+  "export.dialog.title": [
+    {
+      "type": 0,
+      "value": "Export Mindmap"
+    }
+  ],
+  "export.format.md.description": [
+    {
+      "type": 0,
+      "value": "Markdown format - Suitable for document writing and version control, supports GitHub and other platforms"
+    }
+  ],
+  "export.format.recommended": [
+    {
+      "type": 0,
+      "value": "Recommended"
+    }
+  ],
+  "export.format.svg.description": [
+    {
+      "type": 0,
+      "value": "Scalable Vector Graphics - Vector graphics, infinitely scalable, small file size"
+    }
+  ],
+  "export.format.wxml.description": [
+    {
+      "type": 0,
+      "value": "WiseMapping XML - Native format, retains all editing features, can be re-imported for editing"
     }
   ],
   "icon-collection.border.dashed": [
@@ -863,52 +733,112 @@
       "value": "Show images"
     }
   ],
-  "image-icon-tab.icon-found": [
+  "information-dialog.close": [
     {
       "type": 0,
-      "value": "icon found"
+      "value": "Close"
     }
   ],
-  "image-icon-tab.icons": [
+  "information-dialog.fastmind-description": [
     {
       "type": 0,
-      "value": "icons"
+      "value": "FastMind is a VS Code extension based on WiseMapping that provides powerful mind mapping capabilities for developers. It integrates AI-driven topic generation, OpenAI API compatible model integration, AI-generated content intelligent deduplication, VS Code native file system integration, and other advanced features to help developers better organize and visualize their ideas."
     }
   ],
-  "image-icon-tab.icons-found": [
+  "information-dialog.fastmind-title": [
     {
       "type": 0,
-      "value": "icons found"
+      "value": "FastMind VS Code Extension"
+    }
+  ],
+  "information-dialog.feature-ai": [
+    {
+      "type": 0,
+      "value": "AI-driven topic generation"
+    }
+  ],
+  "information-dialog.feature-api-integration": [
+    {
+      "type": 0,
+      "value": "OpenAI API compatible model integration"
+    }
+  ],
+  "information-dialog.feature-deduplication": [
+    {
+      "type": 0,
+      "value": "AI-generated content intelligent deduplication"
+    }
+  ],
+  "information-dialog.feature-vscode-integration": [
+    {
+      "type": 0,
+      "value": "VS Code native file system integration"
+    }
+  ],
+  "information-dialog.features-title": [
+    {
+      "type": 0,
+      "value": "Key Features:"
+    }
+  ],
+  "information-dialog.powered-by": [
+    {
+      "type": 0,
+      "value": "Powered by"
+    }
+  ],
+  "information-dialog.title": [
+    {
+      "type": 0,
+      "value": "Information"
+    }
+  ],
+  "layout-selector.accept": [
+    {
+      "type": 0,
+      "value": "Accept"
+    }
+  ],
+  "layout-selector.cancel": [
+    {
+      "type": 0,
+      "value": "Cancel"
     }
   ],
   "layout-selector.description": [
     {
       "type": 0,
-      "value": "Choose layout style"
+      "value": "A layout defines how topics are organized and connected in your mind map. Choose a layout that best fits your content structure."
     }
   ],
-  "layout-selector.mindmap": [
+  "layout-selector.title": [
+    {
+      "type": 0,
+      "value": "Choose Layout"
+    }
+  ],
+  "layout.mindmap.description": [
+    {
+      "type": 0,
+      "value": "Horizontal layout with balanced branches on both sides. Best for traditional mind mapping and brainstorming."
+    }
+  ],
+  "layout.mindmap.name": [
     {
       "type": 0,
       "value": "Mindmap"
     }
   ],
-  "layout-selector.mindmap-description": [
+  "layout.tree.description": [
     {
       "type": 0,
-      "value": "Horizontal layout with balanced branches"
+      "value": "Vertical hierarchy flowing top-to-bottom. Great for organizational charts and hierarchical structures."
     }
   ],
-  "layout-selector.tree": [
+  "layout.tree.name": [
     {
       "type": 0,
       "value": "Tree"
-    }
-  ],
-  "layout-selector.tree-description": [
-    {
-      "type": 0,
-      "value": "Vertical hierarchy flowing top-to-bottom"
     }
   ],
   "link.help_text": [
@@ -923,38 +853,196 @@
       "value": "https://www.example.com"
     }
   ],
-  "mindmap-comp": [
+  "llm-connection-test.api-key": [
     {
       "type": 0,
-      "value": "Mindmap Component"
+      "value": "API Key"
     }
   ],
-  "note.character.count": [
-    {
-      "type": 1,
-      "value": "remaining"
-    },
+  "llm-connection-test.api-key-placeholder": [
     {
       "type": 0,
-      "value": " left"
+      "value": "Your API key"
     }
   ],
-  "note.character.limit.warning": [
+  "llm-connection-test.api-url": [
     {
       "type": 0,
-      "value": "(Approaching limit)"
+      "value": "API URL"
     }
   ],
-  "ocean": [
+  "llm-connection-test.api-url-placeholder": [
     {
       "type": 0,
-      "value": "Ocean"
+      "value": "https://api.openai.com/v1/chat/completions"
+    }
+  ],
+  "llm-connection-test.close": [
+    {
+      "type": 0,
+      "value": "Close"
+    }
+  ],
+  "llm-connection-test.configuration": [
+    {
+      "type": 0,
+      "value": "Configuration"
+    }
+  ],
+  "llm-connection-test.console-logs": [
+    {
+      "type": 0,
+      "value": "Open browser console for detailed logs"
+    }
+  ],
+  "llm-connection-test.description": [
+    {
+      "type": 0,
+      "value": "Test connection to any OpenAI-compatible API"
+    }
+  ],
+  "llm-connection-test.error-connection-failed": [
+    {
+      "type": 0,
+      "value": "Connection failed"
+    }
+  ],
+  "llm-connection-test.error-failed-config": [
+    {
+      "type": 0,
+      "value": "Configuration error"
+    }
+  ],
+  "llm-connection-test.error-unknown": [
+    {
+      "type": 0,
+      "value": "Unknown error occurred"
+    }
+  ],
+  "llm-connection-test.max-tokens": [
+    {
+      "type": 0,
+      "value": "Max Tokens"
+    }
+  ],
+  "llm-connection-test.model": [
+    {
+      "type": 0,
+      "value": "Model"
+    }
+  ],
+  "llm-connection-test.model-placeholder": [
+    {
+      "type": 0,
+      "value": "gpt-3.5-turbo"
+    }
+  ],
+  "llm-connection-test.prompt": [
+    {
+      "type": 0,
+      "value": "Prompt"
+    }
+  ],
+  "llm-connection-test.prompt-placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your test prompt here..."
+    }
+  ],
+  "llm-connection-test.response": [
+    {
+      "type": 0,
+      "value": "Response:"
+    }
+  ],
+  "llm-connection-test.save-configuration": [
+    {
+      "type": 0,
+      "value": "Save Configuration"
+    }
+  ],
+  "llm-connection-test.temperature": [
+    {
+      "type": 0,
+      "value": "Temperature"
+    }
+  ],
+  "llm-connection-test.test-connection": [
+    {
+      "type": 0,
+      "value": "Test LLM Connection"
+    }
+  ],
+  "llm-connection-test.testing": [
+    {
+      "type": 0,
+      "value": "Testing..."
+    }
+  ],
+  "llm-connection-test.title": [
+    {
+      "type": 0,
+      "value": "LLM Connection Test"
+    }
+  ],
+  "llm-notification.status.completed": [
+    {
+      "type": 0,
+      "value": "Completed"
+    }
+  ],
+  "llm-notification.status.error": [
+    {
+      "type": 0,
+      "value": "Failed"
+    }
+  ],
+  "model-api-management.active": [
+    {
+      "type": 0,
+      "value": "active"
+    }
+  ],
+  "model-api-management.add-configuration": [
+    {
+      "type": 0,
+      "value": "Add Configuration"
+    }
+  ],
+  "model-api-management.empty-description": [
+    {
+      "type": 0,
+      "value": "Add your first LLM API configuration to get started"
+    }
+  ],
+  "model-api-management.no-configurations": [
+    {
+      "type": 0,
+      "value": "No API Configurations"
+    }
+  ],
+  "model-api-management.switch": [
+    {
+      "type": 0,
+      "value": "Switch"
+    }
+  ],
+  "model-api-management.title": [
+    {
+      "type": 0,
+      "value": "Model API Management"
+    }
+  ],
+  "model-api-management.update": [
+    {
+      "type": 0,
+      "value": "Update"
     }
   ],
   "outline.collapse": [
     {
       "type": 0,
-      "value": "Collapse"
+      "value": "Collapse All"
     }
   ],
   "outline.empty": [
@@ -966,7 +1054,7 @@
   "outline.expand": [
     {
       "type": 0,
-      "value": "Expand"
+      "value": "Expand All"
     }
   ],
   "outline.has-note": [
@@ -985,18 +1073,6 @@
     {
       "type": 0,
       "value": "Note"
-    }
-  ],
-  "popover": [
-    {
-      "type": 0,
-      "value": "Popover"
-    }
-  ],
-  "prism": [
-    {
-      "type": 0,
-      "value": "Prism"
     }
   ],
   "relationship-style-editor.color": [
@@ -1071,58 +1147,68 @@
       "value": "Toggle start arrow"
     }
   ],
-  "rich-text-editor.bold": [
+  "settings.ai-explainer-title": [
     {
       "type": 0,
-      "value": "Bold"
+      "value": "AI Explainer with User-Defined Prompts"
     }
   ],
-  "rich-text-editor.bullet-list": [
+  "settings.ai-topic-generator-title": [
     {
       "type": 0,
-      "value": "Bullet List"
+      "value": "AI Topic Generator with User-Defined Prompts"
     }
   ],
-  "rich-text-editor.insert-icon": [
+  "settings.current-model": [
     {
       "type": 0,
-      "value": "Insert Icon"
+      "value": "Current Model: "
+    },
+    {
+      "type": 1,
+      "value": "modelName"
     }
   ],
-  "rich-text-editor.insert-link": [
+  "settings.deduplication": [
     {
       "type": 0,
-      "value": "Insert Link"
+      "value": "Deduplication"
     }
   ],
-  "rich-text-editor.italic": [
+  "settings.description": [
     {
       "type": 0,
-      "value": "Italic"
+      "value": "Configure AI model settings and customize prompts for topic generation and concept explanation."
     }
   ],
-  "rich-text-editor.numbered-list": [
+  "settings.explainer-placeholder": [
     {
       "type": 0,
-      "value": "Numbered List"
+      "value": "Enter custom prompt for concept explanation..."
     }
   ],
-  "rich-text-editor.strikethrough": [
+  "settings.model-api-management": [
     {
       "type": 0,
-      "value": "Strikethrough"
+      "value": "Model API Management"
     }
   ],
-  "rich-text-editor.underline": [
+  "settings.no-model": [
     {
       "type": 0,
-      "value": "Underline"
+      "value": "No model configured"
     }
   ],
-  "robot": [
+  "settings.title": [
     {
       "type": 0,
-      "value": "Robot"
+      "value": "Settings"
+    }
+  ],
+  "settings.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "Enter custom prompt for topic generation..."
     }
   ],
   "shortcut-help-pane.action": [
@@ -1179,12 +1265,6 @@
       "value": "Collpase children"
     }
   ],
-  "shortcut-help-pane.copy-and-text": [
-    {
-      "type": 0,
-      "value": "Copy and paste topics/Copy mindmap image to clipboard."
-    }
-  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1221,6 +1301,18 @@
       "value": "F2 or Double Click"
     }
   ],
+  "shortcut-help-pane.expand-by-level": [
+    {
+      "type": 0,
+      "value": "Expand topics by level"
+    }
+  ],
+  "shortcut-help-pane.expand-collapse-all": [
+    {
+      "type": 0,
+      "value": "Expand/Collapse all topics"
+    }
+  ],
   "shortcut-help-pane.navigation": [
     {
       "type": 0,
@@ -1231,6 +1323,12 @@
     {
       "type": 0,
       "value": "Arrow keys"
+    }
+  ],
+  "shortcut-help-pane.outline-view": [
+    {
+      "type": 0,
+      "value": "Open outline view"
     }
   ],
   "shortcut-help-pane.overwrite-edit-topic": [
@@ -1260,7 +1358,7 @@
   "shortcut-help-pane.select-all-topics": [
     {
       "type": 0,
-      "value": "Select all topics"
+      "value": "选择所有主题"
     }
   ],
   "shortcut-help-pane.select-topics": [
@@ -1281,10 +1379,22 @@
       "value": "Undo edition"
     }
   ],
-  "sunrise": [
+  "shortcut-help-pane.zoom-in": [
     {
       "type": 0,
-      "value": "Sunrise"
+      "value": "Zoom in"
+    }
+  ],
+  "shortcut-help-pane.zoom-out": [
+    {
+      "type": 0,
+      "value": "Zoom out"
+    }
+  ],
+  "shortcut-help-pane.zoom-to-fit": [
+    {
+      "type": 0,
+      "value": "Zoom to fit"
     }
   ],
   "theme-editor.accept": [
@@ -1395,18 +1505,6 @@
       "value": "Switch to light mode"
     }
   ],
-  "theme.toggle": [
-    {
-      "type": 0,
-      "value": "Toggle Theme"
-    }
-  ],
-  "title-input": [
-    {
-      "type": 0,
-      "value": "Title Input"
-    }
-  ],
   "topic-font-editor.active": [
     {
       "type": 0,
@@ -1485,10 +1583,46 @@
       "value": "Reset to Default"
     }
   ],
+  "topic-note-editor.add-note": [
+    {
+      "type": 0,
+      "value": "Add Note"
+    }
+  ],
+  "topic-note-editor.edit-note": [
+    {
+      "type": 0,
+      "value": "Edit Note"
+    }
+  ],
   "unified-styling.background-color": [
     {
       "type": 0,
       "value": "Background Color"
+    }
+  ],
+  "unified-styling.border-color": [
+    {
+      "type": 0,
+      "value": "Border Color"
+    }
+  ],
+  "unified-styling.border-style": [
+    {
+      "type": 0,
+      "value": "Border Style"
+    }
+  ],
+  "unified-styling.connection-style": [
+    {
+      "type": 0,
+      "value": "Connection Style"
+    }
+  ],
+  "unified-styling.connector-style": [
+    {
+      "type": 0,
+      "value": "Connector Style"
     }
   ],
   "unified-styling.shape-type": [
@@ -1497,43 +1631,97 @@
       "value": "Shape Type"
     }
   ],
-  "zoom-panel.tooltip-collapse-all": [
+  "unified-styling.tab.border": [
+    {
+      "type": 0,
+      "value": "Border"
+    }
+  ],
+  "unified-styling.tab.connector": [
+    {
+      "type": 0,
+      "value": "Connector"
+    }
+  ],
+  "unified-styling.tab.shape": [
+    {
+      "type": 0,
+      "value": "Shape"
+    }
+  ],
+  "visualization-toolbar.tooltip-collapse-all": [
     {
       "type": 0,
       "value": "Collapse All Nodes"
     }
   ],
-  "zoom-panel.tooltip-expand-all": [
+  "visualization-toolbar.tooltip-expand-all": [
     {
       "type": 0,
       "value": "Expand All Nodes"
     }
   ],
-  "zoom-panel.tooltip-keyboard": [
+  "visualization-toolbar.tooltip-expand-level": [
+    {
+      "type": 0,
+      "value": "Expand by Level"
+    }
+  ],
+  "visualization-toolbar.tooltip-export": [
+    {
+      "type": 0,
+      "value": "Export"
+    }
+  ],
+  "visualization-toolbar.tooltip-info": [
+    {
+      "type": 0,
+      "value": "Information"
+    }
+  ],
+  "visualization-toolbar.tooltip-keyboard": [
     {
       "type": 0,
       "value": "Keyboard Shortcuts"
     }
   ],
-  "zoom-panel.tooltip-outline-view": [
+  "visualization-toolbar.tooltip-layout": [
+    {
+      "type": 0,
+      "value": "Change Layout"
+    }
+  ],
+  "visualization-toolbar.tooltip-outline-view": [
     {
       "type": 0,
       "value": "Outline View"
     }
   ],
-  "zoom-panel.tooltip-zoom-in": [
+  "visualization-toolbar.tooltip-save": [
+    {
+      "type": 0,
+      "value": "Save"
+    }
+  ],
+  "visualization-toolbar.tooltip-theme-toggle": [
+    {
+      "type": 0,
+      "value": "Toggle theme"
+    }
+  ],
+  "visualization-toolbar.tooltip-zoom-in": [
     {
       "type": 0,
       "value": "Zoom In"
     }
   ],
-  "zoom-panel.tooltip-zoom-out": [
+  "visualization-toolbar.tooltip-zoom-out": [
     {
       "type": 0,
       "value": "Zoom Out"
     }
   ],
-  "zoom-panel.tooltip-zoom-to-fit": [
+  "visualization-toolbar.tooltip-zoom-to-fit": [
     {
       "type": 0,
       "value": "Zoom to Fit"

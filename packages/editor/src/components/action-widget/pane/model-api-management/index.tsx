@@ -17,6 +17,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { useIntl, FormattedMessage } from 'react-intl';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -59,6 +60,7 @@ interface ModelApiManagementProps {
 }
 
 const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.ReactElement => {
+  const intl = useIntl();
   const [showLlmTest, setShowLlmTest] = useState(false);
   const [configList, setConfigList] = useState<LLMConfig[]>([]);
   const [initialConfig, setInitialConfig] = useState<LLMConfig | undefined>(undefined);
@@ -116,7 +118,7 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
         PaperComponent={StyledDialogPaper}
       >
         <DialogTitle>
-          Model API Management
+          <FormattedMessage id="model-api-management.title" defaultMessage="Model API Management" />
           <CloseButton onClick={onClose} size="small">
             <CloseIcon />
           </CloseButton>
@@ -134,10 +136,10 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                     <CloudIcon />
                   </EmptyStateIcon>
                   <EmptyStateText variant="h6">
-                    No API Configurations
+                    <FormattedMessage id="model-api-management.no-configurations" defaultMessage="No API Configurations" />
                   </EmptyStateText>
                   <Typography variant="body2" color="text.secondary">
-                    Add your first LLM API configuration to get started
+                    <FormattedMessage id="model-api-management.empty-description" defaultMessage="Add your first LLM API configuration to get started" />
                   </Typography>
                 </EmptyStateContainer>
               ) : (
@@ -154,7 +156,7 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                         <SwitchButtonContainer>
                           {isActive ? (
                             <StatusChip
-                              label="active"
+                              label={intl.formatMessage({ id: 'model-api-management.active', defaultMessage: 'active' })}
                               status="active"
                               size="small"
                             />
@@ -165,7 +167,7 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                                 size="small"
                                 onClick={() => handleSwitchModel(config)}
                               >
-                                Switch
+                                <FormattedMessage id="model-api-management.switch" defaultMessage="Switch" />
                               </SwitchModelButton>
                               <UpdateModelButton
                                 variant="outlined"
@@ -173,7 +175,7 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                                 onClick={() => handleUpdateConfig(config)}
                                 startIcon={<EditIcon sx={{ fontSize: '14px' }} />}
                               >
-                                Update
+                                <FormattedMessage id="model-api-management.update" defaultMessage="Update" />
                               </UpdateModelButton>
                               <IconButton
                                 size="small"
@@ -199,7 +201,7 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                   startIcon={<AddIcon />}
                   onClick={handleAddConfig}
                 >
-                  Add Configuration
+                  <FormattedMessage id="model-api-management.add-configuration" defaultMessage="Add Configuration" />
                 </Button>
               </LeftButtons>
             </ActionButtonsContainer>

@@ -335,7 +335,10 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
           model.getDesigner(),
           { customPrompt: globalCustomPrompt }
         ).catch(error => {
-          console.error('AI主题生成失败:', error);
+          console.error(intl.formatMessage({
+            id: 'ai-topic-generator.error-generate',
+            defaultMessage: 'AI topic generation failed:',
+          }), error);
         });
       }
     },
@@ -367,7 +370,10 @@ export function buildEditorPanelConfig(model: Editor, intl: IntlShape): ActionCo
           model.getDesigner(),
           { customPrompt: globalCustomPrompt }
         ).catch(error => {
-          console.error('AI解释器分析失败:', error);
+          console.error(intl.formatMessage({
+            id: 'ai-explainer.error-analyze',
+            defaultMessage: 'AI explainer analysis failed:',
+          }), error);
         });
       }
     },

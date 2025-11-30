@@ -11,12 +11,14 @@ import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import { LLMService, DEFAULT_LLM_CONFIG } from '../../../../services/llm';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 interface LlmTestProps {
   closeModal?: () => void;
 }
 
 const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
+  const intl = useIntl();
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -73,10 +75,10 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
       console.log('🎉 Test completed successfully!');
 
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred';
+      const errorMessage = err instanceof Error ? err.message : intl.formatMessage({ id: 'llm-connection-test.error-unknown', defaultMessage: 'Unknown error occurred' });
       console.error('❌ LLM Test Failed:', errorMessage);
       console.error('🔍 Full error details:', err);
-      setError(`Connection failed: ${errorMessage}`);
+      setError(`${intl.formatMessage({ id: 'llm-connection-test.error-connection-failed', defaultMessage: 'Connection failed' })}: ${errorMessage}`);
     } finally {
       setIsLoading(false);
     }
@@ -103,58 +105,58 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
       }}
     >
       <DialogTitle>
-        LLM Connection Test
+        <FormattedMessage id="llm-connection-test.title" defaultMessage="LLM Connection Test" />
       </DialogTitle>
       <DialogContent>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-          Test connection to any OpenAI-compatible API
+          <FormattedMessage id="llm-connection-test.description" defaultMessage="Test connection to any OpenAI-compatible API" />
         </Typography>
 
         <Paper sx={{ p: 2, mb: 2 }}>
           <Typography variant="subtitle2" gutterBottom>
-            Configuration
+            <FormattedMessage id="llm-connection-test.configuration" defaultMessage="Configuration" />
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
             <TextField
-              label="API URL"
+              label={intl.formatMessage({ id: 'llm-connection-test.api-url', defaultMessage: 'API URL' })}
               value={apiUrl}
               onChange={(e) => setApiUrl(e.target.value)}
               fullWidth
               size="small"
-              placeholder="https://api.openai.com/v1/chat/completions"
+              placeholder={intl.formatMessage({ id: 'llm-connection-test.api-url-placeholder', defaultMessage: 'https://api.openai.com/v1/chat/completions' })}
             />
             <Box sx={{ display: 'flex', gap: 2 }}>
               <TextField
-                label="Model"
+                label={intl.formatMessage({ id: 'llm-connection-test.model', defaultMessage: 'Model' })}
                 value={modelName}
                 onChange={(e) => setModelName(e.target.value)}
                 fullWidth
                 size="small"
-                placeholder="gpt-3.5-turbo"
+                placeholder={intl.formatMessage({ id: 'llm-connection-test.model-placeholder', defaultMessage: 'gpt-3.5-turbo' })}
               />
               <TextField
-                label="API Key"
+                label={intl.formatMessage({ id: 'llm-connection-test.api-key', defaultMessage: 'API Key' })}
                 value={apiKey}
                 onChange={(e) => setApiKey(e.target.value)}
                 fullWidth
                 size="small"
                 type="password"
-                placeholder="Your API key"
+                placeholder={intl.formatMessage({ id: 'llm-connection-test.api-key-placeholder', defaultMessage: 'Your API key' })}
               />
             </Box>
             <TextField
-              label="Prompt"
+              label={intl.formatMessage({ id: 'llm-connection-test.prompt', defaultMessage: 'Prompt' })}
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               fullWidth
               size="small"
               multiline
               rows={3}
-              placeholder="Enter your test prompt here..."
+              placeholder={intl.formatMessage({ id: 'llm-connection-test.prompt-placeholder', defaultMessage: 'Enter your test prompt here...' })}
             />
             <Box sx={{ display: 'flex', gap: 2 }}>
               <TextField
-                label="Temperature"
+                label={intl.formatMessage({ id: 'llm-connection-test.temperature', defaultMessage: 'Temperature' })}
                 value={temperature}
                 onChange={(e) => setTemperature(parseFloat(e.target.value))}
                 fullWidth
@@ -163,7 +165,7 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
                 inputProps={{ min: 0, max: 2, step: 0.1 }}
               />
               <TextField
-                label="Max Tokens"
+                label={intl.formatMessage({ id: 'llm-connection-test.max-tokens', defaultMessage: 'Max Tokens' })}
                 value={maxTokens}
                 onChange={(e) => setMaxTokens(parseInt(e.target.value))}
                 fullWidth
@@ -185,10 +187,10 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
           {isLoading ? (
             <>
               <CircularProgress size={20} sx={{ mr: 1 }} />
-              Testing...
+              {intl.formatMessage({ id: 'llm-connection-test.testing', defaultMessage: 'Testing...' })}
             </>
           ) : (
-            'Test LLM Connection'
+            intl.formatMessage({ id: 'llm-connection-test.test-connection', defaultMessage: 'Test LLM Connection' })
           )}
         </Button>
 
@@ -201,7 +203,7 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
         {result && (
           <Box>
             <Typography variant="subtitle2" gutterBottom>
-              Response:
+              <FormattedMessage id="llm-connection-test.response" defaultMessage="Response:" />
             </Typography>
             <Box
               sx={{
@@ -220,12 +222,12 @@ const LlmTest = ({ closeModal }: LlmTestProps): React.ReactElement => {
         )}
 
         <Typography variant="caption" color="text.secondary">
-          Open browser console for detailed logs
+          <FormattedMessage id="llm-connection-test.console-logs" defaultMessage="Open browser console for detailed logs" />
         </Typography>
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose}>
-          Close
+          <FormattedMessage id="llm-connection-test.close" defaultMessage="Close" />
         </Button>
       </DialogActions>
     </Dialog>

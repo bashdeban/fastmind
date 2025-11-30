@@ -41,7 +41,7 @@ class I18nMsg {
         return require('./../../compiled-lang/zh.json');
       case 'zh-CN':
         // eslint-disable-next-line @typescript-eslint/no-require-imports
-        return require('./../../compiled-lang/zh.json');
+        return require('./../../compiled-lang/zh-CN.json');
       case 'ja':
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         return require('./../../compiled-lang/ja.json');

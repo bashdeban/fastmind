@@ -59,7 +59,10 @@ const InformationDialog = ({ open, onClose }: InformationDialogProps): React.Rea
       <DialogContent>
         {/* FastMind 项目简介 */}
         <Typography variant="h6" gutterBottom>
-          FastMind VS Code Extension
+          {intl.formatMessage({
+            id: 'information-dialog.fastmind-title',
+            defaultMessage: 'FastMind VS Code Extension',
+          })}
         </Typography>
         <Typography variant="body2" paragraph sx={{ lineHeight: 1.6 }}>
           {intl.formatMessage({

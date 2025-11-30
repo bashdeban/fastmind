@@ -5,6 +5,9 @@
   "action.delete": {
     "defaultMessage": "删除"
   },
+  "action.cancel": {
+    "defaultMessage": "取消"
+  },
   "appbar.back-to-map-list": {
     "defaultMessage": "返回地图列表"
   },
@@ -36,7 +39,7 @@
     "defaultMessage": "保存"
   },
   "appbar.tooltip-shared": {
-    "defaultMessage": "协作分享"
+    "defaultMessage": "分享协作"
   },
   "appbar.tooltip-signup": {
     "defaultMessage": "注册"
@@ -46,6 +49,15 @@
   },
   "appbar.tooltip-undo": {
     "defaultMessage": "撤销"
+  },
+  "appbar.tooltip-outline-view": {
+    "defaultMessage": "大纲视图"
+  },
+  "visualization-toolbar.tooltip-save": {
+    "defaultMessage": "保存"
+  },
+  "appbar.tooltip-change-layout": {
+    "defaultMessage": "更改布局"
   },
   "outline.empty": {
     "defaultMessage": "无内容显示"
@@ -57,37 +69,37 @@
     "defaultMessage": "折叠"
   },
   "outline.has-note": {
-    "defaultMessage": "有笔记"
+    "defaultMessage": "有备注"
   },
   "outline.link": {
     "defaultMessage": "链接"
   },
   "outline.note": {
-    "defaultMessage": "笔记"
+    "defaultMessage": "备注"
   },
-  "editor.try-welcome": {
-    "defaultMessage": "这个编辑区域展示了一些思维导图编辑器的功能！"
+  "editor-panel.icon-title": {
+    "defaultMessage": "图标"
   },
-  "editor.try-welcome-description": {
-    "defaultMessage": "注册后可以免费创建、分享和发布无限数量的思维导图。"
+  "editor-panel.link-panel-title": {
+    "defaultMessage": "链接"
   },
-  "editor.try-welcome-mobile": {
-    "defaultMessage": "这个版本空间展示了一些思维导图功能！"
+  "editor-panel.tooltip-outline-view": {
+    "defaultMessage": "大纲视图"
   },
-  "editor.try-welcome-description-mobile": {
-    "defaultMessage": "注册以开始免费创建、共享和发布无限数量的思维导图。 移动设备支持有限的思维导图编辑功能。 使用桌面浏览器获得完整的编辑器功能。"
+  "editor-panel.note-panel-title": {
+    "defaultMessage": "备注"
   },
-  "editor.edit-description-mobile": {
-    "defaultMessage": "移动设备支持有限的思维导图编辑功能。 使用桌面浏览器获得完整的编辑器功能。"
+  "editor-panel.tooltip-add-icon": {
+    "defaultMessage": "添加图标"
   },
-  "zoom-panel.tooltip-keyboard": {
-    "defaultMessage": "键盘"
+  "editor-panel.tooltip-add-link": {
+    "defaultMessage": "添加链接"
   },
-  "editor-panel.tooltip-theme": {
-    "defaultMessage": "主题"
+  "editor-panel.tooltip-add-note": {
+    "defaultMessage": "添加备注"
   },
-  "editor-panel.theme-title": {
-    "defaultMessage": "主题"
+  "editor-panel.tooltip-add-relationship": {
+    "defaultMessage": "添加关系"
   },
   "editor-panel.tooltip-add-topic": {
     "defaultMessage": "添加主题"
@@ -99,127 +111,13 @@
     "defaultMessage": "默认颜色"
   },
   "editor-panel.tooltip-connection-style": {
-    "defaultMessage": "连接方式"
+    "defaultMessage": "连接样式"
   },
   "editor-panel.tooltip-connection-style-curved-thick": {
-    "defaultMessage": "宽曲线"
+    "defaultMessage": "粗曲线"
   },
   "editor-panel.tooltip-connection-style-curved-thin": {
     "defaultMessage": "细曲线"
-  },
-  "editor-panel.tooltip-topic-border-color-default": {
-    "defaultMessage": "默认边框颜色"
-  },
-  "editor-panel.tooltip-topic-fill-color": {
-    "defaultMessage": "填充颜​​色"
-  },
-  "editor-panel.tooltip-topic-fill-color-default": {
-    "defaultMessage": "默认填充颜色"
-  },
-  "editor-panel.tooltip-topic-share-rounded": {
-    "defaultMessage": "圆形"
-  },
-  "theme.dark": {
-    "defaultMessage": "深色"
-  },
-  "theme.light": {
-    "defaultMessage": "浅色"
-  },
-  "theme.toggle": {
-    "defaultMessage": "切换主题"
-  },
-  "canvas-style.apply": {
-    "defaultMessage": "应用"
-  },
-  "canvas-style.background-color": {
-    "defaultMessage": "背景颜色"
-  },
-  "canvas-style.background-pattern": {
-    "defaultMessage": "背景图案"
-  },
-  "canvas-style.colors": {
-    "defaultMessage": "颜色"
-  },
-  "canvas-style.grid-color": {
-    "defaultMessage": "网格颜色"
-  },
-  "canvas-style.grid-size-l": {
-    "defaultMessage": "大"
-  },
-  "canvas-style.grid-size-m": {
-    "defaultMessage": "中"
-  },
-  "canvas-style.grid-size-s": {
-    "defaultMessage": "小"
-  },
-  "canvas-style.grid-size-xl": {
-    "defaultMessage": "极大"
-  },
-  "canvas-style.grid-size-xs": {
-    "defaultMessage": "极小"
-  },
-  "canvas-style.grid-style": {
-    "defaultMessage": "网格样式"
-  },
-  "canvas-style.pattern-dots": {
-    "defaultMessage": "点"
-  },
-  "canvas-style.pattern-grid": {
-    "defaultMessage": "网格线"
-  },
-  "canvas-style.pattern-none": {
-    "defaultMessage": "无"
-  },
-  "canvas-style.pattern-solid": {
-    "defaultMessage": "纯色"
-  },
-  "canvas-style.preview": {
-    "defaultMessage": "预览"
-  },
-  "canvas-style.reset": {
-    "defaultMessage": "重置"
-  },
-  "canvas-style.title": {
-    "defaultMessage": "背景"
-  },
-  "creator-info-pane.creator": {
-    "defaultMessage": "创建者"
-  },
-  "creator-info-pane.description": {
-    "defaultMessage": "描述"
-  },
-  "editor-panel.canvas-style-title": {
-    "defaultMessage": "背景"
-  },
-  "editor-panel.font-family-default": {
-    "defaultMessage": "默认"
-  },
-  "editor-panel.font-family-mixed": {
-    "defaultMessage": "混合"
-  },
-  "editor-panel.icon-title": {
-    "defaultMessage": "图标"
-  },
-  "editor-panel.link-panel-title": {
-    "defaultMessage": "链接"
-  },
-  "editor-panel.note-panel-title": {
-    "defaultMessage": "笔记"
-  },
-  "editor-panel.tooltip-add-icon": {
-    "defaultMessage": "添加图标"
-  },
-  "editor-panel.tooltip-add-link": {
-    "defaultMessage": "添加链接"
-  },
-  "editor-panel.tooltip-add-note": {
-    "defaultMessage": "添加笔记"
-  },
-  "editor-panel.tooltip-add-relationship": {
-    "defaultMessage": "添加关系"
-  },
-  "editor-panel.tooltip-canvas-style": {
-    "defaultMessage": "背景"
   },
   "editor-panel.tooltip-connection-style-polyline": {
     "defaultMessage": "简单折线"
@@ -233,8 +131,17 @@
   "editor-panel.tooltip-topic-border-color": {
     "defaultMessage": "边框颜色"
   },
+  "editor-panel.tooltip-topic-border-color-default": {
+    "defaultMessage": "默认边框颜色"
+  },
+  "editor-panel.tooltip-topic-fill-color": {
+    "defaultMessage": "填充颜色"
+  },
+  "editor-panel.tooltip-topic-fill-color-default": {
+    "defaultMessage": "默认填充颜色"
+  },
   "editor-panel.tooltip-topic-font-bigger": {
-    "defaultMessage": "增大"
+    "defaultMessage": "放大"
   },
   "editor-panel.tooltip-topic-font-bold": {
     "defaultMessage": "粗体"
@@ -249,28 +156,49 @@
     "defaultMessage": "斜体"
   },
   "editor-panel.tooltip-topic-font-smaller": {
-    "defaultMessage": "减小"
+    "defaultMessage": "缩小"
   },
   "editor-panel.tooltip-topic-font-style": {
     "defaultMessage": "字体样式"
+  },
+  "editor-panel.font-family-default": {
+    "defaultMessage": "默认"
+  },
+  "editor-panel.font-family-mixed": {
+    "defaultMessage": "混合"
   },
   "editor-panel.tooltip-topic-share-ellipse": {
     "defaultMessage": "椭圆形状"
   },
   "editor-panel.tooltip-topic-share-line": {
-    "defaultMessage": "线形"
+    "defaultMessage": "线条形状"
   },
   "editor-panel.tooltip-topic-share-rectangle": {
     "defaultMessage": "矩形形状"
   },
+  "editor-panel.tooltip-topic-share-rounded": {
+    "defaultMessage": "圆角形状"
+  },
   "editor-panel.tooltip-topic-style": {
     "defaultMessage": "主题样式"
   },
-  "emoji-picker.search-placeholder": {
-    "defaultMessage": "搜索表情..."
+  "editor.edit-description-mobile": {
+    "defaultMessage": "移动设备支持有限的思维导图编辑功能。请使用桌面浏览器获得完整的编辑器功能。"
+  },
+  "editor.try-welcome": {
+    "defaultMessage": "此编辑空间展示了思维导图编辑器的一些功能！"
+  },
+  "editor.try-welcome-description": {
+    "defaultMessage": "注册即可开始创建、分享和发布无限数量的思维导图，完全免费。"
+  },
+  "editor.try-welcome-description-mobile": {
+    "defaultMessage": "注册即可开始创建、分享和发布无限数量的思维导图，完全免费。移动设备支持有限的思维导图编辑功能，请使用桌面浏览器获得完整功能。"
+  },
+  "editor.try-welcome-mobile": {
+    "defaultMessage": "此编辑空间展示了思维导图编辑器的一些功能！"
   },
   "icon-picker.show-images": {
-    "defaultMessage": "显示图像"
+    "defaultMessage": "显示图片"
   },
   "link.help_text": {
     "defaultMessage": "地址无效"
@@ -288,7 +216,7 @@
     "defaultMessage": "添加链接"
   },
   "shortcut-help-pane.add-note": {
-    "defaultMessage": "添加笔记"
+    "defaultMessage": "添加备注"
   },
   "shortcut-help-pane.add-sibling": {
     "defaultMessage": "添加同级主题"
@@ -297,16 +225,16 @@
     "defaultMessage": "取消文本更改"
   },
   "shortcut-help-pane.change-font-bold": {
-    "defaultMessage": "将文本改为粗体"
+    "defaultMessage": "将文本更改为粗体"
   },
   "shortcut-help-pane.change-font-italic": {
-    "defaultMessage": "将文本改为斜体"
+    "defaultMessage": "将文本更改为斜体"
   },
   "shortcut-help-pane.collapse-children": {
-    "defaultMessage": "折叠子项"
+    "defaultMessage": "折叠子主题"
   },
   "shortcut-help-pane.copy-and-text": {
-    "defaultMessage": "复制和粘贴主题/将思维导图图像复制到剪贴板。"
+    "defaultMessage": "复制和粘贴主题/复制思维导图图像到剪贴板。"
   },
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "删除主题"
@@ -330,13 +258,13 @@
     "defaultMessage": "导航"
   },
   "shortcut-help-pane.navigation-keys": {
-    "defaultMessage": "箭头键"
+    "defaultMessage": "方向键"
   },
   "shortcut-help-pane.overwrite-edit-topic": {
     "defaultMessage": "覆盖主题文本"
   },
   "shortcut-help-pane.overwrite-edit-topic-key": {
-    "defaultMessage": "在选中的主题上输入"
+    "defaultMessage": "在选定的主题上键入"
   },
   "shortcut-help-pane.redo": {
     "defaultMessage": "重做编辑"
@@ -356,11 +284,8 @@
   "shortcut-help-pane.undo": {
     "defaultMessage": "撤销编辑"
   },
-  "zoom-panel.tooltip-collapse-all": {
-    "defaultMessage": "折叠所有节点"
-  },
-  "zoom-panel.tooltip-expand-all": {
-    "defaultMessage": "展开所有节点"
+  "zoom-panel.tooltip-keyboard": {
+    "defaultMessage": "键盘快捷键"
   },
   "zoom-panel.tooltip-outline-view": {
     "defaultMessage": "大纲视图"
@@ -372,7 +297,112 @@
     "defaultMessage": "缩小"
   },
   "zoom-panel.tooltip-zoom-to-fit": {
-    "defaultMessage": "适合窗口"
+    "defaultMessage": "适应页面"
+  },
+  "zoom-panel.tooltip-collapse-all": {
+    "defaultMessage": "折叠所有节点"
+  },
+  "zoom-panel.tooltip-expand-all": {
+    "defaultMessage": "展开所有节点"
+  },
+  "creator-info-pane.description": {
+    "defaultMessage": "描述"
+  },
+  "creator-info-pane.creator": {
+    "defaultMessage": "创建者"
+  },
+  "editor-panel.tooltip-theme": {
+    "defaultMessage": "主题"
+  },
+  "editor-panel.theme-title": {
+    "defaultMessage": "主题"
+  },
+  "editor-panel.tooltip-canvas-style": {
+    "defaultMessage": "背景"
+  },
+  "editor-panel.canvas-style-title": {
+    "defaultMessage": "背景"
+  },
+  "editor-panel.tooltip-change-layout": {
+    "defaultMessage": "更改布局"
+  },
+  "layout-selector.description": {
+    "defaultMessage": "选择布局样式"
+  },
+  "layout-selector.mindmap": {
+    "defaultMessage": "思维导图"
+  },
+  "layout-selector.mindmap-description": {
+    "defaultMessage": "水平布局，平衡分支"
+  },
+  "layout-selector.tree": {
+    "defaultMessage": "树形"
+  },
+  "layout-selector.tree-description": {
+    "defaultMessage": "垂直层次，从上到下流动"
+  },
+  "canvas-style.title": {
+    "defaultMessage": "背景"
+  },
+  "canvas-style.colors": {
+    "defaultMessage": "颜色"
+  },
+  "canvas-style.background-color": {
+    "defaultMessage": "背景颜色"
+  },
+  "canvas-style.background-pattern": {
+    "defaultMessage": "背景图案"
+  },
+  "canvas-style.pattern-solid": {
+    "defaultMessage": "纯色"
+  },
+  "canvas-style.pattern-grid": {
+    "defaultMessage": "网格线"
+  },
+  "canvas-style.pattern-dots": {
+    "defaultMessage": "点状"
+  },
+  "canvas-style.pattern-none": {
+    "defaultMessage": "无"
+  },
+  "canvas-style.grid-style": {
+    "defaultMessage": "网格样式"
+  },
+  "canvas-style.grid-size-xs": {
+    "defaultMessage": "超小"
+  },
+  "canvas-style.grid-size-s": {
+    "defaultMessage": "小"
+  },
+  "canvas-style.grid-size-m": {
+    "defaultMessage": "中"
+  },
+  "canvas-style.grid-size-l": {
+    "defaultMessage": "大"
+  },
+  "canvas-style.grid-size-xl": {
+    "defaultMessage": "超大"
+  },
+  "canvas-style.grid-color": {
+    "defaultMessage": "网格颜色"
+  },
+  "canvas-style.preview": {
+    "defaultMessage": "预览"
+  },
+  "canvas-style.reset": {
+    "defaultMessage": "重置"
+  },
+  "canvas-style.apply": {
+    "defaultMessage": "应用"
+  },
+  "theme.dark": {
+    "defaultMessage": "深色"
+  },
+  "theme.light": {
+    "defaultMessage": "浅色"
+  },
+  "theme.toggle": {
+    "defaultMessage": "切换主题"
   },
   "rich-text-editor.insert-link": {
     "defaultMessage": "插入链接"
@@ -407,14 +437,17 @@
   "image-icon-tab.icons": {
     "defaultMessage": "图标"
   },
+  "emoji-picker.search-placeholder": {
+    "defaultMessage": "搜索表情符号..."
+  },
   "common.close": {
     "defaultMessage": "关闭"
   },
   "editor-panel.tooltip-add-topic-image": {
-    "defaultMessage": "添加主题图像"
+    "defaultMessage": "添加主题图片"
   },
   "editor-panel.topic-image-title": {
-    "defaultMessage": "主题图像"
+    "defaultMessage": "主题图片"
   },
   "app-bar-title": {
     "defaultMessage": "思维导图编辑器"
@@ -447,7 +480,7 @@
     "defaultMessage": "分隔符"
   },
   "editor-panel.tooltip-connection-style-arc": {
-    "defaultMessage": "弧线"
+    "defaultMessage": "弧形"
   },
   "editor-panel.tooltip-relationship-arrow-end": {
     "defaultMessage": "结束箭头"
@@ -474,7 +507,7 @@
     "defaultMessage": "关系样式"
   },
   "editor-panel.tooltip-unified-styling": {
-    "defaultMessage": "主题和连接样式"
+    "defaultMessage": "样式化主题和连接"
   },
   "color-picker.color": {
     "defaultMessage": "颜色"
@@ -507,16 +540,16 @@
     "defaultMessage": "点线样式"
   },
   "relationship-style-editor.end-arrow": {
-    "defaultMessage": "终点箭头"
+    "defaultMessage": "结束箭头"
   },
   "relationship-style-editor.end-arrow-tooltip": {
-    "defaultMessage": "切换终点箭头"
+    "defaultMessage": "切换结束箭头"
   },
   "relationship-style-editor.start-arrow": {
-    "defaultMessage": "起点箭头"
+    "defaultMessage": "开始箭头"
   },
   "relationship-style-editor.start-arrow-tooltip": {
-    "defaultMessage": "切换起点箭头"
+    "defaultMessage": "切换开始箭头"
   },
   "topic-font-editor.font-color": {
     "defaultMessage": "字体颜色"
@@ -528,16 +561,16 @@
     "defaultMessage": "字体大小和样式"
   },
   "topic-font-editor.increase-size": {
-    "defaultMessage": "增大"
+    "defaultMessage": "放大"
   },
   "topic-font-editor.increase-size-tooltip": {
-    "defaultMessage": "增大字体"
+    "defaultMessage": "增大字体大小"
   },
   "topic-font-editor.decrease-size": {
-    "defaultMessage": "减小"
+    "defaultMessage": "缩小"
   },
   "topic-font-editor.decrease-size-tooltip": {
-    "defaultMessage": "减小字体"
+    "defaultMessage": "减小字体大小"
   },
   "topic-font-editor.bold": {
     "defaultMessage": "粗体"
@@ -558,7 +591,7 @@
     "defaultMessage": "无形状"
   },
   "headerNotifier": {
-    "defaultMessage": "标题通知"
+    "defaultMessage": "标题通知器"
   },
   "icon-collection.shape.none": {
     "defaultMessage": "无"
@@ -590,26 +623,41 @@
   "icon-collection.connection.thick-curved": {
     "defaultMessage": "粗曲线"
   },
+  "icon-collection.connection.thick-curved-tooltip": {
+    "defaultMessage": "粗曲线与平滑贝塞尔曲线 - 适合强调主要分支"
+  },
+  "icon-collection.connection.organic-curved": {
+    "defaultMessage": "有机曲线"
+  },
+  "icon-collection.connection.organic-curved-tooltip": {
+    "defaultMessage": "手绘风格与戏剧性曲线 - 适合创意和表达性思维导图"
+  },
   "icon-collection.connection.arc": {
     "defaultMessage": "弧形"
   },
-  "icon-collection.connection.organic-curved": {
-    "defaultMessage": "有機曲線"
-  },
-  "icon-collection.connection.organic-curved-tooltip": {
-    "defaultMessage": "手繪風格，具有戲劇性曲線 - 非常適合創意和富有表現力的思維導圖"
+  "icon-collection.connection.arc-tooltip": {
+    "defaultMessage": "圆弧连接 - 适合径向布局和有机流动"
   },
   "icon-collection.connection.thin-curved": {
     "defaultMessage": "细曲线"
+  },
+  "icon-collection.connection.thin-curved-tooltip": {
+    "defaultMessage": "细曲线与优雅贝塞尔曲线 - 适合详细或密集的思维导图"
   },
   "icon-collection.connection.simple-polyline": {
     "defaultMessage": "简单折线"
   },
   "icon-collection.connection.simple-polyline-tooltip": {
-    "defaultMessage": "直接的直线连接 - 简洁的极简风格用于简单关系"
+    "defaultMessage": "直接直线连接 - 简洁简约风格，适合简单关系"
   },
   "icon-collection.connection.curved-polyline": {
     "defaultMessage": "曲线折线"
+  },
+  "icon-collection.connection.curved-polyline-tooltip": {
+    "defaultMessage": "多段线与平滑角落 - 适合结构化布局和清晰路径"
+  },
+  "icon-collection.connection.default-tooltip": {
+    "defaultMessage": "默认 - 连接样式将根据主题自动选择"
   },
   "icon-picker.emojis": {
     "defaultMessage": "表情符号"
@@ -624,7 +672,7 @@
     "defaultMessage": "剩余 {remaining}"
   },
   "note.character.limit.warning": {
-    "defaultMessage": "(接近限制)"
+    "defaultMessage": "（接近限制）"
   },
   "ocean": {
     "defaultMessage": "海洋"
@@ -648,37 +696,37 @@
     "defaultMessage": "取消"
   },
   "theme-editor.description": {
-    "defaultMessage": "主题定义了思维导图的视觉样式，包括颜色、字体和整体外观。选择最适合您内容和受众的主题。"
+    "defaultMessage": "主题定义思维导图的视觉样式，包括颜色、字体和整体外观。选择最适合您内容和受众的主题。"
   },
   "theme-editor.title": {
     "defaultMessage": "选择主题"
   },
   "theme.classic.description": {
-    "defaultMessage": "Clean and professional design with blue accents. Perfect for business presentations and formal documents."
+    "defaultMessage": "简洁专业的设计，带有蓝色强调色。适合商务演示和正式文档。"
   },
   "theme.classic.name": {
     "defaultMessage": "经典"
   },
   "theme.ocean.description": {
-    "defaultMessage": "Ocean-inspired blue theme with light/dark variants. Calm and professional colors perfect for business and creative projects."
+    "defaultMessage": "海洋启发的蓝色主题，具有明暗变体。平静专业的颜色，适合商务和创意项目。"
   },
   "theme.ocean.name": {
     "defaultMessage": "海洋"
   },
   "theme.robot.description": {
-    "defaultMessage": "Tech-inspired green theme. Perfect for technical documentation and futuristic presentations."
+    "defaultMessage": "科技启发的绿色主题。适合技术文档和未来主义演示。"
   },
   "theme.robot.name": {
     "defaultMessage": "机器人"
   },
   "theme.summer.description": {
-    "defaultMessage": "Bright and vibrant orange theme. Great for creative projects and energetic presentations."
+    "defaultMessage": "明亮活泼的橙色主题。适合创意项目和充满活力的演示。"
   },
   "theme.summer.name": {
-    "defaultMessage": "夏季"
+    "defaultMessage": "夏日"
   },
   "theme.sunrise.description": {
-    "defaultMessage": "Sunrise theme with light/dark mode variants. Enhanced colors and contrast for better readability."
+    "defaultMessage": "日出主题，具有明暗模式变体。增强的颜色和对比度，提供更好的可读性。"
   },
   "theme.sunrise.name": {
     "defaultMessage": "日出"
@@ -693,36 +741,294 @@
     "defaultMessage": "标题输入"
   },
   "canvas-style.tab-color": {
-    "defaultMessage": "Color"
+    "defaultMessage": "颜色"
   },
   "canvas-style.tab-grid": {
-    "defaultMessage": "Grid Color"
+    "defaultMessage": "网格颜色"
   },
   "canvas-style.background-style": {
-    "defaultMessage": "Background Style"
+    "defaultMessage": "背景样式"
   },
   "canvas-style.pattern-default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+    "defaultMessage": "默认 - 所有样式将根据主题自动选择"
   },
   "icon-collection.shape.default": {
-    "defaultMessage": "Default"
+    "defaultMessage": "默认"
   },
   "icon-collection.border.default": {
-    "defaultMessage": "Default"
+    "defaultMessage": "默认"
   },
   "icon-collection.connection.default": {
-    "defaultMessage": "Default"
+    "defaultMessage": "默认"
   },
   "icon-collection.default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+    "defaultMessage": "默认 - 所有样式将根据主题自动选择"
   },
   "unified-styling.shape-type": {
-    "defaultMessage": "Shape Type"
+    "defaultMessage": "形状类型"
   },
   "unified-styling.background-color": {
-    "defaultMessage": "Background Color"
+    "defaultMessage": "背景颜色"
   },
   "topic-font-editor.reset-to-default": {
-    "defaultMessage": "Reset to Default"
+    "defaultMessage": "重置为默认"
+  },
+  "editor-panel.tooltip-ai-topic-generator": {
+    "defaultMessage": "AI 主题生成器"
+  },
+  "editor-panel.tooltip-ai-explainer": {
+    "defaultMessage": "AI 解释器"
+  },
+  "information-dialog.title": {
+    "defaultMessage": "信息"
+  },
+  "information-dialog.fastmind-description": {
+    "defaultMessage": "FastMind 是基于 WiseMapping 的 VS Code 扩展，为开发者提供强大的思维导图功能。它集成了 AI 驱动的主题生成、OpenAI API 兼容模型集成、AI 生成内容智能去重、VS Code 原生文件系统集成和其他高级功能，帮助开发者更好地组织和可视化他们的想法。"
+  },
+  "information-dialog.features-title": {
+    "defaultMessage": "主要功能："
+  },
+  "information-dialog.feature-ai": {
+    "defaultMessage": "AI 驱动的主题生成"
+  },
+  "information-dialog.feature-api-integration": {
+    "defaultMessage": "OpenAI API 兼容模型集成"
+  },
+  "information-dialog.feature-deduplication": {
+    "defaultMessage": "AI 生成内容智能去重"
+  },
+  "information-dialog.feature-vscode-integration": {
+    "defaultMessage": "VS Code 原生文件系统集成"
+  },
+  "information-dialog.powered-by": {
+    "defaultMessage": "技术支持"
+  },
+  "information-dialog.close": {
+    "defaultMessage": "关闭"
+  },
+  "visualization-toolbar.tooltip-info": {
+    "defaultMessage": "信息"
+  },
+  "llm-notification.status.completed": {
+    "defaultMessage": "已完成"
+  },
+  "llm-notification.status.error": {
+    "defaultMessage": "失败"
+  },
+  "ai-topic-generator.title": {
+    "defaultMessage": "AI 主题生成器"
+  },
+  "ai-topic-generator.description": {
+    "defaultMessage": "基于 <strong>{topicText}</strong> 生成相关子主题"
+  },
+  "ai-topic-generator.count-label": {
+    "defaultMessage": "生成主题数量：{count}"
+  },
+  "ai-topic-generator.custom-prompt-label": {
+    "defaultMessage": "自定义提示（可选）"
+  },
+  "ai-topic-generator.custom-prompt-placeholder": {
+    "defaultMessage": "例如：专注于技术实现方面"
+  },
+  "ai-topic-generator.custom-prompt-helper": {
+    "defaultMessage": "为 AI 生成提供额外上下文或要求"
+  },
+  "ai-topic-generator.generating": {
+    "defaultMessage": "正在生成主题，请稍候..."
+  },
+  "ai-topic-generator.preview-title": {
+    "defaultMessage": "生成主题预览："
+  },
+  "ai-topic-generator.cancel": {
+    "defaultMessage": "取消"
+  },
+  "ai-topic-generator.generate": {
+    "defaultMessage": "生成主题"
+  },
+  "ai-topic-generator.generating-button": {
+    "defaultMessage": "生成中..."
+  },
+  "ai-topic-generator.regenerate": {
+    "defaultMessage": "重新生成"
+  },
+  "ai-topic-generator.add-to-mindmap": {
+    "defaultMessage": "添加到思维导图"
+  },
+  "ai-topic-generator.error-generate": {
+    "defaultMessage": "生成主题时发生错误"
+  },
+  "ai-topic-generator.error-add": {
+    "defaultMessage": "添加主题时发生错误"
+  },
+  "settings.title": {
+    "defaultMessage": "设置"
+  },
+  "settings.description": {
+    "defaultMessage": "配置 AI 模型设置并自定义主题生成和概念解释的提示词。"
+  },
+  "settings.current-model": {
+    "defaultMessage": "当前模型：{modelName}"
+  },
+  "settings.no-model": {
+    "defaultMessage": "未配置模型"
+  },
+  "settings.model-api-management": {
+    "defaultMessage": "模型 API 管理"
+  },
+  "settings.ai-topic-generator-title": {
+    "defaultMessage": "AI 主题生成器（用户自定义提示词）"
+  },
+  "settings.deduplication": {
+    "defaultMessage": "去重"
+  },
+  "settings.topic-generator-placeholder": {
+    "defaultMessage": "输入主题生成的自定义提示词..."
+  },
+  "settings.ai-explainer-title": {
+    "defaultMessage": "AI 解释器（用户自定义提示词）"
+  },
+  "settings.explainer-placeholder": {
+    "defaultMessage": "输入概念解释的自定义提示词..."
+  },
+  "export.dialog.title": {
+    "defaultMessage": "导出"
+  },
+  "export.format.svg": {
+    "defaultMessage": "SVG"
+  },
+  "export.format.png": {
+    "defaultMessage": "PNG"
+  },
+  "export.format.jpg": {
+    "defaultMessage": "JPG"
+  },
+  "export.format.pdf": {
+    "defaultMessage": "PDF"
+  },
+  "export.format.txt": {
+    "defaultMessage": "TXT"
+  },
+  "export.format.mmap": {
+    "defaultMessage": "MMAP"
+  },
+  "export.format.wisemapping": {
+    "defaultMessage": "WISEMAPPING"
+  },
+  "export.format.svg.description": {
+    "defaultMessage": "可缩放矢量图形 - 最适合高质量图像和打印"
+  },
+  "export.format.png.description": {
+    "defaultMessage": "便携式网络图形 - 适合网页使用和演示"
+  },
+  "export.format.jpg.description": {
+    "defaultMessage": "JPEG 格式 - 适合照片和复杂图形的压缩图像"
+  },
+  "export.format.pdf.description": {
+    "defaultMessage": "便携式文档格式 - 通用文档格式"
+  },
+  "export.format.txt.description": {
+    "defaultMessage": "纯文本格式 - 简单的文本表示"
+  },
+  "export.format.mmap.description": {
+    "defaultMessage": "FreeMind 格式 - 与 FreeMind 思维导图软件兼容"
+  },
+  "export.format.wisemapping.description": {
+    "defaultMessage": "WiseMapping 格式 - 具有完整功能支持的原生格式"
+  },
+  "export.options.title": {
+    "defaultMessage": "导出选项"
+  },
+  "export.options.group.title": {
+    "defaultMessage": "分组"
+  },
+  "export.options.group.description": {
+    "defaultMessage": "在导出文件中包含分组信息"
+  },
+  "export.options.svg.title": {
+    "defaultMessage": "SVG 选项"
+  },
+  "export.options.svg.description": {
+    "defaultMessage": "配置 SVG 导出设置"
+  },
+  "export.options.png.title": {
+    "defaultMessage": "PNG 选项"
+  },
+  "export.options.png.description": {
+    "defaultMessage": "配置 PNG 导出设置"
+  },
+  "export.options.jpg.title": {
+    "defaultMessage": "JPG 选项"
+  },
+  "export.options.jpg.description": {
+    "defaultMessage": "配置 JPG 导出设置"
+  },
+  "export.options.zoom.title": {
+    "defaultMessage": "缩放"
+  },
+  "export.options.zoom.description": {
+    "defaultMessage": "以当前缩放级别导出"
+  },
+  "export.options.fit.title": {
+    "defaultMessage": "适应页面"
+  },
+  "export.options.fit.description": {
+    "defaultMessage": "自动缩放以适应页面大小"
+  },
+  "export.options.size.title": {
+    "defaultMessage": "尺寸"
+  },
+  "export.options.size.description": {
+    "defaultMessage": "使用自定义尺寸导出"
+  },
+  "export.options.width": {
+    "defaultMessage": "宽度"
+  },
+  "export.options.height": {
+    "defaultMessage": "高度"
+  },
+  "export.options.width.placeholder": {
+    "defaultMessage": "输入宽度（像素）"
+  },
+  "export.options.height.placeholder": {
+    "defaultMessage": "输入高度（像素）"
+  },
+  "export.button.cancel": {
+    "defaultMessage": "取消"
+  },
+  "export.button.export": {
+    "defaultMessage": "导出"
+  },
+  "ai-topic-generator.button.generate": {
+    "defaultMessage": "生成"
+  },
+  "settings.api-key": {
+    "defaultMessage": "API 密钥"
+  },
+  "settings.api-key-placeholder": {
+    "defaultMessage": "输入您的 API 密钥"
+  },
+  "settings.api-key-description": {
+    "defaultMessage": "您的 API 密钥将本地存储并用于 AI 模型请求"
+  },
+  "settings.test-connection": {
+    "defaultMessage": "测试连接"
+  },
+  "settings.testing-connection": {
+    "defaultMessage": "测试连接中..."
+  },
+  "settings.connection-success": {
+    "defaultMessage": "连接成功！"
+  },
+  "settings.connection-failed": {
+    "defaultMessage": "连接失败。请检查您的 API 密钥并重试。"
+  },
+  "settings.save": {
+    "defaultMessage": "保存"
+  },
+  "settings.cancel": {
+    "defaultMessage": "取消"
+  },
+  "llm.config.error.api-not-configured": {
+    "defaultMessage": "请先配置模型API！"
   }
 }

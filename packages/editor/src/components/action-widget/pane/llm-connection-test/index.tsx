@@ -2,7 +2,7 @@
  *    Copyright [2007-2025] [wisemapping]
  *
  *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
- *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   It is basically Apache License, Version 2.0 (the "License") plus the
  *   "powered by wisemapping" text requirement on every single page;
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the license at
@@ -17,6 +17,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import { useIntl } from 'react-intl';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -48,6 +49,7 @@ interface LlmConnectionTestProps {
 }
 
 const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestProps): React.ReactElement => {
+  const intl = useIntl();
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -128,10 +130,10 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
       console.log('🎉 Test completed successfully!');
 
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred';
+      const errorMessage = err instanceof Error ? err.message : intl.formatMessage({ id: 'llm-connection-test.error-unknown', defaultMessage: 'Unknown error occurred' });
       console.error('❌ LLM Test Failed:', errorMessage);
       console.error('🔍 Full error details:', err);
-      setError(`Connection failed: ${errorMessage}`);
+      setError(`${intl.formatMessage({ id: 'llm-connection-test.error-connection-failed', defaultMessage: 'Connection failed' })}: ${errorMessage}`);
     } finally {
       setIsLoading(false);
     }
@@ -157,7 +159,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
 
     } catch (error) {
       console.error('❌ Failed to save configuration:', error);
-      setError('Failed to save configuration: ' + (error instanceof Error ? error.message : 'Unknown error'));
+      setError(`${intl.formatMessage({ id: 'llm-connection-test.error-failed-config', defaultMessage: 'Configuration error' })}: ${error instanceof Error ? error.message : intl.formatMessage({ id: 'llm-connection-test.error-unknown', defaultMessage: 'Unknown error occurred' })}`);
     }
   };
 
@@ -175,7 +177,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
       PaperComponent={StyledDialogPaper}
     >
       <DialogTitle>
-        LLM Connection Test
+        {intl.formatMessage({ id: 'llm-connection-test.title', defaultMessage: 'LLM Connection Test' })}
         <CloseButton onClick={handleClose} size="small">
           <CloseIcon />
         </CloseButton>
@@ -185,54 +187,54 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
         <FormContainer>
           <ConfigurationSection>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-              Test connection to any OpenAI-compatible API
+              {intl.formatMessage({ id: 'llm-connection-test.description', defaultMessage: 'Test connection to any OpenAI-compatible API' })}
             </Typography>
 
             <Paper sx={{ p: 2 }}>
               <Typography variant="subtitle2" gutterBottom>
-                Configuration
+                {intl.formatMessage({ id: 'llm-connection-test.configuration', defaultMessage: 'Configuration' })}
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 <TextField
-                  label="API URL"
+                  label={intl.formatMessage({ id: 'llm-connection-test.api-url', defaultMessage: 'API URL' })}
                   value={apiUrl}
                   onChange={(e) => setApiUrl(e.target.value)}
                   fullWidth
                   size="small"
-                  placeholder="https://api.openai.com/v1/chat/completions"
+                  placeholder={intl.formatMessage({ id: 'llm-connection-test.api-url-placeholder', defaultMessage: 'https://api.openai.com/v1/chat/completions' })}
                 />
                 <Box sx={{ display: 'flex', gap: 2 }}>
                   <TextField
-                    label="Model"
+                    label={intl.formatMessage({ id: 'llm-connection-test.model', defaultMessage: 'Model' })}
                     value={modelName}
                     onChange={(e) => setModelName(e.target.value)}
                     fullWidth
                     size="small"
-                    placeholder="gpt-3.5-turbo"
+                    placeholder={intl.formatMessage({ id: 'llm-connection-test.model-placeholder', defaultMessage: 'gpt-3.5-turbo' })}
                   />
                   <TextField
-                    label="API Key"
+                    label={intl.formatMessage({ id: 'llm-connection-test.api-key', defaultMessage: 'API Key' })}
                     value={apiKey}
                     onChange={(e) => setApiKey(e.target.value)}
                     fullWidth
                     size="small"
                     type="password"
-                    placeholder="Your API key"
+                    placeholder={intl.formatMessage({ id: 'llm-connection-test.api-key-placeholder', defaultMessage: 'Your API key' })}
                   />
                 </Box>
                 <TextField
-                  label="Prompt"
+                  label={intl.formatMessage({ id: 'llm-connection-test.prompt', defaultMessage: 'Prompt' })}
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
                   fullWidth
                   size="small"
                   multiline
                   rows={2}
-                  placeholder="Enter your test prompt here..."
+                  placeholder={intl.formatMessage({ id: 'llm-connection-test.prompt-placeholder', defaultMessage: 'Enter your test prompt here...' })}
                 />
                 <Box sx={{ display: 'flex', gap: 2 }}>
                   <TextField
-                    label="Temperature"
+                    label={intl.formatMessage({ id: 'llm-connection-test.temperature', defaultMessage: 'Temperature' })}
                     value={temperature}
                     onChange={(e) => setTemperature(parseFloat(e.target.value))}
                     fullWidth
@@ -241,7 +243,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
                     inputProps={{ min: 0, max: 2, step: 0.1 }}
                   />
                   <TextField
-                    label="Max Tokens"
+                    label={intl.formatMessage({ id: 'llm-connection-test.max-tokens', defaultMessage: 'Max Tokens' })}
                     value={maxTokens}
                     onChange={(e) => setMaxTokens(parseInt(e.target.value))}
                     fullWidth
@@ -262,10 +264,10 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
                 {isLoading ? (
                   <>
                     <CircularProgress size={20} sx={{ mr: 1 }} />
-                    Testing...
+                    {intl.formatMessage({ id: 'llm-connection-test.testing', defaultMessage: 'Testing...' })}
                   </>
                 ) : (
-                  'Test LLM Connection'
+                  intl.formatMessage({ id: 'llm-connection-test.test-connection', defaultMessage: 'Test LLM Connection' })
                 )}
               </Button>
               <Button
@@ -273,7 +275,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
                 onClick={handleSaveConfig}
                 disabled={isLoading}
               >
-                Save Configuration
+                {intl.formatMessage({ id: 'llm-connection-test.save-configuration', defaultMessage: 'Save Configuration' })}
               </Button>
             </Box>
           </ConfigurationSection>
@@ -287,7 +289,7 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
             {result && (
               <Box>
                 <Typography variant="body2" gutterBottom>
-                  Response:
+                  {intl.formatMessage({ id: 'llm-connection-test.response', defaultMessage: 'Response:' })}
                 </Typography>
                 <ResponseBox>
                   {result}

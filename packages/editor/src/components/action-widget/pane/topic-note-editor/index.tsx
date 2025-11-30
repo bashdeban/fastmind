@@ -20,6 +20,7 @@ import Typography from '@mui/material/Typography';
 import React, { ReactElement, useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
+import { useIntl } from 'react-intl';
 import NodeProperty from '../../../../classes/model/node-property';
 import Input from '../../input';
 import SaveAndDelete from '../save-and-delete';
@@ -38,6 +39,7 @@ type TexttNodeEditorProps = {
  * Note form for toolbar and node contextual editor
  */
 const TopicNoteEditor = ({ closeModal, noteModel, isFromPreview = false, isFromEditorBar = false }: TexttNodeEditorProps): ReactElement => {
+  const intl = useIntl();
   const value = noteModel.getValue();
   const [note, setNote] = useState(value);
 
@@ -77,7 +79,15 @@ const TopicNoteEditor = ({ closeModal, noteModel, isFromPreview = false, isFromE
 
       <Box sx={{ mb: 2, height: '100%', display: 'flex', flexDirection: 'column' }}>
         <Typography variant="subtitle2" gutterBottom sx={{ fontSize: '0.75rem', mb: 1 }}>
-          {isFromPreview ? 'Edit Note' : 'Add Note'}
+          {isFromPreview 
+            ? intl.formatMessage({
+                id: 'topic-note-editor.edit-note',
+                defaultMessage: 'Edit Note',
+              })
+            : intl.formatMessage({
+                id: 'topic-note-editor.add-note',
+                defaultMessage: 'Add Note',
+              })}
         </Typography>
 
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
