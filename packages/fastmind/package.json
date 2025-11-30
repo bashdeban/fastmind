@@ -1,12 +1,13 @@
 {
   "name": "fastmind",
-  "version": "0.1.0",
+  "displayName": "Fastmind",
+  "version": "0.1.1",
   "description": "Fastmind is an open-source VS Code extension that integrates AI-driven mind mapping into your workflow, using large language models to generate context-aware subtopics and improve ideation directly inside the IDE.",
   "publisher": "bashdeban",
   "main": "dist/extension.js",
   "icon": "fastmind.png",
   "markdown": "github",
-  "preview": true,
+  "preview": false,
   "qna": "marketplace",
   "scripts": {
     "build": "webpack --config webpack.extension.js --mode production",

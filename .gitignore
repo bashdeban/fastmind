@@ -49,3 +49,4 @@ wisemapping-frontend.code-workspace
 packages/**/.yalc/
 packages/**/yalc.lock
 temp/*
+packages/fastmind/*.vsix

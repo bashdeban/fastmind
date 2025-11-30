@@ -5,13 +5,9 @@
 ## Create a Mind Map in One Click
 - Create a new file with the `.fastmind` extension (e.g., `architecture.fastmind`)
 - It automatically opens in the immersive visual editor
-- Double-click to add topics  
-  Drag & drop to reorganize  
-  Scroll to zoom  
-  Delete key to remove  
-  Smooth and intuitive
+- Smooth and intuitive
 
-## Powerful AI Features (right-click any topic)
+## Powerful AI Features
 
 1. **AI Topic Generator**  
    Select a topic → “AI Generate Topics”  
@@ -23,7 +19,7 @@
    Get in-depth explanations, real-world applications, examples, and even code snippets.  
    Fully customizable length and focus.
 
-## Supports Almost Every Major LLM (one-line config to switch)
+## Supports Almost Every Major LLM
 - OpenAI (gpt-4, gpt-3.5-turbo, etc.)
 - Anthropic Claude (all models)
 - Azure OpenAI
@@ -33,9 +29,9 @@
 Quick config example (set once in VS Code settings):
 ```json
 "fastmind.llm": {
-  "apiUrl": "https://api.openai.com/v1/chat/completions",
-  "modelName": "gpt-4",
-  "apiKey": "sk-..."
+  "apiUrl": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+  "modelName": "gemini-2.5-flash",
+  "apiKey": "AI..."
 }
 ```
 
