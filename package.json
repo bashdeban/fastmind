@@ -18,7 +18,7 @@
     "build": "lerna run build",
     "build:fastmind": "yarn workspace @wisemapping/editor-standalone build && yarn workspace fastmind build",
     "package:fastmind": "yarn workspace fastmind package",
-    "build-and-package:fastmind": "yarn build:fastmind && yarn package:fastmind",
+    "bap:fastmind": "yarn build:fastmind && yarn package:fastmind",
     "clean": "lerna run clean --parallel && lerna clean --yes && rm -rf node_modules && yarn install",
     "lint": "lerna run lint --stream",
     "lint:fix": "lerna run lint:fix --stream",
