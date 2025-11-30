@@ -419,11 +419,98 @@
   "link.placeholder": {
     "defaultMessage": "https://www.example.com"
   },
+  "llm-connection-test.api-key": {
+    "defaultMessage": "APIキー"
+  },
+  "llm-connection-test.api-key-placeholder": {
+    "defaultMessage": "あなたのAPIキー"
+  },
+  "llm-connection-test.api-url": {
+    "defaultMessage": "API URL"
+  },
+  "llm-connection-test.api-url-placeholder": {
+    "defaultMessage": "https://api.openai.com/v1/chat/completions"
+  },
+  "llm-connection-test.configuration": {
+    "defaultMessage": "設定"
+  },
+  "llm-connection-test.description": {
+    "defaultMessage": "OpenAI互換APIへの接続をテスト"
+  },
+  "llm-connection-test.error-connection-failed": {
+    "defaultMessage": "接続に失敗しました"
+  },
+  "llm-connection-test.error-failed-config": {
+    "defaultMessage": "設定エラー"
+  },
+  "llm-connection-test.error-unknown": {
+    "defaultMessage": "不明なエラーが発生しました"
+  },
+  "llm-connection-test.max-tokens": {
+    "defaultMessage": "最大トークン数"
+  },
+  "llm-connection-test.model": {
+    "defaultMessage": "モデル"
+  },
+  "llm-connection-test.model-placeholder": {
+    "defaultMessage": "gpt-3.5-turbo"
+  },
+  "llm-connection-test.prompt": {
+    "defaultMessage": "プロンプト"
+  },
+  "llm-connection-test.prompt-placeholder": {
+    "defaultMessage": "テストプロンプトをここに入力..."
+  },
+  "llm-connection-test.response": {
+    "defaultMessage": "応答："
+  },
+  "llm-connection-test.save-configuration": {
+    "defaultMessage": "設定を保存"
+  },
+  "llm-connection-test.temperature": {
+    "defaultMessage": "温度"
+  },
+  "llm-connection-test.test-connection": {
+    "defaultMessage": "LLM接続をテスト"
+  },
+  "llm-connection-test.testing": {
+    "defaultMessage": "テスト中..."
+  },
+  "llm-connection-test.title": {
+    "defaultMessage": "LLM接続テスト"
+  },
   "llm-connection-test.console-logs": {
     "defaultMessage": "詳細ログはブラウザコンソールを開いてください"
   },
   "llm-connection-test.close": {
     "defaultMessage": "閉じる"
+  },
+  "llm-notification.status.completed": {
+    "defaultMessage": "完了"
+  },
+  "llm-notification.status.error": {
+    "defaultMessage": "失敗"
+  },
+  "model-api-management.title": {
+    "defaultMessage": "モデル API 管理"
+  },
+  "model-api-management.no-configurations": {
+    "defaultMessage": "API 設定なし"
+  },
+  "model-api-management.empty-description": {
+    "defaultMessage": "最初の LLM API 設定を追加して開始"
+  },
+  "model-api-management.active": {
+    "defaultMessage": "アクティブ"
+  },
+  "model-api-management.switch": {
+    "defaultMessage": "切り替え"
+  },
+  "model-api-management.update": {
+    "defaultMessage": "更新"
+  },
+  "model-api-management.add-configuration": {
+    "defaultMessage": "設定を追加"
   },
   "outline.collapse": {
     "defaultMessage": "折りたたむ"
@@ -766,26 +853,5 @@
   },
   "visualization-toolbar.tooltip-zoom-to-fit": {
     "defaultMessage": "フィット"
-  },
-  "model-api-management.title": {
-    "defaultMessage": "モデル API 管理"
-  },
-  "model-api-management.no-configurations": {
-    "defaultMessage": "API 設定なし"
-  },
-  "model-api-management.empty-description": {
-    "defaultMessage": "最初の LLM API 設定を追加して開始"
-  },
-  "model-api-management.active": {
-    "defaultMessage": "アクティブ"
-  },
-  "model-api-management.switch": {
-    "defaultMessage": "切り替え"
-  },
-  "model-api-management.update": {
-    "defaultMessage": "更新"
-  },
-  "model-api-management.add-configuration": {
-    "defaultMessage": "設定を追加"
   }
 }

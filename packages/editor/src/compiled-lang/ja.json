@@ -853,16 +853,148 @@
       "value": "https://www.example.com"
     }
   ],
+  "llm-connection-test.api-key": [
+    {
+      "type": 0,
+      "value": "APIキー"
+    }
+  ],
+  "llm-connection-test.api-key-placeholder": [
+    {
+      "type": 0,
+      "value": "あなたのAPIキー"
+    }
+  ],
+  "llm-connection-test.api-url": [
+    {
+      "type": 0,
+      "value": "API URL"
+    }
+  ],
+  "llm-connection-test.api-url-placeholder": [
+    {
+      "type": 0,
+      "value": "https://api.openai.com/v1/chat/completions"
+    }
+  ],
   "llm-connection-test.close": [
     {
       "type": 0,
       "value": "閉じる"
     }
   ],
+  "llm-connection-test.configuration": [
+    {
+      "type": 0,
+      "value": "設定"
+    }
+  ],
   "llm-connection-test.console-logs": [
     {
       "type": 0,
       "value": "詳細ログはブラウザコンソールを開いてください"
+    }
+  ],
+  "llm-connection-test.description": [
+    {
+      "type": 0,
+      "value": "OpenAI互換APIへの接続をテスト"
+    }
+  ],
+  "llm-connection-test.error-connection-failed": [
+    {
+      "type": 0,
+      "value": "接続に失敗しました"
+    }
+  ],
+  "llm-connection-test.error-failed-config": [
+    {
+      "type": 0,
+      "value": "設定エラー"
+    }
+  ],
+  "llm-connection-test.error-unknown": [
+    {
+      "type": 0,
+      "value": "不明なエラーが発生しました"
+    }
+  ],
+  "llm-connection-test.max-tokens": [
+    {
+      "type": 0,
+      "value": "最大トークン数"
+    }
+  ],
+  "llm-connection-test.model": [
+    {
+      "type": 0,
+      "value": "モデル"
+    }
+  ],
+  "llm-connection-test.model-placeholder": [
+    {
+      "type": 0,
+      "value": "gpt-3.5-turbo"
+    }
+  ],
+  "llm-connection-test.prompt": [
+    {
+      "type": 0,
+      "value": "プロンプト"
+    }
+  ],
+  "llm-connection-test.prompt-placeholder": [
+    {
+      "type": 0,
+      "value": "テストプロンプトをここに入力..."
+    }
+  ],
+  "llm-connection-test.response": [
+    {
+      "type": 0,
+      "value": "応答："
+    }
+  ],
+  "llm-connection-test.save-configuration": [
+    {
+      "type": 0,
+      "value": "設定を保存"
+    }
+  ],
+  "llm-connection-test.temperature": [
+    {
+      "type": 0,
+      "value": "温度"
+    }
+  ],
+  "llm-connection-test.test-connection": [
+    {
+      "type": 0,
+      "value": "LLM接続をテスト"
+    }
+  ],
+  "llm-connection-test.testing": [
+    {
+      "type": 0,
+      "value": "テスト中..."
+    }
+  ],
+  "llm-connection-test.title": [
+    {
+      "type": 0,
+      "value": "LLM接続テスト"
+    }
+  ],
+  "llm-notification.status.completed": [
+    {
+      "type": 0,
+      "value": "完了"
+    }
+  ],
+  "llm-notification.status.error": [
+    {
+      "type": 0,
+      "value": "失敗"
     }
   ],
   "model-api-management.active": [
