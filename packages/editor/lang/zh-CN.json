@@ -1027,5 +1027,8 @@
   },
   "settings.cancel": {
     "defaultMessage": "取消"
+  },
+  "llm.config.error.api-not-configured": {
+    "defaultMessage": "请先配置模型API！"
   }
 }

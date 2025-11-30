@@ -108,6 +108,12 @@
           "type": "boolean",
           "default": false,
           "description": "Auto-save when window changes"
+        },
+        "fastmind.language.locale": {
+          "type": "string",
+          "enum": ["en", "zh-CN", "zh", "ja", "fr", "de", "es", "it", "pt", "ru", "uk", "hi"],
+          "default": "en",
+          "description": "Language locale for FastMind editor"
         }
       }
     }

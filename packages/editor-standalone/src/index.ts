@@ -61,7 +61,7 @@ const mapInfo = new MapInfoImpl(bootstrap.mapId, title, 'User', false);
 // VS Code specific options
 const options: EditorOptions = {
   mode: 'edition-owner',
-  locale: 'en',
+  locale: bootstrap.locale || 'en', // 使用 VS Code 设置的语言，默认为英文
   enableKeyboardEvents: true,
   enableAppBar: false,
   hideCreatorInfo: true,

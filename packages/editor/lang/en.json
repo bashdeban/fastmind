@@ -1027,5 +1027,8 @@
   },
   "settings.cancel": {
     "defaultMessage": "Cancel"
+  },
+  "llm.config.error.api-not-configured": {
+    "defaultMessage": "Please configure the model API first!"
   }
 }

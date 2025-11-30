@@ -724,5 +724,8 @@
   },
   "topic-font-editor.reset-to-default": {
     "defaultMessage": "Reset to Default"
+  },
+  "llm.config.error.api-not-configured": {
+    "defaultMessage": "まずモデルAPIを設定してください！"
   }
 }

@@ -307,9 +307,13 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     // 获取当前文档内容作为初始内容
     const initialContent = document.getText();
 
+    const config = vscode.workspace.getConfiguration('fastmind');
+    const configuredLocale = config.get<string>('language.locale');
+    const locale = configuredLocale || vscode.env.language || 'en';
+
     const resourceUrl = webview.asWebviewUri(document.uri).toString();
     return `<!DOCTYPE html>
-      <html lang="en">
+      <html lang="${locale}">
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -369,6 +373,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
             fileName: "${fileName}",
             resourceUrl: "${resourceUrl}",
             mapId: "${mapId}",
+            locale: "${locale}",
             onChanged: (newXml) => {
               vscode.postMessage({ 
                 type: 'edit', 

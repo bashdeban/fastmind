@@ -20,6 +20,7 @@ import { PersistenceManager } from '@wisemapping/mindplot';
 export interface VSCodeBootstrapConfig {
   fileName: string;
   mapId: string;
+  locale?: string;
   onChanged: (_xml: string) => void;
   onSaveStatus?: (_status: SaveStatus) => void;
 }
