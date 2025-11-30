@@ -361,13 +361,10 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
         <div id="root"></div>
         <div id="loading">Loading FastMind Editor...</div>
         
-        <!-- VS Code Bootstrap 脚本 (增强版 - 包含初始内容) -->
+        <!-- VS Code Bootstrap -->
         <script nonce="${nonce}">
           const vscode = acquireVsCodeApi();
-          // 注入初始内容
           window.__INITIAL_DOCUMENT_CONTENT__ = \`${initialContent.replace(/`/g, '\\`')}\`;
-
-          // 增强的 Bootstrap 配置
           window.__FAST_MIND_VSCODE_BOOTSTRAP__ = {
             fileName: "${fileName}",
             resourceUrl: "${resourceUrl}",
@@ -383,7 +380,6 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
             }
           };
 
-          // 监听来自 Extension 的消息
           window.addEventListener('message', (event) => {
             const message = event.data;
             switch (message.type) {
@@ -400,7 +396,6 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
             }
           });
 
-          // 通知 Extension 编辑器已准备就绪
           setTimeout(() => {
             vscode.postMessage({ 
               type: 'ready',

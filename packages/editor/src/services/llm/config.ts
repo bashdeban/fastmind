@@ -24,7 +24,7 @@ export class LLMConfigManager {
      * 显示配置错误通知
      */
     private static showConfigErrorNotification(): void {
-        $notify('请先配置模型API');
+        $notify('Please configure the model API first!');
     }
 
     /**
