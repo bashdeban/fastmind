@@ -70,8 +70,9 @@ class AIExplainerService {
     const currentTopic = topicPath[topicPath.length - 1];
 
     const taskId = llmProgressManager.createTask({
-      title: 'AI Explainer',
-      description: `Analyzing topic "${currentTopic}"...`,
+      titleKey: 'llm.task.ai-explainer.title',
+      descriptionKey: 'llm.task.ai-explainer.description',
+      descriptionValues: { currentTopic },
     });
 
     try {
@@ -102,7 +103,7 @@ class AIExplainerService {
   }
 
   /**
-   * Collect all parent topic texts from the selected topic to the root
+   * Collect all parent topic texts from selected topic to root
    * @param topic The selected topic
    * @param maxDepth Maximum traversal depth to prevent infinite loops
    * @returns Array of topic texts from root to selected topic

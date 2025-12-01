@@ -2,7 +2,7 @@
  *    Copyright [2007-2025] [wisemapping]
  *
  *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
- *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   It is basically Apache License, Version 2.0 (the "License") plus the
  *   "powered by wisemapping" text requirement on every single page;
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the license at
@@ -15,6 +15,7 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
+import { IntlShape } from 'react-intl';
 
 export interface LLMTask {
   id: string;
@@ -25,20 +26,66 @@ export interface LLMTask {
   startTime: number;
 }
 
+export interface LLMTaskConfig {
+  titleKey?: string;
+  titleValues?: Record<string, string | number | boolean>;
+  descriptionKey?: string;
+  descriptionValues?: Record<string, string | number | boolean>;
+  fallbackTitle?: string;
+  fallbackDescription?: string;
+}
+
 class LLMProgressManager {
   private tasks: Map<string, LLMTask> = new Map();
   private listeners: Set<() => void> = new Set();
   private taskIdCounter = 0;
+  private intl: IntlShape | null = null;
+
+  /**
+   * Set intl instance for internationalization
+   */
+  setIntl(intl: IntlShape): void {
+    this.intl = intl;
+  }
+
+  /**
+   * Get internationalized text
+   */
+  private getText(key: string | undefined, defaultMessage: string, values?: Record<string, string | number | boolean>): string {
+    if (!key || !this.intl) {
+      return defaultMessage;
+    }
+    
+    try {
+      return this.intl.formatMessage({ id: key, defaultMessage }, values);
+    } catch (error: unknown) {
+      console.warn(`Failed to format message for key: ${key}`, error);
+      return defaultMessage;
+    }
+  }
 
   /**
    * Create a new LLM task
    */
-  createTask(config: { title: string; description: string }): string {
+  createTask(config: LLMTaskConfig): string {
     const taskId = `llm-task-${++this.taskIdCounter}`;
+    
+    const title = this.getText(
+      config.titleKey,
+      config.fallbackTitle || '',
+      config.titleValues
+    );
+    
+    const description = this.getText(
+      config.descriptionKey,
+      config.fallbackDescription || '',
+      config.descriptionValues
+    );
+
     const task: LLMTask = {
       id: taskId,
-      title: config.title,
-      description: config.description,
+      title,
+      description,
       progress: 0,
       status: 'pending',
       startTime: Date.now(),

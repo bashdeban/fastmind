@@ -32,6 +32,9 @@ const LLMProgressNotification: React.FC = () => {
   const intl = useIntl();
 
   useEffect(() => {
+    // Set intl instance to manager for internationalization
+    llmProgressManager.setIntl(intl);
+
     const unsubscribe = llmProgressManager.subscribe(() => {
       setTasks(llmProgressManager.getTasks());
     });
@@ -40,7 +43,7 @@ const LLMProgressNotification: React.FC = () => {
     setTasks(llmProgressManager.getTasks());
 
     return unsubscribe;
-  }, []);
+  }, [intl]);
 
   const getTaskIcon = (task: LLMTask) => {
     switch (task.status) {

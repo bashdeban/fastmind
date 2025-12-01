@@ -11,6 +11,12 @@
   "ai-explainer.error-analyze": {
     "defaultMessage": "AI解释器分析失败："
   },
+  "ai-explainer.title": {
+    "defaultMessage": "AI 解释器"
+  },
+  "ai-explainer.description": {
+    "defaultMessage": "正在分析主题 \"{currentTopic}\"..."
+  },
   "ai-topic-generator.add-to-mindmap": {
     "defaultMessage": "添加到思维导图"
   },
@@ -490,6 +496,18 @@
   },
   "llm-notification.status.error": {
     "defaultMessage": "失败"
+  },
+  "llm.task.ai-explainer.title": {
+    "defaultMessage": "AI 解释器"
+  },
+  "llm.task.ai-explainer.description": {
+    "defaultMessage": "正在分析主题 \"{currentTopic}\"..."
+  },
+  "llm.task.generate-topics.title": {
+    "defaultMessage": "AI 生成主题"
+  },
+  "llm.task.generate-topics.description": {
+    "defaultMessage": "基于 \"{currentTopic}\" 和上下文路径生成相关主题..."
   },
   "outline.collapse": {
     "defaultMessage": "折叠"

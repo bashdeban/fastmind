@@ -2,7 +2,7 @@
  *    Copyright [2007-2025] [wisemapping]
  *
  *   Licensed under WiseMapping Public License, Version 1.0 (the "License").
- *   It is basically the Apache License, Version 2.0 (the "License") plus the
+ *   It is basically Apache License, Version 2.0 (the "License") plus the
  *   "powered by wisemapping" text requirement on every single page;
  *   you may not use this file except in compliance with the License.
  *   You may obtain a copy of the license at
@@ -41,7 +41,7 @@ class AITopicGeneratorService {
     parentTopic: string,
     options: AITopicGeneratorOptions,
   ): Promise<GeneratedTopic[]> {
-    // Delegate to the enhanced context-aware method with single topic path
+    // Delegate to enhanced context-aware method with single topic path
     return this.generateTopicsWithContext([parentTopic], options);
   }
 
@@ -65,7 +65,7 @@ class AITopicGeneratorService {
       const nodeModel = mindmap.createNode();
       nodeModel.setText(topic.text.trim());
 
-      // Predict position and order for the new topic
+      // Predict position and order for new topic
       const prediction = layoutManager.predict(parentTopicId, null, null);
       nodeModel.setOrder(prediction.order);
       nodeModel.setPosition(prediction.position.x, prediction.position.y);
@@ -77,7 +77,7 @@ class AITopicGeneratorService {
   }
 
   /**
-   * Collect all parent topic texts from the selected topic to the root
+   * Collect all parent topic texts from selected topic to root
    * @param topic The selected topic
    * @param maxDepth Maximum traversal depth to prevent infinite loops
    * @returns Array of topic texts from root to selected topic
@@ -100,7 +100,7 @@ class AITopicGeneratorService {
   }
 
   /**
-   * Collect all child topic texts from the selected topic
+   * Collect all child topic texts from selected topic
    * @param topic The selected topic
    * @returns Array of child topic texts
    */
@@ -135,8 +135,9 @@ class AITopicGeneratorService {
     const currentTopic = topicPath[topicPath.length - 1];
 
     const taskId = llmProgressManager.createTask({
-      title: 'AI generate topics',
-      description: `Generating relevant topics based on "${currentTopic}" and the context path...`,
+      titleKey: 'llm.task.generate-topics.title',
+      descriptionKey: 'llm.task.generate-topics.description',
+      descriptionValues: { currentTopic },
     });
 
     try {
@@ -152,7 +153,7 @@ class AITopicGeneratorService {
       const response = await llmService.generateResponse(prompt);
       llmProgressManager.updateTaskProgress(taskId, 70);
 
-      // Parse the response
+      // Parse response
       const topics = this.parseResponse(response);
       llmProgressManager.updateTaskProgress(taskId, 90);
 
@@ -196,7 +197,7 @@ class AITopicGeneratorService {
 
 Considerations:
 - Subtopics must be concise and brief; use words whenever possible instead of short sentences.
-- Write in the same language as the topics
+- Write in the same language as topics
 - The number of subtopics is determined flexibly based on relevance and value
 ${existingTopicsText}
 
@@ -244,7 +245,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
         parentTopic.getId()
       );
 
-      // Add each topic to the mindmap using the correct method
+      // Add each topic to mindmap using correct method
       topicModels.forEach(model => {
         designer.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
       });

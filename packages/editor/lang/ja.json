@@ -1,6 +1,6 @@
 {
   "action.accept": {
-    "defaultMessage": "受け入れる"
+    "defaultMessage": "承諾"
   },
   "action.cancel": {
     "defaultMessage": "キャンセル"
@@ -10,6 +10,12 @@
   },
   "ai-explainer.error-analyze": {
     "defaultMessage": "AI説明の分析に失敗しました："
+  },
+  "ai-explainer.title": {
+    "defaultMessage": "AI 説明"
+  },
+  "ai-explainer.description": {
+    "defaultMessage": "トピック \"{currentTopic}\" を分析中..."
   },
   "ai-topic-generator.add-to-mindmap": {
     "defaultMessage": "マインドマップに追加"
@@ -21,7 +27,7 @@
     "defaultMessage": "生成するトピック数：{count}"
   },
   "ai-topic-generator.custom-prompt-helper": {
-    "defaultMessage": "AI生成のための追加のコンテキストや要件を提供"
+    "defaultMessage": "AI生成のための追加コンテキストや要件を提供"
   },
   "ai-topic-generator.custom-prompt-label": {
     "defaultMessage": "カスタムプロンプト（オプション）"
@@ -30,16 +36,16 @@
     "defaultMessage": "例：技術実装の側面に焦点を当てる"
   },
   "ai-topic-generator.description": {
-    "defaultMessage": "<strong>{topicText}</strong>に基づいて関連サブトピックを生成"
+    "defaultMessage": "<strong>{topicText}</strong> に基づいて関連サブトピックを生成"
   },
   "ai-topic-generator.error-add": {
     "defaultMessage": "トピックの追加中にエラーが発生しました"
   },
   "ai-topic-generator.error-generate": {
-    "defaultMessage": "AIトピック生成失敗："
+    "defaultMessage": "AIトピック生成に失敗しました："
   },
   "ai-topic-generator.generating": {
-    "defaultMessage": "トピックを生成中です。お待ちください..."
+    "defaultMessage": "トピックを生成中、お待ちください..."
   },
   "ai-topic-generator.preview-title": {
     "defaultMessage": "生成されたトピックのプレビュー："
@@ -48,28 +54,28 @@
     "defaultMessage": "再生成"
   },
   "ai-topic-generator.title": {
-    "defaultMessage": "AIトピック生成器"
+    "defaultMessage": "AI トピック生成器"
   },
   "appbar.back-to-map-list": {
-    "defaultMessage": "マップリストに戻る"
+    "defaultMessage": "マップ一覧に戻る"
   },
   "appbar.button-signup": {
     "defaultMessage": "サインアップ"
   },
   "appbar.error-saving-title": {
-    "defaultMessage": "タイトルの保存エラー："
+    "defaultMessage": "保存エラー"
   },
   "appbar.logo-aria-label": {
-    "defaultMessage": "WiseMapping"
+    "defaultMessage": "WiseMapping ロゴ"
   },
   "appbar.shared-button": {
     "defaultMessage": "共有"
   },
   "appbar.title-renamed": {
-    "defaultMessage": "マインドマップがリネームされました"
+    "defaultMessage": "マインドマップの名前が変更されました"
   },
   "appbar.tooltip-change-layout": {
-    "defaultMessage": "レイアウト"
+    "defaultMessage": "レイアウト変更"
   },
   "appbar.tooltip-export": {
     "defaultMessage": "エクスポート"
@@ -90,7 +96,7 @@
     "defaultMessage": "やり直し"
   },
   "appbar.tooltip-rename": {
-    "defaultMessage": "リネーム"
+    "defaultMessage": "名前変更"
   },
   "appbar.tooltip-save": {
     "defaultMessage": "保存"
@@ -99,19 +105,19 @@
     "defaultMessage": "設定"
   },
   "appbar.tooltip-shared": {
-    "defaultMessage": "コラボレーション用に共有"
+    "defaultMessage": "共同作業で共有"
   },
   "appbar.tooltip-signup": {
     "defaultMessage": "サインアップ"
   },
   "appbar.tooltip-starred": {
-    "defaultMessage": "お気に入り"
+    "defaultMessage": "スター付き"
   },
   "appbar.tooltip-theme": {
     "defaultMessage": "テーマ"
   },
   "appbar.tooltip-theme-toggle": {
-    "defaultMessage": "テーマの切り替え"
+    "defaultMessage": "テーマ切り替え"
   },
   "appbar.tooltip-undo": {
     "defaultMessage": "元に戻す"
@@ -150,10 +156,10 @@
     "defaultMessage": "ドット"
   },
   "canvas-style.pattern-grid": {
-    "defaultMessage": "グリッド"
+    "defaultMessage": "グリッド線"
   },
   "canvas-style.pattern-solid": {
-    "defaultMessage": "ソリッド"
+    "defaultMessage": "単色"
   },
   "canvas-style.tab-color": {
     "defaultMessage": "色"
@@ -183,37 +189,37 @@
     "defaultMessage": "混合"
   },
   "editor-panel.note-panel-title": {
-    "defaultMessage": "ノート"
+    "defaultMessage": "メモ"
   },
   "editor-panel.tooltip-add-icon": {
-    "defaultMessage": "アイコンを追加"
+    "defaultMessage": "アイコン追加"
   },
   "editor-panel.tooltip-add-link": {
-    "defaultMessage": "リンクを追加"
+    "defaultMessage": "リンク追加"
   },
   "editor-panel.tooltip-add-note": {
-    "defaultMessage": "ノートを追加"
+    "defaultMessage": "メモ追加"
   },
   "editor-panel.tooltip-add-relationship": {
-    "defaultMessage": "関係を追加"
+    "defaultMessage": "関係追加"
   },
   "editor-panel.tooltip-add-topic": {
-    "defaultMessage": "トピックを追加"
+    "defaultMessage": "トピック追加"
   },
   "editor-panel.tooltip-add-topic-image": {
-    "defaultMessage": "トピック画像を追加"
+    "defaultMessage": "トピック画像追加"
   },
   "editor-panel.tooltip-ai-explainer": {
-    "defaultMessage": "AI説明ツール"
+    "defaultMessage": "AI 説明"
   },
   "editor-panel.tooltip-ai-topic-generator": {
-    "defaultMessage": "AIトピック生成器"
+    "defaultMessage": "AI トピック生成器"
   },
   "editor-panel.tooltip-canvas-style": {
     "defaultMessage": "背景"
   },
   "editor-panel.tooltip-delete-topic": {
-    "defaultMessage": "トピックを削除"
+    "defaultMessage": "トピック削除"
   },
   "editor-panel.tooltip-relationship-style": {
     "defaultMessage": "関係スタイル"
@@ -222,22 +228,22 @@
     "defaultMessage": "フォントスタイル"
   },
   "editor-panel.tooltip-unified-styling": {
-    "defaultMessage": "トピックと接続のスタイル"
+    "defaultMessage": "トピックと接続のスタイル設定"
   },
   "editor.edit-description-mobile": {
-    "defaultMessage": "モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。完全なエディター機能にはデスクトップブラウザを使用してください。"
+    "defaultMessage": "モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。フルエディター機能をご利用になる場合は、デスクトップブラウザをご使用ください。"
   },
   "editor.try-welcome": {
-    "defaultMessage": "この編集スペースでは、マインドマップエディターの機能の一部をご紹介しています！"
+    "defaultMessage": "この編集スペースは、マインドマップエディターの一部の機能を展示しています！"
   },
   "editor.try-welcome-description": {
-    "defaultMessage": "無料で無制限のマインドマップを作成、共有、公開するためにサインアップしてください。"
+    "defaultMessage": "サインアップして、無制限のマインドマップの作成、共有、公開を無料で始めましょう。"
   },
   "editor.try-welcome-description-mobile": {
-    "defaultMessage": "無料で無制限のマインドマップを作成、共有、公開するためにサインアップしてください。モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。完全なエディター機能にはデスクトップブラウザを使用してください。"
+    "defaultMessage": "サインアップして、無制限のマインドマップの作成、共有、公開を無料で始めましょう。モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。フル機能をご利用になる場合は、デスクトップブラウザをご使用ください。"
   },
   "editor.try-welcome-mobile": {
-    "defaultMessage": "この編集スペースでは、マインドマップエディターの機能の一部をご紹介しています！"
+    "defaultMessage": "この編集スペースは、マインドマップエディターの一部の機能を展示しています！"
   },
   "emoji-picker.search-placeholder": {
     "defaultMessage": "絵文字を検索..."
@@ -261,13 +267,13 @@
     "defaultMessage": "マインドマップをエクスポート"
   },
   "export.format.md.description": {
-    "defaultMessage": "Markdown形式 - ドキュメント作成とバージョン管理に適しており、GitHubなどのプラットフォームをサポート"
+    "defaultMessage": "Markdown形式 - ドキュメント作成とバージョン管理に適しており、GitHubやその他のプラットフォームをサポート"
   },
   "export.format.recommended": {
     "defaultMessage": "推奨"
   },
   "export.format.svg.description": {
-    "defaultMessage": "スケーラブルベクターグラフィックス - ベクターグラフィック、無限にスケーラブル、ファイルサイズが小さい"
+    "defaultMessage": "スケーラブルベクターグラフィックス - ベクターグラフィックス、無限スケーラブル、ファイルサイズが小さい"
   },
   "export.format.wxml.description": {
     "defaultMessage": "WiseMapping XML - ネイティブ形式、すべての編集機能を保持、再インポートして編集可能"
@@ -285,16 +291,16 @@
     "defaultMessage": "実線"
   },
   "icon-collection.connection.arc": {
-    "defaultMessage": "アーク"
+    "defaultMessage": "弧"
   },
   "icon-collection.connection.arc-tooltip": {
     "defaultMessage": "円弧接続 - 放射状レイアウトと有機的な流れに最適"
   },
   "icon-collection.connection.curved-polyline": {
-    "defaultMessage": "曲線ポリライン"
+    "defaultMessage": "曲がったポリライン"
   },
   "icon-collection.connection.curved-polyline-tooltip": {
-    "defaultMessage": "滑らかなコーナーを持つ多セグメントライン - 構造化されたレイアウトと明確なパスに最適"
+    "defaultMessage": "滑らかな角を持つ多セグメント線 - 構造化されたレイアウトと明確なパスに最適"
   },
   "icon-collection.connection.default": {
     "defaultMessage": "デフォルト"
@@ -303,22 +309,22 @@
     "defaultMessage": "デフォルト - 接続スタイルはテーマに基づいて自動的に選択されます"
   },
   "icon-collection.connection.organic-curved": {
-    "defaultMessage": "有機曲線"
+    "defaultMessage": "有機的曲線"
   },
   "icon-collection.connection.organic-curved-tooltip": {
-    "defaultMessage": "劇的な曲線を持つ手描きスタイル - 創造的で表現力豊かなマインドマップに最適"
+    "defaultMessage": "劇的な曲線を持つ手描きスタイル - 創造的で表現豊かなマインドマップに最適"
   },
   "icon-collection.connection.simple-polyline": {
-    "defaultMessage": "シンプルなポリライン"
+    "defaultMessage": "シンプルポリライン"
   },
   "icon-collection.connection.simple-polyline-tooltip": {
-    "defaultMessage": "直接直線接続 - シンプルな関係のためのクリーンでミニマリストスタイル"
+    "defaultMessage": "直接的な直線接続 - シンプルでミニマリストスタイル、シンプルな関係に最適"
   },
   "icon-collection.connection.thick-curved": {
     "defaultMessage": "太い曲線"
   },
   "icon-collection.connection.thick-curved-tooltip": {
-    "defaultMessage": "滑らかなベジェ曲線を持つ太い曲線 - メインブランチを強調するのに最適"
+    "defaultMessage": "滑らかなベジェ曲線を持つ太い曲線 - 主要なブランチを強調するのに最適"
   },
   "icon-collection.connection.thin-curved": {
     "defaultMessage": "細い曲線"
@@ -336,16 +342,16 @@
     "defaultMessage": "楕円"
   },
   "icon-collection.shape.line": {
-    "defaultMessage": "ライン"
+    "defaultMessage": "線"
   },
   "icon-collection.shape.none": {
     "defaultMessage": "なし"
   },
   "icon-collection.shape.none-tooltip": {
-    "defaultMessage": "なし - 可視的な形状背景なし"
+    "defaultMessage": "なし - 可視形状背景なし"
   },
   "icon-collection.shape.rectangle": {
-    "defaultMessage": "矩形"
+    "defaultMessage": "長方形"
   },
   "icon-collection.shape.rounded": {
     "defaultMessage": "角丸"
@@ -354,7 +360,7 @@
     "defaultMessage": "絵文字"
   },
   "icon-picker.icons": {
-    "defaultMessage": "アイコンギャラリー"
+    "defaultMessage": "アイコンボリューム"
   },
   "icon-picker.show-images": {
     "defaultMessage": "画像を表示"
@@ -363,10 +369,10 @@
     "defaultMessage": "閉じる"
   },
   "information-dialog.fastmind-description": {
-    "defaultMessage": "FastMindはWiseMappingベースのVS Code拡張機能で、開発者向けの強力なマインドマップ機能を提供します。AI駆動のトピック生成、OpenAI API互換モデル統合、AI生成コンテンツのインテリジェント重複排除、VS Codeネイティブファイルシステム統合、その他高度な機能を統合し、開発者がアイデアをより良く整理・視覚化できるように支援します。"
+    "defaultMessage": "FastMindは、WiseMappingに基づいたVS Code拡張機能で、開発者に強力なマインドマップ機能を提供します。AI駆動のトピック生成、OpenAI API互換モデル統合、AI生成コンテンツのインテリジェント重複排除、VS Codeネイティブファイルシステム統合、その他の高度な機能を統合し、開発者がアイデアをより整理・視覚化できるように支援します。"
   },
   "information-dialog.fastmind-title": {
-    "defaultMessage": "FastMind VS Code拡張機能"
+    "defaultMessage": "FastMind VS Code 拡張機能"
   },
   "information-dialog.feature-ai": {
     "defaultMessage": "AI駆動のトピック生成"
@@ -390,7 +396,7 @@
     "defaultMessage": "情報"
   },
   "layout-selector.accept": {
-    "defaultMessage": "受け入れる"
+    "defaultMessage": "承諾"
   },
   "layout-selector.cancel": {
     "defaultMessage": "キャンセル"
@@ -402,13 +408,13 @@
     "defaultMessage": "レイアウトを選択"
   },
   "layout.mindmap.description": {
-    "defaultMessage": "水平レイアウトで、両側にバランスの取れたブランチ。従来のマインドマッピングとブレインストーミングに最適。"
+    "defaultMessage": "両側にバランスの取れたブランチを持つ水平レイアウト。伝統的なマインドマッピングとブレインストーミングに最適。"
   },
   "layout.mindmap.name": {
     "defaultMessage": "マインドマップ"
   },
   "layout.tree.description": {
-    "defaultMessage": "上から下へ流れる垂直階層。組織図や階層構造に最適。"
+    "defaultMessage": "上から下への垂直階層。組織図や階層構造に最適。"
   },
   "layout.tree.name": {
     "defaultMessage": "ツリー"
@@ -435,13 +441,13 @@
     "defaultMessage": "設定"
   },
   "llm-connection-test.description": {
-    "defaultMessage": "OpenAI互換APIへの接続をテスト"
+    "defaultMessage": "任意のOpenAI互換APIへの接続をテスト"
   },
   "llm-connection-test.error-connection-failed": {
-    "defaultMessage": "接続に失敗しました"
+    "defaultMessage": "接続に失敗しました："
   },
   "llm-connection-test.error-failed-config": {
-    "defaultMessage": "設定エラー"
+    "defaultMessage": "設定の保存に失敗しました："
   },
   "llm-connection-test.error-unknown": {
     "defaultMessage": "不明なエラーが発生しました"
@@ -471,7 +477,7 @@
     "defaultMessage": "温度"
   },
   "llm-connection-test.test-connection": {
-    "defaultMessage": "LLM接続をテスト"
+    "defaultMessage": "LLM接続テスト"
   },
   "llm-connection-test.testing": {
     "defaultMessage": "テスト中..."
@@ -480,7 +486,7 @@
     "defaultMessage": "LLM接続テスト"
   },
   "llm-connection-test.console-logs": {
-    "defaultMessage": "詳細ログはブラウザコンソールを開いてください"
+    "defaultMessage": "ブラウザコンソールで詳細ログを開く"
   },
   "llm-connection-test.close": {
     "defaultMessage": "閉じる"
@@ -491,26 +497,17 @@
   "llm-notification.status.error": {
     "defaultMessage": "失敗"
   },
-  "model-api-management.title": {
-    "defaultMessage": "モデル API 管理"
+  "llm.task.ai-explainer.title": {
+    "defaultMessage": "AI 説明"
   },
-  "model-api-management.no-configurations": {
-    "defaultMessage": "API 設定なし"
+  "llm.task.ai-explainer.description": {
+    "defaultMessage": "トピック \"{currentTopic}\" を分析中..."
   },
-  "model-api-management.empty-description": {
-    "defaultMessage": "最初の LLM API 設定を追加して開始"
+  "llm.task.generate-topics.title": {
+    "defaultMessage": "AI トピック生成"
   },
-  "model-api-management.active": {
-    "defaultMessage": "アクティブ"
-  },
-  "model-api-management.switch": {
-    "defaultMessage": "切り替え"
-  },
-  "model-api-management.update": {
-    "defaultMessage": "更新"
-  },
-  "model-api-management.add-configuration": {
-    "defaultMessage": "設定を追加"
+  "llm.task.generate-topics.description": {
+    "defaultMessage": "\"{currentTopic}\" とコンテキストパスに基づいて関連トピックを生成中..."
   },
   "outline.collapse": {
     "defaultMessage": "折りたたむ"
@@ -522,13 +519,13 @@
     "defaultMessage": "展開"
   },
   "outline.has-note": {
-    "defaultMessage": "ノートがあります"
+    "defaultMessage": "メモあり"
   },
   "outline.link": {
     "defaultMessage": "リンク"
   },
   "outline.note": {
-    "defaultMessage": "ノート"
+    "defaultMessage": "メモ"
   },
   "relationship-style-editor.color": {
     "defaultMessage": "関係の色"
@@ -552,7 +549,7 @@
     "defaultMessage": "終了矢印を切り替え"
   },
   "relationship-style-editor.line-arrows": {
-    "defaultMessage": "線のスタイルと矢印"
+    "defaultMessage": "線スタイルと矢印"
   },
   "relationship-style-editor.solid-line": {
     "defaultMessage": "実線"
@@ -567,7 +564,7 @@
     "defaultMessage": "開始矢印を切り替え"
   },
   "settings.ai-explainer-title": {
-    "defaultMessage": "AI説明ツール（ユーザー定義プロンプト）"
+    "defaultMessage": "AI説明（ユーザー定義プロンプト）"
   },
   "settings.ai-topic-generator-title": {
     "defaultMessage": "AIトピック生成器（ユーザー定義プロンプト）"
@@ -579,10 +576,10 @@
     "defaultMessage": "重複排除"
   },
   "settings.description": {
-    "defaultMessage": "AIモデル設定を構成し、トピック生成と概念説明のためのプロンプトをカスタマイズします。"
+    "defaultMessage": "AIモデル設定を構成し、トピック生成と概念説明のプロンプトをカスタマイズします。"
   },
   "settings.explainer-placeholder": {
-    "defaultMessage": "概念説明のためのカスタムプロンプトを入力..."
+    "defaultMessage": "概念説明のカスタムプロンプトを入力..."
   },
   "settings.model-api-management": {
     "defaultMessage": "モデルAPI管理"
@@ -594,7 +591,7 @@
     "defaultMessage": "設定"
   },
   "settings.topic-generator-placeholder": {
-    "defaultMessage": "トピック生成のためのカスタムプロンプトを入力..."
+    "defaultMessage": "トピック生成のカスタムプロンプトを入力..."
   },
   "shortcut-help-pane.action": {
     "defaultMessage": "アクション"
@@ -606,7 +603,7 @@
     "defaultMessage": "リンクを追加"
   },
   "shortcut-help-pane.add-note": {
-    "defaultMessage": "ノートを追加"
+    "defaultMessage": "メモを追加"
   },
   "shortcut-help-pane.add-sibling": {
     "defaultMessage": "兄弟トピックを追加"
@@ -621,13 +618,13 @@
     "defaultMessage": "テキストを斜体に変更"
   },
   "shortcut-help-pane.collapse-children": {
-    "defaultMessage": "子要素を折りたたむ"
+    "defaultMessage": "子トピックを折りたたむ"
   },
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "トピックを削除"
   },
   "shortcut-help-pane.deselect-all-topics": {
-    "defaultMessage": "すべてのトピックの選択を解除"
+    "defaultMessage": "すべてのトピックを選択解除"
   },
   "shortcut-help-pane.drag-disconnect": {
     "defaultMessage": "トピックを切断"
@@ -642,7 +639,7 @@
     "defaultMessage": "F2またはダブルクリック"
   },
   "shortcut-help-pane.expand-by-level": {
-    "defaultMessage": "レベルでトピックを展開"
+    "defaultMessage": "レベル別にトピックを展開"
   },
   "shortcut-help-pane.expand-collapse-all": {
     "defaultMessage": "すべてのトピックを展開/折りたたむ"
@@ -651,7 +648,7 @@
     "defaultMessage": "ナビゲーション"
   },
   "shortcut-help-pane.navigation-keys": {
-    "defaultMessage": "矢印キー"
+    "defaultMessage": "方向キー"
   },
   "shortcut-help-pane.outline-view": {
     "defaultMessage": "アウトラインビューを開く"
@@ -660,10 +657,10 @@
     "defaultMessage": "トピックテキストを上書き"
   },
   "shortcut-help-pane.overwrite-edit-topic-key": {
-    "defaultMessage": "選択されたトピックで入力"
+    "defaultMessage": "選択したトピックで入力"
   },
   "shortcut-help-pane.redo": {
-    "defaultMessage": "編集をやり直し"
+    "defaultMessage": "編集をやり直す"
   },
   "shortcut-help-pane.save-changes": {
     "defaultMessage": "変更を保存"
@@ -681,10 +678,10 @@
     "defaultMessage": "編集を元に戻す"
   },
   "shortcut-help-pane.zoom-in": {
-    "defaultMessage": "ズームイン"
+    "defaultMessage": "拡大"
   },
   "shortcut-help-pane.zoom-out": {
-    "defaultMessage": "ズームアウト"
+    "defaultMessage": "縮小"
   },
   "shortcut-help-pane.zoom-to-fit": {
     "defaultMessage": "フィット表示"
@@ -696,13 +693,13 @@
     "defaultMessage": "キャンセル"
   },
   "theme-editor.description": {
-    "defaultMessage": "テーマは、色、フォント、全体的な外観を含むマインドマップの視覚的スタイルを定義します。コンテンツとオーディエンスに最適なテーマを選択してください。"
+    "defaultMessage": "テーマは、色、フォント、全体的な外観など、マインドマップの視覚スタイルを定義します。コンテンツと聴衆に最適なテーマを選択してください。"
   },
   "theme-editor.title": {
     "defaultMessage": "テーマを選択"
   },
   "theme.classic.description": {
-    "defaultMessage": "青いアクセントを持つクリーンでプロフェッショナルなデザイン。ビジネスプレゼンテーションとフォーマルドキュメントに最適。"
+    "defaultMessage": "青いアクセントを持つクリーンでプロフェッショナルなデザイン。ビジネスプレゼンテーションと公式ドキュメントに最適。"
   },
   "theme.classic.name": {
     "defaultMessage": "クラシック"
@@ -714,13 +711,13 @@
     "defaultMessage": "ライト"
   },
   "theme.ocean.description": {
-    "defaultMessage": "明暗バリアントを持つ海洋インスパイアの青テーマ。ビジネスとクリエイティブプロジェクトに最適な穏やかでプロフェッショナルな色。"
+    "defaultMessage": "明暗のバリエーションを持つ海洋インスパイアの青テーマ。ビジネスとクリエイティブプロジェクトに最適な落ち着いたプロフェッショナルな色。"
   },
   "theme.ocean.name": {
     "defaultMessage": "オーシャン"
   },
   "theme.robot.description": {
-    "defaultMessage": "テクノロジーインスパイアの緑テーマ。技術ドキュメントと未来的プレゼンテーションに最適。"
+    "defaultMessage": "テクノロジーインスパイアの緑テーマ。技術文書と未来的なプレゼンテーションに最適。"
   },
   "theme.robot.name": {
     "defaultMessage": "ロボット"
@@ -732,7 +729,7 @@
     "defaultMessage": "サマー"
   },
   "theme.sunrise.description": {
-    "defaultMessage": "明暗モードバリアントを持つサンライズテーマ。より良い可読性のための強化された色とコントラスト。"
+    "defaultMessage": "明暗モードのバリエーションを持つサンライズテーマ。より良い可読性のための強化された色とコントラスト。"
   },
   "theme.sunrise.name": {
     "defaultMessage": "サンライズ"
@@ -783,10 +780,10 @@
     "defaultMessage": "デフォルトにリセット"
   },
   "topic-note-editor.add-note": {
-    "defaultMessage": "ノートを追加"
+    "defaultMessage": "メモを追加"
   },
   "topic-note-editor.edit-note": {
-    "defaultMessage": "ノートを編集"
+    "defaultMessage": "メモを編集"
   },
   "unified-styling.background-color": {
     "defaultMessage": "背景色"
@@ -804,7 +801,7 @@
     "defaultMessage": "コネクタスタイル"
   },
   "unified-styling.shape-type": {
-    "defaultMessage": "形状タイプ"
+    "defaultMessage": "図形タイプ"
   },
   "unified-styling.tab.border": {
     "defaultMessage": "境界線"
@@ -813,7 +810,7 @@
     "defaultMessage": "コネクタ"
   },
   "unified-styling.tab.shape": {
-    "defaultMessage": "形状"
+    "defaultMessage": "図形"
   },
   "visualization-toolbar.tooltip-collapse-all": {
     "defaultMessage": "すべてのノードを折りたたむ"
@@ -822,7 +819,7 @@
     "defaultMessage": "すべてのノードを展開"
   },
   "visualization-toolbar.tooltip-expand-level": {
-    "defaultMessage": "レベルで展開"
+    "defaultMessage": "レベル別に展開"
   },
   "visualization-toolbar.tooltip-export": {
     "defaultMessage": "エクスポート"
@@ -834,7 +831,7 @@
     "defaultMessage": "キーボードショートカット"
   },
   "visualization-toolbar.tooltip-layout": {
-    "defaultMessage": "レイアウトを変更"
+    "defaultMessage": "レイアウト変更"
   },
   "visualization-toolbar.tooltip-outline-view": {
     "defaultMessage": "アウトラインビュー"
@@ -843,15 +840,36 @@
     "defaultMessage": "保存"
   },
   "visualization-toolbar.tooltip-theme-toggle": {
-    "defaultMessage": "テーマの切り替え"
+    "defaultMessage": "テーマ切り替え"
   },
   "visualization-toolbar.tooltip-zoom-in": {
-    "defaultMessage": "ズームイン"
+    "defaultMessage": "拡大"
   },
   "visualization-toolbar.tooltip-zoom-out": {
-    "defaultMessage": "ズームアウト"
+    "defaultMessage": "縮小"
   },
   "visualization-toolbar.tooltip-zoom-to-fit": {
-    "defaultMessage": "フィット"
+    "defaultMessage": "フィット表示"
+  },
+  "model-api-management.title": {
+    "defaultMessage": "モデルAPI管理"
+  },
+  "model-api-management.no-configurations": {
+    "defaultMessage": "API設定なし"
+  },
+  "model-api-management.empty-description": {
+    "defaultMessage": "最初のLLM API設定を追加して開始"
+  },
+  "model-api-management.active": {
+    "defaultMessage": "アクティブ"
+  },
+  "model-api-management.switch": {
+    "defaultMessage": "切り替え"
+  },
+  "model-api-management.update": {
+    "defaultMessage": "更新"
+  },
+  "model-api-management.add-configuration": {
+    "defaultMessage": "設定を追加"
   }
 }

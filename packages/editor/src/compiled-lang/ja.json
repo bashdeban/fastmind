@@ -2,7 +2,7 @@
   "action.accept": [
     {
       "type": 0,
-      "value": "受け入れる"
+      "value": "承諾"
     }
   ],
   "action.cancel": [
@@ -17,10 +17,30 @@
       "value": "削除"
     }
   ],
+  "ai-explainer.description": [
+    {
+      "type": 0,
+      "value": "トピック \""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\" を分析中..."
+    }
+  ],
   "ai-explainer.error-analyze": [
     {
       "type": 0,
       "value": "AI説明の分析に失敗しました："
+    }
+  ],
+  "ai-explainer.title": [
+    {
+      "type": 0,
+      "value": "AI 説明"
     }
   ],
   "ai-topic-generator.add-to-mindmap": [
@@ -48,7 +68,7 @@
   "ai-topic-generator.custom-prompt-helper": [
     {
       "type": 0,
-      "value": "AI生成のための追加のコンテキストや要件を提供"
+      "value": "AI生成のための追加コンテキストや要件を提供"
     }
   ],
   "ai-topic-generator.custom-prompt-label": [
@@ -76,7 +96,7 @@
     },
     {
       "type": 0,
-      "value": "に基づいて関連サブトピックを生成"
+      "value": " に基づいて関連サブトピックを生成"
     }
   ],
   "ai-topic-generator.error-add": [
@@ -88,13 +108,13 @@
   "ai-topic-generator.error-generate": [
     {
       "type": 0,
-      "value": "AIトピック生成失敗："
+      "value": "AIトピック生成に失敗しました："
     }
   ],
   "ai-topic-generator.generating": [
     {
       "type": 0,
-      "value": "トピックを生成中です。お待ちください..."
+      "value": "トピックを生成中、お待ちください..."
     }
   ],
   "ai-topic-generator.preview-title": [
@@ -112,13 +132,13 @@
   "ai-topic-generator.title": [
     {
       "type": 0,
-      "value": "AIトピック生成器"
+      "value": "AI トピック生成器"
     }
   ],
   "appbar.back-to-map-list": [
     {
       "type": 0,
-      "value": "マップリストに戻る"
+      "value": "マップ一覧に戻る"
     }
   ],
   "appbar.button-signup": [
@@ -130,13 +150,13 @@
   "appbar.error-saving-title": [
     {
       "type": 0,
-      "value": "タイトルの保存エラー："
+      "value": "保存エラー"
     }
   ],
   "appbar.logo-aria-label": [
     {
       "type": 0,
-      "value": "WiseMapping"
+      "value": "WiseMapping ロゴ"
     }
   ],
   "appbar.shared-button": [
@@ -148,13 +168,13 @@
   "appbar.title-renamed": [
     {
       "type": 0,
-      "value": "マインドマップがリネームされました"
+      "value": "マインドマップの名前が変更されました"
     }
   ],
   "appbar.tooltip-change-layout": [
     {
       "type": 0,
-      "value": "レイアウト"
+      "value": "レイアウト変更"
     }
   ],
   "appbar.tooltip-export": [
@@ -196,7 +216,7 @@
   "appbar.tooltip-rename": [
     {
       "type": 0,
-      "value": "リネーム"
+      "value": "名前変更"
     }
   ],
   "appbar.tooltip-save": [
@@ -214,7 +234,7 @@
   "appbar.tooltip-shared": [
     {
       "type": 0,
-      "value": "コラボレーション用に共有"
+      "value": "共同作業で共有"
     }
   ],
   "appbar.tooltip-signup": [
@@ -226,7 +246,7 @@
   "appbar.tooltip-starred": [
     {
       "type": 0,
-      "value": "お気に入り"
+      "value": "スター付き"
     }
   ],
   "appbar.tooltip-theme": [
@@ -238,7 +258,7 @@
   "appbar.tooltip-theme-toggle": [
     {
       "type": 0,
-      "value": "テーマの切り替え"
+      "value": "テーマ切り替え"
     }
   ],
   "appbar.tooltip-undo": [
@@ -316,13 +336,13 @@
   "canvas-style.pattern-grid": [
     {
       "type": 0,
-      "value": "グリッド"
+      "value": "グリッド線"
     }
   ],
   "canvas-style.pattern-solid": [
     {
       "type": 0,
-      "value": "ソリッド"
+      "value": "単色"
     }
   ],
   "canvas-style.tab-color": [
@@ -382,55 +402,55 @@
   "editor-panel.note-panel-title": [
     {
       "type": 0,
-      "value": "ノート"
+      "value": "メモ"
     }
   ],
   "editor-panel.tooltip-add-icon": [
     {
       "type": 0,
-      "value": "アイコンを追加"
+      "value": "アイコン追加"
     }
   ],
   "editor-panel.tooltip-add-link": [
     {
       "type": 0,
-      "value": "リンクを追加"
+      "value": "リンク追加"
     }
   ],
   "editor-panel.tooltip-add-note": [
     {
       "type": 0,
-      "value": "ノートを追加"
+      "value": "メモ追加"
     }
   ],
   "editor-panel.tooltip-add-relationship": [
     {
       "type": 0,
-      "value": "関係を追加"
+      "value": "関係追加"
     }
   ],
   "editor-panel.tooltip-add-topic": [
     {
       "type": 0,
-      "value": "トピックを追加"
+      "value": "トピック追加"
     }
   ],
   "editor-panel.tooltip-add-topic-image": [
     {
       "type": 0,
-      "value": "トピック画像を追加"
+      "value": "トピック画像追加"
     }
   ],
   "editor-panel.tooltip-ai-explainer": [
     {
       "type": 0,
-      "value": "AI説明ツール"
+      "value": "AI 説明"
     }
   ],
   "editor-panel.tooltip-ai-topic-generator": [
     {
       "type": 0,
-      "value": "AIトピック生成器"
+      "value": "AI トピック生成器"
     }
   ],
   "editor-panel.tooltip-canvas-style": [
@@ -442,7 +462,7 @@
   "editor-panel.tooltip-delete-topic": [
     {
       "type": 0,
-      "value": "トピックを削除"
+      "value": "トピック削除"
     }
   ],
   "editor-panel.tooltip-relationship-style": [
@@ -460,37 +480,37 @@
   "editor-panel.tooltip-unified-styling": [
     {
       "type": 0,
-      "value": "トピックと接続のスタイル"
+      "value": "トピックと接続のスタイル設定"
     }
   ],
   "editor.edit-description-mobile": [
     {
       "type": 0,
-      "value": "モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。完全なエディター機能にはデスクトップブラウザを使用してください。"
+      "value": "モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。フルエディター機能をご利用になる場合は、デスクトップブラウザをご使用ください。"
     }
   ],
   "editor.try-welcome": [
     {
       "type": 0,
-      "value": "この編集スペースでは、マインドマップエディターの機能の一部をご紹介しています！"
+      "value": "この編集スペースは、マインドマップエディターの一部の機能を展示しています！"
     }
   ],
   "editor.try-welcome-description": [
     {
       "type": 0,
-      "value": "無料で無制限のマインドマップを作成、共有、公開するためにサインアップしてください。"
+      "value": "サインアップして、無制限のマインドマップの作成、共有、公開を無料で始めましょう。"
     }
   ],
   "editor.try-welcome-description-mobile": [
     {
       "type": 0,
-      "value": "無料で無制限のマインドマップを作成、共有、公開するためにサインアップしてください。モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。完全なエディター機能にはデスクトップブラウザを使用してください。"
+      "value": "サインアップして、無制限のマインドマップの作成、共有、公開を無料で始めましょう。モバイルデバイスでは限定的なマインドマップ編集機能がサポートされています。フル機能をご利用になる場合は、デスクトップブラウザをご使用ください。"
     }
   ],
   "editor.try-welcome-mobile": [
     {
       "type": 0,
-      "value": "この編集スペースでは、マインドマップエディターの機能の一部をご紹介しています！"
+      "value": "この編集スペースは、マインドマップエディターの一部の機能を展示しています！"
     }
   ],
   "emoji-picker.search-placeholder": [
@@ -538,7 +558,7 @@
   "export.format.md.description": [
     {
       "type": 0,
-      "value": "Markdown形式 - ドキュメント作成とバージョン管理に適しており、GitHubなどのプラットフォームをサポート"
+      "value": "Markdown形式 - ドキュメント作成とバージョン管理に適しており、GitHubやその他のプラットフォームをサポート"
     }
   ],
   "export.format.recommended": [
@@ -550,7 +570,7 @@
   "export.format.svg.description": [
     {
       "type": 0,
-      "value": "スケーラブルベクターグラフィックス - ベクターグラフィック、無限にスケーラブル、ファイルサイズが小さい"
+      "value": "スケーラブルベクターグラフィックス - ベクターグラフィックス、無限スケーラブル、ファイルサイズが小さい"
     }
   ],
   "export.format.wxml.description": [
@@ -586,7 +606,7 @@
   "icon-collection.connection.arc": [
     {
       "type": 0,
-      "value": "アーク"
+      "value": "弧"
     }
   ],
   "icon-collection.connection.arc-tooltip": [
@@ -598,13 +618,13 @@
   "icon-collection.connection.curved-polyline": [
     {
       "type": 0,
-      "value": "曲線ポリライン"
+      "value": "曲がったポリライン"
     }
   ],
   "icon-collection.connection.curved-polyline-tooltip": [
     {
       "type": 0,
-      "value": "滑らかなコーナーを持つ多セグメントライン - 構造化されたレイアウトと明確なパスに最適"
+      "value": "滑らかな角を持つ多セグメント線 - 構造化されたレイアウトと明確なパスに最適"
     }
   ],
   "icon-collection.connection.default": [
@@ -622,25 +642,25 @@
   "icon-collection.connection.organic-curved": [
     {
       "type": 0,
-      "value": "有機曲線"
+      "value": "有機的曲線"
     }
   ],
   "icon-collection.connection.organic-curved-tooltip": [
     {
       "type": 0,
-      "value": "劇的な曲線を持つ手描きスタイル - 創造的で表現力豊かなマインドマップに最適"
+      "value": "劇的な曲線を持つ手描きスタイル - 創造的で表現豊かなマインドマップに最適"
     }
   ],
   "icon-collection.connection.simple-polyline": [
     {
       "type": 0,
-      "value": "シンプルなポリライン"
+      "value": "シンプルポリライン"
     }
   ],
   "icon-collection.connection.simple-polyline-tooltip": [
     {
       "type": 0,
-      "value": "直接直線接続 - シンプルな関係のためのクリーンでミニマリストスタイル"
+      "value": "直接的な直線接続 - シンプルでミニマリストスタイル、シンプルな関係に最適"
     }
   ],
   "icon-collection.connection.thick-curved": [
@@ -652,7 +672,7 @@
   "icon-collection.connection.thick-curved-tooltip": [
     {
       "type": 0,
-      "value": "滑らかなベジェ曲線を持つ太い曲線 - メインブランチを強調するのに最適"
+      "value": "滑らかなベジェ曲線を持つ太い曲線 - 主要なブランチを強調するのに最適"
     }
   ],
   "icon-collection.connection.thin-curved": [
@@ -688,7 +708,7 @@
   "icon-collection.shape.line": [
     {
       "type": 0,
-      "value": "ライン"
+      "value": "線"
     }
   ],
   "icon-collection.shape.none": [
@@ -700,13 +720,13 @@
   "icon-collection.shape.none-tooltip": [
     {
       "type": 0,
-      "value": "なし - 可視的な形状背景なし"
+      "value": "なし - 可視形状背景なし"
     }
   ],
   "icon-collection.shape.rectangle": [
     {
       "type": 0,
-      "value": "矩形"
+      "value": "長方形"
     }
   ],
   "icon-collection.shape.rounded": [
@@ -724,7 +744,7 @@
   "icon-picker.icons": [
     {
       "type": 0,
-      "value": "アイコンギャラリー"
+      "value": "アイコンボリューム"
     }
   ],
   "icon-picker.show-images": [
@@ -742,13 +762,13 @@
   "information-dialog.fastmind-description": [
     {
       "type": 0,
-      "value": "FastMindはWiseMappingベースのVS Code拡張機能で、開発者向けの強力なマインドマップ機能を提供します。AI駆動のトピック生成、OpenAI API互換モデル統合、AI生成コンテンツのインテリジェント重複排除、VS Codeネイティブファイルシステム統合、その他高度な機能を統合し、開発者がアイデアをより良く整理・視覚化できるように支援します。"
+      "value": "FastMindは、WiseMappingに基づいたVS Code拡張機能で、開発者に強力なマインドマップ機能を提供します。AI駆動のトピック生成、OpenAI API互換モデル統合、AI生成コンテンツのインテリジェント重複排除、VS Codeネイティブファイルシステム統合、その他の高度な機能を統合し、開発者がアイデアをより整理・視覚化できるように支援します。"
     }
   ],
   "information-dialog.fastmind-title": [
     {
       "type": 0,
-      "value": "FastMind VS Code拡張機能"
+      "value": "FastMind VS Code 拡張機能"
     }
   ],
   "information-dialog.feature-ai": [
@@ -796,7 +816,7 @@
   "layout-selector.accept": [
     {
       "type": 0,
-      "value": "受け入れる"
+      "value": "承諾"
     }
   ],
   "layout-selector.cancel": [
@@ -820,7 +840,7 @@
   "layout.mindmap.description": [
     {
       "type": 0,
-      "value": "水平レイアウトで、両側にバランスの取れたブランチ。従来のマインドマッピングとブレインストーミングに最適。"
+      "value": "両側にバランスの取れたブランチを持つ水平レイアウト。伝統的なマインドマッピングとブレインストーミングに最適。"
     }
   ],
   "layout.mindmap.name": [
@@ -832,7 +852,7 @@
   "layout.tree.description": [
     {
       "type": 0,
-      "value": "上から下へ流れる垂直階層。組織図や階層構造に最適。"
+      "value": "上から下への垂直階層。組織図や階層構造に最適。"
     }
   ],
   "layout.tree.name": [
@@ -892,25 +912,25 @@
   "llm-connection-test.console-logs": [
     {
       "type": 0,
-      "value": "詳細ログはブラウザコンソールを開いてください"
+      "value": "ブラウザコンソールで詳細ログを開く"
     }
   ],
   "llm-connection-test.description": [
     {
       "type": 0,
-      "value": "OpenAI互換APIへの接続をテスト"
+      "value": "任意のOpenAI互換APIへの接続をテスト"
     }
   ],
   "llm-connection-test.error-connection-failed": [
     {
       "type": 0,
-      "value": "接続に失敗しました"
+      "value": "接続に失敗しました："
     }
   ],
   "llm-connection-test.error-failed-config": [
     {
       "type": 0,
-      "value": "設定エラー"
+      "value": "設定の保存に失敗しました："
     }
   ],
   "llm-connection-test.error-unknown": [
@@ -970,7 +990,7 @@
   "llm-connection-test.test-connection": [
     {
       "type": 0,
-      "value": "LLM接続をテスト"
+      "value": "LLM接続テスト"
     }
   ],
   "llm-connection-test.testing": [
@@ -997,6 +1017,46 @@
       "value": "失敗"
     }
   ],
+  "llm.task.ai-explainer.description": [
+    {
+      "type": 0,
+      "value": "トピック \""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\" を分析中..."
+    }
+  ],
+  "llm.task.ai-explainer.title": [
+    {
+      "type": 0,
+      "value": "AI 説明"
+    }
+  ],
+  "llm.task.generate-topics.description": [
+    {
+      "type": 0,
+      "value": "\""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\" とコンテキストパスに基づいて関連トピックを生成中..."
+    }
+  ],
+  "llm.task.generate-topics.title": [
+    {
+      "type": 0,
+      "value": "AI トピック生成"
+    }
+  ],
   "model-api-management.active": [
     {
       "type": 0,
@@ -1012,13 +1072,13 @@
   "model-api-management.empty-description": [
     {
       "type": 0,
-      "value": "最初の LLM API 設定を追加して開始"
+      "value": "最初のLLM API設定を追加して開始"
     }
   ],
   "model-api-management.no-configurations": [
     {
       "type": 0,
-      "value": "API 設定なし"
+      "value": "API設定なし"
     }
   ],
   "model-api-management.switch": [
@@ -1030,7 +1090,7 @@
   "model-api-management.title": [
     {
       "type": 0,
-      "value": "モデル API 管理"
+      "value": "モデルAPI管理"
     }
   ],
   "model-api-management.update": [
@@ -1060,7 +1120,7 @@
   "outline.has-note": [
     {
       "type": 0,
-      "value": "ノートがあります"
+      "value": "メモあり"
     }
   ],
   "outline.link": [
@@ -1072,7 +1132,7 @@
   "outline.note": [
     {
       "type": 0,
-      "value": "ノート"
+      "value": "メモ"
     }
   ],
   "relationship-style-editor.color": [
@@ -1120,7 +1180,7 @@
   "relationship-style-editor.line-arrows": [
     {
       "type": 0,
-      "value": "線のスタイルと矢印"
+      "value": "線スタイルと矢印"
     }
   ],
   "relationship-style-editor.solid-line": [
@@ -1150,7 +1210,7 @@
   "settings.ai-explainer-title": [
     {
       "type": 0,
-      "value": "AI説明ツール（ユーザー定義プロンプト）"
+      "value": "AI説明（ユーザー定義プロンプト）"
     }
   ],
   "settings.ai-topic-generator-title": [
@@ -1178,13 +1238,13 @@
   "settings.description": [
     {
       "type": 0,
-      "value": "AIモデル設定を構成し、トピック生成と概念説明のためのプロンプトをカスタマイズします。"
+      "value": "AIモデル設定を構成し、トピック生成と概念説明のプロンプトをカスタマイズします。"
     }
   ],
   "settings.explainer-placeholder": [
     {
       "type": 0,
-      "value": "概念説明のためのカスタムプロンプトを入力..."
+      "value": "概念説明のカスタムプロンプトを入力..."
     }
   ],
   "settings.model-api-management": [
@@ -1208,7 +1268,7 @@
   "settings.topic-generator-placeholder": [
     {
       "type": 0,
-      "value": "トピック生成のためのカスタムプロンプトを入力..."
+      "value": "トピック生成のカスタムプロンプトを入力..."
     }
   ],
   "shortcut-help-pane.action": [
@@ -1232,7 +1292,7 @@
   "shortcut-help-pane.add-note": [
     {
       "type": 0,
-      "value": "ノートを追加"
+      "value": "メモを追加"
     }
   ],
   "shortcut-help-pane.add-sibling": [
@@ -1262,7 +1322,7 @@
   "shortcut-help-pane.collapse-children": [
     {
       "type": 0,
-      "value": "子要素を折りたたむ"
+      "value": "子トピックを折りたたむ"
     }
   ],
   "shortcut-help-pane.delete-topic": [
@@ -1274,7 +1334,7 @@
   "shortcut-help-pane.deselect-all-topics": [
     {
       "type": 0,
-      "value": "すべてのトピックの選択を解除"
+      "value": "すべてのトピックを選択解除"
     }
   ],
   "shortcut-help-pane.drag-disconnect": [
@@ -1304,7 +1364,7 @@
   "shortcut-help-pane.expand-by-level": [
     {
       "type": 0,
-      "value": "レベルでトピックを展開"
+      "value": "レベル別にトピックを展開"
     }
   ],
   "shortcut-help-pane.expand-collapse-all": [
@@ -1322,7 +1382,7 @@
   "shortcut-help-pane.navigation-keys": [
     {
       "type": 0,
-      "value": "矢印キー"
+      "value": "方向キー"
     }
   ],
   "shortcut-help-pane.outline-view": [
@@ -1340,13 +1400,13 @@
   "shortcut-help-pane.overwrite-edit-topic-key": [
     {
       "type": 0,
-      "value": "選択されたトピックで入力"
+      "value": "選択したトピックで入力"
     }
   ],
   "shortcut-help-pane.redo": [
     {
       "type": 0,
-      "value": "編集をやり直し"
+      "value": "編集をやり直す"
     }
   ],
   "shortcut-help-pane.save-changes": [
@@ -1382,13 +1442,13 @@
   "shortcut-help-pane.zoom-in": [
     {
       "type": 0,
-      "value": "ズームイン"
+      "value": "拡大"
     }
   ],
   "shortcut-help-pane.zoom-out": [
     {
       "type": 0,
-      "value": "ズームアウト"
+      "value": "縮小"
     }
   ],
   "shortcut-help-pane.zoom-to-fit": [
@@ -1412,7 +1472,7 @@
   "theme-editor.description": [
     {
       "type": 0,
-      "value": "テーマは、色、フォント、全体的な外観を含むマインドマップの視覚的スタイルを定義します。コンテンツとオーディエンスに最適なテーマを選択してください。"
+      "value": "テーマは、色、フォント、全体的な外観など、マインドマップの視覚スタイルを定義します。コンテンツと聴衆に最適なテーマを選択してください。"
     }
   ],
   "theme-editor.title": [
@@ -1424,7 +1484,7 @@
   "theme.classic.description": [
     {
       "type": 0,
-      "value": "青いアクセントを持つクリーンでプロフェッショナルなデザイン。ビジネスプレゼンテーションとフォーマルドキュメントに最適。"
+      "value": "青いアクセントを持つクリーンでプロフェッショナルなデザイン。ビジネスプレゼンテーションと公式ドキュメントに最適。"
     }
   ],
   "theme.classic.name": [
@@ -1448,7 +1508,7 @@
   "theme.ocean.description": [
     {
       "type": 0,
-      "value": "明暗バリアントを持つ海洋インスパイアの青テーマ。ビジネスとクリエイティブプロジェクトに最適な穏やかでプロフェッショナルな色。"
+      "value": "明暗のバリエーションを持つ海洋インスパイアの青テーマ。ビジネスとクリエイティブプロジェクトに最適な落ち着いたプロフェッショナルな色。"
     }
   ],
   "theme.ocean.name": [
@@ -1460,7 +1520,7 @@
   "theme.robot.description": [
     {
       "type": 0,
-      "value": "テクノロジーインスパイアの緑テーマ。技術ドキュメントと未来的プレゼンテーションに最適。"
+      "value": "テクノロジーインスパイアの緑テーマ。技術文書と未来的なプレゼンテーションに最適。"
     }
   ],
   "theme.robot.name": [
@@ -1484,7 +1544,7 @@
   "theme.sunrise.description": [
     {
       "type": 0,
-      "value": "明暗モードバリアントを持つサンライズテーマ。より良い可読性のための強化された色とコントラスト。"
+      "value": "明暗モードのバリエーションを持つサンライズテーマ。より良い可読性のための強化された色とコントラスト。"
     }
   ],
   "theme.sunrise.name": [
@@ -1586,13 +1646,13 @@
   "topic-note-editor.add-note": [
     {
       "type": 0,
-      "value": "ノートを追加"
+      "value": "メモを追加"
     }
   ],
   "topic-note-editor.edit-note": [
     {
       "type": 0,
-      "value": "ノートを編集"
+      "value": "メモを編集"
     }
   ],
   "unified-styling.background-color": [
@@ -1628,7 +1688,7 @@
   "unified-styling.shape-type": [
     {
       "type": 0,
-      "value": "形状タイプ"
+      "value": "図形タイプ"
     }
   ],
   "unified-styling.tab.border": [
@@ -1646,7 +1706,7 @@
   "unified-styling.tab.shape": [
     {
       "type": 0,
-      "value": "形状"
+      "value": "図形"
     }
   ],
   "visualization-toolbar.tooltip-collapse-all": [
@@ -1664,7 +1724,7 @@
   "visualization-toolbar.tooltip-expand-level": [
     {
       "type": 0,
-      "value": "レベルで展開"
+      "value": "レベル別に展開"
     }
   ],
   "visualization-toolbar.tooltip-export": [
@@ -1688,7 +1748,7 @@
   "visualization-toolbar.tooltip-layout": [
     {
       "type": 0,
-      "value": "レイアウトを変更"
+      "value": "レイアウト変更"
     }
   ],
   "visualization-toolbar.tooltip-outline-view": [
@@ -1706,25 +1766,25 @@
   "visualization-toolbar.tooltip-theme-toggle": [
     {
       "type": 0,
-      "value": "テーマの切り替え"
+      "value": "テーマ切り替え"
     }
   ],
   "visualization-toolbar.tooltip-zoom-in": [
     {
       "type": 0,
-      "value": "ズームイン"
+      "value": "拡大"
     }
   ],
   "visualization-toolbar.tooltip-zoom-out": [
     {
       "type": 0,
-      "value": "ズームアウト"
+      "value": "縮小"
     }
   ],
   "visualization-toolbar.tooltip-zoom-to-fit": [
     {
       "type": 0,
-      "value": "フィット"
+      "value": "フィット表示"
     }
   ]
 }

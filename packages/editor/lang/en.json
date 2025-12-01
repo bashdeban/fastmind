@@ -11,6 +11,12 @@
   "ai-explainer.error-analyze": {
     "defaultMessage": "AI explainer analysis failed:"
   },
+  "ai-explainer.title": {
+    "defaultMessage": "AI Explainer"
+  },
+  "ai-explainer.description": {
+    "defaultMessage": "Analyzing topic \"{currentTopic}\"..."
+  },
   "ai-topic-generator.add-to-mindmap": {
     "defaultMessage": "Add to Mindmap"
   },
@@ -144,7 +150,7 @@
     "defaultMessage": "Grid Size"
   },
   "canvas-style.pattern-default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+    "defaultMessage": "Default - All styles will be automatically selected based on theme"
   },
   "canvas-style.pattern-dots": {
     "defaultMessage": "Dots"
@@ -228,7 +234,7 @@
     "defaultMessage": "Limited mindmap edition capabilities are supported in Mobile devices. Use Desktop browser for full editor capabilities."
   },
   "editor.try-welcome": {
-    "defaultMessage": "This edition space showcases some of the mindmap editor capabilities!"
+    "defaultMessage": "This edition space showcases some of mindmap editor capabilities!"
   },
   "editor.try-welcome-description": {
     "defaultMessage": "Sign Up to start creating, sharing and publishing unlimited number of mindmaps for free."
@@ -237,7 +243,7 @@
     "defaultMessage": "Sign Up to start creating, sharing and publishing unlimited number of mindmaps for free. Limited mindmap edition capabilties are supported in Mobile devices. Use Desktop browser for full editor capabilies."
   },
   "editor.try-welcome-mobile": {
-    "defaultMessage": "This edition space showcases some of the mindmap editor capabilities!"
+    "defaultMessage": "This edition space showcases some of mindmap editor capabilities!"
   },
   "emoji-picker.search-placeholder": {
     "defaultMessage": "Search emojis..."
@@ -300,7 +306,7 @@
     "defaultMessage": "Default"
   },
   "icon-collection.connection.default-tooltip": {
-    "defaultMessage": "Default - Connection style will be automatically selected based on the theme"
+    "defaultMessage": "Default - Connection style will be automatically selected based on theme"
   },
   "icon-collection.connection.organic-curved": {
     "defaultMessage": "Organic Curved"
@@ -327,7 +333,7 @@
     "defaultMessage": "Thin curved line with elegant bezier curves - Ideal for detailed or dense mind maps"
   },
   "icon-collection.default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+    "defaultMessage": "Default - All styles will be automatically selected based on theme"
   },
   "icon-collection.shape.default": {
     "defaultMessage": "Default"
@@ -491,6 +497,18 @@
   "llm-notification.status.error": {
     "defaultMessage": "Failed"
   },
+  "llm.task.ai-explainer.title": {
+    "defaultMessage": "AI Explainer"
+  },
+  "llm.task.ai-explainer.description": {
+    "defaultMessage": "Analyzing topic \"{currentTopic}\"..."
+  },
+  "llm.task.generate-topics.title": {
+    "defaultMessage": "AI Generate Topics"
+  },
+  "llm.task.generate-topics.description": {
+    "defaultMessage": "Generating relevant topics based on \"{currentTopic}\" and context path..."
+  },
   "outline.collapse": {
     "defaultMessage": "Collapse All"
   },
@@ -600,7 +618,7 @@
     "defaultMessage": "Change text to italic"
   },
   "shortcut-help-pane.collapse-children": {
-    "defaultMessage": "Collpase children"
+    "defaultMessage": "Collapse children"
   },
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "Delete topic"
@@ -648,7 +666,7 @@
     "defaultMessage": "Save changes"
   },
   "shortcut-help-pane.select-all-topics": {
-    "defaultMessage": "选择所有主题"
+    "defaultMessage": "Select all topics"
   },
   "shortcut-help-pane.select-topics": {
     "defaultMessage": "Select multiple topics"
@@ -675,7 +693,7 @@
     "defaultMessage": "Cancel"
   },
   "theme-editor.description": {
-    "defaultMessage": "A theme defines the visual style of your mind map, including colors, fonts, and overall appearance. Choose a theme that best fits your content and audience."
+    "defaultMessage": "A theme defines visual style of your mind map, including colors, fonts, and overall appearance. Choose a theme that best fits your content and audience."
   },
   "theme-editor.title": {
     "defaultMessage": "Choose Theme"

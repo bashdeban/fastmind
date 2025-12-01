@@ -17,10 +17,30 @@
       "value": "Delete"
     }
   ],
+  "ai-explainer.description": [
+    {
+      "type": 0,
+      "value": "Analyzing topic \""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\"..."
+    }
+  ],
   "ai-explainer.error-analyze": [
     {
       "type": 0,
       "value": "AI explainer analysis failed:"
+    }
+  ],
+  "ai-explainer.title": [
+    {
+      "type": 0,
+      "value": "AI Explainer"
     }
   ],
   "ai-topic-generator.add-to-mindmap": [
@@ -304,7 +324,7 @@
   "canvas-style.pattern-default-tooltip": [
     {
       "type": 0,
-      "value": "Default - All styles will be automatically selected based on the theme"
+      "value": "Default - All styles will be automatically selected based on theme"
     }
   ],
   "canvas-style.pattern-dots": [
@@ -472,7 +492,7 @@
   "editor.try-welcome": [
     {
       "type": 0,
-      "value": "This edition space showcases some of the mindmap editor capabilities!"
+      "value": "This edition space showcases some of mindmap editor capabilities!"
     }
   ],
   "editor.try-welcome-description": [
@@ -490,7 +510,7 @@
   "editor.try-welcome-mobile": [
     {
       "type": 0,
-      "value": "This edition space showcases some of the mindmap editor capabilities!"
+      "value": "This edition space showcases some of mindmap editor capabilities!"
     }
   ],
   "emoji-picker.search-placeholder": [
@@ -616,7 +636,7 @@
   "icon-collection.connection.default-tooltip": [
     {
       "type": 0,
-      "value": "Default - Connection style will be automatically selected based on the theme"
+      "value": "Default - Connection style will be automatically selected based on theme"
     }
   ],
   "icon-collection.connection.organic-curved": [
@@ -670,7 +690,7 @@
   "icon-collection.default-tooltip": [
     {
       "type": 0,
-      "value": "Default - All styles will be automatically selected based on the theme"
+      "value": "Default - All styles will be automatically selected based on theme"
     }
   ],
   "icon-collection.shape.default": [
@@ -997,6 +1017,46 @@
       "value": "Failed"
     }
   ],
+  "llm.task.ai-explainer.description": [
+    {
+      "type": 0,
+      "value": "Analyzing topic \""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\"..."
+    }
+  ],
+  "llm.task.ai-explainer.title": [
+    {
+      "type": 0,
+      "value": "AI Explainer"
+    }
+  ],
+  "llm.task.generate-topics.description": [
+    {
+      "type": 0,
+      "value": "Generating relevant topics based on \""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\" and context path..."
+    }
+  ],
+  "llm.task.generate-topics.title": [
+    {
+      "type": 0,
+      "value": "AI Generate Topics"
+    }
+  ],
   "model-api-management.active": [
     {
       "type": 0,
@@ -1262,7 +1322,7 @@
   "shortcut-help-pane.collapse-children": [
     {
       "type": 0,
-      "value": "Collpase children"
+      "value": "Collapse children"
     }
   ],
   "shortcut-help-pane.delete-topic": [
@@ -1358,7 +1418,7 @@
   "shortcut-help-pane.select-all-topics": [
     {
       "type": 0,
-      "value": "选择所有主题"
+      "value": "Select all topics"
     }
   ],
   "shortcut-help-pane.select-topics": [
@@ -1412,7 +1472,7 @@
   "theme-editor.description": [
     {
       "type": 0,
-      "value": "A theme defines the visual style of your mind map, including colors, fonts, and overall appearance. Choose a theme that best fits your content and audience."
+      "value": "A theme defines visual style of your mind map, including colors, fonts, and overall appearance. Choose a theme that best fits your content and audience."
     }
   ],
   "theme-editor.title": [

@@ -17,10 +17,30 @@
       "value": "删除"
     }
   ],
+  "ai-explainer.description": [
+    {
+      "type": 0,
+      "value": "正在分析主题 \""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\"..."
+    }
+  ],
   "ai-explainer.error-analyze": [
     {
       "type": 0,
       "value": "AI解释器分析失败："
+    }
+  ],
+  "ai-explainer.title": [
+    {
+      "type": 0,
+      "value": "AI 解释器"
     }
   ],
   "ai-topic-generator.add-to-mindmap": [
@@ -999,6 +1019,46 @@
     {
       "type": 0,
       "value": "失败"
+    }
+  ],
+  "llm.task.ai-explainer.description": [
+    {
+      "type": 0,
+      "value": "正在分析主题 \""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\"..."
+    }
+  ],
+  "llm.task.ai-explainer.title": [
+    {
+      "type": 0,
+      "value": "AI 解释器"
+    }
+  ],
+  "llm.task.generate-topics.description": [
+    {
+      "type": 0,
+      "value": "基于 \""
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "\" 和上下文路径生成相关主题..."
+    }
+  ],
+  "llm.task.generate-topics.title": [
+    {
+      "type": 0,
+      "value": "AI 生成主题"
     }
   ],
   "model-api-management.active": [
