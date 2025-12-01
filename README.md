@@ -1,17 +1,25 @@
-# WiseMapping Frontend
+# FastMind - AI-Powered Mind Mapping Editor
 
-**An open-source, web-based mind mapping tool providing real-time collaborative visualization for individuals and teams.**
+**An AI-driven mind mapping editor built for developers, providing intelligent topic generation and seamless VS Code integration.**
 
 ## Project Overview
 
-WiseMapping Frontend is a comprehensive mind mapping platform that began in 2010 and underwent significant architectural revitalization in 2021. This repository contains all user interface-related elements for the WiseMapping ecosystem.
+FastMind is an AI-powered mind mapping extension that branched from WiseMapping Frontend in November 2025. While maintaining the robust foundation of WiseMapping's mind mapping engine, FastMind focuses on AI-driven features and deep VS Code integration for developers.
+
+### Project Heritage
+
+- **Origin**: Branch from WiseMapping Frontend (est. 2010)
+- **Evolution**: Enhanced with AI capabilities and VS Code integration
+- **Focus**: Developer-centric workflow with intelligent topic generation
+- **Status**: Production-ready with complete AI integration and internationalization
 
 ### Core Modules
 
 - **@wisemapping/web2d**: A lightweight SVG abstraction layer for elegant and efficient chart rendering
 - **@wisemapping/mindplot**: Pure vanilla ES6 canvas engine for rendering mind maps and editing functionalities
-- **@wisemapping/editor**: React component wrapper providing modern UI components and state management
-- **@wisemapping/webapp**: Complete React application serving as the cornerstone of the mind map editing experience
+- **@wisemapping/editor**: React component wrapper with AI integration providing modern UI components and state management
+- **@wisemapping/editor-standalone**: Standalone build optimized for VS Code webview integration
+- **@wisemapping/fastmind**: VS Code extension with AI-powered topic generation and intelligent mind mapping
 
 For backend implementation details, visit: [WiseMapping Backend](https://github.com/wisemapping/wisemapping-open-source)
 
@@ -38,16 +46,19 @@ export NODE_OPTIONS=--openssl-legacy-provider
 
 ## 📦 Package Structure
 
-This is a **Lerna monorepo** with three main packages. Each package can be developed and tested independently:
+This is a **Lerna monorepo** with five main packages. Each package can be developed and tested independently:
 
 ```
 wisemapping/
 ├── packages/
-│   ├── web2d/           # SVG rendering abstraction layer
-│   ├── mindplot/        # Core mind map canvas engine
-│   └── editor/          # React component wrapper
-├── memory-bank/         # Project documentation
-└── .clinerules/         # Development guidelines
+│   ├── web2d/               # SVG rendering abstraction layer (foundation)
+│   ├── mindplot/            # Core mind map canvas engine with AI integration
+│   ├── editor/              # React component wrapper with AI features
+│   ├── editor-standalone/   # Standalone build for VS Code integration
+│   └── fastmind/            # VS Code Extension (primary focus)
+├── memory-bank/             # Project documentation
+├── scripts/                 # Build and utility scripts
+└── .clinerules/             # Development guidelines
 ```
 
 ## 🛠️ Available Scripts
@@ -63,6 +74,9 @@ wisemapping/
 | `yarn lint` | Run ESLint checks |
 | `yarn lint:fix` | Auto-fix ESLint issues |
 | `yarn clean` | Remove all build artifacts and caches |
+| `yarn build:fastmind` | Build FastMind extension dependencies |
+| `yarn package:fastmind` | Package FastMind as VSIX file |
+| `yarn build-and-package:fastmind` | Build and package FastMind extension |
 
 ### Package-specific scripts:
 
@@ -186,6 +200,179 @@ cd packages/mindplot && cat README.md
 cd packages/editor && cat README.md
 ```
 
+## 🌍 Internationalization (i18n)
+
+### Supported Languages
+
+FastMind supports 10 languages with full UI translation:
+
+- **English** (en)
+- **简体中文** (zh-CN) 
+- **繁體中文** (zh-Hant)
+- **日本語** (ja)
+- **Français** (fr)
+- **Deutsch** (de)
+- **Español** (es)
+- **Italiano** (it)
+- **Português** (pt)
+- **Русский** (ru)
+
+### Building with Internationalization
+
+```bash
+# Compile translation files
+yarn workspace @wisemapping/editor compile:i18n
+
+# Extract new translatable strings
+yarn workspace @wisemapping/editor extract:i18n
+
+# Complete build with all languages
+yarn build
+
+# FastMind extension with language support
+yarn build:fastmind
+```
+
+### Language Configuration
+
+FastMind automatically detects VS Code's language settings. You can also manually configure:
+
+```json
+{
+  "fastmind.language.locale": "zh-CN"
+}
+```
+
+### Contributing Translations
+
+Translation files are located in `packages/editor/lang/`:
+
+- `en.json` - English (reference)
+- `zh-CN.json` - Simplified Chinese
+- `zh-Hant.json` - Traditional Chinese
+- `ja.json` - Japanese
+- `fr.json` - French
+- `de.json` - German
+- `es.json` - Spanish
+- `it.json` - Italian
+- `pt.json` - Portuguese
+- `ru.json` - Russian
+
+## 🔧 FastMind VS Code Extension Development
+
+### Debug Mode Development
+
+For development and debugging of the FastMind extension:
+
+```bash
+# Navigate to extension directory
+cd packages/fastmind
+
+# Start development watch mode
+yarn dev
+
+# Or build and watch
+yarn build:watch
+```
+
+#### Debugging in VS Code
+
+1. **Open the project in VS Code**
+2. **Press F5** or go to **Run → Start Debugging**
+3. **Extension Development Host** will open with FastMind loaded
+4. **Set breakpoints** in `src/extension.ts` and other TypeScript files
+5. **Open a .fastmind file** to trigger the custom editor
+
+#### Debug Configuration
+
+Create `.vscode/launch.json` for advanced debugging:
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}/packages/fastmind"
+      ]
+    }
+  ]
+}
+```
+
+### VSIX Package Building
+
+#### Standard Build and Package
+
+```bash
+# Build extension dependencies and package
+yarn build-and-package:fastmind
+
+# Output: packages/fastmind/fastmind.vsix
+```
+
+#### Step-by-Step Build
+
+```bash
+# Step 1: Build dependencies
+yarn build:fastmind
+
+# Step 2: Package extension
+cd packages/fastmind
+yarn package
+
+# Step 3: Install for testing
+code --install-extension fastmind.vsix
+```
+
+#### Package Options
+
+```bash
+# Package with preview label
+yarn package:preview
+
+# Package with specific output name
+vsce package --out fastmind-0.1.3.vsix
+
+# Package for marketplace (requires auth)
+yarn publish
+```
+
+#### Package Contents
+
+The generated VSIX includes:
+- **Extension manifest** (package.json)
+- **Compiled extension code** (dist/extension.js)
+- **Standalone editor build** (editor-standalone)
+- **All language files** (10 languages)
+- **Icons and assets** (fastmind.png, etc.)
+
+#### Installation
+
+```bash
+# Install from VSIX file
+code --install-extension fastmind.vsix
+
+# Or use VS Code UI: Extensions → Install from VSIX...
+```
+
+### Extension Testing
+
+```bash
+# Run extension tests
+cd packages/fastmind
+yarn test
+
+# Type checking
+yarn type-check
+
+# Linting
+yarn lint
+```
+
 ## 👥 Contributing
 
 We welcome contributions! Please see **[CONTRIBUTING.md](./CONTRIBUTING.md)** for detailed guidelines.
@@ -196,7 +383,7 @@ This project is **open source** under the **WiseMapping Public License, Version 
 
 [View Full License](https://github.com/wisemapping/wisemapping-open-source/blob/develop/LICENSE.md)
 
-## 👨‍💻 Team
+## �‍💻 Team
 
 ### Founder
 - **Paulo Veiga** <pveiga@wisemapping.com>
@@ -210,4 +397,4 @@ This project began in 2010 and has been continuously improved by the open-source
 
 ---
 
-**Project Status**: 🟢 Active Development | **Version**: 6.0.1 | **Last Updated**: January 2025
+**Project Status**: 🚀 Production Ready | **Version**: 0.1.3 | **Last Updated**: November 2025

@@ -1,37 +1,39 @@
-# WiseMapping Frontend - Product Context
+# FastMind - AI-Powered Mind Mapping Editor - Product Context
 
 ## Why This Project Exists
 
-WiseMapping Front End addresses the need for a modern, open-source mind mapping solution that provides professional-grade functionality without the licensing constraints of commercial alternatives. The project exists to democratize mind mapping technology, making it accessible to individuals, educators, and teams worldwide.
+FastMind addresses the fundamental need for intelligent, AI-assisted visual thinking tools that seamlessly integrate into developer workflows. While traditional mind mapping tools require manual content creation, FastMind leverages advanced LLM integration to automate and enhance the brainstorming process, making it accessible and efficient for developers, students, and professionals worldwide.
 
-**Strategic Evolution (Q4 2024-Q4 2025)**: The project has strategically pivoted from a web-based application to a **VS Code Extension-focused approach** with **AI-powered capabilities**, recognizing the growing need for developer-centric mind mapping tools integrated into modern workflows. The AI Topic Generation System has been successfully implemented and is now production-ready, representing a major milestone in intelligent content creation.
+**Strategic Evolution (November 2025)**: FastMind has successfully branched from WiseMapping Frontend to become a dedicated **AI-powered mind mapping editor** that revolutionizes how users create and organize visual content. The complete AI Topic Generation System and multi-LLM support represent a paradigm shift from manual mind mapping to intelligent, context-aware content creation.
 
 ### Core Problems Solved
 
-1. **Accessibility of Professional Mind Mapping**: Commercial mind mapping tools often come with steep licensing fees, limiting access for individual users, students, and small teams.
+1. **AI-Enhanced Content Creation**: Traditional mind mapping requires manual topic creation. FastMind solves this with intelligent AI topic generation that understands context and provides relevant suggestions automatically.
 
-2. **Legacy Technology Modernization**: The original WiseMapping project (started 2010) required significant architectural updates to meet modern web standards, performance expectations, and user experience paradigms.
+2. **Developer Workflow Integration**: Most mind mapping tools exist outside the development environment. FastMind integrates directly into VS Code, keeping visual thinking alongside code development.
 
-3. **Real-time Collaboration Gap**: Many open-source alternatives lack robust real-time collaborative features that modern teams require.
+3. **Multi-LLM Flexibility**: Users are often locked into single AI providers. FastMind supports OpenAI, Claude, Azure, and local models, giving users complete control over their AI experience.
 
-4. **Performance and Bundle Optimization**: Existing solutions often suffer from bloated bundles and inefficient rendering, particularly critical for web-based diagramming applications.
+4. **International Accessibility**: Many tools lack proper multi-language support. FastMind provides full internationalization with 10 languages, making it accessible to global users.
 
-5. **Developer Experience**: Creating a modular, well-architected frontend that allows for easy extension, customization, and integration.
+5. **Git-Friendly Documentation**: Traditional mind mapping formats are not version control friendly. FastMind uses XML format that's diffable, mergeable, and perfectly suited for git workflows.
+
+6. **Modern Technology Integration**: Legacy tools struggle with modern development workflows. FastMind provides seamless VS Code integration, auto-save, and offline capabilities.
 
 ## How It Should Work
 
 ### User Experience Flow
 
-1. **Entry Point**: Users access the webapp at a configured URL (default: http://localhost:8080/react)
-2. **Authentication**: Users can create accounts and authenticate to access their mind maps
-3. **Dashboard**: Users see their collection of mind maps with options to create, edit, delete, and share
+1. **Entry Point**: Users create a new `.fastmind` file in VS Code (e.g., `architecture.fastmind`) which automatically opens in the FastMind editor
+2. **Immediate AI Integration**: AI features are available from the start - select any topic and click "AI Generate Topics" to instantly create intelligent subtopics
+3. **Multi-LLM Configuration**: Users configure their preferred LLM provider once in VS Code settings (OpenAI, Claude, Azure, or local models)
 4. **Editor Interface**: 
-   - **Canvas**: Central infinite canvas for mind map creation
-   - **Toolbar**: Intuitive tools for adding topics, connections, styling
-   - **Properties Panel**: Context-sensitive editing options for selected elements
-   - **Collaboration**: Real-time indication of other users' cursors and edits
-5. **Export/Import**: Support for various formats (PDF, images, XML)
-6. **Sharing**: Options to share mind maps with team members or publicly
+   - **Canvas**: Central infinite canvas for mind map creation with AI-powered assistance
+   - **AI Toolbar**: One-click AI topic generation, AI explainer, and context-aware suggestions
+   - **Properties Panel**: Context-sensitive editing with AI-enhanced options
+   - **Git Integration**: Automatic saving with git-friendly XML format
+5. **International Support**: Full interface localization in 10 languages
+6. **Developer Integration**: Seamless workflow alongside code files, with offline support and local model compatibility
 
 ### Key User Interactions
 
@@ -85,11 +87,14 @@ WiseMapping Front End addresses the need for a modern, open-source mind mapping 
 
 ## Competitive Differentiation
 
-- **Truly Open Source**: Unlike freemium models, WiseMapping is completely open source
-- **Modern Architecture**: Built with React 19, TypeScript, and modern build tools
-- **Performance Focus**: Aggressive bundle optimization and efficient rendering
-- **Developer Friendly**: Well-documented, modular architecture enabling customization
-- **Self-Hostable**: Organizations can host their own instances for data privacy
+- **AI-Powered Intelligence**: Unlike traditional mind mapping tools, FastMind provides intelligent topic generation with context-aware AI assistance
+- **Multi-LLM Flexibility**: Supports OpenAI, Claude, Azure, and local models - no vendor lock-in
+- **Developer-Centric Integration**: Native VS Code extension with git-friendly XML format and seamless workflow integration
+- **Truly Open Source**: Unlike freemium models, FastMind is completely open source with no proprietary AI restrictions
+- **Modern Architecture**: Built with React 19, TypeScript, and modern build tools optimized for performance
+- **International Accessibility**: Full support for 10 languages, making it truly global
+- **Offline Capabilities**: Works completely offline with local model support
+- **Performance Focus**: Sub-100ms response times with optimized rendering and bundle sizes
 
 ## Future Vision
 

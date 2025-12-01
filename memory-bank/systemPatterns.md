@@ -1,15 +1,15 @@
-# WiseMapping Frontend - System Patterns
+# FastMind - AI-Powered Mind Mapping Editor - System Patterns
 
 ## Architecture Overview
 
 ### Monorepo Structure
 
-The project uses a Yarn/Lerna monorepo with interconnected packages:
+FastMind uses a Yarn/Lerna monorepo with interconnected packages optimized for AI-powered mind mapping:
 
 ```
-wisemapping-front-end/
+fastmind/
 ├── packages/
-│   ├── editor/              # React component library wrapper
+│   ├── editor/              # React component library wrapper with AI integration
 │   ├── mindplot/            # Core mind mapping canvas engine  
 │   ├── web2d/               # 2D rendering foundation (SVG abstraction)
 │   ├── fastmind/            # VS Code Extension for .fastmind files
@@ -42,21 +42,30 @@ Standalone Integration: editor-standalone → editor → mindplot → web2d
 
 ## Core Design Patterns
 
-### 1. **Layered Architecture**
+### 1. **AI-Enhanced Layered Architecture**
 
-The system implements clear separation of concerns across layers:
+The system implements clear separation of concerns across layers with AI integration throughout:
 
-**Presentation Layer** (webapp, editor)
-- React components with hooks
-- Material-UI for UI components
-- Form handling and validation
-- Internationalization support
+**Presentation Layer** (editor, fastmind)
+- React components with hooks and AI-powered features
+- Material-UI for UI components with internationalization (10 languages)
+- AI progress notifications and real-time feedback
+- Form handling and validation with AI-enhanced workflows
+- VS Code Extension UI integration
+
+**AI Service Layer** (editor/services)
+- Multi-LLM integration (OpenAI, Claude, Azure, local models)
+- Context-aware topic generation with deduplication
+- Event-driven progress notification system
+- Comprehensive error handling with retry mechanisms
+- Custom prompt support and AI service management
 
 **Business Logic Layer** (mindplot)
 - Pure ES6 classes for mind map logic
 - Canvas rendering and manipulation
 - Event handling and user interactions
 - Data transformation and validation
+- AI-generated topic integration
 
 **Infrastructure Layer** (web2d)
 - SVG abstraction and rendering

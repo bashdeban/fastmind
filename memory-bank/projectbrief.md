@@ -1,14 +1,14 @@
-# WiseMapping Frontend - Project Brief
+# FastMind - AI-Powered Mind Mapping Editor - Project Brief
 
-**Project**: WiseMapping Front End - Open Source Mind Mapping Tool  
-**Version**: 6.0.1  
+**Project**: FastMind - AI-Driven Mind Mapping Editor  
+**Version**: 1.0.0  
 **License**: WiseMapping Public License 1.0 (Apache 2.0 based)  
-**Author**: Paulo Veiga <pveiga@wisemapping.com>  
-**Contributors**: Ezequiel Bergamaschi  
+**Author**: bashdeban <bashdeban@gmail.com>  
+**Contributors**: Ezequiel Bergamaschi , Paulo Veiga
 
 ## Project Overview
 
-WiseMapping Front End is an integral component of the MindMap Open Source Project, which began in 2010 and underwent significant architectural revitalization in 2021. The project has evolved from web-based applications to include VS Code extension development, aiming to provide modern, intuitive, and powerful mind mapping solutions across multiple platforms.
+FastMind is an AI-powered mind mapping editor that originated from the WiseMapping Frontend project in November 2025. Built specifically for developers, FastMind provides intelligent content creation capabilities through advanced LLM integration, enabling users to brainstorm, design architectures, take study notes, and plan projects without ever leaving their editor. The project represents the evolution from traditional mind mapping to AI-assisted visual thinking.
 
 ### Core Modules
 
@@ -26,6 +26,9 @@ This repository contains all user interface-related elements, comprising the fol
 
 - **Started**: 2010 as MindMap Open Source Project
 - **Major Revitalization**: 2021 - Significant architectural updates to revitalize visual aesthetics and technological framework
+- **Strategic Pivot**: November 2025 - Branched from WiseMapping Frontend to create FastMind with AI capabilities
+- **AI Integration Milestone**: November 2025 - Complete AI Topic Generation System implementation
+- **Internationalization**: November 2025 - Full multi-language support (10 languages)
 - **Backend Repository**: https://github.com/wisemapping/wisemapping-open-source
 
 ## Key Requirements
@@ -60,11 +63,12 @@ This repository contains all user interface-related elements, comprising the fol
 
 ## High-Level Vision
 
-The project aims to provide a professional-grade, open-source mind mapping solution that combines modern web technologies with an exceptional user experience across multiple platforms. The current strategic focus is on VS Code extension development, bringing powerful mind mapping capabilities directly into developers' workflows while maintaining the vision of enabling users to visualize and organize their thoughts effectively through intuitive mind map interfaces.
+FastMind aims to revolutionize mind mapping by integrating advanced AI capabilities directly into the developer workflow. The project has successfully evolved from a traditional mind mapping tool to an AI-powered visual thinking platform that understands context, generates intelligent content, and supports multiple LLM providers.
 
-**Current Strategic Focus**: VS Code Extension Development with AI Enhancement
-- Primary deliverable: FastMind VS Code Extension for `.fastmind` file editing
-- Major achievement: AI Topic Generation System fully implemented and production-ready
-- Secondary: Web-based applications and standalone editor integrations
-- Goal: Seamless integration of AI-powered mind mapping into developer ecosystems
-- Status: AI features merged to main branch, ready for deployment and user testing
+**Current Strategic Focus**: Production-Ready AI-Powered Mind Mapping
+- Primary deliverable: FastMind VS Code Extension - 100% complete and production-ready
+- Major achievement: Complete AI Topic Generation System with multi-LLM support
+- Internationalization: Full support for 10 languages implemented
+- Multi-LLM Integration: Support for OpenAI, Claude, Azure, local models (Ollama, LM Studio)
+- Developer Experience: Git-friendly XML format, offline support, seamless VS Code integration
+- Status: All core features complete, ready for market deployment and user feedback
