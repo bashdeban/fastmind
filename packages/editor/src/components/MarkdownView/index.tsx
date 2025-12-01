@@ -107,7 +107,8 @@ const MarkdownView = ({ content }: MarkdownViewProps): React.ReactElement => {
           fontWeight: 'bold',
         },
         '& pre': {
-          backgroundColor: 'grey.100',
+          color: 'text.primary',
+          backgroundColor: 'action.hover',
           padding: '0.5rem',
           borderRadius: 0.5,
           overflow: 'auto',
@@ -115,9 +116,10 @@ const MarkdownView = ({ content }: MarkdownViewProps): React.ReactElement => {
           fontSize: '0.8rem',
         },
         '& code': {
+          color: 'text.primary',
           fontFamily: 'monospace',
           fontSize: '0.8rem',
-          backgroundColor: 'grey.100',
+          backgroundColor: 'action.hover',
           padding: '0.0625rem 0.125rem',
           borderRadius: 0.25,
         },
