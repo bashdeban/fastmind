@@ -40,6 +40,7 @@ Quick config example (set once in VS Code settings):
 - Auto-save
 - Lives alongside your code and Markdown files
 - Works 100% offline with local models
+- Supports 10 languages
 
 ---
 
