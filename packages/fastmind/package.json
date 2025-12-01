@@ -111,7 +111,18 @@
         },
         "fastmind.language.locale": {
           "type": "string",
-          "enum": ["en", "zh-CN", "zh", "ja", "fr", "de", "es", "it", "pt", "ru", "uk", "hi"],
+          "enum": [
+            "en",
+            "zh-CN",
+            "zh-Hant",
+            "ja",
+            "fr",
+            "de",
+            "es",
+            "it",
+            "pt",
+            "ru"
+          ],
           "default": "en",
           "description": "Language locale for FastMind editor"
         }

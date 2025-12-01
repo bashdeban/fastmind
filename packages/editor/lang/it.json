@@ -2,23 +2,86 @@
   "action.accept": {
     "defaultMessage": "Accetta"
   },
+  "action.cancel": {
+    "defaultMessage": "Annulla"
+  },
   "action.delete": {
     "defaultMessage": "Elimina"
   },
+  "ai-explainer.error-analyze": {
+    "defaultMessage": "Analisi dell’explicatore IA fallita:"
+  },
+  "ai-explainer.title": {
+    "defaultMessage": "Explicatore IA"
+  },
+  "ai-explainer.description": {
+    "defaultMessage": "Analisi dell’argomento «{currentTopic}» in corso..."
+  },
+  "ai-topic-generator.add-to-mindmap": {
+    "defaultMessage": "Aggiungi alla mappa mentale"
+  },
+  "ai-topic-generator.cancel": {
+    "defaultMessage": "Annulla"
+  },
+  "ai-topic-generator.count-label": {
+    "defaultMessage": "Numero di argomenti da generare: {count}"
+  },
+  "ai-topic-generator.custom-prompt-helper": {
+    "defaultMessage": "Fornisci contesto aggiuntivo o requisiti per la generazione IA"
+  },
+  "ai-topic-generator.custom-prompt-label": {
+    "defaultMessage": "Prompt personalizzato (opzionale)"
+  },
+  "ai-topic-generator.custom-prompt-placeholder": {
+    "defaultMessage": "es.: Concentrarsi sugli aspetti di implementazione tecnica"
+  },
+  "ai-topic-generator.description": {
+    "defaultMessage": "Genera sottoargomenti correlati a partire da <strong>{topicText}</strong>"
+  },
+  "ai-topic-generator.error-add": {
+    "defaultMessage": "Errore durante l’aggiunta degli argomenti"
+  },
+  "ai-topic-generator.error-generate": {
+    "defaultMessage": "Errore durante la generazione degli argomenti"
+  },
+  "ai-topic-generator.generating": {
+    "defaultMessage": "Generazione argomenti in corso, attendere prego..."
+  },
+  "ai-topic-generator.preview-title": {
+    "defaultMessage": "Anteprima argomenti generati:"
+  },
+  "ai-topic-generator.regenerate": {
+    "defaultMessage": "Rigenera"
+  },
+  "ai-topic-generator.title": {
+    "defaultMessage": "Generatore di Argomenti IA"
+  },
   "appbar.back-to-map-list": {
-    "defaultMessage": "Torna alla lista delle mappe"
+    "defaultMessage": "Torna all’elenco mappe"
   },
   "appbar.button-signup": {
     "defaultMessage": "Registrati"
   },
+  "appbar.error-saving-title": {
+    "defaultMessage": "Errore durante il salvataggio del titolo:"
+  },
+  "appbar.logo-aria-label": {
+    "defaultMessage": "WiseMapping"
+  },
   "appbar.shared-button": {
     "defaultMessage": "Condividi"
+  },
+  "appbar.title-renamed": {
+    "defaultMessage": "La mappa mentale è stata rinominata"
+  },
+  "appbar.tooltip-change-layout": {
+    "defaultMessage": "Layout"
   },
   "appbar.tooltip-export": {
     "defaultMessage": "Esporta"
   },
   "appbar.tooltip-history": {
-    "defaultMessage": "Cronologia delle modifiche"
+    "defaultMessage": "Cronologia modifiche"
   },
   "appbar.tooltip-info": {
     "defaultMessage": "Informazioni"
@@ -32,8 +95,14 @@
   "appbar.tooltip-redo": {
     "defaultMessage": "Ripeti"
   },
+  "appbar.tooltip-rename": {
+    "defaultMessage": "Rinomina"
+  },
   "appbar.tooltip-save": {
     "defaultMessage": "Salva"
+  },
+  "appbar.tooltip-settings": {
+    "defaultMessage": "Impostazioni"
   },
   "appbar.tooltip-shared": {
     "defaultMessage": "Condividi per collaborazione"
@@ -44,32 +113,80 @@
   "appbar.tooltip-starred": {
     "defaultMessage": "Preferiti"
   },
+  "appbar.tooltip-theme": {
+    "defaultMessage": "Tema"
+  },
+  "appbar.tooltip-theme-toggle": {
+    "defaultMessage": "Cambia tema"
+  },
   "appbar.tooltip-undo": {
     "defaultMessage": "Annulla"
   },
-  "outline.empty": {
-    "defaultMessage": "Nessun contenuto da visualizzare"
+  "canvas-style.background-color": {
+    "defaultMessage": "Colore di sfondo"
   },
-  "outline.expand": {
-    "defaultMessage": "Espandi"
+  "canvas-style.background-style": {
+    "defaultMessage": "Stile di sfondo"
   },
-  "outline.collapse": {
-    "defaultMessage": "Comprimi"
+  "canvas-style.grid-color": {
+    "defaultMessage": "Colore griglia"
   },
-  "outline.has-note": {
-    "defaultMessage": "Ha nota"
+  "canvas-style.grid-size-l": {
+    "defaultMessage": "Grande"
   },
-  "outline.link": {
-    "defaultMessage": "Link"
+  "canvas-style.grid-size-m": {
+    "defaultMessage": "Medio"
   },
-  "outline.note": {
-    "defaultMessage": "Nota"
+  "canvas-style.grid-size-s": {
+    "defaultMessage": "Piccolo"
   },
-  "editor-panel.icon-title": {
-    "defaultMessage": "Icona"
+  "canvas-style.grid-size-xl": {
+    "defaultMessage": "Extra grande"
   },
-  "editor-panel.link-panel-title": {
-    "defaultMessage": "Collegamento"
+  "canvas-style.grid-size-xs": {
+    "defaultMessage": "Extra piccolo"
+  },
+  "canvas-style.grid-style": {
+    "defaultMessage": "Dimensione griglia"
+  },
+  "canvas-style.pattern-default-tooltip": {
+    "defaultMessage": "Predefinito – Tutti gli stili verranno scelti automaticamente in base al tema"
+  },
+  "canvas-style.pattern-dots": {
+    "defaultMessage": "Punti"
+  },
+  "canvas-style.pattern-grid": {
+    "defaultMessage": "Griglia"
+  },
+  "canvas-style.pattern-solid": {
+    "defaultMessage": "Tinta unita"
+  },
+  "canvas-style.tab-color": {
+    "defaultMessage": "Colore"
+  },
+  "canvas-style.tab-grid": {
+    "defaultMessage": "Griglia"
+  },
+  "color-picker.color": {
+    "defaultMessage": "Colore"
+  },
+  "color-picker.default-color": {
+    "defaultMessage": "Colore predefinito"
+  },
+  "common.close": {
+    "defaultMessage": "Chiudi"
+  },
+  "creator-info-pane.creator": {
+    "defaultMessage": "Creatore"
+  },
+  "creator-info-pane.description": {
+    "defaultMessage": "Descrizione"
+  },
+  "editor-panel.font-family-default": {
+    "defaultMessage": "Predefinito"
+  },
+  "editor-panel.font-family-mixed": {
+    "defaultMessage": "Misto"
   },
   "editor-panel.note-panel-title": {
     "defaultMessage": "Nota"
@@ -78,7 +195,7 @@
     "defaultMessage": "Aggiungi icona"
   },
   "editor-panel.tooltip-add-link": {
-    "defaultMessage": "Aggiungi collegamento"
+    "defaultMessage": "Aggiungi link"
   },
   "editor-panel.tooltip-add-note": {
     "defaultMessage": "Aggiungi nota"
@@ -89,101 +206,392 @@
   "editor-panel.tooltip-add-topic": {
     "defaultMessage": "Aggiungi argomento"
   },
-  "editor-panel.tooltip-connection-color": {
-    "defaultMessage": "Colore"
+  "editor-panel.tooltip-add-topic-image": {
+    "defaultMessage": "Aggiungi immagine all’argomento"
   },
-  "editor-panel.tooltip-connection-color-default": {
-    "defaultMessage": "Colore predefinito"
+  "editor-panel.tooltip-ai-explainer": {
+    "defaultMessage": "Explicatore IA"
   },
-  "editor-panel.tooltip-connection-style": {
-    "defaultMessage": "Stile di connessione"
+  "editor-panel.tooltip-ai-topic-generator": {
+    "defaultMessage": "Generatore di Argomenti IA"
   },
-  "editor-panel.tooltip-connection-style-curved-thick": {
-    "defaultMessage": "Curva spessa"
-  },
-  "editor-panel.tooltip-connection-style-curved-thin": {
-    "defaultMessage": "Curva sottile"
-  },
-  "editor-panel.tooltip-connection-style-polyline": {
-    "defaultMessage": "Polilinea semplice"
-  },
-  "editor-panel.tooltip-connection-style-polyline-curved": {
-    "defaultMessage": "Polilinea curva"
+  "editor-panel.tooltip-canvas-style": {
+    "defaultMessage": "Sfondo"
   },
   "editor-panel.tooltip-delete-topic": {
     "defaultMessage": "Elimina argomento"
   },
-  "editor-panel.tooltip-topic-border-color": {
-    "defaultMessage": "Colore del bordo"
-  },
-  "editor-panel.tooltip-topic-border-color-default": {
-    "defaultMessage": "Colore del bordo predefinito"
-  },
-  "editor-panel.tooltip-topic-fill-color": {
-    "defaultMessage": "Colore di riempimento"
-  },
-  "editor-panel.tooltip-topic-fill-color-default": {
-    "defaultMessage": "Colore di riempimento predefinito"
-  },
-  "editor-panel.tooltip-topic-font-bigger": {
-    "defaultMessage": "Più grande"
-  },
-  "editor-panel.tooltip-topic-font-bold": {
-    "defaultMessage": "Grassetto"
-  },
-  "editor-panel.tooltip-topic-font-color": {
-    "defaultMessage": "Colore"
-  },
-  "editor-panel.tooltip-topic-font-color-default": {
-    "defaultMessage": "Colore predefinito"
-  },
-  "editor-panel.tooltip-topic-font-italic": {
-    "defaultMessage": "Corsivo"
-  },
-  "editor-panel.tooltip-topic-font-smaller": {
-    "defaultMessage": "Più piccolo"
+  "editor-panel.tooltip-relationship-style": {
+    "defaultMessage": "Stile relazione"
   },
   "editor-panel.tooltip-topic-font-style": {
-    "defaultMessage": "Stile del carattere"
+    "defaultMessage": "Stile carattere"
   },
-  "editor-panel.tooltip-topic-share-ellipse": {
-    "defaultMessage": "Forma ellittica"
-  },
-  "editor-panel.tooltip-topic-share-line": {
-    "defaultMessage": "Forma linea"
-  },
-  "editor-panel.tooltip-topic-share-rectangle": {
-    "defaultMessage": "Forma rettangolare"
-  },
-  "editor-panel.tooltip-topic-share-rounded": {
-    "defaultMessage": "Forma arrotondata"
-  },
-  "editor-panel.tooltip-topic-style": {
-    "defaultMessage": "Stile dell'argomento"
+  "editor-panel.tooltip-unified-styling": {
+    "defaultMessage": "Stile unificato argomento & connessioni"
   },
   "editor.edit-description-mobile": {
-    "defaultMessage": "Le capacità di modifica delle mappe mentali sono limitate sui dispositivi mobili. Usa un browser desktop per le funzionalità complete dell'editor."
+    "defaultMessage": "Su dispositivi mobili le funzionalità di modifica delle mappe mentali sono limitate. Usa un browser desktop per tutte le capacità dell’editor."
   },
   "editor.try-welcome": {
-    "defaultMessage": "Questo spazio di modifica mostra alcune delle capacità dell'editor di mappe mentali!"
+    "defaultMessage": "Questo spazio di modifica mostra alcune funzionalità dell’editor di mappe mentali!"
   },
   "editor.try-welcome-description": {
-    "defaultMessage": "Registrati per iniziare a creare, condividere e pubblicare un numero illimitato di mappe mentali gratuitamente."
+    "defaultMessage": "Registrati per creare, condividere e pubblicare un numero illimitato di mappe mentali gratuitamente."
   },
   "editor.try-welcome-description-mobile": {
-    "defaultMessage": "Registrati per iniziare a creare, condividere e pubblicare un numero illimitato di mappe mentali gratuitamente. Le capacità di modifica delle mappe mentali sono limitate sui dispositivi mobili. Usa un browser desktop per le funzionalità complete dell'editor."
+    "defaultMessage": "Registrati per creare, condividere e pubblicare un numero illimitato di mappe mentali gratuitamente. Su mobile le funzionalità di modifica sono limitate. Usa un browser desktop per tutte le funzionalità."
   },
   "editor.try-welcome-mobile": {
-    "defaultMessage": "Questo spazio di modifica mostra alcune delle capacità dell'editor di mappe mentali!"
+    "defaultMessage": "Questo spazio di modifica mostra alcune funzionalità dell’editor di mappe mentali!"
+  },
+  "emoji-picker.search-placeholder": {
+    "defaultMessage": "Cerca emoji..."
+  },
+  "export.dialog.cancel": {
+    "defaultMessage": "Annulla"
+  },
+  "export.dialog.clipboard-success": {
+    "defaultMessage": "Contenuto copiato negli appunti!"
+  },
+  "export.dialog.error-generic": {
+    "defaultMessage": "Esportazione fallita, riprova più tardi."
+  },
+  "export.dialog.export": {
+    "defaultMessage": "Esporta"
+  },
+  "export.dialog.exporting": {
+    "defaultMessage": "Esportazione in corso..."
+  },
+  "export.dialog.title": {
+    "defaultMessage": "Esporta mappa mentale"
+  },
+  "export.format.md.description": {
+    "defaultMessage": "Formato Markdown – Ideale per scrittura documenti e controllo versione, supportato da GitHub e altre piattaforme"
+  },
+  "export.format.recommended": {
+    "defaultMessage": "Consigliato"
+  },
+  "export.format.svg.description": {
+    "defaultMessage": "Grafica vettoriale scalabile – Vettoriale, scalabile infinitamente, dimensione file ridotta"
+  },
+  "export.format.wxml.description": {
+    "defaultMessage": "XML WiseMapping – Formato nativo, conserva tutte le funzionalità di modifica, reimportabile"
+  },
+  "icon-collection.border.dashed": {
+    "defaultMessage": "Tratteggiata"
+  },
+  "icon-collection.border.default": {
+    "defaultMessage": "Predefinito"
+  },
+  "icon-collection.border.dotted": {
+    "defaultMessage": "Punteggiata"
+  },
+  "icon-collection.border.solid": {
+    "defaultMessage": "Continua"
+  },
+  "icon-collection.connection.arc": {
+    "defaultMessage": "Arco"
+  },
+  "icon-collection.connection.arc-tooltip": {
+    "defaultMessage": "Connessione ad arco circolare – Perfetta per layout radiali e flusso organico"
+  },
+  "icon-collection.connection.curved-polyline": {
+    "defaultMessage": "Polilinea curva"
+  },
+  "icon-collection.connection.curved-polyline-tooltip": {
+    "defaultMessage": "Linea a più segmenti con angoli smussati – Ideale per layout strutturati e percorsi chiari"
+  },
+  "icon-collection.connection.default": {
+    "defaultMessage": "Predefinito"
+  },
+  "icon-collection.connection.default-tooltip": {
+    "defaultMessage": "Predefinito – Lo stile di connessione verrà scelto automaticamente in base al tema"
+  },
+  "icon-collection.connection.organic-curved": {
+    "defaultMessage": "Curva organica"
+  },
+  "icon-collection.connection.organic-curved-tooltip": {
+    "defaultMessage": "Stile disegnato a mano con curve marcate – Perfetto per mappe mentali creative ed espressive"
+  },
+  "icon-collection.connection.simple-polyline": {
+    "defaultMessage": "Polilinea semplice"
+  },
+  "icon-collection.connection.simple-polyline-tooltip": {
+    "defaultMessage": "Connessione dritta diretta – Stile pulito e minimalista per relazioni semplici"
+  },
+  "icon-collection.connection.thick-curved": {
+    "defaultMessage": "Curva spessa"
+  },
+  "icon-collection.connection.thick-curved-tooltip": {
+    "defaultMessage": "Linea curva spessa con curve Bézier morbide – Ottima per evidenziare i rami principali"
+  },
+  "icon-collection.connection.thin-curved": {
+    "defaultMessage": "Curva sottile"
+  },
+  "icon-collection.connection.thin-curved-tooltip": {
+    "defaultMessage": "Linea curva sottile con curve Bézier eleganti – Ideale per mappe dettagliate o dense"
+  },
+  "icon-collection.default-tooltip": {
+    "defaultMessage": "Predefinito – Tutti gli stili verranno scelti automaticamente in base al tema"
+  },
+  "icon-collection.shape.default": {
+    "defaultMessage": "Predefinito"
+  },
+  "icon-collection.shape.ellipse": {
+    "defaultMessage": "Ellisse"
+  },
+  "icon-collection.shape.line": {
+    "defaultMessage": "Linea"
+  },
+  "icon-collection.shape.none": {
+    "defaultMessage": "Nessuna"
+  },
+  "icon-collection.shape.none-tooltip": {
+    "defaultMessage": "Nessuna – Nessun sfondo forma visibile"
+  },
+  "icon-collection.shape.rectangle": {
+    "defaultMessage": "Rettangolo"
+  },
+  "icon-collection.shape.rounded": {
+    "defaultMessage": "Arrotondato"
+  },
+  "icon-picker.emojis": {
+    "defaultMessage": "Emoji"
+  },
+  "icon-picker.icons": {
+    "defaultMessage": "Galleria icone"
   },
   "icon-picker.show-images": {
     "defaultMessage": "Mostra immagini"
   },
+  "information-dialog.close": {
+    "defaultMessage": "Chiudi"
+  },
+  "information-dialog.fastmind-description": {
+    "defaultMessage": "FastMind è un’estensione VS Code basata su WiseMapping che offre potenti funzionalità di mind mapping per sviluppatori. Integra generazione di argomenti tramite IA, integrazione con modelli compatibili OpenAI API, deduplicazione intelligente dei contenuti generati da IA, integrazione nativa con il filesystem di VS Code e altre funzioni avanzate."
+  },
+  "information-dialog.fastmind-title": {
+    "defaultMessage": "Estensione FastMind per VS Code"
+  },
+  "information-dialog.feature-ai": {
+    "defaultMessage": "Generazione argomenti tramite IA"
+  },
+  "information-dialog.feature-api-integration": {
+    "defaultMessage": "Integrazione modelli compatibili OpenAI API"
+  },
+  "information-dialog.feature-deduplication": {
+    "defaultMessage": "Deduplicazione intelligente dei contenuti IA"
+  },
+  "information-dialog.feature-vscode-integration": {
+    "defaultMessage": "Integrazione nativa filesystem VS Code"
+  },
+  "information-dialog.features-title": {
+    "defaultMessage": "Funzionalità principali:"
+  },
+  "information-dialog.powered-by": {
+    "defaultMessage": "Offerto da"
+  },
+  "information-dialog.title": {
+    "defaultMessage": "Informazioni"
+  },
+  "layout-selector.accept": {
+    "defaultMessage": "Accetta"
+  },
+  "layout-selector.cancel": {
+    "defaultMessage": "Annulla"
+  },
+  "layout-selector.description": {
+    "defaultMessage": "Un layout definisce come gli argomenti sono organizzati e collegati nella mappa mentale. Scegli quello più adatto alla struttura dei tuoi contenuti."
+  },
+  "layout-selector.title": {
+    "defaultMessage": "Scegli layout"
+  },
+  "layout.mindmap.description": {
+    "defaultMessage": "Layout orizzontale con rami bilanciati su entrambi i lati. Ideale per il mind mapping tradizionale e il brainstorming."
+  },
+  "layout.mindmap.name": {
+    "defaultMessage": "Mappa mentale"
+  },
+  "layout.tree.description": {
+    "defaultMessage": "Gerarchia verticale dall’alto verso il basso. Perfetta per organigrammi e strutture gerarchiche."
+  },
+  "layout.tree.name": {
+    "defaultMessage": "Albero"
+  },
   "link.help_text": {
-    "defaultMessage": "L'indirizzo non è valido"
+    "defaultMessage": "L’indirizzo non è valido"
   },
   "link.placeholder": {
-    "defaultMessage": "https://www.example.com"
+    "defaultMessage": "https://www.esempio.com"
+  },
+  "llm-connection-test.api-key": {
+    "defaultMessage": "Chiave API"
+  },
+  "llm-connection-test.api-key-placeholder": {
+    "defaultMessage": "La tua chiave API"
+  },
+  "llm-connection-test.api-url": {
+    "defaultMessage": "URL API"
+  },
+  "llm-connection-test.api-url-placeholder": {
+    "defaultMessage": "https://api.openai.com/v1/chat/completions"
+  },
+  "llm-connection-test.configuration": {
+    "defaultMessage": "Configurazione"
+  },
+  "llm-connection-test.description": {
+    "defaultMessage": "Testa la connessione a qualsiasi API compatibile con OpenAI"
+  },
+  "llm-connection-test.error-connection-failed": {
+    "defaultMessage": "Connessione fallita"
+  },
+  "llm-connection-test.error-failed-config": {
+    "defaultMessage": "Errore di configurazione"
+  },
+  "llm-connection-test.error-unknown": {
+    "defaultMessage": "Errore sconosciuto"
+  },
+  "llm-connection-test.max-tokens": {
+    "defaultMessage": "Token massimi"
+  },
+  "llm-connection-test.model": {
+    "defaultMessage": "Modello"
+  },
+  "llm-connection-test.model-placeholder": {
+    "defaultMessage": "gpt-3.5-turbo"
+  },
+  "llm-connection-test.prompt": {
+    "defaultMessage": "Prompt"
+  },
+  "llm-connection-test.prompt-placeholder": {
+    "defaultMessage": "Inserisci qui il tuo prompt di prova..."
+  },
+  "llm-connection-test.response": {
+    "defaultMessage": "Risposta:"
+  },
+  "llm-connection-test.save-configuration": {
+    "defaultMessage": "Salva configurazione"
+  },
+  "llm-connection-test.temperature": {
+    "defaultMessage": "Temperatura"
+  },
+  "llm-connection-test.test-connection": {
+    "defaultMessage": "Testa connessione LLM"
+  },
+  "llm-connection-test.testing": {
+    "defaultMessage": "Test in corso..."
+  },
+  "llm-connection-test.title": {
+    "defaultMessage": "Test connessione LLM"
+  },
+  "llm-connection-test.console-logs": {
+    "defaultMessage": "Apri la console del browser per i log dettagliati"
+  },
+  "llm-connection-test.close": {
+    "defaultMessage": "Chiudi"
+  },
+  "llm-notification.status.completed": {
+    "defaultMessage": "Completato"
+  },
+  "llm-notification.status.error": {
+    "defaultMessage": "Fallito"
+  },
+  "llm.task.ai-explainer.title": {
+    "defaultMessage": "Explicatore IA"
+  },
+  "llm.task.ai-explainer.description": {
+    "defaultMessage": "Analisi dell’argomento «{currentTopic}» in corso..."
+  },
+  "llm.task.generate-topics.title": {
+    "defaultMessage": "Genera argomenti con IA"
+  },
+  "llm.task.generate-topics.description": {
+    "defaultMessage": "Generazione di argomenti rilevanti basati su «{currentTopic}» e percorso di contesto..."
+  },
+  "outline.collapse": {
+    "defaultMessage": "Comprimi tutto"
+  },
+  "outline.empty": {
+    "defaultMessage": "Nessun contenuto da mostrare"
+  },
+  "outline.expand": {
+    "defaultMessage": "Espandi tutto"
+  },
+  "outline.has-note": {
+    "defaultMessage": "Ha una nota"
+  },
+  "outline.link": {
+    "defaultMessage": "Link"
+  },
+  "outline.note": {
+    "defaultMessage": "Nota"
+  },
+  "relationship-style-editor.color": {
+    "defaultMessage": "Colore relazione"
+  },
+  "relationship-style-editor.dashed-line": {
+    "defaultMessage": "Linea tratteggiata"
+  },
+  "relationship-style-editor.dashed-line-tooltip": {
+    "defaultMessage": "Stile linea tratteggiata"
+  },
+  "relationship-style-editor.dotted-line": {
+    "defaultMessage": "Linea punteggiata"
+  },
+  "relationship-style-editor.dotted-line-tooltip": {
+    "defaultMessage": "Stile linea punteggiata"
+  },
+  "relationship-style-editor.end-arrow": {
+    "defaultMessage": "Freccia finale"
+  },
+  "relationship-style-editor.end-arrow-tooltip": {
+    "defaultMessage": "Attiva/disattiva freccia finale"
+  },
+  "relationship-style-editor.line-arrows": {
+    "defaultMessage": "Stile linea & frecce"
+  },
+  "relationship-style-editor.solid-line": {
+    "defaultMessage": "Linea continua"
+  },
+  "relationship-style-editor.solid-line-tooltip": {
+    "defaultMessage": "Stile linea continua"
+  },
+  "relationship-style-editor.start-arrow": {
+    "defaultMessage": "Freccia iniziale"
+  },
+  "relationship-style-editor.start-arrow-tooltip": {
+    "defaultMessage": "Attiva/disattiva freccia iniziale"
+  },
+  "settings.ai-explainer-title": {
+    "defaultMessage": "Explicatore IA con prompt personalizzati"
+  },
+  "settings.ai-topic-generator-title": {
+    "defaultMessage": "Generatore di argomenti IA con prompt personalizzati"
+  },
+  "settings.current-model": {
+    "defaultMessage": "Modello attuale: {modelName}"
+  },
+  "settings.deduplication": {
+    "defaultMessage": "Deduplicazione"
+  },
+  "settings.description": {
+    "defaultMessage": "Configura le impostazioni del modello IA e personalizza i prompt per generazione argomenti e spiegazione concetti."
+  },
+  "settings.explainer-placeholder": {
+    "defaultMessage": "Inserisci prompt personalizzato per la spiegazione dei concetti..."
+  },
+  "settings.model-api-management": {
+    "defaultMessage": "Gestione API modelli"
+  },
+  "settings.no-model": {
+    "defaultMessage": "Nessun modello configurato"
+  },
+  "settings.title": {
+    "defaultMessage": "Impostazioni"
+  },
+  "settings.topic-generator-placeholder": {
+    "defaultMessage": "Inserisci prompt personalizzato per la generazione argomenti..."
   },
   "shortcut-help-pane.action": {
     "defaultMessage": "Azione"
@@ -192,28 +600,25 @@
     "defaultMessage": "Aggiungi argomento figlio"
   },
   "shortcut-help-pane.add-link": {
-    "defaultMessage": "Aggiungi collegamento"
+    "defaultMessage": "Aggiungi link"
   },
   "shortcut-help-pane.add-note": {
     "defaultMessage": "Aggiungi nota"
   },
   "shortcut-help-pane.add-sibling": {
-    "defaultMessage": "Aggiungi argomento fratello"
+    "defaultMessage": "Aggiungi argomento allo stesso livello"
   },
   "shortcut-help-pane.cancel-text-changes": {
-    "defaultMessage": "Annulla modifiche al testo"
+    "defaultMessage": "Annulla modifiche testo"
   },
   "shortcut-help-pane.change-font-bold": {
-    "defaultMessage": "Cambia testo in grassetto"
+    "defaultMessage": "Testo in grassetto"
   },
   "shortcut-help-pane.change-font-italic": {
-    "defaultMessage": "Cambia testo in corsivo"
+    "defaultMessage": "Testo in corsivo"
   },
   "shortcut-help-pane.collapse-children": {
     "defaultMessage": "Comprimi figli"
-  },
-  "shortcut-help-pane.copy-and-text": {
-    "defaultMessage": "Copia e incolla argomenti/Copia immagine della mappa mentale negli appunti."
   },
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "Elimina argomento"
@@ -222,22 +627,31 @@
     "defaultMessage": "Deseleziona tutti gli argomenti"
   },
   "shortcut-help-pane.drag-disconnect": {
-    "defaultMessage": "Disconnetti argomento"
+    "defaultMessage": "Scollega argomento"
   },
   "shortcut-help-pane.edit-multiline": {
-    "defaultMessage": "Aggiungi testo argomento multi-riga"
+    "defaultMessage": "Aggiungi testo multilinea all’argomento"
   },
   "shortcut-help-pane.edit-topic": {
     "defaultMessage": "Modifica testo argomento"
   },
   "shortcut-help-pane.edit-topic-key": {
-    "defaultMessage": "F2 o Doppio clic"
+    "defaultMessage": "F2 o doppio clic"
+  },
+  "shortcut-help-pane.expand-by-level": {
+    "defaultMessage": "Espandi argomenti per livello"
+  },
+  "shortcut-help-pane.expand-collapse-all": {
+    "defaultMessage": "Espandi/comprimi tutto"
   },
   "shortcut-help-pane.navigation": {
     "defaultMessage": "Navigazione"
   },
   "shortcut-help-pane.navigation-keys": {
     "defaultMessage": "Tasti freccia"
+  },
+  "shortcut-help-pane.outline-view": {
+    "defaultMessage": "Apri vista struttura"
   },
   "shortcut-help-pane.overwrite-edit-topic": {
     "defaultMessage": "Sovrascrivi testo argomento"
@@ -263,383 +677,14 @@
   "shortcut-help-pane.undo": {
     "defaultMessage": "Annulla modifica"
   },
-  "zoom-panel.tooltip-keyboard": {
-    "defaultMessage": "Scorciatoie da tastiera"
+  "shortcut-help-pane.zoom-in": {
+    "defaultMessage": "Zoom avanti"
   },
-  "zoom-panel.tooltip-zoom-in": {
-    "defaultMessage": "Ingrandisci"
+  "shortcut-help-pane.zoom-out": {
+    "defaultMessage": "Zoom indietro"
   },
-  "zoom-panel.tooltip-zoom-out": {
-    "defaultMessage": "Riduci"
-  },
-  "zoom-panel.tooltip-zoom-to-fit": {
+  "shortcut-help-pane.zoom-to-fit": {
     "defaultMessage": "Adatta alla finestra"
-  },
-  "creator-info-pane.description": {
-    "defaultMessage": "Descrizione"
-  },
-  "creator-info-pane.creator": {
-    "defaultMessage": "Creatore"
-  },
-  "theme.dark": {
-    "defaultMessage": "Scuro"
-  },
-  "theme.light": {
-    "defaultMessage": "Chiaro"
-  },
-  "theme.toggle": {
-    "defaultMessage": "Cambia Tema"
-  },
-  "rich-text-editor.insert-link": {
-    "defaultMessage": "Inserisci Link"
-  },
-  "rich-text-editor.insert-icon": {
-    "defaultMessage": "Inserisci Icona"
-  },
-  "rich-text-editor.bold": {
-    "defaultMessage": "Grassetto"
-  },
-  "rich-text-editor.italic": {
-    "defaultMessage": "Corsivo"
-  },
-  "rich-text-editor.underline": {
-    "defaultMessage": "Sottolineato"
-  },
-  "rich-text-editor.strikethrough": {
-    "defaultMessage": "Barrato"
-  },
-  "rich-text-editor.bullet-list": {
-    "defaultMessage": "Elenco Puntato"
-  },
-  "rich-text-editor.numbered-list": {
-    "defaultMessage": "Elenco Numerato"
-  },
-  "image-icon-tab.icon-found": {
-    "defaultMessage": "icona trovata"
-  },
-  "image-icon-tab.icons-found": {
-    "defaultMessage": "icone trovate"
-  },
-  "image-icon-tab.icons": {
-    "defaultMessage": "icone"
-  },
-  "common.close": {
-    "defaultMessage": "Chiudi"
-  },
-  "canvas-style.apply": {
-    "defaultMessage": "Applica"
-  },
-  "canvas-style.background-color": {
-    "defaultMessage": "Colore di sfondo"
-  },
-  "canvas-style.background-pattern": {
-    "defaultMessage": "Motivo di sfondo"
-  },
-  "canvas-style.colors": {
-    "defaultMessage": "Colori"
-  },
-  "canvas-style.grid-color": {
-    "defaultMessage": "Colore griglia"
-  },
-  "canvas-style.grid-size-l": {
-    "defaultMessage": "Grande"
-  },
-  "canvas-style.grid-size-m": {
-    "defaultMessage": "Medio"
-  },
-  "canvas-style.grid-size-s": {
-    "defaultMessage": "Piccolo"
-  },
-  "canvas-style.grid-size-xl": {
-    "defaultMessage": "Molto Grande"
-  },
-  "canvas-style.grid-size-xs": {
-    "defaultMessage": "Molto Piccolo"
-  },
-  "canvas-style.grid-style": {
-    "defaultMessage": "Stile griglia"
-  },
-  "canvas-style.pattern-dots": {
-    "defaultMessage": "Punti"
-  },
-  "canvas-style.pattern-grid": {
-    "defaultMessage": "Linee griglia"
-  },
-  "canvas-style.pattern-none": {
-    "defaultMessage": "Nessuno"
-  },
-  "canvas-style.pattern-solid": {
-    "defaultMessage": "Colore solido"
-  },
-  "canvas-style.preview": {
-    "defaultMessage": "Anteprima"
-  },
-  "canvas-style.reset": {
-    "defaultMessage": "Reimposta"
-  },
-  "canvas-style.title": {
-    "defaultMessage": "Sfondo"
-  },
-  "editor-panel.canvas-style-title": {
-    "defaultMessage": "Sfondo"
-  },
-  "editor-panel.font-family-default": {
-    "defaultMessage": "Predefinito"
-  },
-  "editor-panel.font-family-mixed": {
-    "defaultMessage": "Misto"
-  },
-  "editor-panel.theme-title": {
-    "defaultMessage": "Tema"
-  },
-  "editor-panel.tooltip-canvas-style": {
-    "defaultMessage": "Sfondo"
-  },
-  "editor-panel.tooltip-theme": {
-    "defaultMessage": "Tema"
-  },
-  "emoji-picker.search-placeholder": {
-    "defaultMessage": "Cerca emoji..."
-  },
-  "zoom-panel.tooltip-collapse-all": {
-    "defaultMessage": "Comprimi tutti i nodi"
-  },
-  "zoom-panel.tooltip-expand-all": {
-    "defaultMessage": "Espandi tutti i nodi"
-  },
-  "zoom-panel.tooltip-outline-view": {
-    "defaultMessage": "Vista Struttura"
-  },
-  "editor-panel.tooltip-add-topic-image": {
-    "defaultMessage": "Aggiungi immagine argomento"
-  },
-  "editor-panel.topic-image-title": {
-    "defaultMessage": "Immagine argomento"
-  },
-  "app-bar-title": {
-    "defaultMessage": "Editor Mappe Mentali"
-  },
-  "appbar.error-saving-title": {
-    "defaultMessage": "Errore nel salvataggio"
-  },
-  "appbar.logo-aria-label": {
-    "defaultMessage": "Logo WiseMapping"
-  },
-  "appbar.theme-title": {
-    "defaultMessage": "Tema"
-  },
-  "appbar.title-renamed": {
-    "defaultMessage": "Mappa mentale rinominata"
-  },
-  "appbar.tooltip-rename": {
-    "defaultMessage": "Rinomina"
-  },
-  "appbar.tooltip-theme": {
-    "defaultMessage": "Tema"
-  },
-  "classic": {
-    "defaultMessage": "Classico"
-  },
-  "demo-simple-select": {
-    "defaultMessage": "Seleziona"
-  },
-  "divider": {
-    "defaultMessage": "Divisore"
-  },
-  "editor-panel.tooltip-connection-style-arc": {
-    "defaultMessage": "Arco"
-  },
-  "editor-panel.tooltip-relationship-arrow-end": {
-    "defaultMessage": "Freccia finale"
-  },
-  "editor-panel.tooltip-relationship-arrow-start": {
-    "defaultMessage": "Freccia iniziale"
-  },
-  "editor-panel.tooltip-relationship-color": {
-    "defaultMessage": "Colore"
-  },
-  "editor-panel.tooltip-relationship-color-default": {
-    "defaultMessage": "Colore predefinito"
-  },
-  "editor-panel.tooltip-relationship-stroke-dashed": {
-    "defaultMessage": "Linea tratteggiata"
-  },
-  "editor-panel.tooltip-relationship-stroke-dotted": {
-    "defaultMessage": "Linea punteggiata"
-  },
-  "editor-panel.tooltip-relationship-stroke-solid": {
-    "defaultMessage": "Linea solida"
-  },
-  "editor-panel.tooltip-relationship-style": {
-    "defaultMessage": "Stile relazione"
-  },
-  "editor-panel.tooltip-unified-styling": {
-    "defaultMessage": "Stile tema e connessioni"
-  },
-  "color-picker.color": {
-    "defaultMessage": "Colore"
-  },
-  "color-picker.default-color": {
-    "defaultMessage": "Colore predefinito"
-  },
-  "relationship-style-editor.color": {
-    "defaultMessage": "Colore relazione"
-  },
-  "relationship-style-editor.line-arrows": {
-    "defaultMessage": "Stile linea e frecce"
-  },
-  "relationship-style-editor.solid-line": {
-    "defaultMessage": "Linea continua"
-  },
-  "relationship-style-editor.solid-line-tooltip": {
-    "defaultMessage": "Stile linea continua"
-  },
-  "relationship-style-editor.dashed-line": {
-    "defaultMessage": "Linea tratteggiata"
-  },
-  "relationship-style-editor.dashed-line-tooltip": {
-    "defaultMessage": "Stile linea tratteggiata"
-  },
-  "relationship-style-editor.dotted-line": {
-    "defaultMessage": "Linea punteggiata"
-  },
-  "relationship-style-editor.dotted-line-tooltip": {
-    "defaultMessage": "Stile linea punteggiata"
-  },
-  "relationship-style-editor.end-arrow": {
-    "defaultMessage": "Freccia finale"
-  },
-  "relationship-style-editor.end-arrow-tooltip": {
-    "defaultMessage": "Attiva/disattiva freccia finale"
-  },
-  "relationship-style-editor.start-arrow": {
-    "defaultMessage": "Freccia iniziale"
-  },
-  "relationship-style-editor.start-arrow-tooltip": {
-    "defaultMessage": "Attiva/disattiva freccia iniziale"
-  },
-  "topic-font-editor.font-color": {
-    "defaultMessage": "Colore carattere"
-  },
-  "topic-font-editor.font-family": {
-    "defaultMessage": "Famiglia carattere"
-  },
-  "topic-font-editor.font-size-style": {
-    "defaultMessage": "Dimensione e stile carattere"
-  },
-  "topic-font-editor.increase-size": {
-    "defaultMessage": "Più grande"
-  },
-  "topic-font-editor.increase-size-tooltip": {
-    "defaultMessage": "Aumenta dimensione carattere"
-  },
-  "topic-font-editor.decrease-size": {
-    "defaultMessage": "Più piccolo"
-  },
-  "topic-font-editor.decrease-size-tooltip": {
-    "defaultMessage": "Diminuisci dimensione carattere"
-  },
-  "topic-font-editor.bold": {
-    "defaultMessage": "Grassetto"
-  },
-  "topic-font-editor.bold-tooltip": {
-    "defaultMessage": "Attiva/disattiva grassetto"
-  },
-  "topic-font-editor.italic": {
-    "defaultMessage": "Corsivo"
-  },
-  "topic-font-editor.italic-tooltip": {
-    "defaultMessage": "Attiva/disattiva corsivo"
-  },
-  "topic-font-editor.active": {
-    "defaultMessage": "attivo"
-  },
-  "editor-panel.tooltip-topic-share-none": {
-    "defaultMessage": "Nessuna forma"
-  },
-  "headerNotifier": {
-    "defaultMessage": "Notificatore intestazione"
-  },
-  "icon-collection.shape.none": {
-    "defaultMessage": "Nessuno"
-  },
-  "icon-collection.shape.none-tooltip": {
-    "defaultMessage": "Nessuno - Nessuno sfondo di forma visibile"
-  },
-  "icon-collection.shape.line": {
-    "defaultMessage": "Linea"
-  },
-  "icon-collection.shape.rectangle": {
-    "defaultMessage": "Rettangolo"
-  },
-  "icon-collection.shape.rounded": {
-    "defaultMessage": "Arrotondato"
-  },
-  "icon-collection.shape.ellipse": {
-    "defaultMessage": "Ellisse"
-  },
-  "icon-collection.border.solid": {
-    "defaultMessage": "Continuo"
-  },
-  "icon-collection.border.dashed": {
-    "defaultMessage": "Tratteggiato"
-  },
-  "icon-collection.border.dotted": {
-    "defaultMessage": "Punteggiato"
-  },
-  "icon-collection.connection.thick-curved": {
-    "defaultMessage": "Curva spessa"
-  },
-  "icon-collection.connection.arc": {
-    "defaultMessage": "Arco"
-  },
-  "icon-collection.connection.organic-curved": {
-    "defaultMessage": "Curva Organica"
-  },
-  "icon-collection.connection.organic-curved-tooltip": {
-    "defaultMessage": "Stile disegnato a mano con curve drammatiche - Perfetto per mappe mentali creative ed espressive"
-  },
-  "icon-collection.connection.thin-curved": {
-    "defaultMessage": "Curva sottile"
-  },
-  "icon-collection.connection.simple-polyline": {
-    "defaultMessage": "Polilinea semplice"
-  },
-  "icon-collection.connection.simple-polyline-tooltip": {
-    "defaultMessage": "Connessione a linea retta diretta - Stile pulito e minimalista per relazioni semplici"
-  },
-  "icon-collection.connection.curved-polyline": {
-    "defaultMessage": "Polilinea curva"
-  },
-  "icon-picker.emojis": {
-    "defaultMessage": "Emoji"
-  },
-  "icon-picker.icons": {
-    "defaultMessage": "Galleria icone"
-  },
-  "mindmap-comp": {
-    "defaultMessage": "Componente mappa mentale"
-  },
-  "note.character.count": {
-    "defaultMessage": "{remaining} rimanenti"
-  },
-  "note.character.limit.warning": {
-    "defaultMessage": "(Limite vicino)"
-  },
-  "ocean": {
-    "defaultMessage": "Oceano"
-  },
-  "popover": {
-    "defaultMessage": "Popover"
-  },
-  "prism": {
-    "defaultMessage": "Prisma"
-  },
-  "robot": {
-    "defaultMessage": "Robot"
-  },
-  "sunrise": {
-    "defaultMessage": "Alba"
   },
   "theme-editor.accept": {
     "defaultMessage": "Applica tema"
@@ -648,37 +693,43 @@
     "defaultMessage": "Annulla"
   },
   "theme-editor.description": {
-    "defaultMessage": "Un tema definisce lo stile visivo della tua mappa mentale, inclusi colori, font e aspetto generale. Scegli un tema che si adatti meglio al tuo contenuto e pubblico."
+    "defaultMessage": "Un tema definisce lo stile visivo della tua mappa mentale, inclusi colori, caratteri e aspetto generale. Scegli il tema più adatto ai tuoi contenuti e al pubblico."
   },
   "theme-editor.title": {
     "defaultMessage": "Scegli tema"
   },
   "theme.classic.description": {
-    "defaultMessage": "Clean and professional design with blue accents. Perfect for business presentations and formal documents."
+    "defaultMessage": "Design pulito e professionale con accenti blu. Perfetto per presentazioni aziendali e documenti formali."
   },
   "theme.classic.name": {
     "defaultMessage": "Classico"
   },
+  "theme.dark": {
+    "defaultMessage": "Scuro"
+  },
+  "theme.light": {
+    "defaultMessage": "Chiaro"
+  },
   "theme.ocean.description": {
-    "defaultMessage": "Ocean-inspired blue theme with light/dark variants. Calm and professional colors perfect for business and creative projects."
+    "defaultMessage": "Tema blu ispirato all’oceano con varianti chiaro/scuro. Colori calmi e professionali, perfetti per progetti aziendali e creativi."
   },
   "theme.ocean.name": {
     "defaultMessage": "Oceano"
   },
   "theme.robot.description": {
-    "defaultMessage": "Tech-inspired green theme. Perfect for technical documentation and futuristic presentations."
+    "defaultMessage": "Tema verde tecnologico. Perfetto per documentazione tecnica e presentazioni futuristiche."
   },
   "theme.robot.name": {
     "defaultMessage": "Robot"
   },
   "theme.summer.description": {
-    "defaultMessage": "Bright and vibrant orange theme. Great for creative projects and energetic presentations."
+    "defaultMessage": "Tema arancione luminoso e vivace. Ideale per progetti creativi e presentazioni energiche."
   },
   "theme.summer.name": {
     "defaultMessage": "Estate"
   },
   "theme.sunrise.description": {
-    "defaultMessage": "Sunrise theme with light/dark mode variants. Enhanced colors and contrast for better readability."
+    "defaultMessage": "Tema Alba con varianti chiaro/scuro. Colori e contrasto migliorati per una migliore leggibilità."
   },
   "theme.sunrise.name": {
     "defaultMessage": "Alba"
@@ -689,40 +740,136 @@
   "theme.switch-to-light": {
     "defaultMessage": "Passa alla modalità chiara"
   },
-  "title-input": {
-    "defaultMessage": "Input titolo"
+  "topic-font-editor.active": {
+    "defaultMessage": "attivo"
   },
-  "canvas-style.tab-color": {
-    "defaultMessage": "Color"
+  "topic-font-editor.bold": {
+    "defaultMessage": "Grassetto"
   },
-  "canvas-style.tab-grid": {
-    "defaultMessage": "Grid Color"
+  "topic-font-editor.bold-tooltip": {
+    "defaultMessage": "Attiva/disattiva grassetto"
   },
-  "canvas-style.background-style": {
-    "defaultMessage": "Background Style"
+  "topic-font-editor.decrease-size": {
+    "defaultMessage": "Più piccolo"
   },
-  "canvas-style.pattern-default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+  "topic-font-editor.decrease-size-tooltip": {
+    "defaultMessage": "Riduci dimensione carattere"
   },
-  "icon-collection.shape.default": {
-    "defaultMessage": "Default"
+  "topic-font-editor.font-color": {
+    "defaultMessage": "Colore carattere"
   },
-  "icon-collection.border.default": {
-    "defaultMessage": "Default"
+  "topic-font-editor.font-family": {
+    "defaultMessage": "Famiglia carattere"
   },
-  "icon-collection.connection.default": {
-    "defaultMessage": "Default"
+  "topic-font-editor.font-size-style": {
+    "defaultMessage": "Dimensione & stile carattere"
   },
-  "icon-collection.default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
+  "topic-font-editor.increase-size": {
+    "defaultMessage": "Più grande"
   },
-  "unified-styling.shape-type": {
-    "defaultMessage": "Shape Type"
+  "topic-font-editor.increase-size-tooltip": {
+    "defaultMessage": "Aumenta dimensione carattere"
   },
-  "unified-styling.background-color": {
-    "defaultMessage": "Background Color"
+  "topic-font-editor.italic": {
+    "defaultMessage": "Corsivo"
+  },
+  "topic-font-editor.italic-tooltip": {
+    "defaultMessage": "Attiva/disattiva corsivo"
   },
   "topic-font-editor.reset-to-default": {
-    "defaultMessage": "Reset to Default"
+    "defaultMessage": "Ripristina predefinito"
+  },
+  "topic-note-editor.add-note": {
+    "defaultMessage": "Aggiungi nota"
+  },
+  "topic-note-editor.edit-note": {
+    "defaultMessage": "Modifica nota"
+  },
+  "unified-styling.background-color": {
+    "defaultMessage": "Colore di sfondo"
+  },
+  "unified-styling.border-color": {
+    "defaultMessage": "Colore bordo"
+  },
+  "unified-styling.border-style": {
+    "defaultMessage": "Stile bordo"
+  },
+  "unified-styling.connection-style": {
+    "defaultMessage": "Stile connessione"
+  },
+  "unified-styling.connector-style": {
+    "defaultMessage": "Stile connettore"
+  },
+  "unified-styling.shape-type": {
+    "defaultMessage": "Tipo forma"
+  },
+  "unified-styling.tab.border": {
+    "defaultMessage": "Bordo"
+  },
+  "unified-styling.tab.connector": {
+    "defaultMessage": "Connettore"
+  },
+  "unified-styling.tab.shape": {
+    "defaultMessage": "Forma"
+  },
+  "visualization-toolbar.tooltip-collapse-all": {
+    "defaultMessage": "Comprimi tutti i nodi"
+  },
+  "visualization-toolbar.tooltip-expand-all": {
+    "defaultMessage": "Espandi tutti i nodi"
+  },
+  "visualization-toolbar.tooltip-expand-level": {
+    "defaultMessage": "Espandi per livello"
+  },
+  "visualization-toolbar.tooltip-export": {
+    "defaultMessage": "Esporta"
+  },
+  "visualization-toolbar.tooltip-info": {
+    "defaultMessage": "Informazioni"
+  },
+  "visualization-toolbar.tooltip-keyboard": {
+    "defaultMessage": "Scorciatoie tastiera"
+  },
+  "visualization-toolbar.tooltip-layout": {
+    "defaultMessage": "Cambia layout"
+  },
+  "visualization-toolbar.tooltip-outline-view": {
+    "defaultMessage": "Vista struttura"
+  },
+  "visualization-toolbar.tooltip-save": {
+    "defaultMessage": "Salva"
+  },
+  "visualization-toolbar.tooltip-theme-toggle": {
+    "defaultMessage": "Cambia tema"
+  },
+  "visualization-toolbar.tooltip-zoom-in": {
+    "defaultMessage": "Zoom avanti"
+  },
+  "visualization-toolbar.tooltip-zoom-out": {
+    "defaultMessage": "Zoom indietro"
+  },
+  "visualization-toolbar.tooltip-zoom-to-fit": {
+    "defaultMessage": "Adatta alla finestra"
+  },
+  "model-api-management.title": {
+    "defaultMessage": "Gestione API modelli"
+  },
+  "model-api-management.no-configurations": {
+    "defaultMessage": "Nessuna configurazione API"
+  },
+  "model-api-management.empty-description": {
+    "defaultMessage": "Aggiungi la tua prima configurazione API LLM per iniziare"
+  },
+  "model-api-management.active": {
+    "defaultMessage": "attivo"
+  },
+  "model-api-management.switch": {
+    "defaultMessage": "Cambia"
+  },
+  "model-api-management.update": {
+    "defaultMessage": "Aggiorna"
+  },
+  "model-api-management.add-configuration": {
+    "defaultMessage": "Aggiungi configurazione"
   }
 }

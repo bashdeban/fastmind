@@ -5,22 +5,140 @@
       "value": "Принять"
     }
   ],
+  "action.cancel": [
+    {
+      "type": 0,
+      "value": "Отмена"
+    }
+  ],
   "action.delete": [
     {
       "type": 0,
       "value": "Удалить"
     }
   ],
-  "app-bar-title": [
+  "ai-explainer.description": [
     {
       "type": 0,
-      "value": "Редактор карт разума"
+      "value": "Анализ темы «"
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "»..."
+    }
+  ],
+  "ai-explainer.error-analyze": [
+    {
+      "type": 0,
+      "value": "Ошибка анализа AI-объяснителя:"
+    }
+  ],
+  "ai-explainer.title": [
+    {
+      "type": 0,
+      "value": "AI-объяснитель"
+    }
+  ],
+  "ai-topic-generator.add-to-mindmap": [
+    {
+      "type": 0,
+      "value": "Добавить в интеллект-карту"
+    }
+  ],
+  "ai-topic-generator.cancel": [
+    {
+      "type": 0,
+      "value": "Отмена"
+    }
+  ],
+  "ai-topic-generator.count-label": [
+    {
+      "type": 0,
+      "value": "Количество тем для генерации: "
+    },
+    {
+      "type": 1,
+      "value": "count"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-helper": [
+    {
+      "type": 0,
+      "value": "Укажите дополнительный контекст или требования для генерации ИИ"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-label": [
+    {
+      "type": 0,
+      "value": "Пользовательский промпт (необязательно)"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-placeholder": [
+    {
+      "type": 0,
+      "value": "например: Сфокусируйтесь на технических аспектах реализации"
+    }
+  ],
+  "ai-topic-generator.description": [
+    {
+      "type": 0,
+      "value": "Генерация связанных подтем на основе "
+    },
+    {
+      "children": [
+        {
+          "type": 1,
+          "value": "topicText"
+        }
+      ],
+      "type": 8,
+      "value": "strong"
+    }
+  ],
+  "ai-topic-generator.error-add": [
+    {
+      "type": 0,
+      "value": "Ошибка при добавлении тем"
+    }
+  ],
+  "ai-topic-generator.error-generate": [
+    {
+      "type": 0,
+      "value": "Ошибка при генерации тем"
+    }
+  ],
+  "ai-topic-generator.generating": [
+    {
+      "type": 0,
+      "value": "Генерация тем, пожалуйста, подождите..."
+    }
+  ],
+  "ai-topic-generator.preview-title": [
+    {
+      "type": 0,
+      "value": "Предпросмотр сгенерированных тем:"
+    }
+  ],
+  "ai-topic-generator.regenerate": [
+    {
+      "type": 0,
+      "value": "Перегенерировать"
+    }
+  ],
+  "ai-topic-generator.title": [
+    {
+      "type": 0,
+      "value": "Генератор тем с ИИ"
     }
   ],
   "appbar.back-to-map-list": [
     {
       "type": 0,
-      "value": "Назад к списку карт"
+      "value": "Вернуться к списку карт"
     }
   ],
   "appbar.button-signup": [
@@ -32,13 +150,13 @@
   "appbar.error-saving-title": [
     {
       "type": 0,
-      "value": "Ошибка сохранения"
+      "value": "Ошибка сохранения заголовка:"
     }
   ],
   "appbar.logo-aria-label": [
     {
       "type": 0,
-      "value": "Логотип WiseMapping"
+      "value": "WiseMapping"
     }
   ],
   "appbar.shared-button": [
@@ -47,16 +165,16 @@
       "value": "Поделиться"
     }
   ],
-  "appbar.theme-title": [
-    {
-      "type": 0,
-      "value": "Тема"
-    }
-  ],
   "appbar.title-renamed": [
     {
       "type": 0,
-      "value": "Карта разума переименована"
+      "value": "Интеллект-карта переименована"
+    }
+  ],
+  "appbar.tooltip-change-layout": [
+    {
+      "type": 0,
+      "value": "Макет"
     }
   ],
   "appbar.tooltip-export": [
@@ -107,10 +225,16 @@
       "value": "Сохранить"
     }
   ],
+  "appbar.tooltip-settings": [
+    {
+      "type": 0,
+      "value": "Настройки"
+    }
+  ],
   "appbar.tooltip-shared": [
     {
       "type": 0,
-      "value": "Поделиться для сотрудничества"
+      "value": "Поделиться для совместной работы"
     }
   ],
   "appbar.tooltip-signup": [
@@ -131,16 +255,16 @@
       "value": "Тема"
     }
   ],
+  "appbar.tooltip-theme-toggle": [
+    {
+      "type": 0,
+      "value": "Переключить тему"
+    }
+  ],
   "appbar.tooltip-undo": [
     {
       "type": 0,
       "value": "Отменить"
-    }
-  ],
-  "canvas-style.apply": [
-    {
-      "type": 0,
-      "value": "Применить"
     }
   ],
   "canvas-style.background-color": [
@@ -149,22 +273,10 @@
       "value": "Цвет фона"
     }
   ],
-  "canvas-style.background-pattern": [
-    {
-      "type": 0,
-      "value": "Узор фона"
-    }
-  ],
   "canvas-style.background-style": [
     {
       "type": 0,
-      "value": "Background Style"
-    }
-  ],
-  "canvas-style.colors": [
-    {
-      "type": 0,
-      "value": "Цвета"
+      "value": "Стиль фона"
     }
   ],
   "canvas-style.grid-color": [
@@ -176,43 +288,43 @@
   "canvas-style.grid-size-l": [
     {
       "type": 0,
-      "value": "Большой"
+      "value": "Большая"
     }
   ],
   "canvas-style.grid-size-m": [
     {
       "type": 0,
-      "value": "Средний"
+      "value": "Средняя"
     }
   ],
   "canvas-style.grid-size-s": [
     {
       "type": 0,
-      "value": "Маленький"
+      "value": "Маленькая"
     }
   ],
   "canvas-style.grid-size-xl": [
     {
       "type": 0,
-      "value": "Очень большой"
+      "value": "Очень большая"
     }
   ],
   "canvas-style.grid-size-xs": [
     {
       "type": 0,
-      "value": "Очень маленький"
+      "value": "Очень маленькая"
     }
   ],
   "canvas-style.grid-style": [
     {
       "type": 0,
-      "value": "Стиль сетки"
+      "value": "Размер сетки"
     }
   ],
   "canvas-style.pattern-default-tooltip": [
     {
       "type": 0,
-      "value": "Default - All styles will be automatically selected based on the theme"
+      "value": "По умолчанию — все стили будут автоматически выбраны в зависимости от темы"
     }
   ],
   "canvas-style.pattern-dots": [
@@ -224,55 +336,25 @@
   "canvas-style.pattern-grid": [
     {
       "type": 0,
-      "value": "Линии сетки"
-    }
-  ],
-  "canvas-style.pattern-none": [
-    {
-      "type": 0,
-      "value": "Нет"
+      "value": "Сетка"
     }
   ],
   "canvas-style.pattern-solid": [
     {
       "type": 0,
-      "value": "Сплошной цвет"
-    }
-  ],
-  "canvas-style.preview": [
-    {
-      "type": 0,
-      "value": "Предварительный просмотр"
-    }
-  ],
-  "canvas-style.reset": [
-    {
-      "type": 0,
-      "value": "Сбросить"
+      "value": "Сплошной"
     }
   ],
   "canvas-style.tab-color": [
     {
       "type": 0,
-      "value": "Color"
+      "value": "Цвет"
     }
   ],
   "canvas-style.tab-grid": [
     {
       "type": 0,
-      "value": "Grid Color"
-    }
-  ],
-  "canvas-style.title": [
-    {
-      "type": 0,
-      "value": "Фон"
-    }
-  ],
-  "classic": [
-    {
-      "type": 0,
-      "value": "Классический"
+      "value": "Сетка"
     }
   ],
   "color-picker.color": [
@@ -296,31 +378,13 @@
   "creator-info-pane.creator": [
     {
       "type": 0,
-      "value": "Создатель"
+      "value": "Автор"
     }
   ],
   "creator-info-pane.description": [
     {
       "type": 0,
       "value": "Описание"
-    }
-  ],
-  "demo-simple-select": [
-    {
-      "type": 0,
-      "value": "Выбрать"
-    }
-  ],
-  "divider": [
-    {
-      "type": 0,
-      "value": "Разделитель"
-    }
-  ],
-  "editor-panel.canvas-style-title": [
-    {
-      "type": 0,
-      "value": "Фон"
     }
   ],
   "editor-panel.font-family-default": [
@@ -335,28 +399,10 @@
       "value": "Смешанный"
     }
   ],
-  "editor-panel.icon-title": [
-    {
-      "type": 0,
-      "value": "Иконка"
-    }
-  ],
-  "editor-panel.link-panel-title": [
-    {
-      "type": 0,
-      "value": "Ссылка"
-    }
-  ],
   "editor-panel.note-panel-title": [
     {
       "type": 0,
       "value": "Заметка"
-    }
-  ],
-  "editor-panel.theme-title": [
-    {
-      "type": 0,
-      "value": "Тема"
     }
   ],
   "editor-panel.tooltip-add-icon": [
@@ -395,58 +441,22 @@
       "value": "Добавить изображение темы"
     }
   ],
+  "editor-panel.tooltip-ai-explainer": [
+    {
+      "type": 0,
+      "value": "AI-объяснитель"
+    }
+  ],
+  "editor-panel.tooltip-ai-topic-generator": [
+    {
+      "type": 0,
+      "value": "Генератор тем с ИИ"
+    }
+  ],
   "editor-panel.tooltip-canvas-style": [
     {
       "type": 0,
       "value": "Фон"
-    }
-  ],
-  "editor-panel.tooltip-connection-color": [
-    {
-      "type": 0,
-      "value": "Цвет"
-    }
-  ],
-  "editor-panel.tooltip-connection-color-default": [
-    {
-      "type": 0,
-      "value": "Цвет по умолчанию"
-    }
-  ],
-  "editor-panel.tooltip-connection-style": [
-    {
-      "type": 0,
-      "value": "Стиль подключения"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-arc": [
-    {
-      "type": 0,
-      "value": "Дуга"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-curved-thick": [
-    {
-      "type": 0,
-      "value": "Толстая кривая"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-curved-thin": [
-    {
-      "type": 0,
-      "value": "Тонкая кривая"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-polyline": [
-    {
-      "type": 0,
-      "value": "Простая полилиния"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-polyline-curved": [
-    {
-      "type": 0,
-      "value": "Изогнутая полилиния"
     }
   ],
   "editor-panel.tooltip-delete-topic": [
@@ -455,118 +465,10 @@
       "value": "Удалить тему"
     }
   ],
-  "editor-panel.tooltip-relationship-arrow-end": [
-    {
-      "type": 0,
-      "value": "Конечная стрелка"
-    }
-  ],
-  "editor-panel.tooltip-relationship-arrow-start": [
-    {
-      "type": 0,
-      "value": "Начальная стрелка"
-    }
-  ],
-  "editor-panel.tooltip-relationship-color": [
-    {
-      "type": 0,
-      "value": "Цвет"
-    }
-  ],
-  "editor-panel.tooltip-relationship-color-default": [
-    {
-      "type": 0,
-      "value": "Цвет по умолчанию"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-dashed": [
-    {
-      "type": 0,
-      "value": "Пунктирная линия"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-dotted": [
-    {
-      "type": 0,
-      "value": "Точечная линия"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-solid": [
-    {
-      "type": 0,
-      "value": "Сплошная линия"
-    }
-  ],
   "editor-panel.tooltip-relationship-style": [
     {
       "type": 0,
       "value": "Стиль связи"
-    }
-  ],
-  "editor-panel.tooltip-theme": [
-    {
-      "type": 0,
-      "value": "Тема"
-    }
-  ],
-  "editor-panel.tooltip-topic-border-color": [
-    {
-      "type": 0,
-      "value": "Цвет границы"
-    }
-  ],
-  "editor-panel.tooltip-topic-border-color-default": [
-    {
-      "type": 0,
-      "value": "Цвет границы по умолчанию"
-    }
-  ],
-  "editor-panel.tooltip-topic-fill-color": [
-    {
-      "type": 0,
-      "value": "Цвет заливки"
-    }
-  ],
-  "editor-panel.tooltip-topic-fill-color-default": [
-    {
-      "type": 0,
-      "value": "Цвет заливки по умолчанию"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-bigger": [
-    {
-      "type": 0,
-      "value": "Увеличить"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-bold": [
-    {
-      "type": 0,
-      "value": "Жирный"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-color": [
-    {
-      "type": 0,
-      "value": "Цвет"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-color-default": [
-    {
-      "type": 0,
-      "value": "Цвет по умолчанию"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-italic": [
-    {
-      "type": 0,
-      "value": "Курсив"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-smaller": [
-    {
-      "type": 0,
-      "value": "Уменьшить"
     }
   ],
   "editor-panel.tooltip-topic-font-style": [
@@ -575,82 +477,40 @@
       "value": "Стиль шрифта"
     }
   ],
-  "editor-panel.tooltip-topic-share-ellipse": [
-    {
-      "type": 0,
-      "value": "Форма эллипса"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-line": [
-    {
-      "type": 0,
-      "value": "Форма линии"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-none": [
-    {
-      "type": 0,
-      "value": "Без формы"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-rectangle": [
-    {
-      "type": 0,
-      "value": "Прямоугольная форма"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-rounded": [
-    {
-      "type": 0,
-      "value": "Круглая форма"
-    }
-  ],
-  "editor-panel.tooltip-topic-style": [
-    {
-      "type": 0,
-      "value": "Стиль темы"
-    }
-  ],
   "editor-panel.tooltip-unified-styling": [
     {
       "type": 0,
-      "value": "Стиль темы и соединений"
-    }
-  ],
-  "editor-panel.topic-image-title": [
-    {
-      "type": 0,
-      "value": "Изображение темы"
+      "value": "Стиль темы и связей"
     }
   ],
   "editor.edit-description-mobile": [
     {
       "type": 0,
-      "value": "Возможности ограниченной версии Mindmap поддерживаются на мобильных устройствах. Используйте настольный браузер для полных возможностей редактора."
+      "value": "На мобильных устройствах поддерживаются ограниченные возможности редактирования интеллект-карт. Для полного функционала используйте браузер на компьютере."
     }
   ],
   "editor.try-welcome": [
     {
       "type": 0,
-      "value": "Это демо-версия редактора, можно попробовать его в деле!"
+      "value": "Это пространство демонстрирует некоторые возможности редактора интеллект-карт!"
     }
   ],
   "editor.try-welcome-description": [
     {
       "type": 0,
-      "value": "Чтобы получить бесплатный неограниченный доступ —  нужна только регистрация."
+      "value": "Зарегистрируйтесь, чтобы бесплатно создавать, делиться и публиковать неограниченное количество интеллект-карт."
     }
   ],
   "editor.try-welcome-description-mobile": [
     {
       "type": 0,
-      "value": "Зарегистрируйтесь, чтобы начать создавать, делиться и публиковать неограниченное количество ментальных карт бесплатно. Возможности ограниченной версии Mindmap поддерживаются на мобильных устройствах. Используйте настольный браузер для полных возможностей редактора."
+      "value": "Зарегистрируйтесь, чтобы бесплатно создавать, делиться и публиковать неограниченное количество интеллект-карт. На мобильных устройствах возможности редактирования ограничены. Для полного функционала используйте браузер на компьютере."
     }
   ],
   "editor.try-welcome-mobile": [
     {
       "type": 0,
-      "value": "В этом издании демонстрируются некоторые возможности ментальных карт!"
+      "value": "Это пространство демонстрирует некоторые возможности редактора интеллект-карт!"
     }
   ],
   "emoji-picker.search-placeholder": [
@@ -659,34 +519,88 @@
       "value": "Поиск эмодзи..."
     }
   ],
-  "headerNotifier": [
+  "export.dialog.cancel": [
     {
       "type": 0,
-      "value": "Уведомление заголовка"
+      "value": "Отмена"
+    }
+  ],
+  "export.dialog.clipboard-success": [
+    {
+      "type": 0,
+      "value": "Содержимое скопировано в буфер обмена!"
+    }
+  ],
+  "export.dialog.error-generic": [
+    {
+      "type": 0,
+      "value": "Экспорт не удался, попробуйте позже."
+    }
+  ],
+  "export.dialog.export": [
+    {
+      "type": 0,
+      "value": "Экспорт"
+    }
+  ],
+  "export.dialog.exporting": [
+    {
+      "type": 0,
+      "value": "Экспорт..."
+    }
+  ],
+  "export.dialog.title": [
+    {
+      "type": 0,
+      "value": "Экспорт интеллект-карты"
+    }
+  ],
+  "export.format.md.description": [
+    {
+      "type": 0,
+      "value": "Формат Markdown — подходит для написания документов и контроля версий, поддерживается GitHub и другими платформами"
+    }
+  ],
+  "export.format.recommended": [
+    {
+      "type": 0,
+      "value": "Рекомендуется"
+    }
+  ],
+  "export.format.svg.description": [
+    {
+      "type": 0,
+      "value": "Масштабируемая векторная графика — вектор, бесконечно масштабируемый, небольшой размер файла"
+    }
+  ],
+  "export.format.wxml.description": [
+    {
+      "type": 0,
+      "value": "WiseMapping XML — родной формат, сохраняет все возможности редактирования, можно импортировать обратно"
     }
   ],
   "icon-collection.border.dashed": [
     {
       "type": 0,
-      "value": "Пунктирный"
+      "value": "Пунктирная"
     }
   ],
   "icon-collection.border.default": [
     {
       "type": 0,
-      "value": "Default"
+      "value": "По умолчанию"
     }
   ],
   "icon-collection.border.dotted": [
     {
       "type": 0,
-      "value": "Точечный"
+      "value": "Точечная"
     }
   ],
   "icon-collection.border.solid": [
     {
       "type": 0,
-      "value": "Сплошной"
+      "value": "Сплошная"
     }
   ],
   "icon-collection.connection.arc": [
@@ -695,16 +609,34 @@
       "value": "Дуга"
     }
   ],
+  "icon-collection.connection.arc-tooltip": [
+    {
+      "type": 0,
+      "value": "Круговая дуга — идеально для радиальных и органических макетов"
+    }
+  ],
   "icon-collection.connection.curved-polyline": [
     {
       "type": 0,
-      "value": "Кривая ломаная"
+      "value": "Изогнутая полилиния"
+    }
+  ],
+  "icon-collection.connection.curved-polyline-tooltip": [
+    {
+      "type": 0,
+      "value": "Многосегментная линия с плавными углами — лучше всего для структурированных макетов"
     }
   ],
   "icon-collection.connection.default": [
     {
       "type": 0,
-      "value": "Default"
+      "value": "По умолчанию"
+    }
+  ],
+  "icon-collection.connection.default-tooltip": [
+    {
+      "type": 0,
+      "value": "По умолчанию — стиль связи автоматически подбирается в зависимости от темы"
     }
   ],
   "icon-collection.connection.organic-curved": [
@@ -716,19 +648,19 @@
   "icon-collection.connection.organic-curved-tooltip": [
     {
       "type": 0,
-      "value": "Ручной стиль с драматическими кривыми - Идеально для творческих и выразительных карт разума"
+      "value": "Рисованный от руки стиль с выразительными кривыми — идеально для креативных интеллект-карт"
     }
   ],
   "icon-collection.connection.simple-polyline": [
     {
       "type": 0,
-      "value": "Простая ломаная"
+      "value": "Простая полилиния"
     }
   ],
   "icon-collection.connection.simple-polyline-tooltip": [
     {
       "type": 0,
-      "value": "Прямое соединение прямой линией - Чистый и минималистичный стиль для простых отношений"
+      "value": "Прямая линия — чистый минималистичный стиль для простых связей"
     }
   ],
   "icon-collection.connection.thick-curved": [
@@ -737,22 +669,34 @@
       "value": "Толстая кривая"
     }
   ],
+  "icon-collection.connection.thick-curved-tooltip": [
+    {
+      "type": 0,
+      "value": "Толстая кривая с плавными безье — отлично для выделения основных ветвей"
+    }
+  ],
   "icon-collection.connection.thin-curved": [
     {
       "type": 0,
       "value": "Тонкая кривая"
     }
   ],
+  "icon-collection.connection.thin-curved-tooltip": [
+    {
+      "type": 0,
+      "value": "Тонкая кривая с элегантными безье — идеально для детализированных или плотных карт"
+    }
+  ],
   "icon-collection.default-tooltip": [
     {
       "type": 0,
-      "value": "Default - All styles will be automatically selected based on the theme"
+      "value": "По умолчанию — все стили автоматически подбираются в зависимости от темы"
     }
   ],
   "icon-collection.shape.default": [
     {
       "type": 0,
-      "value": "Default"
+      "value": "По умолчанию"
     }
   ],
   "icon-collection.shape.ellipse": [
@@ -776,7 +720,7 @@
   "icon-collection.shape.none-tooltip": [
     {
       "type": 0,
-      "value": "Нет - Без видимого фона фигуры"
+      "value": "Нет — без видимого фона формы"
     }
   ],
   "icon-collection.shape.rectangle": [
@@ -788,7 +732,7 @@
   "icon-collection.shape.rounded": [
     {
       "type": 0,
-      "value": "Закругленный"
+      "value": "Скруглённый"
     }
   ],
   "icon-picker.emojis": [
@@ -809,22 +753,112 @@
       "value": "Показать изображения"
     }
   ],
-  "image-icon-tab.icon-found": [
+  "information-dialog.close": [
     {
       "type": 0,
-      "value": "иконка найдена"
+      "value": "Закрыть"
     }
   ],
-  "image-icon-tab.icons": [
+  "information-dialog.fastmind-description": [
     {
       "type": 0,
-      "value": "иконки"
+      "value": "FastMind — расширение для VS Code на базе WiseMapping, предоставляющее мощные возможности интеллект-карт для разработчиков. Включает генерацию тем с помощью ИИ, интеграцию с моделями совместимыми с OpenAI API, интеллектуальное удаление дубликатов, интеграцию с файловой системой VS Code и другие продвинутые функции."
     }
   ],
-  "image-icon-tab.icons-found": [
+  "information-dialog.fastmind-title": [
     {
       "type": 0,
-      "value": "иконки найдены"
+      "value": "Расширение FastMind для VS Code"
+    }
+  ],
+  "information-dialog.feature-ai": [
+    {
+      "type": 0,
+      "value": "Генерация тем с помощью ИИ"
+    }
+  ],
+  "information-dialog.feature-api-integration": [
+    {
+      "type": 0,
+      "value": "Интеграция с моделями, совместимыми с OpenAI API"
+    }
+  ],
+  "information-dialog.feature-deduplication": [
+    {
+      "type": 0,
+      "value": "Интеллектуальное удаление дубликатов контента, созданного ИИ"
+    }
+  ],
+  "information-dialog.feature-vscode-integration": [
+    {
+      "type": 0,
+      "value": "Интеграция с родной файловой системой VS Code"
+    }
+  ],
+  "information-dialog.features-title": [
+    {
+      "type": 0,
+      "value": "Ключевые возможности:"
+    }
+  ],
+  "information-dialog.powered-by": [
+    {
+      "type": 0,
+      "value": "Работает на"
+    }
+  ],
+  "information-dialog.title": [
+    {
+      "type": 0,
+      "value": "Информация"
+    }
+  ],
+  "layout-selector.accept": [
+    {
+      "type": 0,
+      "value": "Применить"
+    }
+  ],
+  "layout-selector.cancel": [
+    {
+      "type": 0,
+      "value": "Отмена"
+    }
+  ],
+  "layout-selector.description": [
+    {
+      "type": 0,
+      "value": "Макет определяет, как темы организованы и связаны в интеллект-карте. Выберите макет, наиболее подходящий для структуры вашего контента."
+    }
+  ],
+  "layout-selector.title": [
+    {
+      "type": 0,
+      "value": "Выбрать макет"
+    }
+  ],
+  "layout.mindmap.description": [
+    {
+      "type": 0,
+      "value": "Горизонтальный макет с сбалансированными ветвями по обе стороны. Лучше всего для традиционного майндмэппинга и мозгового штурма."
+    }
+  ],
+  "layout.mindmap.name": [
+    {
+      "type": 0,
+      "value": "Интеллект-карта"
+    }
+  ],
+  "layout.tree.description": [
+    {
+      "type": 0,
+      "value": "Вертикальная иерархия сверху вниз. Отлично подходит для организационных схем и иерархических структур."
+    }
+  ],
+  "layout.tree.name": [
+    {
+      "type": 0,
+      "value": "Дерево"
     }
   ],
   "link.help_text": [
@@ -839,38 +873,236 @@
       "value": "https://www.example.com"
     }
   ],
-  "mindmap-comp": [
+  "llm-connection-test.api-key": [
     {
       "type": 0,
-      "value": "Компонент карты разума"
+      "value": "Ключ API"
     }
   ],
-  "note.character.count": [
+  "llm-connection-test.api-key-placeholder": [
+    {
+      "type": 0,
+      "value": "Ваш ключ API"
+    }
+  ],
+  "llm-connection-test.api-url": [
+    {
+      "type": 0,
+      "value": "URL API"
+    }
+  ],
+  "llm-connection-test.api-url-placeholder": [
+    {
+      "type": 0,
+      "value": "https://api.openai.com/v1/chat/completions"
+    }
+  ],
+  "llm-connection-test.close": [
+    {
+      "type": 0,
+      "value": "Закрыть"
+    }
+  ],
+  "llm-connection-test.configuration": [
+    {
+      "type": 0,
+      "value": "Конфигурация"
+    }
+  ],
+  "llm-connection-test.console-logs": [
+    {
+      "type": 0,
+      "value": "Откройте консоль браузера для подробных логов"
+    }
+  ],
+  "llm-connection-test.description": [
+    {
+      "type": 0,
+      "value": "Тестирование подключения к любому API, совместимому с OpenAI"
+    }
+  ],
+  "llm-connection-test.error-connection-failed": [
+    {
+      "type": 0,
+      "value": "Соединение не удалось"
+    }
+  ],
+  "llm-connection-test.error-failed-config": [
+    {
+      "type": 0,
+      "value": "Ошибка конфигурации"
+    }
+  ],
+  "llm-connection-test.error-unknown": [
+    {
+      "type": 0,
+      "value": "Произошла неизвестная ошибка"
+    }
+  ],
+  "llm-connection-test.max-tokens": [
+    {
+      "type": 0,
+      "value": "Макс. токенов"
+    }
+  ],
+  "llm-connection-test.model": [
+    {
+      "type": 0,
+      "value": "Модель"
+    }
+  ],
+  "llm-connection-test.model-placeholder": [
+    {
+      "type": 0,
+      "value": "gpt-3.5-turbo"
+    }
+  ],
+  "llm-connection-test.prompt": [
+    {
+      "type": 0,
+      "value": "Промпт"
+    }
+  ],
+  "llm-connection-test.prompt-placeholder": [
+    {
+      "type": 0,
+      "value": "Введите тестовый промпт..."
+    }
+  ],
+  "llm-connection-test.response": [
+    {
+      "type": 0,
+      "value": "Ответ:"
+    }
+  ],
+  "llm-connection-test.save-configuration": [
+    {
+      "type": 0,
+      "value": "Сохранить конфигурацию"
+    }
+  ],
+  "llm-connection-test.temperature": [
+    {
+      "type": 0,
+      "value": "Температура"
+    }
+  ],
+  "llm-connection-test.test-connection": [
+    {
+      "type": 0,
+      "value": "Протестировать подключение к LLM"
+    }
+  ],
+  "llm-connection-test.testing": [
+    {
+      "type": 0,
+      "value": "Тестирование..."
+    }
+  ],
+  "llm-connection-test.title": [
+    {
+      "type": 0,
+      "value": "Тест подключения к LLM"
+    }
+  ],
+  "llm-notification.status.completed": [
+    {
+      "type": 0,
+      "value": "Завершено"
+    }
+  ],
+  "llm-notification.status.error": [
+    {
+      "type": 0,
+      "value": "Ошибка"
+    }
+  ],
+  "llm.task.ai-explainer.description": [
+    {
+      "type": 0,
+      "value": "Анализ темы «"
+    },
     {
       "type": 1,
-      "value": "remaining"
+      "value": "currentTopic"
     },
     {
       "type": 0,
-      "value": " осталось"
+      "value": "»..."
     }
   ],
-  "note.character.limit.warning": [
+  "llm.task.ai-explainer.title": [
     {
       "type": 0,
-      "value": "(Приближается к лимиту)"
+      "value": "AI-объяснитель"
     }
   ],
-  "ocean": [
+  "llm.task.generate-topics.description": [
     {
       "type": 0,
-      "value": "Океан"
+      "value": "Генерация релевантных тем на основе «"
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "» и контекстного пути..."
+    }
+  ],
+  "llm.task.generate-topics.title": [
+    {
+      "type": 0,
+      "value": "Генерация тем с ИИ"
+    }
+  ],
+  "model-api-management.active": [
+    {
+      "type": 0,
+      "value": "активна"
+    }
+  ],
+  "model-api-management.add-configuration": [
+    {
+      "type": 0,
+      "value": "Добавить конфигурацию"
+    }
+  ],
+  "model-api-management.empty-description": [
+    {
+      "type": 0,
+      "value": "Добавьте первую конфигурацию LLM API, чтобы начать"
+    }
+  ],
+  "model-api-management.no-configurations": [
+    {
+      "type": 0,
+      "value": "Нет конфигураций API"
+    }
+  ],
+  "model-api-management.switch": [
+    {
+      "type": 0,
+      "value": "Переключить"
+    }
+  ],
+  "model-api-management.title": [
+    {
+      "type": 0,
+      "value": "Управление API моделей"
+    }
+  ],
+  "model-api-management.update": [
+    {
+      "type": 0,
+      "value": "Обновить"
     }
   ],
   "outline.collapse": [
     {
       "type": 0,
-      "value": "Свернуть"
+      "value": "Свернуть всё"
     }
   ],
   "outline.empty": [
@@ -882,7 +1114,7 @@
   "outline.expand": [
     {
       "type": 0,
-      "value": "Развернуть"
+      "value": "Развернуть всё"
     }
   ],
   "outline.has-note": [
@@ -901,18 +1133,6 @@
     {
       "type": 0,
       "value": "Заметка"
-    }
-  ],
-  "popover": [
-    {
-      "type": 0,
-      "value": "Всплывающее окно"
-    }
-  ],
-  "prism": [
-    {
-      "type": 0,
-      "value": "Призма"
     }
   ],
   "relationship-style-editor.color": [
@@ -948,19 +1168,19 @@
   "relationship-style-editor.end-arrow": [
     {
       "type": 0,
-      "value": "Конечная стрелка"
+      "value": "Стрелка в конце"
     }
   ],
   "relationship-style-editor.end-arrow-tooltip": [
     {
       "type": 0,
-      "value": "Переключить конечную стрелку"
+      "value": "Вкл/выкл стрелку в конце"
     }
   ],
   "relationship-style-editor.line-arrows": [
     {
       "type": 0,
-      "value": "Стиль линии и стрелки"
+      "value": "Стиль линии и стрелок"
     }
   ],
   "relationship-style-editor.solid-line": [
@@ -978,67 +1198,77 @@
   "relationship-style-editor.start-arrow": [
     {
       "type": 0,
-      "value": "Начальная стрелка"
+      "value": "Стрелка в начале"
     }
   ],
   "relationship-style-editor.start-arrow-tooltip": [
     {
       "type": 0,
-      "value": "Переключить начальную стрелку"
+      "value": "Вкл/выкл стрелку в начале"
     }
   ],
-  "rich-text-editor.bold": [
+  "settings.ai-explainer-title": [
     {
       "type": 0,
-      "value": "Жирный"
+      "value": "AI-объяснитель с пользовательскими промптами"
     }
   ],
-  "rich-text-editor.bullet-list": [
+  "settings.ai-topic-generator-title": [
     {
       "type": 0,
-      "value": "Маркированный список"
+      "value": "Генератор тем с ИИ с пользовательскими промптами"
     }
   ],
-  "rich-text-editor.insert-icon": [
+  "settings.current-model": [
     {
       "type": 0,
-      "value": "Вставить иконку"
+      "value": "Текущая модель: "
+    },
+    {
+      "type": 1,
+      "value": "modelName"
     }
   ],
-  "rich-text-editor.insert-link": [
+  "settings.deduplication": [
     {
       "type": 0,
-      "value": "Вставить ссылку"
+      "value": "Удаление дубликатов"
     }
   ],
-  "rich-text-editor.italic": [
+  "settings.description": [
     {
       "type": 0,
-      "value": "Курсив"
+      "value": "Настройте параметры модели ИИ и пользовательские промпты для генерации тем и объяснения концепций."
     }
   ],
-  "rich-text-editor.numbered-list": [
+  "settings.explainer-placeholder": [
     {
       "type": 0,
-      "value": "Нумерованный список"
+      "value": "Введите пользовательский промпт для объяснения концепции..."
     }
   ],
-  "rich-text-editor.strikethrough": [
+  "settings.model-api-management": [
     {
       "type": 0,
-      "value": "Зачеркнутый"
+      "value": "Управление API моделей"
     }
   ],
-  "rich-text-editor.underline": [
+  "settings.no-model": [
     {
       "type": 0,
-      "value": "Подчеркнутый"
+      "value": "Модель не настроена"
     }
   ],
-  "robot": [
+  "settings.title": [
     {
       "type": 0,
-      "value": "Робот"
+      "value": "Настройки"
+    }
+  ],
+  "settings.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "Введите пользовательский промпт для генерации тем..."
     }
   ],
   "shortcut-help-pane.action": [
@@ -1068,7 +1298,7 @@
   "shortcut-help-pane.add-sibling": [
     {
       "type": 0,
-      "value": "Добавить родственную тему"
+      "value": "Добавить соседнюю тему"
     }
   ],
   "shortcut-help-pane.cancel-text-changes": [
@@ -1080,25 +1310,19 @@
   "shortcut-help-pane.change-font-bold": [
     {
       "type": 0,
-      "value": "Изменить текст на жирный"
+      "value": "Сделать текст жирным"
     }
   ],
   "shortcut-help-pane.change-font-italic": [
     {
       "type": 0,
-      "value": "Изменить текст на курсив"
+      "value": "Сделать текст курсивом"
     }
   ],
   "shortcut-help-pane.collapse-children": [
     {
       "type": 0,
       "value": "Свернуть дочерние элементы"
-    }
-  ],
-  "shortcut-help-pane.copy-and-text": [
-    {
-      "type": 0,
-      "value": "Копировать и вставлять темы/Копировать изображение карты в буфер обмена."
     }
   ],
   "shortcut-help-pane.delete-topic": [
@@ -1110,13 +1334,13 @@
   "shortcut-help-pane.deselect-all-topics": [
     {
       "type": 0,
-      "value": "Отменить выбор всех тем"
+      "value": "Снять выделение со всех тем"
     }
   ],
   "shortcut-help-pane.drag-disconnect": [
     {
       "type": 0,
-      "value": "Отключить тему"
+      "value": "Отсоединить тему"
     }
   ],
   "shortcut-help-pane.edit-multiline": [
@@ -1137,6 +1361,18 @@
       "value": "F2 или двойной клик"
     }
   ],
+  "shortcut-help-pane.expand-by-level": [
+    {
+      "type": 0,
+      "value": "Развернуть темы по уровням"
+    }
+  ],
+  "shortcut-help-pane.expand-collapse-all": [
+    {
+      "type": 0,
+      "value": "Развернуть/свернуть все темы"
+    }
+  ],
   "shortcut-help-pane.navigation": [
     {
       "type": 0,
@@ -1146,7 +1382,13 @@
   "shortcut-help-pane.navigation-keys": [
     {
       "type": 0,
-      "value": "Клавиши со стрелками"
+      "value": "Стрелки"
+    }
+  ],
+  "shortcut-help-pane.outline-view": [
+    {
+      "type": 0,
+      "value": "Открыть вид структуры"
     }
   ],
   "shortcut-help-pane.overwrite-edit-topic": [
@@ -1158,13 +1400,13 @@
   "shortcut-help-pane.overwrite-edit-topic-key": [
     {
       "type": 0,
-      "value": "Печатать на выбранной теме"
+      "value": "Начать печатать на выбранной теме"
     }
   ],
   "shortcut-help-pane.redo": [
     {
       "type": 0,
-      "value": "Повторить редактирование"
+      "value": "Повторить действие"
     }
   ],
   "shortcut-help-pane.save-changes": [
@@ -1176,31 +1418,43 @@
   "shortcut-help-pane.select-all-topics": [
     {
       "type": 0,
-      "value": "Выбрать все темы"
+      "value": "Выделить все темы"
     }
   ],
   "shortcut-help-pane.select-topics": [
     {
       "type": 0,
-      "value": "Выбрать несколько тем"
+      "value": "Выделить несколько тем"
     }
   ],
   "shortcut-help-pane.select-topics-keys": [
     {
       "type": 0,
-      "value": "Клик мыши"
+      "value": "Клик мышью"
     }
   ],
   "shortcut-help-pane.undo": [
     {
       "type": 0,
-      "value": "Отменить редактирование"
+      "value": "Отменить действие"
     }
   ],
-  "sunrise": [
+  "shortcut-help-pane.zoom-in": [
     {
       "type": 0,
-      "value": "Рассвет"
+      "value": "Увеличить"
+    }
+  ],
+  "shortcut-help-pane.zoom-out": [
+    {
+      "type": 0,
+      "value": "Уменьшить"
+    }
+  ],
+  "shortcut-help-pane.zoom-to-fit": [
+    {
+      "type": 0,
+      "value": "Подогнать по размеру"
     }
   ],
   "theme-editor.accept": [
@@ -1218,7 +1472,7 @@
   "theme-editor.description": [
     {
       "type": 0,
-      "value": "Тема определяет визуальный стиль вашей карты разума, включая цвета, шрифты и общий внешний вид. Выберите тему, которая лучше всего подходит вашему контенту и аудитории."
+      "value": "Тема определяет визуальный стиль интеллект-карты, включая цвета, шрифты и общий вид. Выберите тему, которая лучше всего подходит вашему контенту и аудитории."
     }
   ],
   "theme-editor.title": [
@@ -1230,19 +1484,19 @@
   "theme.classic.description": [
     {
       "type": 0,
-      "value": "Clean and professional design with blue accents. Perfect for business presentations and formal documents."
+      "value": "Чистый и профессиональный дизайн с синими акцентами. Идеально для бизнес-презентаций и официальных документов."
     }
   ],
   "theme.classic.name": [
     {
       "type": 0,
-      "value": "Классический"
+      "value": "Классическая"
     }
   ],
   "theme.dark": [
     {
       "type": 0,
-      "value": "Темная"
+      "value": "Тёмная"
     }
   ],
   "theme.light": [
@@ -1254,7 +1508,7 @@
   "theme.ocean.description": [
     {
       "type": 0,
-      "value": "Ocean-inspired blue theme with light/dark variants. Calm and professional colors perfect for business and creative projects."
+      "value": "Тема в океанских тонах с светлым и тёмным вариантами. Спокойные и профессиональные цвета, подходящие для бизнеса и творческих проектов."
     }
   ],
   "theme.ocean.name": [
@@ -1266,7 +1520,7 @@
   "theme.robot.description": [
     {
       "type": 0,
-      "value": "Tech-inspired green theme. Perfect for technical documentation and futuristic presentations."
+      "value": "Техно-тема в зелёных тонах. Идеально для технической документации и футуристических презентаций."
     }
   ],
   "theme.robot.name": [
@@ -1278,7 +1532,7 @@
   "theme.summer.description": [
     {
       "type": 0,
-      "value": "Bright and vibrant orange theme. Great for creative projects and energetic presentations."
+      "value": "Яркая и энергичная оранжевая тема. Отлично для творческих проектов и динамичных презентаций."
     }
   ],
   "theme.summer.name": [
@@ -1290,43 +1544,31 @@
   "theme.sunrise.description": [
     {
       "type": 0,
-      "value": "Sunrise theme with light/dark mode variants. Enhanced colors and contrast for better readability."
+      "value": "Тема «Восход» с светлым и тёмным режимами. Улучшенные цвета и контрастность для лучшей читаемости."
     }
   ],
   "theme.sunrise.name": [
     {
       "type": 0,
-      "value": "Рассвет"
+      "value": "Восход"
     }
   ],
   "theme.switch-to-dark": [
     {
       "type": 0,
-      "value": "Переключить на темный режим"
+      "value": "Переключиться на тёмный режим"
     }
   ],
   "theme.switch-to-light": [
     {
       "type": 0,
-      "value": "Переключить на светлый режим"
-    }
-  ],
-  "theme.toggle": [
-    {
-      "type": 0,
-      "value": "Переключить Тему"
-    }
-  ],
-  "title-input": [
-    {
-      "type": 0,
-      "value": "Ввод заголовка"
+      "value": "Переключиться на светлый режим"
     }
   ],
   "topic-font-editor.active": [
     {
       "type": 0,
-      "value": "активный"
+      "value": "активно"
     }
   ],
   "topic-font-editor.bold": [
@@ -1338,7 +1580,7 @@
   "topic-font-editor.bold-tooltip": [
     {
       "type": 0,
-      "value": "Переключить жирный"
+      "value": "Вкл/выкл жирный шрифт"
     }
   ],
   "topic-font-editor.decrease-size": [
@@ -1392,67 +1634,157 @@
   "topic-font-editor.italic-tooltip": [
     {
       "type": 0,
-      "value": "Переключить курсив"
+      "value": "Вкл/выкл курсив"
     }
   ],
   "topic-font-editor.reset-to-default": [
     {
       "type": 0,
-      "value": "Reset to Default"
+      "value": "Сбросить на стандартные"
+    }
+  ],
+  "topic-note-editor.add-note": [
+    {
+      "type": 0,
+      "value": "Добавить заметку"
+    }
+  ],
+  "topic-note-editor.edit-note": [
+    {
+      "type": 0,
+      "value": "Редактировать заметку"
     }
   ],
   "unified-styling.background-color": [
     {
       "type": 0,
-      "value": "Background Color"
+      "value": "Цвет фона"
+    }
+  ],
+  "unified-styling.border-color": [
+    {
+      "type": 0,
+      "value": "Цвет границы"
+    }
+  ],
+  "unified-styling.border-style": [
+    {
+      "type": 0,
+      "value": "Стиль границы"
+    }
+  ],
+  "unified-styling.connection-style": [
+    {
+      "type": 0,
+      "value": "Стиль связи"
+    }
+  ],
+  "unified-styling.connector-style": [
+    {
+      "type": 0,
+      "value": "Стиль соединителя"
     }
   ],
   "unified-styling.shape-type": [
     {
       "type": 0,
-      "value": "Shape Type"
+      "value": "Тип формы"
     }
   ],
-  "zoom-panel.tooltip-collapse-all": [
+  "unified-styling.tab.border": [
+    {
+      "type": 0,
+      "value": "Граница"
+    }
+  ],
+  "unified-styling.tab.connector": [
+    {
+      "type": 0,
+      "value": "Соединитель"
+    }
+  ],
+  "unified-styling.tab.shape": [
+    {
+      "type": 0,
+      "value": "Форма"
+    }
+  ],
+  "visualization-toolbar.tooltip-collapse-all": [
     {
       "type": 0,
       "value": "Свернуть все узлы"
     }
   ],
-  "zoom-panel.tooltip-expand-all": [
+  "visualization-toolbar.tooltip-expand-all": [
     {
       "type": 0,
       "value": "Развернуть все узлы"
     }
   ],
-  "zoom-panel.tooltip-keyboard": [
+  "visualization-toolbar.tooltip-expand-level": [
     {
       "type": 0,
-      "value": "Клавиатура"
+      "value": "Развернуть по уровню"
     }
   ],
-  "zoom-panel.tooltip-outline-view": [
+  "visualization-toolbar.tooltip-export": [
+    {
+      "type": 0,
+      "value": "Экспорт"
+    }
+  ],
+  "visualization-toolbar.tooltip-info": [
+    {
+      "type": 0,
+      "value": "Информация"
+    }
+  ],
+  "visualization-toolbar.tooltip-keyboard": [
+    {
+      "type": 0,
+      "value": "Горячие клавиши"
+    }
+  ],
+  "visualization-toolbar.tooltip-layout": [
+    {
+      "type": 0,
+      "value": "Сменить макет"
+    }
+  ],
+  "visualization-toolbar.tooltip-outline-view": [
     {
       "type": 0,
       "value": "Вид структуры"
     }
   ],
-  "zoom-panel.tooltip-zoom-in": [
+  "visualization-toolbar.tooltip-save": [
     {
       "type": 0,
-      "value": "Увеличить"
+      "value": "Сохранить"
     }
   ],
-  "zoom-panel.tooltip-zoom-out": [
+  "visualization-toolbar.tooltip-theme-toggle": [
     {
       "type": 0,
-      "value": "Уменьшить"
+      "value": "Переключить тему"
     }
   ],
-  "zoom-panel.tooltip-zoom-to-fit": [
+  "visualization-toolbar.tooltip-zoom-in": [
     {
       "type": 0,
-      "value": "Подогнать по размеру"
+      "value": "Приблизить"
+    }
+  ],
+  "visualization-toolbar.tooltip-zoom-out": [
+    {
+      "type": 0,
+      "value": "Отдалить"
+    }
+  ],
+  "visualization-toolbar.tooltip-zoom-to-fit": [
+    {
+      "type": 0,
+      "value": "Подогнать масштаб"
     }
   ]
 }

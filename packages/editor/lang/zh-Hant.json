@@ -1,0 +1,875 @@
+{
+  "action.accept": {
+    "defaultMessage": "接受"
+  },
+  "action.cancel": {
+    "defaultMessage": "取消"
+  },
+  "action.delete": {
+    "defaultMessage": "刪除"
+  },
+  "ai-explainer.error-analyze": {
+    "defaultMessage": "AI 解釋器分析失敗："
+  },
+  "ai-explainer.title": {
+    "defaultMessage": "AI 解釋器"
+  },
+  "ai-explainer.description": {
+    "defaultMessage": "正在分析主題「{currentTopic}」..."
+  },
+  "ai-topic-generator.add-to-mindmap": {
+    "defaultMessage": "加入心智圖"
+  },
+  "ai-topic-generator.cancel": {
+    "defaultMessage": "取消"
+  },
+  "ai-topic-generator.count-label": {
+    "defaultMessage": "要生成的主题數量：{count}"
+  },
+  "ai-topic-generator.custom-prompt-helper": {
+    "defaultMessage": "提供額外的上下文或對 AI 生成的要求"
+  },
+  "ai-topic-generator.custom-prompt-label": {
+    "defaultMessage": "自訂 Prompt（選填）"
+  },
+  "ai-topic-generator.custom-prompt-placeholder": {
+    "defaultMessage": "例如：著重技術實作層面"
+  },
+  "ai-topic-generator.description": {
+    "defaultMessage": "根據 <strong>{topicText}</strong> 產生相關子主題"
+  },
+  "ai-topic-generator.error-add": {
+    "defaultMessage": "加入主題時發生錯誤"
+  },
+  "ai-topic-generator.error-generate": {
+    "defaultMessage": "生成主題時發生錯誤"
+  },
+  "ai-topic-generator.generating": {
+    "defaultMessage": "正在生成主題，請稍候..."
+  },
+  "ai-topic-generator.preview-title": {
+    "defaultMessage": "生成的主題預覽："
+  },
+  "ai-topic-generator.regenerate": {
+    "defaultMessage": "重新生成"
+  },
+  "ai-topic-generator.title": {
+    "defaultMessage": "AI 主題生成器"
+  },
+  "appbar.back-to-map-list": {
+    "defaultMessage": "返回地圖列表"
+  },
+  "appbar.button-signup": {
+    "defaultMessage": "註冊"
+  },
+  "appbar.error-saving-title": {
+    "defaultMessage": "儲存標題時發生錯誤："
+  },
+  "appbar.logo-aria-label": {
+    "defaultMessage": "WiseMapping"
+  },
+  "appbar.shared-button": {
+    "defaultMessage": "分享"
+  },
+  "appbar.title-renamed": {
+    "defaultMessage": "心智圖已重新命名"
+  },
+  "appbar.tooltip-change-layout": {
+    "defaultMessage": "版面配置"
+  },
+  "appbar.tooltip-export": {
+    "defaultMessage": "匯出"
+  },
+  "appbar.tooltip-history": {
+    "defaultMessage": "變更歷史"
+  },
+  "appbar.tooltip-info": {
+    "defaultMessage": "資訊"
+  },
+  "appbar.tooltip-print": {
+    "defaultMessage": "列印"
+  },
+  "appbar.tooltip-publish": {
+    "defaultMessage": "發佈"
+  },
+  "appbar.tooltip-redo": {
+    "defaultMessage": "重做"
+  },
+  "appbar.tooltip-rename": {
+    "defaultMessage": "重新命名"
+  },
+  "appbar.tooltip-save": {
+    "defaultMessage": "儲存"
+  },
+  "appbar.tooltip-settings": {
+    "defaultMessage": "設定"
+  },
+  "appbar.tooltip-shared": {
+    "defaultMessage": "協作分享"
+  },
+  "appbar.tooltip-signup": {
+    "defaultMessage": "註冊"
+  },
+  "appbar.tooltip-starred": {
+    "defaultMessage": "已加星號"
+  },
+  "appbar.tooltip-theme": {
+    "defaultMessage": "主題"
+  },
+  "appbar.tooltip-theme-toggle": {
+    "defaultMessage": "切換主題"
+  },
+  "appbar.tooltip-undo": {
+    "defaultMessage": "復原"
+  },
+  "canvas-style.background-color": {
+    "defaultMessage": "背景顏色"
+  },
+  "canvas-style.background-style": {
+    "defaultMessage": "背景樣式"
+  },
+  "canvas-style.grid-color": {
+    "defaultMessage": "格線顏色"
+  },
+  "canvas-style.grid-size-l": {
+    "defaultMessage": "大"
+  },
+  "canvas-style.grid-size-m": {
+    "defaultMessage": "中"
+  },
+  "canvas-style.grid-size-s": {
+    "defaultMessage": "小"
+  },
+  "canvas-style.grid-size-xl": {
+    "defaultMessage": "超大"
+  },
+  "canvas-style.grid-size-xs": {
+    "defaultMessage": "超小"
+  },
+  "canvas-style.grid-style": {
+    "defaultMessage": "格線大小"
+  },
+  "canvas-style.pattern-default-tooltip": {
+    "defaultMessage": "預設 - 所有樣式將根據主題自動選擇"
+  },
+  "canvas-style.pattern-dots": {
+    "defaultMessage": "點狀"
+  },
+  "canvas-style.pattern-grid": {
+    "defaultMessage": "格線"
+  },
+  "canvas-style.pattern-solid": {
+    "defaultMessage": "純色"
+  },
+  "canvas-style.tab-color": {
+    "defaultMessage": "顏色"
+  },
+  "canvas-style.tab-grid": {
+    "defaultMessage": "格線顏色"
+  },
+  "color-picker.color": {
+    "defaultMessage": "顏色"
+  },
+  "color-picker.default-color": {
+    "defaultMessage": "預設顏色"
+  },
+  "common.close": {
+    "defaultMessage": "關閉"
+  },
+  "creator-info-pane.creator": {
+    "defaultMessage": "建立者"
+  },
+  "creator-info-pane.description": {
+    "defaultMessage": "描述"
+  },
+  "editor-panel.font-family-default": {
+    "defaultMessage": "預設"
+  },
+  "editor-panel.font-family-mixed": {
+    "defaultMessage": "混合"
+  },
+  "editor-panel.note-panel-title": {
+    "defaultMessage": "備註"
+  },
+  "editor-panel.tooltip-add-icon": {
+    "defaultMessage": "加入圖示"
+  },
+  "editor-panel.tooltip-add-link": {
+    "defaultMessage": "加入連結"
+  },
+  "editor-panel.tooltip-add-note": {
+    "defaultMessage": "加入備註"
+  },
+  "editor-panel.tooltip-add-relationship": {
+    "defaultMessage": "加入關聯"
+  },
+  "editor-panel.tooltip-add-topic": {
+    "defaultMessage": "加入主題"
+  },
+  "editor-panel.tooltip-add-topic-image": {
+    "defaultMessage": "加入主題圖片"
+  },
+  "editor-panel.tooltip-ai-explainer": {
+    "defaultMessage": "AI 解釋器"
+  },
+  "editor-panel.tooltip-ai-topic-generator": {
+    "defaultMessage": "AI 主題生成器"
+  },
+  "editor-panel.tooltip-canvas-style": {
+    "defaultMessage": "背景"
+  },
+  "editor-panel.tooltip-delete-topic": {
+    "defaultMessage": "刪除主題"
+  },
+  "editor-panel.tooltip-relationship-style": {
+    "defaultMessage": "關聯樣式"
+  },
+  "editor-panel.tooltip-topic-font-style": {
+    "defaultMessage": "文字樣式"
+  },
+  "editor-panel.tooltip-unified-styling": {
+    "defaultMessage": "統一主題與連線樣式"
+  },
+  "editor.edit-description-mobile": {
+    "defaultMessage": "行動裝置僅支援有限的心智圖編輯功能。請使用桌面瀏覽器以獲得完整編輯功能。"
+  },
+  "editor.try-welcome": {
+    "defaultMessage": "此編輯空間展示心智圖編輯器的部分功能！"
+  },
+  "editor.try-welcome-description": {
+    "defaultMessage": "註冊即可免費建立、分享與發佈無限數量的心智圖。"
+  },
+  "editor.try-welcome-description-mobile": {
+    "defaultMessage": "註冊即可免費建立、分享與發佈無限數量的心智圖。行動裝置僅支援有限編輯功能，請使用桌面瀏覽器以獲得完整功能。"
+  },
+  "editor.try-welcome-mobile": {
+    "defaultMessage": "此編輯空間展示心智圖編輯器的部分功能！"
+  },
+  "emoji-picker.search-placeholder": {
+    "defaultMessage": "搜尋表情符號..."
+  },
+  "export.dialog.cancel": {
+    "defaultMessage": "取消"
+  },
+  "export.dialog.clipboard-success": {
+    "defaultMessage": "內容已複製到剪貼簿！"
+  },
+  "export.dialog.error-generic": {
+    "defaultMessage": "匯出失敗，請稍後再試。"
+  },
+  "export.dialog.export": {
+    "defaultMessage": "匯出"
+  },
+  "export.dialog.exporting": {
+    "defaultMessage": "匯出中..."
+  },
+  "export.dialog.title": {
+    "defaultMessage": "匯出心智圖"
+  },
+  "export.format.md.description": {
+    "defaultMessage": "Markdown 格式 - 適合文件撰寫與版本控制，支援 GitHub 等平台"
+  },
+  "export.format.recommended": {
+    "defaultMessage": "推薦"
+  },
+  "export.format.svg.description": {
+    "defaultMessage": "可縮放向量圖形 - 向量圖形，無限縮放，檔案小"
+  },
+  "export.format.wxml.description": {
+    "defaultMessage": "WiseMapping XML - 原生格式，保留所有編輯功能，可重新匯入編輯"
+  },
+  "icon-collection.border.dashed": {
+    "defaultMessage": "虛線"
+  },
+  "icon-collection.border.default": {
+    "defaultMessage": "預設"
+  },
+  "icon-collection.border.dotted": {
+    "defaultMessage": "點線"
+  },
+  "icon-collection.border.solid": {
+    "defaultMessage": "實線"
+  },
+  "icon-collection.connection.arc": {
+    "defaultMessage": "弧形"
+  },
+  "icon-collection.connection.arc-tooltip": {
+    "defaultMessage": "圓弧連接 - 適合放射狀佈局與有機流動"
+  },
+  "icon-collection.connection.curved-polyline": {
+    "defaultMessage": "曲線多段線"
+  },
+  "icon-collection.connection.curved-polyline-tooltip": {
+    "defaultMessage": "多段線帶圓角 - 適合結構化佈局與清晰路徑"
+  },
+  "icon-collection.connection.default": {
+    "defaultMessage": "預設"
+  },
+  "icon-collection.connection.default-tooltip": {
+    "defaultMessage": "預設 - 連接樣式將根據主題自動選擇"
+  },
+  "icon-collection.connection.organic-curved": {
+    "defaultMessage": "有機曲線"
+  },
+  "icon-collection.connection.organic-curved-tooltip": {
+    "defaultMessage": "手繪風格的強烈曲線 - 適合創意與表現型心智圖"
+  },
+  "icon-collection.connection.simple-polyline": {
+    "defaultMessage": "簡單多段線"
+  },
+  "icon-collection.connection.simple-polyline-tooltip": {
+    "defaultMessage": "直接直線連接 - 簡潔極簡風格，適合簡單關係"
+  },
+  "icon-collection.connection.thick-curved": {
+    "defaultMessage": "粗曲線"
+  },
+  "icon-collection.connection.thick-curved-tooltip": {
+    "defaultMessage": "粗線條貝茲曲線 - 適合強調主要分支"
+  },
+  "icon-collection.connection.thin-curved": {
+    "defaultMessage": "細曲線"
+  },
+  "icon-collection.connection.thin-curved-tooltip": {
+    "defaultMessage": "細線條優雅貝茲曲線 - 適合細節豐富或密集的心智圖"
+  },
+  "icon-collection.default-tooltip": {
+    "defaultMessage": "預設 - 所有樣式將根據主題自動選擇"
+  },
+  "icon-collection.shape.default": {
+    "defaultMessage": "預設"
+  },
+  "icon-collection.shape.ellipse": {
+    "defaultMessage": "橢圓"
+  },
+  "icon-collection.shape.line": {
+    "defaultMessage": "線條"
+  },
+  "icon-collection.shape.none": {
+    "defaultMessage": "無"
+  },
+  "icon-collection.shape.none-tooltip": {
+    "defaultMessage": "無 - 無可見形狀背景"
+  },
+  "icon-collection.shape.rectangle": {
+    "defaultMessage": "矩形"
+  },
+  "icon-collection.shape.rounded": {
+    "defaultMessage": "圓角矩形"
+  },
+  "icon-picker.emojis": {
+    "defaultMessage": "表情符號"
+  },
+  "icon-picker.icons": {
+    "defaultMessage": "圖示庫"
+  },
+  "icon-picker.show-images": {
+    "defaultMessage": "顯示圖片"
+  },
+  "information-dialog.close": {
+    "defaultMessage": "關閉"
+  },
+  "information-dialog.fastmind-description": {
+    "defaultMessage": "FastMind 是基於 WiseMapping 的 VS Code 擴充套件，為開發者提供強大的心智圖功能。它整合 AI 驅動的主題生成、OpenAI API 相容模型、AI 生成內容智慧去重、VS Code 原生檔案系統整合等進階功能，幫助開發者更好地組織與視覺化想法。"
+  },
+  "information-dialog.fastmind-title": {
+    "defaultMessage": "FastMind VS Code 擴充套件"
+  },
+  "information-dialog.feature-ai": {
+    "defaultMessage": "AI 驅動主題生成"
+  },
+  "information-dialog.feature-api-integration": {
+    "defaultMessage": "OpenAI API 相容模型整合"
+  },
+  "information-dialog.feature-deduplication": {
+    "defaultMessage": "AI 生成內容智慧去重"
+  },
+  "information-dialog.feature-vscode-integration": {
+    "defaultMessage": "VS Code 原生檔案系統整合"
+  },
+  "information-dialog.features-title": {
+    "defaultMessage": "主要功能："
+  },
+  "information-dialog.powered-by": {
+    "defaultMessage": "技術提供"
+  },
+  "information-dialog.title": {
+    "defaultMessage": "資訊"
+  },
+  "layout-selector.accept": {
+    "defaultMessage": "接受"
+  },
+  "layout-selector.cancel": {
+    "defaultMessage": "取消"
+  },
+  "layout-selector.description": {
+    "defaultMessage": "佈局定義心智圖中主題的組織與連接方式。請選擇最適合您內容結構的佈局。"
+  },
+  "layout-selector.title": {
+    "defaultMessage": "選擇佈局"
+  },
+  "layout.mindmap.description": {
+    "defaultMessage": "左右平衡的水平佈局。最適合傳統心智圖與腦力激盪。"
+  },
+  "layout.mindmap.name": {
+    "defaultMessage": "心智圖"
+  },
+  "layout.tree.description": {
+    "defaultMessage": "由上而下的垂直階層。適合組織圖與階層結構。"
+  },
+  "layout.tree.name": {
+    "defaultMessage": "樹狀圖"
+  },
+  "link.help_text": {
+    "defaultMessage": "網址無效"
+  },
+  "link.placeholder": {
+    "defaultMessage": "https://www.example.com"
+  },
+  "llm-connection-test.api-key": {
+    "defaultMessage": "API 金鑰"
+  },
+  "llm-connection-test.api-key-placeholder": {
+    "defaultMessage": "您的 API 金鑰"
+  },
+  "llm-connection-test.api-url": {
+    "defaultMessage": "API 網址"
+  },
+  "llm-connection-test.api-url-placeholder": {
+    "defaultMessage": "https://api.openai.com/v1/chat/completions"
+  },
+  "llm-connection-test.configuration": {
+    "defaultMessage": "設定"
+  },
+  "llm-connection-test.description": {
+    "defaultMessage": "測試與任何 OpenAI 相容 API 的連線"
+  },
+  "llm-connection-test.error-connection-failed": {
+    "defaultMessage": "連線失敗"
+  },
+  "llm-connection-test.error-failed-config": {
+    "defaultMessage": "設定錯誤"
+  },
+  "llm-connection-test.error-unknown": {
+    "defaultMessage": "發生未知錯誤"
+  },
+  "llm-connection-test.max-tokens": {
+    "defaultMessage": "最大 Tokens"
+  },
+  "llm-connection-test.model": {
+    "defaultMessage": "模型"
+  },
+  "llm-connection-test.model-placeholder": {
+    "defaultMessage": "gpt-3.5-turbo"
+  },
+  "llm-connection-test.prompt": {
+    "defaultMessage": "Prompt"
+  },
+  "llm-connection-test.prompt-placeholder": {
+    "defaultMessage": "在此輸入您的測試 Prompt..."
+  },
+  "llm-connection-test.response": {
+    "defaultMessage": "回應："
+  },
+  "llm-connection-test.save-configuration": {
+    "defaultMessage": "儲存設定"
+  },
+  "llm-connection-test.temperature": {
+    "defaultMessage": "溫度"
+  },
+  "llm-connection-test.test-connection": {
+    "defaultMessage": "測試 LLM 連線"
+  },
+  "llm-connection-test.testing": {
+    "defaultMessage": "測試中..."
+  },
+  "llm-connection-test.title": {
+    "defaultMessage": "LLM 連線測試"
+  },
+  "llm-connection-test.console-logs": {
+    "defaultMessage": "請開啟瀏覽器主控台查看詳細日誌"
+  },
+  "llm-connection-test.close": {
+    "defaultMessage": "關閉"
+  },
+  "llm-notification.status.completed": {
+    "defaultMessage": "完成"
+  },
+  "llm-notification.status.error": {
+    "defaultMessage": "失敗"
+  },
+  "llm.task.ai-explainer.title": {
+    "defaultMessage": "AI 解釋器"
+  },
+  "llm.task.ai-explainer.description": {
+    "defaultMessage": "正在分析主題「{currentTopic}」..."
+  },
+  "llm.task.generate-topics.title": {
+    "defaultMessage": "AI 生成主題"
+  },
+  "llm.task.generate-topics.description": {
+    "defaultMessage": "根據「{currentTopic}」與上下文路徑生成相關主題..."
+  },
+  "outline.collapse": {
+    "defaultMessage": "全部收合"
+  },
+  "outline.empty": {
+    "defaultMessage": "無內容可顯示"
+  },
+  "outline.expand": {
+    "defaultMessage": "全部展開"
+  },
+  "outline.has-note": {
+    "defaultMessage": "有備註"
+  },
+  "outline.link": {
+    "defaultMessage": "連結"
+  },
+  "outline.note": {
+    "defaultMessage": "備註"
+  },
+  "relationship-style-editor.color": {
+    "defaultMessage": "關聯顏色"
+  },
+  "relationship-style-editor.dashed-line": {
+    "defaultMessage": "虛線"
+  },
+  "relationship-style-editor.dashed-line-tooltip": {
+    "defaultMessage": "虛線樣式"
+  },
+  "relationship-style-editor.dotted-line": {
+    "defaultMessage": "點線"
+  },
+  "relationship-style-editor.dotted-line-tooltip": {
+    "defaultMessage": "點線樣式"
+  },
+  "relationship-style-editor.end-arrow": {
+    "defaultMessage": "結束箭頭"
+  },
+  "relationship-style-editor.end-arrow-tooltip": {
+    "defaultMessage": "切換結束箭頭"
+  },
+  "relationship-style-editor.line-arrows": {
+    "defaultMessage": "線條樣式與箭頭"
+  },
+  "relationship-style-editor.solid-line": {
+    "defaultMessage": "實線"
+  },
+  "relationship-style-editor.solid-line-tooltip": {
+    "defaultMessage": "實線樣式"
+  },
+  "relationship-style-editor.start-arrow": {
+    "defaultMessage": "起始箭頭"
+  },
+  "relationship-style-editor.start-arrow-tooltip": {
+    "defaultMessage": "切換起始箭頭"
+  },
+  "settings.ai-explainer-title": {
+    "defaultMessage": "AI 解釋器（支援自訂 Prompt）"
+  },
+  "settings.ai-topic-generator-title": {
+    "defaultMessage": "AI 主題生成器（支援自訂 Prompt）"
+  },
+  "settings.current-model": {
+    "defaultMessage": "目前模型：{modelName}"
+  },
+  "settings.deduplication": {
+    "defaultMessage": "去重"
+  },
+  "settings.description": {
+    "defaultMessage": "設定 AI 模型參數，自訂主題生成與概念解釋的 Prompt。"
+  },
+  "settings.explainer-placeholder": {
+    "defaultMessage": "輸入自訂的概念解釋 Prompt..."
+  },
+  "settings.model-api-management": {
+    "defaultMessage": "模型 API 管理"
+  },
+  "settings.no-model": {
+    "defaultMessage": "尚未設定模型"
+  },
+  "settings.title": {
+    "defaultMessage": "設定"
+  },
+  "settings.topic-generator-placeholder": {
+    "defaultMessage": "輸入自訂的主題生成 Prompt..."
+  },
+  "shortcut-help-pane.action": {
+    "defaultMessage": "動作"
+  },
+  "shortcut-help-pane.add-child": {
+    "defaultMessage": "新增子主題"
+  },
+  "shortcut-help-pane.add-link": {
+    "defaultMessage": "新增連結"
+  },
+  "shortcut-help-pane.add-note": {
+    "defaultMessage": "新增備註"
+  },
+  "shortcut-help-pane.add-sibling": {
+    "defaultMessage": "新增同層主題"
+  },
+  "shortcut-help-pane.cancel-text-changes": {
+    "defaultMessage": "取消文字變更"
+  },
+  "shortcut-help-pane.change-font-bold": {
+    "defaultMessage": "文字變為粗體"
+  },
+  "shortcut-help-pane.change-font-italic": {
+    "defaultMessage": "文字變為斜體"
+  },
+  "shortcut-help-pane.collapse-children": {
+    "defaultMessage": "收合子節點"
+  },
+  "shortcut-help-pane.delete-topic": {
+    "defaultMessage": "刪除主題"
+  },
+  "shortcut-help-pane.deselect-all-topics": {
+    "defaultMessage": "取消選擇所有主題"
+  },
+  "shortcut-help-pane.drag-disconnect": {
+    "defaultMessage": "斷開主題連接"
+  },
+  "shortcut-help-pane.edit-multiline": {
+    "defaultMessage": "加入多行主題文字"
+  },
+  "shortcut-help-pane.edit-topic": {
+    "defaultMessage": "編輯主題文字"
+  },
+  "shortcut-help-pane.edit-topic-key": {
+    "defaultMessage": "F2 或雙擊"
+  },
+  "shortcut-help-pane.expand-by-level": {
+    "defaultMessage": "按層級展開主題"
+  },
+  "shortcut-help-pane.expand-collapse-all": {
+    "defaultMessage": "全部展開／收合"
+  },
+  "shortcut-help-pane.navigation": {
+    "defaultMessage": "導覽"
+  },
+  "shortcut-help-pane.navigation-keys": {
+    "defaultMessage": "方向鍵"
+  },
+  "shortcut-help-pane.outline-view": {
+    "defaultMessage": "開啟大綱檢視"
+  },
+  "shortcut-help-pane.overwrite-edit-topic": {
+    "defaultMessage": "覆寫主題文字"
+  },
+  "shortcut-help-pane.overwrite-edit-topic-key": {
+    "defaultMessage": "在選取的主題上直接輸入"
+  },
+  "shortcut-help-pane.redo": {
+    "defaultMessage": "重做編輯"
+  },
+  "shortcut-help-pane.save-changes": {
+    "defaultMessage": "儲存變更"
+  },
+  "shortcut-help-pane.select-all-topics": {
+    "defaultMessage": "選取所有主題"
+  },
+  "shortcut-help-pane.select-topics": {
+    "defaultMessage": "選取多個主題"
+  },
+  "shortcut-help-pane.select-topics-keys": {
+    "defaultMessage": "滑鼠點擊"
+  },
+  "shortcut-help-pane.undo": {
+    "defaultMessage": "復原編輯"
+  },
+  "shortcut-help-pane.zoom-in": {
+    "defaultMessage": "放大"
+  },
+  "shortcut-help-pane.zoom-out": {
+    "defaultMessage": "縮小"
+  },
+  "shortcut-help-pane.zoom-to-fit": {
+    "defaultMessage": "縮放至適應畫面"
+  },
+  "theme-editor.accept": {
+    "defaultMessage": "套用主題"
+  },
+  "theme-editor.cancel": {
+    "defaultMessage": "取消"
+  },
+  "theme-editor.description": {
+    "defaultMessage": "主題定義心智圖的視覺風格，包括顏色、字型與整體外觀。請選擇最適合您內容與受眾的主題。"
+  },
+  "theme-editor.title": {
+    "defaultMessage": "選擇主題"
+  },
+  "theme.classic.description": {
+    "defaultMessage": "乾淨專業的藍色調設計。適合商業簡報與正式文件。"
+  },
+  "theme.classic.name": {
+    "defaultMessage": "經典"
+  },
+  "theme.dark": {
+    "defaultMessage": "深色"
+  },
+  "theme.light": {
+    "defaultMessage": "淺色"
+  },
+  "theme.ocean.description": {
+    "defaultMessage": "海洋靈感藍色主題，支援明／暗模式。寧靜專業的色彩，適合商業與創意專案。"
+  },
+  "theme.ocean.name": {
+    "defaultMessage": "海洋"
+  },
+  "theme.robot.description": {
+    "defaultMessage": "科技感綠色主題。適合技術文件與未來感簡報。"
+  },
+  "theme.robot.name": {
+    "defaultMessage": "機器人"
+  },
+  "theme.summer.description": {
+    "defaultMessage": "明亮活潑的橙色主題。適合創意專案與充滿活力的簡報。"
+  },
+  "theme.summer.name": {
+    "defaultMessage": "夏日"
+  },
+  "theme.sunrise.description": {
+    "defaultMessage": "日出主題，支援明／暗模式。增強色彩與對比度，提升可讀性。"
+  },
+  "theme.sunrise.name": {
+    "defaultMessage": "日出"
+  },
+  "theme.switch-to-dark": {
+    "defaultMessage": "切換至深色模式"
+  },
+  "theme.switch-to-light": {
+    "defaultMessage": "切換至淺色模式"
+  },
+  "topic-font-editor.active": {
+    "defaultMessage": "啟用"
+  },
+  "topic-font-editor.bold": {
+    "defaultMessage": "粗體"
+  },
+  "topic-font-editor.bold-tooltip": {
+    "defaultMessage": "切換粗體"
+  },
+  "topic-font-editor.decrease-size": {
+    "defaultMessage": "減小"
+  },
+  "topic-font-editor.decrease-size-tooltip": {
+    "defaultMessage": "縮小字型"
+  },
+  "topic-font-editor.font-color": {
+    "defaultMessage": "文字顏色"
+  },
+  "topic-font-editor.font-family": {
+    "defaultMessage": "字型"
+  },
+  "topic-font-editor.font-size-style": {
+    "defaultMessage": "字型大小與樣式"
+  },
+  "topic-font-editor.increase-size": {
+    "defaultMessage": "增大"
+  },
+  "topic-font-editor.increase-size-tooltip": {
+    "defaultMessage": "放大字型"
+  },
+  "topic-font-editor.italic": {
+    "defaultMessage": "斜體"
+  },
+  "topic-font-editor.italic-tooltip": {
+    "defaultMessage": "切換斜體"
+  },
+  "topic-font-editor.reset-to-default": {
+    "defaultMessage": "恢復預設"
+  },
+  "topic-note-editor.add-note": {
+    "defaultMessage": "加入備註"
+  },
+  "topic-note-editor.edit-note": {
+    "defaultMessage": "編輯備註"
+  },
+  "unified-styling.background-color": {
+    "defaultMessage": "背景顏色"
+  },
+  "unified-styling.border-color": {
+    "defaultMessage": "邊框顏色"
+  },
+  "unified-styling.border-style": {
+    "defaultMessage": "邊框樣式"
+  },
+  "unified-styling.connection-style": {
+    "defaultMessage": "連接樣式"
+  },
+  "unified-styling.connector-style": {
+    "defaultMessage": "連接器樣式"
+  },
+  "unified-styling.shape-type": {
+    "defaultMessage": "形狀類型"
+  },
+  "unified-styling.tab.border": {
+    "defaultMessage": "邊框"
+  },
+  "unified-styling.tab.connector": {
+    "defaultMessage": "連接器"
+  },
+  "unified-styling.tab.shape": {
+    "defaultMessage": "形狀"
+  },
+  "visualization-toolbar.tooltip-collapse-all": {
+    "defaultMessage": "全部收合節點"
+  },
+  "visualization-toolbar.tooltip-expand-all": {
+    "defaultMessage": "全部展開節點"
+  },
+  "visualization-toolbar.tooltip-expand-level": {
+    "defaultMessage": "按層級展開"
+  },
+  "visualization-toolbar.tooltip-export": {
+    "defaultMessage": "匯出"
+  },
+  "visualization-toolbar.tooltip-info": {
+    "defaultMessage": "資訊"
+  },
+  "visualization-toolbar.tooltip-keyboard": {
+    "defaultMessage": "鍵盤快捷鍵"
+  },
+  "visualization-toolbar.tooltip-layout": {
+    "defaultMessage": "變更佈局"
+  },
+  "visualization-toolbar.tooltip-outline-view": {
+    "defaultMessage": "大綱檢視"
+  },
+  "visualization-toolbar.tooltip-save": {
+    "defaultMessage": "儲存"
+  },
+  "visualization-toolbar.tooltip-theme-toggle": {
+    "defaultMessage": "切換主題"
+  },
+  "visualization-toolbar.tooltip-zoom-in": {
+    "defaultMessage": "放大"
+  },
+  "visualization-toolbar.tooltip-zoom-out": {
+    "defaultMessage": "縮小"
+  },
+  "visualization-toolbar.tooltip-zoom-to-fit": {
+    "defaultMessage": "縮放至適應畫面"
+  },
+  "model-api-management.title": {
+    "defaultMessage": "模型 API 管理"
+  },
+  "model-api-management.no-configurations": {
+    "defaultMessage": "尚未設定 API"
+  },
+  "model-api-management.empty-description": {
+    "defaultMessage": "新增您的第一個 LLM API 設定以開始使用"
+  },
+  "model-api-management.active": {
+    "defaultMessage": "啟用"
+  },
+  "model-api-management.switch": {
+    "defaultMessage": "切換"
+  },
+  "model-api-management.update": {
+    "defaultMessage": "更新"
+  },
+  "model-api-management.add-configuration": {
+    "defaultMessage": "新增設定"
+  }
+}

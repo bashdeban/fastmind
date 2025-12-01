@@ -5,22 +5,140 @@
       "value": "Aceptar"
     }
   ],
+  "action.cancel": [
+    {
+      "type": 0,
+      "value": "Cancelar"
+    }
+  ],
   "action.delete": [
     {
       "type": 0,
-      "value": "Borrar"
+      "value": "Eliminar"
     }
   ],
-  "app-bar-title": [
+  "ai-explainer.description": [
     {
       "type": 0,
-      "value": "Editor de Mapas Mentales"
+      "value": "Analizando el tema «"
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "»..."
+    }
+  ],
+  "ai-explainer.error-analyze": [
+    {
+      "type": 0,
+      "value": "El análisis del explicador IA falló:"
+    }
+  ],
+  "ai-explainer.title": [
+    {
+      "type": 0,
+      "value": "Explicador IA"
+    }
+  ],
+  "ai-topic-generator.add-to-mindmap": [
+    {
+      "type": 0,
+      "value": "Añadir al mapa mental"
+    }
+  ],
+  "ai-topic-generator.cancel": [
+    {
+      "type": 0,
+      "value": "Cancelar"
+    }
+  ],
+  "ai-topic-generator.count-label": [
+    {
+      "type": 0,
+      "value": "Número de temas a generar: "
+    },
+    {
+      "type": 1,
+      "value": "count"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-helper": [
+    {
+      "type": 0,
+      "value": "Proporcione contexto adicional o requisitos para la generación por IA"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-label": [
+    {
+      "type": 0,
+      "value": "Prompt personalizado (opcional)"
+    }
+  ],
+  "ai-topic-generator.custom-prompt-placeholder": [
+    {
+      "type": 0,
+      "value": "p. ej.: Enfocarse en aspectos de implementación técnica"
+    }
+  ],
+  "ai-topic-generator.description": [
+    {
+      "type": 0,
+      "value": "Generar subtemas relacionados basados en "
+    },
+    {
+      "children": [
+        {
+          "type": 1,
+          "value": "topicText"
+        }
+      ],
+      "type": 8,
+      "value": "strong"
+    }
+  ],
+  "ai-topic-generator.error-add": [
+    {
+      "type": 0,
+      "value": "Error al añadir los temas"
+    }
+  ],
+  "ai-topic-generator.error-generate": [
+    {
+      "type": 0,
+      "value": "Error al generar los temas"
+    }
+  ],
+  "ai-topic-generator.generating": [
+    {
+      "type": 0,
+      "value": "Generando temas, por favor espere..."
+    }
+  ],
+  "ai-topic-generator.preview-title": [
+    {
+      "type": 0,
+      "value": "Vista previa de temas generados:"
+    }
+  ],
+  "ai-topic-generator.regenerate": [
+    {
+      "type": 0,
+      "value": "Regenerar"
+    }
+  ],
+  "ai-topic-generator.title": [
+    {
+      "type": 0,
+      "value": "Generador de Temas IA"
     }
   ],
   "appbar.back-to-map-list": [
     {
       "type": 0,
-      "value": "Volver a lista de mapas"
+      "value": "Volver a la lista de mapas"
     }
   ],
   "appbar.button-signup": [
@@ -32,13 +150,13 @@
   "appbar.error-saving-title": [
     {
       "type": 0,
-      "value": "Error al guardar"
+      "value": "Error al guardar el título:"
     }
   ],
   "appbar.logo-aria-label": [
     {
       "type": 0,
-      "value": "Logo de WiseMapping"
+      "value": "WiseMapping"
     }
   ],
   "appbar.shared-button": [
@@ -47,16 +165,16 @@
       "value": "Compartir"
     }
   ],
-  "appbar.theme-title": [
-    {
-      "type": 0,
-      "value": "Tema"
-    }
-  ],
   "appbar.title-renamed": [
     {
       "type": 0,
-      "value": "Mapa mental renombrado"
+      "value": "El mapa mental ha sido renombrado"
+    }
+  ],
+  "appbar.tooltip-change-layout": [
+    {
+      "type": 0,
+      "value": "Diseño"
     }
   ],
   "appbar.tooltip-export": [
@@ -68,13 +186,13 @@
   "appbar.tooltip-history": [
     {
       "type": 0,
-      "value": "Historia de Cambios"
+      "value": "Historial de cambios"
     }
   ],
   "appbar.tooltip-info": [
     {
       "type": 0,
-      "value": "Detalles"
+      "value": "Información"
     }
   ],
   "appbar.tooltip-print": [
@@ -104,13 +222,19 @@
   "appbar.tooltip-save": [
     {
       "type": 0,
-      "value": "Grabar"
+      "value": "Guardar"
+    }
+  ],
+  "appbar.tooltip-settings": [
+    {
+      "type": 0,
+      "value": "Ajustes"
     }
   ],
   "appbar.tooltip-shared": [
     {
       "type": 0,
-      "value": "Compartir para Colaborar"
+      "value": "Compartir para colaboración"
     }
   ],
   "appbar.tooltip-signup": [
@@ -122,7 +246,7 @@
   "appbar.tooltip-starred": [
     {
       "type": 0,
-      "value": "Destacado"
+      "value": "Favoritos"
     }
   ],
   "appbar.tooltip-theme": [
@@ -131,16 +255,16 @@
       "value": "Tema"
     }
   ],
+  "appbar.tooltip-theme-toggle": [
+    {
+      "type": 0,
+      "value": "Cambiar tema"
+    }
+  ],
   "appbar.tooltip-undo": [
     {
       "type": 0,
       "value": "Deshacer"
-    }
-  ],
-  "canvas-style.apply": [
-    {
-      "type": 0,
-      "value": "Aplicar"
     }
   ],
   "canvas-style.background-color": [
@@ -149,22 +273,10 @@
       "value": "Color de fondo"
     }
   ],
-  "canvas-style.background-pattern": [
-    {
-      "type": 0,
-      "value": "Patrón de fondo"
-    }
-  ],
   "canvas-style.background-style": [
     {
       "type": 0,
-      "value": "Background Style"
-    }
-  ],
-  "canvas-style.colors": [
-    {
-      "type": 0,
-      "value": "Colores"
+      "value": "Estilo de fondo"
     }
   ],
   "canvas-style.grid-color": [
@@ -194,25 +306,25 @@
   "canvas-style.grid-size-xl": [
     {
       "type": 0,
-      "value": "Extra Grande"
+      "value": "Extra grande"
     }
   ],
   "canvas-style.grid-size-xs": [
     {
       "type": 0,
-      "value": "Extra Pequeño"
+      "value": "Extra pequeño"
     }
   ],
   "canvas-style.grid-style": [
     {
       "type": 0,
-      "value": "Estilo de cuadrícula"
+      "value": "Tamaño de cuadrícula"
     }
   ],
   "canvas-style.pattern-default-tooltip": [
     {
       "type": 0,
-      "value": "Default - All styles will be automatically selected based on the theme"
+      "value": "Predeterminado – Todos los estilos se seleccionarán automáticamente según el tema"
     }
   ],
   "canvas-style.pattern-dots": [
@@ -224,31 +336,13 @@
   "canvas-style.pattern-grid": [
     {
       "type": 0,
-      "value": "Líneas de cuadrícula"
-    }
-  ],
-  "canvas-style.pattern-none": [
-    {
-      "type": 0,
-      "value": "Ninguno"
+      "value": "Cuadrícula"
     }
   ],
   "canvas-style.pattern-solid": [
     {
       "type": 0,
-      "value": "Color sólido"
-    }
-  ],
-  "canvas-style.preview": [
-    {
-      "type": 0,
-      "value": "Vista previa"
-    }
-  ],
-  "canvas-style.reset": [
-    {
-      "type": 0,
-      "value": "Restablecer"
+      "value": "Sólido"
     }
   ],
   "canvas-style.tab-color": [
@@ -260,19 +354,7 @@
   "canvas-style.tab-grid": [
     {
       "type": 0,
-      "value": "Grid Color"
-    }
-  ],
-  "canvas-style.title": [
-    {
-      "type": 0,
-      "value": "Fondo"
-    }
-  ],
-  "classic": [
-    {
-      "type": 0,
-      "value": "Clásico"
+      "value": "Cuadrícula"
     }
   ],
   "color-picker.color": [
@@ -305,46 +387,16 @@
       "value": "Descripción"
     }
   ],
-  "demo-simple-select": [
-    {
-      "type": 0,
-      "value": "Seleccionar"
-    }
-  ],
-  "divider": [
-    {
-      "type": 0,
-      "value": "Divisor"
-    }
-  ],
-  "editor-panel.canvas-style-title": [
-    {
-      "type": 0,
-      "value": "Fondo"
-    }
-  ],
   "editor-panel.font-family-default": [
     {
       "type": 0,
-      "value": "Por defecto"
+      "value": "Predeterminada"
     }
   ],
   "editor-panel.font-family-mixed": [
     {
       "type": 0,
-      "value": "Mixto"
-    }
-  ],
-  "editor-panel.icon-title": [
-    {
-      "type": 0,
-      "value": "Icono"
-    }
-  ],
-  "editor-panel.link-panel-title": [
-    {
-      "type": 0,
-      "value": "Enlace"
+      "value": "Mixta"
     }
   ],
   "editor-panel.note-panel-title": [
@@ -353,46 +405,52 @@
       "value": "Nota"
     }
   ],
-  "editor-panel.theme-title": [
-    {
-      "type": 0,
-      "value": "Tema"
-    }
-  ],
   "editor-panel.tooltip-add-icon": [
     {
       "type": 0,
-      "value": "Agregar Icono"
+      "value": "Añadir icono"
     }
   ],
   "editor-panel.tooltip-add-link": [
     {
       "type": 0,
-      "value": "Agregar Enlace"
+      "value": "Añadir enlace"
     }
   ],
   "editor-panel.tooltip-add-note": [
     {
       "type": 0,
-      "value": "Agregar Nota"
+      "value": "Añadir nota"
     }
   ],
   "editor-panel.tooltip-add-relationship": [
     {
       "type": 0,
-      "value": "Agregar Relacion"
+      "value": "Añadir relación"
     }
   ],
   "editor-panel.tooltip-add-topic": [
     {
       "type": 0,
-      "value": "Agregar tópico"
+      "value": "Añadir tema"
     }
   ],
   "editor-panel.tooltip-add-topic-image": [
     {
       "type": 0,
-      "value": "Agregar imagen de tema"
+      "value": "Añadir imagen al tema"
+    }
+  ],
+  "editor-panel.tooltip-ai-explainer": [
+    {
+      "type": 0,
+      "value": "Explicador IA"
+    }
+  ],
+  "editor-panel.tooltip-ai-topic-generator": [
+    {
+      "type": 0,
+      "value": "Generador de Temas IA"
     }
   ],
   "editor-panel.tooltip-canvas-style": [
@@ -401,100 +459,10 @@
       "value": "Fondo"
     }
   ],
-  "editor-panel.tooltip-connection-color": [
-    {
-      "type": 0,
-      "value": "Color"
-    }
-  ],
-  "editor-panel.tooltip-connection-color-default": [
-    {
-      "type": 0,
-      "value": "Color por defecto"
-    }
-  ],
-  "editor-panel.tooltip-connection-style": [
-    {
-      "type": 0,
-      "value": "Estilo de conexión"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-arc": [
-    {
-      "type": 0,
-      "value": "Arco"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-curved-thick": [
-    {
-      "type": 0,
-      "value": "Curva ancha"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-curved-thin": [
-    {
-      "type": 0,
-      "value": "Curva delgada"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-polyline": [
-    {
-      "type": 0,
-      "value": "Polilinea"
-    }
-  ],
-  "editor-panel.tooltip-connection-style-polyline-curved": [
-    {
-      "type": 0,
-      "value": "Polilinea Curva"
-    }
-  ],
   "editor-panel.tooltip-delete-topic": [
     {
       "type": 0,
-      "value": "Borrar tópico"
-    }
-  ],
-  "editor-panel.tooltip-relationship-arrow-end": [
-    {
-      "type": 0,
-      "value": "Flecha final"
-    }
-  ],
-  "editor-panel.tooltip-relationship-arrow-start": [
-    {
-      "type": 0,
-      "value": "Flecha inicial"
-    }
-  ],
-  "editor-panel.tooltip-relationship-color": [
-    {
-      "type": 0,
-      "value": "Color"
-    }
-  ],
-  "editor-panel.tooltip-relationship-color-default": [
-    {
-      "type": 0,
-      "value": "Color por defecto"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-dashed": [
-    {
-      "type": 0,
-      "value": "Línea discontinua"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-dotted": [
-    {
-      "type": 0,
-      "value": "Línea punteada"
-    }
-  ],
-  "editor-panel.tooltip-relationship-stroke-solid": [
-    {
-      "type": 0,
-      "value": "Línea sólida"
+      "value": "Eliminar tema"
     }
   ],
   "editor-panel.tooltip-relationship-style": [
@@ -503,154 +471,46 @@
       "value": "Estilo de relación"
     }
   ],
-  "editor-panel.tooltip-theme": [
-    {
-      "type": 0,
-      "value": "Tema"
-    }
-  ],
-  "editor-panel.tooltip-topic-border-color": [
-    {
-      "type": 0,
-      "value": "Color del border"
-    }
-  ],
-  "editor-panel.tooltip-topic-border-color-default": [
-    {
-      "type": 0,
-      "value": "Color de border por defecto"
-    }
-  ],
-  "editor-panel.tooltip-topic-fill-color": [
-    {
-      "type": 0,
-      "value": "Color de relleno"
-    }
-  ],
-  "editor-panel.tooltip-topic-fill-color-default": [
-    {
-      "type": 0,
-      "value": "Color de relleno por defecto"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-bigger": [
-    {
-      "type": 0,
-      "value": "Incrementar"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-bold": [
-    {
-      "type": 0,
-      "value": "Negrita"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-color": [
-    {
-      "type": 0,
-      "value": "Color"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-color-default": [
-    {
-      "type": 0,
-      "value": "Color por defecto"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-italic": [
-    {
-      "type": 0,
-      "value": "Italica"
-    }
-  ],
-  "editor-panel.tooltip-topic-font-smaller": [
-    {
-      "type": 0,
-      "value": "Petite"
-    }
-  ],
   "editor-panel.tooltip-topic-font-style": [
     {
       "type": 0,
       "value": "Estilo de fuente"
     }
   ],
-  "editor-panel.tooltip-topic-share-ellipse": [
-    {
-      "type": 0,
-      "value": "Forma de elipse"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-line": [
-    {
-      "type": 0,
-      "value": "Forma de linea"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-none": [
-    {
-      "type": 0,
-      "value": "Sin forma"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-rectangle": [
-    {
-      "type": 0,
-      "value": "Forma rectagular"
-    }
-  ],
-  "editor-panel.tooltip-topic-share-rounded": [
-    {
-      "type": 0,
-      "value": "Forma redondeada"
-    }
-  ],
-  "editor-panel.tooltip-topic-style": [
-    {
-      "type": 0,
-      "value": "Estilo de tópico"
-    }
-  ],
   "editor-panel.tooltip-unified-styling": [
     {
       "type": 0,
-      "value": "Estilo de tema y conexiones"
-    }
-  ],
-  "editor-panel.topic-image-title": [
-    {
-      "type": 0,
-      "value": "Imagen de tema"
+      "value": "Estilo unificado de tema y conexiones"
     }
   ],
   "editor.edit-description-mobile": [
     {
       "type": 0,
-      "value": "En dispositivos móbiles las funciones son limitadas. Use la versión de escritorio para tener las funciones completas."
+      "value": "En dispositivos móviles hay capacidades limitadas de edición de mapas mentales. Utilice un navegador de escritorio para todas las funciones del editor."
     }
   ],
   "editor.try-welcome": [
     {
       "type": 0,
-      "value": "¡Este espacio de edición muestra algunas de las capacidades del editor de mapas mentales!"
+      "value": "¡Este espacio de edición muestra algunas capacidades del editor de mapas mentales!"
     }
   ],
   "editor.try-welcome-description": [
     {
       "type": 0,
-      "value": "Registrate para comenzar a crear, compartir y publicar una cantidad ilimitada de mapas mentales de forma gratuita."
+      "value": "Regístrese para empezar a crear, compartir y publicar mapas mentales ilimitados de forma gratuita."
     }
   ],
   "editor.try-welcome-description-mobile": [
     {
       "type": 0,
-      "value": "Registrate para comenzar a crear, compartir y publicar una cantidad ilimitada de mapas mentales de forma gratuita. En dispositivos móbiles las funciones son limitadas. Use la versión de escritorio para tener las funciones completas."
+      "value": "Regístrese para empezar a crear, compartir y publicar mapas mentales ilimitados de forma gratuita. En dispositivos móviles hay capacidades limitadas de edición. Utilice un navegador de escritorio para todas las funciones."
     }
   ],
   "editor.try-welcome-mobile": [
     {
       "type": 0,
-      "value": "¡Este espacio de edición muestra algunas de las capacidades de mapas mentales!"
+      "value": "¡Este espacio de edición muestra algunas capacidades del editor de mapas mentales!"
     }
   ],
   "emoji-picker.search-placeholder": [
@@ -659,34 +519,88 @@
       "value": "Buscar emojis..."
     }
   ],
-  "headerNotifier": [
+  "export.dialog.cancel": [
     {
       "type": 0,
-      "value": "Notificador de encabezado"
+      "value": "Cancelar"
+    }
+  ],
+  "export.dialog.clipboard-success": [
+    {
+      "type": 0,
+      "value": "¡Contenido copiado al portapapeles!"
+    }
+  ],
+  "export.dialog.error-generic": [
+    {
+      "type": 0,
+      "value": "Exportación fallida, intente de nuevo más tarde."
+    }
+  ],
+  "export.dialog.export": [
+    {
+      "type": 0,
+      "value": "Exportar"
+    }
+  ],
+  "export.dialog.exporting": [
+    {
+      "type": 0,
+      "value": "Exportando..."
+    }
+  ],
+  "export.dialog.title": [
+    {
+      "type": 0,
+      "value": "Exportar mapa mental"
+    }
+  ],
+  "export.format.md.description": [
+    {
+      "type": 0,
+      "value": "Formato Markdown – Adecuado para redacción de documentos y control de versiones, compatible con GitHub y otras plataformas"
+    }
+  ],
+  "export.format.recommended": [
+    {
+      "type": 0,
+      "value": "Recomendado"
+    }
+  ],
+  "export.format.svg.description": [
+    {
+      "type": 0,
+      "value": "Gráficos vectoriales escalables – Gráficos vectoriales, escalables infinitamente, tamaño de archivo pequeño"
+    }
+  ],
+  "export.format.wxml.description": [
+    {
+      "type": 0,
+      "value": "XML de WiseMapping – Formato nativo, conserva todas las funciones de edición, se puede volver a importar para editar"
     }
   ],
   "icon-collection.border.dashed": [
     {
       "type": 0,
-      "value": "Discontinuo"
+      "value": "Discontinua"
     }
   ],
   "icon-collection.border.default": [
     {
       "type": 0,
-      "value": "Default"
+      "value": "Predeterminada"
     }
   ],
   "icon-collection.border.dotted": [
     {
       "type": 0,
-      "value": "Punteado"
+      "value": "Punteada"
     }
   ],
   "icon-collection.border.solid": [
     {
       "type": 0,
-      "value": "Sólido"
+      "value": "Sólida"
     }
   ],
   "icon-collection.connection.arc": [
@@ -695,28 +609,46 @@
       "value": "Arco"
     }
   ],
+  "icon-collection.connection.arc-tooltip": [
+    {
+      "type": 0,
+      "value": "Conexión de arco circular – Perfecta para diseños radiales y flujo orgánico"
+    }
+  ],
   "icon-collection.connection.curved-polyline": [
     {
       "type": 0,
-      "value": "Polilínea curva"
+      "value": "Polilínea curvada"
+    }
+  ],
+  "icon-collection.connection.curved-polyline-tooltip": [
+    {
+      "type": 0,
+      "value": "Línea de varios segmentos con esquinas suaves – Ideal para diseños estructurados y caminos claros"
     }
   ],
   "icon-collection.connection.default": [
     {
       "type": 0,
-      "value": "Default"
+      "value": "Predeterminada"
+    }
+  ],
+  "icon-collection.connection.default-tooltip": [
+    {
+      "type": 0,
+      "value": "Predeterminada – El estilo de conexión se seleccionará automáticamente según el tema"
     }
   ],
   "icon-collection.connection.organic-curved": [
     {
       "type": 0,
-      "value": "Curva Orgánica"
+      "value": "Curva orgánica"
     }
   ],
   "icon-collection.connection.organic-curved-tooltip": [
     {
       "type": 0,
-      "value": "Estilo dibujado a mano con curvas dramáticas - Perfecto para mapas mentales creativos y expresivos"
+      "value": "Estilo dibujado a mano con curvas dramáticas – Perfecto para mapas mentales creativos y expresivos"
     }
   ],
   "icon-collection.connection.simple-polyline": [
@@ -728,7 +660,7 @@
   "icon-collection.connection.simple-polyline-tooltip": [
     {
       "type": 0,
-      "value": "Conexión de línea recta directa - Estilo limpio y minimalista para relaciones simples"
+      "value": "Conexión recta directa – Estilo limpio y minimalista para relaciones simples"
     }
   ],
   "icon-collection.connection.thick-curved": [
@@ -737,22 +669,34 @@
       "value": "Curva gruesa"
     }
   ],
+  "icon-collection.connection.thick-curved-tooltip": [
+    {
+      "type": 0,
+      "value": "Línea curvada gruesa con curvas Bézier suaves – Ideal para resaltar ramas principales"
+    }
+  ],
   "icon-collection.connection.thin-curved": [
     {
       "type": 0,
-      "value": "Curva delgada"
+      "value": "Curva fina"
+    }
+  ],
+  "icon-collection.connection.thin-curved-tooltip": [
+    {
+      "type": 0,
+      "value": "Línea curvada fina con curvas Bézier elegantes – Ideal para mapas mentales detallados o densos"
     }
   ],
   "icon-collection.default-tooltip": [
     {
       "type": 0,
-      "value": "Default - All styles will be automatically selected based on the theme"
+      "value": "Predeterminada – Todos los estilos se seleccionarán automáticamente según el tema"
     }
   ],
   "icon-collection.shape.default": [
     {
       "type": 0,
-      "value": "Default"
+      "value": "Predeterminada"
     }
   ],
   "icon-collection.shape.ellipse": [
@@ -770,13 +714,13 @@
   "icon-collection.shape.none": [
     {
       "type": 0,
-      "value": "Ninguno"
+      "value": "Ninguna"
     }
   ],
   "icon-collection.shape.none-tooltip": [
     {
       "type": 0,
-      "value": "Ninguno - Sin fondo de forma visible"
+      "value": "Ninguna – Sin fondo de forma visible"
     }
   ],
   "icon-collection.shape.rectangle": [
@@ -806,71 +750,359 @@
   "icon-picker.show-images": [
     {
       "type": 0,
-      "value": "Mostrar imagenes"
+      "value": "Mostrar imágenes"
     }
   ],
-  "image-icon-tab.icon-found": [
+  "information-dialog.close": [
     {
       "type": 0,
-      "value": "icono encontrado"
+      "value": "Cerrar"
     }
   ],
-  "image-icon-tab.icons": [
+  "information-dialog.fastmind-description": [
     {
       "type": 0,
-      "value": "iconos"
+      "value": "FastMind es una extensión de VS Code basada en WiseMapping que ofrece potentes capacidades de mapeo mental para desarrolladores. Integra generación de temas impulsada por IA, integración con modelos compatibles con la API de OpenAI, deduplicación inteligente de contenido generado por IA, integración nativa con el sistema de archivos de VS Code y otras funciones avanzadas."
     }
   ],
-  "image-icon-tab.icons-found": [
+  "information-dialog.fastmind-title": [
     {
       "type": 0,
-      "value": "iconos encontrados"
+      "value": "Extensión FastMind para VS Code"
+    }
+  ],
+  "information-dialog.feature-ai": [
+    {
+      "type": 0,
+      "value": "Generación de temas impulsada por IA"
+    }
+  ],
+  "information-dialog.feature-api-integration": [
+    {
+      "type": 0,
+      "value": "Integración con modelos compatibles con la API de OpenAI"
+    }
+  ],
+  "information-dialog.feature-deduplication": [
+    {
+      "type": 0,
+      "value": "Deduplicación inteligente de contenido generado por IA"
+    }
+  ],
+  "information-dialog.feature-vscode-integration": [
+    {
+      "type": 0,
+      "value": "Integración nativa con el sistema de archivos de VS Code"
+    }
+  ],
+  "information-dialog.features-title": [
+    {
+      "type": 0,
+      "value": "Características principales:"
+    }
+  ],
+  "information-dialog.powered-by": [
+    {
+      "type": 0,
+      "value": "Desarrollado por"
+    }
+  ],
+  "information-dialog.title": [
+    {
+      "type": 0,
+      "value": "Información"
+    }
+  ],
+  "layout-selector.accept": [
+    {
+      "type": 0,
+      "value": "Aceptar"
+    }
+  ],
+  "layout-selector.cancel": [
+    {
+      "type": 0,
+      "value": "Cancelar"
+    }
+  ],
+  "layout-selector.description": [
+    {
+      "type": 0,
+      "value": "Un diseño define cómo se organizan y conectan los temas en su mapa mental. Elija el diseño que mejor se adapte a la estructura de su contenido."
+    }
+  ],
+  "layout-selector.title": [
+    {
+      "type": 0,
+      "value": "Elegir diseño"
+    }
+  ],
+  "layout.mindmap.description": [
+    {
+      "type": 0,
+      "value": "Diseño horizontal con ramas equilibradas en ambos lados. Ideal para mapeo mental tradicional y lluvia de ideas."
+    }
+  ],
+  "layout.mindmap.name": [
+    {
+      "type": 0,
+      "value": "Mapa mental"
+    }
+  ],
+  "layout.tree.description": [
+    {
+      "type": 0,
+      "value": "Jerarquía vertical de arriba hacia abajo. Perfecto para organigramas y estructuras jerárquicas."
+    }
+  ],
+  "layout.tree.name": [
+    {
+      "type": 0,
+      "value": "Árbol"
     }
   ],
   "link.help_text": [
     {
       "type": 0,
-      "value": "Dirección invalida"
+      "value": "La dirección no es válida"
     }
   ],
   "link.placeholder": [
     {
       "type": 0,
-      "value": "https://www.example.com"
+      "value": "https://www.ejemplo.com"
     }
   ],
-  "mindmap-comp": [
+  "llm-connection-test.api-key": [
     {
       "type": 0,
-      "value": "Componente de mapa mental"
+      "value": "Clave API"
     }
   ],
-  "note.character.count": [
+  "llm-connection-test.api-key-placeholder": [
+    {
+      "type": 0,
+      "value": "Su clave API"
+    }
+  ],
+  "llm-connection-test.api-url": [
+    {
+      "type": 0,
+      "value": "URL de la API"
+    }
+  ],
+  "llm-connection-test.api-url-placeholder": [
+    {
+      "type": 0,
+      "value": "https://api.openai.com/v1/chat/completions"
+    }
+  ],
+  "llm-connection-test.close": [
+    {
+      "type": 0,
+      "value": "Cerrar"
+    }
+  ],
+  "llm-connection-test.configuration": [
+    {
+      "type": 0,
+      "value": "Configuración"
+    }
+  ],
+  "llm-connection-test.console-logs": [
+    {
+      "type": 0,
+      "value": "Abrir consola del navegador para logs detallados"
+    }
+  ],
+  "llm-connection-test.description": [
+    {
+      "type": 0,
+      "value": "Probar conexión con cualquier API compatible con OpenAI"
+    }
+  ],
+  "llm-connection-test.error-connection-failed": [
+    {
+      "type": 0,
+      "value": "Conexión fallida"
+    }
+  ],
+  "llm-connection-test.error-failed-config": [
+    {
+      "type": 0,
+      "value": "Error de configuración"
+    }
+  ],
+  "llm-connection-test.error-unknown": [
+    {
+      "type": 0,
+      "value": "Error desconocido"
+    }
+  ],
+  "llm-connection-test.max-tokens": [
+    {
+      "type": 0,
+      "value": "Máx. tokens"
+    }
+  ],
+  "llm-connection-test.model": [
+    {
+      "type": 0,
+      "value": "Modelo"
+    }
+  ],
+  "llm-connection-test.model-placeholder": [
+    {
+      "type": 0,
+      "value": "gpt-3.5-turbo"
+    }
+  ],
+  "llm-connection-test.prompt": [
+    {
+      "type": 0,
+      "value": "Prompt"
+    }
+  ],
+  "llm-connection-test.prompt-placeholder": [
+    {
+      "type": 0,
+      "value": "Ingrese aquí su prompt de prueba..."
+    }
+  ],
+  "llm-connection-test.response": [
+    {
+      "type": 0,
+      "value": "Respuesta:"
+    }
+  ],
+  "llm-connection-test.save-configuration": [
+    {
+      "type": 0,
+      "value": "Guardar configuración"
+    }
+  ],
+  "llm-connection-test.temperature": [
+    {
+      "type": 0,
+      "value": "Temperatura"
+    }
+  ],
+  "llm-connection-test.test-connection": [
+    {
+      "type": 0,
+      "value": "Probar conexión LLM"
+    }
+  ],
+  "llm-connection-test.testing": [
+    {
+      "type": 0,
+      "value": "Probando..."
+    }
+  ],
+  "llm-connection-test.title": [
+    {
+      "type": 0,
+      "value": "Prueba de conexión LLM"
+    }
+  ],
+  "llm-notification.status.completed": [
+    {
+      "type": 0,
+      "value": "Completado"
+    }
+  ],
+  "llm-notification.status.error": [
+    {
+      "type": 0,
+      "value": "Fallido"
+    }
+  ],
+  "llm.task.ai-explainer.description": [
+    {
+      "type": 0,
+      "value": "Analizando el tema «"
+    },
     {
       "type": 1,
-      "value": "remaining"
+      "value": "currentTopic"
     },
     {
       "type": 0,
-      "value": " restantes"
+      "value": "»..."
     }
   ],
-  "note.character.limit.warning": [
+  "llm.task.ai-explainer.title": [
     {
       "type": 0,
-      "value": "(Acercándose al límite)"
+      "value": "Explicador IA"
     }
   ],
-  "ocean": [
+  "llm.task.generate-topics.description": [
     {
       "type": 0,
-      "value": "Océano"
+      "value": "Generando temas relevantes basados en «"
+    },
+    {
+      "type": 1,
+      "value": "currentTopic"
+    },
+    {
+      "type": 0,
+      "value": "» y la ruta de contexto..."
+    }
+  ],
+  "llm.task.generate-topics.title": [
+    {
+      "type": 0,
+      "value": "Generar temas con IA"
+    }
+  ],
+  "model-api-management.active": [
+    {
+      "type": 0,
+      "value": "activo"
+    }
+  ],
+  "model-api-management.add-configuration": [
+    {
+      "type": 0,
+      "value": "Añadir configuración"
+    }
+  ],
+  "model-api-management.empty-description": [
+    {
+      "type": 0,
+      "value": "Añada su primera configuración de API LLM para comenzar"
+    }
+  ],
+  "model-api-management.no-configurations": [
+    {
+      "type": 0,
+      "value": "Sin configuraciones de API"
+    }
+  ],
+  "model-api-management.switch": [
+    {
+      "type": 0,
+      "value": "Cambiar"
+    }
+  ],
+  "model-api-management.title": [
+    {
+      "type": 0,
+      "value": "Gestión de API de modelos"
+    }
+  ],
+  "model-api-management.update": [
+    {
+      "type": 0,
+      "value": "Actualizar"
     }
   ],
   "outline.collapse": [
     {
       "type": 0,
-      "value": "Contraer"
+      "value": "Colapsar todo"
     }
   ],
   "outline.empty": [
@@ -882,7 +1114,7 @@
   "outline.expand": [
     {
       "type": 0,
-      "value": "Expandir"
+      "value": "Expandir todo"
     }
   ],
   "outline.has-note": [
@@ -901,18 +1133,6 @@
     {
       "type": 0,
       "value": "Nota"
-    }
-  ],
-  "popover": [
-    {
-      "type": 0,
-      "value": "Popover"
-    }
-  ],
-  "prism": [
-    {
-      "type": 0,
-      "value": "Prisma"
     }
   ],
   "relationship-style-editor.color": [
@@ -954,7 +1174,7 @@
   "relationship-style-editor.end-arrow-tooltip": [
     {
       "type": 0,
-      "value": "Alternar flecha final"
+      "value": "Activar/desactivar flecha final"
     }
   ],
   "relationship-style-editor.line-arrows": [
@@ -984,61 +1204,71 @@
   "relationship-style-editor.start-arrow-tooltip": [
     {
       "type": 0,
-      "value": "Alternar flecha inicial"
+      "value": "Activar/desactivar flecha inicial"
     }
   ],
-  "rich-text-editor.bold": [
+  "settings.ai-explainer-title": [
     {
       "type": 0,
-      "value": "Negrita"
+      "value": "Explicador IA con prompts personalizados"
     }
   ],
-  "rich-text-editor.bullet-list": [
+  "settings.ai-topic-generator-title": [
     {
       "type": 0,
-      "value": "Lista con Viñetas"
+      "value": "Generador de temas IA con prompts personalizados"
     }
   ],
-  "rich-text-editor.insert-icon": [
+  "settings.current-model": [
     {
       "type": 0,
-      "value": "Insertar Icono"
+      "value": "Modelo actual: "
+    },
+    {
+      "type": 1,
+      "value": "modelName"
     }
   ],
-  "rich-text-editor.insert-link": [
+  "settings.deduplication": [
     {
       "type": 0,
-      "value": "Insertar Enlace"
+      "value": "Deduplicación"
     }
   ],
-  "rich-text-editor.italic": [
+  "settings.description": [
     {
       "type": 0,
-      "value": "Cursiva"
+      "value": "Configure los ajustes del modelo IA y personalice los prompts para generación de temas y explicación de conceptos."
     }
   ],
-  "rich-text-editor.numbered-list": [
+  "settings.explainer-placeholder": [
     {
       "type": 0,
-      "value": "Lista Numerada"
+      "value": "Ingrese un prompt personalizado para la explicación de conceptos..."
     }
   ],
-  "rich-text-editor.strikethrough": [
+  "settings.model-api-management": [
     {
       "type": 0,
-      "value": "Tachado"
+      "value": "Gestión de API de modelos"
     }
   ],
-  "rich-text-editor.underline": [
+  "settings.no-model": [
     {
       "type": 0,
-      "value": "Subrayado"
+      "value": "Ningún modelo configurado"
     }
   ],
-  "robot": [
+  "settings.title": [
     {
       "type": 0,
-      "value": "Robot"
+      "value": "Ajustes"
+    }
+  ],
+  "settings.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "Ingrese un prompt personalizado para la generación de temas..."
     }
   ],
   "shortcut-help-pane.action": [
@@ -1050,43 +1280,43 @@
   "shortcut-help-pane.add-child": [
     {
       "type": 0,
-      "value": "Agregar tópico hijo"
+      "value": "Añadir tema hijo"
     }
   ],
   "shortcut-help-pane.add-link": [
     {
       "type": 0,
-      "value": "Agregar enlace"
+      "value": "Añadir enlace"
     }
   ],
   "shortcut-help-pane.add-note": [
     {
       "type": 0,
-      "value": "Agregar nota"
+      "value": "Añadir nota"
     }
   ],
   "shortcut-help-pane.add-sibling": [
     {
       "type": 0,
-      "value": "Agregar tópico hermano"
+      "value": "Añadir tema del mismo nivel"
     }
   ],
   "shortcut-help-pane.cancel-text-changes": [
     {
       "type": 0,
-      "value": "Cancelar cambio de texto"
+      "value": "Cancelar cambios de texto"
     }
   ],
   "shortcut-help-pane.change-font-bold": [
     {
       "type": 0,
-      "value": "Cambiar texto a negrita"
+      "value": "Poner texto en negrita"
     }
   ],
   "shortcut-help-pane.change-font-italic": [
     {
       "type": 0,
-      "value": "Cambiar texto a itálica"
+      "value": "Poner texto en cursiva"
     }
   ],
   "shortcut-help-pane.collapse-children": [
@@ -1095,112 +1325,136 @@
       "value": "Colapsar hijos"
     }
   ],
-  "shortcut-help-pane.copy-and-text": [
-    {
-      "type": 0,
-      "value": "Copiar y pegar tópicos"
-    }
-  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
-      "value": "Borrar tópico"
+      "value": "Eliminar tema"
     }
   ],
   "shortcut-help-pane.deselect-all-topics": [
     {
       "type": 0,
-      "value": "Deseleccionar tópicos"
+      "value": "Deseleccionar todos los temas"
     }
   ],
   "shortcut-help-pane.drag-disconnect": [
     {
       "type": 0,
-      "value": "Desconectar tópico"
+      "value": "Desconectar tema"
     }
   ],
   "shortcut-help-pane.edit-multiline": [
     {
       "type": 0,
-      "value": "Agregar texto multi-linea"
+      "value": "Añadir texto multilínea al tema"
     }
   ],
   "shortcut-help-pane.edit-topic": [
     {
       "type": 0,
-      "value": "Editar texto de tópico"
+      "value": "Editar texto del tema"
     }
   ],
   "shortcut-help-pane.edit-topic-key": [
     {
       "type": 0,
-      "value": "Empezar a escribir"
+      "value": "F2 o doble clic"
+    }
+  ],
+  "shortcut-help-pane.expand-by-level": [
+    {
+      "type": 0,
+      "value": "Expandir temas por nivel"
+    }
+  ],
+  "shortcut-help-pane.expand-collapse-all": [
+    {
+      "type": 0,
+      "value": "Expandir/colapsar todo"
     }
   ],
   "shortcut-help-pane.navigation": [
     {
       "type": 0,
-      "value": "Navegar"
+      "value": "Navegación"
     }
   ],
   "shortcut-help-pane.navigation-keys": [
     {
       "type": 0,
-      "value": "Cursor"
+      "value": "Teclas de flecha"
+    }
+  ],
+  "shortcut-help-pane.outline-view": [
+    {
+      "type": 0,
+      "value": "Abrir vista de esquema"
     }
   ],
   "shortcut-help-pane.overwrite-edit-topic": [
     {
       "type": 0,
-      "value": "Sobrescribir el texto del tópico"
+      "value": "Sobrescribir texto del tema"
     }
   ],
   "shortcut-help-pane.overwrite-edit-topic-key": [
     {
       "type": 0,
-      "value": "Comenzar a escribir en el tópico seleccionado"
+      "value": "Escribir sobre un tema seleccionado"
     }
   ],
   "shortcut-help-pane.redo": [
     {
       "type": 0,
-      "value": "Rehacer cambios"
+      "value": "Rehacer edición"
     }
   ],
   "shortcut-help-pane.save-changes": [
     {
       "type": 0,
-      "value": "Grabar cambios"
+      "value": "Guardar cambios"
     }
   ],
   "shortcut-help-pane.select-all-topics": [
     {
       "type": 0,
-      "value": "Seleccionar todos los tópicos"
+      "value": "Seleccionar todos los temas"
     }
   ],
   "shortcut-help-pane.select-topics": [
     {
       "type": 0,
-      "value": "Seleccionar multiples tópico"
+      "value": "Seleccionar múltiples temas"
     }
   ],
   "shortcut-help-pane.select-topics-keys": [
     {
       "type": 0,
-      "value": "Click del mouse"
+      "value": "Clic del ratón"
     }
   ],
   "shortcut-help-pane.undo": [
     {
       "type": 0,
-      "value": "Deshacer cambios"
+      "value": "Deshacer edición"
     }
   ],
-  "sunrise": [
+  "shortcut-help-pane.zoom-in": [
     {
       "type": 0,
-      "value": "Amanecer"
+      "value": "Acercar"
+    }
+  ],
+  "shortcut-help-pane.zoom-out": [
+    {
+      "type": 0,
+      "value": "Alejar"
+    }
+  ],
+  "shortcut-help-pane.zoom-to-fit": [
+    {
+      "type": 0,
+      "value": "Ajustar al tamaño"
     }
   ],
   "theme-editor.accept": [
@@ -1218,7 +1472,7 @@
   "theme-editor.description": [
     {
       "type": 0,
-      "value": "Un tema define el estilo visual de tu mapa mental, incluyendo colores, fuentes y apariencia general. Elige un tema que se adapte mejor a tu contenido y audiencia."
+      "value": "Un tema define el estilo visual de su mapa mental, incluyendo colores, fuentes y apariencia general. Elija el tema que mejor se adapte a su contenido y audiencia."
     }
   ],
   "theme-editor.title": [
@@ -1230,7 +1484,7 @@
   "theme.classic.description": [
     {
       "type": 0,
-      "value": "Clean and professional design with blue accents. Perfect for business presentations and formal documents."
+      "value": "Diseño limpio y profesional con acentos azules. Perfecto para presentaciones empresariales y documentos formales."
     }
   ],
   "theme.classic.name": [
@@ -1254,7 +1508,7 @@
   "theme.ocean.description": [
     {
       "type": 0,
-      "value": "Ocean-inspired blue theme with light/dark variants. Calm and professional colors perfect for business and creative projects."
+      "value": "Tema azul inspirado en el océano con variantes claro/oscuro. Colores tranquilos y profesionales ideales para proyectos empresariales y creativos."
     }
   ],
   "theme.ocean.name": [
@@ -1266,7 +1520,7 @@
   "theme.robot.description": [
     {
       "type": 0,
-      "value": "Tech-inspired green theme. Perfect for technical documentation and futuristic presentations."
+      "value": "Tema verde inspirado en tecnología. Perfecto para documentación técnica y presentaciones futuristas."
     }
   ],
   "theme.robot.name": [
@@ -1278,7 +1532,7 @@
   "theme.summer.description": [
     {
       "type": 0,
-      "value": "Bright and vibrant orange theme. Great for creative projects and energetic presentations."
+      "value": "Tema naranja brillante y vibrante. Ideal para proyectos creativos y presentaciones energéticas."
     }
   ],
   "theme.summer.name": [
@@ -1290,7 +1544,7 @@
   "theme.sunrise.description": [
     {
       "type": 0,
-      "value": "Sunrise theme with light/dark mode variants. Enhanced colors and contrast for better readability."
+      "value": "Tema Amanecer con variantes de modo claro/oscuro. Colores y contraste mejorados para mayor legibilidad."
     }
   ],
   "theme.sunrise.name": [
@@ -1311,18 +1565,6 @@
       "value": "Cambiar a modo claro"
     }
   ],
-  "theme.toggle": [
-    {
-      "type": 0,
-      "value": "Cambiar Tema"
-    }
-  ],
-  "title-input": [
-    {
-      "type": 0,
-      "value": "Entrada de título"
-    }
-  ],
   "topic-font-editor.active": [
     {
       "type": 0,
@@ -1338,7 +1580,7 @@
   "topic-font-editor.bold-tooltip": [
     {
       "type": 0,
-      "value": "Alternar negrita"
+      "value": "Activar/desactivar negrita"
     }
   ],
   "topic-font-editor.decrease-size": [
@@ -1350,7 +1592,7 @@
   "topic-font-editor.decrease-size-tooltip": [
     {
       "type": 0,
-      "value": "Disminuir tamaño de fuente"
+      "value": "Reducir tamaño de fuente"
     }
   ],
   "topic-font-editor.font-color": [
@@ -1392,67 +1634,157 @@
   "topic-font-editor.italic-tooltip": [
     {
       "type": 0,
-      "value": "Alternar cursiva"
+      "value": "Activar/desactivar cursiva"
     }
   ],
   "topic-font-editor.reset-to-default": [
     {
       "type": 0,
-      "value": "Reset to Default"
+      "value": "Restablecer a predeterminado"
+    }
+  ],
+  "topic-note-editor.add-note": [
+    {
+      "type": 0,
+      "value": "Añadir nota"
+    }
+  ],
+  "topic-note-editor.edit-note": [
+    {
+      "type": 0,
+      "value": "Editar nota"
     }
   ],
   "unified-styling.background-color": [
     {
       "type": 0,
-      "value": "Background Color"
+      "value": "Color de fondo"
+    }
+  ],
+  "unified-styling.border-color": [
+    {
+      "type": 0,
+      "value": "Color del borde"
+    }
+  ],
+  "unified-styling.border-style": [
+    {
+      "type": 0,
+      "value": "Estilo del borde"
+    }
+  ],
+  "unified-styling.connection-style": [
+    {
+      "type": 0,
+      "value": "Estilo de conexión"
+    }
+  ],
+  "unified-styling.connector-style": [
+    {
+      "type": 0,
+      "value": "Estilo de conector"
     }
   ],
   "unified-styling.shape-type": [
     {
       "type": 0,
-      "value": "Shape Type"
+      "value": "Tipo de forma"
     }
   ],
-  "zoom-panel.tooltip-collapse-all": [
+  "unified-styling.tab.border": [
     {
       "type": 0,
-      "value": "Contraer todos los nodos"
+      "value": "Borde"
     }
   ],
-  "zoom-panel.tooltip-expand-all": [
+  "unified-styling.tab.connector": [
+    {
+      "type": 0,
+      "value": "Conector"
+    }
+  ],
+  "unified-styling.tab.shape": [
+    {
+      "type": 0,
+      "value": "Forma"
+    }
+  ],
+  "visualization-toolbar.tooltip-collapse-all": [
+    {
+      "type": 0,
+      "value": "Colapsar todos los nodos"
+    }
+  ],
+  "visualization-toolbar.tooltip-expand-all": [
     {
       "type": 0,
       "value": "Expandir todos los nodos"
     }
   ],
-  "zoom-panel.tooltip-keyboard": [
+  "visualization-toolbar.tooltip-expand-level": [
     {
       "type": 0,
-      "value": "Teclado"
+      "value": "Expandir por nivel"
     }
   ],
-  "zoom-panel.tooltip-outline-view": [
+  "visualization-toolbar.tooltip-export": [
     {
       "type": 0,
-      "value": "Vista de Esquema"
+      "value": "Exportar"
     }
   ],
-  "zoom-panel.tooltip-zoom-in": [
+  "visualization-toolbar.tooltip-info": [
     {
       "type": 0,
-      "value": "Aumentar"
+      "value": "Información"
     }
   ],
-  "zoom-panel.tooltip-zoom-out": [
+  "visualization-toolbar.tooltip-keyboard": [
     {
       "type": 0,
-      "value": "Decrementar"
+      "value": "Atajos de teclado"
     }
   ],
-  "zoom-panel.tooltip-zoom-to-fit": [
+  "visualization-toolbar.tooltip-layout": [
     {
       "type": 0,
-      "value": "Centrar"
+      "value": "Cambiar diseño"
+    }
+  ],
+  "visualization-toolbar.tooltip-outline-view": [
+    {
+      "type": 0,
+      "value": "Vista de esquema"
+    }
+  ],
+  "visualization-toolbar.tooltip-save": [
+    {
+      "type": 0,
+      "value": "Guardar"
+    }
+  ],
+  "visualization-toolbar.tooltip-theme-toggle": [
+    {
+      "type": 0,
+      "value": "Cambiar tema"
+    }
+  ],
+  "visualization-toolbar.tooltip-zoom-in": [
+    {
+      "type": 0,
+      "value": "Acercar"
+    }
+  ],
+  "visualization-toolbar.tooltip-zoom-out": [
+    {
+      "type": 0,
+      "value": "Alejar"
+    }
+  ],
+  "visualization-toolbar.tooltip-zoom-to-fit": [
+    {
+      "type": 0,
+      "value": "Ajustar al tamaño"
     }
   ]
 }

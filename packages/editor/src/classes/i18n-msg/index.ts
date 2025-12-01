@@ -33,12 +33,9 @@ class I18nMsg {
       case 'ru':
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         return require('./../../compiled-lang/ru.json');
-      case 'uk':
+      case 'zh-Hant':
         // eslint-disable-next-line @typescript-eslint/no-require-imports
-        return require('./../../compiled-lang/uk.json');
-      case 'zh':
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        return require('./../../compiled-lang/zh.json');
+        return require('./../../compiled-lang/zh-Hant.json');
       case 'zh-CN':
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         return require('./../../compiled-lang/zh-CN.json');
@@ -51,9 +48,6 @@ class I18nMsg {
       case 'it':
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         return require('./../../compiled-lang/it.json');
-      case 'hi':
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        return require('./../../compiled-lang/hi.json');
       default:
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         return require('./../../compiled-lang/en.json');

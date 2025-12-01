@@ -2,25 +2,25 @@
   "action.accept": [
     {
       "type": 0,
-      "value": "Aceitar"
+      "value": "接受"
     }
   ],
   "action.cancel": [
     {
       "type": 0,
-      "value": "Cancelar"
+      "value": "取消"
     }
   ],
   "action.delete": [
     {
       "type": 0,
-      "value": "Excluir"
+      "value": "刪除"
     }
   ],
   "ai-explainer.description": [
     {
       "type": 0,
-      "value": "Analisando o tópico \""
+      "value": "正在分析主題「"
     },
     {
       "type": 1,
@@ -28,37 +28,37 @@
     },
     {
       "type": 0,
-      "value": "\"..."
+      "value": "」..."
     }
   ],
   "ai-explainer.error-analyze": [
     {
       "type": 0,
-      "value": "A análise do explicador de IA falhou:"
+      "value": "AI 解釋器分析失敗："
     }
   ],
   "ai-explainer.title": [
     {
       "type": 0,
-      "value": "Explicador de IA"
+      "value": "AI 解釋器"
     }
   ],
   "ai-topic-generator.add-to-mindmap": [
     {
       "type": 0,
-      "value": "Adicionar ao Mapa Mental"
+      "value": "加入心智圖"
     }
   ],
   "ai-topic-generator.cancel": [
     {
       "type": 0,
-      "value": "Cancelar"
+      "value": "取消"
     }
   ],
   "ai-topic-generator.count-label": [
     {
       "type": 0,
-      "value": "Número de tópicos a gerar: "
+      "value": "要生成的主题數量："
     },
     {
       "type": 1,
@@ -68,25 +68,25 @@
   "ai-topic-generator.custom-prompt-helper": [
     {
       "type": 0,
-      "value": "Forneça contexto adicional ou requisitos para a geração por IA"
+      "value": "提供額外的上下文或對 AI 生成的要求"
     }
   ],
   "ai-topic-generator.custom-prompt-label": [
     {
       "type": 0,
-      "value": "Prompt Personalizado (Opcional)"
+      "value": "自訂 Prompt（選填）"
     }
   ],
   "ai-topic-generator.custom-prompt-placeholder": [
     {
       "type": 0,
-      "value": "ex.: Focar nos aspectos de implementação técnica"
+      "value": "例如：著重技術實作層面"
     }
   ],
   "ai-topic-generator.description": [
     {
       "type": 0,
-      "value": "Gerar subtópicos relacionados com base em "
+      "value": "根據 "
     },
     {
       "children": [
@@ -97,60 +97,64 @@
       ],
       "type": 8,
       "value": "strong"
+    },
+    {
+      "type": 0,
+      "value": " 產生相關子主題"
     }
   ],
   "ai-topic-generator.error-add": [
     {
       "type": 0,
-      "value": "Ocorreu um erro ao adicionar tópicos"
+      "value": "加入主題時發生錯誤"
     }
   ],
   "ai-topic-generator.error-generate": [
     {
       "type": 0,
-      "value": "Ocorreu um erro ao gerar tópicos"
+      "value": "生成主題時發生錯誤"
     }
   ],
   "ai-topic-generator.generating": [
     {
       "type": 0,
-      "value": "Gerando tópicos, por favor aguarde..."
+      "value": "正在生成主題，請稍候..."
     }
   ],
   "ai-topic-generator.preview-title": [
     {
       "type": 0,
-      "value": "Pré-visualização dos tópicos gerados:"
+      "value": "生成的主題預覽："
     }
   ],
   "ai-topic-generator.regenerate": [
     {
       "type": 0,
-      "value": "Regenerar"
+      "value": "重新生成"
     }
   ],
   "ai-topic-generator.title": [
     {
       "type": 0,
-      "value": "Gerador de Tópicos com IA"
+      "value": "AI 主題生成器"
     }
   ],
   "appbar.back-to-map-list": [
     {
       "type": 0,
-      "value": "Voltar à lista de mapas"
+      "value": "返回地圖列表"
     }
   ],
   "appbar.button-signup": [
     {
       "type": 0,
-      "value": "Cadastrar-se"
+      "value": "註冊"
     }
   ],
   "appbar.error-saving-title": [
     {
       "type": 0,
-      "value": "Erro ao salvar o título:"
+      "value": "儲存標題時發生錯誤："
     }
   ],
   "appbar.logo-aria-label": [
@@ -162,733 +166,733 @@
   "appbar.shared-button": [
     {
       "type": 0,
-      "value": "Compartilhar"
+      "value": "分享"
     }
   ],
   "appbar.title-renamed": [
     {
       "type": 0,
-      "value": "O mapa mental foi renomeado"
+      "value": "心智圖已重新命名"
     }
   ],
   "appbar.tooltip-change-layout": [
     {
       "type": 0,
-      "value": "Layout"
+      "value": "版面配置"
     }
   ],
   "appbar.tooltip-export": [
     {
       "type": 0,
-      "value": "Exportar"
+      "value": "匯出"
     }
   ],
   "appbar.tooltip-history": [
     {
       "type": 0,
-      "value": "Histórico de Alterações"
+      "value": "變更歷史"
     }
   ],
   "appbar.tooltip-info": [
     {
       "type": 0,
-      "value": "Informações"
+      "value": "資訊"
     }
   ],
   "appbar.tooltip-print": [
     {
       "type": 0,
-      "value": "Imprimir"
+      "value": "列印"
     }
   ],
   "appbar.tooltip-publish": [
     {
       "type": 0,
-      "value": "Publicar"
+      "value": "發佈"
     }
   ],
   "appbar.tooltip-redo": [
     {
       "type": 0,
-      "value": "Refazer"
+      "value": "重做"
     }
   ],
   "appbar.tooltip-rename": [
     {
       "type": 0,
-      "value": "Renomear"
+      "value": "重新命名"
     }
   ],
   "appbar.tooltip-save": [
     {
       "type": 0,
-      "value": "Salvar"
+      "value": "儲存"
     }
   ],
   "appbar.tooltip-settings": [
     {
       "type": 0,
-      "value": "Configurações"
+      "value": "設定"
     }
   ],
   "appbar.tooltip-shared": [
     {
       "type": 0,
-      "value": "Compartilhar para Colaboração"
+      "value": "協作分享"
     }
   ],
   "appbar.tooltip-signup": [
     {
       "type": 0,
-      "value": "Cadastrar-se"
+      "value": "註冊"
     }
   ],
   "appbar.tooltip-starred": [
     {
       "type": 0,
-      "value": "Favoritos"
+      "value": "已加星號"
     }
   ],
   "appbar.tooltip-theme": [
     {
       "type": 0,
-      "value": "Tema"
+      "value": "主題"
     }
   ],
   "appbar.tooltip-theme-toggle": [
     {
       "type": 0,
-      "value": "Alternar Tema"
+      "value": "切換主題"
     }
   ],
   "appbar.tooltip-undo": [
     {
       "type": 0,
-      "value": "Desfazer"
+      "value": "復原"
     }
   ],
   "canvas-style.background-color": [
     {
       "type": 0,
-      "value": "Cor de Fundo"
+      "value": "背景顏色"
     }
   ],
   "canvas-style.background-style": [
     {
       "type": 0,
-      "value": "Estilo de Fundo"
+      "value": "背景樣式"
     }
   ],
   "canvas-style.grid-color": [
     {
       "type": 0,
-      "value": "Cor da Grade"
+      "value": "格線顏色"
     }
   ],
   "canvas-style.grid-size-l": [
     {
       "type": 0,
-      "value": "Grande"
+      "value": "大"
     }
   ],
   "canvas-style.grid-size-m": [
     {
       "type": 0,
-      "value": "Médio"
+      "value": "中"
     }
   ],
   "canvas-style.grid-size-s": [
     {
       "type": 0,
-      "value": "Pequeno"
+      "value": "小"
     }
   ],
   "canvas-style.grid-size-xl": [
     {
       "type": 0,
-      "value": "Extra Grande"
+      "value": "超大"
     }
   ],
   "canvas-style.grid-size-xs": [
     {
       "type": 0,
-      "value": "Extra Pequeno"
+      "value": "超小"
     }
   ],
   "canvas-style.grid-style": [
     {
       "type": 0,
-      "value": "Tamanho da Grade"
+      "value": "格線大小"
     }
   ],
   "canvas-style.pattern-default-tooltip": [
     {
       "type": 0,
-      "value": "Padrão - Todos os estilos serão selecionados automaticamente com base no tema"
+      "value": "預設 - 所有樣式將根據主題自動選擇"
     }
   ],
   "canvas-style.pattern-dots": [
     {
       "type": 0,
-      "value": "Pontos"
+      "value": "點狀"
     }
   ],
   "canvas-style.pattern-grid": [
     {
       "type": 0,
-      "value": "Grade"
+      "value": "格線"
     }
   ],
   "canvas-style.pattern-solid": [
     {
       "type": 0,
-      "value": "Sólido"
+      "value": "純色"
     }
   ],
   "canvas-style.tab-color": [
     {
       "type": 0,
-      "value": "Cor"
+      "value": "顏色"
     }
   ],
   "canvas-style.tab-grid": [
     {
       "type": 0,
-      "value": "Cor da Grade"
+      "value": "格線顏色"
     }
   ],
   "color-picker.color": [
     {
       "type": 0,
-      "value": "Cor"
+      "value": "顏色"
     }
   ],
   "color-picker.default-color": [
     {
       "type": 0,
-      "value": "Cor padrão"
+      "value": "預設顏色"
     }
   ],
   "common.close": [
     {
       "type": 0,
-      "value": "Fechar"
+      "value": "關閉"
     }
   ],
   "creator-info-pane.creator": [
     {
       "type": 0,
-      "value": "Criador"
+      "value": "建立者"
     }
   ],
   "creator-info-pane.description": [
     {
       "type": 0,
-      "value": "Descrição"
+      "value": "描述"
     }
   ],
   "editor-panel.font-family-default": [
     {
       "type": 0,
-      "value": "Padrão"
+      "value": "預設"
     }
   ],
   "editor-panel.font-family-mixed": [
     {
       "type": 0,
-      "value": "Misto"
+      "value": "混合"
     }
   ],
   "editor-panel.note-panel-title": [
     {
       "type": 0,
-      "value": "Nota"
+      "value": "備註"
     }
   ],
   "editor-panel.tooltip-add-icon": [
     {
       "type": 0,
-      "value": "Adicionar Ícone"
+      "value": "加入圖示"
     }
   ],
   "editor-panel.tooltip-add-link": [
     {
       "type": 0,
-      "value": "Adicionar Link"
+      "value": "加入連結"
     }
   ],
   "editor-panel.tooltip-add-note": [
     {
       "type": 0,
-      "value": "Adicionar Nota"
+      "value": "加入備註"
     }
   ],
   "editor-panel.tooltip-add-relationship": [
     {
       "type": 0,
-      "value": "Adicionar Relação"
+      "value": "加入關聯"
     }
   ],
   "editor-panel.tooltip-add-topic": [
     {
       "type": 0,
-      "value": "Adicionar Tópico"
+      "value": "加入主題"
     }
   ],
   "editor-panel.tooltip-add-topic-image": [
     {
       "type": 0,
-      "value": "Adicionar Imagem ao Tópico"
+      "value": "加入主題圖片"
     }
   ],
   "editor-panel.tooltip-ai-explainer": [
     {
       "type": 0,
-      "value": "Explicador de IA"
+      "value": "AI 解釋器"
     }
   ],
   "editor-panel.tooltip-ai-topic-generator": [
     {
       "type": 0,
-      "value": "Gerador de Tópicos com IA"
+      "value": "AI 主題生成器"
     }
   ],
   "editor-panel.tooltip-canvas-style": [
     {
       "type": 0,
-      "value": "Fundo"
+      "value": "背景"
     }
   ],
   "editor-panel.tooltip-delete-topic": [
     {
       "type": 0,
-      "value": "Excluir Tópico"
+      "value": "刪除主題"
     }
   ],
   "editor-panel.tooltip-relationship-style": [
     {
       "type": 0,
-      "value": "Estilo da Relação"
+      "value": "關聯樣式"
     }
   ],
   "editor-panel.tooltip-topic-font-style": [
     {
       "type": 0,
-      "value": "Estilo da Fonte"
+      "value": "文字樣式"
     }
   ],
   "editor-panel.tooltip-unified-styling": [
     {
       "type": 0,
-      "value": "Estilizar Tópico & Conexões"
+      "value": "統一主題與連線樣式"
     }
   ],
   "editor.edit-description-mobile": [
     {
       "type": 0,
-      "value": "Capacidades limitadas de edição de mapas mentais são suportadas em dispositivos móveis. Use o um navegador de desktop para todas as funcionalidades do editor."
+      "value": "行動裝置僅支援有限的心智圖編輯功能。請使用桌面瀏覽器以獲得完整編輯功能。"
     }
   ],
   "editor.try-welcome": [
     {
       "type": 0,
-      "value": "Este espaço de edição mostra algumas das capacidades do editor de mapas mentais!"
+      "value": "此編輯空間展示心智圖編輯器的部分功能！"
     }
   ],
   "editor.try-welcome-description": [
     {
       "type": 0,
-      "value": "Cadastre-se para começar a criar, compartilhar e publicar um número ilimitado de mapas mentais gratuitamente."
+      "value": "註冊即可免費建立、分享與發佈無限數量的心智圖。"
     }
   ],
   "editor.try-welcome-description-mobile": [
     {
       "type": 0,
-      "value": "Cadastre-se para começar a criar, compartilhar e publicar um número ilimitado de mapas mentais gratuitamente. Capacidades limitadas de edição são suportadas em dispositivos móveis. Use um navegador de desktop para todas as funcionalidades."
+      "value": "註冊即可免費建立、分享與發佈無限數量的心智圖。行動裝置僅支援有限編輯功能，請使用桌面瀏覽器以獲得完整功能。"
     }
   ],
   "editor.try-welcome-mobile": [
     {
       "type": 0,
-      "value": "Este espaço de edição mostra algumas das capacidades do editor de mapas mentais!"
+      "value": "此編輯空間展示心智圖編輯器的部分功能！"
     }
   ],
   "emoji-picker.search-placeholder": [
     {
       "type": 0,
-      "value": "Buscar emojis..."
+      "value": "搜尋表情符號..."
     }
   ],
   "export.dialog.cancel": [
     {
       "type": 0,
-      "value": "Cancelar"
+      "value": "取消"
     }
   ],
   "export.dialog.clipboard-success": [
     {
       "type": 0,
-      "value": "Conteúdo copiado para a área de transferência!"
+      "value": "內容已複製到剪貼簿！"
     }
   ],
   "export.dialog.error-generic": [
     {
       "type": 0,
-      "value": "Falha na exportação, tente novamente mais tarde."
+      "value": "匯出失敗，請稍後再試。"
     }
   ],
   "export.dialog.export": [
     {
       "type": 0,
-      "value": "Exportar"
+      "value": "匯出"
     }
   ],
   "export.dialog.exporting": [
     {
       "type": 0,
-      "value": "Exportando..."
+      "value": "匯出中..."
     }
   ],
   "export.dialog.title": [
     {
       "type": 0,
-      "value": "Exportar Mapa Mental"
+      "value": "匯出心智圖"
     }
   ],
   "export.format.md.description": [
     {
       "type": 0,
-      "value": "Formato Markdown - Ideal para escrita de documentos e controle de versão, compatível com GitHub e outras plataformas"
+      "value": "Markdown 格式 - 適合文件撰寫與版本控制，支援 GitHub 等平台"
     }
   ],
   "export.format.recommended": [
     {
       "type": 0,
-      "value": "Recomendado"
+      "value": "推薦"
     }
   ],
   "export.format.svg.description": [
     {
       "type": 0,
-      "value": "SVG - Gráficos vetoriais escaláveis infinitamente, com tamanho de arquivo pequeno"
+      "value": "可縮放向量圖形 - 向量圖形，無限縮放，檔案小"
     }
   ],
   "export.format.wxml.description": [
     {
       "type": 0,
-      "value": "WiseMapping XML - Formato nativo, mantém todas as funcionalidades de edição, pode ser reimportado"
+      "value": "WiseMapping XML - 原生格式，保留所有編輯功能，可重新匯入編輯"
     }
   ],
   "icon-collection.border.dashed": [
     {
       "type": 0,
-      "value": "Tracejada"
+      "value": "虛線"
     }
   ],
   "icon-collection.border.default": [
     {
       "type": 0,
-      "value": "Padrão"
+      "value": "預設"
     }
   ],
   "icon-collection.border.dotted": [
     {
       "type": 0,
-      "value": "Pontilhada"
+      "value": "點線"
     }
   ],
   "icon-collection.border.solid": [
     {
       "type": 0,
-      "value": "Sólida"
+      "value": "實線"
     }
   ],
   "icon-collection.connection.arc": [
     {
       "type": 0,
-      "value": "Arco"
+      "value": "弧形"
     }
   ],
   "icon-collection.connection.arc-tooltip": [
     {
       "type": 0,
-      "value": "Conexão em arco circular - Perfeita para layouts radiais e fluxo orgânico"
+      "value": "圓弧連接 - 適合放射狀佈局與有機流動"
     }
   ],
   "icon-collection.connection.curved-polyline": [
     {
       "type": 0,
-      "value": "Polilinha Curva"
+      "value": "曲線多段線"
     }
   ],
   "icon-collection.connection.curved-polyline-tooltip": [
     {
       "type": 0,
-      "value": "Linha de múltiplos segmentos com cantos suaves - Ideal para layouts estruturados e caminhos claros"
+      "value": "多段線帶圓角 - 適合結構化佈局與清晰路徑"
     }
   ],
   "icon-collection.connection.default": [
     {
       "type": 0,
-      "value": "Padrão"
+      "value": "預設"
     }
   ],
   "icon-collection.connection.default-tooltip": [
     {
       "type": 0,
-      "value": "Padrão - O estilo de conexão será selecionado automaticamente com base no tema"
+      "value": "預設 - 連接樣式將根據主題自動選擇"
     }
   ],
   "icon-collection.connection.organic-curved": [
     {
       "type": 0,
-      "value": "Curva Orgânica"
+      "value": "有機曲線"
     }
   ],
   "icon-collection.connection.organic-curved-tooltip": [
     {
       "type": 0,
-      "value": "Estilo desenhado à mão com curvas dramáticas - Perfeito para mapas mentais criativos e expressivos"
+      "value": "手繪風格的強烈曲線 - 適合創意與表現型心智圖"
     }
   ],
   "icon-collection.connection.simple-polyline": [
     {
       "type": 0,
-      "value": "Polilinha Simples"
+      "value": "簡單多段線"
     }
   ],
   "icon-collection.connection.simple-polyline-tooltip": [
     {
       "type": 0,
-      "value": "Conexão em linha reta direta - Estilo limpo e minimalista para relações simples"
+      "value": "直接直線連接 - 簡潔極簡風格，適合簡單關係"
     }
   ],
   "icon-collection.connection.thick-curved": [
     {
       "type": 0,
-      "value": "Curva Grossa"
+      "value": "粗曲線"
     }
   ],
   "icon-collection.connection.thick-curved-tooltip": [
     {
       "type": 0,
-      "value": "Linha curva grossa com curvas bezier suaves - Ótima para destacar ramos principais"
+      "value": "粗線條貝茲曲線 - 適合強調主要分支"
     }
   ],
   "icon-collection.connection.thin-curved": [
     {
       "type": 0,
-      "value": "Curva Fina"
+      "value": "細曲線"
     }
   ],
   "icon-collection.connection.thin-curved-tooltip": [
     {
       "type": 0,
-      "value": "Linha curva fina com curvas bezier elegantes - Ideal para mapas mentais detalhados ou densos"
+      "value": "細線條優雅貝茲曲線 - 適合細節豐富或密集的心智圖"
     }
   ],
   "icon-collection.default-tooltip": [
     {
       "type": 0,
-      "value": "Padrão - Todos os estilos serão selecionados automaticamente com base no tema"
+      "value": "預設 - 所有樣式將根據主題自動選擇"
     }
   ],
   "icon-collection.shape.default": [
     {
       "type": 0,
-      "value": "Padrão"
+      "value": "預設"
     }
   ],
   "icon-collection.shape.ellipse": [
     {
       "type": 0,
-      "value": "Elipse"
+      "value": "橢圓"
     }
   ],
   "icon-collection.shape.line": [
     {
       "type": 0,
-      "value": "Linha"
+      "value": "線條"
     }
   ],
   "icon-collection.shape.none": [
     {
       "type": 0,
-      "value": "Nenhum"
+      "value": "無"
     }
   ],
   "icon-collection.shape.none-tooltip": [
     {
       "type": 0,
-      "value": "Nenhum - Sem fundo visível"
+      "value": "無 - 無可見形狀背景"
     }
   ],
   "icon-collection.shape.rectangle": [
     {
       "type": 0,
-      "value": "Retângulo"
+      "value": "矩形"
     }
   ],
   "icon-collection.shape.rounded": [
     {
       "type": 0,
-      "value": "Arredondado"
+      "value": "圓角矩形"
     }
   ],
   "icon-picker.emojis": [
     {
       "type": 0,
-      "value": "Emojis"
+      "value": "表情符號"
     }
   ],
   "icon-picker.icons": [
     {
       "type": 0,
-      "value": "Galeria de Ícones"
+      "value": "圖示庫"
     }
   ],
   "icon-picker.show-images": [
     {
       "type": 0,
-      "value": "Mostrar imagens"
+      "value": "顯示圖片"
     }
   ],
   "information-dialog.close": [
     {
       "type": 0,
-      "value": "Fechar"
+      "value": "關閉"
     }
   ],
   "information-dialog.fastmind-description": [
     {
       "type": 0,
-      "value": "FastMind é uma extensão do VS Code baseada no WiseMapping que oferece poderosas capacidades de mapeamento mental para desenvolvedores. Integra geração de tópicos com IA, integração com modelos compatíveis com a API do OpenAI, deduplicação inteligente de conteúdo gerado por IA, integração nativa com o sistema de arquivos do VS Code e outros recursos avançados para ajudar os desenvolvedores a organizar e visualizar melhor suas ideias."
+      "value": "FastMind 是基於 WiseMapping 的 VS Code 擴充套件，為開發者提供強大的心智圖功能。它整合 AI 驅動的主題生成、OpenAI API 相容模型、AI 生成內容智慧去重、VS Code 原生檔案系統整合等進階功能，幫助開發者更好地組織與視覺化想法。"
     }
   ],
   "information-dialog.fastmind-title": [
     {
       "type": 0,
-      "value": "Extensão FastMind para VS Code"
+      "value": "FastMind VS Code 擴充套件"
     }
   ],
   "information-dialog.feature-ai": [
     {
       "type": 0,
-      "value": "Geração de tópicos com IA"
+      "value": "AI 驅動主題生成"
     }
   ],
   "information-dialog.feature-api-integration": [
     {
       "type": 0,
-      "value": "Integração com modelos compatíveis com API do OpenAI"
+      "value": "OpenAI API 相容模型整合"
     }
   ],
   "information-dialog.feature-deduplication": [
     {
       "type": 0,
-      "value": "Deduplicação inteligente de conteúdo gerado por IA"
+      "value": "AI 生成內容智慧去重"
     }
   ],
   "information-dialog.feature-vscode-integration": [
     {
       "type": 0,
-      "value": "Integração nativa com o sistema de arquivos do VS Code"
+      "value": "VS Code 原生檔案系統整合"
     }
   ],
   "information-dialog.features-title": [
     {
       "type": 0,
-      "value": "Principais recursos:"
+      "value": "主要功能："
     }
   ],
   "information-dialog.powered-by": [
     {
       "type": 0,
-      "value": "Desenvolvido por"
+      "value": "技術提供"
     }
   ],
   "information-dialog.title": [
     {
       "type": 0,
-      "value": "Informações"
+      "value": "資訊"
     }
   ],
   "layout-selector.accept": [
     {
       "type": 0,
-      "value": "Aceitar"
+      "value": "接受"
     }
   ],
   "layout-selector.cancel": [
     {
       "type": 0,
-      "value": "Cancelar"
+      "value": "取消"
     }
   ],
   "layout-selector.description": [
     {
       "type": 0,
-      "value": "Um layout define como os tópicos são organizados e conectados no seu mapa mental. Escolha o layout que melhor se adapta à estrutura do seu conteúdo."
+      "value": "佈局定義心智圖中主題的組織與連接方式。請選擇最適合您內容結構的佈局。"
     }
   ],
   "layout-selector.title": [
     {
       "type": 0,
-      "value": "Escolher Layout"
+      "value": "選擇佈局"
     }
   ],
   "layout.mindmap.description": [
     {
       "type": 0,
-      "value": "Layout horizontal com ramos equilibrados em ambos os lados. Ideal para mapeamento mental tradicional e brainstorming."
+      "value": "左右平衡的水平佈局。最適合傳統心智圖與腦力激盪。"
     }
   ],
   "layout.mindmap.name": [
     {
       "type": 0,
-      "value": "Mapa Mental"
+      "value": "心智圖"
     }
   ],
   "layout.tree.description": [
     {
       "type": 0,
-      "value": "Hierarquia vertical de cima para baixo. Ótimo para organogramas e estruturas hierárquicas."
+      "value": "由上而下的垂直階層。適合組織圖與階層結構。"
     }
   ],
   "layout.tree.name": [
     {
       "type": 0,
-      "value": "Árvore"
+      "value": "樹狀圖"
     }
   ],
   "link.help_text": [
     {
       "type": 0,
-      "value": "O endereço não é válido"
+      "value": "網址無效"
     }
   ],
   "link.placeholder": [
     {
       "type": 0,
-      "value": "https://www.exemplo.com"
+      "value": "https://www.example.com"
     }
   ],
   "llm-connection-test.api-key": [
     {
       "type": 0,
-      "value": "Chave da API"
+      "value": "API 金鑰"
     }
   ],
   "llm-connection-test.api-key-placeholder": [
     {
       "type": 0,
-      "value": "Sua chave da API"
+      "value": "您的 API 金鑰"
     }
   ],
   "llm-connection-test.api-url": [
     {
       "type": 0,
-      "value": "URL da API"
+      "value": "API 網址"
     }
   ],
   "llm-connection-test.api-url-placeholder": [
@@ -900,55 +904,55 @@
   "llm-connection-test.close": [
     {
       "type": 0,
-      "value": "Fechar"
+      "value": "關閉"
     }
   ],
   "llm-connection-test.configuration": [
     {
       "type": 0,
-      "value": "Configuração"
+      "value": "設定"
     }
   ],
   "llm-connection-test.console-logs": [
     {
       "type": 0,
-      "value": "Abra o console do navegador para logs detalhados"
+      "value": "請開啟瀏覽器主控台查看詳細日誌"
     }
   ],
   "llm-connection-test.description": [
     {
       "type": 0,
-      "value": "Testar conexão com qualquer API compatível com OpenAI"
+      "value": "測試與任何 OpenAI 相容 API 的連線"
     }
   ],
   "llm-connection-test.error-connection-failed": [
     {
       "type": 0,
-      "value": "Falha na conexão"
+      "value": "連線失敗"
     }
   ],
   "llm-connection-test.error-failed-config": [
     {
       "type": 0,
-      "value": "Erro de configuração"
+      "value": "設定錯誤"
     }
   ],
   "llm-connection-test.error-unknown": [
     {
       "type": 0,
-      "value": "Ocorreu um erro desconhecido"
+      "value": "發生未知錯誤"
     }
   ],
   "llm-connection-test.max-tokens": [
     {
       "type": 0,
-      "value": "Máximo de Tokens"
+      "value": "最大 Tokens"
     }
   ],
   "llm-connection-test.model": [
     {
       "type": 0,
-      "value": "Modelo"
+      "value": "模型"
     }
   ],
   "llm-connection-test.model-placeholder": [
@@ -966,61 +970,61 @@
   "llm-connection-test.prompt-placeholder": [
     {
       "type": 0,
-      "value": "Digite seu prompt de teste aqui..."
+      "value": "在此輸入您的測試 Prompt..."
     }
   ],
   "llm-connection-test.response": [
     {
       "type": 0,
-      "value": "Resposta:"
+      "value": "回應："
     }
   ],
   "llm-connection-test.save-configuration": [
     {
       "type": 0,
-      "value": "Salvar Configuração"
+      "value": "儲存設定"
     }
   ],
   "llm-connection-test.temperature": [
     {
       "type": 0,
-      "value": "Temperatura"
+      "value": "溫度"
     }
   ],
   "llm-connection-test.test-connection": [
     {
       "type": 0,
-      "value": "Testar Conexão LLM"
+      "value": "測試 LLM 連線"
     }
   ],
   "llm-connection-test.testing": [
     {
       "type": 0,
-      "value": "Testando..."
+      "value": "測試中..."
     }
   ],
   "llm-connection-test.title": [
     {
       "type": 0,
-      "value": "Teste de Conexão LLM"
+      "value": "LLM 連線測試"
     }
   ],
   "llm-notification.status.completed": [
     {
       "type": 0,
-      "value": "Concluído"
+      "value": "完成"
     }
   ],
   "llm-notification.status.error": [
     {
       "type": 0,
-      "value": "Falhou"
+      "value": "失敗"
     }
   ],
   "llm.task.ai-explainer.description": [
     {
       "type": 0,
-      "value": "Analisando o tópico \""
+      "value": "正在分析主題「"
     },
     {
       "type": 1,
@@ -1028,19 +1032,19 @@
     },
     {
       "type": 0,
-      "value": "\"..."
+      "value": "」..."
     }
   ],
   "llm.task.ai-explainer.title": [
     {
       "type": 0,
-      "value": "Explicador de IA"
+      "value": "AI 解釋器"
     }
   ],
   "llm.task.generate-topics.description": [
     {
       "type": 0,
-      "value": "Gerando tópicos relevantes com base em \""
+      "value": "根據「"
     },
     {
       "type": 1,
@@ -1048,181 +1052,181 @@
     },
     {
       "type": 0,
-      "value": "\" e caminho de contexto..."
+      "value": "」與上下文路徑生成相關主題..."
     }
   ],
   "llm.task.generate-topics.title": [
     {
       "type": 0,
-      "value": "Gerar Tópicos com IA"
+      "value": "AI 生成主題"
     }
   ],
   "model-api-management.active": [
     {
       "type": 0,
-      "value": "ativo"
+      "value": "啟用"
     }
   ],
   "model-api-management.add-configuration": [
     {
       "type": 0,
-      "value": "Adicionar Configuração"
+      "value": "新增設定"
     }
   ],
   "model-api-management.empty-description": [
     {
       "type": 0,
-      "value": "Adicione sua primeira configuração de API LLM para começar"
+      "value": "新增您的第一個 LLM API 設定以開始使用"
     }
   ],
   "model-api-management.no-configurations": [
     {
       "type": 0,
-      "value": "Nenhuma Configuração de API"
+      "value": "尚未設定 API"
     }
   ],
   "model-api-management.switch": [
     {
       "type": 0,
-      "value": "Alternar"
+      "value": "切換"
     }
   ],
   "model-api-management.title": [
     {
       "type": 0,
-      "value": "Gerenciamento de API do Modelo"
+      "value": "模型 API 管理"
     }
   ],
   "model-api-management.update": [
     {
       "type": 0,
-      "value": "Atualizar"
+      "value": "更新"
     }
   ],
   "outline.collapse": [
     {
       "type": 0,
-      "value": "Recolher Tudo"
+      "value": "全部收合"
     }
   ],
   "outline.empty": [
     {
       "type": 0,
-      "value": "Nenhum conteúdo para exibir"
+      "value": "無內容可顯示"
     }
   ],
   "outline.expand": [
     {
       "type": 0,
-      "value": "Expandir Tudo"
+      "value": "全部展開"
     }
   ],
   "outline.has-note": [
     {
       "type": 0,
-      "value": "Tem nota"
+      "value": "有備註"
     }
   ],
   "outline.link": [
     {
       "type": 0,
-      "value": "Link"
+      "value": "連結"
     }
   ],
   "outline.note": [
     {
       "type": 0,
-      "value": "Nota"
+      "value": "備註"
     }
   ],
   "relationship-style-editor.color": [
     {
       "type": 0,
-      "value": "Cor da Relação"
+      "value": "關聯顏色"
     }
   ],
   "relationship-style-editor.dashed-line": [
     {
       "type": 0,
-      "value": "Linha Tracejada"
+      "value": "虛線"
     }
   ],
   "relationship-style-editor.dashed-line-tooltip": [
     {
       "type": 0,
-      "value": "Estilo de linha tracejada"
+      "value": "虛線樣式"
     }
   ],
   "relationship-style-editor.dotted-line": [
     {
       "type": 0,
-      "value": "Linha Pontilhada"
+      "value": "點線"
     }
   ],
   "relationship-style-editor.dotted-line-tooltip": [
     {
       "type": 0,
-      "value": "Estilo de linha pontilhada"
+      "value": "點線樣式"
     }
   ],
   "relationship-style-editor.end-arrow": [
     {
       "type": 0,
-      "value": "Seta Final"
+      "value": "結束箭頭"
     }
   ],
   "relationship-style-editor.end-arrow-tooltip": [
     {
       "type": 0,
-      "value": "Alternar seta no final"
+      "value": "切換結束箭頭"
     }
   ],
   "relationship-style-editor.line-arrows": [
     {
       "type": 0,
-      "value": "Estilo da Linha & Setas"
+      "value": "線條樣式與箭頭"
     }
   ],
   "relationship-style-editor.solid-line": [
     {
       "type": 0,
-      "value": "Linha Sólida"
+      "value": "實線"
     }
   ],
   "relationship-style-editor.solid-line-tooltip": [
     {
       "type": 0,
-      "value": "Estilo de linha sólida"
+      "value": "實線樣式"
     }
   ],
   "relationship-style-editor.start-arrow": [
     {
       "type": 0,
-      "value": "Seta Inicial"
+      "value": "起始箭頭"
     }
   ],
   "relationship-style-editor.start-arrow-tooltip": [
     {
       "type": 0,
-      "value": "Alternar seta no início"
+      "value": "切換起始箭頭"
     }
   ],
   "settings.ai-explainer-title": [
     {
       "type": 0,
-      "value": "Explicador de IA com Prompts Personalizados"
+      "value": "AI 解釋器（支援自訂 Prompt）"
     }
   ],
   "settings.ai-topic-generator-title": [
     {
       "type": 0,
-      "value": "Gerador de Tópicos com IA e Prompts Personalizados"
+      "value": "AI 主題生成器（支援自訂 Prompt）"
     }
   ],
   "settings.current-model": [
     {
       "type": 0,
-      "value": "Modelo Atual: "
+      "value": "目前模型："
     },
     {
       "type": 1,
@@ -1232,559 +1236,559 @@
   "settings.deduplication": [
     {
       "type": 0,
-      "value": "Deduplicação"
+      "value": "去重"
     }
   ],
   "settings.description": [
     {
       "type": 0,
-      "value": "Configure as opções do modelo de IA e personalize prompts para geração de tópicos e explicação de conceitos."
+      "value": "設定 AI 模型參數，自訂主題生成與概念解釋的 Prompt。"
     }
   ],
   "settings.explainer-placeholder": [
     {
       "type": 0,
-      "value": "Digite o prompt personalizado para explicação de conceitos..."
+      "value": "輸入自訂的概念解釋 Prompt..."
     }
   ],
   "settings.model-api-management": [
     {
       "type": 0,
-      "value": "Gerenciamento de API do Modelo"
+      "value": "模型 API 管理"
     }
   ],
   "settings.no-model": [
     {
       "type": 0,
-      "value": "Nenhum modelo configurado"
+      "value": "尚未設定模型"
     }
   ],
   "settings.title": [
     {
       "type": 0,
-      "value": "Configurações"
+      "value": "設定"
     }
   ],
   "settings.topic-generator-placeholder": [
     {
       "type": 0,
-      "value": "Digite o prompt personalizado para geração de tópicos..."
+      "value": "輸入自訂的主題生成 Prompt..."
     }
   ],
   "shortcut-help-pane.action": [
     {
       "type": 0,
-      "value": "Ação"
+      "value": "動作"
     }
   ],
   "shortcut-help-pane.add-child": [
     {
       "type": 0,
-      "value": "Adicionar tópico filho"
+      "value": "新增子主題"
     }
   ],
   "shortcut-help-pane.add-link": [
     {
       "type": 0,
-      "value": "Adicionar link"
+      "value": "新增連結"
     }
   ],
   "shortcut-help-pane.add-note": [
     {
       "type": 0,
-      "value": "Adicionar nota"
+      "value": "新增備註"
     }
   ],
   "shortcut-help-pane.add-sibling": [
     {
       "type": 0,
-      "value": "Adicionar tópico irmão"
+      "value": "新增同層主題"
     }
   ],
   "shortcut-help-pane.cancel-text-changes": [
     {
       "type": 0,
-      "value": "Cancelar alterações de texto"
+      "value": "取消文字變更"
     }
   ],
   "shortcut-help-pane.change-font-bold": [
     {
       "type": 0,
-      "value": "Alterar texto para negrito"
+      "value": "文字變為粗體"
     }
   ],
   "shortcut-help-pane.change-font-italic": [
     {
       "type": 0,
-      "value": "Alterar texto para itálico"
+      "value": "文字變為斜體"
     }
   ],
   "shortcut-help-pane.collapse-children": [
     {
       "type": 0,
-      "value": "Recolher filhos"
+      "value": "收合子節點"
     }
   ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
-      "value": "Excluir tópico"
+      "value": "刪除主題"
     }
   ],
   "shortcut-help-pane.deselect-all-topics": [
     {
       "type": 0,
-      "value": "Desselecionar todos os tópicos"
+      "value": "取消選擇所有主題"
     }
   ],
   "shortcut-help-pane.drag-disconnect": [
     {
       "type": 0,
-      "value": "Desconectar tópico"
+      "value": "斷開主題連接"
     }
   ],
   "shortcut-help-pane.edit-multiline": [
     {
       "type": 0,
-      "value": "Adicionar texto de tópico multilinha"
+      "value": "加入多行主題文字"
     }
   ],
   "shortcut-help-pane.edit-topic": [
     {
       "type": 0,
-      "value": "Editar texto do tópico"
+      "value": "編輯主題文字"
     }
   ],
   "shortcut-help-pane.edit-topic-key": [
     {
       "type": 0,
-      "value": "F2 ou Clique Duplo"
+      "value": "F2 或雙擊"
     }
   ],
   "shortcut-help-pane.expand-by-level": [
     {
       "type": 0,
-      "value": "Expandir tópicos por nível"
+      "value": "按層級展開主題"
     }
   ],
   "shortcut-help-pane.expand-collapse-all": [
     {
       "type": 0,
-      "value": "Expandir/Recolher todos os tópicos"
+      "value": "全部展開／收合"
     }
   ],
   "shortcut-help-pane.navigation": [
     {
       "type": 0,
-      "value": "Navegação"
+      "value": "導覽"
     }
   ],
   "shortcut-help-pane.navigation-keys": [
     {
       "type": 0,
-      "value": "Teclas de seta"
+      "value": "方向鍵"
     }
   ],
   "shortcut-help-pane.outline-view": [
     {
       "type": 0,
-      "value": "Abrir visualização de estrutura"
+      "value": "開啟大綱檢視"
     }
   ],
   "shortcut-help-pane.overwrite-edit-topic": [
     {
       "type": 0,
-      "value": "Substituir texto do tópico"
+      "value": "覆寫主題文字"
     }
   ],
   "shortcut-help-pane.overwrite-edit-topic-key": [
     {
       "type": 0,
-      "value": "Digitar em um tópico selecionado"
+      "value": "在選取的主題上直接輸入"
     }
   ],
   "shortcut-help-pane.redo": [
     {
       "type": 0,
-      "value": "Refazer edição"
+      "value": "重做編輯"
     }
   ],
   "shortcut-help-pane.save-changes": [
     {
       "type": 0,
-      "value": "Salvar alterações"
+      "value": "儲存變更"
     }
   ],
   "shortcut-help-pane.select-all-topics": [
     {
       "type": 0,
-      "value": "Selecionar todos os tópicos"
+      "value": "選取所有主題"
     }
   ],
   "shortcut-help-pane.select-topics": [
     {
       "type": 0,
-      "value": "Selecionar múltiplos tópicos"
+      "value": "選取多個主題"
     }
   ],
   "shortcut-help-pane.select-topics-keys": [
     {
       "type": 0,
-      "value": "Clique do mouse"
+      "value": "滑鼠點擊"
     }
   ],
   "shortcut-help-pane.undo": [
     {
       "type": 0,
-      "value": "Desfazer edição"
+      "value": "復原編輯"
     }
   ],
   "shortcut-help-pane.zoom-in": [
     {
       "type": 0,
-      "value": "Aumentar zoom"
+      "value": "放大"
     }
   ],
   "shortcut-help-pane.zoom-out": [
     {
       "type": 0,
-      "value": "Diminuir zoom"
+      "value": "縮小"
     }
   ],
   "shortcut-help-pane.zoom-to-fit": [
     {
       "type": 0,
-      "value": "Zoom para ajustar"
+      "value": "縮放至適應畫面"
     }
   ],
   "theme-editor.accept": [
     {
       "type": 0,
-      "value": "Aplicar Tema"
+      "value": "套用主題"
     }
   ],
   "theme-editor.cancel": [
     {
       "type": 0,
-      "value": "Cancelar"
+      "value": "取消"
     }
   ],
   "theme-editor.description": [
     {
       "type": 0,
-      "value": "Um tema define o estilo visual do seu mapa mental, incluindo cores, fontes e aparência geral. Escolha um tema que melhor se adeque ao seu conteúdo e público."
+      "value": "主題定義心智圖的視覺風格，包括顏色、字型與整體外觀。請選擇最適合您內容與受眾的主題。"
     }
   ],
   "theme-editor.title": [
     {
       "type": 0,
-      "value": "Escolher Tema"
+      "value": "選擇主題"
     }
   ],
   "theme.classic.description": [
     {
       "type": 0,
-      "value": "Design limpo e profissional com tons de azul. Perfeito para apresentações de negócios e documentos formais."
+      "value": "乾淨專業的藍色調設計。適合商業簡報與正式文件。"
     }
   ],
   "theme.classic.name": [
     {
       "type": 0,
-      "value": "Clássico"
+      "value": "經典"
     }
   ],
   "theme.dark": [
     {
       "type": 0,
-      "value": "Escuro"
+      "value": "深色"
     }
   ],
   "theme.light": [
     {
       "type": 0,
-      "value": "Claro"
+      "value": "淺色"
     }
   ],
   "theme.ocean.description": [
     {
       "type": 0,
-      "value": "Tema inspirado no oceano com variantes claro/escuro. Cores calmas e profissionais perfeitas para projetos de negócios e criativos."
+      "value": "海洋靈感藍色主題，支援明／暗模式。寧靜專業的色彩，適合商業與創意專案。"
     }
   ],
   "theme.ocean.name": [
     {
       "type": 0,
-      "value": "Oceano"
+      "value": "海洋"
     }
   ],
   "theme.robot.description": [
     {
       "type": 0,
-      "value": "Tema verde inspirado em tecnologia. Perfeito para documentação técnica e apresentações futuristas."
+      "value": "科技感綠色主題。適合技術文件與未來感簡報。"
     }
   ],
   "theme.robot.name": [
     {
       "type": 0,
-      "value": "Robô"
+      "value": "機器人"
     }
   ],
   "theme.summer.description": [
     {
       "type": 0,
-      "value": "Tema laranja brilhante e vibrante. Ótimo para projetos criativos e apresentações energéticas."
+      "value": "明亮活潑的橙色主題。適合創意專案與充滿活力的簡報。"
     }
   ],
   "theme.summer.name": [
     {
       "type": 0,
-      "value": "Verão"
+      "value": "夏日"
     }
   ],
   "theme.sunrise.description": [
     {
       "type": 0,
-      "value": "Tema Nascer do Sol com variantes claro/escuro. Cores aprimoradas e contraste para melhor legibilidade."
+      "value": "日出主題，支援明／暗模式。增強色彩與對比度，提升可讀性。"
     }
   ],
   "theme.sunrise.name": [
     {
       "type": 0,
-      "value": "Nascer do Sol"
+      "value": "日出"
     }
   ],
   "theme.switch-to-dark": [
     {
       "type": 0,
-      "value": "Mudar para modo escuro"
+      "value": "切換至深色模式"
     }
   ],
   "theme.switch-to-light": [
     {
       "type": 0,
-      "value": "Mudar para modo claro"
+      "value": "切換至淺色模式"
     }
   ],
   "topic-font-editor.active": [
     {
       "type": 0,
-      "value": "ativo"
+      "value": "啟用"
     }
   ],
   "topic-font-editor.bold": [
     {
       "type": 0,
-      "value": "Negrito"
+      "value": "粗體"
     }
   ],
   "topic-font-editor.bold-tooltip": [
     {
       "type": 0,
-      "value": "Alternar negrito"
+      "value": "切換粗體"
     }
   ],
   "topic-font-editor.decrease-size": [
     {
       "type": 0,
-      "value": "Menor"
+      "value": "減小"
     }
   ],
   "topic-font-editor.decrease-size-tooltip": [
     {
       "type": 0,
-      "value": "Diminuir tamanho da fonte"
+      "value": "縮小字型"
     }
   ],
   "topic-font-editor.font-color": [
     {
       "type": 0,
-      "value": "Cor da Fonte"
+      "value": "文字顏色"
     }
   ],
   "topic-font-editor.font-family": [
     {
       "type": 0,
-      "value": "Família da Fonte"
+      "value": "字型"
     }
   ],
   "topic-font-editor.font-size-style": [
     {
       "type": 0,
-      "value": "Tamanho e Estilo da Fonte"
+      "value": "字型大小與樣式"
     }
   ],
   "topic-font-editor.increase-size": [
     {
       "type": 0,
-      "value": "Maior"
+      "value": "增大"
     }
   ],
   "topic-font-editor.increase-size-tooltip": [
     {
       "type": 0,
-      "value": "Aumentar tamanho da fonte"
+      "value": "放大字型"
     }
   ],
   "topic-font-editor.italic": [
     {
       "type": 0,
-      "value": "Itálico"
+      "value": "斜體"
     }
   ],
   "topic-font-editor.italic-tooltip": [
     {
       "type": 0,
-      "value": "Alternar itálico"
+      "value": "切換斜體"
     }
   ],
   "topic-font-editor.reset-to-default": [
     {
       "type": 0,
-      "value": "Restaurar Padrão"
+      "value": "恢復預設"
     }
   ],
   "topic-note-editor.add-note": [
     {
       "type": 0,
-      "value": "Adicionar Nota"
+      "value": "加入備註"
     }
   ],
   "topic-note-editor.edit-note": [
     {
       "type": 0,
-      "value": "Editar Nota"
+      "value": "編輯備註"
     }
   ],
   "unified-styling.background-color": [
     {
       "type": 0,
-      "value": "Cor de Fundo"
+      "value": "背景顏色"
     }
   ],
   "unified-styling.border-color": [
     {
       "type": 0,
-      "value": "Cor da Borda"
+      "value": "邊框顏色"
     }
   ],
   "unified-styling.border-style": [
     {
       "type": 0,
-      "value": "Estilo da Borda"
+      "value": "邊框樣式"
     }
   ],
   "unified-styling.connection-style": [
     {
       "type": 0,
-      "value": "Estilo da Conexão"
+      "value": "連接樣式"
     }
   ],
   "unified-styling.connector-style": [
     {
       "type": 0,
-      "value": "Estilo do Conector"
+      "value": "連接器樣式"
     }
   ],
   "unified-styling.shape-type": [
     {
       "type": 0,
-      "value": "Tipo de Forma"
+      "value": "形狀類型"
     }
   ],
   "unified-styling.tab.border": [
     {
       "type": 0,
-      "value": "Borda"
+      "value": "邊框"
     }
   ],
   "unified-styling.tab.connector": [
     {
       "type": 0,
-      "value": "Conector"
+      "value": "連接器"
     }
   ],
   "unified-styling.tab.shape": [
     {
       "type": 0,
-      "value": "Forma"
+      "value": "形狀"
     }
   ],
   "visualization-toolbar.tooltip-collapse-all": [
     {
       "type": 0,
-      "value": "Recolher Todos os Nós"
+      "value": "全部收合節點"
     }
   ],
   "visualization-toolbar.tooltip-expand-all": [
     {
       "type": 0,
-      "value": "Expandir Todos os Nós"
+      "value": "全部展開節點"
     }
   ],
   "visualization-toolbar.tooltip-expand-level": [
     {
       "type": 0,
-      "value": "Expandir por Nível"
+      "value": "按層級展開"
     }
   ],
   "visualization-toolbar.tooltip-export": [
     {
       "type": 0,
-      "value": "Exportar"
+      "value": "匯出"
     }
   ],
   "visualization-toolbar.tooltip-info": [
     {
       "type": 0,
-      "value": "Informações"
+      "value": "資訊"
     }
   ],
   "visualization-toolbar.tooltip-keyboard": [
     {
       "type": 0,
-      "value": "Atalhos de Teclado"
+      "value": "鍵盤快捷鍵"
     }
   ],
   "visualization-toolbar.tooltip-layout": [
     {
       "type": 0,
-      "value": "Alterar Layout"
+      "value": "變更佈局"
     }
   ],
   "visualization-toolbar.tooltip-outline-view": [
     {
       "type": 0,
-      "value": "Visualização de Estrutura"
+      "value": "大綱檢視"
     }
   ],
   "visualization-toolbar.tooltip-save": [
     {
       "type": 0,
-      "value": "Salvar"
+      "value": "儲存"
     }
   ],
   "visualization-toolbar.tooltip-theme-toggle": [
     {
       "type": 0,
-      "value": "Alternar tema"
+      "value": "切換主題"
     }
   ],
   "visualization-toolbar.tooltip-zoom-in": [
     {
       "type": 0,
-      "value": "Aumentar Zoom"
+      "value": "放大"
     }
   ],
   "visualization-toolbar.tooltip-zoom-out": [
     {
       "type": 0,
-      "value": "Diminuir Zoom"
+      "value": "縮小"
     }
   ],
   "visualization-toolbar.tooltip-zoom-to-fit": [
     {
       "type": 0,
-      "value": "Zoom para Ajustar"
+      "value": "縮放至適應畫面"
     }
   ]
 }

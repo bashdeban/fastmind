@@ -331,7 +331,7 @@ export function buildVisualizationToolbarConfig(
             if (model) {
               const exportService = createExportService(model.getDesigner());
               const mindmapTitle = model.getDesigner()?.getMindmap()?.getId() || 'mindmap';
-              
+
               const handleExport = async (options: ExportOptions) => {
                 try {
                   await exportService.export(options);
@@ -437,11 +437,11 @@ export function buildVisualizationToolbarConfig(
           tooltip: intl.formatMessage(
             themeMode === 'light'
               ? {
-                id: 'visualization-toolbar.tooltip-switch-to-dark',
+                id: 'theme.switch-to-dark',
                 defaultMessage: 'Switch to dark mode',
               }
               : {
-                id: 'visualization-toolbar.tooltip-switch-to-light',
+                id: 'theme.switch-to-light',
                 defaultMessage: 'Switch to light mode',
               },
           ),

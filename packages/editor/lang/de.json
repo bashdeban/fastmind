@@ -1,36 +1,87 @@
 {
-  "editor.try-welcome": {
-    "defaultMessage": "Dieser Ausgabebereich zeigt einige der Mindmap-Editor-Funktionen!"
-  },
-  "editor.try-welcome-description": {
-    "defaultMessage": "Melden Sie sich an, um kostenlos eine unbegrenzte Anzahl von Mindmaps zu erstellen, zu teilen und zu veröffentlichen."
-  },
-  "editor.try-welcome-mobile": {
-    "defaultMessage": "Diese Edition zeigt einige der Mindmap-Funktionen!"
-  },
-  "editor.try-welcome-description-mobile": {
-    "defaultMessage": "Melden Sie sich an, um kostenlos eine unbegrenzte Anzahl von Mindmaps zu erstellen, zu teilen und zu veröffentlichen. Eingeschränkte Funktionen der Mindmap-Edition werden auf Mobilgeräten unterstützt. Verwenden Sie den Desktop-Browser für vollständige Editorfunktionen."
-  },
-  "editor.edit-description-mobile": {
-    "defaultMessage": "Eingeschränkte Funktionen der Mindmap-Edition werden auf Mobilgeräten unterstützt. Verwenden Sie den Desktop-Browser für vollständige Editorfunktionen."
-  },
   "action.accept": {
     "defaultMessage": "Akzeptieren"
   },
+  "action.cancel": {
+    "defaultMessage": "Abbrechen"
+  },
+  "action.delete": {
+    "defaultMessage": "Löschen"
+  },
+  "ai-explainer.error-analyze": {
+    "defaultMessage": "AI-Erklärungsanalyse fehlgeschlagen:"
+  },
+  "ai-explainer.title": {
+    "defaultMessage": "AI-Erklärer"
+  },
+  "ai-explainer.description": {
+    "defaultMessage": "Analysiere Thema „{currentTopic}“..."
+  },
+  "ai-topic-generator.add-to-mindmap": {
+    "defaultMessage": "Zur Mindmap hinzufügen"
+  },
+  "ai-topic-generator.cancel": {
+    "defaultMessage": "Abbrechen"
+  },
+  "ai-topic-generator.count-label": {
+    "defaultMessage": "Anzahl zu generierender Themen: {count}"
+  },
+  "ai-topic-generator.custom-prompt-helper": {
+    "defaultMessage": "Geben Sie zusätzlichen Kontext oder Anforderungen für die KI-Generierung an"
+  },
+  "ai-topic-generator.custom-prompt-label": {
+    "defaultMessage": "Benutzerdefinierte Eingabeaufforderung (optional)"
+  },
+  "ai-topic-generator.custom-prompt-placeholder": {
+    "defaultMessage": "z. B.: Fokus auf technische Umsetzungsaspekte"
+  },
+  "ai-topic-generator.description": {
+    "defaultMessage": "Verwandte Unterthemen basierend auf <strong>{topicText}</strong> generieren"
+  },
+  "ai-topic-generator.error-add": {
+    "defaultMessage": "Fehler beim Hinzufügen der Themen"
+  },
+  "ai-topic-generator.error-generate": {
+    "defaultMessage": "Fehler beim Generieren der Themen"
+  },
+  "ai-topic-generator.generating": {
+    "defaultMessage": "Themen werden generiert, bitte warten..."
+  },
+  "ai-topic-generator.preview-title": {
+    "defaultMessage": "Vorschau der generierten Themen:"
+  },
+  "ai-topic-generator.regenerate": {
+    "defaultMessage": "Neu generieren"
+  },
+  "ai-topic-generator.title": {
+    "defaultMessage": "KI-Themengenerator"
+  },
   "appbar.back-to-map-list": {
-    "defaultMessage": "Zurück zur Mindmap-Liste"
+    "defaultMessage": "Zurück zur Kartenliste"
   },
   "appbar.button-signup": {
-    "defaultMessage": "Anmelden"
+    "defaultMessage": "Registrieren"
+  },
+  "appbar.error-saving-title": {
+    "defaultMessage": "Fehler beim Speichern des Titels:"
+  },
+  "appbar.logo-aria-label": {
+    "defaultMessage": "WiseMapping"
   },
   "appbar.shared-button": {
     "defaultMessage": "Teilen"
+  },
+  "appbar.title-renamed": {
+    "defaultMessage": "Mindmap wurde umbenannt"
+  },
+  "appbar.tooltip-change-layout": {
+    "defaultMessage": "Layout"
   },
   "appbar.tooltip-export": {
     "defaultMessage": "Exportieren"
   },
   "appbar.tooltip-history": {
-    "defaultMessage": "Historie"
+    "defaultMessage": "Änderungsverlauf"
   },
   "appbar.tooltip-info": {
     "defaultMessage": "Informationen"
@@ -44,353 +95,83 @@
   "appbar.tooltip-redo": {
     "defaultMessage": "Wiederholen"
   },
+  "appbar.tooltip-rename": {
+    "defaultMessage": "Umbenennen"
+  },
   "appbar.tooltip-save": {
     "defaultMessage": "Speichern"
   },
+  "appbar.tooltip-settings": {
+    "defaultMessage": "Einstellungen"
+  },
   "appbar.tooltip-shared": {
-    "defaultMessage": "Teilen mit anderen"
+    "defaultMessage": "Zur Zusammenarbeit freigeben"
   },
   "appbar.tooltip-signup": {
-    "defaultMessage": "Anmelden"
+    "defaultMessage": "Registrieren"
   },
   "appbar.tooltip-starred": {
-    "defaultMessage": "Favoriten"
+    "defaultMessage": "Favorisiert"
+  },
+  "appbar.tooltip-theme": {
+    "defaultMessage": "Design"
+  },
+  "appbar.tooltip-theme-toggle": {
+    "defaultMessage": "Design umschalten"
   },
   "appbar.tooltip-undo": {
     "defaultMessage": "Rückgängig"
   },
-  "outline.empty": {
-    "defaultMessage": "Kein Inhalt zum Anzeigen"
-  },
-  "outline.expand": {
-    "defaultMessage": "Erweitern"
-  },
-  "outline.collapse": {
-    "defaultMessage": "Einklappen"
-  },
-  "outline.has-note": {
-    "defaultMessage": "Hat Notiz"
-  },
-  "outline.link": {
-    "defaultMessage": "Link"
-  },
-  "outline.note": {
-    "defaultMessage": "Notiz"
-  },
-  "link.help_text": {
-    "defaultMessage": "Ungültige Adresse"
-  },
-  "link.placeholder": {
-    "defaultMessage": "https://www.beispiel.de"
-  },
-  "editor-panel.note-panel-title": {
-    "defaultMessage": "Notiz"
-  },
-  "editor-panel.icon-title": {
-    "defaultMessage": "Symbol"
-  },
-  "editor-panel.link-panel-title": {
-    "defaultMessage": "Verknüpfung"
-  },
-  "zoom-panel.tooltip-keyboard": {
-    "defaultMessage": "Tastatürkürzel"
-  },
-  "zoom-panel.tooltip-zoom-in": {
-    "defaultMessage": "Vergrößern"
-  },
-  "zoom-panel.tooltip-zoom-out": {
-    "defaultMessage": "Verkleinern"
-  },
-  "zoom-panel.tooltip-zoom-to-fit": {
-    "defaultMessage": "Einpassen"
-  },
-  "editor-panel.tooltip-theme": {
-    "defaultMessage": "Thema"
-  },
-  "editor-panel.theme-title": {
-    "defaultMessage": "Thema"
-  },
-  "editor-panel.tooltip-add-icon": {
-    "defaultMessage": "Symbol hinzufügen"
-  },
-  "editor-panel.tooltip-add-link": {
-    "defaultMessage": "Verknüpfung hinzufügen"
-  },
-  "editor-panel.tooltip-add-note": {
-    "defaultMessage": "Notiz hinzufügen"
-  },
-  "editor-panel.tooltip-add-relationship": {
-    "defaultMessage": "Beziehung hinzufügen"
-  },
-  "editor-panel.tooltip-add-topic": {
-    "defaultMessage": "Thema hinzufügen"
-  },
-  "editor-panel.tooltip-delete-topic": {
-    "defaultMessage": "Thema löschen"
-  },
-  "editor-panel.tooltip-topic-border-color": {
-    "defaultMessage": "Randfarbe"
-  },
-  "editor-panel.tooltip-topic-font-bigger": {
-    "defaultMessage": "Größer"
-  },
-  "editor-panel.tooltip-topic-font-bold": {
-    "defaultMessage": "Fett"
-  },
-  "editor-panel.tooltip-topic-font-color": {
-    "defaultMessage": "Farbe"
-  },
-  "editor-panel.tooltip-topic-font-italic": {
-    "defaultMessage": "Kursiv"
-  },
-  "editor-panel.tooltip-topic-font-smaller": {
-    "defaultMessage": "Kleiner"
-  },
-  "editor-panel.tooltip-topic-font-style": {
-    "defaultMessage": "Schriftstil"
-  },
-  "editor-panel.tooltip-topic-share-ellipse": {
-    "defaultMessage": "Ellipsenform"
-  },
-  "editor-panel.tooltip-topic-share-line": {
-    "defaultMessage": "Linienform"
-  },
-  "editor-panel.tooltip-topic-share-rectangle": {
-    "defaultMessage": "Rechteckform"
-  },
-  "editor-panel.tooltip-topic-share-rounded": {
-    "defaultMessage": "Rechteckform abgerundet"
-  },
-  "editor-panel.tooltip-topic-style": {
-    "defaultMessage": "Themenstil"
-  },
-  "shortcut-help-pane.action": {
-    "defaultMessage": "Aktion"
-  },
-  "shortcut-help-pane.add-child": {
-    "defaultMessage": "Kinderthema hinzufügen"
-  },
-  "shortcut-help-pane.add-link": {
-    "defaultMessage": "Verknüpfung hinzufügen"
-  },
-  "shortcut-help-pane.add-note": {
-    "defaultMessage": "Notiz hinzufügen"
-  },
-  "shortcut-help-pane.add-sibling": {
-    "defaultMessage": "Geschwisterthema hinzufügen"
-  },
-  "shortcut-help-pane.cancel-text-changes": {
-    "defaultMessage": "Textänderungen verwerfen"
-  },
-  "shortcut-help-pane.change-font-bold": {
-    "defaultMessage": "Text auf fett ändern"
-  },
-  "shortcut-help-pane.change-font-italic": {
-    "defaultMessage": "Text auf kursiv ändern"
-  },
-  "shortcut-help-pane.collapse-children": {
-    "defaultMessage": "Kinder einfalten"
-  },
-  "shortcut-help-pane.copy-and-text": {
-    "defaultMessage": "Themen kopieren und einfügen/Bild der Mindmap in Zwischenablage kopieren"
-  },
-  "shortcut-help-pane.delete-topic": {
-    "defaultMessage": "Thema löschen"
-  },
-  "shortcut-help-pane.deselect-all-topics": {
-    "defaultMessage": "Alle Themen abwählen"
-  },
-  "shortcut-help-pane.edit-multiline": {
-    "defaultMessage": "Thementext mehrzeilig hinzufügen"
-  },
-  "shortcut-help-pane.edit-topic": {
-    "defaultMessage": "Thementext bearbeiten"
-  },
-  "shortcut-help-pane.edit-topic-key": {
-    "defaultMessage": "F2 oder Doppelklick"
-  },
-  "shortcut-help-pane.navigation": {
-    "defaultMessage": "Navigation"
-  },
-  "shortcut-help-pane.navigation-keys": {
-    "defaultMessage": "Pfeiltasten"
-  },
-  "shortcut-help-pane.redo": {
-    "defaultMessage": "Änderung wiederherstellen"
-  },
-  "shortcut-help-pane.save-changes": {
-    "defaultMessage": "Änderungen speichern"
-  },
-  "shortcut-help-pane.select-all-topics": {
-    "defaultMessage": "Alle Themen auswählen"
-  },
-  "shortcut-help-pane.select-topics": {
-    "defaultMessage": "Mehrere Themen auswählen"
-  },
-  "shortcut-help-pane.select-topics-keys": {
-    "defaultMessage": "Mausklick"
-  },
-  "shortcut-help-pane.undo": {
-    "defaultMessage": "Änderung rückgängig machen"
-  },
-  "icon-picker.show-images": {
-    "defaultMessage": "Bilder anzeigen"
-  },
-  "editor-panel.tooltip-connection-style-polyline": {
-    "defaultMessage": "Linie eckig"
-  },
-  "editor-panel.tooltip-connection-style-polyline-curved": {
-    "defaultMessage": "Linie abgeschrägt"
-  },
-  "shortcut-help-pane.overwrite-edit-topic": {
-    "defaultMessage": "Thementext überschreiben"
-  },
-  "shortcut-help-pane.overwrite-edit-topic-key": {
-    "defaultMessage": "Ausgewähltes Thema durch tippen überschreiben"
-  },
-  "editor-panel.tooltip-connection-color": {
-    "defaultMessage": "Farbe"
-  },
-  "editor-panel.tooltip-connection-color-default": {
-    "defaultMessage": "Standardfarbe"
-  },
-  "editor-panel.tooltip-connection-style": {
-    "defaultMessage": "Verbindungsstil"
-  },
-  "editor-panel.tooltip-connection-style-curved-thick": {
-    "defaultMessage": "Kurve breit"
-  },
-  "editor-panel.tooltip-connection-style-curved-thin": {
-    "defaultMessage": "Kurve schmal"
-  },
-  "editor-panel.tooltip-topic-border-color-default": {
-    "defaultMessage": "Standardrandfarbe"
-  },
-  "editor-panel.tooltip-topic-fill-color": {
-    "defaultMessage": "Füllfarbe"
-  },
-  "editor-panel.tooltip-topic-fill-color-default": {
-    "defaultMessage": "Standardfüllfarbe"
-  },
-  "action.delete": {
-    "defaultMessage": "Löschen"
-  },
-  "editor-panel.tooltip-topic-font-color-default": {
-    "defaultMessage": "Standardfarbe"
-  },
-  "shortcut-help-pane.drag-disconnect": {
-    "defaultMessage": "Thema isolieren"
-  },
-  "zoom-panel.tooltip-collapse-all": {
-    "defaultMessage": "Alle Knoten reduzieren"
-  },
-  "zoom-panel.tooltip-expand-all": {
-    "defaultMessage": "Alle Knoten erweitern"
-  },
-  "zoom-panel.tooltip-outline-view": {
-    "defaultMessage": "Gliederungsansicht"
-  },
-  "editor-panel.tooltip-canvas-style": {
-    "defaultMessage": "Hintergrund"
-  },
-  "editor-panel.canvas-style-title": {
-    "defaultMessage": "Hintergrund"
-  },
-  "canvas-style.title": {
-    "defaultMessage": "Hintergrund"
-  },
-  "canvas-style.colors": {
-    "defaultMessage": "Farben"
-  },
   "canvas-style.background-color": {
     "defaultMessage": "Hintergrundfarbe"
   },
-  "canvas-style.background-pattern": {
-    "defaultMessage": "Hintergrundmuster"
+  "canvas-style.background-style": {
+    "defaultMessage": "Hintergrundstil"
   },
-  "canvas-style.pattern-solid": {
-    "defaultMessage": "Einfarbig"
-  },
-  "canvas-style.pattern-grid": {
-    "defaultMessage": "Rasterlinien"
-  },
-  "canvas-style.pattern-dots": {
-    "defaultMessage": "Punkte"
-  },
-  "canvas-style.pattern-none": {
-    "defaultMessage": "Keine"
-  },
-  "canvas-style.grid-style": {
-    "defaultMessage": "Rasterstil"
-  },
-  "canvas-style.grid-size-xs": {
-    "defaultMessage": "Sehr Klein"
-  },
-  "canvas-style.grid-size-s": {
-    "defaultMessage": "Klein"
-  },
-  "canvas-style.grid-size-m": {
-    "defaultMessage": "Mittel"
+  "canvas-style.grid-color": {
+    "defaultMessage": "Gitterfarbe"
   },
   "canvas-style.grid-size-l": {
     "defaultMessage": "Groß"
   },
+  "canvas-style.grid-size-m": {
+    "defaultMessage": "Mittel"
+  },
+  "canvas-style.grid-size-s": {
+    "defaultMessage": "Klein"
+  },
   "canvas-style.grid-size-xl": {
-    "defaultMessage": "Sehr Groß"
+    "defaultMessage": "Extra groß"
   },
-  "canvas-style.grid-color": {
-    "defaultMessage": "Rasterfarbe"
+  "canvas-style.grid-size-xs": {
+    "defaultMessage": "Extra klein"
   },
-  "canvas-style.preview": {
-    "defaultMessage": "Vorschau"
+  "canvas-style.grid-style": {
+    "defaultMessage": "Gittergröße"
   },
-  "canvas-style.reset": {
-    "defaultMessage": "Zurücksetzen"
+  "canvas-style.pattern-default-tooltip": {
+    "defaultMessage": "Standard – Alle Stile werden automatisch basierend auf dem Design ausgewählt"
   },
-  "canvas-style.apply": {
-    "defaultMessage": "Anwenden"
+  "canvas-style.pattern-dots": {
+    "defaultMessage": "Punkte"
   },
-  "theme.dark": {
-    "defaultMessage": "Dunkel"
+  "canvas-style.pattern-grid": {
+    "defaultMessage": "Gitter"
   },
-  "theme.light": {
-    "defaultMessage": "Hell"
+  "canvas-style.pattern-solid": {
+    "defaultMessage": "Einfarbig"
   },
-  "theme.toggle": {
-    "defaultMessage": "Design Wechseln"
+  "canvas-style.tab-color": {
+    "defaultMessage": "Farbe"
   },
-  "rich-text-editor.insert-link": {
-    "defaultMessage": "Link Einfügen"
+  "canvas-style.tab-grid": {
+    "defaultMessage": "Gitterfarbe"
   },
-  "rich-text-editor.insert-icon": {
-    "defaultMessage": "Symbol Einfügen"
+  "color-picker.color": {
+    "defaultMessage": "Farbe"
   },
-  "rich-text-editor.bold": {
-    "defaultMessage": "Fett"
-  },
-  "rich-text-editor.italic": {
-    "defaultMessage": "Kursiv"
-  },
-  "rich-text-editor.underline": {
-    "defaultMessage": "Unterstrichen"
-  },
-  "rich-text-editor.strikethrough": {
-    "defaultMessage": "Durchgestrichen"
-  },
-  "rich-text-editor.bullet-list": {
-    "defaultMessage": "Aufzählungsliste"
-  },
-  "rich-text-editor.numbered-list": {
-    "defaultMessage": "Nummerierte Liste"
-  },
-  "image-icon-tab.icon-found": {
-    "defaultMessage": "Symbol gefunden"
-  },
-  "image-icon-tab.icons-found": {
-    "defaultMessage": "Symbole gefunden"
-  },
-  "image-icon-tab.icons": {
-    "defaultMessage": "Symbole"
+  "color-picker.default-color": {
+    "defaultMessage": "Standardfarbe"
   },
   "common.close": {
     "defaultMessage": "Schließen"
@@ -407,92 +188,347 @@
   "editor-panel.font-family-mixed": {
     "defaultMessage": "Gemischt"
   },
-  "emoji-picker.search-placeholder": {
-    "defaultMessage": "Emojis suchen..."
+  "editor-panel.note-panel-title": {
+    "defaultMessage": "Notiz"
+  },
+  "editor-panel.tooltip-add-icon": {
+    "defaultMessage": "Symbol hinzufügen"
+  },
+  "editor-panel.tooltip-add-link": {
+    "defaultMessage": "Link hinzufügen"
+  },
+  "editor-panel.tooltip-add-note": {
+    "defaultMessage": "Notiz hinzufügen"
+  },
+  "editor-panel.tooltip-add-relationship": {
+    "defaultMessage": "Beziehung hinzufügen"
+  },
+  "editor-panel.tooltip-add-topic": {
+    "defaultMessage": "Thema hinzufügen"
   },
   "editor-panel.tooltip-add-topic-image": {
     "defaultMessage": "Themenbild hinzufügen"
   },
-  "editor-panel.topic-image-title": {
-    "defaultMessage": "Themenbild"
+  "editor-panel.tooltip-ai-explainer": {
+    "defaultMessage": "AI-Erklärer"
   },
-  "app-bar-title": {
-    "defaultMessage": "Mindmap-Editor"
+  "editor-panel.tooltip-ai-topic-generator": {
+    "defaultMessage": "KI-Themengenerator"
   },
-  "appbar.error-saving-title": {
-    "defaultMessage": "Fehler beim Speichern"
+  "editor-panel.tooltip-canvas-style": {
+    "defaultMessage": "Hintergrund"
   },
-  "appbar.logo-aria-label": {
-    "defaultMessage": "WiseMapping Logo"
-  },
-  "appbar.theme-title": {
-    "defaultMessage": "Thema"
-  },
-  "appbar.title-renamed": {
-    "defaultMessage": "Mindmap umbenannt"
-  },
-  "appbar.tooltip-rename": {
-    "defaultMessage": "Umbenennen"
-  },
-  "appbar.tooltip-theme": {
-    "defaultMessage": "Thema"
-  },
-  "classic": {
-    "defaultMessage": "Klassisch"
-  },
-  "demo-simple-select": {
-    "defaultMessage": "Auswählen"
-  },
-  "divider": {
-    "defaultMessage": "Trennlinie"
-  },
-  "editor-panel.tooltip-connection-style-arc": {
-    "defaultMessage": "Bogen"
-  },
-  "editor-panel.tooltip-relationship-arrow-end": {
-    "defaultMessage": "Endpfeil"
-  },
-  "editor-panel.tooltip-relationship-arrow-start": {
-    "defaultMessage": "Startpfeil"
-  },
-  "editor-panel.tooltip-relationship-color": {
-    "defaultMessage": "Farbe"
-  },
-  "editor-panel.tooltip-relationship-color-default": {
-    "defaultMessage": "Standardfarbe"
-  },
-  "editor-panel.tooltip-relationship-stroke-dashed": {
-    "defaultMessage": "Gestrichelte Linie"
-  },
-  "editor-panel.tooltip-relationship-stroke-dotted": {
-    "defaultMessage": "Gepunktete Linie"
-  },
-  "editor-panel.tooltip-relationship-stroke-solid": {
-    "defaultMessage": "Durchgezogene Linie"
+  "editor-panel.tooltip-delete-topic": {
+    "defaultMessage": "Thema löschen"
   },
   "editor-panel.tooltip-relationship-style": {
     "defaultMessage": "Beziehungsstil"
   },
+  "editor-panel.tooltip-topic-font-style": {
+    "defaultMessage": "Schriftstil"
+  },
   "editor-panel.tooltip-unified-styling": {
-    "defaultMessage": "Thema- und Verbindungsstil"
+    "defaultMessage": "Thema & Verbindungen stylen"
   },
-  "color-picker.color": {
-    "defaultMessage": "Farbe"
+  "editor.edit-description-mobile": {
+    "defaultMessage": "Auf Mobilgeräten sind nur eingeschränkte Bearbeitungsfunktionen verfügbar. Verwenden Sie einen Desktop-Browser für alle Editor-Funktionen."
   },
-  "color-picker.default-color": {
-    "defaultMessage": "Standardfarbe"
+  "editor.try-welcome": {
+    "defaultMessage": "Dieser Bearbeitungsbereich zeigt einige Funktionen des Mindmap-Editors!"
+  },
+  "editor.try-welcome-description": {
+    "defaultMessage": "Registrieren Sie sich, um unbegrenzt viele Mindmaps kostenlos zu erstellen, zu teilen und zu veröffentlichen."
+  },
+  "editor.try-welcome-description-mobile": {
+    "defaultMessage": "Registrieren Sie sich, um unbegrenzt viele Mindmaps kostenlos zu erstellen, zu teilen und zu veröffentlichen. Auf Mobilgeräten sind nur eingeschränkte Bearbeitungsfunktionen verfügbar. Verwenden Sie einen Desktop-Browser für alle Funktionen."
+  },
+  "editor.try-welcome-mobile": {
+    "defaultMessage": "Dieser Bearbeitungsbereich zeigt einige Funktionen des Mindmap-Editors!"
+  },
+  "emoji-picker.search-placeholder": {
+    "defaultMessage": "Emojis suchen..."
+  },
+  "export.dialog.cancel": {
+    "defaultMessage": "Abbrechen"
+  },
+  "export.dialog.clipboard-success": {
+    "defaultMessage": "Inhalt wurde in die Zwischenablage kopiert!"
+  },
+  "export.dialog.error-generic": {
+    "defaultMessage": "Export fehlgeschlagen, bitte versuchen Sie es später erneut."
+  },
+  "export.dialog.export": {
+    "defaultMessage": "Exportieren"
+  },
+  "export.dialog.exporting": {
+    "defaultMessage": "Exportiere..."
+  },
+  "export.dialog.title": {
+    "defaultMessage": "Mindmap exportieren"
+  },
+  "export.format.md.description": {
+    "defaultMessage": "Markdown-Format – Geeignet für Dokumente und Versionsverwaltung, wird von GitHub und anderen Plattformen unterstützt"
+  },
+  "export.format.recommended": {
+    "defaultMessage": "Empfohlen"
+  },
+  "export.format.svg.description": {
+    "defaultMessage": "Skalierbare Vektorgrafik – Vektorgrafik, unendlich skalierbar, kleine Dateigröße"
+  },
+  "export.format.wxml.description": {
+    "defaultMessage": "WiseMapping XML – Natürliches Format, behält alle Bearbeitungsfunktionen bei, kann erneut importiert werden"
+  },
+  "icon-collection.border.dashed": {
+    "defaultMessage": "Gestrichelt"
+  },
+  "icon-collection.border.default": {
+    "defaultMessage": "Standard"
+  },
+  "icon-collection.border.dotted": {
+    "defaultMessage": "Gepunktet"
+  },
+  "icon-collection.border.solid": {
+    "defaultMessage": "Durchgezogen"
+  },
+  "icon-collection.connection.arc": {
+    "defaultMessage": "Bogen"
+  },
+  "icon-collection.connection.arc-tooltip": {
+    "defaultMessage": "Kreisbogen-Verbindung – Perfekt für radiale Layouts und organischen Fluss"
+  },
+  "icon-collection.connection.curved-polyline": {
+    "defaultMessage": "Gebogene Polylinie"
+  },
+  "icon-collection.connection.curved-polyline-tooltip": {
+    "defaultMessage": "Mehrsegmentige Linie mit weichen Ecken – Ideal für strukturierte Layouts und klare Pfade"
+  },
+  "icon-collection.connection.default": {
+    "defaultMessage": "Standard"
+  },
+  "icon-collection.connection.default-tooltip": {
+    "defaultMessage": "Standard – Verbindungsstil wird automatisch basierend auf dem Design ausgewählt"
+  },
+  "icon-collection.connection.organic-curved": {
+    "defaultMessage": "Organisch gebogen"
+  },
+  "icon-collection.connection.organic-curved-tooltip": {
+    "defaultMessage": "Handgezeichneter Stil mit dramatischen Kurven – Perfekt für kreative und ausdrucksstarke Mindmaps"
+  },
+  "icon-collection.connection.simple-polyline": {
+    "defaultMessage": "Einfache Polylinie"
+  },
+  "icon-collection.connection.simple-polyline-tooltip": {
+    "defaultMessage": "Direkte gerade Verbindung – Sauberer und minimalistischer Stil für einfache Beziehungen"
+  },
+  "icon-collection.connection.thick-curved": {
+    "defaultMessage": "Dicke Kurve"
+  },
+  "icon-collection.connection.thick-curved-tooltip": {
+    "defaultMessage": "Dicke gebogene Linie mit weichen Bézier-Kurven – Gut zum Hervorheben von Hauptzweigen"
+  },
+  "icon-collection.connection.thin-curved": {
+    "defaultMessage": "Dünne Kurve"
+  },
+  "icon-collection.connection.thin-curved-tooltip": {
+    "defaultMessage": "Dünne gebogene Linie mit eleganten Bézier-Kurven – Ideal für detaillierte oder dichte Mindmaps"
+  },
+  "icon-collection.default-tooltip": {
+    "defaultMessage": "Standard – Alle Stile werden automatisch basierend auf dem Design ausgewählt"
+  },
+  "icon-collection.shape.default": {
+    "defaultMessage": "Standard"
+  },
+  "icon-collection.shape.ellipse": {
+    "defaultMessage": "Ellipse"
+  },
+  "icon-collection.shape.line": {
+    "defaultMessage": "Linie"
+  },
+  "icon-collection.shape.none": {
+    "defaultMessage": "Keine"
+  },
+  "icon-collection.shape.none-tooltip": {
+    "defaultMessage": "Keine – Kein sichtbarer Formhintergrund"
+  },
+  "icon-collection.shape.rectangle": {
+    "defaultMessage": "Rechteck"
+  },
+  "icon-collection.shape.rounded": {
+    "defaultMessage": "Abgerundet"
+  },
+  "icon-picker.emojis": {
+    "defaultMessage": "Emojis"
+  },
+  "icon-picker.icons": {
+    "defaultMessage": "Symbolgalerie"
+  },
+  "icon-picker.show-images": {
+    "defaultMessage": "Bilder anzeigen"
+  },
+  "information-dialog.close": {
+    "defaultMessage": "Schließen"
+  },
+  "information-dialog.fastmind-description": {
+    "defaultMessage": "FastMind ist eine VS Code-Erweiterung basierend auf WiseMapping, die leistungsstarke Mindmapping-Funktionen für Entwickler bietet. Sie integriert KI-gestützte Themengenerierung, OpenAI-API-kompatible Modellintegration, intelligente Deduplizierung von KI-generierten Inhalten, native VS Code-Dateisystemintegration und weitere fortschrittliche Funktionen."
+  },
+  "information-dialog.fastmind-title": {
+    "defaultMessage": "FastMind VS Code Erweiterung"
+  },
+  "information-dialog.feature-ai": {
+    "defaultMessage": "KI-gestützte Themengenerierung"
+  },
+  "information-dialog.feature-api-integration": {
+    "defaultMessage": "OpenAI-API-kompatible Modellintegration"
+  },
+  "information-dialog.feature-deduplication": {
+    "defaultMessage": "Intelligente Deduplizierung von KI-Inhalten"
+  },
+  "information-dialog.feature-vscode-integration": {
+    "defaultMessage": "Native VS Code-Dateisystemintegration"
+  },
+  "information-dialog.features-title": {
+    "defaultMessage": "Hauptfunktionen:"
+  },
+  "information-dialog.powered-by": {
+    "defaultMessage": "Betrieben von"
+  },
+  "information-dialog.title": {
+    "defaultMessage": "Informationen"
+  },
+  "layout-selector.accept": {
+    "defaultMessage": "Akzeptieren"
+  },
+  "layout-selector.cancel": {
+    "defaultMessage": "Abbrechen"
+  },
+  "layout-selector.description": {
+    "defaultMessage": "Ein Layout definiert, wie Themen in Ihrer Mindmap organisiert und verbunden werden. Wählen Sie das Layout, das am besten zu Ihrer Inhaltsstruktur passt."
+  },
+  "layout-selector.title": {
+    "defaultMessage": "Layout wählen"
+  },
+  "layout.mindmap.description": {
+    "defaultMessage": "Horizontales Layout mit ausgeglichenen Ästen auf beiden Seiten. Ideal für klassisches Mindmapping und Brainstorming."
+  },
+  "layout.mindmap.name": {
+    "defaultMessage": "Mindmap"
+  },
+  "layout.tree.description": {
+    "defaultMessage": "Vertikale Hierarchie von oben nach unten. Perfekt für Organigramme und hierarchische Strukturen."
+  },
+  "layout.tree.name": {
+    "defaultMessage": "Baum"
+  },
+  "link.help_text": {
+    "defaultMessage": "Adresse ist nicht gültig"
+  },
+  "link.placeholder": {
+    "defaultMessage": "https://www.beispiel.de"
+  },
+  "llm-connection-test.api-key": {
+    "defaultMessage": "API-Schlüssel"
+  },
+  "llm-connection-test.api-key-placeholder": {
+    "defaultMessage": "Ihr API-Schlüssel"
+  },
+  "llm-connection-test.api-url": {
+    "defaultMessage": "API-URL"
+  },
+  "llm-connection-test.api-url-placeholder": {
+    "defaultMessage": "https://api.openai.com/v1/chat/completions"
+  },
+  "llm-connection-test.configuration": {
+    "defaultMessage": "Konfiguration"
+  },
+  "llm-connection-test.description": {
+    "defaultMessage": "Verbindung zu jeder OpenAI-kompatiblen API testen"
+  },
+  "llm-connection-test.error-connection-failed": {
+    "defaultMessage": "Verbindung fehlgeschlagen"
+  },
+  "llm-connection-test.error-failed-config": {
+    "defaultMessage": "Konfigurationsfehler"
+  },
+  "llm-connection-test.error-unknown": {
+    "defaultMessage": "Unbekannter Fehler aufgetreten"
+  },
+  "llm-connection-test.max-tokens": {
+    "defaultMessage": "Max. Tokens"
+  },
+  "llm-connection-test.model": {
+    "defaultMessage": "Modell"
+  },
+  "llm-connection-test.model-placeholder": {
+    "defaultMessage": "gpt-3.5-turbo"
+  },
+  "llm-connection-test.prompt": {
+    "defaultMessage": "Eingabeaufforderung"
+  },
+  "llm-connection-test.prompt-placeholder": {
+    "defaultMessage": "Geben Sie hier Ihre Test-Eingabeaufforderung ein..."
+  },
+  "llm-connection-test.response": {
+    "defaultMessage": "Antwort:"
+  },
+  "llm-connection-test.save-configuration": {
+    "defaultMessage": "Konfiguration speichern"
+  },
+  "llm-connection-test.temperature": {
+    "defaultMessage": "Temperatur"
+  },
+  "llm-connection-test.test-connection": {
+    "defaultMessage": "LLM-Verbindung testen"
+  },
+  "llm-connection-test.testing": {
+    "defaultMessage": "Teste..."
+  },
+  "llm-connection-test.title": {
+    "defaultMessage": "LLM-Verbindungstest"
+  },
+  "llm-connection-test.console-logs": {
+    "defaultMessage": "Browserkonsole für detaillierte Logs öffnen"
+  },
+  "llm-connection-test.close": {
+    "defaultMessage": "Schließen"
+  },
+  "llm-notification.status.completed": {
+    "defaultMessage": "Abgeschlossen"
+  },
+  "llm-notification.status.error": {
+    "defaultMessage": "Fehlgeschlagen"
+  },
+  "llm.task.ai-explainer.title": {
+    "defaultMessage": "AI-Erklärer"
+  },
+  "llm.task.ai-explainer.description": {
+    "defaultMessage": "Analysiere Thema „{currentTopic}“..."
+  },
+  "llm.task.generate-topics.title": {
+    "defaultMessage": "KI-Themen generieren"
+  },
+  "llm.task.generate-topics.description": {
+    "defaultMessage": "Relevante Themen basierend auf „{currentTopic}“ und Kontextpfad werden generiert..."
+  },
+  "outline.collapse": {
+    "defaultMessage": "Alle einklappen"
+  },
+  "outline.empty": {
+    "defaultMessage": "Kein Inhalt zum Anzeigen"
+  },
+  "outline.expand": {
+    "defaultMessage": "Alle ausklappen"
+  },
+  "outline.has-note": {
+    "defaultMessage": "Hat Notiz"
+  },
+  "outline.link": {
+    "defaultMessage": "Link"
+  },
+  "outline.note": {
+    "defaultMessage": "Notiz"
   },
   "relationship-style-editor.color": {
     "defaultMessage": "Beziehungsfarbe"
-  },
-  "relationship-style-editor.line-arrows": {
-    "defaultMessage": "Linienstil und Pfeile"
-  },
-  "relationship-style-editor.solid-line": {
-    "defaultMessage": "Durchgezogene Linie"
-  },
-  "relationship-style-editor.solid-line-tooltip": {
-    "defaultMessage": "Durchgezogener Linienstil"
   },
   "relationship-style-editor.dashed-line": {
     "defaultMessage": "Gestrichelte Linie"
@@ -510,28 +546,208 @@
     "defaultMessage": "Endpfeil"
   },
   "relationship-style-editor.end-arrow-tooltip": {
-    "defaultMessage": "Endpfeil umschalten"
+    "defaultMessage": "Endpfeil ein-/ausblenden"
+  },
+  "relationship-style-editor.line-arrows": {
+    "defaultMessage": "Linienstil & Pfeile"
+  },
+  "relationship-style-editor.solid-line": {
+    "defaultMessage": "Durchgezogene Linie"
+  },
+  "relationship-style-editor.solid-line-tooltip": {
+    "defaultMessage": "Durchgezogener Linienstil"
   },
   "relationship-style-editor.start-arrow": {
     "defaultMessage": "Startpfeil"
   },
   "relationship-style-editor.start-arrow-tooltip": {
-    "defaultMessage": "Startpfeil umschalten"
+    "defaultMessage": "Startpfeil ein-/ausblenden"
   },
-  "topic-font-editor.font-color": {
-    "defaultMessage": "Schriftfarbe"
+  "settings.ai-explainer-title": {
+    "defaultMessage": "AI-Erklärer mit benutzerdefinierten Prompts"
   },
-  "topic-font-editor.font-family": {
-    "defaultMessage": "Schriftfamilie"
+  "settings.ai-topic-generator-title": {
+    "defaultMessage": "KI-Themengenerator mit benutzerdefinierten Prompts"
   },
-  "topic-font-editor.font-size-style": {
-    "defaultMessage": "Schriftgröße und -stil"
+  "settings.current-model": {
+    "defaultMessage": "Aktuelles Modell: {modelName}"
   },
-  "topic-font-editor.increase-size": {
-    "defaultMessage": "Größer"
+  "settings.deduplication": {
+    "defaultMessage": "Deduplizierung"
   },
-  "topic-font-editor.increase-size-tooltip": {
-    "defaultMessage": "Schriftgröße erhöhen"
+  "settings.description": {
+    "defaultMessage": "Konfigurieren Sie KI-Modelleinstellungen und passen Sie Prompts für Themengenerierung und Konzepterklärung an."
+  },
+  "settings.explainer-placeholder": {
+    "defaultMessage": "Benutzerdefinierten Prompt für Konzepterklärung eingeben..."
+  },
+  "settings.model-api-management": {
+    "defaultMessage": "Modell-API-Verwaltung"
+  },
+  "settings.no-model": {
+    "defaultMessage": "Kein Modell konfiguriert"
+  },
+  "settings.title": {
+    "defaultMessage": "Einstellungen"
+  },
+  "settings.topic-generator-placeholder": {
+    "defaultMessage": "Benutzerdefinierten Prompt für Themengenerierung eingeben..."
+  },
+  "shortcut-help-pane.action": {
+    "defaultMessage": "Aktion"
+  },
+  "shortcut-help-pane.add-child": {
+    "defaultMessage": "Kindthema hinzufügen"
+  },
+  "shortcut-help-pane.add-link": {
+    "defaultMessage": "Link hinzufügen"
+  },
+  "shortcut-help-pane.add-note": {
+    "defaultMessage": "Notiz hinzufügen"
+  },
+  "shortcut-help-pane.add-sibling": {
+    "defaultMessage": "Gleichrangiges Thema hinzufügen"
+  },
+  "shortcut-help-pane.cancel-text-changes": {
+    "defaultMessage": "Textänderungen verwerfen"
+  },
+  "shortcut-help-pane.change-font-bold": {
+    "defaultMessage": "Text fett machen"
+  },
+  "shortcut-help-pane.change-font-italic": {
+    "defaultMessage": "Text kursiv machen"
+  },
+  "shortcut-help-pane.collapse-children": {
+    "defaultMessage": "Unterelemente einklappen"
+  },
+  "shortcut-help-pane.delete-topic": {
+    "defaultMessage": "Thema löschen"
+  },
+  "shortcut-help-pane.deselect-all-topics": {
+    "defaultMessage": "Alle Themen abwählen"
+  },
+  "shortcut-help-pane.drag-disconnect": {
+    "defaultMessage": "Thema trennen"
+  },
+  "shortcut-help-pane.edit-multiline": {
+    "defaultMessage": "Mehrzeiligen Thementext hinzufügen"
+  },
+  "shortcut-help-pane.edit-topic": {
+    "defaultMessage": "Thementext bearbeiten"
+  },
+  "shortcut-help-pane.edit-topic-key": {
+    "defaultMessage": "F2 oder Doppelklick"
+  },
+  "shortcut-help-pane.expand-by-level": {
+    "defaultMessage": "Themen nach Ebene ausklappen"
+  },
+  "shortcut-help-pane.expand-collapse-all": {
+    "defaultMessage": "Alle Themen aus-/einklappen"
+  },
+  "shortcut-help-pane.navigation": {
+    "defaultMessage": "Navigation"
+  },
+  "shortcut-help-pane.navigation-keys": {
+    "defaultMessage": "Pfeiltasten"
+  },
+  "shortcut-help-pane.outline-view": {
+    "defaultMessage": "Gliederungsansicht öffnen"
+  },
+  "shortcut-help-pane.overwrite-edit-topic": {
+    "defaultMessage": "Thementext überschreiben"
+  },
+  "shortcut-help-pane.overwrite-edit-topic-key": {
+    "defaultMessage": "Bei ausgewähltem Thema tippen"
+  },
+  "shortcut-help-pane.redo": {
+    "defaultMessage": "Bearbeitung wiederholen"
+  },
+  "shortcut-help-pane.save-changes": {
+    "defaultMessage": "Änderungen speichern"
+  },
+  "shortcut-help-pane.select-all-topics": {
+    "defaultMessage": "Alle Themen auswählen"
+  },
+  "shortcut-help-pane.select-topics": {
+    "defaultMessage": "Mehrere Themen auswählen"
+  },
+  "shortcut-help-pane.select-topics-keys": {
+    "defaultMessage": "Mausklick"
+  },
+  "shortcut-help-pane.undo": {
+    "defaultMessage": "Bearbeitung rückgängig machen"
+  },
+  "shortcut-help-pane.zoom-in": {
+    "defaultMessage": "Hereinzoomen"
+  },
+  "shortcut-help-pane.zoom-out": {
+    "defaultMessage": "Herauszoomen"
+  },
+  "shortcut-help-pane.zoom-to-fit": {
+    "defaultMessage": "An Fenster anpassen"
+  },
+  "theme-editor.accept": {
+    "defaultMessage": "Design anwenden"
+  },
+  "theme-editor.cancel": {
+    "defaultMessage": "Abbrechen"
+  },
+  "theme-editor.description": {
+    "defaultMessage": "Ein Design definiert das visuelle Erscheinungsbild Ihrer Mindmap, einschließlich Farben, Schriften und Gesamterscheinung. Wählen Sie ein Design, das am besten zu Ihrem Inhalt und Publikum passt."
+  },
+  "theme-editor.title": {
+    "defaultMessage": "Design wählen"
+  },
+  "theme.classic.description": {
+    "defaultMessage": "Sauberes und professionelles Design mit blauen Akzenten. Perfekt für Geschäftspräsentationen und formale Dokumente."
+  },
+  "theme.classic.name": {
+    "defaultMessage": "Klassisch"
+  },
+  "theme.dark": {
+    "defaultMessage": "Dunkel"
+  },
+  "theme.light": {
+    "defaultMessage": "Hell"
+  },
+  "theme.ocean.description": {
+    "defaultMessage": "Ozean-inspiriertes blaues Design mit Hell-/Dunkel-Varianten. Ruhige und professionelle Farben, ideal für Geschäfts- und Kreativprojekte."
+  },
+  "theme.ocean.name": {
+    "defaultMessage": "Ozean"
+  },
+  "theme.robot.description": {
+    "defaultMessage": "Technisch inspiriertes grünes Design. Perfekt für technische Dokumentation und futuristische Präsentationen."
+  },
+  "theme.robot.name": {
+    "defaultMessage": "Robot"
+  },
+  "theme.summer.description": {
+    "defaultMessage": "Helles und lebendiges oranges Design. Ideal für kreative Projekte und energiegeladene Präsentationen."
+  },
+  "theme.summer.name": {
+    "defaultMessage": "Sommer"
+  },
+  "theme.sunrise.description": {
+    "defaultMessage": "Sonnenaufgang-Design mit Hell-/Dunkelmodus-Varianten. Verbesserte Farben und Kontraste für bessere Lesbarkeit."
+  },
+  "theme.sunrise.name": {
+    "defaultMessage": "Sonnenaufgang"
+  },
+  "theme.switch-to-dark": {
+    "defaultMessage": "Zum Dunkelmodus wechseln"
+  },
+  "theme.switch-to-light": {
+    "defaultMessage": "Zum Hellmodus wechseln"
+  },
+  "topic-font-editor.active": {
+    "defaultMessage": "aktiv"
+  },
+  "topic-font-editor.bold": {
+    "defaultMessage": "Fett"
+  },
+  "topic-font-editor.bold-tooltip": {
+    "defaultMessage": "Fett ein-/ausblenden"
   },
   "topic-font-editor.decrease-size": {
     "defaultMessage": "Kleiner"
@@ -539,190 +755,121 @@
   "topic-font-editor.decrease-size-tooltip": {
     "defaultMessage": "Schriftgröße verringern"
   },
-  "topic-font-editor.bold": {
-    "defaultMessage": "Fett"
+  "topic-font-editor.font-color": {
+    "defaultMessage": "Schriftfarbe"
   },
-  "topic-font-editor.bold-tooltip": {
-    "defaultMessage": "Fett umschalten"
+  "topic-font-editor.font-family": {
+    "defaultMessage": "Schriftart"
+  },
+  "topic-font-editor.font-size-style": {
+    "defaultMessage": "Schriftgröße & Stil"
+  },
+  "topic-font-editor.increase-size": {
+    "defaultMessage": "Größer"
+  },
+  "topic-font-editor.increase-size-tooltip": {
+    "defaultMessage": "Schriftgröße erhöhen"
   },
   "topic-font-editor.italic": {
     "defaultMessage": "Kursiv"
   },
   "topic-font-editor.italic-tooltip": {
-    "defaultMessage": "Kursiv umschalten"
-  },
-  "topic-font-editor.active": {
-    "defaultMessage": "aktiv"
-  },
-  "editor-panel.tooltip-topic-share-none": {
-    "defaultMessage": "Keine Form"
-  },
-  "headerNotifier": {
-    "defaultMessage": "Header-Benachrichtigung"
-  },
-  "icon-collection.shape.none": {
-    "defaultMessage": "Keine"
-  },
-  "icon-collection.shape.none-tooltip": {
-    "defaultMessage": "Keine - Kein sichtbarer Formhintergrund"
-  },
-  "icon-collection.shape.line": {
-    "defaultMessage": "Linie"
-  },
-  "icon-collection.shape.rectangle": {
-    "defaultMessage": "Rechteck"
-  },
-  "icon-collection.shape.rounded": {
-    "defaultMessage": "Abgerundet"
-  },
-  "icon-collection.shape.ellipse": {
-    "defaultMessage": "Ellipse"
-  },
-  "icon-collection.border.solid": {
-    "defaultMessage": "Durchgezogen"
-  },
-  "icon-collection.border.dashed": {
-    "defaultMessage": "Gestrichelt"
-  },
-  "icon-collection.border.dotted": {
-    "defaultMessage": "Gepunktet"
-  },
-  "icon-collection.connection.thick-curved": {
-    "defaultMessage": "Dicke Kurve"
-  },
-  "icon-collection.connection.arc": {
-    "defaultMessage": "Bogen"
-  },
-  "icon-collection.connection.organic-curved": {
-    "defaultMessage": "Organische Kurve"
-  },
-  "icon-collection.connection.organic-curved-tooltip": {
-    "defaultMessage": "Handgezeichneter Stil mit dramatischen Kurven - Perfekt für kreative und ausdrucksstarke Mindmaps"
-  },
-  "icon-collection.connection.thin-curved": {
-    "defaultMessage": "Dünne Kurve"
-  },
-  "icon-collection.connection.simple-polyline": {
-    "defaultMessage": "Einfache Polylinie"
-  },
-  "icon-collection.connection.simple-polyline-tooltip": {
-    "defaultMessage": "Direkte gerade Linienverbindung - Sauberer und minimalistischer Stil für einfache Beziehungen"
-  },
-  "icon-collection.connection.curved-polyline": {
-    "defaultMessage": "Gebogene Polylinie"
-  },
-  "icon-picker.emojis": {
-    "defaultMessage": "Emojis"
-  },
-  "icon-picker.icons": {
-    "defaultMessage": "Symbol-Galerie"
-  },
-  "mindmap-comp": {
-    "defaultMessage": "Mindmap-Komponente"
-  },
-  "note.character.count": {
-    "defaultMessage": "{remaining} übrig"
-  },
-  "note.character.limit.warning": {
-    "defaultMessage": "(Grenze erreicht)"
-  },
-  "ocean": {
-    "defaultMessage": "Ozean"
-  },
-  "popover": {
-    "defaultMessage": "Popover"
-  },
-  "prism": {
-    "defaultMessage": "Prisma"
-  },
-  "robot": {
-    "defaultMessage": "Roboter"
-  },
-  "sunrise": {
-    "defaultMessage": "Sonnenaufgang"
-  },
-  "theme-editor.accept": {
-    "defaultMessage": "Thema anwenden"
-  },
-  "theme-editor.cancel": {
-    "defaultMessage": "Abbrechen"
-  },
-  "theme-editor.description": {
-    "defaultMessage": "Ein Thema definiert den visuellen Stil Ihrer Mindmap, einschließlich Farben, Schriftarten und Gesamterscheinung. Wählen Sie ein Thema, das am besten zu Ihrem Inhalt und Publikum passt."
-  },
-  "theme-editor.title": {
-    "defaultMessage": "Thema wählen"
-  },
-  "theme.classic.description": {
-    "defaultMessage": "Clean and professional design with blue accents. Perfect for business presentations and formal documents."
-  },
-  "theme.classic.name": {
-    "defaultMessage": "Klassisch"
-  },
-  "theme.ocean.description": {
-    "defaultMessage": "Ocean-inspired blue theme with light/dark variants. Calm and professional colors perfect for business and creative projects."
-  },
-  "theme.ocean.name": {
-    "defaultMessage": "Ozean"
-  },
-  "theme.robot.description": {
-    "defaultMessage": "Tech-inspired green theme. Perfect for technical documentation and futuristic presentations."
-  },
-  "theme.robot.name": {
-    "defaultMessage": "Roboter"
-  },
-  "theme.summer.description": {
-    "defaultMessage": "Bright and vibrant orange theme. Great for creative projects and energetic presentations."
-  },
-  "theme.summer.name": {
-    "defaultMessage": "Sommer"
-  },
-  "theme.sunrise.description": {
-    "defaultMessage": "Sunrise theme with light/dark mode variants. Enhanced colors and contrast for better readability."
-  },
-  "theme.sunrise.name": {
-    "defaultMessage": "Sonnenaufgang"
-  },
-  "theme.switch-to-dark": {
-    "defaultMessage": "Zu dunklem Modus wechseln"
-  },
-  "theme.switch-to-light": {
-    "defaultMessage": "Zu hellem Modus wechseln"
-  },
-  "title-input": {
-    "defaultMessage": "Titel-Eingabe"
-  },
-  "canvas-style.tab-color": {
-    "defaultMessage": "Color"
-  },
-  "canvas-style.tab-grid": {
-    "defaultMessage": "Grid Color"
-  },
-  "canvas-style.background-style": {
-    "defaultMessage": "Background Style"
-  },
-  "canvas-style.pattern-default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
-  },
-  "icon-collection.shape.default": {
-    "defaultMessage": "Default"
-  },
-  "icon-collection.border.default": {
-    "defaultMessage": "Default"
-  },
-  "icon-collection.connection.default": {
-    "defaultMessage": "Default"
-  },
-  "icon-collection.default-tooltip": {
-    "defaultMessage": "Default - All styles will be automatically selected based on the theme"
-  },
-  "unified-styling.shape-type": {
-    "defaultMessage": "Shape Type"
-  },
-  "unified-styling.background-color": {
-    "defaultMessage": "Background Color"
+    "defaultMessage": "Kursiv ein-/ausblenden"
   },
   "topic-font-editor.reset-to-default": {
-    "defaultMessage": "Reset to Default"
+    "defaultMessage": "Auf Standard zurücksetzen"
+  },
+  "topic-note-editor.add-note": {
+    "defaultMessage": "Notiz hinzufügen"
+  },
+  "topic-note-editor.edit-note": {
+    "defaultMessage": "Notiz bearbeiten"
+  },
+  "unified-styling.background-color": {
+    "defaultMessage": "Hintergrundfarbe"
+  },
+  "unified-styling.border-color": {
+    "defaultMessage": "Rahmenfarbe"
+  },
+  "unified-styling.border-style": {
+    "defaultMessage": "Rahmenstil"
+  },
+  "unified-styling.connection-style": {
+    "defaultMessage": "Verbindungsstil"
+  },
+  "unified-styling.connector-style": {
+    "defaultMessage": "Verbindungsstil"
+  },
+  "unified-styling.shape-type": {
+    "defaultMessage": "Formtyp"
+  },
+  "unified-styling.tab.border": {
+    "defaultMessage": "Rahmen"
+  },
+  "unified-styling.tab.connector": {
+    "defaultMessage": "Verbindung"
+  },
+  "unified-styling.tab.shape": {
+    "defaultMessage": "Form"
+  },
+  "visualization-toolbar.tooltip-collapse-all": {
+    "defaultMessage": "Alle Knoten einklappen"
+  },
+  "visualization-toolbar.tooltip-expand-all": {
+    "defaultMessage": "Alle Knoten ausklappen"
+  },
+  "visualization-toolbar.tooltip-expand-level": {
+    "defaultMessage": "Nach Ebene ausklappen"
+  },
+  "visualization-toolbar.tooltip-export": {
+    "defaultMessage": "Exportieren"
+  },
+  "visualization-toolbar.tooltip-info": {
+    "defaultMessage": "Informationen"
+  },
+  "visualization-toolbar.tooltip-keyboard": {
+    "defaultMessage": "Tastenkürzel"
+  },
+  "visualization-toolbar.tooltip-layout": {
+    "defaultMessage": "Layout ändern"
+  },
+  "visualization-toolbar.tooltip-outline-view": {
+    "defaultMessage": "Gliederungsansicht"
+  },
+  "visualization-toolbar.tooltip-save": {
+    "defaultMessage": "Speichern"
+  },
+  "visualization-toolbar.tooltip-theme-toggle": {
+    "defaultMessage": "Design umschalten"
+  },
+  "visualization-toolbar.tooltip-zoom-in": {
+    "defaultMessage": "Hereinzoomen"
+  },
+  "visualization-toolbar.tooltip-zoom-out": {
+    "defaultMessage": "Herauszoomen"
+  },
+  "visualization-toolbar.tooltip-zoom-to-fit": {
+    "defaultMessage": "An Fenster anpassen"
+  },
+  "model-api-management.title": {
+    "defaultMessage": "Modell-API-Verwaltung"
+  },
+  "model-api-management.no-configurations": {
+    "defaultMessage": "Keine API-Konfigurationen"
+  },
+  "model-api-management.empty-description": {
+    "defaultMessage": "Fügen Sie Ihre erste LLM-API-Konfiguration hinzu, um zu starten"
+  },
+  "model-api-management.active": {
+    "defaultMessage": "aktiv"
+  },
+  "model-api-management.switch": {
+    "defaultMessage": "Wechseln"
+  },
+  "model-api-management.update": {
+    "defaultMessage": "Aktualisieren"
+  },
+  "model-api-management.add-configuration": {
+    "defaultMessage": "Konfiguration hinzufügen"
   }
 }
