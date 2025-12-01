@@ -6,6 +6,8 @@
 
 FastMind is an AI-powered mind mapping extension that branched from WiseMapping Frontend in November 2025. While maintaining the robust foundation of WiseMapping's mind mapping engine, FastMind focuses on AI-driven features and deep VS Code integration for developers.
 
+📦 **VS Code Extension**: [Install FastMind from Marketplace](https://marketplace.visualstudio.com/items?itemName=bashdeban.fastmind)
+
 ### Project Heritage
 
 - **Origin**: Branch from WiseMapping Frontend (est. 2010)

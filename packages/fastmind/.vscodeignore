@@ -41,6 +41,7 @@ packages/*/build/
 # Exclude documentation
 **/*.md
 !README.md
+!README.zh-cn.md
 
 # Exclude root config files
 .yarnrc.yml
