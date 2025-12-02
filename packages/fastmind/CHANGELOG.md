@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.8] - 2025-12-03
+### Fixed
+- Fixed block quote CSS style rendering issues
+
+### Changed
+- Modified Note preview edit related keyboard shortcuts for better workflow
+- Set up dedicated shortcuts for AI functionality access
+- Optimized AI Topic generator result sorting algorithm for better organization
+
 ## [0.1.7] - 2025-12-02
 ### Added
 - Added special tag filtering for AI responses to remove unwanted markers like `<thinking>`, `<reasoning>`, `<brainstorm>`, and other HTML/XML-style tags from LLM output
