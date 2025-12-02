@@ -1,9 +1,18 @@
 # Changelog
 
+## [0.1.7] - 2025-12-02
+### Added
+- Added special tag filtering for AI responses to remove unwanted markers like `<thinking>`, `<reasoning>`, `<brainstorm>`, and other HTML/XML-style tags from LLM output
+- Enhanced AI response processing in both `ai-explainer.ts` and `ai-topic-generator.ts` services with unified tag filtering mechanism
+
+### Changed
+- Improved AI response cleanliness by implementing robust content filtering system
+
 ## [0.1.6] - 2025-12-02
 ### Added
 - Added Shift+Enter shortcut support for topic text line breaks
 - Updated keyboard shortcut help documentation to display correct line break shortcut
+
 
 ### Changed
 - Changed topic text line break shortcut from Ctrl+Enter to Shift+Enter for better user experience

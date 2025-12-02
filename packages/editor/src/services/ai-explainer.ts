@@ -178,6 +178,11 @@ class AIExplainerService {
       }
     }
 
+    // Remove all thinking tags
+    analysis = analysis.replace(/<[^\/> ]+>[\s\S]*?<\/[^> ]+>/gi, '').trim();
+    // Clean up any extra blank lines that may be generated.
+    analysis = analysis.replace(/\n\s*\n\s*\n/g, '\n\n').trim();
+
     // Apply length limit if specified
     if (maxLength && analysis.length > maxLength) {
       // Try to cut at a natural break point

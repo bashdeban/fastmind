@@ -262,6 +262,8 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
    */
   private parseResponse(response: string): GeneratedTopic[] {
     try {
+      //Remove all thinking tags
+      response = response.replace(/<[^\/> ]+>[\s\S]*?<\/[^> ]+>/gi, '').trim();
       // Try to extract JSON from the response
       const jsonMatch = response.match(/\[[\s\S]*\]/);
       if (!jsonMatch) {
