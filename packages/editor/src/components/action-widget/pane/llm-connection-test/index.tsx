@@ -149,12 +149,9 @@ const LlmConnectionTest = ({ open, onClose, initialConfig }: LlmConnectionTestPr
         maxTokens,
       };
 
-      // 只保存到配置列表中（自动去重），不保存为当前配置
-      LLMConfigListManager.saveToList(config);
-
-      console.log('✅ Configuration saved to list successfully:', modelName);
-
-      // 关闭对话框并返回 Model API Management
+      // Use the smart save method: automatically activated
+      LLMConfigListManager.saveWithAutoActivation(config);
+      // Close the dialog box and return to Model API Management
       handleClose();
 
     } catch (error) {

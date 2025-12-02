@@ -17,12 +17,13 @@
  */
 
 import { LLMConfig } from './types';
+import { LLMConfigManager } from './config';
 
 const CONFIG_LIST_STORAGE_KEY = 'llm-config-list';
 
 export class LLMConfigListManager {
   /**
-   * 获取所有保存的配置列表
+   * Get a list of all saved configurations
    */
   static getConfigList(): LLMConfig[] {
     try {
@@ -40,13 +41,12 @@ export class LLMConfigListManager {
   }
 
   /**
-   * 保存配置到列表中（以 modelName 为 key，自动去重）
+   * Save the configuration to a list (using modelName as the key, automatically removing duplicates)
    */
   static saveToList(config: LLMConfig): void {
     try {
       const currentList = this.getConfigList();
 
-      // 查找是否已存在相同 modelName 的配置
       const existingIndex = currentList.findIndex(
         (item) => item.modelName === config.modelName
       );
@@ -54,11 +54,11 @@ export class LLMConfigListManager {
       let updatedList: LLMConfig[];
 
       if (existingIndex !== -1) {
-        // 如果存在，替换现有配置
+        // Replace the existing configuration if it exists
         updatedList = [...currentList];
         updatedList[existingIndex] = config;
       } else {
-        // 如果不存在，添加到列表末尾
+        // If it does not exist, add it to the end of the list
         updatedList = [...currentList, config];
       }
 
@@ -71,7 +71,7 @@ export class LLMConfigListManager {
   }
 
   /**
-   * 从列表中删除配置
+   * Remove configuration from list
    */
   static removeFromList(modelName: string): void {
     try {
@@ -87,7 +87,7 @@ export class LLMConfigListManager {
   }
 
   /**
-   * 清空配置列表
+   * Clear configuration list
    */
   static clearList(): void {
     try {
@@ -100,7 +100,7 @@ export class LLMConfigListManager {
   }
 
   /**
-   * 检查配置是否已存在于列表中
+   * Check if the configuration already exists in the list
    */
   static hasConfig(modelName: string): boolean {
     const currentList = this.getConfigList();
@@ -108,10 +108,36 @@ export class LLMConfigListManager {
   }
 
   /**
-   * 根据 modelName 获取特定配置
+   * Retrieve specific configuration based on modelName
    */
   static getConfigByModelName(modelName: string): LLMConfig | undefined {
     const currentList = this.getConfigList();
     return currentList.find((item) => item.modelName === modelName);
+  }
+
+  /**
+   * Smart config saving: Automatically set as current if it’s the only configuration
+   * @param config Configuration to be saved
+   * @returns
+   */
+  static saveWithAutoActivation(config: LLMConfig): boolean {
+    try {
+      // 1. Save to list
+      this.saveToList(config);
+
+      // 2. Check if there is a valid configuration
+      const currentConfig = LLMConfigManager.getConfig();
+      const hasValidConfig = LLMConfigManager.isConfigValid(currentConfig);
+
+      if (!hasValidConfig) {
+        // No valid config found — this one will be auto-activated
+        LLMConfigManager.saveConfig(config);
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.error('❌ Failed to save configuration with auto activation:', error);
+      throw error;
+    }
   }
 }
