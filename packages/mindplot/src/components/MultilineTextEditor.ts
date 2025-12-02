@@ -94,7 +94,7 @@ class EditorComponent extends EventDispatcher<EditorEventType> {
           break;
         case 'Enter': {
           const keyboardEvent = event as KeyboardEvent;
-          if (keyboardEvent.metaKey || keyboardEvent.ctrlKey) {
+          if (keyboardEvent.shiftKey) {
             keyboardEvent.preventDefault();
 
             const text = this.getTextAreaText();

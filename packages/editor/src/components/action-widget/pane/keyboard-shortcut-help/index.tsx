@@ -240,12 +240,12 @@ const KeyboardShorcutsHelp = ({ closeModal }: KeyboardShorcutsHelpProps): ReactE
               <TableCell
                 sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
               >
-                Ctrl + Enter
+                Shift + Enter
               </TableCell>
               <TableCell
                 sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
               >
-                ⌘ + Enter
+                Shift + Enter
               </TableCell>
             </TableRow>
 

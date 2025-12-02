@@ -30,38 +30,19 @@ For backend implementation details, visit: [WiseMapping Backend](https://github.
 Below are actual screenshots of FastMind, showcasing the AI-powered mind mapping editing capabilities:
 
 ### AI-Powered Generation
-<table>
-  <tr>
-    <td width="50%">
-      <img src="screenshots/generator-1.png" alt="AI Generator Interface" style="width:100%">
-      <p align="center"><em>AI Generator Interface</em></p>
-    </td>
-    <td width="50%">
-      <img src="screenshots/generator-2.png" alt="AI Generation Results" style="width:100%">
-      <p align="center"><em>AI Generation Results</em></p>
-    </td>
-  </tr>
-</table>
+
+| AI Generator Interface | AI Generation Results |
+|----------------------|----------------------|
+| ![AI Generator Interface](screenshots/generator-1.png) | ![AI Generation Results](screenshots/generator-2.png) |
 
 ### Settings & Configuration
-<table>
-  <tr>
-    <td width="33%">
-      <img src="screenshots/settings-1.png" alt="Basic Settings" style="width:100%">
-      <p align="center"><em>Basic Settings</em></p>
-    </td>
-    <td width="33%">
-      <img src="screenshots/settings-2.png" alt="Advanced Configuration" style="width:100%">
-      <p align="center"><em>Advanced Configuration</em></p>
-    </td>
-    <td width="33%">
-      <img src="screenshots/settings-3.png" alt="Personalization Options" style="width:100%">
-      <p align="center"><em>Personalization Options</em></p>
-    </td>
-  </tr>
-</table>
+
+| Basic Settings | Advanced Configuration | Personalization Options |
+|---------------|----------------------|-------------------------|
+| ![Basic Settings](screenshots/settings-1.png) | ![Advanced Configuration](screenshots/settings-2.png) | ![Personalization Options](screenshots/settings-3.png) |
 
 ### Multi-language Support
+
 <p align="center">
   <img src="screenshots/language.png" alt="Language Settings" style="width:60%">
 </p>
