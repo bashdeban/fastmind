@@ -57,6 +57,10 @@ export const WidgetPopover = ({ widgetManager }: WidgetPopoverProps): React.Reac
     setNoteDialogMode('edit');
   };
 
+  const handleBackToPreview = () => {
+    setNoteDialogMode('preview');
+  };
+
   const handleWidgetEvent = useCallback(
     (newEvent: WidgetEventType, topic?: Topic) => {
       setEvent(newEvent);
@@ -170,6 +174,7 @@ export const WidgetPopover = ({ widgetManager }: WidgetPopoverProps): React.Reac
           noteModel={currentNoteModel}
           onClose={closeNoteDialog}
           onEdit={handleNoteEdit}
+          onBackToPreview={handleBackToPreview}
         />
       )}
     </>

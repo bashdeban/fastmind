@@ -26,6 +26,7 @@ type TopicNoteDialogProps = {
   noteModel: NodeProperty<string | undefined>;
   onClose: () => void;
   onEdit: () => void;
+  onBackToPreview?: () => void; // New prop for handling ESC in edit mode
 };
 
 export const TopicNoteDialog = ({
@@ -34,15 +35,23 @@ export const TopicNoteDialog = ({
   noteModel,
   onClose,
   onEdit,
+  onBackToPreview,
 }: TopicNoteDialogProps): React.ReactElement => {
-  // Handle ESC key to close dialog
+  // Handle ESC key with conditional behavior
   useEffect(() => {
     if (!isOpen) return;
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault();
-        onClose();
+        
+        // In edit mode, ESC should return to preview if onBackToPreview is provided
+        if (mode === 'edit' && onBackToPreview) {
+          onBackToPreview();
+        } else {
+          // In preview mode or if no onBackToPreview handler, close dialog
+          onClose();
+        }
       }
     };
 
@@ -51,7 +60,7 @@ export const TopicNoteDialog = ({
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, mode, onClose, onBackToPreview]);
 
   if (!isOpen) {
     return <></>;
