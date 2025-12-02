@@ -67,7 +67,7 @@ class AITopicGeneratorService {
 
       // Predict position and order for new topic
       const prediction = layoutManager.predict(parentTopicId, null, null);
-      nodeModel.setOrder(prediction.order);
+      //nodeModel.setOrder(prediction.order);
       nodeModel.setPosition(prediction.position.x, prediction.position.y);
 
       topicModels.push(nodeModel);
@@ -280,8 +280,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
 
       return parsed
         .filter(item => item && typeof item === 'object' && typeof item.text === 'string')
-        .map(item => ({ text: item.text }));
-
+        .map(item => ({ text: item.text })); 
     } catch (error) {
       console.error('Failed to parse LLM response:', error);
       console.error('Response content:', response);
