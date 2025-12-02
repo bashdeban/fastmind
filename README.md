@@ -25,6 +25,48 @@ FastMind is an AI-powered mind mapping extension that branched from WiseMapping 
 
 For backend implementation details, visit: [WiseMapping Backend](https://github.com/wisemapping/wisemapping-open-source)
 
+## 📸 Feature Showcase
+
+Below are actual screenshots of FastMind, showcasing the AI-powered mind mapping editing capabilities:
+
+### AI-Powered Generation
+<table>
+  <tr>
+    <td width="50%">
+      <img src="screenshots/generator-1.png" alt="AI Generator Interface" style="width:100%">
+      <p align="center"><em>AI Generator Interface</em></p>
+    </td>
+    <td width="50%">
+      <img src="screenshots/generator-2.png" alt="AI Generation Results" style="width:100%">
+      <p align="center"><em>AI Generation Results</em></p>
+    </td>
+  </tr>
+</table>
+
+### Settings & Configuration
+<table>
+  <tr>
+    <td width="33%">
+      <img src="screenshots/settings-1.png" alt="Basic Settings" style="width:100%">
+      <p align="center"><em>Basic Settings</em></p>
+    </td>
+    <td width="33%">
+      <img src="screenshots/settings-2.png" alt="Advanced Configuration" style="width:100%">
+      <p align="center"><em>Advanced Configuration</em></p>
+    </td>
+    <td width="33%">
+      <img src="screenshots/settings-3.png" alt="Personalization Options" style="width:100%">
+      <p align="center"><em>Personalization Options</em></p>
+    </td>
+  </tr>
+</table>
+
+### Multi-language Support
+<p align="center">
+  <img src="screenshots/language.png" alt="Language Settings" style="width:60%">
+</p>
+<p align="center"><em>Multi-language Settings Interface</em></p>
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -385,7 +427,7 @@ This project is **open source** under the **WiseMapping Public License, Version 
 
 [View Full License](https://github.com/wisemapping/wisemapping-open-source/blob/develop/LICENSE.md)
 
-## �‍💻 Team
+## 🖥️ Team
 
 ### Founder
 - **Paulo Veiga** <pveiga@wisemapping.com>
