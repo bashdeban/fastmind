@@ -164,6 +164,20 @@ class AIExplainerService {
 
     let analysis = response.trim();
 
+    // Detect and remove markdown code block wrappers
+    if (analysis.startsWith('```') && analysis.endsWith('```')) {
+      // Extract code block content, and handle possible line breaks and language identifiers
+      const lines = analysis.split('\n');
+      if (lines.length > 1) {
+        // Remove the first line (`` or ```markdown) and the last line (```)
+        const contentLines = lines.slice(1, -1);
+        analysis = contentLines.join('\n').trim();
+      } else {
+        // Handling single-line cases: ```content```
+        analysis = analysis.slice(3, -3).trim();
+      }
+    }
+
     // Apply length limit if specified
     if (maxLength && analysis.length > maxLength) {
       // Try to cut at a natural break point
