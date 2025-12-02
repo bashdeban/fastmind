@@ -13,11 +13,15 @@
    选择主题 → "AI 生成主题"  
    秒级生成最多 8 个（可自定义）智能、上下文感知的子主题。  
    AI 能理解选定主题、其父级、兄弟节点以及整个导图结构。
-
+   
 2. **AI 解释器**  
    选择任意主题 → "AI 解释主题"  
    获取深度解释、实际应用案例、示例甚至代码片段。  
    长度和重点完全可自定义。
+
+![AI生成中](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/generator-1.png)
+
+![AI生成完成](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/generator-2.png)
 
 ## 支持几乎所有主流 LLM
 - OpenAI (gpt-4, gpt-3.5-turbo 等)
@@ -35,12 +39,20 @@
 }
 ```
 
+![设置](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/settings-1.png)
+
+![API配置列表](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/settings-2.png)
+
+![添加配置](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/settings-3.png)
+
 ## 完美适配开发者工作流
 - 纯 XML 格式 → git 友好，可对比，可合并
 - 自动保存
 - 与代码和 Markdown 文件并存
 - 使用本地模型时 100% 离线工作
 - 支持 10 种语言
+
+![设置语言](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/language.png)
 
 ---
 

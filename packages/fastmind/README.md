@@ -19,6 +19,10 @@
    Get in-depth explanations, real-world applications, examples, and even code snippets.  
    Fully customizable length and focus.
 
+![AI Generator](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/generator-1.png)
+
+![AI Generator](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/generator-2.png)
+
 ## Supports Almost Every Major LLM
 - OpenAI (gpt-4, gpt-3.5-turbo, etc.)
 - Anthropic Claude (all models)
@@ -35,12 +39,20 @@ Quick config example (set once in VS Code settings):
 }
 ```
 
+![Settings](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/settings-1.png)
+
+![Configuration](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/settings-2.png)
+
+![Add Configuration](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/settings-3.png)
+
 ## Perfectly Fits Developer Workflows
 - Pure XML format → git-friendly, diffable, mergeable
 - Auto-save
 - Lives alongside your code and Markdown files
 - Works 100% offline with local models
 - Supports 10 languages
+
+![Change Language](https://raw.githubusercontent.com/bashdeban/fastmind/refs/heads/base/screenshots/language.png)
 
 ---
 

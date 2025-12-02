@@ -51,8 +51,7 @@
     "vscode": "^1.75.0"
   },
   "activationEvents": [
-    "onLanguage:fastmind",
-    "onCustomEditor:fastmind.viewer"
+    "onLanguage:fastmind"
   ],
   "categories": [
     "Visualization",
