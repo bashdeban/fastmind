@@ -130,6 +130,7 @@ const MarkdownView = ({ content }: MarkdownViewProps): React.ReactElement => {
         '& blockquote': {
           borderLeft: '3px solid',
           borderColor: 'primary.main',
+          backgroundColor: 'action.hover',
           paddingLeft: '0.75rem',
           margin: '0.375rem 0',
           fontStyle: 'italic',
