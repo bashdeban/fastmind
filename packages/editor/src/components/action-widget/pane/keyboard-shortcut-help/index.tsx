@@ -401,24 +401,6 @@ const KeyboardShorcutsHelp = ({ closeModal }: KeyboardShorcutsHelpProps): ReactE
             <TableRow hover>
               <TableCell>
                 <FormattedMessage
-                  id="shortcut-help-pane.change-font-italic"
-                  defaultMessage="Change text to italic"
-                />
-              </TableCell>
-              <TableCell
-                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
-              >
-                Ctrl + I
-              </TableCell>
-              <TableCell
-                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
-              >
-                ⌘ + I
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormattedMessage
                   id="shortcut-help-pane.change-font-bold"
                   defaultMessage="Change text to bold"
                 />
@@ -432,6 +414,42 @@ const KeyboardShorcutsHelp = ({ closeModal }: KeyboardShorcutsHelpProps): ReactE
                 sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
               >
                 ⌘ + B
+              </TableCell>
+            </TableRow>
+            <TableRow hover>
+              <TableCell>
+                <FormattedMessage
+                  id="ai-topic-generator.title"
+                  defaultMessage="AI Topic Generator"
+                />
+              </TableCell>
+              <TableCell
+                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
+              >
+                Ctrl + Shift + I
+              </TableCell>
+              <TableCell
+                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
+              >
+                ⌘ + Shift + I
+              </TableCell>
+            </TableRow>
+            <TableRow hover>
+              <TableCell>
+                <FormattedMessage
+                  id="ai-explainer.title"
+                  defaultMessage="AI Explainer"
+                />
+              </TableCell>
+              <TableCell
+                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
+              >
+                Ctrl + I
+              </TableCell>
+              <TableCell
+                sx={{ fontFamily: 'monospace', color: 'primary.main', fontSize: '0.7rem' }}
+              >
+                ⌘ + I
               </TableCell>
             </TableRow>
             <TableRow hover>

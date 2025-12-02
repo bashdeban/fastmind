@@ -1449,6 +1449,42 @@ class Designer extends EventDispispatcher<DesignerEventType> {
   public set cleanScreen(value: () => void) {
     this._cleanScreen = value;
   }
+
+  /**
+   * AI Topic Generator - Generate AI-powered topics for selected node
+   */
+  generateAITopics(): void {
+    const selectedTopics = this.getModel().filterSelectedTopics();
+    
+    if (selectedTopics.length !== 1) {
+      $notify($msg('ONLY_ONE_TOPIC_MUST_BE_SELECTED'));
+      return;
+    }
+
+    // Fire event to trigger AI topic generation
+    this.fireEvent('featureEdit', { 
+      event: 'ai-topic-generator', 
+      topic: selectedTopics[0] 
+    });
+  }
+
+  /**
+   * AI Explainer - Generate comprehensive topic analysis
+   */
+  explainWithAI(): void {
+    const selectedTopics = this.getModel().filterSelectedTopics();
+    
+    if (selectedTopics.length !== 1) {
+      $notify($msg('ONLY_ONE_TOPIC_MUST_BE_SELECTED'));
+      return;
+    }
+
+    // Fire event to trigger AI explainer
+    this.fireEvent('featureEdit', { 
+      event: 'ai-explainer', 
+      topic: selectedTopics[0] 
+    });
+  }
 }
 
 export default Designer;

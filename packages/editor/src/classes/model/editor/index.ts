@@ -85,7 +85,7 @@ class Editor {
         canvasUpdate(Date.now());
       };
 
-      const featureEdition = (value: { event: 'note' | 'link' | 'close'; topic: Topic }): void => {
+      const featureEdition = (value: { event: 'note' | 'link' | 'close' | 'ai-topic-generator' | 'ai-explainer'; topic: Topic }): void => {
         const { event, topic } = value;
         switch (event) {
           case 'note': {
@@ -96,6 +96,40 @@ class Editor {
           case 'link': {
             trackEditorInteraction('link_editor_open');
             widgetBuilder.fireEvent('link', topic);
+            break;
+          }
+          case 'ai-topic-generator': {
+            trackEditorInteraction('ai_topic_generator_trigger');
+            // Import AI service dynamically
+            import('../../../services/ai-topic-generator').then(({ aiTopicGeneratorService }) => {
+              return import('../../../services/settings/config').then(({ SettingsManager }) => {
+                const globalCustomPrompt = SettingsManager.getTopicGeneratorPrompt();
+                return aiTopicGeneratorService.generateAndAddTopicsDirectly(
+                  topic,
+                  designer,
+                  { customPrompt: globalCustomPrompt }
+                );
+              });
+            }).catch(error => {
+              console.error('AI topic generation failed:', error);
+            });
+            break;
+          }
+          case 'ai-explainer': {
+            trackEditorInteraction('ai_explainer_trigger');
+            // Import AI service dynamically
+            import('../../../services/ai-explainer').then(({ aiExplainerService }) => {
+              return import('../../../services/settings/config').then(({ SettingsManager }) => {
+                const globalCustomPrompt = SettingsManager.getExplainerPrompt();
+                return aiExplainerService.generateAndStoreAnalysis(
+                  topic,
+                  designer,
+                  { customPrompt: globalCustomPrompt }
+                );
+              });
+            }).catch(error => {
+              console.error('AI explainer analysis failed:', error);
+            });
             break;
           }
         }

@@ -105,8 +105,12 @@ class DesignerKeyboard extends Keyboard {
       designer.changeFontWeight();
     });
 
+    this.addShortcut(['ctrl+shift+i', 'meta+shift+i'], () => {
+      designer.generateAITopics();
+    });
+
     this.addShortcut(['ctrl+i', 'meta+i'], () => {
-      designer.changeFontStyle();
+      designer.explainWithAI();
     });
 
     this.addShortcut(['ctrl+shift+a', 'meta+shift+a'], () => {
