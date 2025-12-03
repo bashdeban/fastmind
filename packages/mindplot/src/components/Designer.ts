@@ -15,6 +15,7 @@
  *   See the License for the specific language governing permissions and
  *   limitations under the License.
  */
+import { Workspace as Workspace2D } from '@wisemapping/web2d';
 import { $assert, $defined } from './util/assert';
 import DOMUtils from './util/DOMUtils';
 import Messages, { $msg } from './Messages';
@@ -160,18 +161,43 @@ class Designer extends EventDispispatcher<DesignerEventType> {
 
   private _registerWheelEvents(): void {
     const zoomFactor = 1.02;
+    const panSpeed = 2; // 平移速度调整
+
     this.getContainer().addEventListener(
       'wheel',
       (event: WheelEvent) => {
         // TODO re-do this better. This line avoid manage zoom with mouse wheel if mindplot kb shortcuts are disabled.
         if (DesignerKeyboard.isDisabled()) return;
 
-        if (event.deltaX > 0 || event.deltaY > 0) {
-          this.zoomOut(zoomFactor);
+        // Ctrl/Cmd + 滚轮 = 缩放
+        if (event.ctrlKey || event.metaKey) {
+          if (event.deltaX > 0 || event.deltaY > 0) {
+            this.zoomOut(zoomFactor);
+          } else {
+            this.zoomIn(zoomFactor);
+          }
+          event.preventDefault();
         } else {
-          this.zoomIn(zoomFactor);
+          // 滚轮/触控板移动 = 任意方向平移
+          const deltaX = event.deltaX * panSpeed;
+          const deltaY = event.deltaY * panSpeed;
+          const workspace = (this._canvas as unknown as { _workspace: Workspace2D })._workspace;
+          const currentOrigin = workspace.getCoordOrigin();
+
+          // 计算新的X和Y位置
+          const newX = currentOrigin.x + deltaX;
+          const newY = currentOrigin.y + deltaY;
+
+          // 应用新的坐标原点
+          workspace.setCoordOrigin(newX, newY);
+
+          // 同步更新ScreenManager偏移量
+          this._canvas.getScreenManager().setOffset(newX, newY);
+
+          // 触发更新事件
+          this._canvas.getScreenManager().fireEvent('update');
+          event.preventDefault();
         }
-        event.preventDefault();
       },
       { passive: false },
     );
@@ -1455,16 +1481,16 @@ class Designer extends EventDispispatcher<DesignerEventType> {
    */
   generateAITopics(): void {
     const selectedTopics = this.getModel().filterSelectedTopics();
-    
+
     if (selectedTopics.length !== 1) {
       $notify($msg('ONLY_ONE_TOPIC_MUST_BE_SELECTED'));
       return;
     }
 
     // Fire event to trigger AI topic generation
-    this.fireEvent('featureEdit', { 
-      event: 'ai-topic-generator', 
-      topic: selectedTopics[0] 
+    this.fireEvent('featureEdit', {
+      event: 'ai-topic-generator',
+      topic: selectedTopics[0],
     });
   }
 
@@ -1473,16 +1499,16 @@ class Designer extends EventDispispatcher<DesignerEventType> {
    */
   explainWithAI(): void {
     const selectedTopics = this.getModel().filterSelectedTopics();
-    
+
     if (selectedTopics.length !== 1) {
       $notify($msg('ONLY_ONE_TOPIC_MUST_BE_SELECTED'));
       return;
     }
 
     // Fire event to trigger AI explainer
-    this.fireEvent('featureEdit', { 
-      event: 'ai-explainer', 
-      topic: selectedTopics[0] 
+    this.fireEvent('featureEdit', {
+      event: 'ai-explainer',
+      topic: selectedTopics[0],
     });
   }
 }
