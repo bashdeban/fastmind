@@ -11,7 +11,19 @@ FastMind has successfully achieved production-ready status with complete AI inte
 **Current Branch**: `main` - All features merged and production-ready
 **Production Status**: Ready for VS Code Marketplace deployment and user adoption
 
-#### Latest Achievements (November 2025)
+#### Latest Achievements (December 2025)
+
+**✅ Use two fingers to move the canvas. - PRODUCTION READY**
+- Enhanced wheel event handling to support bidirectional panning
+- Implemented in `packages/mindplot/src/components/Designer.ts`
+- Supports both horizontal and vertical canvas movement with two-finger gestures
+- Maintains compatibility with existing zoom (Ctrl/Cmd + wheel) and vertical scroll
+- Smooth panning experience for Mac trackpad users
+- TypeScript compilation passed, all builds successful
+
+**✅ Update Markdown CSS Style **
+- Updated Markdown view styling and rendering
+- Improved visual presentation and user experience
 
 **✅ Complete AI Topic Generation System - PRODUCTION READY**
 - LLM integration via LLMService.generateResponse(prompt) with enhanced prompts
@@ -24,6 +36,7 @@ FastMind has successfully achieved production-ready status with complete AI inte
 - **NEW**: Child topics deduplication to prevent redundant content
 - **NEW**: Custom prompt support in settings for personalized generation
 - **NEW**: Visualization toolbar with AI controls and save functionality
+
 
 **✅ Multi-LLM Integration System**
 - Support for OpenAI (GPT-4, GPT-3.5-turbo, etc.)

@@ -10,12 +10,18 @@
 - **Last Updated**: 2024-03-15
 
 ### 📦 **@wisemapping/mindplot** - ✅ PRODUCTION READY  
-- **Status**: Production-ready mind mapping engine
-- **Key Features**: Canvas rendering, topic management, event handling
+- **Status**: Production-ready mind mapping engine with enhanced interaction support
+- **Key Features**: Canvas rendering, topic management, event handling, Mac trackpad gesture support
 - **Progress**: 100% - Core functionality complete
+- **New Features (Dec 2025)**:
+  - ✅ **Mac Trackpad Support**: Two-finger gesture panning for horizontal and vertical canvas movement
+  - Enhanced wheel event handling with bidirectional support
+  - Maintains compatibility with zoom (Ctrl/Cmd + wheel) operations
+  - Smooth panning experience for Mac users
 - **Testing**: Unit tests, integration tests with web2d
 - **Dependencies**: web2d
-- **Last Updated**: 2024-03-20
+- **Last Updated**: 2025-12-03
+
 
 ### 📦 **@wisemapping/editor** - ✅ PRODUCTION READY
 - **Status**: Production-ready React component wrapper with complete AI integration
