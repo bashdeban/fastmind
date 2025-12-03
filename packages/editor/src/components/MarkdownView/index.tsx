@@ -43,25 +43,27 @@ const MarkdownView = ({ content }: MarkdownViewProps): React.ReactElement => {
         '& h1': {
           fontSize: '1.5rem',
           fontWeight: 'bold',
-          margin: '0.75rem 0 0.375rem 0',
+          margin: '1.9rem 0 0.375rem 0',
           color: 'text.primary',
         },
         '& h2': {
           fontSize: '1.25rem',
           fontWeight: 'bold',
-          margin: '0.625rem 0 0.375rem 0',
+          margin: '1.55rem 0 0.375rem 0',
           color: 'text.primary',
         },
         '& h3': {
+          borderBottom: '1px solid',
+          borderBottomColor: 'action.hover',
           fontSize: '1.125rem',
           fontWeight: 'bold',
-          margin: '0.5rem 0 0.25rem 0',
+          margin: '0.9rem 0 0.25rem 0',
           color: 'text.primary',
         },
         '& h4': {
           fontSize: '1rem',
           fontWeight: 'bold',
-          margin: '0.5rem 0 0.25rem 0',
+          margin: '0.7rem 0 0.25rem 0',
           color: 'text.primary',
         },
         '& h5': {
