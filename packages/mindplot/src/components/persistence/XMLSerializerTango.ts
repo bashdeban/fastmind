@@ -729,17 +729,20 @@ class XMLSerializerTango implements XMLMindmapSerializer {
    */
   protected _rmXmlInv(str: string): string {
     let result = '';
-    for (let i = 0; i < str.length; i++) {
-      const c = str.charCodeAt(i);
+    // Using for...of loop and codePointAt() to properly handle Unicode
+    // supplementary plane characters (e.g., emojis represented as surrogate pairs)
+    for (const char of str) {
+      const codePoint = char.codePointAt(0) || 0;
+      
       if (
-        c === 0x9 ||
-        c === 0xa ||
-        c === 0xd ||
-        (c >= 0x20 && c <= 0xd7ff) ||
-        (c >= 0xe000 && c <= 0xfffd) ||
-        (c >= 0x10000 && c <= 0x10ffff)
+        codePoint === 0x9 ||
+        codePoint === 0xa ||
+        codePoint === 0xd ||
+        (codePoint >= 0x20 && codePoint <= 0xd7ff) ||
+        (codePoint >= 0xe000 && codePoint <= 0xfffd) ||
+        (codePoint >= 0x10000 && codePoint <= 0x10ffff)
       ) {
-        result += str.charAt(i);
+        result += char;
       }
     }
     return result;
