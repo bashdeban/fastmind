@@ -39,7 +39,7 @@ type TopicIconEditorProps = {
 };
 
 const TopicIconEditor = ({ closeModal, iconModel }: TopicIconEditorProps): ReactElement => {
-  const [tabValue, setTabValue] = React.useState(0); // 0 = Emojis, 1 = Icons Gallery
+  const [tabValue, setTabValue] = React.useState(0); // 0 = Icons Gallery, 1 = Emojis
   const { mode } = useTheme();
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -96,13 +96,13 @@ const TopicIconEditor = ({ closeModal, iconModel }: TopicIconEditorProps): React
           aria-label="icon editor tabs"
         >
           <Tab
-            icon={<SentimentSatisfiedAltIcon />}
-            label={<FormattedMessage id="icon-picker.emojis" defaultMessage="Emojis" />}
+            icon={<ImageIcon />}
+            label={<FormattedMessage id="icon-picker.icons" defaultMessage="Icons Gallery" />}
             iconPosition="start"
           />
           <Tab
-            icon={<ImageIcon />}
-            label={<FormattedMessage id="icon-picker.icons" defaultMessage="Icons Gallery" />}
+            icon={<SentimentSatisfiedAltIcon />}
+            label={<FormattedMessage id="icon-picker.emojis" defaultMessage="Emojis" />}
             iconPosition="start"
           />
         </StyledEditorsTabs>
@@ -123,15 +123,46 @@ const TopicIconEditor = ({ closeModal, iconModel }: TopicIconEditorProps): React
               width: '100%',
               maxWidth: '460px',
               height: 'clamp(280px, 50vh, 350px)',
+              overflow: 'auto',
+              backgroundColor: 'background.paper',
+            }}
+          >
+            <IconImageTab iconModel={iconModel} />
+          </Box>
+        )}
+        {tabValue === 1 && (
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: '460px',
+              height: 'clamp(280px, 50vh, 350px)',
               overflow: 'hidden',
               backgroundColor: 'background.paper',
               '& .EmojiPickerReact': {
                 border: 'none !important',
                 boxShadow: 'none !important',
+                fontSize: '12px', // 进一步减小整体字体
               },
               '& div[class*="EmojiPickerReact"]': {
                 border: 'none !important',
                 boxShadow: 'none !important',
+              },
+              '& [class*="category"]': {
+                padding: '1px 0 !important',
+              },
+              '& .epr-emoji-category-label': {
+                fontSize: '10px !important',
+                padding: '1px 4px !important',
+                height: '12px !important',
+                margin: '0px !important',
+              },
+              '& [class*="emoji"] button, & [class*="emoji"] [role="button"]': {
+                width: '35px !important',
+                height: '35px !important',
+              },
+              //search
+              '& .EmojiPickerReact > div > div': {
+                padding: '5px 5px 3px 5px !important',
               },
             }}
           >
@@ -146,19 +177,6 @@ const TopicIconEditor = ({ closeModal, iconModel }: TopicIconEditorProps): React
               width="100%"
               height="100%"
             />
-          </Box>
-        )}
-        {tabValue === 1 && (
-          <Box
-            sx={{
-              width: '100%',
-              maxWidth: '460px',
-              height: 'clamp(280px, 50vh, 350px)',
-              overflow: 'auto',
-              backgroundColor: 'background.paper',
-            }}
-          >
-            <IconImageTab iconModel={iconModel} />
           </Box>
         )}
       </Box>

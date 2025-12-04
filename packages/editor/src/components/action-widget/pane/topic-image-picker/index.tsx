@@ -44,7 +44,7 @@ const TopicImagePicker = ({
   emojiModel,
   iconsGalleryModel,
 }: TopicImagePickerProp): ReactElement => {
-  const [tabValue, setTabValue] = React.useState(0); // 0 = Image Gallery, 1 = Emojis
+  const [tabValue, setTabValue] = React.useState(0); // 0 = Emojis, 1 = Icons Gallery
   const { mode } = useTheme();
   const intl = useIntl();
 
@@ -112,13 +112,13 @@ const TopicImagePicker = ({
           aria-label="icon picker tabs"
         >
           <Tab
-            icon={<ImageIcon />}
-            label={<FormattedMessage id="icon-picker.icons" defaultMessage="Icons Gallery" />}
+            icon={<SentimentSatisfiedAltIcon />}
+            label={<FormattedMessage id="icon-picker.emojis" defaultMessage="Emojis" />}
             iconPosition="start"
           />
           <Tab
-            icon={<SentimentSatisfiedAltIcon />}
-            label={<FormattedMessage id="icon-picker.emojis" defaultMessage="Emojis" />}
+            icon={<ImageIcon />}
+            label={<FormattedMessage id="icon-picker.icons" defaultMessage="Icons Gallery" />}
             iconPosition="start"
           />
         </StyledEditorsTabs>
@@ -141,25 +141,31 @@ const TopicImagePicker = ({
               height: 'clamp(280px, 50vh, 350px)',
               overflow: 'hidden',
               backgroundColor: 'background.paper',
-            }}
-          >
-            <TopicImageTab iconModel={iconsGalleryModel} emojiModel={emojiModel} />
-          </Box>
-        )}
-        {tabValue === 1 && (
-          <Box
-            sx={{
-              width: '100%',
-              height: 'clamp(280px, 50vh, 350px)',
-              overflow: 'hidden',
-              backgroundColor: 'background.paper',
               '& .EmojiPickerReact': {
                 border: 'none !important',
                 boxShadow: 'none !important',
+                fontSize: '12px', // 进一步减小整体字体
               },
               '& div[class*="EmojiPickerReact"]': {
                 border: 'none !important',
                 boxShadow: 'none !important',
+              },
+              '& [class*="category"]': {
+                padding: '1px 0 !important',
+              },
+              '& .epr-emoji-category-label': {
+                fontSize: '10px !important',
+                padding: '1px 4px !important',
+                height: '12px !important',
+                margin: '0px !important',
+              },
+              '& [class*="emoji"] button, & [class*="emoji"] [role="button"]': {
+                width: '35px !important',
+                height: '35px !important',
+              },
+              //search
+              '& .EmojiPickerReact > div > div': {
+                padding: '5px 5px 3px 5px !important',
               },
             }}
           >
@@ -178,6 +184,18 @@ const TopicImagePicker = ({
                 defaultMessage: 'Search emojis...',
               })}
             />
+          </Box>
+        )}
+        {tabValue === 1 && (
+          <Box
+            sx={{
+              width: '100%',
+              height: 'clamp(280px, 50vh, 350px)',
+              overflow: 'hidden',
+              backgroundColor: 'background.paper',
+            }}
+          >
+            <TopicImageTab iconModel={iconsGalleryModel} emojiModel={emojiModel} />
           </Box>
         )}
       </Box>
