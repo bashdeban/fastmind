@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.1.9] - 2025-12-04
+### Fixed
+- Fixed emoji character handling in topic text and note fields - emojis are now properly saved and loaded in .fastmind files
+- Unicode supplementary plane characters (including emojis) are now correctly serialized/deserialized in XML
+
+### Added
+- Added keyboard shortcuts for canvas control (zoom, pan, and navigation)
+
+### Changed
+- Optimized XML serializer in mindplot package to use `codePointAt()` for proper Unicode support
+- Improved character validation logic to handle multi-byte Unicode characters correctly
+
 ## [0.1.8] - 2025-12-03
 ### Fixed
 - Fixed block quote CSS style rendering issues
