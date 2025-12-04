@@ -57,6 +57,12 @@
   - ✅ Unicode emoji support (December 2025)
   - ✅ Comprehensive keyboard shortcuts (December 2025)
   - ✅ Mac trackpad gesture support (December 2025)
+  - ✅ **Enhanced Export System** (December 2025):
+    - Fixed SVG export issues with proper namespace handling
+    - Implemented PNG/JPG export with `_fastmind_export` suffix
+    - Added Markdown export with file generation in VS Code environment
+    - Unified export behavior across all formats
+    - Enhanced error handling and user feedback
 - **Testing**: Comprehensive VS Code extension tests, performance benchmarks, AI feature validation
 - **Dependencies**: editor-standalone, VS Code Extension APIs, LLMService
 - **Last Updated**: 2025-12-04

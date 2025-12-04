@@ -35,28 +35,6 @@ const ExportFormatSelector: React.FC<ExportFormatSelectorProps> = ({
 
   const exportFormats: ExportFormatInfo[] = [
     {
-      id: 'svg',
-      name: 'SVG',
-      description: intl.formatMessage({
-        id: 'export.format.svg.description',
-        defaultMessage: 'Scalable Vector Graphics - Vector graphics, infinitely scalable, small file size',
-      }),
-      extension: 'svg',
-      category: 'image',
-      recommended: true,
-    },
-    {
-      id: 'wxml',
-      name: 'WiseMapping XML',
-      description: intl.formatMessage({
-        id: 'export.format.wxml.description',
-        defaultMessage: 'WiseMapping XML - Native format, retains all editing features, can be re-imported for editing',
-      }),
-      extension: 'wxml',
-      category: 'text',
-      recommended: true,
-    },
-    {
       id: 'md',
       name: 'Markdown',
       description: intl.formatMessage({
@@ -65,6 +43,28 @@ const ExportFormatSelector: React.FC<ExportFormatSelectorProps> = ({
       }),
       extension: 'md',
       category: 'text',
+      recommended: true,
+    },
+    {
+      id: 'png',
+      name: 'PNG',
+      description: intl.formatMessage({
+        id: 'export.format.png.description',
+        defaultMessage: 'Portable Network Graphics - Lossless compression, perfect for screenshots and diagrams',
+      }),
+      extension: 'png',
+      category: 'image',
+      recommended: true,
+    },
+    {
+      id: 'jpg',
+      name: 'JPG',
+      description: intl.formatMessage({
+        id: 'export.format.jpg.description',
+        defaultMessage: 'JPEG format - Lossy compression, smaller file size, suitable for photos',
+      }),
+      extension: 'jpg',
+      category: 'image',
     },
   ];
 

@@ -16,14 +16,144 @@
  *   limitations under the License.
  */
 import { Designer } from '@wisemapping/mindplot';
-import Exporter from '@wisemapping/mindplot/src/components/export/Exporter';
 import ImageExporterFactory from '@wisemapping/mindplot/src/components/export/ImageExporterFactory';
 import TextExporterFactory from '@wisemapping/mindplot/src/components/export/TextExporterFactory';
 import { ExportFormat, ExportOptions } from '../components/action-widget/pane/export-dialog/types';
 
-// Interface for exporters that have exportAndEncode method
-interface ImageExporter extends Exporter {
-  exportAndEncode(): Promise<string>;
+// Global type declarations for VS Code API
+declare global {
+  interface Window {
+    vscodePersistenceManager?: {
+      exportImage: (imageData: string, fileName: string, format: string) => Promise<void>;
+    };
+    // VS Code API instance (from bootstrap)
+    vscode?: {
+      postMessage: (message: unknown) => void;
+    };
+    acquireVsCodeApi?(): {
+      postMessage: (message: unknown) => void;
+    };
+    // VS Code bootstrap detection
+    __FAST_MIND_VSCODE_BOOTSTRAP__?: {
+      fileName?: string;
+      resourceUrl?: string;
+      mapId?: string;
+      locale?: string;
+      onChanged?: (newXml: string) => void;
+      onSaveStatus?: (status: unknown) => void;
+    };
+  }
+}
+
+/**
+ * Check if running in VS Code environment
+ */
+function isVSCodeEnvironment(): boolean {
+  return typeof window !== 'undefined' && 
+         (typeof window.vscode !== 'undefined' || 
+          typeof window.__FAST_MIND_VSCODE_BOOTSTRAP__ !== 'undefined' ||
+          typeof window.acquireVsCodeApi === 'function');
+}
+
+/**
+ * Handle image export for VS Code environment
+ */
+async function handleImageExportForVSCode(
+  dataUrl: string,
+  options: ExportOptions
+): Promise<string> {
+  try {
+    // Generate filename with proper extension
+    const format = options.format === 'jpg' || options.format === 'jpeg' ? 'jpeg' : 'png';
+    const extension = format === 'jpeg' ? 'jpg' : format;
+    const filename = `${options.filename || 'mindmap'}.${extension}`;
+    
+    // Get VS Code persistence manager if available
+    if (window.vscodePersistenceManager && 
+        typeof window.vscodePersistenceManager.exportImage === 'function') {
+      await window.vscodePersistenceManager.exportImage(dataUrl, filename, format);
+      return dataUrl;
+    }
+    
+    // Use the VS Code API instance from bootstrap (preferred)
+    if (window.vscode) {
+      window.vscode.postMessage({
+        type: 'imageExport',
+        imageData: dataUrl,
+        fileName: filename
+      });
+      return dataUrl;
+    }
+    
+    // Fallback: try to get VS Code API (only if not already acquired)
+    if (typeof window.acquireVsCodeApi === 'function' && !window.vscode) {
+      try {
+        const vscode = window.acquireVsCodeApi();
+        if (vscode) {
+          vscode.postMessage({
+            type: 'imageExport',
+            imageData: dataUrl,
+            fileName: filename
+          });
+          return dataUrl;
+        }
+      } catch (apiError) {
+        console.warn('Failed to acquire VS Code API:', apiError);
+      }
+    }
+    
+    throw new Error('VS Code export API not available');
+    
+  } catch (error) {
+    console.error('VS Code image export failed:', error);
+    throw new Error('VS Code image export failed: ' + (error instanceof Error ? error.message : 'Unknown error'));
+  }
+}
+
+/**
+ * Handle markdown export for VS Code environment
+ */
+async function handleMarkdownExportForVSCode(
+  content: string,
+  options: ExportOptions
+): Promise<string> {
+  try {
+    // Generate filename with .md extension
+    const filename = `${options.filename || 'mindmap'}.md`;
+    
+    // Use the VS Code API instance from bootstrap (preferred)
+    if (window.vscode) {
+      window.vscode.postMessage({
+        type: 'markdownExport',
+        markdownData: content,
+        fileName: filename
+      });
+      return content;
+    }
+    
+    // Fallback: try to get VS Code API (only if not already acquired)
+    if (typeof window.acquireVsCodeApi === 'function' && !window.vscode) {
+      try {
+        const vscode = window.acquireVsCodeApi();
+        if (vscode) {
+          vscode.postMessage({
+            type: 'markdownExport',
+            markdownData: content,
+            fileName: filename
+          });
+          return content;
+        }
+      } catch (apiError) {
+        console.warn('Failed to acquire VS Code API:', apiError);
+      }
+    }
+    
+    throw new Error('VS Code export API not available');
+    
+  } catch (error) {
+    console.error('VS Code markdown export failed:', error);
+    throw new Error('VS Code markdown export failed: ' + (error instanceof Error ? error.message : 'Unknown error'));
+  }
 }
 
 /**
@@ -37,9 +167,9 @@ export class ExportService {
   }
 
   /**
-   * Export the mindmap to the specified format (always copies to clipboard)
+   * Export mindmap to the specified format
    */
-  async export(options: ExportOptions): Promise<void> {
+  async export(options: ExportOptions): Promise<string | void> {
     const { format, scale = 1 } = options;
     
     try {
@@ -51,58 +181,62 @@ export class ExportService {
 
       // Get the SVG element for image exports
       const svgElement = this.getSvgElement();
-      if (!svgElement && ['svg', 'png'].includes(format)) {
+      if (!svgElement && ['png', 'jpg', 'jpeg'].includes(format)) {
         throw new Error('No SVG element found for image export');
       }
 
       // Perform the export based on format
-      let exportResult: string | Blob;
+      let exportResult: string;
       
-      if (format === 'png') {
-        // For PNG export, create BinaryImageExporter and use exportAndEncode
-        const svgSvgElement = svgElement as SVGSVGElement;
-        const bbox = svgSvgElement.getBBox();
+      if (format === 'png' || format === 'jpg' || format === 'jpeg') {
+        // For image formats (PNG, JPG), use binary image exporter
+        const bbox = (svgElement as SVGSVGElement).getBBox();
         const width = bbox.width * scale;
         const height = bbox.height * scale;
         
-        const pngExporter = ImageExporterFactory.create(
-          'png', 
-          svgElement!, 
-          width, 
-          height,
-          true // adjustToFit
-        ) as ImageExporter;
+        // Convert 'jpeg' to 'jpg' for the factory
+        const imageFormat = format === 'jpeg' ? 'jpg' : format as 'png' | 'jpg';
         
-        const dataUrl = await pngExporter.exportAndEncode();
-        
-        // Convert data URL to blob for clipboard
-        const response = await fetch(dataUrl);
-        const blob = await response.blob();
-        exportResult = blob;
-      } else if (format === 'svg') {
-        // For SVG export, use regular export method
-        const svgSvgElement = svgElement as SVGSVGElement;
-        const bbox = svgSvgElement.getBBox();
-        const width = bbox.width * scale;
-        const height = bbox.height * scale;
-        
-        const svgExporter = ImageExporterFactory.create(
-          'svg', 
+        const imageExporter = ImageExporterFactory.create(
+          imageFormat,
           svgElement!, 
           width, 
           height,
           true // adjustToFit
         );
         
-        exportResult = await svgExporter.export();
+        // Use exportAndEncode to get base64 data URL
+        exportResult = await imageExporter.exportAndEncode();
+        
+        // Check if running in VS Code environment
+        if (isVSCodeEnvironment()) {
+          return await handleImageExportForVSCode(exportResult, options);
+        }
+        
+        // For non-VS Code environments, return the data URL
+        return exportResult;
+      } else if (format === 'md') {
+        // For Markdown format
+        const textExporter = TextExporterFactory.create('md', mindmap);
+        exportResult = await textExporter.export();
+        
+        // Check if running in VS Code environment
+        if (isVSCodeEnvironment()) {
+          return await handleMarkdownExportForVSCode(exportResult, options);
+        }
+        
+        // For non-VS Code environments, copy to clipboard
+        await this.copyToClipboard(exportResult, format);
+        return exportResult;
       } else {
-        // For text formats (WXML, MD)
+        // For other text formats (if any in future)
         const textExporter = TextExporterFactory.create(format as 'wxml' | 'md', mindmap);
         exportResult = await textExporter.export();
+        
+        // For text formats, copy to clipboard
+        await this.copyToClipboard(exportResult, format);
+        return exportResult;
       }
-
-      // Always copy to clipboard
-      await this.copyToClipboard(exportResult, format);
 
     } catch (error) {
       console.error('Export error:', error);
@@ -121,19 +255,23 @@ export class ExportService {
     try {
       // First try to get SVG from mindplot-component's shadow DOM
       const mindplotComponent = document.querySelector('mindplot-component');
-      if (mindplotComponent && mindplotComponent.shadowRoot) {
-        const shadowSvg = mindplotComponent.shadowRoot.querySelector('svg');
-        if (shadowSvg && shadowSvg instanceof SVGSVGElement) {
-          console.log('Found SVG element in shadow DOM:', shadowSvg);
-          return shadowSvg;
-        }
+      if (mindplotComponent) {
+        const component = mindplotComponent as unknown as { shadowRoot: ShadowRoot };
+        if (component.shadowRoot) {
+          const shadowSvg = component.shadowRoot.querySelector('svg');
+          if (shadowSvg && shadowSvg instanceof SVGSVGElement) {
+            console.log('Found SVG element in shadow DOM:', shadowSvg);
+            return shadowSvg;
+          }
 
-        // Try to find any SVG element in shadow DOM
-        const allShadowSvgs = mindplotComponent.shadowRoot.querySelectorAll('svg');
-        for (const svg of allShadowSvgs) {
-          if (svg instanceof SVGSVGElement && svg.getBBox().width > 0 && svg.getBBox().height > 0) {
-            console.log('Found valid SVG element in shadow DOM:', svg);
-            return svg;
+          // Try to find any SVG element in shadow DOM
+          const allShadowSvgs = component.shadowRoot.querySelectorAll('svg');
+          for (let i = 0; i < allShadowSvgs.length; i++) {
+            const svg = allShadowSvgs[i];
+            if (svg instanceof SVGSVGElement && svg.getBBox().width > 0 && svg.getBBox().height > 0) {
+              console.log('Found valid SVG element in shadow DOM:', svg);
+              return svg;
+            }
           }
         }
       }
@@ -156,7 +294,8 @@ export class ExportService {
 
       // Try to find any SVG element with content in regular DOM
       const allSvgs = document.querySelectorAll('svg');
-      for (const svg of allSvgs) {
+      for (let i = 0; i < allSvgs.length; i++) {
+        const svg = allSvgs[i];
         if (svg instanceof SVGSVGElement && svg.getBBox().width > 0 && svg.getBBox().height > 0) {
           console.log('Found valid SVG element:', svg);
           return svg;
@@ -171,6 +310,18 @@ export class ExportService {
     }
   }
 
+  /**
+   * Copy content to clipboard based on format
+   */
+  private async copyToClipboard(content: string, format: ExportFormat): Promise<void> {
+    try {
+      // For text formats, use text clipboard
+      await navigator.clipboard.writeText(content);
+    } catch (error) {
+      console.error('Clipboard copy failed:', error);
+      throw new Error('Failed to copy to clipboard');
+    }
+  }
 
   /**
    * Check if export is available for the current mindmap
@@ -185,76 +336,6 @@ export class ExportService {
   }
 
   /**
-   * Copy content to clipboard based on format
-   */
-  private async copyToClipboard(content: string | Blob, format: ExportFormat): Promise<void> {
-    try {
-      // Check if Clipboard API is available
-      if (!navigator.clipboard) {
-        throw new Error('剪贴板功能在此浏览器中不受支持。请升级到最新版本的现代浏览器。');
-      }
-
-      if (format === 'png') {
-        // Handle PNG as image blob
-        await this.copyImageToClipboard(content);
-      } else {
-        // Handle text-based formats (SVG, WXML, MD)
-        await this.copyTextToClipboard(content as string);
-      }
-
-    } catch (error) {
-      console.error('Clipboard copy error:', error);
-      
-      // Provide fallback error message based on common issues
-      if (error instanceof Error) {
-        if (error.message.includes('not supported')) {
-          throw new Error('剪贴板功能在此浏览器中不受支持。请尝试使用现代浏览器（Chrome、Firefox、Safari、Edge）。');
-        } else if (error.message.includes('denied')) {
-          throw new Error('剪贴板访问被拒绝。请检查浏览器权限设置并允许剪贴板访问。');
-        } else if (error.message.includes('NotAllowedError')) {
-          throw new Error('剪贴板访问被拒绝。请确保在 HTTPS 环境下使用，并授予剪贴板权限。');
-        }
-      }
-      
-      throw new Error('复制到剪贴板失败，请稍后重试。');
-    }
-  }
-
-  /**
-   * Copy PNG image to clipboard
-   */
-  private async copyImageToClipboard(content: string | Blob): Promise<void> {
-    // Check if clipboard.write is available (required for images)
-    if (!navigator.clipboard.write) {
-      throw new Error('图像剪贴板功能在此浏览器中不受支持。请尝试使用最新版本的现代浏览器。');
-    }
-
-    let blob: Blob;
-
-    if (content instanceof Blob) {
-      blob = content;
-    } else {
-      // Convert string to blob
-      blob = new Blob([content], { type: 'image/png' });
-    }
-
-    // Create ClipboardItem for image
-    const clipboardItem = new ClipboardItem({
-      'image/png': blob
-    });
-
-    // Write to clipboard
-    await navigator.clipboard.write([clipboardItem]);
-  }
-
-  /**
-   * Copy text content to clipboard
-   */
-  private async copyTextToClipboard(content: string): Promise<void> {
-    await navigator.clipboard.writeText(content);
-  }
-
-  /**
    * Check if clipboard API is supported
    */
   isClipboardSupported(): boolean {
@@ -263,17 +344,10 @@ export class ExportService {
   }
 
   /**
-   * Check if image clipboard is supported
-   */
-  isImageClipboardSupported(): boolean {
-    return !!(navigator.clipboard && navigator.clipboard.write);
-  }
-
-  /**
    * Get supported formats
    */
   getSupportedFormats(): ExportFormat[] {
-    return ['svg', 'png', 'wxml', 'md'];
+    return ['png', 'jpg', 'jpeg', 'md'];
   }
 }
 

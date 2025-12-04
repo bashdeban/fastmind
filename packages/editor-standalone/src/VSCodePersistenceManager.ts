@@ -406,6 +406,30 @@ export class VSCodePersistenceManager extends PersistenceManager {
   }
 
   /**
+   * Export image to VS Code extension
+   */
+  async exportImage(imageData: string, fileName: string, format: string): Promise<void> {
+    try {
+      // Send image export message to VS Code extension
+      const vscode = (window as any).acquireVsCodeApi?.();
+      if (!vscode) {
+        throw new Error('VS Code API not available');
+      }
+
+      vscode.postMessage({
+        type: 'imageExport',
+        imageData,
+        fileName,
+        format
+      });
+
+    } catch (error) {
+      console.error('❌ [VSCodePersistenceManager] Image export failed:', error);
+      throw error;
+    }
+  }
+
+  /**
    * Cleanup resources
    */
   destroy(): void {

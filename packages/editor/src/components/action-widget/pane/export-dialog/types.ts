@@ -18,9 +18,10 @@
 
 export type ExportFormat = 
   // Image formats
-  | 'svg' 
+  | 'png'
+  | 'jpg'
+  | 'jpeg'
   // Text/Data formats
-  | 'wxml' 
   | 'md';
 
 export interface ExportFormatInfo {
@@ -44,6 +45,6 @@ export interface ExportOptions {
 export interface ExportDialogProps {
   open: boolean;
   onClose: () => void;
-  onExport: (options: ExportOptions) => void;
+  onExport: (options: ExportOptions) => Promise<string | void>;
   mindmapTitle?: string;
 }

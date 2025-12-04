@@ -9,7 +9,7 @@ interface SaveStatus {
 }
 
 interface WebviewMessage {
-  type: 'edit' | 'saveStatus' | 'error' | 'ready' | 'contentChanged' | 'forceSave' | 'configUpdate';
+  type: 'edit' | 'saveStatus' | 'error' | 'ready' | 'contentChanged' | 'forceSave' | 'configUpdate' | 'imageExport' | 'markdownExport';
   text?: string;
   status?: SaveStatus;
   error?: string;
@@ -19,6 +19,11 @@ interface WebviewMessage {
     autoSaveOnWindowChange: boolean;
   };
   timestamp?: number;
+  // For image export
+  imageData?: string;
+  fileName?: string;
+  // For markdown export
+  markdownData?: string;
 }
 
 export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
@@ -94,6 +99,16 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
             }
             case 'error':
               await this.handleError(webviewPanel, message.error || 'Unknown error');
+              break;
+            case 'imageExport':
+              if (message.imageData && message.fileName) {
+                await this.handleImageExport(document, message.imageData, message.fileName);
+              }
+              break;
+            case 'markdownExport':
+              if (message.markdownData && message.fileName) {
+                await this.handleMarkdownExport(document, message.markdownData, message.fileName);
+              }
               break;
           }
         } catch (error) {
@@ -209,6 +224,99 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     vscode.window.showErrorMessage(`FastMind Error: ${errorMessage}`);
   }
 
+  /**
+   * Handle image export from editor
+   */
+  private async handleImageExport(
+    document: vscode.TextDocument,
+    imageData: string,
+    fileName: string
+  ): Promise<void> {
+    try {
+      // Add _fastmind_export suffix to filename before extension
+      const nameWithoutExt = fileName.replace(/\.[^/.]+$/, '');
+      const extension = fileName.includes('.png') ? '.png' : '.jpg';
+      const modifiedFileName = `${nameWithoutExt}_fastmind_export${extension}`;
+      
+      // Get the directory of the .fastmind file
+      const documentDir = Utils.dirname(document.uri);
+      const imageUri = vscode.Uri.joinPath(documentDir, modifiedFileName);
+      
+      // Extract base64 data from data URL
+      const base64Data = imageData.split(',')[1];
+      if (!base64Data) {
+        throw new Error('Invalid image data format');
+      }
+      
+      // Convert base64 to buffer
+      const buffer = Buffer.from(base64Data, 'base64');
+      
+      // Write the image file
+      await vscode.workspace.fs.writeFile(imageUri, buffer);
+      
+      // Show success message with user options
+      const revealAction = await vscode.window.showInformationMessage(
+        'Image exported. Would you like to see it in the explorer?',
+        'Show in Explorer',
+        'Open Image'
+      );
+      
+      if (revealAction === 'Show in Explorer') {
+        await vscode.commands.executeCommand('revealInExplorer', imageUri);
+      } else if (revealAction === 'Open Image') {
+        await vscode.commands.executeCommand('vscode.open', imageUri);
+      }
+      
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      console.error('❌ [FastMind VS Code] Image export failed:', error);
+      vscode.window.showErrorMessage(`Failed to export image: ${errorMessage}`);
+      throw error;
+    }
+  }
+
+  /**
+   * Handle markdown export from editor
+   */
+  private async handleMarkdownExport(
+    document: vscode.TextDocument,
+    markdownData: string,
+    fileName: string
+  ): Promise<void> {
+    try {
+      // Add _fastmind_export suffix to filename before extension
+      const nameWithoutExt = fileName.replace(/\.[^/.]+$/, '');
+      const modifiedFileName = `${nameWithoutExt}_fastmind_export.md`;
+      
+      // Get the directory of the .fastmind file
+      const documentDir = Utils.dirname(document.uri);
+      const markdownUri = vscode.Uri.joinPath(documentDir, modifiedFileName);
+      
+      // Write the markdown file
+      const buffer = Buffer.from(markdownData, 'utf8');
+      await vscode.workspace.fs.writeFile(markdownUri, buffer);
+      
+      // Show success message with user options
+      const revealAction = await vscode.window.showInformationMessage(
+        'Markdown exported. Would you like to see it in the explorer?',
+        'Show in Explorer',
+        'Open Markdown'
+      );
+      
+      if (revealAction === 'Show in Explorer') {
+        await vscode.commands.executeCommand('revealInExplorer', markdownUri);
+      } else if (revealAction === 'Open Markdown') {
+        await vscode.commands.executeCommand('vscode.open', markdownUri);
+      }
+      
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      console.error('❌ [FastMind VS Code] Markdown export failed:', error);
+      vscode.window.showErrorMessage(`Failed to export markdown: ${errorMessage}`);
+      throw error;
+    }
+  }
+
 
   /**
    * Add webview close handler for save confirmation
@@ -317,7 +425,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self' ${webview.cspSource} https://fonts.googleapis.com; font-src 'self' ${webview.cspSource} https://fonts.gstatic.com; img-src 'self' data: ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource}; connect-src 'self' ${webview.cspSource} https: http://localhost:* http://127.0.0.1:*;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' 'self' ${webview.cspSource} https://fonts.googleapis.com; font-src 'self' ${webview.cspSource} https://fonts.gstatic.com; img-src 'self' data: blob: ${webview.cspSource}; script-src 'nonce-${nonce}' ${webview.cspSource}; connect-src 'self' ${webview.cspSource} https: http://localhost:* http://127.0.0.1:*;">
         <title>FastMind Editor</title>
         <style>
           html, body {
@@ -368,6 +476,10 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
         <!-- VS Code Bootstrap -->
         <script nonce="${nonce}">
           const vscode = acquireVsCodeApi();
+          
+          // Expose VS Code API globally for export service
+          window.vscode = vscode;
+          
           window.__INITIAL_DOCUMENT_CONTENT__ = \`${initialContent.replace(/`/g, '\\`')}\`;
           window.__FAST_MIND_VSCODE_BOOTSTRAP__ = {
             fileName: "${fileName}",

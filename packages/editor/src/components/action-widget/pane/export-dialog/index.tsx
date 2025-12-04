@@ -35,9 +35,9 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
   mindmapTitle = 'mindmap',
 }) => {
   const intl = useIntl();
-  const [selectedFormat, setSelectedFormat] = useState<ExportFormat>('svg');
+  const [selectedFormat, setSelectedFormat] = useState<ExportFormat>('md');
   const [exportOptions, setExportOptions] = useState<ExportOptionsType>({
-    format: 'svg',
+    format: 'md',
     filename: mindmapTitle,
     includeWatermark: false,
     scale: 1,
@@ -57,25 +57,27 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
     setExportSuccess(null);
 
     try {
-      await onExport(exportOptions);
-      
-      // All formats now copy to clipboard
-      setExportSuccess(
-        intl.formatMessage({
-          id: 'export.dialog.clipboard-success',
-          defaultMessage: 'Content copied to clipboard!',
-        })
-      );
+      const result = await onExport(exportOptions);
+
+      // Handle different export types
+      if (selectedFormat === 'md') {
+        setExportSuccess(
+          intl.formatMessage({
+            id: 'export.dialog.clipboard-success',
+            defaultMessage: 'Content copied to clipboard!',
+          })
+        );
+      }
       // Don't close dialog to show success message
     } catch (error) {
       console.error('Export failed:', error);
       setExportError(
-        error instanceof Error 
-          ? error.message 
+        error instanceof Error
+          ? error.message
           : intl.formatMessage({
-              id: 'export.dialog.error-generic',
-              defaultMessage: 'Export failed, please try again later.',
-            })
+            id: 'export.dialog.error-generic',
+            defaultMessage: 'Export failed, please try again later.',
+          })
       );
     } finally {
       setIsExporting(false);
@@ -91,12 +93,12 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
   };
 
   return (
-    <Dialog 
-      open={open} 
+    <Dialog
+      open={open}
       onClose={handleClose}
       maxWidth="sm"
       PaperProps={{
-        sx: { 
+        sx: {
           minWidth: '500px',
           border: '2px solid #ffa800',
           boxShadow: 'none',
@@ -138,7 +140,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
       </DialogContent>
 
       <DialogActions sx={{ px: 3, pb: 3 }}>
-        <Button 
+        <Button
           onClick={handleClose}
           disabled={isExporting}
         >
@@ -147,7 +149,7 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
             defaultMessage: 'Cancel',
           })}
         </Button>
-        
+
         <Button
           onClick={handleExport}
           variant="contained"
@@ -156,13 +158,13 @@ const ExportDialog: React.FC<ExportDialogProps> = ({
         >
           {isExporting
             ? intl.formatMessage({
-                id: 'export.dialog.exporting',
-                defaultMessage: 'Exporting...',
-              })
+              id: 'export.dialog.exporting',
+              defaultMessage: 'Exporting...',
+            })
             : intl.formatMessage({
-                id: 'export.dialog.export',
-                defaultMessage: 'Export',
-              })
+              id: 'export.dialog.export',
+              defaultMessage: 'Export',
+            })
           }
         </Button>
       </DialogActions>
