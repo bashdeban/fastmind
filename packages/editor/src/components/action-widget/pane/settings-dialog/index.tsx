@@ -24,8 +24,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogTitle from '@mui/material/DialogTitle';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
 import ManageIcon from '@mui/icons-material/ManageAccounts';
 import { useIntl } from 'react-intl';
 import ModelApiManagement from '../model-api-management';
@@ -52,7 +50,6 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
   const [explainerPrompt, setExplainerPrompt] = useState(
     ''
   );
-  const [deduplicationEnabled, setDeduplicationEnabled] = useState(false);
 
   // 加载当前配置
   useEffect(() => {
@@ -60,11 +57,10 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
       const config = LLMConfigManager.getConfig();
       setCurrentConfig(config);
 
-      // 加载自定义提示词和去重设置
+      // 加载自定义提示词
       const settingsConfig = SettingsManager.getConfig();
       setTopicGeneratorPrompt(settingsConfig.topicGeneratorPrompt || '');
       setExplainerPrompt(settingsConfig.explainerPrompt || '');
-      setDeduplicationEnabled(settingsConfig.deduplicationEnabled || false);
     }
   }, [open]);
 
@@ -80,8 +76,8 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
   };
 
   const handleSave = () => {
-    // 保存自定义提示词和去重设置到localStorage
-    SettingsManager.savePrompts(topicGeneratorPrompt, explainerPrompt, deduplicationEnabled);
+    // 保存自定义提示词到localStorage
+    SettingsManager.savePrompts(topicGeneratorPrompt, explainerPrompt);
     onClose();
   };
 
@@ -90,7 +86,6 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
     const settingsConfig = SettingsManager.getConfig();
     setTopicGeneratorPrompt(settingsConfig.topicGeneratorPrompt || '');
     setExplainerPrompt(settingsConfig.explainerPrompt || '');
-    setDeduplicationEnabled(settingsConfig.deduplicationEnabled || false);
     onClose();
   };
 
@@ -115,9 +110,9 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
 
         <StyledDialogContent>
           <Typography variant="body2" color="text.secondary" sx={{ mb: 3, lineHeight: 1.4 }}>
-            {intl.formatMessage({ 
-              id: 'settings.description', 
-              defaultMessage: 'Configure AI model settings and customize prompts for topic generation and concept explanation.' 
+            {intl.formatMessage({
+              id: 'settings.description',
+              defaultMessage: 'Configure AI model settings and customize prompts for topic generation and concept explanation.'
             })}
           </Typography>
 
@@ -125,9 +120,9 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
             {/* LLM Configuration */}
             <Box>
               <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mb: 1 }}>
-                {intl.formatMessage({ 
-                  id: 'settings.current-model', 
-                  defaultMessage: 'Current Model: {modelName}' 
+                {intl.formatMessage({
+                  id: 'settings.current-model',
+                  defaultMessage: 'Current Model: {modelName}'
                 }, { modelName: currentConfig?.modelName || intl.formatMessage({ id: 'settings.no-model', defaultMessage: 'No model configured' }) })}
               </Typography>
               <Button
@@ -143,39 +138,24 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
 
             {/* AI Prompts */}
             <Box>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-                <Typography variant="subtitle2" sx={{ fontWeight: 'bold' }}>
-                  {intl.formatMessage({ id: 'settings.ai-topic-generator-title', defaultMessage: 'AI Topic Generator with User-Defined Prompts' })}
-                </Typography>
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={deduplicationEnabled}
-                      onChange={(e) => setDeduplicationEnabled(e.target.checked)}
-                      size="small"
-                    />
-                  }
-                  label={intl.formatMessage({ id: 'settings.deduplication', defaultMessage: 'Deduplication' })}
-                  labelPlacement="start"
-                  sx={{ 
-                    ml: 0,
-                    '& .MuiFormControlLabel-label': {
-                      fontSize: '0.875rem', // subtitle2 size
-                      fontWeight: 'bold'
-                    }
-                  }}
-                />
-              </Box>
+              <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', mt: 2, mb: 1 }}>
+                {intl.formatMessage({ id: 'settings.ai-topic-generator-title', defaultMessage: 'AI Topic Generator with User-Defined Prompts' })}
+              </Typography>
               <TextField
                 fullWidth
                 multiline
-                rows={2}
+                rows={5}
                 variant="outlined"
                 value={topicGeneratorPrompt}
                 onChange={(e) => setTopicGeneratorPrompt(e.target.value)}
                 placeholder={intl.formatMessage({ id: 'settings.topic-generator-placeholder', defaultMessage: 'Enter custom prompt for topic generation...' })}
                 size="small"
-                sx={{ mb: 2 }}
+                sx={{
+                  mb: 1,
+                  '& .MuiInputBase-input': {
+                    fontSize: '0.8rem',
+                  }
+                }}
               />
             </Box>
             <Box>
@@ -191,7 +171,12 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
                 onChange={(e) => setExplainerPrompt(e.target.value)}
                 placeholder={intl.formatMessage({ id: 'settings.explainer-placeholder', defaultMessage: 'Enter custom prompt for concept explanation...' })}
                 size="small"
-                sx={{ mb: 2 }}
+                sx={{
+                  mb: 1,
+                  '& .MuiInputBase-input': {
+                    fontSize: '0.8rem',
+                  }
+                }}
               />
             </Box>
           </Box>

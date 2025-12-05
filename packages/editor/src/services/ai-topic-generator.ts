@@ -181,32 +181,32 @@ class AITopicGeneratorService {
 
     // Build context hierarchy
     const contextPath = parentPath.length > 0
-      ? `Context hierarchy: ${parentPath.join(' → ')}\n`
+      ? `Parent Topics: ${parentPath.join(' → ')}\n`
       : '';
 
     // Add existing child topics for deduplication if parentTopic is provided
-    let existingTopicsText = '';
+    let noRepetitiveText = '';
     if (parentTopic) {
       const existingChildTopics = this.collectChildTopicTexts(parentTopic);
       if (existingChildTopics.length > 0) {
-        existingTopicsText = `- Avoid duplicating any existing subtopics mentioned \nExisting subtopics to avoid duplication: ${existingChildTopics.join(', ')}`;
+        noRepetitiveText = `- Strictly no repetitive, recurring, or duplicated subtopics from:[${existingChildTopics.join(', ')}]`;
       }
     }
 
-    const enhancedPrompt = `${contextPath}Based on the topic "${currentTopic}" and its context above, generate 3 to ${options.count} related subtopics as a JSON array.
-
-Considerations:
+    const enhancedPrompt = `Based on current core topic "${currentTopic}" and its parent topics above, generate 3 to ${options.count} related subtopics as a JSON array.
+${contextPath}
+Requirements:
 - Subtopics must be concise and brief; use words whenever possible instead of short sentences.
-- Write in the same language as topics
-- The number of subtopics is determined flexibly based on relevance and value
-${existingTopicsText}
+- Write in the same language as topics.
+- The number of subtopics is determined flexibly based on relevance and value.
+- No extra text, no code block markers, no explanations.
+${noRepetitiveText}
 
 Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
 
     if (options.customPrompt && options.customPrompt.trim()) {
-      return `${enhancedPrompt}\n\nAdditional considerations: ${options.customPrompt.trim()}`;
+      return `${enhancedPrompt}\n\nAdditional Requirements: ${options.customPrompt.trim()}`;
     }
-
     return enhancedPrompt;
   }
 
@@ -218,9 +218,8 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
     designer: Designer,
     options: Partial<AITopicGeneratorOptions> = {}
   ): Promise<void> {
-    // Get custom prompt and deduplication setting from localStorage
+    // Get custom prompt from localStorage
     const customPrompt = SettingsManager.getTopicGeneratorPrompt();
-    const deduplicationEnabled = SettingsManager.getDeduplicationEnabled();
 
     const defaultOptions: AITopicGeneratorOptions = {
       count: 8,
@@ -235,7 +234,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
       const generatedTopics = await this.generateTopicsWithContext(
         topicPath,
         defaultOptions,
-        deduplicationEnabled ? parentTopic : undefined
+        parentTopic
       );
 
       // Create NodeModel instances
@@ -263,7 +262,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
   private parseResponse(response: string): GeneratedTopic[] {
     try {
       //Remove all thinking tags
-      response = response.replace(/<[^\/> ]+>[\s\S]*?<\/[^> ]+>/gi, '').trim();
+      response = response.replace(/<[^/ >]+>[\s\S]*?<\/[^> ]+>/gi, '').trim();
       // Try to extract JSON from the response
       const jsonMatch = response.match(/\[[\s\S]*\]/);
       if (!jsonMatch) {
@@ -280,7 +279,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
 
       return parsed
         .filter(item => item && typeof item === 'object' && typeof item.text === 'string')
-        .map(item => ({ text: item.text })); 
+        .map(item => ({ text: item.text }));
     } catch (error) {
       console.error('Failed to parse LLM response:', error);
       console.error('Response content:', response);

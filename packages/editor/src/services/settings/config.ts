@@ -19,7 +19,6 @@
 export interface SettingsConfig {
   topicGeneratorPrompt?: string;
   explainerPrompt?: string;
-  deduplicationEnabled?: boolean;
 }
 
 const STORAGE_KEY = 'fastmind-settings';
@@ -28,7 +27,6 @@ const STORAGE_KEY = 'fastmind-settings';
 export const DEFAULT_SETTINGS_CONFIG: SettingsConfig = {
   topicGeneratorPrompt: '',
   explainerPrompt: '',
-  deduplicationEnabled: false,
 };
 
 export class SettingsManager {
@@ -65,26 +63,13 @@ export class SettingsManager {
     return config.explainerPrompt || '';
   }
 
-  static getDeduplicationEnabled(): boolean {
-    const config = this.getConfig();
-    return config.deduplicationEnabled || false;
-  }
-
   static savePrompts(
     topicGeneratorPrompt?: string,
-    explainerPrompt?: string,
-    deduplicationEnabled?: boolean
+    explainerPrompt?: string
   ): void {
     this.saveConfig({
       topicGeneratorPrompt,
       explainerPrompt,
-      deduplicationEnabled,
-    });
-  }
-
-  static saveDeduplicationEnabled(deduplicationEnabled: boolean): void {
-    this.saveConfig({
-      deduplicationEnabled,
     });
   }
 
