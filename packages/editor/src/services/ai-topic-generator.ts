@@ -18,7 +18,6 @@
 import { llmProgressManager } from '../components/llm-progress-notification/manager';
 import { LLMService } from './llm/LLMService';
 import { LLMConfigManager } from './llm/config';
-import { SettingsManager } from './settings/config';
 import NodeModel from '@wisemapping/mindplot/src/components/model/NodeModel';
 import Designer from '@wisemapping/mindplot/src/components/Designer';
 import { Topic } from '@wisemapping/mindplot';
@@ -218,12 +217,15 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
     designer: Designer,
     options: Partial<AITopicGeneratorOptions> = {}
   ): Promise<void> {
-    // Get custom prompt from localStorage
-    const customPrompt = SettingsManager.getTopicGeneratorPrompt();
+    // Import PromptManager here to avoid circular dependency
+    const { PromptManager } = await import('./prompt-manager');
+    
+    // Get combined custom prompts from activated templates
+    const combinedPrompts = PromptManager.getCombinedActiveContent('topic-generator');
 
     const defaultOptions: AITopicGeneratorOptions = {
       count: 8,
-      customPrompt: customPrompt || options.customPrompt
+      customPrompt: combinedPrompts || options.customPrompt
     };
 
     try {

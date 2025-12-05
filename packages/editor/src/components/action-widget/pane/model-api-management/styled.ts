@@ -29,7 +29,7 @@ import Button from '@mui/material/Button';
 
 // Reuse styles from outline-view-dialog
 export const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
-  padding: '26px',
+  padding: theme.spacing(3),
   position: 'relative',
   backgroundColor: theme.palette.background.paper,
 }));
@@ -51,7 +51,7 @@ export const StyledDialogPaper = styled(Paper)(({ theme }) => ({
   width: '50vw',
   maxWidth: '600px',
   maxHeight: 'none',
-  borderRadius: '12px',
+  border: '2px solid #ffa800',
   overflow: 'hidden',
   zIndex: theme.zIndex.modal + 1,
 }));

@@ -35,7 +35,7 @@ import {
 } from '@mui/icons-material';
 import IconButton from '@mui/material/IconButton';
 import { aiTopicGeneratorService, type AITopicGeneratorOptions } from '../../../../services/ai-topic-generator';
-import { SettingsManager } from '../../../../services/settings/config';
+import { PromptManager } from '../../../../services/prompt-manager';
 import { useIntl } from 'react-intl';
 import type { AITopicGeneratorProps } from './types';
 
@@ -68,10 +68,10 @@ const AITopicGenerator: React.FC<AITopicGeneratorProps> = ({
     setGeneratedTopics([]);
 
     try {
-      // 获取全局自定义提示词
-      const globalCustomPrompt = SettingsManager.getTopicGeneratorPrompt();
+      // 获取所有激活的模板提示词组合
+      const globalCustomPrompt = PromptManager.getCombinedActiveContent('topic-generator');
       
-      // 合并全局提示词和本地自定义提示词
+      // 合并激活模板和本地自定义提示词
       const mergedOptions: AITopicGeneratorOptions = {
         ...options,
         customPrompt: globalCustomPrompt && options.customPrompt 

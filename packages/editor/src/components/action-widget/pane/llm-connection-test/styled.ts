@@ -49,7 +49,7 @@ export const StyledDialogPaper = styled(Paper)(({ theme }) => ({
   width: '75vw',
   maxWidth: 'none',
   maxHeight: 'none',
-  borderRadius: '12px',
+  border: '2px solid #ffa800',
   overflow: 'hidden',
   zIndex: theme.zIndex.modal + 1,
 }));

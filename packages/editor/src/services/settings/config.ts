@@ -16,9 +16,22 @@
  *   limitations under the License.
  */
 
+export interface PromptTemplate {
+  id: string;
+  name: string;
+  content: string;
+  selected: boolean;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface SettingsConfig {
   topicGeneratorPrompt?: string;
   explainerPrompt?: string;
+  topicGeneratorTemplates?: PromptTemplate[];
+  explainerTemplates?: PromptTemplate[];
+  activeTopicGeneratorId?: string;
+  activeExplainerId?: string;
 }
 
 const STORAGE_KEY = 'fastmind-settings';

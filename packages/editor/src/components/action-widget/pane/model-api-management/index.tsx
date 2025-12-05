@@ -23,11 +23,13 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
+import Tooltip from '@mui/material/Tooltip';
 import AddIcon from '@mui/icons-material/Add';
 import CloseIcon from '@mui/icons-material/Close';
 import CloudIcon from '@mui/icons-material/Cloud';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import SwapHorizIcon from '@mui/icons-material/SwapHoriz';
 import IconButton from '@mui/material/IconButton';
 import LlmConnectionTest from '../llm-connection-test';
 import { LLMConfigListManager } from '../../../../services/llm/config-list';
@@ -126,9 +128,6 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
 
         <StyledDialogContent>
           <Container>
-            <HeaderSection>
-            </HeaderSection>
-
             <ListContainer>
               {configList.length === 0 ? (
                 <EmptyStateContainer>
@@ -162,28 +161,31 @@ const ModelApiManagement = ({ open, onClose }: ModelApiManagementProps): React.R
                             />
                           ) : (
                             <>
-                              <SwitchModelButton
-                                variant="outlined"
-                                size="small"
-                                onClick={() => handleSwitchModel(config)}
-                              >
-                                <FormattedMessage id="model-api-management.switch" defaultMessage="Switch" />
-                              </SwitchModelButton>
-                              <UpdateModelButton
-                                variant="outlined"
-                                size="small"
-                                onClick={() => handleUpdateConfig(config)}
-                                startIcon={<EditIcon sx={{ fontSize: '14px' }} />}
-                              >
-                                <FormattedMessage id="model-api-management.update" defaultMessage="Update" />
-                              </UpdateModelButton>
-                              <IconButton
-                                size="small"
-                                onClick={() => handleDeleteConfig(config.modelName)}
-                                sx={{ ml: 1 }}
-                              >
-                                <DeleteIcon fontSize="small" />
-                              </IconButton>
+                              <Tooltip title={intl.formatMessage({ id: 'model-api-management.switch', defaultMessage: 'Switch Model' })}>
+                                <IconButton
+                                  size="small"
+                                  onClick={() => handleSwitchModel(config)}
+                                >
+                                  <SwapHorizIcon fontSize="small" />
+                                </IconButton>
+                              </Tooltip>
+                              <Tooltip title={intl.formatMessage({ id: 'model-api-management.update', defaultMessage: 'Update Model' })}>
+                                <IconButton
+                                  size="small"
+                                  onClick={() => handleUpdateConfig(config)}
+                                >
+                                  <EditIcon fontSize="small" />
+                                </IconButton>
+                              </Tooltip>
+                              <Tooltip title={intl.formatMessage({ id: 'model-api-management.delete', defaultMessage: 'Delete Model' })}>
+                                <IconButton
+                                  size="small"
+                                  onClick={() => handleDeleteConfig(config.modelName)}
+                                  sx={{ ml: 1 }}
+                                >
+                                  <DeleteIcon fontSize="small" />
+                                </IconButton>
+                              </Tooltip>
                             </>
                           )}
                         </SwitchButtonContainer>

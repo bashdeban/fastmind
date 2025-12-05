@@ -564,10 +564,10 @@
     "defaultMessage": "Toggle start arrow"
   },
   "settings.ai-explainer-title": {
-    "defaultMessage": "AI Explainer with User-Defined Prompts"
+    "defaultMessage": "AI Explainer"
   },
   "settings.ai-topic-generator-title": {
-    "defaultMessage": "AI Topic Generator with User-Defined Prompts"
+    "defaultMessage": "AI Topic Generator"
   },
   "settings.current-model": {
     "defaultMessage": "Current Model: {modelName}"
@@ -592,6 +592,84 @@
   },
   "settings.topic-generator-placeholder": {
     "defaultMessage": "Enter custom prompt for topic generation..."
+  },
+  "settings.custom-prompts": {
+    "defaultMessage": "Custom Prompts"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "Manage Prompts"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "No active template"
+  },
+  "settings.active-template": {
+    "defaultMessage": "Custom Prompts"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "Manage Templates"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "AI Topic Generator"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "AI Explainer"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "Prompts List"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "No prompts found. Create your first prompt!"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "Add Prompt"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "Load Default Prompts"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "Enabled"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "Enable/Disable"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "Edit Prompt"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "Delete Prompt"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "Prompt Name"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "e.g., Creative Writing, Technical Analysis"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "Prompt Content"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "Enter your AI topic generation prompt here..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "Enter your AI explainer prompt here..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "This prompt will be used to generate topics for your mind map."
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "This prompt will be used to explain selected topics."
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "Create New Prompt"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "Edit Prompt"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "Please enter a prompt name"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "Please enter prompt content"
   },
   "shortcut-help-pane.action": {
     "defaultMessage": "Action"
