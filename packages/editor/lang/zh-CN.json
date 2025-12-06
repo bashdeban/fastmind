@@ -593,6 +593,84 @@
   "settings.topic-generator-placeholder": {
     "defaultMessage": "输入主题生成的自定义提示词..."
   },
+  "settings.custom-prompts": {
+    "defaultMessage": "自定义提示词"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "管理提示词"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "无生效模板"
+  },
+  "settings.active-template": {
+    "defaultMessage": "自定义提示词"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "管理模板"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "AI 主题生成器"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "AI 解释器"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "提示词列表"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "暂无提示词，快来创建你的第一个提示词吧！"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "添加提示词"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "加载默认提示词"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "已启用"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "启用/禁用"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "编辑提示词"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "删除提示词"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "提示词名称"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "例如：创意写作、技术分析"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "提示词内容"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "在此输入你的 AI 主题生成提示词..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "在此输入你的 AI 解释提示词..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "此提示词将用于为你的思维导图生成主题"
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "此提示词将用于解释你选中的主题"
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "创建新提示词"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "编辑提示词"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "请输入提示词名称"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "请输入提示词内容"
+  },
   "shortcut-help-pane.action": {
     "defaultMessage": "操作"
   },

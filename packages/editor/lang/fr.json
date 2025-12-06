@@ -593,6 +593,84 @@
   "settings.topic-generator-placeholder": {
     "defaultMessage": "Saisir un prompt personnalisé pour la génération de sujets..."
   },
+  "settings.custom-prompts": {
+    "defaultMessage": "Invites personnalisées"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "Gérer les invites"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "Aucun modèle actif"
+  },
+  "settings.active-template": {
+    "defaultMessage": "Invites personnalisées"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "Gérer les modèles"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "Générateur de sujets IA"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "Explicateur IA"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "Liste des invites"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "Aucune invite trouvée. Créez votre première invite !"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "Ajouter une invite"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "Charger les invites par défaut"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "Activé"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "Activer/Désactiver"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "Modifier l'invite"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "Supprimer l'invite"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "Nom de l'invite"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "Exemple : Écriture créative, Analyse technique"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "Contenu de l'invite"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "Saisissez ici votre invite de génération de sujets par IA..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "Saisissez ici votre invite d'explication par IA..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "Cette invite sera utilisée pour générer des sujets pour votre carte mentale."
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "Cette invite sera utilisée pour expliquer les sujets sélectionnés."
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "Créer une nouvelle invite"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "Modifier l'invite"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "Veuillez saisir un nom pour l'invite"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "Veuillez saisir le contenu de l'invite"
+  },
   "shortcut-help-pane.action": {
     "defaultMessage": "Action"
   },

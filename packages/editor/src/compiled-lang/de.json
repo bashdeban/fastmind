@@ -1139,6 +1139,132 @@
       "value": "Notiz"
     }
   ],
+  "prompt-editor.content-label": [
+    {
+      "type": 0,
+      "value": "Prompt-Inhalt"
+    }
+  ],
+  "prompt-editor.content-required": [
+    {
+      "type": 0,
+      "value": "Bitte gib den Prompt-Inhalt ein"
+    }
+  ],
+  "prompt-editor.create-title": [
+    {
+      "type": 0,
+      "value": "Neuen Prompt erstellen"
+    }
+  ],
+  "prompt-editor.edit-title": [
+    {
+      "type": 0,
+      "value": "Prompt bearbeiten"
+    }
+  ],
+  "prompt-editor.explainer-helper": [
+    {
+      "type": 0,
+      "value": "Dieser Prompt wird verwendet, um ausgewählte Themen zu erklären."
+    }
+  ],
+  "prompt-editor.explainer-placeholder": [
+    {
+      "type": 0,
+      "value": "Gib hier deinen Prompt zur KI-Erklärung ein..."
+    }
+  ],
+  "prompt-editor.name-label": [
+    {
+      "type": 0,
+      "value": "Prompt-Name"
+    }
+  ],
+  "prompt-editor.name-placeholder": [
+    {
+      "type": 0,
+      "value": "z. B. Kreatives Schreiben, Technische Analyse"
+    }
+  ],
+  "prompt-editor.name-required": [
+    {
+      "type": 0,
+      "value": "Bitte gib einen Prompt-Namen ein"
+    }
+  ],
+  "prompt-editor.topic-generator-helper": [
+    {
+      "type": 0,
+      "value": "Dieser Prompt wird verwendet, um Themen für deine Mindmap zu generieren."
+    }
+  ],
+  "prompt-editor.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "Gib hier deinen Prompt zur KI-Themengenerierung ein..."
+    }
+  ],
+  "prompt-manager.add-prompt": [
+    {
+      "type": 0,
+      "value": "Prompt hinzufügen"
+    }
+  ],
+  "prompt-manager.enabled": [
+    {
+      "type": 0,
+      "value": "Aktiviert"
+    }
+  ],
+  "prompt-manager.load-default-prompts": [
+    {
+      "type": 0,
+      "value": "Standard-Prompts laden"
+    }
+  ],
+  "prompt-manager.no-prompts": [
+    {
+      "type": 0,
+      "value": "Keine Prompts gefunden. Erstelle deinen ersten Prompt!"
+    }
+  ],
+  "prompt-manager.prompts-list": [
+    {
+      "type": 0,
+      "value": "Prompt-Liste"
+    }
+  ],
+  "prompt-manager.title.explainer": [
+    {
+      "type": 0,
+      "value": "KI-Erklärer"
+    }
+  ],
+  "prompt-manager.title.topic-generator": [
+    {
+      "type": 0,
+      "value": "KI-Themengenerator"
+    }
+  ],
+  "prompt-manager.tooltip-delete": [
+    {
+      "type": 0,
+      "value": "Prompt löschen"
+    }
+  ],
+  "prompt-manager.tooltip-edit": [
+    {
+      "type": 0,
+      "value": "Prompt bearbeiten"
+    }
+  ],
+  "prompt-manager.tooltip-toggle": [
+    {
+      "type": 0,
+      "value": "Aktivieren/Deaktivieren"
+    }
+  ],
   "relationship-style-editor.color": [
     {
       "type": 0,
@@ -1211,6 +1337,12 @@
       "value": "Startpfeil ein-/ausblenden"
     }
   ],
+  "settings.active-template": [
+    {
+      "type": 0,
+      "value": "Benutzerdefinierte Prompts"
+    }
+  ],
   "settings.ai-explainer-title": [
     {
       "type": 0,
@@ -1233,6 +1365,12 @@
       "value": "modelName"
     }
   ],
+  "settings.custom-prompts": [
+    {
+      "type": 0,
+      "value": "Benutzerdefinierte Prompts"
+    }
+  ],
   "settings.deduplication": [
     {
       "type": 0,
@@ -1251,10 +1389,28 @@
       "value": "Benutzerdefinierten Prompt für Konzepterklärung eingeben..."
     }
   ],
+  "settings.manage-prompts": [
+    {
+      "type": 0,
+      "value": "Prompts verwalten"
+    }
+  ],
+  "settings.manage-templates": [
+    {
+      "type": 0,
+      "value": "Templates verwalten"
+    }
+  ],
   "settings.model-api-management": [
     {
       "type": 0,
       "value": "Modell-API-Verwaltung"
+    }
+  ],
+  "settings.no-active-template": [
+    {
+      "type": 0,
+      "value": "Kein aktives Template"
     }
   ],
   "settings.no-model": [

@@ -593,6 +593,84 @@
   "settings.topic-generator-placeholder": {
     "defaultMessage": "Введите пользовательский промпт для генерации тем..."
   },
+  "settings.custom-prompts": {
+    "defaultMessage": "Пользовательские промпты"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "Управление промптами"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "Нет активного шаблона"
+  },
+  "settings.active-template": {
+    "defaultMessage": "Пользовательские промпты"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "Управление шаблонами"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "Генератор тем ИИ"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "Объяснялка ИИ"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "Список промптов"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "Промпты не найдены. Создайте свой первый промпт!"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "Добавить промпт"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "Загрузить стандартные промпты"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "Включено"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "Включить/Выключить"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "Редактировать промпт"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "Удалить промпт"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "Название промпта"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "например: Креативное письмо, Технический анализ"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "Содержимое промпта"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "Введите сюда промпт для генерации тем ИИ..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "Введите сюда промпт для объяснения ИИ..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "Этот промпт будет использоваться для генерации тем для вашей ментальной карты."
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "Этот промпт будет использоваться для объяснения выбранных тем."
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "Создать новый промпт"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "Редактировать промпт"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "Пожалуйста, введите название промпта"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "Пожалуйста, введите содержимое промпта"
+  },
   "shortcut-help-pane.action": {
     "defaultMessage": "Действие"
   },

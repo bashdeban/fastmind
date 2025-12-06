@@ -593,6 +593,84 @@
   "settings.topic-generator-placeholder": {
     "defaultMessage": "トピック生成のカスタムプロンプトを入力..."
   },
+  "settings.custom-prompts": {
+    "defaultMessage": "カスタムプロンプト"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "プロンプトを管理"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "有効なテンプレートがありません"
+  },
+  "settings.active-template": {
+    "defaultMessage": "カスタムプロンプト"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "テンプレートを管理"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "AIトピック生成"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "AI解説"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "プロンプト一覧"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "プロンプトが見つかりません。最初のプロンプトを作成してください！"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "プロンプトを追加"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "デフォルトプロンプトを読み込む"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "有効"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "有効化／無効化"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "プロンプトを編集"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "プロンプトを削除"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "プロンプト名"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "例：クリエイティブライティング、技術分析"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "プロンプト内容"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "AIトピック生成用のプロンプトをここに入力..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "AI解説用のプロンプトをここに入力..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "このプロンプトはマインドマップのトピック生成に使用されます。"
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "このプロンプトは選択したトピックの解説に使用されます。"
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "新規プロンプト作成"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "プロンプトを編集"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "プロンプト名を入力してください"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "プロンプト内容を入力してください"
+  },
   "shortcut-help-pane.action": {
     "defaultMessage": "アクション"
   },

@@ -593,6 +593,84 @@
   "settings.topic-generator-placeholder": {
     "defaultMessage": "Benutzerdefinierten Prompt für Themengenerierung eingeben..."
   },
+  "settings.custom-prompts": {
+    "defaultMessage": "Benutzerdefinierte Prompts"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "Prompts verwalten"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "Kein aktives Template"
+  },
+  "settings.active-template": {
+    "defaultMessage": "Benutzerdefinierte Prompts"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "Templates verwalten"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "KI-Themengenerator"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "KI-Erklärer"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "Prompt-Liste"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "Keine Prompts gefunden. Erstelle deinen ersten Prompt!"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "Prompt hinzufügen"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "Standard-Prompts laden"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "Aktiviert"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "Aktivieren/Deaktivieren"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "Prompt bearbeiten"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "Prompt löschen"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "Prompt-Name"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "z. B. Kreatives Schreiben, Technische Analyse"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "Prompt-Inhalt"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "Gib hier deinen Prompt zur KI-Themengenerierung ein..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "Gib hier deinen Prompt zur KI-Erklärung ein..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "Dieser Prompt wird verwendet, um Themen für deine Mindmap zu generieren."
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "Dieser Prompt wird verwendet, um ausgewählte Themen zu erklären."
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "Neuen Prompt erstellen"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "Prompt bearbeiten"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "Bitte gib einen Prompt-Namen ein"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "Bitte gib den Prompt-Inhalt ein"
+  },
   "shortcut-help-pane.action": {
     "defaultMessage": "Aktion"
   },

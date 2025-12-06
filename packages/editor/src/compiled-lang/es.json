@@ -1135,6 +1135,132 @@
       "value": "Nota"
     }
   ],
+  "prompt-editor.content-label": [
+    {
+      "type": 0,
+      "value": "Contenido del prompt"
+    }
+  ],
+  "prompt-editor.content-required": [
+    {
+      "type": 0,
+      "value": "Por favor, introduce el contenido del prompt"
+    }
+  ],
+  "prompt-editor.create-title": [
+    {
+      "type": 0,
+      "value": "Crear nuevo prompt"
+    }
+  ],
+  "prompt-editor.edit-title": [
+    {
+      "type": 0,
+      "value": "Editar prompt"
+    }
+  ],
+  "prompt-editor.explainer-helper": [
+    {
+      "type": 0,
+      "value": "Este prompt se usará para explicar los temas seleccionados."
+    }
+  ],
+  "prompt-editor.explainer-placeholder": [
+    {
+      "type": 0,
+      "value": "Escribe aquí tu prompt para explicación con IA..."
+    }
+  ],
+  "prompt-editor.name-label": [
+    {
+      "type": 0,
+      "value": "Nombre del prompt"
+    }
+  ],
+  "prompt-editor.name-placeholder": [
+    {
+      "type": 0,
+      "value": "p. ej., Escritura creativa, Análisis técnico"
+    }
+  ],
+  "prompt-editor.name-required": [
+    {
+      "type": 0,
+      "value": "Por favor, introduce un nombre para el prompt"
+    }
+  ],
+  "prompt-editor.topic-generator-helper": [
+    {
+      "type": 0,
+      "value": "Este prompt se usará para generar temas para tu mapa mental."
+    }
+  ],
+  "prompt-editor.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "Escribe aquí tu prompt para generación de temas con IA..."
+    }
+  ],
+  "prompt-manager.add-prompt": [
+    {
+      "type": 0,
+      "value": "Añadir prompt"
+    }
+  ],
+  "prompt-manager.enabled": [
+    {
+      "type": 0,
+      "value": "Activado"
+    }
+  ],
+  "prompt-manager.load-default-prompts": [
+    {
+      "type": 0,
+      "value": "Cargar prompts predeterminados"
+    }
+  ],
+  "prompt-manager.no-prompts": [
+    {
+      "type": 0,
+      "value": "No se encontraron prompts. ¡Crea tu primer prompt!"
+    }
+  ],
+  "prompt-manager.prompts-list": [
+    {
+      "type": 0,
+      "value": "Lista de prompts"
+    }
+  ],
+  "prompt-manager.title.explainer": [
+    {
+      "type": 0,
+      "value": "Explicador con IA"
+    }
+  ],
+  "prompt-manager.title.topic-generator": [
+    {
+      "type": 0,
+      "value": "Generador de temas con IA"
+    }
+  ],
+  "prompt-manager.tooltip-delete": [
+    {
+      "type": 0,
+      "value": "Eliminar prompt"
+    }
+  ],
+  "prompt-manager.tooltip-edit": [
+    {
+      "type": 0,
+      "value": "Editar prompt"
+    }
+  ],
+  "prompt-manager.tooltip-toggle": [
+    {
+      "type": 0,
+      "value": "Activar/Desactivar"
+    }
+  ],
   "relationship-style-editor.color": [
     {
       "type": 0,
@@ -1207,6 +1333,12 @@
       "value": "Activar/desactivar flecha inicial"
     }
   ],
+  "settings.active-template": [
+    {
+      "type": 0,
+      "value": "Prompts personalizados"
+    }
+  ],
   "settings.ai-explainer-title": [
     {
       "type": 0,
@@ -1229,6 +1361,12 @@
       "value": "modelName"
     }
   ],
+  "settings.custom-prompts": [
+    {
+      "type": 0,
+      "value": "Prompts personalizados"
+    }
+  ],
   "settings.deduplication": [
     {
       "type": 0,
@@ -1247,10 +1385,28 @@
       "value": "Ingrese un prompt personalizado para la explicación de conceptos..."
     }
   ],
+  "settings.manage-prompts": [
+    {
+      "type": 0,
+      "value": "Gestionar prompts"
+    }
+  ],
+  "settings.manage-templates": [
+    {
+      "type": 0,
+      "value": "Gestionar plantillas"
+    }
+  ],
   "settings.model-api-management": [
     {
       "type": 0,
       "value": "Gestión de API de modelos"
+    }
+  ],
+  "settings.no-active-template": [
+    {
+      "type": 0,
+      "value": "Ninguna plantilla activa"
     }
   ],
   "settings.no-model": [

@@ -1139,6 +1139,132 @@
       "value": "備註"
     }
   ],
+  "prompt-editor.content-label": [
+    {
+      "type": 0,
+      "value": "提示詞內容"
+    }
+  ],
+  "prompt-editor.content-required": [
+    {
+      "type": 0,
+      "value": "請輸入提示詞內容"
+    }
+  ],
+  "prompt-editor.create-title": [
+    {
+      "type": 0,
+      "value": "建立新提示詞"
+    }
+  ],
+  "prompt-editor.edit-title": [
+    {
+      "type": 0,
+      "value": "編輯提示詞"
+    }
+  ],
+  "prompt-editor.explainer-helper": [
+    {
+      "type": 0,
+      "value": "此提示詞將用於解說你選取的主題"
+    }
+  ],
+  "prompt-editor.explainer-placeholder": [
+    {
+      "type": 0,
+      "value": "在此輸入你的 AI 解說提示詞..."
+    }
+  ],
+  "prompt-editor.name-label": [
+    {
+      "type": 0,
+      "value": "提示詞名稱"
+    }
+  ],
+  "prompt-editor.name-placeholder": [
+    {
+      "type": 0,
+      "value": "例如：創意寫作、技術分析"
+    }
+  ],
+  "prompt-editor.name-required": [
+    {
+      "type": 0,
+      "value": "請輸入提示詞名稱"
+    }
+  ],
+  "prompt-editor.topic-generator-helper": [
+    {
+      "type": 0,
+      "value": "此提示詞將用於為你的心智圖產生主題"
+    }
+  ],
+  "prompt-editor.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "在此輸入你的 AI 主題產生提示詞..."
+    }
+  ],
+  "prompt-manager.add-prompt": [
+    {
+      "type": 0,
+      "value": "新增提示詞"
+    }
+  ],
+  "prompt-manager.enabled": [
+    {
+      "type": 0,
+      "value": "已啟用"
+    }
+  ],
+  "prompt-manager.load-default-prompts": [
+    {
+      "type": 0,
+      "value": "載入預設提示詞"
+    }
+  ],
+  "prompt-manager.no-prompts": [
+    {
+      "type": 0,
+      "value": "尚未建立任何提示詞，快來建立你的第一個提示詞吧！"
+    }
+  ],
+  "prompt-manager.prompts-list": [
+    {
+      "type": 0,
+      "value": "提示詞清單"
+    }
+  ],
+  "prompt-manager.title.explainer": [
+    {
+      "type": 0,
+      "value": "AI 解說器"
+    }
+  ],
+  "prompt-manager.title.topic-generator": [
+    {
+      "type": 0,
+      "value": "AI 主題產生器"
+    }
+  ],
+  "prompt-manager.tooltip-delete": [
+    {
+      "type": 0,
+      "value": "刪除提示詞"
+    }
+  ],
+  "prompt-manager.tooltip-edit": [
+    {
+      "type": 0,
+      "value": "編輯提示詞"
+    }
+  ],
+  "prompt-manager.tooltip-toggle": [
+    {
+      "type": 0,
+      "value": "啟用／停用"
+    }
+  ],
   "relationship-style-editor.color": [
     {
       "type": 0,
@@ -1211,6 +1337,12 @@
       "value": "切換起始箭頭"
     }
   ],
+  "settings.active-template": [
+    {
+      "type": 0,
+      "value": "自訂提示詞"
+    }
+  ],
   "settings.ai-explainer-title": [
     {
       "type": 0,
@@ -1233,6 +1365,12 @@
       "value": "modelName"
     }
   ],
+  "settings.custom-prompts": [
+    {
+      "type": 0,
+      "value": "自訂提示詞"
+    }
+  ],
   "settings.deduplication": [
     {
       "type": 0,
@@ -1251,10 +1389,28 @@
       "value": "輸入自訂的概念解釋 Prompt..."
     }
   ],
+  "settings.manage-prompts": [
+    {
+      "type": 0,
+      "value": "管理提示詞"
+    }
+  ],
+  "settings.manage-templates": [
+    {
+      "type": 0,
+      "value": "管理範本"
+    }
+  ],
   "settings.model-api-management": [
     {
       "type": 0,
       "value": "模型 API 管理"
+    }
+  ],
+  "settings.no-active-template": [
+    {
+      "type": 0,
+      "value": "無生效範本"
     }
   ],
   "settings.no-model": [

@@ -593,6 +593,84 @@
   "settings.topic-generator-placeholder": {
     "defaultMessage": "輸入自訂的主題生成 Prompt..."
   },
+  "settings.custom-prompts": {
+    "defaultMessage": "自訂提示詞"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "管理提示詞"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "無生效範本"
+  },
+  "settings.active-template": {
+    "defaultMessage": "自訂提示詞"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "管理範本"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "AI 主題產生器"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "AI 解說器"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "提示詞清單"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "尚未建立任何提示詞，快來建立你的第一個提示詞吧！"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "新增提示詞"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "載入預設提示詞"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "已啟用"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "啟用／停用"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "編輯提示詞"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "刪除提示詞"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "提示詞名稱"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "例如：創意寫作、技術分析"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "提示詞內容"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "在此輸入你的 AI 主題產生提示詞..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "在此輸入你的 AI 解說提示詞..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "此提示詞將用於為你的心智圖產生主題"
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "此提示詞將用於解說你選取的主題"
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "建立新提示詞"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "編輯提示詞"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "請輸入提示詞名稱"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "請輸入提示詞內容"
+  },
   "shortcut-help-pane.action": {
     "defaultMessage": "動作"
   },

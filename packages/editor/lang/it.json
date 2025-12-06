@@ -593,6 +593,84 @@
   "settings.topic-generator-placeholder": {
     "defaultMessage": "Inserisci prompt personalizzato per la generazione argomenti..."
   },
+  "settings.custom-prompts": {
+    "defaultMessage": "Prompt personalizzati"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "Gestisci prompt"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "Nessun template attivo"
+  },
+  "settings.active-template": {
+    "defaultMessage": "Prompt personalizzati"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "Gestisci template"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "Generatore di argomenti AI"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "Spiegatore AI"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "Elenco prompt"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "Nessun prompt trovato. Crea il tuo primo prompt!"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "Aggiungi prompt"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "Carica prompt predefiniti"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "Attivato"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "Attiva/Disattiva"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "Modifica prompt"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "Elimina prompt"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "Nome del prompt"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "es. Scrittura creativa, Analisi tecnica"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "Contenuto del prompt"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "Inserisci qui il tuo prompt per la generazione di argomenti AI..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "Inserisci qui il tuo prompt per la spiegazione AI..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "Questo prompt verrà utilizzato per generare argomenti per la tua mappa mentale."
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "Questo prompt verrà utilizzato per spiegare gli argomenti selezionati."
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "Crea nuovo prompt"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "Modifica prompt"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "Inserisci un nome per il prompt"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "Inserisci il contenuto del prompt"
+  },
   "shortcut-help-pane.action": {
     "defaultMessage": "Azione"
   },

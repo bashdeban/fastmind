@@ -593,6 +593,84 @@
   "settings.topic-generator-placeholder": {
     "defaultMessage": "Digite o prompt personalizado para geração de tópicos..."
   },
+  "settings.custom-prompts": {
+    "defaultMessage": "Prompts personalizados"
+  },
+  "settings.manage-prompts": {
+    "defaultMessage": "Gerenciar prompts"
+  },
+  "settings.no-active-template": {
+    "defaultMessage": "Nenhum modelo ativo"
+  },
+  "settings.active-template": {
+    "defaultMessage": "Prompts personalizados"
+  },
+  "settings.manage-templates": {
+    "defaultMessage": "Gerenciar modelos"
+  },
+  "prompt-manager.title.topic-generator": {
+    "defaultMessage": "Gerador de Tópicos com IA"
+  },
+  "prompt-manager.title.explainer": {
+    "defaultMessage": "Explicador com IA"
+  },
+  "prompt-manager.prompts-list": {
+    "defaultMessage": "Lista de prompts"
+  },
+  "prompt-manager.no-prompts": {
+    "defaultMessage": "Nenhum prompt encontrado. Crie o seu primeiro prompt!"
+  },
+  "prompt-manager.add-prompt": {
+    "defaultMessage": "Adicionar prompt"
+  },
+  "prompt-manager.load-default-prompts": {
+    "defaultMessage": "Carregar prompts padrão"
+  },
+  "prompt-manager.enabled": {
+    "defaultMessage": "Ativado"
+  },
+  "prompt-manager.tooltip-toggle": {
+    "defaultMessage": "Ativar/Desativar"
+  },
+  "prompt-manager.tooltip-edit": {
+    "defaultMessage": "Editar prompt"
+  },
+  "prompt-manager.tooltip-delete": {
+    "defaultMessage": "Excluir prompt"
+  },
+  "prompt-editor.name-label": {
+    "defaultMessage": "Nome do prompt"
+  },
+  "prompt-editor.name-placeholder": {
+    "defaultMessage": "ex.: Escrita criativa, Análise técnica"
+  },
+  "prompt-editor.content-label": {
+    "defaultMessage": "Conteúdo do prompt"
+  },
+  "prompt-editor.topic-generator-placeholder": {
+    "defaultMessage": "Digite aqui o seu prompt para geração de tópicos com IA..."
+  },
+  "prompt-editor.explainer-placeholder": {
+    "defaultMessage": "Digite aqui o seu prompt para explicação com IA..."
+  },
+  "prompt-editor.topic-generator-helper": {
+    "defaultMessage": "Este prompt será usado para gerar tópicos para o seu mapa mental."
+  },
+  "prompt-editor.explainer-helper": {
+    "defaultMessage": "Este prompt será usado para explicar os tópicos selecionados."
+  },
+  "prompt-editor.create-title": {
+    "defaultMessage": "Criar novo prompt"
+  },
+  "prompt-editor.edit-title": {
+    "defaultMessage": "Editar prompt"
+  },
+  "prompt-editor.name-required": {
+    "defaultMessage": "Por favor, insira um nome para o prompt"
+  },
+  "prompt-editor.content-required": {
+    "defaultMessage": "Por favor, insira o conteúdo do prompt"
+  },
   "shortcut-help-pane.action": {
     "defaultMessage": "Ação"
   },

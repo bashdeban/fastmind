@@ -1135,6 +1135,132 @@
       "value": "Note"
     }
   ],
+  "prompt-editor.content-label": [
+    {
+      "type": 0,
+      "value": "Prompt Content"
+    }
+  ],
+  "prompt-editor.content-required": [
+    {
+      "type": 0,
+      "value": "Please enter prompt content"
+    }
+  ],
+  "prompt-editor.create-title": [
+    {
+      "type": 0,
+      "value": "Create New Prompt"
+    }
+  ],
+  "prompt-editor.edit-title": [
+    {
+      "type": 0,
+      "value": "Edit Prompt"
+    }
+  ],
+  "prompt-editor.explainer-helper": [
+    {
+      "type": 0,
+      "value": "This prompt will be used to explain selected topics."
+    }
+  ],
+  "prompt-editor.explainer-placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your AI explainer prompt here..."
+    }
+  ],
+  "prompt-editor.name-label": [
+    {
+      "type": 0,
+      "value": "Prompt Name"
+    }
+  ],
+  "prompt-editor.name-placeholder": [
+    {
+      "type": 0,
+      "value": "e.g., Creative Writing, Technical Analysis"
+    }
+  ],
+  "prompt-editor.name-required": [
+    {
+      "type": 0,
+      "value": "Please enter a prompt name"
+    }
+  ],
+  "prompt-editor.topic-generator-helper": [
+    {
+      "type": 0,
+      "value": "This prompt will be used to generate topics for your mind map."
+    }
+  ],
+  "prompt-editor.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "Enter your AI topic generation prompt here..."
+    }
+  ],
+  "prompt-manager.add-prompt": [
+    {
+      "type": 0,
+      "value": "Add Prompt"
+    }
+  ],
+  "prompt-manager.enabled": [
+    {
+      "type": 0,
+      "value": "Enabled"
+    }
+  ],
+  "prompt-manager.load-default-prompts": [
+    {
+      "type": 0,
+      "value": "Load Default Prompts"
+    }
+  ],
+  "prompt-manager.no-prompts": [
+    {
+      "type": 0,
+      "value": "No prompts found. Create your first prompt!"
+    }
+  ],
+  "prompt-manager.prompts-list": [
+    {
+      "type": 0,
+      "value": "Prompts List"
+    }
+  ],
+  "prompt-manager.title.explainer": [
+    {
+      "type": 0,
+      "value": "AI Explainer"
+    }
+  ],
+  "prompt-manager.title.topic-generator": [
+    {
+      "type": 0,
+      "value": "AI Topic Generator"
+    }
+  ],
+  "prompt-manager.tooltip-delete": [
+    {
+      "type": 0,
+      "value": "Delete Prompt"
+    }
+  ],
+  "prompt-manager.tooltip-edit": [
+    {
+      "type": 0,
+      "value": "Edit Prompt"
+    }
+  ],
+  "prompt-manager.tooltip-toggle": [
+    {
+      "type": 0,
+      "value": "Enable/Disable"
+    }
+  ],
   "relationship-style-editor.color": [
     {
       "type": 0,
@@ -1207,16 +1333,22 @@
       "value": "Toggle start arrow"
     }
   ],
+  "settings.active-template": [
+    {
+      "type": 0,
+      "value": "Custom Prompts"
+    }
+  ],
   "settings.ai-explainer-title": [
     {
       "type": 0,
-      "value": "AI Explainer with User-Defined Prompts"
+      "value": "AI Explainer"
     }
   ],
   "settings.ai-topic-generator-title": [
     {
       "type": 0,
-      "value": "AI Topic Generator with User-Defined Prompts"
+      "value": "AI Topic Generator"
     }
   ],
   "settings.current-model": [
@@ -1227,6 +1359,12 @@
     {
       "type": 1,
       "value": "modelName"
+    }
+  ],
+  "settings.custom-prompts": [
+    {
+      "type": 0,
+      "value": "Custom Prompts"
     }
   ],
   "settings.deduplication": [
@@ -1247,10 +1385,28 @@
       "value": "Enter custom prompt for concept explanation..."
     }
   ],
+  "settings.manage-prompts": [
+    {
+      "type": 0,
+      "value": "Manage Prompts"
+    }
+  ],
+  "settings.manage-templates": [
+    {
+      "type": 0,
+      "value": "Manage Templates"
+    }
+  ],
   "settings.model-api-management": [
     {
       "type": 0,
       "value": "Model API Management"
+    }
+  ],
+  "settings.no-active-template": [
+    {
+      "type": 0,
+      "value": "No active template"
     }
   ],
   "settings.no-model": [

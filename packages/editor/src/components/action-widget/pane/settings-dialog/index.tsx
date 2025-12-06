@@ -305,7 +305,7 @@ const SettingsDialog = ({ open, onClose }: SettingsDialogProps): React.ReactElem
         </StyledDialogContent>
         <DialogActions>
           <Button onClick={onClose}>
-            {intl.formatMessage({ id: 'action.close', defaultMessage: 'Close' })}
+            {intl.formatMessage({ id: 'common.close', defaultMessage: 'Close' })}
           </Button>
         </DialogActions>
       </Dialog>

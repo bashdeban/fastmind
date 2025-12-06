@@ -1135,6 +1135,132 @@
       "value": "メモ"
     }
   ],
+  "prompt-editor.content-label": [
+    {
+      "type": 0,
+      "value": "プロンプト内容"
+    }
+  ],
+  "prompt-editor.content-required": [
+    {
+      "type": 0,
+      "value": "プロンプト内容を入力してください"
+    }
+  ],
+  "prompt-editor.create-title": [
+    {
+      "type": 0,
+      "value": "新規プロンプト作成"
+    }
+  ],
+  "prompt-editor.edit-title": [
+    {
+      "type": 0,
+      "value": "プロンプトを編集"
+    }
+  ],
+  "prompt-editor.explainer-helper": [
+    {
+      "type": 0,
+      "value": "このプロンプトは選択したトピックの解説に使用されます。"
+    }
+  ],
+  "prompt-editor.explainer-placeholder": [
+    {
+      "type": 0,
+      "value": "AI解説用のプロンプトをここに入力..."
+    }
+  ],
+  "prompt-editor.name-label": [
+    {
+      "type": 0,
+      "value": "プロンプト名"
+    }
+  ],
+  "prompt-editor.name-placeholder": [
+    {
+      "type": 0,
+      "value": "例：クリエイティブライティング、技術分析"
+    }
+  ],
+  "prompt-editor.name-required": [
+    {
+      "type": 0,
+      "value": "プロンプト名を入力してください"
+    }
+  ],
+  "prompt-editor.topic-generator-helper": [
+    {
+      "type": 0,
+      "value": "このプロンプトはマインドマップのトピック生成に使用されます。"
+    }
+  ],
+  "prompt-editor.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "AIトピック生成用のプロンプトをここに入力..."
+    }
+  ],
+  "prompt-manager.add-prompt": [
+    {
+      "type": 0,
+      "value": "プロンプトを追加"
+    }
+  ],
+  "prompt-manager.enabled": [
+    {
+      "type": 0,
+      "value": "有効"
+    }
+  ],
+  "prompt-manager.load-default-prompts": [
+    {
+      "type": 0,
+      "value": "デフォルトプロンプトを読み込む"
+    }
+  ],
+  "prompt-manager.no-prompts": [
+    {
+      "type": 0,
+      "value": "プロンプトが見つかりません。最初のプロンプトを作成してください！"
+    }
+  ],
+  "prompt-manager.prompts-list": [
+    {
+      "type": 0,
+      "value": "プロンプト一覧"
+    }
+  ],
+  "prompt-manager.title.explainer": [
+    {
+      "type": 0,
+      "value": "AI解説"
+    }
+  ],
+  "prompt-manager.title.topic-generator": [
+    {
+      "type": 0,
+      "value": "AIトピック生成"
+    }
+  ],
+  "prompt-manager.tooltip-delete": [
+    {
+      "type": 0,
+      "value": "プロンプトを削除"
+    }
+  ],
+  "prompt-manager.tooltip-edit": [
+    {
+      "type": 0,
+      "value": "プロンプトを編集"
+    }
+  ],
+  "prompt-manager.tooltip-toggle": [
+    {
+      "type": 0,
+      "value": "有効化／無効化"
+    }
+  ],
   "relationship-style-editor.color": [
     {
       "type": 0,
@@ -1207,6 +1333,12 @@
       "value": "開始矢印を切り替え"
     }
   ],
+  "settings.active-template": [
+    {
+      "type": 0,
+      "value": "カスタムプロンプト"
+    }
+  ],
   "settings.ai-explainer-title": [
     {
       "type": 0,
@@ -1229,6 +1361,12 @@
       "value": "modelName"
     }
   ],
+  "settings.custom-prompts": [
+    {
+      "type": 0,
+      "value": "カスタムプロンプト"
+    }
+  ],
   "settings.deduplication": [
     {
       "type": 0,
@@ -1247,10 +1385,28 @@
       "value": "概念説明のカスタムプロンプトを入力..."
     }
   ],
+  "settings.manage-prompts": [
+    {
+      "type": 0,
+      "value": "プロンプトを管理"
+    }
+  ],
+  "settings.manage-templates": [
+    {
+      "type": 0,
+      "value": "テンプレートを管理"
+    }
+  ],
   "settings.model-api-management": [
     {
       "type": 0,
       "value": "モデルAPI管理"
+    }
+  ],
+  "settings.no-active-template": [
+    {
+      "type": 0,
+      "value": "有効なテンプレートがありません"
     }
   ],
   "settings.no-model": [

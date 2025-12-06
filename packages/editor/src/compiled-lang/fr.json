@@ -1135,6 +1135,132 @@
       "value": "Note"
     }
   ],
+  "prompt-editor.content-label": [
+    {
+      "type": 0,
+      "value": "Contenu de l'invite"
+    }
+  ],
+  "prompt-editor.content-required": [
+    {
+      "type": 0,
+      "value": "Veuillez saisir le contenu de l'invite"
+    }
+  ],
+  "prompt-editor.create-title": [
+    {
+      "type": 0,
+      "value": "Créer une nouvelle invite"
+    }
+  ],
+  "prompt-editor.edit-title": [
+    {
+      "type": 0,
+      "value": "Modifier l'invite"
+    }
+  ],
+  "prompt-editor.explainer-helper": [
+    {
+      "type": 0,
+      "value": "Cette invite sera utilisée pour expliquer les sujets sélectionnés."
+    }
+  ],
+  "prompt-editor.explainer-placeholder": [
+    {
+      "type": 0,
+      "value": "Saisissez ici votre invite d'explication par IA..."
+    }
+  ],
+  "prompt-editor.name-label": [
+    {
+      "type": 0,
+      "value": "Nom de l'invite"
+    }
+  ],
+  "prompt-editor.name-placeholder": [
+    {
+      "type": 0,
+      "value": "Exemple : Écriture créative, Analyse technique"
+    }
+  ],
+  "prompt-editor.name-required": [
+    {
+      "type": 0,
+      "value": "Veuillez saisir un nom pour l'invite"
+    }
+  ],
+  "prompt-editor.topic-generator-helper": [
+    {
+      "type": 0,
+      "value": "Cette invite sera utilisée pour générer des sujets pour votre carte mentale."
+    }
+  ],
+  "prompt-editor.topic-generator-placeholder": [
+    {
+      "type": 0,
+      "value": "Saisissez ici votre invite de génération de sujets par IA..."
+    }
+  ],
+  "prompt-manager.add-prompt": [
+    {
+      "type": 0,
+      "value": "Ajouter une invite"
+    }
+  ],
+  "prompt-manager.enabled": [
+    {
+      "type": 0,
+      "value": "Activé"
+    }
+  ],
+  "prompt-manager.load-default-prompts": [
+    {
+      "type": 0,
+      "value": "Charger les invites par défaut"
+    }
+  ],
+  "prompt-manager.no-prompts": [
+    {
+      "type": 0,
+      "value": "Aucune invite trouvée. Créez votre première invite !"
+    }
+  ],
+  "prompt-manager.prompts-list": [
+    {
+      "type": 0,
+      "value": "Liste des invites"
+    }
+  ],
+  "prompt-manager.title.explainer": [
+    {
+      "type": 0,
+      "value": "Explicateur IA"
+    }
+  ],
+  "prompt-manager.title.topic-generator": [
+    {
+      "type": 0,
+      "value": "Générateur de sujets IA"
+    }
+  ],
+  "prompt-manager.tooltip-delete": [
+    {
+      "type": 0,
+      "value": "Supprimer l'invite"
+    }
+  ],
+  "prompt-manager.tooltip-edit": [
+    {
+      "type": 0,
+      "value": "Modifier l'invite"
+    }
+  ],
+  "prompt-manager.tooltip-toggle": [
+    {
+      "type": 0,
+      "value": "Activer/Désactiver"
+    }
+  ],
   "relationship-style-editor.color": [
     {
       "type": 0,
@@ -1207,6 +1333,12 @@
       "value": "Activer/désactiver la flèche de départ"
     }
   ],
+  "settings.active-template": [
+    {
+      "type": 0,
+      "value": "Invites personnalisées"
+    }
+  ],
   "settings.ai-explainer-title": [
     {
       "type": 0,
@@ -1229,6 +1361,12 @@
       "value": "modelName"
     }
   ],
+  "settings.custom-prompts": [
+    {
+      "type": 0,
+      "value": "Invites personnalisées"
+    }
+  ],
   "settings.deduplication": [
     {
       "type": 0,
@@ -1247,10 +1385,28 @@
       "value": "Saisir un prompt personnalisé pour l’explication de concepts..."
     }
   ],
+  "settings.manage-prompts": [
+    {
+      "type": 0,
+      "value": "Gérer les invites"
+    }
+  ],
+  "settings.manage-templates": [
+    {
+      "type": 0,
+      "value": "Gérer les modèles"
+    }
+  ],
   "settings.model-api-management": [
     {
       "type": 0,
       "value": "Gestion des API de modèles"
+    }
+  ],
+  "settings.no-active-template": [
+    {
+      "type": 0,
+      "value": "Aucun modèle actif"
     }
   ],
   "settings.no-model": [
