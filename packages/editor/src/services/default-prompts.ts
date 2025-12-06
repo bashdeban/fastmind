@@ -18,23 +18,30 @@
 
 import { type PromptType } from './prompt-manager';
 
-// 默认prompt数据结构：{ name: string, content: string }
-// 您可以在这里手动添加更多的默认prompt
+// prompt data tructures:{ name: string, content: string }
 export const DEFAULT_TOPIC_GENERATOR_PROMPTS = [
   {
     name: 'Add emojis',
     content: '- Each generated new topic is preceded by a matching emoji'
   },
   {
-    name: 'Add english pronunciation',
-    content: '- Generate new topics in English \n- Follow each topic with its English pronunciation,Use / to indicate pronunciation, separated by a newline(\n)'
+    name: 'Add serial number',
+    content: '- Each generated new topic is preceded by a serial number'
+  },
+  {
+    name: 'Add English pronunciation',
+    content: '- Generate new topics in English \n- Follow each topic with its English pronunciation,Use / to indicate pronunciation, separated by a newline'
   }
 ];
 
 export const DEFAULT_EXPLAINER_PROMPTS = [
   {
+    name: 'Attach a simple',
+    content: '- Attach a simple, easy-to-understand example described in the simplest language.'
+  },
+  {
     name: 'Technical explanation',
-    content: 'Provides a comprehensive technical explanation of current core topic. Includes detailed mechanisms, fundamental principles, technical specifications, and advanced concepts. Target audience: Technical professionals or subject matter experts.'
+    content: '- Provides a comprehensive technical explanation of current core topic. Includes detailed mechanisms, fundamental principles, technical specifications, and advanced concepts. Target audience: Technical professionals or subject matter experts.'
   }
 ];
 

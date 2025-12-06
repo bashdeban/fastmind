@@ -185,7 +185,7 @@ const PromptEditor: React.FC<PromptEditorProps> = ({
           variant="contained"
           disabled={!name.trim() || !content.trim()}
         >
-          {intl.formatMessage({ id: 'action.save', defaultMessage: 'Save' })}
+          {intl.formatMessage({ id: 'appbar.tooltip-save', defaultMessage: 'Save' })}
         </Button>
       </DialogActions>
     </Dialog>

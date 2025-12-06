@@ -18,7 +18,6 @@
 import { llmProgressManager } from '../components/llm-progress-notification/manager';
 import { LLMService } from './llm/LLMService';
 import { LLMConfigManager } from './llm/config';
-import { SettingsManager } from './settings/config';
 import Designer from '@wisemapping/mindplot/src/components/Designer';
 import { Topic } from '@wisemapping/mindplot';
 
@@ -36,12 +35,15 @@ class AIExplainerService {
     designer: Designer,
     options: Partial<AIExplainerOptions> = {}
   ): Promise<void> {
-    // Get custom prompt from localStorage
-    const customPrompt = SettingsManager.getExplainerPrompt();
+    // Import PromptManager here to avoid circular dependency
+    const { PromptManager } = await import('./prompt-manager');
+
+    // Get combined custom prompts from activated templates
+    const combinedPrompts = PromptManager.getCombinedActiveContent('explainer');
 
     const defaultOptions: AIExplainerOptions = {
       maxLength: 2000,
-      customPrompt: customPrompt || options.customPrompt
+      customPrompt: combinedPrompts || options.customPrompt
     };
 
     try {
@@ -133,13 +135,13 @@ class AIExplainerService {
     const parentPath = topicPath.slice(0, -1);
 
     // Build context hierarchy
-    const contextPath = parentPath.length > 0
-      ? `Context hierarchy:"${parentPath.join(' → ')}",\n`
+    const parentTopics = parentPath.length > 0
+      ? `Parent Topics:"${parentPath.join(' → ')}",\n`
       : ``;
 
-    const enhancedPrompt = `${contextPath}Based on the topic "${currentTopic}" and its context above,
+    const enhancedPrompt = `Based on current core topic "${currentTopic}" and its parent topics above,
     Write a well-structured Markdown explanation that meets the following requirements (within 1000 characters):
-
+${parentTopics}
 - Start with a concise summary paragraph that clearly conveys the topic's definition, scope, and importance within 30 seconds of reading.
 - Provide a clear and professional explanation suitable for readers with basic domain knowledge
 - List key concepts/components in a systematic manner. 
