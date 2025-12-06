@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.1.10] - 2025-12-06
+### Added
+- Added enhanced export functionality with support for multiple formats (SVG, PDF, PNG, JPG, Markdown)
+- Implemented comprehensive export options including quality settings, scale control, and watermark options
+- Added copy and paste functionality for topics with support for maintaining structure and styling
+- Added keyboard shortcuts (Ctrl+C/Ctrl+V) for topic duplication operations
+- Added context menu options for copying and pasting topics
+
+### Changed
+- Updated EmojiPicker CSS styles across all components for consistent visual appearance
+- Improved EmojiPicker search interface with better padding and border handling
+- Enhanced EmojiPicker theme adaptation for both light and dark modes
+- Optimized EmojiPicker layout in topic image picker, icon editor, and icon picker components
+- Streamlined export dialog interface with improved user experience and error handling
+
+### Fixed
+- Fixed EmojiPicker border styling inconsistencies in different components
+- Resolved export dialog layout issues for better responsive design
+- Improved export error handling with more descriptive error messages
+
 ## [0.1.9] - 2025-12-04
 ### Fixed
 - Fixed emoji character handling in topic text and note fields - emojis are now properly saved and loaded in .fastmind files
