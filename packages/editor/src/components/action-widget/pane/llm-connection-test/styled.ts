@@ -26,7 +26,6 @@ import Paper from '@mui/material/Paper';
 export const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
   padding: '26px',
   position: 'relative',
-  backgroundColor: theme.palette.background.paper,
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
@@ -82,7 +81,7 @@ export const ActionButtonContainer = styled(Box)(({ theme }) => ({
 
 export const ResponseBox = styled(Box)(({ theme }) => ({
   padding: theme.spacing(3),
-  backgroundColor: theme.palette.grey[50],
+  backgroundColor: theme.palette.background.paper,
   borderRadius: theme.shape.borderRadius,
   fontFamily: 'monospace',
   fontSize: '0.675rem',

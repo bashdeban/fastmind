@@ -67,7 +67,6 @@ export const ListContainer = styled(Box)(({ theme }) => ({
   overflowY: 'auto',
   border: `1px solid ${theme.palette.divider}`,
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: theme.palette.background.paper,
 }));
 
 export const StyledList = styled(List)(() => ({
@@ -107,7 +106,6 @@ export const ActionButtonsContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   padding: theme.spacing(2),
-  backgroundColor: theme.palette.background.paper,
 }));
 
 export const SwitchButtonContainer = styled(Box)(({ theme }) => ({

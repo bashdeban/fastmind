@@ -31,7 +31,6 @@ import Button from '@mui/material/Button';
 export const StyledDialogContent = styled(DialogContent)(({ theme }) => ({
   padding: theme.spacing(3),
   position: 'relative',
-  backgroundColor: theme.palette.background.paper,
 }));
 
 export const CloseButton = styled(IconButton)({
@@ -71,7 +70,6 @@ export const ListContainer = styled(Box)(({ theme }) => ({
   overflowY: 'auto',
   border: `1px solid ${theme.palette.divider}`,
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: theme.palette.background.paper,
 }));
 
 export const StyledList = styled(List)(() => ({
@@ -112,7 +110,6 @@ export const ActionButtonsContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   padding: theme.spacing(2),
-  backgroundColor: theme.palette.background.paper,
 }));
 
 export const LeftButtons = styled(Box)(({ theme }) => ({
