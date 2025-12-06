@@ -66,6 +66,7 @@ import ThemeType from './model/ThemeType';
 import ThemeFactory from './theme/ThemeFactory';
 import Theme, { ThemeVariant } from './theme/Theme';
 import ChangeEvent from './layout/ChangeEvent';
+import TopicTextExporter from './export/TopicTextExporter';
 
 type DesignerEventType = 'modelUpdate' | 'onfocus' | 'onblur' | 'loadSuccess' | 'featureEdit';
 
@@ -607,6 +608,53 @@ class Designer extends EventDispispatcher<DesignerEventType> {
         text.trim(),
       );
     }
+  }
+
+  /**
+   * Copy selected topics as indented text to clipboard
+   * This method exports the selected topic and all its children as hierarchical text
+   */
+  async copySelectedTopicsAsText(): Promise<void> {
+    const topics = this.getModel().filterSelectedTopics();
+
+    // Allow copying any topic including central topic
+    if (topics.length === 0) {
+      $notify($msg('NO_TOPICS_TO_COPY'));
+      return;
+    }
+
+    // Use the first selected topic (including central topic)
+    const selectedTopic = topics[0];
+
+    try {
+      // Generate indented text hierarchy
+      const textHierarchy = TopicTextExporter.exportTopicHierarchy(selectedTopic);
+      // Copy to clipboard using the same logic as copyToClipboard
+      await this.copyTextToClipboard(textHierarchy);
+      $notify($msg('TOPICS_COPY_SUCCESS'));
+    } catch (error) {
+      console.warn('Failed to copy topic hierarchy to clipboard:', error);
+      // Fallback to internal clipboard
+      this._internalClipboard = TopicTextExporter.exportTopicHierarchy(selectedTopic);
+    }
+  }
+
+  /**
+   * Helper method to copy text to clipboard with fallback support
+   */
+  private async copyTextToClipboard(text: string): Promise<void> {
+    try {
+      // Try modern clipboard API first
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+    } catch (error) {
+      console.warn('Modern clipboard API failed, falling back to internal clipboard:', error);
+    }
+
+    // Fallback to internal clipboard
+    this._internalClipboard = text;
   }
 
   getModel(): DesignerModel {

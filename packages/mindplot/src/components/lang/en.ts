@@ -38,6 +38,8 @@ interface LanguageStrings {
   SESSION_EXPIRED: string;
   CENTRAL_TOPIC_CONNECTION_STYLE_CAN_NOT_BE_CHANGED: string;
   CENTRAL_TOPIC_STYLE_CAN_NOT_BE_CHANGED: string;
+  TOPICS_COPY_SUCCESS: string;
+  NO_TOPICS_TO_COPY: string;
 }
 
 const EN: LanguageStrings = {
@@ -61,6 +63,8 @@ const EN: LanguageStrings = {
   SESSION_EXPIRED: 'Your session has expired, please log-in again.',
   CENTRAL_TOPIC_CONNECTION_STYLE_CAN_NOT_BE_CHANGED: 'Connection style can not be changed for central topic.',
   CENTRAL_TOPIC_STYLE_CAN_NOT_BE_CHANGED: 'Central topic can not be changed to line style.',
+  TOPICS_COPY_SUCCESS: 'Topics copied to clipboard successfully',
+  NO_TOPICS_TO_COPY: 'No topics selected to copy',
 };
 
 export default EN;

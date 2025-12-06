@@ -117,6 +117,18 @@ class DesignerKeyboard extends Keyboard {
       designer.deselectAll();
     });
 
+    // Custom copy shortcut for topics - only active when topics are selected
+    this.addShortcut(['ctrl+c', 'meta+c'], () => {
+      const selectedTopics = designer.getModel().filterSelectedTopics();
+      if (selectedTopics.length > 0) {
+        designer.copySelectedTopicsAsText();
+      } else {
+        setTimeout(() => {
+          document.execCommand('copy');
+        }, 0);
+      }
+    });
+
     this.addShortcut(['meta+=', 'ctrl+='], () => {
       designer.zoomIn();
     });
