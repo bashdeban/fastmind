@@ -43,6 +43,8 @@ interface LanguageStrings {
   ONLY_ONE_TOPIC_MUST_BE_SELECTED_DELETE_CHILDREN: string;
   NO_CHILDREN_TO_DELETE: string;
   CHILDREN_DELETE_SUCCESS: string;
+  CLIPBOARD_EMPTY_OR_INVALID: string;
+  NO_VALID_TEXT_LINES: string;
 }
 
 const EN: LanguageStrings = {
@@ -71,6 +73,8 @@ const EN: LanguageStrings = {
   ONLY_ONE_TOPIC_MUST_BE_SELECTED_DELETE_CHILDREN: 'Could not delete child topics. Only one topic must be selected.',
   NO_CHILDREN_TO_DELETE: 'Selected topic has no child topics to delete.',
   CHILDREN_DELETE_SUCCESS: 'Child topics deleted successfully.',
+  CLIPBOARD_EMPTY_OR_INVALID: 'Clipboard is empty or contains invalid text',
+  NO_VALID_TEXT_LINES: 'No valid text lines found in clipboard',
 };
 
 export default EN;

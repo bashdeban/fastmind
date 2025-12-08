@@ -40,11 +40,11 @@ class TopicTextExporter {
    * @param lines Array to accumulate output lines
    */
   private static _buildTopicLines(topic: Topic, level: number, lines: string[]): void {
-    const text = topic.getText();
+    const text = topic.getText().replace(/\n/g, ' ');
 
     // Always include the topic, even if text is empty
     const indent = '\t'.repeat(level);
-    lines.push(`${indent}- ${text}`);
+    lines.push(`${indent}${text}`);
 
     // Recursively process children
     const children = topic.getChildren();

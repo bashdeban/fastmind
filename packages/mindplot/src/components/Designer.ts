@@ -1579,11 +1579,113 @@ class Designer extends EventDispispatcher<DesignerEventType> {
       return;
     }
 
-    const childIds = childTopics.map(child => child.getId());
+    const childIds = childTopics.map((child) => child.getId());
 
     this._actionDispatcher.deleteEntities(childIds, []);
 
     $notify($msg('CHILDREN_DELETE_SUCCESS'));
+  }
+
+  /**
+   * Paste clipboard text as subtopics for selected topic
+   * Each line becomes a subtopic, text longer than 30 chars is truncated
+   */
+  async pasteTextAsTopics(): Promise<void> {
+    // 1. 检查选中状态
+    const selectedTopics = this.getModel().filterSelectedTopics();
+    if (selectedTopics.length !== 1) {
+      $notify($msg('ONLY_ONE_TOPIC_MUST_BE_SELECTED'));
+      return;
+    }
+
+    const parentTopic = selectedTopics[0];
+
+    // 2. 读取剪切板文本
+    let clipboardText: string | null = null;
+    try {
+      if (navigator.clipboard && navigator.clipboard.readText) {
+        clipboardText = await navigator.clipboard.readText();
+      }
+    } catch (e) {
+      console.warn('Failed to read clipboard:', e);
+    }
+
+    if (!clipboardText || clipboardText.trim().length === 0) {
+      $notify($msg('CLIPBOARD_EMPTY_OR_INVALID'));
+      return;
+    }
+
+    // 3. 处理文本行并创建topic models
+    const lines = clipboardText
+      .split('\n')
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0)
+      .slice(0, 50); // 限制最多50行
+
+    if (lines.length === 0) {
+      $notify($msg('NO_VALID_TEXT_LINES'));
+      return;
+    }
+
+    // 4. 创建topic models（参考AI generator的createTopicModels）
+    const topicModels = this.createTopicModelsFromText(
+      lines,
+      parentTopic.getId(),
+    );
+
+    // 5. 分批添加到mindmap（参考AI generator的渐进式添加）
+    topicModels.forEach((model, index) => {
+      setTimeout(() => {
+        this.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
+      }, index * 100); // 更快的动画，因为是本地操作
+    });
+  }
+
+  /**
+   * Create NodeModel instances from text lines
+   * Reference: aiTopicGeneratorService.createTopicModels()
+   */
+  private createTopicModelsFromText(
+    lines: string[],
+    parentTopicId: number,
+  ): NodeModel[] {
+    const topicModels: NodeModel[] = [];
+    const mindmap = this.getMindmap();
+
+    // Get layout manager to predict positions
+    const layoutManager = this._eventBussDispatcher.getLayoutManager();
+
+    lines.forEach((line) => {
+      const nodeModel = mindmap.createNode();
+
+      // Truncate text if longer than 50 characters
+      const truncatedText = this.truncateText(line, 50);
+      nodeModel.setText(truncatedText);
+
+      // Predict position and order for new topic
+      const prediction = layoutManager.predict(parentTopicId, null, null);
+      nodeModel.setPosition(prediction.position.x, prediction.position.y);
+
+      topicModels.push(nodeModel);
+    });
+
+    return topicModels;
+  }
+
+  /**
+   * Truncate text to specified length with ellipsis
+   */
+  private truncateText(text: string, maxLength: number = 50): string {
+    if (text.length <= maxLength) {
+      return text;
+    }
+
+    // Ensure at least 3 characters for ellipsis
+    if (maxLength <= 3) {
+      return '...';
+    }
+
+    return `${text.substring(0, maxLength - 3)}...`;
   }
 }
 

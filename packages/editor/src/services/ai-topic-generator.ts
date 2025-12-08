@@ -219,7 +219,7 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
   ): Promise<void> {
     // Import PromptManager here to avoid circular dependency
     const { PromptManager } = await import('./prompt-manager');
-    
+
     // Get combined custom prompts from activated templates
     const combinedPrompts = PromptManager.getCombinedActiveContent('topic-generator');
 
@@ -246,9 +246,11 @@ Return format: [{"text": "Subtopic 1"}, {"text": "Subtopic 2"}, ...]`;
         parentTopic.getId()
       );
 
-      // Add each topic to mindmap using correct method
-      topicModels.forEach(model => {
-        designer.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
+      // Add each topic to mindmap using correct method with staggered animation
+      topicModels.forEach((model, index) => {
+        setTimeout(() => {
+          designer.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
+        }, index * 200);
       });
 
     } catch (error) {

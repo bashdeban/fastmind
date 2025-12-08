@@ -146,6 +146,11 @@ class DesignerKeyboard extends Keyboard {
       designer.zoomOut();
     });
 
+    // Paste text as subtopics shortcut
+    this.addShortcut(['ctrl+v', 'meta+v'], () => {
+      designer.pasteTextAsTopics();
+    });
+
     const me = this;
     this.addShortcut('right', () => {
       const node = model.selectedTopic();
@@ -353,7 +358,6 @@ class DesignerKeyboard extends Keyboard {
   static getInstance() {
     return this._instance;
   }
-
 }
 
 export default DesignerKeyboard;

@@ -733,7 +733,7 @@ class XMLSerializerTango implements XMLMindmapSerializer {
     // supplementary plane characters (e.g., emojis represented as surrogate pairs)
     for (const char of str) {
       const codePoint = char.codePointAt(0) || 0;
-      
+
       if (
         codePoint === 0x9 ||
         codePoint === 0xa ||

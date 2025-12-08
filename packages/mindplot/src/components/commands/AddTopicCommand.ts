@@ -61,8 +61,8 @@ class AddTopicCommand extends Command {
       designer.onObjectFocusEvent(topic);
       topic.setOnFocus(true);
 
-      // Render node ...
-      topic.setVisibility(true);
+      // Render node with fade-in animation ...
+      topic.setVisibility(true, 300);
     });
   }
 
