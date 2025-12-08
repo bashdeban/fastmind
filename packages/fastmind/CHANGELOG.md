@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.11] - 2025-12-08
+### Added
+- Added delete subtopic functionality with keyboard shortcuts
+- Added paste text as topics feature for quick topic creation from clipboard content
+- Updated keyboard shortcuts documentation with new shortcuts for copy/paste operations and subtopic management
+- Enhanced keyboard shortcuts help pane with comprehensive shortcut information
+
+### Changed
+- Improved topic management workflow with better copy/paste operations
+- Enhanced user experience with more intuitive keyboard shortcuts for topic manipulation
+
 ## [0.1.10] - 2025-12-06
 ### Added
 - Added enhanced export functionality with support for multiple formats (SVG, PDF, PNG, JPG, Markdown)
