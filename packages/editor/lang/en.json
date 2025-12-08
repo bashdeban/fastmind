@@ -701,6 +701,15 @@
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "Delete topic"
   },
+  "shortcut-help-pane.copy-topic-as-text": {
+    "defaultMessage": "Copy topic as text"
+  },
+  "shortcut-help-pane.paste-text-as-topics": {
+    "defaultMessage": "Paste text as topics"
+  },
+  "shortcut-help-pane.delete-child-topics": {
+    "defaultMessage": "Delete child topics"
+  },
   "shortcut-help-pane.deselect-all-topics": {
     "defaultMessage": "Deselect all topics"
   },

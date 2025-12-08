@@ -701,6 +701,15 @@
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "Excluir tópico"
   },
+  "shortcut-help-pane.copy-topic-as-text": {
+    "defaultMessage": "Copiar tópico como texto"
+  },
+  "shortcut-help-pane.paste-text-as-topics": {
+    "defaultMessage": "Colar texto como tópicos"
+  },
+  "shortcut-help-pane.delete-child-topics": {
+    "defaultMessage": "Excluir subtópicos"
+  },
   "shortcut-help-pane.deselect-all-topics": {
     "defaultMessage": "Desselecionar todos os tópicos"
   },

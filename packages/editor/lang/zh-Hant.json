@@ -701,6 +701,15 @@
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "刪除主題"
   },
+  "shortcut-help-pane.copy-topic-as-text": {
+    "defaultMessage": "將主題複製為文字"
+  },
+  "shortcut-help-pane.paste-text-as-topics": {
+    "defaultMessage": "將文字貼上為主題"
+  },
+  "shortcut-help-pane.delete-child-topics": {
+    "defaultMessage": "刪除子主題"
+  },
   "shortcut-help-pane.deselect-all-topics": {
     "defaultMessage": "取消選擇所有主題"
   },

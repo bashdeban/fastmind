@@ -1481,6 +1481,18 @@
       "value": "Recolher filhos"
     }
   ],
+  "shortcut-help-pane.copy-topic-as-text": [
+    {
+      "type": 0,
+      "value": "Copiar tópico como texto"
+    }
+  ],
+  "shortcut-help-pane.delete-child-topics": [
+    {
+      "type": 0,
+      "value": "Excluir subtópicos"
+    }
+  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1557,6 +1569,12 @@
     {
       "type": 0,
       "value": "Digitar em um tópico selecionado"
+    }
+  ],
+  "shortcut-help-pane.paste-text-as-topics": [
+    {
+      "type": 0,
+      "value": "Colar texto como tópicos"
     }
   ],
   "shortcut-help-pane.redo": [

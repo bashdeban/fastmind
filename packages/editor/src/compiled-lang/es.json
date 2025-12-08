@@ -1481,6 +1481,18 @@
       "value": "Colapsar hijos"
     }
   ],
+  "shortcut-help-pane.copy-topic-as-text": [
+    {
+      "type": 0,
+      "value": "Copiar tema como texto"
+    }
+  ],
+  "shortcut-help-pane.delete-child-topics": [
+    {
+      "type": 0,
+      "value": "Eliminar subtemas"
+    }
+  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1557,6 +1569,12 @@
     {
       "type": 0,
       "value": "Escribir sobre un tema seleccionado"
+    }
+  ],
+  "shortcut-help-pane.paste-text-as-topics": [
+    {
+      "type": 0,
+      "value": "Pegar texto como temas"
     }
   ],
   "shortcut-help-pane.redo": [

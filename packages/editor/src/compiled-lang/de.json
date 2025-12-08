@@ -1485,6 +1485,18 @@
       "value": "Unterelemente einklappen"
     }
   ],
+  "shortcut-help-pane.copy-topic-as-text": [
+    {
+      "type": 0,
+      "value": "Thema als Text kopieren"
+    }
+  ],
+  "shortcut-help-pane.delete-child-topics": [
+    {
+      "type": 0,
+      "value": "Unterthemen löschen"
+    }
+  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1561,6 +1573,12 @@
     {
       "type": 0,
       "value": "Bei ausgewähltem Thema tippen"
+    }
+  ],
+  "shortcut-help-pane.paste-text-as-topics": [
+    {
+      "type": 0,
+      "value": "Text als Themen einfügen"
     }
   ],
   "shortcut-help-pane.redo": [

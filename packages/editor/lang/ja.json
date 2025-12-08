@@ -701,6 +701,15 @@
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "トピックを削除"
   },
+  "shortcut-help-pane.copy-topic-as-text": {
+    "defaultMessage": "トピックをテキストとしてコピー"
+  },
+  "shortcut-help-pane.paste-text-as-topics": {
+    "defaultMessage": "テキストをトピックとして貼り付け"
+  },
+  "shortcut-help-pane.delete-child-topics": {
+    "defaultMessage": "子トピックを削除"
+  },
   "shortcut-help-pane.deselect-all-topics": {
     "defaultMessage": "すべてのトピックを選択解除"
   },

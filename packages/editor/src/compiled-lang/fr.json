@@ -1481,6 +1481,18 @@
       "value": "Réduire les enfants"
     }
   ],
+  "shortcut-help-pane.copy-topic-as-text": [
+    {
+      "type": 0,
+      "value": "Copier le sujet sous forme de texte"
+    }
+  ],
+  "shortcut-help-pane.delete-child-topics": [
+    {
+      "type": 0,
+      "value": "Supprimer les sous-sujets"
+    }
+  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1557,6 +1569,12 @@
     {
       "type": 0,
       "value": "Taper sur un sujet sélectionné"
+    }
+  ],
+  "shortcut-help-pane.paste-text-as-topics": [
+    {
+      "type": 0,
+      "value": "Coller le texte en tant que sujets"
     }
   ],
   "shortcut-help-pane.redo": [

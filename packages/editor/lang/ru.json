@@ -701,6 +701,15 @@
   "shortcut-help-pane.delete-topic": {
     "defaultMessage": "Удалить тему"
   },
+  "shortcut-help-pane.copy-topic-as-text": {
+    "defaultMessage": "Скопировать тему как текст"
+  },
+  "shortcut-help-pane.paste-text-as-topics": {
+    "defaultMessage": "Вставить текст как темы"
+  },
+  "shortcut-help-pane.delete-child-topics": {
+    "defaultMessage": "Удалить дочерние темы"
+  },
   "shortcut-help-pane.deselect-all-topics": {
     "defaultMessage": "Снять выделение со всех тем"
   },

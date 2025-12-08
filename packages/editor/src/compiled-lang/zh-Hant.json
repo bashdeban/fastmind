@@ -1485,6 +1485,18 @@
       "value": "收合子節點"
     }
   ],
+  "shortcut-help-pane.copy-topic-as-text": [
+    {
+      "type": 0,
+      "value": "將主題複製為文字"
+    }
+  ],
+  "shortcut-help-pane.delete-child-topics": [
+    {
+      "type": 0,
+      "value": "刪除子主題"
+    }
+  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1561,6 +1573,12 @@
     {
       "type": 0,
       "value": "在選取的主題上直接輸入"
+    }
+  ],
+  "shortcut-help-pane.paste-text-as-topics": [
+    {
+      "type": 0,
+      "value": "將文字貼上為主題"
     }
   ],
   "shortcut-help-pane.redo": [

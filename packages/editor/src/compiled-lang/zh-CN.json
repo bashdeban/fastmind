@@ -1485,6 +1485,18 @@
       "value": "折叠子主题"
     }
   ],
+  "shortcut-help-pane.copy-topic-as-text": [
+    {
+      "type": 0,
+      "value": "将主题复制为文本"
+    }
+  ],
+  "shortcut-help-pane.delete-child-topics": [
+    {
+      "type": 0,
+      "value": "删除子主题"
+    }
+  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1561,6 +1573,12 @@
     {
       "type": 0,
       "value": "在选定的主题上键入"
+    }
+  ],
+  "shortcut-help-pane.paste-text-as-topics": [
+    {
+      "type": 0,
+      "value": "将文本粘贴为主题"
     }
   ],
   "shortcut-help-pane.redo": [

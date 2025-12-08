@@ -1481,6 +1481,18 @@
       "value": "子トピックを折りたたむ"
     }
   ],
+  "shortcut-help-pane.copy-topic-as-text": [
+    {
+      "type": 0,
+      "value": "トピックをテキストとしてコピー"
+    }
+  ],
+  "shortcut-help-pane.delete-child-topics": [
+    {
+      "type": 0,
+      "value": "子トピックを削除"
+    }
+  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1557,6 +1569,12 @@
     {
       "type": 0,
       "value": "選択したトピックで入力"
+    }
+  ],
+  "shortcut-help-pane.paste-text-as-topics": [
+    {
+      "type": 0,
+      "value": "テキストをトピックとして貼り付け"
     }
   ],
   "shortcut-help-pane.redo": [

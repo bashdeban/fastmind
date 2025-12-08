@@ -1481,6 +1481,18 @@
       "value": "Свернуть дочерние элементы"
     }
   ],
+  "shortcut-help-pane.copy-topic-as-text": [
+    {
+      "type": 0,
+      "value": "Скопировать тему как текст"
+    }
+  ],
+  "shortcut-help-pane.delete-child-topics": [
+    {
+      "type": 0,
+      "value": "Удалить дочерние темы"
+    }
+  ],
   "shortcut-help-pane.delete-topic": [
     {
       "type": 0,
@@ -1557,6 +1569,12 @@
     {
       "type": 0,
       "value": "Начать печатать на выбранной теме"
+    }
+  ],
+  "shortcut-help-pane.paste-text-as-topics": [
+    {
+      "type": 0,
+      "value": "Вставить текст как темы"
     }
   ],
   "shortcut-help-pane.redo": [
