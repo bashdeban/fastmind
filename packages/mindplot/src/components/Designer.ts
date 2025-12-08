@@ -832,13 +832,13 @@ class Designer extends EventDispispatcher<DesignerEventType> {
           // Skip relationships with missing topics (data consistency issue)
           console.error(
             '[Designer] Failed to create relationship - skipping.\n' +
-              `  Source topic ID: ${relationship.getFromNode()}\n` +
-              `  Target topic ID: ${relationship.getToNode()}\n` +
-              `  Available topic IDs: [${this.getModel()
-                .getTopics()
-                .map((t) => t.getId())
-                .join(', ')}]\n` +
-              `  Error: ${e}`,
+            `  Source topic ID: ${relationship.getFromNode()}\n` +
+            `  Target topic ID: ${relationship.getToNode()}\n` +
+            `  Available topic IDs: [${this.getModel()
+              .getTopics()
+              .map((t) => t.getId())
+              .join(', ')}]\n` +
+            `  Error: ${e}`,
           );
         }
       });
@@ -1181,12 +1181,12 @@ class Designer extends EventDispispatcher<DesignerEventType> {
     if (!sourceTopic || !targetTopic) {
       const error = new Error(
         'Cannot create relationship - topic not found in designer model.\n' +
-          `  Source topic ID: ${sourceId} (${sourceTopic ? 'found' : 'NOT FOUND'})\n` +
-          `  Target topic ID: ${targetId} (${targetTopic ? 'found' : 'NOT FOUND'})\n` +
-          `  Available topic IDs: [${this.getModel()
-            .getTopics()
-            .map((t) => t.getId())
-            .join(', ')}]`,
+        `  Source topic ID: ${sourceId} (${sourceTopic ? 'found' : 'NOT FOUND'})\n` +
+        `  Target topic ID: ${targetId} (${targetTopic ? 'found' : 'NOT FOUND'})\n` +
+        `  Available topic IDs: [${this.getModel()
+          .getTopics()
+          .map((t) => t.getId())
+          .join(', ')}]`,
       );
       console.error(`[Designer.addRelationship] ${error.message}`);
       throw error;
@@ -1558,6 +1558,32 @@ class Designer extends EventDispispatcher<DesignerEventType> {
       event: 'ai-explainer',
       topic: selectedTopics[0],
     });
+  }
+
+  /**
+   * Delete child topics of the selected topic
+   */
+  deleteChildTopics(): void {
+    const selectedTopics = this.getModel().filterSelectedTopics();
+
+    if (selectedTopics.length !== 1) {
+      $notify($msg('ONLY_ONE_TOPIC_MUST_BE_SELECTED_DELETE_CHILDREN'));
+      return;
+    }
+
+    const parentTopic = selectedTopics[0];
+    const childTopics = parentTopic.getChildren();
+
+    if (childTopics.length === 0) {
+      $notify($msg('NO_CHILDREN_TO_DELETE'));
+      return;
+    }
+
+    const childIds = childTopics.map(child => child.getId());
+
+    this._actionDispatcher.deleteEntities(childIds, []);
+
+    $notify($msg('CHILDREN_DELETE_SUCCESS'));
   }
 }
 

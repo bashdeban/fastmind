@@ -66,6 +66,15 @@ class DesignerKeyboard extends Keyboard {
       designer.deleteSelectedEntities();
     });
 
+    // Add shortcuts for deleting child topics
+    this.addShortcut(['ctrl+backspace', 'meta+backspace'], () => {
+      designer.deleteChildTopics();
+    });
+
+    this.addShortcut(['ctrl+del', 'meta+del'], () => {
+      designer.deleteChildTopics();
+    });
+
     this.addShortcut('space', () => {
       designer.shrinkSelectedBranch();
     });
@@ -344,6 +353,7 @@ class DesignerKeyboard extends Keyboard {
   static getInstance() {
     return this._instance;
   }
+
 }
 
 export default DesignerKeyboard;

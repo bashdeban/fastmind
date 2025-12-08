@@ -40,6 +40,9 @@ interface LanguageStrings {
   CENTRAL_TOPIC_STYLE_CAN_NOT_BE_CHANGED: string;
   TOPICS_COPY_SUCCESS: string;
   NO_TOPICS_TO_COPY: string;
+  ONLY_ONE_TOPIC_MUST_BE_SELECTED_DELETE_CHILDREN: string;
+  NO_CHILDREN_TO_DELETE: string;
+  CHILDREN_DELETE_SUCCESS: string;
 }
 
 const EN: LanguageStrings = {
@@ -65,6 +68,9 @@ const EN: LanguageStrings = {
   CENTRAL_TOPIC_STYLE_CAN_NOT_BE_CHANGED: 'Central topic can not be changed to line style.',
   TOPICS_COPY_SUCCESS: 'Topics copied to clipboard successfully',
   NO_TOPICS_TO_COPY: 'No topics selected to copy',
+  ONLY_ONE_TOPIC_MUST_BE_SELECTED_DELETE_CHILDREN: 'Could not delete child topics. Only one topic must be selected.',
+  NO_CHILDREN_TO_DELETE: 'Selected topic has no child topics to delete.',
+  CHILDREN_DELETE_SUCCESS: 'Child topics deleted successfully.',
 };
 
 export default EN;
