@@ -262,7 +262,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
     });
 
     dragManager.addEvent('dragging', (event: MouseEvent, dragTopic: DragTopic) => {
-      // The node is being drag. Is the connection still valid ?
+      // The node is being drag. Is it connection still valid ?
       dragConnector.checkConnection(dragTopic, event.metaKey || event.ctrlKey);
 
       if (!dragTopic.isVisible() && dragTopic.isConnected()) {
@@ -613,6 +613,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
   /**
    * Copy selected topics as indented text to clipboard
    * This method exports the selected topic and all its children as hierarchical text
+   * For multiple topics, copies only their text (without subtopics) as a simple list
    */
   async copySelectedTopicsAsText(): Promise<void> {
     const topics = this.getModel().filterSelectedTopics();
@@ -623,19 +624,35 @@ class Designer extends EventDispispatcher<DesignerEventType> {
       return;
     }
 
-    // Use the first selected topic (including central topic)
-    const selectedTopic = topics[0];
-
     try {
-      // Generate indented text hierarchy
-      const textHierarchy = TopicTextExporter.exportTopicHierarchy(selectedTopic);
+      let textHierarchy: string;
+
+      if (topics.length > 1) {
+        // Multiple topics selected: copy only their text without subtopics
+        const topicTexts = topics.map((topic) => topic.getText().replace(/\n/g, ' '));
+        textHierarchy = topicTexts.join('\n');
+      } else {
+        // Single topic selected: copy topic and its children as hierarchy (existing behavior)
+        const selectedTopic = topics[0];
+        textHierarchy = TopicTextExporter.exportTopicHierarchy(selectedTopic);
+      }
+
       // Copy to clipboard using the same logic as copyToClipboard
       await this.copyTextToClipboard(textHierarchy);
       $notify($msg('TOPICS_COPY_SUCCESS'));
     } catch (error) {
       console.warn('Failed to copy topic hierarchy to clipboard:', error);
       // Fallback to internal clipboard
-      this._internalClipboard = TopicTextExporter.exportTopicHierarchy(selectedTopic);
+      let textHierarchy: string;
+
+      if (topics.length > 1) {
+        const topicTexts = topics.map((topic) => topic.getText().replace(/\n/g, ' '));
+        textHierarchy = topicTexts.join('\n');
+      } else {
+        textHierarchy = TopicTextExporter.exportTopicHierarchy(topics[0]);
+      }
+
+      this._internalClipboard = textHierarchy;
     }
   }
 
@@ -927,7 +944,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
 
   /**
    * Initialize theme variant from editor context
-   * This should be called when the Designer is created to sync with editor theme
+   * This should be called when Designer is created to sync with editor theme
    */
   initializeThemeVariant(editorThemeMode: 'light' | 'dark'): void {
     const variant = editorThemeMode === 'dark' ? 'dark' : 'light';
@@ -970,7 +987,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
   }
 
   /**
-   * Refresh the mindmap theme based on current variant
+   * Refresh the mindmap theme based on the current variant
    */
   private refreshTheme(): void {
     if (this._mindmap) {
@@ -983,7 +1000,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
         centralTopic.redraw(this._themeVariant, true);
       }
 
-      // Force layout refresh to update the display
+      // Force a layout refresh to update the display
       LayoutEventBus.fireEvent('forceLayout');
     }
   }
@@ -1070,7 +1087,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
 
   /**
    * Apply canvas style directly (internal use - no undo history)
-   * This method always reads from the model and merges with theme defaults for rendering.
+   * This method always reads from model and merges with theme defaults for rendering.
    * It does NOT persist to the model - only commands should do that.
    * @internal
    */
@@ -1147,7 +1164,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
   /**
    * @private
    * @param {mindplot.model.RelationshipModel} model
-   * @return {mindplot.Relationship} the relationship created to the model
+   * @return {mindplot.Relationship} relationship created to the model
    * @throws will throw an error if model is null or undefined
    */
   private _relationshipModelToRelationship(model: RelationshipModel): Relationship {
@@ -1198,7 +1215,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
 
   /**
    * deletes the relationship from the linked topics, DesignerModel, Workspace and Mindmap
-   * @param {mindplot.Relationship} rel the relationship to delete
+   * @param {mindplot.Relationship} rel - relationship to delete
    */
   deleteRelationship(rel: Relationship): void {
     const sourceTopic = rel.getSourceTopic();
@@ -1307,7 +1324,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
       return;
     }
 
-    // If the central topic has been selected, I must filter ir
+    // If central topic has been selected, I must filter it
     const topicIds = topics
       .filter((topic) => !topic.isCentralTopic())
       .map((topic) => topic.getId());
@@ -1587,7 +1604,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
   }
 
   /**
-   * Paste clipboard text as subtopics for selected topic
+   * Paste clipboard text as subtopics for the selected topic
    * Each line becomes a subtopic, text longer than 30 chars is truncated
    */
   async pasteTextAsTopics(): Promise<void> {
