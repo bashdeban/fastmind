@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { Utils } from 'vscode-uri'; // 确保使用了这个或使用 path 模块
+import { Utils } from 'vscode-uri'; // Use this or path module for URI operations
 
 interface SaveStatus {
   isSaving: boolean;
@@ -47,37 +47,37 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     _token: vscode.CancellationToken
   ): void | Promise<void> {
-    // 记录当前激活的编辑器（单例）
+    // Record current active editor (singleton)
     const singleton = (global as unknown as { fastmindSingleton?: import('./types').FastMindSingleton }).fastmindSingleton;
     if (singleton) {
       singleton.setActiveEditor(webviewPanel);
     }
 
-    // 面板关闭时清理单例
+    // Clean up singleton when panel is closed
     webviewPanel.onDidDispose(() => {
       if (singleton && singleton.getActiveEditor() === webviewPanel) {
         singleton.setActiveEditor(undefined);
       }
     }, null, this._context.subscriptions);
 
-    // 1. 获取文档所在的目录
+    // 1. Get the directory where the document is located
     const documentDir = Utils.dirname(document.uri);
 
     // Setup initial content for the webview
     webviewPanel.webview.options = {
       enableScripts: true,
       localResourceRoots: [
-        this._extensionUri, // 允许访问插件资源 (js/css)
-        documentDir         // 允许访问当前打开文件所在的目录
+        this._extensionUri, // Allow access to extension resources (js/css)
+        documentDir         // Allow access to directory of currently opened file
       ],
     };
 
     webviewPanel.webview.html = this._getHtmlForWebview(webviewPanel.webview, document);
 
-    // 保存初始内容
+    // Save initial content
     this.lastKnownContent.set(document.uri.toString(), document.getText());
 
-    // 监听来自 webview 的消息
+    // Listen for messages from webview
     webviewPanel.webview.onDidReceiveMessage(
       async (message: WebviewMessage) => {
         try {
@@ -88,7 +88,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
               }
               break;
             case 'ready': {
-              // Editor 准备就绪，发送初始内容
+              // Editor is ready, send initial content
               const initialContent = document.getText();
               webviewPanel.webview.postMessage({
                 type: 'contentChanged',
@@ -124,19 +124,19 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
       this._context.subscriptions
     );
 
-    // 监听文档变更（外部修改时同步到编辑器）
+    // Listen for document changes (sync to editor when modified externally)
     const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument((e) => {
       if (e.document === document) {
         const newContent = e.document.getText();
         const docKey = document.uri.toString();
 
-        // 检查是否是自己触发的变更
+        // Check if this is a self-induced change
         if (this.isSelfInducedChange.get(docKey)) {
           this.isSelfInducedChange.set(docKey, false);
           return;
         }
 
-        // 避免循环更新
+        // Avoid circular updates
         if (newContent !== this.lastKnownContent.get(docKey)) {
           webviewPanel.webview.postMessage({
             type: 'contentChanged',
@@ -151,7 +151,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
 
     this._context.subscriptions.push(changeDocumentSubscription);
 
-    // 添加webview关闭处理
+    // Add webview close handler
     this.addWebviewCloseHandler(document, webviewPanel);
   }
 
@@ -180,11 +180,11 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
 
         const success = await vscode.workspace.applyEdit(edit);
         if (success) {
-          // 标记为自身触发的变更
+          // Mark as self-induced change
           this.isSelfInducedChange.set(document.uri.toString(), true);
-          // 保存文档
+          // Save document
           await document.save();
-          // 更新已知内容
+          // Update known content
           this.lastKnownContent.set(document.uri.toString(), newContent);
 
           this.notifySaveStatus(webviewPanel, {
@@ -210,7 +210,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
           throw error;
         }
 
-        // 重试延迟
+        // Retry delay
         await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
       }
     }
@@ -381,13 +381,13 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     const key = webviewPanel.viewType;
     this.saveStatus.set(key, status);
 
-    // 发送状态到 webview
+    // Send status to webview
     webviewPanel.webview.postMessage({
       type: 'saveStatus',
       status
     });
 
-    // 更新 VS Code 状态栏
+    // Update VS Code status bar
     if (status.error) {
       vscode.window.showErrorMessage(`❌ FastMind saved failed: ${status.error}`);
     } else if (status.success) {
@@ -412,8 +412,37 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
     const fileName = document.fileName;
     const mapId = fileName.split('/').pop()?.replace(/\.fastmind$/, '') || 'default';
 
-    // 获取当前文档内容作为初始内容
+    // Get current document content as initial content and URL encode to prevent JavaScript execution
     const initialContent = document.getText();
+    
+    // Security validation: ensure content is valid XML
+    let validatedContent = initialContent;
+    try {
+      // Simple XML validation - check basic XML structure
+      if (!initialContent.trim().startsWith('<?xml') && !initialContent.trim().startsWith('<map')) {
+        console.warn('⚠️ [FastMind] Invalid XML format detected, using default template');
+        validatedContent = `<?xml version="1.0" encoding="UTF-8"?>
+<map version="tango">
+  <topic central="true" text="Central Topic" id="1"/>
+</map>`;
+      } else {
+        // Check for potential malicious script tags
+        const scriptPattern = /<script[\s\S]*?<\/script>/gi;
+        if (scriptPattern.test(initialContent)) {
+          console.warn('⚠️ [FastMind] Potential script tags detected, content will be encoded for security');
+          // Continue using URL encoding to handle this content
+        }
+      }
+    } catch (error) {
+      console.warn('⚠️ [FastMind] XML validation failed, using default template:', error);
+      validatedContent = `<?xml version="1.0" encoding="UTF-8"?>
+<map version="tango">
+  <topic central="true" text="Central Topic" id="1"/>
+</map>`;
+    }
+    
+    // URL encode to prevent potential JavaScript code execution
+    const encodedContent = encodeURIComponent(validatedContent);
 
     const config = vscode.workspace.getConfiguration('fastmind');
     const configuredLocale = config.get<string>('language.locale');
@@ -480,7 +509,11 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
           // Expose VS Code API globally for export service
           window.vscode = vscode;
           
-          window.__INITIAL_DOCUMENT_CONTENT__ = \`${initialContent.replace(/`/g, '\\`')}\`;
+          // Store URL encoded content, will be decoded in editor-standalone
+          window.__INITIAL_DOCUMENT_CONTENT_ENCODED__ = \`${encodedContent.replace(/`/g, '\\`')}\`;
+          // Maintain backward compatibility, but mark as encoded
+          window.__INITIAL_DOCUMENT_CONTENT__ = '';
+          window.__CONTENT_IS_ENCODED__ = true;
           window.__FAST_MIND_VSCODE_BOOTSTRAP__ = {
             fileName: "${fileName}",
             resourceUrl: "${resourceUrl}",
@@ -521,7 +554,7 @@ export class FastmindEditorProvider implements vscode.CustomTextEditorProvider {
           }, 100);
         </script>
         
-        <!-- WiseMapping Editor 脚本 -->
+        <!-- WiseMapping Editor script -->
         <script nonce="${nonce}" src="${scriptUri}"></script>
       </body>
       </html>`;

@@ -252,7 +252,18 @@ export class VSCodePersistenceManager extends PersistenceManager {
    * Get initial document content from global variable or default template
    */
   private getInitialDocumentContent(): string {
-    // Check for VS Code provided initial content
+    // Check for URL encoded content (security enhancement)
+    if (window.__CONTENT_IS_ENCODED__ && window.__INITIAL_DOCUMENT_CONTENT_ENCODED__) {
+      try {
+        return decodeURIComponent(window.__INITIAL_DOCUMENT_CONTENT_ENCODED__);
+      } catch (error) {
+        console.error('❌ [VSCodePersistenceManager] Failed to decode content:', error);
+        // Fallback to default template if decoding fails
+        return this.getDefaultMapXml();
+      }
+    }
+
+    // Check for VS Code provided initial content (legacy)
     if (window.__INITIAL_DOCUMENT_CONTENT__) {
       return window.__INITIAL_DOCUMENT_CONTENT__;
     }
@@ -411,7 +422,7 @@ export class VSCodePersistenceManager extends PersistenceManager {
   async exportImage(imageData: string, fileName: string, format: string): Promise<void> {
     try {
       // Send image export message to VS Code extension
-      const vscode = (window as any).acquireVsCodeApi?.();
+      const vscode = (window as { acquireVsCodeApi?: () => { postMessage: (message: unknown) => void } }).acquireVsCodeApi?.();
       if (!vscode) {
         throw new Error('VS Code API not available');
       }
@@ -443,6 +454,8 @@ export class VSCodePersistenceManager extends PersistenceManager {
 declare global {
   interface Window {
     __INITIAL_DOCUMENT_CONTENT__?: string;
+    __INITIAL_DOCUMENT_CONTENT_ENCODED__?: string;
+    __CONTENT_IS_ENCODED__?: boolean;
     __FAST_MIND_VSCODE_BOOTSTRAP__?: VSCodeBootstrapConfig & {
       initialContent?: string;
     };
