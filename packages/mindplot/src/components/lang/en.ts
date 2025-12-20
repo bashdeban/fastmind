@@ -45,6 +45,7 @@ interface LanguageStrings {
   CHILDREN_DELETE_SUCCESS: string;
   CLIPBOARD_EMPTY_OR_INVALID: string;
   NO_VALID_TEXT_LINES: string;
+  TEXT_PASTE_SUCCESS: string;
 }
 
 const EN: LanguageStrings = {
@@ -75,6 +76,7 @@ const EN: LanguageStrings = {
   CHILDREN_DELETE_SUCCESS: 'Child topics deleted successfully.',
   CLIPBOARD_EMPTY_OR_INVALID: 'Clipboard is empty or contains invalid text',
   NO_VALID_TEXT_LINES: 'No valid text lines found in clipboard',
+  TEXT_PASTE_SUCCESS: 'Successfully pasted {count} topics',
 };
 
 export default EN;

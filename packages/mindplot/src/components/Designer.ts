@@ -70,6 +70,15 @@ import TopicTextExporter from './export/TopicTextExporter';
 
 type DesignerEventType = 'modelUpdate' | 'onfocus' | 'onblur' | 'loadSuccess' | 'featureEdit';
 
+/**
+ * Interface for parsed topic structure from indented text
+ */
+interface ParsedTopic {
+  text: string;
+  level: number;
+  children: ParsedTopic[];
+}
+
 class Designer extends EventDispispatcher<DesignerEventType> {
   private _mindmap: Mindmap | null;
 
@@ -1605,10 +1614,11 @@ class Designer extends EventDispispatcher<DesignerEventType> {
 
   /**
    * Paste clipboard text as subtopics for the selected topic
-   * Each line becomes a subtopic, text longer than 30 chars is truncated
+   * Enhanced to support indented text structure with tab-based hierarchy
+   * Now supports both tabs and spaces (2 spaces = 1 indentation level)
    */
   async pasteTextAsTopics(): Promise<void> {
-    // 1. 检查选中状态
+    // 1. Check selection status
     const selectedTopics = this.getModel().filterSelectedTopics();
     if (selectedTopics.length !== 1) {
       $notify($msg('ONLY_ONE_TOPIC_MUST_BE_SELECTED'));
@@ -1617,7 +1627,7 @@ class Designer extends EventDispispatcher<DesignerEventType> {
 
     const parentTopic = selectedTopics[0];
 
-    // 2. 读取剪切板文本
+    // 2. Read clipboard text
     let clipboardText: string | null = null;
     try {
       if (navigator.clipboard && navigator.clipboard.readText) {
@@ -1632,62 +1642,29 @@ class Designer extends EventDispispatcher<DesignerEventType> {
       return;
     }
 
-    // 3. 处理文本行并创建topic models
-    const lines = clipboardText
-      .split('\n')
-      .map((line) => line.trim())
-      .filter((line) => line.length > 0)
-      .slice(0, 50); // 限制最多50行
+    // 3. Parse indented text structure
+    let parsedTopics: ParsedTopic[];
+    try {
+      parsedTopics = this.parseIndentedText(clipboardText);
+    } catch (error) {
+      console.warn('Failed to parse indented text:', error);
+      // If parsing fails, fallback to simple mode
+      parsedTopics = this.fallbackParseLines(clipboardText);
+    }
 
-    if (lines.length === 0) {
+    if (parsedTopics.length === 0) {
       $notify($msg('NO_VALID_TEXT_LINES'));
       return;
     }
 
-    // 4. 创建topic models（参考AI generator的createTopicModels）
-    const topicModels = this.createTopicModelsFromText(
-      lines,
-      parentTopic.getId(),
-    );
+    // 4. Create topic models and add to mindmap
+    await this.createTopicsFromParsedStructure(parsedTopics, parentTopic.getId());
 
-    // 5. 分批添加到mindmap（参考AI generator的渐进式添加）
-    topicModels.forEach((model, index) => {
-      setTimeout(() => {
-        this.getActionDispatcher().addTopics([model], [parentTopic.getId()]);
-      }, index * 100); // 更快的动画，因为是本地操作
-    });
+    // 5. Show success message
+    const totalTopics = this.countTotalTopics(parsedTopics);
+    $notify($msg('TEXT_PASTE_SUCCESS').replace('{count}', totalTopics.toString()));
   }
 
-  /**
-   * Create NodeModel instances from text lines
-   * Reference: aiTopicGeneratorService.createTopicModels()
-   */
-  private createTopicModelsFromText(
-    lines: string[],
-    parentTopicId: number,
-  ): NodeModel[] {
-    const topicModels: NodeModel[] = [];
-    const mindmap = this.getMindmap();
-
-    // Get layout manager to predict positions
-    const layoutManager = this._eventBussDispatcher.getLayoutManager();
-
-    lines.forEach((line) => {
-      const nodeModel = mindmap.createNode();
-
-      // Truncate text if longer than 50 characters
-      const truncatedText = this.truncateText(line, 50);
-      nodeModel.setText(truncatedText);
-
-      // Predict position and order for new topic
-      const prediction = layoutManager.predict(parentTopicId, null, null);
-      nodeModel.setPosition(prediction.position.x, prediction.position.y);
-
-      topicModels.push(nodeModel);
-    });
-
-    return topicModels;
-  }
 
   /**
    * Truncate text to specified length with ellipsis
@@ -1703,6 +1680,183 @@ class Designer extends EventDispispatcher<DesignerEventType> {
     }
 
     return `${text.substring(0, maxLength - 3)}...`;
+  }
+
+  /**
+   * Parse indented text into hierarchical topic structure
+   * @param text - The indented text to parse
+   * @returns Array of parsed topics with hierarchy
+   */
+  private parseIndentedText(text: string): ParsedTopic[] {
+    const lines = text.split('\n');
+    const result: ParsedTopic[] = [];
+    const stack: ParsedTopic[] = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+      // Skip empty lines
+      if (!line.trim()) {
+        continue;
+      }
+
+      // Calculate indentation level (supporting both tabs and spaces)
+      const level = this.calculateIndentationLevel(line);
+      const trimmedText = line.trim();
+
+      // Create new topic
+      const topic: ParsedTopic = {
+        text: trimmedText,
+        level,
+        children: []
+      };
+
+      // Validate indentation (no jumps of more than 1 level)
+      if (stack.length > 0 && level > stack[stack.length - 1].level + 1) {
+        throw new Error(`Invalid indentation at line ${i + 1}: level jump detected`);
+      }
+
+      // Find parent and build hierarchy
+      while (stack.length > 0 && stack[stack.length - 1].level >= level) {
+        stack.pop();
+      }
+
+      if (stack.length === 0) {
+        // This is a root level topic
+        result.push(topic);
+      } else {
+        // This is a child topic
+        stack[stack.length - 1].children.push(topic);
+      }
+
+      // Push current topic to stack
+      stack.push(topic);
+    }
+    return result;
+  }
+
+  /**
+   * Calculate indentation level from leading whitespace
+   * @param text - The string to analyze
+   * @returns Number of indentation levels (1 tab = 1 level, 2 spaces = 1 level)
+   */
+  private calculateIndentationLevel(text: string): number {
+    let tabCount = 0;
+    let spaceCount = 0;
+    let i = 0;
+
+    // Count leading tabs and spaces
+    for (i = 0; i < text.length; i++) {
+      if (text[i] === '\t') {
+        tabCount++;
+      } else if (text[i] === ' ') {
+        spaceCount++;
+      } else {
+        break;
+      }
+    }
+
+    // Convert spaces to indentation levels (2 spaces = 1 level)
+    const spaceLevels = Math.floor(spaceCount / 2);
+
+    return tabCount + spaceLevels;
+  }
+
+  /**
+   * Fallback parser for simple lines (no indentation support)
+   * @param text - The text to parse
+   * @returns Array of parsed topics with no hierarchy
+   */
+  private fallbackParseLines(text: string): ParsedTopic[] {
+    const lines = text
+      .split('\n')
+      .map(line => line.trim())
+      .filter(line => line.length > 0)
+      .slice(0, 50); // Limit to 50 lines
+
+    return lines.map(line => ({
+      text: line,
+      level: 0,
+      children: []
+    }));
+  }
+
+  /**
+   * Create topics from parsed hierarchical structure
+   * @param parsedTopics - The parsed topic structure
+   * @param parentTopicId - ID of parent topic
+   */
+  private async createTopicsFromParsedStructure(
+    parsedTopics: ParsedTopic[],
+    parentTopicId: number
+  ): Promise<void> {
+    // Helper function to recursively create topics
+    const createTopicsRecursive = async (
+      topics: ParsedTopic[],
+      parentId: number
+    ) => {
+      for (const topic of topics) {
+        // Create the topic model with proper position prediction
+        const nodeModel = await this.createTopicModelWithPosition(topic.text, parentId);
+        this.getActionDispatcher().addTopics([nodeModel], [parentId]);
+        // Recursively create children
+        if (topic.children.length > 0) {
+          await createTopicsRecursive(topic.children, nodeModel.getId());
+        }
+      }
+    };
+
+    await createTopicsRecursive(parsedTopics, parentTopicId);
+  }
+
+  /**
+   * Create a single topic model with position prediction
+   * @param text - Topic text
+   * @param parentId - Parent topic ID
+   * @returns Created NodeModel
+   */
+  private async createTopicModelWithPosition(text: string, parentId: number): Promise<NodeModel> {
+    const mindmap = this.getMindmap();
+    const nodeModel = mindmap.createNode();
+
+    // Set truncated text
+    const truncatedText = this.truncateText(text, 50);
+    nodeModel.setText(truncatedText);
+
+    // Predict position using layout manager
+    try {
+      const layoutManager = this._eventBussDispatcher.getLayoutManager();
+      const prediction = layoutManager.predict(parentId, null, null);
+      nodeModel.setPosition(prediction.position.x, prediction.position.y);
+      nodeModel.setOrder(prediction.order);
+    } catch (error) {
+      console.warn('Failed to predict position for new topic:', error);
+      // Set a default position as fallback
+      nodeModel.setPosition(100, 100);
+    }
+
+    return nodeModel;
+  }
+
+  /**
+   * Count total number of topics in hierarchical structure
+   * @param parsedTopics - The parsed topic structure
+   * @returns Total count of topics
+   */
+  private countTotalTopics(parsedTopics: ParsedTopic[]): number {
+    let count = 0;
+
+    const countRecursive = (topics: ParsedTopic[]) => {
+      for (const topic of topics) {
+        count++;
+        if (topic.children.length > 0) {
+          countRecursive(topic.children);
+        }
+      }
+    };
+
+    countRecursive(parsedTopics);
+    return count;
   }
 }
 
