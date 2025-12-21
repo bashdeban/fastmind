@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.1.12] - 2025-12-21
+### Added
+- Added TopicActionTooltip component for comprehensive topic interaction menus with copy, paste, and operations
+- Enhanced paste functionality to support hierarchical indented text structure from clipboard
+- Added ParsedTopic interface and supporting methods for hierarchical topic structure building
+- Implemented URL-encoded initial document content handling for improved security
+- Enhanced VS Code extension and webview communication security with proper error handling
+- Added comprehensive error handling and fallback mechanisms for content processing
+- Improved type safety for VS Code API usage with strict TypeScript enforcement
+- Enhanced copy functionality supporting multiple selected topics
+- Improved topic text exporter for better copy operations with enhanced test coverage
+
+### Changed
+- Refactored EditorContent to EditorContentWithIntl for proper internationalization context
+- Implemented component architecture split to enable better i18n access across components
+- Updated Chinese comments to English for better code maintainability
+- Enhanced pasteTextAsTopics method with both tab-based hierarchical parsing and line-based fallback
+- Improved error handling and user feedback throughout the application
+- Optimized component structure for better maintainability and internationalization support
+
+### Fixed
+- Fixed SVG export issues with proper namespace handling and CSS embedding
+- Resolved export dialog layout issues for better responsive design
+- Improved export error handling with more descriptive error messages
+- Enhanced test coverage for copy functionality and edge cases
+
+### Technical Improvements
+- Added comprehensive localization support for new features
+- Implemented robust content filtering system for AI responses
+- Enhanced material-ui component integration with consistent styling
+- Optimized performance for large file handling and multi-topic operations
+- Strengthened security measures for content passing between extension and webview
+
 ## [0.1.11] - 2025-12-08
 ### Added
 - Added delete subtopic functionality with keyboard shortcuts
