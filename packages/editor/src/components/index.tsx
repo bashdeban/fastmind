@@ -18,7 +18,7 @@
 
 import React, { ReactElement, useMemo, useRef } from 'react';
 
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, useIntl } from 'react-intl';
 import { Designer } from '@wisemapping/mindplot';
 
 import I18nMsg from '../classes/i18n-msg';
@@ -40,6 +40,7 @@ import { createEditorTheme } from '../theme';
 import { ThemeVariantStorage } from '../types/ThemeVariantStorage';
 import EditorLoadingSkeleton from './editor-loading-skeleton';
 import LLMProgressNotification from './llm-progress-notification';
+import TopicActionTooltip from './topic-action-tooltip';
 
 const EMBED_READY_ATTRIBUTE = 'data-wisemapping-embed-loaded';
 
@@ -52,12 +53,14 @@ type EditorProps = {
   themeVariantStorage: ThemeVariantStorage; // Theme variant storage for persistence (mandatory)
 };
 
-const EditorContent = ({
+// Inner component that has access to intl
+const EditorContentWithIntl = ({
   config,
   onAction,
   accountConfiguration,
   themeVariantStorage,
 }: EditorProps): ReactElement => {
+  const intl = useIntl();
   // We can access editor instance and other configuration from editor props
   const { model, mindplotRef, mapInfo, capability, options } = config;
   const designer = model?.getDesigner();
@@ -143,8 +146,75 @@ const EditorContent = ({
     };
   }, [designer, model, isEmbedRoute]);
 
+  return (
+    <>
+      {options.enableAppBar && (
+        <AppBar
+          model={model}
+          mapInfo={mapInfo}
+          capability={capability}
+          onAction={onAction}
+          accountConfig={accountConfiguration}
+        />
+      )}
+
+      <WidgetPopover widgetManager={widgetBulder} />
+
+      {model && (
+        <div className="no-print">
+          <EditorToolbar model={model} capability={capability} />
+          <VisualizationToolbar model={model} capability={capability} />
+        </div>
+      )}
+
+      {React.createElement('mindplot-component', {
+        ref: mindplotRef,
+        id: 'mindmap-comp',
+        mode: options.mode,
+        locale: options.locale,
+        zoom: options.zoom,
+      })}
+
+      <Notifier id="headerNotifier" theme={theme} />
+
+      {!options.enableAppBar && (
+        <CreatorInfoPane mapInfo={mapInfo} showInfo={!options.hideCreatorInfo} />
+      )}
+
+      <WarningDialog
+        capability={capability}
+        message={mapInfo.isLocked() ? mapInfo.getLockedMessage() : ''}
+      />
+
+      <LLMProgressNotification />
+
+      {/* Add Topic Action Tooltip - now has access to intl */}
+      {designer && (
+        <TopicActionTooltip designer={designer} intl={intl} />
+      )}
+
+      {!model?.isMapLoadded() && <EditorLoadingSkeleton />}
+    </>
+  );
+};
+
+const EditorContent = ({
+  config,
+  onAction,
+  accountConfiguration,
+  themeVariantStorage,
+}: EditorProps): ReactElement => {
+  // We can access editor instance and other configuration from editor props
+  const { mode: internalMode } = useTheme();
+
+  // Get the current theme mode from the theme context
+  const mode = internalMode;
+
+  // Memoize theme creation - this is expensive and should only run when mode changes
+  const theme = useMemo(() => createEditorTheme(mode), [mode]);
+
   // Initialize locale ...
-  const locale = options.locale;
+  const locale = config.options.locale;
   // Memoize locale messages loading - this uses require() which should be cached but still expensive
   const msg = useMemo(() => I18nMsg.loadLocaleData(locale), [locale]);
 
@@ -153,47 +223,12 @@ const EditorContent = ({
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <IntlProvider locale={locale} messages={msg}>
-          {options.enableAppBar && (
-            <AppBar
-              model={model}
-              mapInfo={mapInfo}
-              capability={capability}
-              onAction={onAction}
-              accountConfig={accountConfiguration}
-            />
-          )}
-
-          <WidgetPopover widgetManager={widgetBulder} />
-
-          {model && (
-            <div className="no-print">
-              <EditorToolbar model={model} capability={capability} />
-              <VisualizationToolbar model={model} capability={capability} />
-            </div>
-          )}
-
-          {React.createElement('mindplot-component', {
-            ref: mindplotRef,
-            id: 'mindmap-comp',
-            mode: options.mode,
-            locale: locale,
-            zoom: options.zoom,
-          })}
-
-          <Notifier id="headerNotifier" theme={theme} />
-
-          {!options.enableAppBar && (
-            <CreatorInfoPane mapInfo={mapInfo} showInfo={!options.hideCreatorInfo} />
-          )}
-
-          <WarningDialog
-            capability={capability}
-            message={mapInfo.isLocked() ? mapInfo.getLockedMessage() : ''}
+          <EditorContentWithIntl
+            config={config}
+            onAction={onAction}
+            accountConfiguration={accountConfiguration}
+            themeVariantStorage={themeVariantStorage}
           />
-
-          <LLMProgressNotification />
-
-          {!model?.isMapLoadded() && <EditorLoadingSkeleton />}
         </IntlProvider>
       </ThemeProvider>
     </StyledEngineProvider>
