@@ -127,8 +127,18 @@ const TopicActionTooltip = ({ designer, intl }: TopicActionTooltipProps): React.
 
       // Hide tooltip when opening edit menu or note
       if (featureEvent.event === 'link' || featureEvent.event === 'note' || featureEvent.event === 'ai-topic-generator' || featureEvent.event === 'ai-explainer') {
-        setShouldShowTooltip(false);
-        setOpen(false);
+        
+        // For note events, add delay to wait for topic selection to complete
+        if (featureEvent.event === 'note') {
+          setTimeout(() => {
+            setShouldShowTooltip(false);
+            setOpen(false);
+          }, 50); // 50ms delay to ensure topic selection is completed
+        } else {
+          // Other events hide immediately
+          setShouldShowTooltip(false);
+          setOpen(false);
+        }
       }
     }
   }, []);
