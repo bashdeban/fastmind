@@ -46,12 +46,14 @@ class TopicTextExporter {
     const indent = '\t'.repeat(level);
     lines.push(`${indent}${text}`);
 
-    // Recursively process children
-    const children = topic.getChildren();
-    if (children && children.length > 0) {
-      children.forEach((child: Topic) => {
-        this._buildTopicLines(child, level + 1, lines);
-      });
+    // Only process children if the topic's children are not shrunken (folded)
+    if (!topic.areChildrenShrunken()) {
+      const children = topic.getChildren();
+      if (children && children.length > 0) {
+        children.forEach((child: Topic) => {
+          this._buildTopicLines(child, level + 1, lines);
+        });
+      }
     }
   }
 }
